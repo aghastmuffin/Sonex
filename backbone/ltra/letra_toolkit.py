@@ -5,7 +5,7 @@ import subprocess as sp
 from typing import Dict, Tuple, Optional, IO
 #FFMPEG, openai-whisper, demucs 
 from faster_whisper import WhisperModel
-from _NLLB import translate
+from backbone.ltra._NLLB import translate
 
 
 
