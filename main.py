@@ -11,7 +11,7 @@ import sys
 
 from backbone.rmo.MEL import save_mel_spectrogram, render_mel, render_mel_frames
 from backbone.ltra.letra_toolkit import separate
-from audio.audiocontext import AudioContext
+from backbone import AudioContext
 #Config
 
 FILE = "ADV.mp3" 

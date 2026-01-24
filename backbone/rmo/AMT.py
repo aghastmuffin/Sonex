@@ -2,7 +2,7 @@ import librosa
 import numpy as np
 from numpy.linalg import norm
 from itertools import groupby
-from audio.audiocontext import AudioContext
+from backbone.data.frames import AudioContext
 
 
 # --------------------------------------------------
