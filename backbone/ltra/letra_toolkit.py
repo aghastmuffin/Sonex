@@ -6,7 +6,7 @@ from typing import Dict, Tuple, Optional, IO
 #FFMPEG, openai-whisper, demucs 
 from faster_whisper import WhisperModel
 from backbone.ltra._NLLB import translate
-
+from backbone.ltra.perplex import compute_perplexity
 
 
 MINIMUM = (3, 9, 0)
@@ -209,14 +209,93 @@ def translate_simple(source, target, segments):
     return translated
 
 
-def mfa_align():
+#def mfa_align():
     """
     Docstring for mfa_align
     Uses Montreal Forced Aligner to align text to audio
     Requires: MFA installation and pretrained models
     """
-    return
+#    return
 
+def align(
+    audio_path: str,
+    transcript_path: str,
+    output_path: Optional[str] = None,
+    language: str = detected,
+):
+    """
+    Forced-align line-by-line transcript to audio using WhisperX CTC alignment.
+    Does NOT run Whisper ASR.
+
+    Inputs:
+      - audio_path: vocals-only audio (wav/mp3)
+      - transcript_path: one line per segment, no timestamps
+      - output_path: JSON output (optional)
+      - language: language code (default: en)
+    """
+
+    import json
+    import torch
+    import whisperx
+    import torchaudio
+
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+
+    if output_path is None:
+        output_path = Path(transcript_path).with_suffix(".aligned.json")
+
+    # -------------------------
+    # Load audio
+    # -------------------------
+    audio, sr = torchaudio.load(audio_path)
+    audio = audio.mean(dim=0)  # mono
+    audio = audio.numpy()
+
+    # -------------------------
+    # Load transcript (line-by-line)
+    # -------------------------
+    segments = []
+    with open(transcript_path, "r", encoding="utf-8") as f:
+        for i, line in enumerate(f):
+            text = line.strip()
+            if not text:
+                continue
+            segments.append({
+                "id": i,
+                "text": text
+            })
+
+    if not segments:
+        raise RuntimeError("Transcript file is empty — nothing to align.")
+
+    print(f"Aligning {len(segments)} segments...")
+    align_model, metadata = whisperx.load_align_model(
+        language_code=language,
+        device=device
+    )
+    aligned = whisperx.align(
+        segments=segments,
+        model=align_model,
+        metadata=metadata,
+        audio=audio,
+        device=device,
+        return_char_alignments=False
+    )
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(aligned, f, indent=2)
+
+    print(f"✓ Alignment written to {output_path}")
+
+    return aligned
+
+
+
+def select_best_transcript():
+    """
+    Docstring for select_best_transcript
+    Uses perplexity scoring to select best transcript from multiple options
+    """
+    return
 
 if __name__ == "__main__":
     if not os.path.exists("ADV") and os.path.isdir("ADV"):
