@@ -3,7 +3,7 @@ import librosa
 import numpy as np
 import os
 import matplotlib.pyplot as plt
-from audio.audiocontext import AudioContext
+from backbone.data.frames import AudioContext
 
 
 import librosa.display

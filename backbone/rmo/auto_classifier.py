@@ -3,7 +3,7 @@ import numpy as np
 import librosa
 from sklearn.cluster import AgglomerativeClustering
 from scipy.spatial.distance import cosine
-from audio.audiocontext import AudioContext
+from backbone.data.frames import AudioContext
 
 
 # ----------------------------
