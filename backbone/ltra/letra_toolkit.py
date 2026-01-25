@@ -93,7 +93,106 @@ def separate(inp):
         if src.exists():
             src.replace(dst)
 
-def transcribe(inp, outp: Optional[str] = None, language: Optional[str] = None, model_size="medium", mfa_later=False):
+
+def transcribe(
+    inp,
+    outp: Optional[str] = None,
+    language: Optional[str] = None,
+    model_size="medium",
+    seed_duration=5.0,  # seconds per line (safe default for lyrics)
+):
+    """
+    Transcribe audio using faster-whisper (TEXT ONLY),
+    and output WhisperX-compatible segments with seeded timestamps.
+    """
+
+    import json
+    from pathlib import Path
+    from faster_whisper import WhisperModel
+
+    # -------------------------
+    # Load model
+    # -------------------------
+    try:
+        model = WhisperModel(model_size, device="cuda", compute_type="int8_float16")
+        print(f"Using CUDA with model: {model_size}")
+    except ValueError:
+        model = WhisperModel(model_size, device="cpu", compute_type="int8")
+        print(f"Using CPU with model: {model_size}")
+
+    # -------------------------
+    # Detect language (optional)
+    # -------------------------
+    chosen_lang = language
+    if chosen_lang is None:
+        print("Detecting language...")
+        detect_segments, detect_info = model.transcribe(
+            inp,
+            beam_size=1,
+            vad_filter=True,
+            language=None
+        )
+        _ = list(detect_segments)
+        chosen_lang = getattr(detect_info, "language", None) or "en"
+
+    print(f"Transcribing in: {chosen_lang}")
+
+    # -------------------------
+    # Transcribe (TEXT ONLY)
+    # -------------------------
+    segments_native, _ = model.transcribe(
+        inp,
+        beam_size=5,
+        vad_filter=True,
+        task="transcribe",
+        language=chosen_lang,
+        word_timestamps=False
+    )
+
+    segments_native = list(segments_native)
+    print(f"Native transcription complete: {len(segments_native)} segments")
+
+    if not segments_native:
+        raise RuntimeError("No transcription segments produced.")
+
+    # -------------------------
+    # Build WhisperX-compatible transcript
+    # -------------------------
+    transcript = []
+    t = 0.0
+
+    for i, seg in enumerate(segments_native):
+        text = " ".join(seg.text.lower().strip().split())
+        if not text:
+            continue
+
+        transcript.append({
+            "id": i,
+            "text": text,
+            "start": t,
+            "end": t + seed_duration
+        })
+
+        t += seed_duration
+
+    # -------------------------
+    # Write output
+    # -------------------------
+    if not outp:
+        outp = Path(inp).stem + "_transcript.json"
+
+    out_path = Path(outp)
+
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(transcript, f, indent=2)
+
+    print("\n✓ Transcription complete!")
+    print(f"  WhisperX-ready transcript: {out_path}")
+
+    return transcript
+
+
+def transcribeplain(inp, outp: Optional[str] = None, language: Optional[str] = None, model_size="medium", mfa_later=False):
     """
     Transcribe audio using faster_whisper in the detected/native language only.
 
@@ -221,23 +320,18 @@ def align(
     audio_path: str,
     transcript_path: str,
     output_path: Optional[str] = None,
-    language: str = detected,
+    language: str = detected or "en",
 ):
     """
     Forced-align line-by-line transcript to audio using WhisperX CTC alignment.
     Does NOT run Whisper ASR.
-
-    Inputs:
-      - audio_path: vocals-only audio (wav/mp3)
-      - transcript_path: one line per segment, no timestamps
-      - output_path: JSON output (optional)
-      - language: language code (default: en)
     """
 
     import json
     import torch
     import whisperx
     import torchaudio
+    from pathlib import Path
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
@@ -254,39 +348,52 @@ def align(
     # -------------------------
     # Load transcript (line-by-line)
     # -------------------------
-    segments = []
+    transcript = []
     with open(transcript_path, "r", encoding="utf-8") as f:
         for i, line in enumerate(f):
             text = line.strip()
             if not text:
                 continue
-            segments.append({
+            transcript.append({
                 "id": i,
                 "text": text
             })
 
-    if not segments:
+    if not transcript:
         raise RuntimeError("Transcript file is empty — nothing to align.")
 
-    print(f"Aligning {len(segments)} segments...")
-    align_model, metadata = whisperx.load_align_model(
+    print(f"Aligning {len(transcript)} segments...")
+
+    # -------------------------
+    # Load alignment model
+    # -------------------------
+    align_model, align_model_metadata = whisperx.load_align_model(
         language_code=language,
         device=device
     )
+
+    # -------------------------
+    # Run forced alignment (CORRECT CALL)
+    # -------------------------
     aligned = whisperx.align(
-        segments=segments,
-        model=align_model,
-        metadata=metadata,
-        audio=audio,
-        device=device,
+        transcript,
+        align_model,
+        align_model_metadata,
+        audio,
+        device,
         return_char_alignments=False
     )
+
+    # -------------------------
+    # Save output
+    # -------------------------
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(aligned, f, indent=2)
 
     print(f"✓ Alignment written to {output_path}")
 
     return aligned
+
 
 
 
