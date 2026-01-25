@@ -1,8 +1,6 @@
-from backbone.rmo.io import load_audio
-from backbone.rmo.spectral.cqt import compute_cqt
-from backbone.rmo.harmony.chroma import extract_chroma
+import whisperx
+from backbone.ltra.letra_toolkit import transcribe, align
 
-def analyze_file(path):
-    audio = load_audio(path)
-    cqt = compute_cqt(audio)
-    chroma = extract_chroma(cqt)
+print("letra_toolkit inited")
+align("RREGATON_ExperimentoMykeTowers/vocals.mp3", "vocals_whisper_segments.json", "output.json", "es")
+print("done.")

@@ -99,11 +99,11 @@ def transcribe(
     outp: Optional[str] = None,
     language: Optional[str] = None,
     model_size="medium",
-    seed_duration=5.0,  # seconds per line (safe default for lyrics)
 ):
     """
-    Transcribe audio using faster-whisper (TEXT ONLY),
-    and output WhisperX-compatible segments with seeded timestamps.
+    Transcribe audio using faster-whisper WITH real timestamps.
+    Outputs WhisperX-compatible segments with start/end populated
+    from Whisper itself (no fake timings).
     """
 
     import json
@@ -138,30 +138,29 @@ def transcribe(
     print(f"Transcribing in: {chosen_lang}")
 
     # -------------------------
-    # Transcribe (TEXT ONLY)
+    # Transcribe WITH timestamps
     # -------------------------
-    segments_native, _ = model.transcribe(
+    segments, _ = model.transcribe(
         inp,
         beam_size=5,
         vad_filter=True,
         task="transcribe",
         language=chosen_lang,
-        word_timestamps=False
+        word_timestamps=True
     )
 
-    segments_native = list(segments_native)
-    print(f"Native transcription complete: {len(segments_native)} segments")
+    segments = list(segments)
+    print(f"Native transcription complete: {len(segments)} segments")
 
-    if not segments_native:
+    if not segments:
         raise RuntimeError("No transcription segments produced.")
 
     # -------------------------
     # Build WhisperX-compatible transcript
     # -------------------------
     transcript = []
-    t = 0.0
 
-    for i, seg in enumerate(segments_native):
+    for i, seg in enumerate(segments):
         text = " ".join(seg.text.lower().strip().split())
         if not text:
             continue
@@ -169,27 +168,36 @@ def transcribe(
         transcript.append({
             "id": i,
             "text": text,
-            "start": t,
-            "end": t + seed_duration
+            "start": float(seg.start),
+            "end": float(seg.end),
+            # optional but useful for debugging / downstream
+            "words": [
+                {
+                    "word": w.word,
+                    "start": float(w.start),
+                    "end": float(w.end)
+                }
+                for w in (seg.words or [])
+                if w.start is not None and w.end is not None
+            ]
         })
-
-        t += seed_duration
 
     # -------------------------
     # Write output
     # -------------------------
     if not outp:
-        outp = Path(inp).stem + "_transcript.json"
+        outp = Path(inp).stem + "_whisper_segments.json"
 
     out_path = Path(outp)
 
     with open(out_path, "w", encoding="utf-8") as f:
-        json.dump(transcript, f, indent=2)
+        json.dump(transcript, f, indent=2, ensure_ascii=False)
 
     print("\n✓ Transcription complete!")
     print(f"  WhisperX-ready transcript: {out_path}")
 
     return transcript
+
 
 
 def transcribeplain(inp, outp: Optional[str] = None, language: Optional[str] = None, model_size="medium", mfa_later=False):
@@ -323,8 +331,8 @@ def align(
     language: str = detected or "en",
 ):
     """
-    Forced-align line-by-line transcript to audio using WhisperX CTC alignment.
-    Does NOT run Whisper ASR.
+    Align transcript segments from JSON to audio using WhisperX CTC alignment.
+    Loads segments with existing start/end metadata and preserves them.
     """
 
     import json
@@ -336,7 +344,7 @@ def align(
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
     if output_path is None:
-        output_path = Path(transcript_path).with_suffix(".aligned.json")
+        output_path = Path(transcript_path).with_stem(f"{Path(transcript_path).stem}.aligned").with_suffix(".json")
 
     # -------------------------
     # Load audio
@@ -346,21 +354,30 @@ def align(
     audio = audio.numpy()
 
     # -------------------------
-    # Load transcript (line-by-line)
+    # Load transcript from JSON with metadata
     # -------------------------
-    transcript = []
     with open(transcript_path, "r", encoding="utf-8") as f:
-        for i, line in enumerate(f):
-            text = line.strip()
-            if not text:
-                continue
-            transcript.append({
-                "id": i,
-                "text": text
-            })
+        segments = json.load(f)
 
-    if not transcript:
+    if not segments:
         raise RuntimeError("Transcript file is empty — nothing to align.")
+
+    # Build transcript list for alignment, preserving metadata
+    transcript = []
+    metadata = {}
+    for seg in segments:
+        seg_id = seg.get("id", len(transcript))
+        transcript.append({
+            "id": seg_id,
+            "text": seg.get("text", ""),
+            "start": seg.get("start"),
+            "end": seg.get("end")
+        })
+        metadata[seg_id] = {
+            "start": seg.get("start"),
+            "end": seg.get("end"),
+            "words": seg.get("words", [])
+        }
 
     print(f"Aligning {len(transcript)} segments...")
 
@@ -373,7 +390,7 @@ def align(
     )
 
     # -------------------------
-    # Run forced alignment (CORRECT CALL)
+    # Run forced alignment
     # -------------------------
     aligned = whisperx.align(
         transcript,
@@ -385,10 +402,23 @@ def align(
     )
 
     # -------------------------
+    # Merge original metadata with alignment results
+    # -------------------------
+    if isinstance(aligned, dict) and "segments" in aligned:
+        for seg in aligned["segments"]:
+            seg_id = seg.get("id")
+            if seg_id in metadata:
+                # Preserve original timing and word-level data
+                seg["original_start"] = metadata[seg_id]["start"]
+                seg["original_end"] = metadata[seg_id]["end"]
+                if metadata[seg_id]["words"]:
+                    seg["original_words"] = metadata[seg_id]["words"]
+
+    # -------------------------
     # Save output
     # -------------------------
     with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(aligned, f, indent=2)
+        json.dump(aligned, f, indent=2, ensure_ascii=False)
 
     print(f"✓ Alignment written to {output_path}")
 
