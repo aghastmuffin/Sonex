@@ -98,7 +98,8 @@ def transcribe(
     inp,
     outp: Optional[str] = None,
     language: Optional[str] = None,
-    model_size="medium",
+    model_size: Optional[str] = "medium",
+    _align=False,
 ):
     """
     Transcribe audio using faster-whisper WITH real timestamps.
@@ -195,8 +196,12 @@ def transcribe(
 
     print("\n✓ Transcription complete!")
     print(f"  WhisperX-ready transcript: {out_path}")
-
-    return transcript
+    if _align:
+        print("[Letra Toolkit] _align=true was depricated in ver 0.1.2, please switch to calling align() separately.")
+        align(inp, outp, outp.replace(".json", "_aligned.json"), chosen_lang) #TODO: Remove/direct user more aggressively
+    if language == None:
+        return transcript, chosen_lang
+    return transcript, None #TODO: Change all to fix reformatted return type
 
 
 

@@ -2,14 +2,20 @@
 # Using a model by META's No Language Left Behind Project
 # guion desarrollado por: Levi B, Berkeley, CA
 import torch
+import os
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
 model_name = "facebook/nllb-200-distilled-600M"
 torch_dtype = torch.float16 if torch.backends.mps.is_available() else torch.float32
 
+# Create offload folder for disk offloading
+offload_folder = os.path.join(os.path.dirname(__file__), "..", "..", "model_offload")
+os.makedirs(offload_folder, exist_ok=True)
+
 model = AutoModelForSeq2SeqLM.from_pretrained(
     model_name,
     device_map="auto",
+    offload_folder=offload_folder,
     torch_dtype=torch_dtype,
 )
 tokenizer = AutoTokenizer.from_pretrained(model_name)
