@@ -342,7 +342,7 @@ def align(
 
     import json
     import torch
-    import whisperx
+    import whisperx #XXX: fails to recongize RREGATON test Experimento is spanish lang and transcription qual suffers as result.
     import torchaudio
     from pathlib import Path
 
