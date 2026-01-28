@@ -130,7 +130,7 @@ def transcribe(
         detect_segments, detect_info = model.transcribe(
             inp,
             beam_size=1,
-            vad_filter=True,
+            vad_filter=False,
             language=None
         )
         _ = list(detect_segments)
@@ -144,7 +144,7 @@ def transcribe(
     segments, _ = model.transcribe(
         inp,
         beam_size=5,
-        vad_filter=True,
+        vad_filter=False,
         task="transcribe",
         language=chosen_lang,
         word_timestamps=True

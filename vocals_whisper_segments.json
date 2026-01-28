@@ -1,0 +1,3307 @@
+[
+  {
+    "id": 0,
+    "text": "sin ofenderte",
+    "start": 15.47,
+    "end": 17.55,
+    "words": [
+      {
+        "word": " Sin",
+        "start": 15.47,
+        "end": 15.99
+      },
+      {
+        "word": " ofenderte",
+        "start": 15.99,
+        "end": 17.55
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "text": "no me perteneces a mí, me tueres de la calle",
+    "start": 17.55,
+    "end": 21.29,
+    "words": [
+      {
+        "word": " No",
+        "start": 17.55,
+        "end": 18.33
+      },
+      {
+        "word": " me",
+        "start": 18.33,
+        "end": 18.61
+      },
+      {
+        "word": " perteneces",
+        "start": 18.61,
+        "end": 19.19
+      },
+      {
+        "word": " a",
+        "start": 19.19,
+        "end": 19.39
+      },
+      {
+        "word": " mí,",
+        "start": 19.39,
+        "end": 19.49
+      },
+      {
+        "word": " me",
+        "start": 19.53,
+        "end": 19.71
+      },
+      {
+        "word": " tueres",
+        "start": 19.71,
+        "end": 20.03
+      },
+      {
+        "word": " de",
+        "start": 20.03,
+        "end": 20.23
+      },
+      {
+        "word": " la",
+        "start": 20.23,
+        "end": 20.51
+      },
+      {
+        "word": " calle",
+        "start": 20.51,
+        "end": 21.29
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "no sabes que una noche sin lujo te detalle",
+    "start": 21.91,
+    "end": 25.97,
+    "words": [
+      {
+        "word": " No",
+        "start": 21.91,
+        "end": 22.47
+      },
+      {
+        "word": " sabes",
+        "start": 22.47,
+        "end": 22.69
+      },
+      {
+        "word": " que",
+        "start": 22.69,
+        "end": 22.99
+      },
+      {
+        "word": " una",
+        "start": 22.99,
+        "end": 23.25
+      },
+      {
+        "word": " noche",
+        "start": 23.25,
+        "end": 23.53
+      },
+      {
+        "word": " sin",
+        "start": 23.53,
+        "end": 23.81
+      },
+      {
+        "word": " lujo",
+        "start": 23.81,
+        "end": 24.13
+      },
+      {
+        "word": " te",
+        "start": 24.13,
+        "end": 24.41
+      },
+      {
+        "word": " detalle",
+        "start": 24.41,
+        "end": 25.97
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "cuando le das fuego a los files hasta que se apaguen, bebé",
+    "start": 25.97,
+    "end": 31.47,
+    "words": [
+      {
+        "word": " Cuando",
+        "start": 25.97,
+        "end": 26.55
+      },
+      {
+        "word": " le",
+        "start": 26.55,
+        "end": 26.83
+      },
+      {
+        "word": " das",
+        "start": 26.83,
+        "end": 26.97
+      },
+      {
+        "word": " fuego",
+        "start": 26.97,
+        "end": 27.21
+      },
+      {
+        "word": " a",
+        "start": 27.21,
+        "end": 27.35
+      },
+      {
+        "word": " los",
+        "start": 27.35,
+        "end": 27.55
+      },
+      {
+        "word": " files",
+        "start": 27.55,
+        "end": 27.83
+      },
+      {
+        "word": " hasta",
+        "start": 27.83,
+        "end": 28.09
+      },
+      {
+        "word": " que",
+        "start": 28.09,
+        "end": 28.25
+      },
+      {
+        "word": " se",
+        "start": 28.25,
+        "end": 28.55
+      },
+      {
+        "word": " apaguen,",
+        "start": 28.55,
+        "end": 30.01
+      },
+      {
+        "word": " bebé",
+        "start": 30.45,
+        "end": 31.47
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "aquí hay mucha gente",
+    "start": 31.47,
+    "end": 33.69,
+    "words": [
+      {
+        "word": " Aquí",
+        "start": 31.47,
+        "end": 32.15
+      },
+      {
+        "word": " hay",
+        "start": 32.15,
+        "end": 32.35
+      },
+      {
+        "word": " mucha",
+        "start": 32.35,
+        "end": 32.63
+      },
+      {
+        "word": " gente",
+        "start": 32.63,
+        "end": 33.69
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "pero pa' qué disimular si todo el mundo ya sabe",
+    "start": 33.69,
+    "end": 37.95,
+    "words": [
+      {
+        "word": " Pero",
+        "start": 33.69,
+        "end": 34.75
+      },
+      {
+        "word": " pa'",
+        "start": 34.75,
+        "end": 34.99
+      },
+      {
+        "word": " qué",
+        "start": 34.99,
+        "end": 35.21
+      },
+      {
+        "word": " disimular",
+        "start": 35.21,
+        "end": 35.75
+      },
+      {
+        "word": " si",
+        "start": 35.75,
+        "end": 35.97
+      },
+      {
+        "word": " todo",
+        "start": 35.97,
+        "end": 36.15
+      },
+      {
+        "word": " el",
+        "start": 36.15,
+        "end": 36.19
+      },
+      {
+        "word": " mundo",
+        "start": 36.19,
+        "end": 36.41
+      },
+      {
+        "word": " ya",
+        "start": 36.41,
+        "end": 36.75
+      },
+      {
+        "word": " sabe",
+        "start": 36.75,
+        "end": 37.95
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "psicóloga porque le gusta jugar con mi mente",
+    "start": 38.65,
+    "end": 42.21,
+    "words": [
+      {
+        "word": " Psicóloga",
+        "start": 38.65,
+        "end": 39.21
+      },
+      {
+        "word": " porque",
+        "start": 39.21,
+        "end": 39.41
+      },
+      {
+        "word": " le",
+        "start": 39.41,
+        "end": 39.77
+      },
+      {
+        "word": " gusta",
+        "start": 39.77,
+        "end": 40.01
+      },
+      {
+        "word": " jugar",
+        "start": 40.01,
+        "end": 40.29
+      },
+      {
+        "word": " con",
+        "start": 40.29,
+        "end": 40.59
+      },
+      {
+        "word": " mi",
+        "start": 40.59,
+        "end": 40.79
+      },
+      {
+        "word": " mente",
+        "start": 40.79,
+        "end": 42.21
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "débora me rico que cuando la noche se acabe, bebé",
+    "start": 42.21,
+    "end": 47.69,
+    "words": [
+      {
+        "word": " Débora",
+        "start": 42.21,
+        "end": 43.09
+      },
+      {
+        "word": " me",
+        "start": 43.09,
+        "end": 43.27
+      },
+      {
+        "word": " rico",
+        "start": 43.27,
+        "end": 43.51
+      },
+      {
+        "word": " que",
+        "start": 43.51,
+        "end": 43.73
+      },
+      {
+        "word": " cuando",
+        "start": 43.73,
+        "end": 44.09
+      },
+      {
+        "word": " la",
+        "start": 44.09,
+        "end": 44.31
+      },
+      {
+        "word": " noche",
+        "start": 44.31,
+        "end": 44.51
+      },
+      {
+        "word": " se",
+        "start": 44.51,
+        "end": 44.85
+      },
+      {
+        "word": " acabe,",
+        "start": 44.85,
+        "end": 46.15
+      },
+      {
+        "word": " bebé",
+        "start": 46.49,
+        "end": 47.69
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "sigue tu camino",
+    "start": 47.69,
+    "end": 50.07,
+    "words": [
+      {
+        "word": " Sigue",
+        "start": 47.69,
+        "end": 48.31
+      },
+      {
+        "word": " tu",
+        "start": 48.31,
+        "end": 48.61
+      },
+      {
+        "word": " camino",
+        "start": 48.61,
+        "end": 50.07
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "ya tu cambiaste y yo no soy el mismo",
+    "start": 50.55,
+    "end": 53.97,
+    "words": [
+      {
+        "word": " Ya",
+        "start": 50.55,
+        "end": 50.91
+      },
+      {
+        "word": " tu",
+        "start": 50.91,
+        "end": 51.19
+      },
+      {
+        "word": " cambiaste",
+        "start": 51.19,
+        "end": 51.79
+      },
+      {
+        "word": " y",
+        "start": 51.79,
+        "end": 52.01
+      },
+      {
+        "word": " yo",
+        "start": 52.01,
+        "end": 52.23
+      },
+      {
+        "word": " no",
+        "start": 52.23,
+        "end": 52.49
+      },
+      {
+        "word": " soy",
+        "start": 52.49,
+        "end": 52.75
+      },
+      {
+        "word": " el",
+        "start": 52.75,
+        "end": 53.11
+      },
+      {
+        "word": " mismo",
+        "start": 53.11,
+        "end": 53.97
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "siempre recuerdo lo que un día fuimos",
+    "start": 54.65,
+    "end": 58.55,
+    "words": [
+      {
+        "word": " Siempre",
+        "start": 54.65,
+        "end": 55.19
+      },
+      {
+        "word": " recuerdo",
+        "start": 55.19,
+        "end": 55.85
+      },
+      {
+        "word": " lo",
+        "start": 55.85,
+        "end": 56.23
+      },
+      {
+        "word": " que",
+        "start": 56.23,
+        "end": 56.43
+      },
+      {
+        "word": " un",
+        "start": 56.43,
+        "end": 56.61
+      },
+      {
+        "word": " día",
+        "start": 56.61,
+        "end": 56.97
+      },
+      {
+        "word": " fuimos",
+        "start": 56.97,
+        "end": 58.55
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "sé en quién estás pensando que divino, bebé",
+    "start": 58.55,
+    "end": 63.83,
+    "words": [
+      {
+        "word": " Sé",
+        "start": 58.55,
+        "end": 58.93
+      },
+      {
+        "word": " en",
+        "start": 58.93,
+        "end": 59.11
+      },
+      {
+        "word": " quién",
+        "start": 59.11,
+        "end": 59.39
+      },
+      {
+        "word": " estás",
+        "start": 59.39,
+        "end": 59.75
+      },
+      {
+        "word": " pensando",
+        "start": 59.75,
+        "end": 60.39
+      },
+      {
+        "word": " que",
+        "start": 60.39,
+        "end": 60.79
+      },
+      {
+        "word": " divino,",
+        "start": 60.79,
+        "end": 62.41
+      },
+      {
+        "word": " bebé",
+        "start": 62.85,
+        "end": 63.83
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "sigue tu camino",
+    "start": 63.83,
+    "end": 66.31,
+    "words": [
+      {
+        "word": " Sigue",
+        "start": 63.83,
+        "end": 64.55
+      },
+      {
+        "word": " tu",
+        "start": 64.55,
+        "end": 64.89
+      },
+      {
+        "word": " camino",
+        "start": 64.89,
+        "end": 66.31
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "ya tu cambiaste y yo no soy el mismo",
+    "start": 66.81,
+    "end": 70.19,
+    "words": [
+      {
+        "word": " Ya",
+        "start": 66.81,
+        "end": 67.17
+      },
+      {
+        "word": " tu",
+        "start": 67.17,
+        "end": 67.39
+      },
+      {
+        "word": " cambiaste",
+        "start": 67.39,
+        "end": 68.07
+      },
+      {
+        "word": " y",
+        "start": 68.07,
+        "end": 68.21
+      },
+      {
+        "word": " yo",
+        "start": 68.21,
+        "end": 68.51
+      },
+      {
+        "word": " no",
+        "start": 68.51,
+        "end": 68.73
+      },
+      {
+        "word": " soy",
+        "start": 68.73,
+        "end": 68.99
+      },
+      {
+        "word": " el",
+        "start": 68.99,
+        "end": 69.37
+      },
+      {
+        "word": " mismo",
+        "start": 69.37,
+        "end": 70.19
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "siempre recuerdo lo que un día fuimos",
+    "start": 71.31,
+    "end": 74.77,
+    "words": [
+      {
+        "word": " Siempre",
+        "start": 71.31,
+        "end": 71.75
+      },
+      {
+        "word": " recuerdo",
+        "start": 71.75,
+        "end": 72.19
+      },
+      {
+        "word": " lo",
+        "start": 72.19,
+        "end": 72.47
+      },
+      {
+        "word": " que",
+        "start": 72.47,
+        "end": 72.73
+      },
+      {
+        "word": " un",
+        "start": 72.73,
+        "end": 72.89
+      },
+      {
+        "word": " día",
+        "start": 72.89,
+        "end": 73.21
+      },
+      {
+        "word": " fuimos",
+        "start": 73.21,
+        "end": 74.77
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "sé en quién estás pensando que divino, bebé",
+    "start": 74.77,
+    "end": 79.85,
+    "words": [
+      {
+        "word": " Sé",
+        "start": 74.77,
+        "end": 75.23
+      },
+      {
+        "word": " en",
+        "start": 75.23,
+        "end": 75.39
+      },
+      {
+        "word": " quién",
+        "start": 75.39,
+        "end": 75.67
+      },
+      {
+        "word": " estás",
+        "start": 75.67,
+        "end": 76.03
+      },
+      {
+        "word": " pensando",
+        "start": 76.03,
+        "end": 76.67
+      },
+      {
+        "word": " que",
+        "start": 76.67,
+        "end": 77.07
+      },
+      {
+        "word": " divino,",
+        "start": 77.07,
+        "end": 78.67
+      },
+      {
+        "word": " bebé",
+        "start": 78.67,
+        "end": 79.85
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "no sé qué me da más musa, bebé, si tenerte o que te me vaya",
+    "start": 79.85,
+    "end": 83.73,
+    "words": [
+      {
+        "word": " No",
+        "start": 79.85,
+        "end": 80.49
+      },
+      {
+        "word": " sé",
+        "start": 80.49,
+        "end": 80.69
+      },
+      {
+        "word": " qué",
+        "start": 80.69,
+        "end": 80.89
+      },
+      {
+        "word": " me",
+        "start": 80.89,
+        "end": 81.05
+      },
+      {
+        "word": " da",
+        "start": 81.05,
+        "end": 81.19
+      },
+      {
+        "word": " más",
+        "start": 81.19,
+        "end": 81.45
+      },
+      {
+        "word": " musa,",
+        "start": 81.45,
+        "end": 81.71
+      },
+      {
+        "word": " bebé,",
+        "start": 81.89,
+        "end": 82.09
+      },
+      {
+        "word": " si",
+        "start": 82.19,
+        "end": 82.21
+      },
+      {
+        "word": " tenerte",
+        "start": 82.21,
+        "end": 82.75
+      },
+      {
+        "word": " o",
+        "start": 82.75,
+        "end": 82.91
+      },
+      {
+        "word": " que",
+        "start": 82.91,
+        "end": 83.07
+      },
+      {
+        "word": " te",
+        "start": 83.07,
+        "end": 83.29
+      },
+      {
+        "word": " me",
+        "start": 83.29,
+        "end": 83.53
+      },
+      {
+        "word": " vaya",
+        "start": 83.53,
+        "end": 83.73
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "sale de bañar, siento vaya, es modelo como sendalla",
+    "start": 83.73,
+    "end": 86.77,
+    "words": [
+      {
+        "word": " Sale",
+        "start": 83.73,
+        "end": 84.07
+      },
+      {
+        "word": " de",
+        "start": 84.07,
+        "end": 84.29
+      },
+      {
+        "word": " bañar,",
+        "start": 84.29,
+        "end": 84.65
+      },
+      {
+        "word": " siento",
+        "start": 84.71,
+        "end": 84.95
+      },
+      {
+        "word": " vaya,",
+        "start": 84.95,
+        "end": 85.29
+      },
+      {
+        "word": " es",
+        "start": 85.41,
+        "end": 85.55
+      },
+      {
+        "word": " modelo",
+        "start": 85.55,
+        "end": 85.87
+      },
+      {
+        "word": " como",
+        "start": 85.87,
+        "end": 86.25
+      },
+      {
+        "word": " sendalla",
+        "start": 86.25,
+        "end": 86.77
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "no quiero ser un hombre más que en la lista se raya",
+    "start": 86.77,
+    "end": 89.73,
+    "words": [
+      {
+        "word": " No",
+        "start": 86.77,
+        "end": 86.97
+      },
+      {
+        "word": " quiero",
+        "start": 86.97,
+        "end": 87.27
+      },
+      {
+        "word": " ser",
+        "start": 87.27,
+        "end": 87.53
+      },
+      {
+        "word": " un",
+        "start": 87.53,
+        "end": 87.73
+      },
+      {
+        "word": " hombre",
+        "start": 87.73,
+        "end": 87.93
+      },
+      {
+        "word": " más",
+        "start": 87.93,
+        "end": 88.15
+      },
+      {
+        "word": " que",
+        "start": 88.15,
+        "end": 88.31
+      },
+      {
+        "word": " en",
+        "start": 88.31,
+        "end": 88.45
+      },
+      {
+        "word": " la",
+        "start": 88.45,
+        "end": 88.55
+      },
+      {
+        "word": " lista",
+        "start": 88.55,
+        "end": 88.77
+      },
+      {
+        "word": " se",
+        "start": 88.77,
+        "end": 89.07
+      },
+      {
+        "word": " raya",
+        "start": 89.07,
+        "end": 89.73
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "si él quiere se vaya, pero dile que no me da la talla",
+    "start": 89.73,
+    "end": 92.99,
+    "words": [
+      {
+        "word": " Si",
+        "start": 89.73,
+        "end": 89.97
+      },
+      {
+        "word": " él",
+        "start": 89.97,
+        "end": 90.13
+      },
+      {
+        "word": " quiere",
+        "start": 90.13,
+        "end": 90.27
+      },
+      {
+        "word": " se",
+        "start": 90.27,
+        "end": 90.57
+      },
+      {
+        "word": " vaya,",
+        "start": 90.57,
+        "end": 90.85
+      },
+      {
+        "word": " pero",
+        "start": 91.03,
+        "end": 91.37
+      },
+      {
+        "word": " dile",
+        "start": 91.37,
+        "end": 91.61
+      },
+      {
+        "word": " que",
+        "start": 91.61,
+        "end": 91.85
+      },
+      {
+        "word": " no",
+        "start": 91.85,
+        "end": 92.07
+      },
+      {
+        "word": " me",
+        "start": 92.07,
+        "end": 92.25
+      },
+      {
+        "word": " da",
+        "start": 92.25,
+        "end": 92.37
+      },
+      {
+        "word": " la",
+        "start": 92.37,
+        "end": 92.65
+      },
+      {
+        "word": " talla",
+        "start": 92.65,
+        "end": 92.99
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "pa' las cosas que hacemos y a las callas",
+    "start": 92.99,
+    "end": 95.05,
+    "words": [
+      {
+        "word": " Pa'",
+        "start": 92.99,
+        "end": 93.23
+      },
+      {
+        "word": " las",
+        "start": 93.23,
+        "end": 93.41
+      },
+      {
+        "word": " cosas",
+        "start": 93.41,
+        "end": 93.69
+      },
+      {
+        "word": " que",
+        "start": 93.69,
+        "end": 93.89
+      },
+      {
+        "word": " hacemos",
+        "start": 93.89,
+        "end": 94.17
+      },
+      {
+        "word": " y",
+        "start": 94.17,
+        "end": 94.33
+      },
+      {
+        "word": " a",
+        "start": 94.33,
+        "end": 94.47
+      },
+      {
+        "word": " las",
+        "start": 94.47,
+        "end": 94.69
+      },
+      {
+        "word": " callas",
+        "start": 94.69,
+        "end": 95.05
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "tiffany en cobre, compré la pantalla",
+    "start": 95.05,
+    "end": 96.93,
+    "words": [
+      {
+        "word": " Tiffany",
+        "start": 95.05,
+        "end": 95.47
+      },
+      {
+        "word": " en",
+        "start": 95.47,
+        "end": 95.69
+      },
+      {
+        "word": " cobre,",
+        "start": 95.69,
+        "end": 95.89
+      },
+      {
+        "word": " compré",
+        "start": 95.95,
+        "end": 96.25
+      },
+      {
+        "word": " la",
+        "start": 96.25,
+        "end": 96.47
+      },
+      {
+        "word": " pantalla",
+        "start": 96.47,
+        "end": 96.93
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "yo sé que tú me piensas, baby",
+    "start": 96.93,
+    "end": 98.79,
+    "words": [
+      {
+        "word": " Yo",
+        "start": 96.93,
+        "end": 97.13
+      },
+      {
+        "word": " sé",
+        "start": 97.13,
+        "end": 97.29
+      },
+      {
+        "word": " que",
+        "start": 97.29,
+        "end": 97.39
+      },
+      {
+        "word": " tú",
+        "start": 97.39,
+        "end": 97.55
+      },
+      {
+        "word": " me",
+        "start": 97.55,
+        "end": 97.75
+      },
+      {
+        "word": " piensas,",
+        "start": 97.75,
+        "end": 98.19
+      },
+      {
+        "word": " baby",
+        "start": 98.29,
+        "end": 98.79
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "quería serte mi first lady",
+    "start": 98.79,
+    "end": 100.77,
+    "words": [
+      {
+        "word": " Quería",
+        "start": 98.79,
+        "end": 99.41
+      },
+      {
+        "word": " serte",
+        "start": 99.41,
+        "end": 99.75
+      },
+      {
+        "word": " mi",
+        "start": 99.75,
+        "end": 99.93
+      },
+      {
+        "word": " first",
+        "start": 99.93,
+        "end": 100.21
+      },
+      {
+        "word": " lady",
+        "start": 100.21,
+        "end": 100.77
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "i just wanna fuck you, tell me where you've been at",
+    "start": 100.77,
+    "end": 103.29,
+    "words": [
+      {
+        "word": " I",
+        "start": 100.77,
+        "end": 101.35
+      },
+      {
+        "word": " just",
+        "start": 101.35,
+        "end": 101.49
+      },
+      {
+        "word": " wanna",
+        "start": 101.49,
+        "end": 101.71
+      },
+      {
+        "word": " fuck",
+        "start": 101.71,
+        "end": 101.99
+      },
+      {
+        "word": " you,",
+        "start": 101.99,
+        "end": 102.19
+      },
+      {
+        "word": " tell",
+        "start": 102.33,
+        "end": 102.39
+      },
+      {
+        "word": " me",
+        "start": 102.39,
+        "end": 102.49
+      },
+      {
+        "word": " where",
+        "start": 102.49,
+        "end": 102.61
+      },
+      {
+        "word": " you've",
+        "start": 102.61,
+        "end": 102.93
+      },
+      {
+        "word": " been",
+        "start": 102.93,
+        "end": 103.09
+      },
+      {
+        "word": " at",
+        "start": 103.09,
+        "end": 103.29
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "i've been reminiscing lately",
+    "start": 103.29,
+    "end": 104.77,
+    "words": [
+      {
+        "word": " I've",
+        "start": 103.29,
+        "end": 103.45
+      },
+      {
+        "word": " been",
+        "start": 103.45,
+        "end": 103.57
+      },
+      {
+        "word": " reminiscing",
+        "start": 103.57,
+        "end": 104.23
+      },
+      {
+        "word": " lately",
+        "start": 104.23,
+        "end": 104.77
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "i will have a new love maybe",
+    "start": 104.77,
+    "end": 107.03,
+    "words": [
+      {
+        "word": " I",
+        "start": 104.77,
+        "end": 105.41
+      },
+      {
+        "word": " will",
+        "start": 105.41,
+        "end": 105.57
+      },
+      {
+        "word": " have",
+        "start": 105.57,
+        "end": 105.77
+      },
+      {
+        "word": " a",
+        "start": 105.77,
+        "end": 105.91
+      },
+      {
+        "word": " new",
+        "start": 105.91,
+        "end": 106.05
+      },
+      {
+        "word": " love",
+        "start": 106.05,
+        "end": 106.27
+      },
+      {
+        "word": " maybe",
+        "start": 106.27,
+        "end": 107.03
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "baby come back, don't make me",
+    "start": 107.03,
+    "end": 109.19,
+    "words": [
+      {
+        "word": " Baby",
+        "start": 107.03,
+        "end": 107.55
+      },
+      {
+        "word": " come",
+        "start": 107.55,
+        "end": 107.91
+      },
+      {
+        "word": " back,",
+        "start": 107.91,
+        "end": 108.07
+      },
+      {
+        "word": " don't",
+        "start": 108.21,
+        "end": 108.39
+      },
+      {
+        "word": " make",
+        "start": 108.39,
+        "end": 108.69
+      },
+      {
+        "word": " me",
+        "start": 108.69,
+        "end": 109.19
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "we should have sex, sex, sex",
+    "start": 109.19,
+    "end": 111.29,
+    "words": [
+      {
+        "word": " We",
+        "start": 109.19,
+        "end": 109.49
+      },
+      {
+        "word": " should",
+        "start": 109.49,
+        "end": 109.65
+      },
+      {
+        "word": " have",
+        "start": 109.65,
+        "end": 109.95
+      },
+      {
+        "word": " sex,",
+        "start": 109.95,
+        "end": 110.31
+      },
+      {
+        "word": " sex,",
+        "start": 110.31,
+        "end": 110.79
+      },
+      {
+        "word": " sex",
+        "start": 111.11,
+        "end": 111.29
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "play with it daily, daily",
+    "start": 111.29,
+    "end": 112.91,
+    "words": [
+      {
+        "word": " Play",
+        "start": 111.29,
+        "end": 111.47
+      },
+      {
+        "word": " with",
+        "start": 111.47,
+        "end": 111.73
+      },
+      {
+        "word": " it",
+        "start": 111.73,
+        "end": 111.93
+      },
+      {
+        "word": " daily,",
+        "start": 111.93,
+        "end": 112.29
+      },
+      {
+        "word": " daily",
+        "start": 112.51,
+        "end": 112.91
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "pa' qué buscarte si sé en dónde estás",
+    "start": 112.91,
+    "end": 115.89,
+    "words": [
+      {
+        "word": " Pa'",
+        "start": 112.91,
+        "end": 113.43
+      },
+      {
+        "word": " qué",
+        "start": 113.61,
+        "end": 113.69
+      },
+      {
+        "word": " buscarte",
+        "start": 113.69,
+        "end": 114.39
+      },
+      {
+        "word": " si",
+        "start": 114.39,
+        "end": 114.71
+      },
+      {
+        "word": " sé",
+        "start": 114.71,
+        "end": 114.91
+      },
+      {
+        "word": " en",
+        "start": 114.91,
+        "end": 115.15
+      },
+      {
+        "word": " dónde",
+        "start": 115.15,
+        "end": 115.51
+      },
+      {
+        "word": " estás",
+        "start": 115.51,
+        "end": 115.89
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "hoy ando solo ando sin él está",
+    "start": 116.93,
+    "end": 120.51,
+    "words": [
+      {
+        "word": " Hoy",
+        "start": 116.93,
+        "end": 117.53
+      },
+      {
+        "word": " ando",
+        "start": 117.53,
+        "end": 118.07
+      },
+      {
+        "word": " solo",
+        "start": 118.07,
+        "end": 118.35
+      },
+      {
+        "word": " ando",
+        "start": 118.35,
+        "end": 118.81
+      },
+      {
+        "word": " sin",
+        "start": 118.81,
+        "end": 119.15
+      },
+      {
+        "word": " él",
+        "start": 119.15,
+        "end": 119.61
+      },
+      {
+        "word": " está",
+        "start": 119.61,
+        "end": 120.51
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "a ti yo te conozco desde atrás",
+    "start": 121.03,
+    "end": 124.09,
+    "words": [
+      {
+        "word": " A",
+        "start": 121.03,
+        "end": 121.65
+      },
+      {
+        "word": " ti",
+        "start": 121.65,
+        "end": 121.83
+      },
+      {
+        "word": " yo",
+        "start": 121.83,
+        "end": 122.09
+      },
+      {
+        "word": " te",
+        "start": 122.09,
+        "end": 122.43
+      },
+      {
+        "word": " conozco",
+        "start": 122.43,
+        "end": 123.13
+      },
+      {
+        "word": " desde",
+        "start": 123.13,
+        "end": 123.45
+      },
+      {
+        "word": " atrás",
+        "start": 123.45,
+        "end": 124.09
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "no estoy en ti, bebé, déjame en paz",
+    "start": 124.99,
+    "end": 128.15,
+    "words": [
+      {
+        "word": " No",
+        "start": 124.99,
+        "end": 125.59
+      },
+      {
+        "word": " estoy",
+        "start": 125.59,
+        "end": 125.91
+      },
+      {
+        "word": " en",
+        "start": 125.91,
+        "end": 126.19
+      },
+      {
+        "word": " ti,",
+        "start": 126.19,
+        "end": 126.41
+      },
+      {
+        "word": " bebé,",
+        "start": 126.43,
+        "end": 126.97
+      },
+      {
+        "word": " déjame",
+        "start": 127.17,
+        "end": 127.51
+      },
+      {
+        "word": " en",
+        "start": 127.51,
+        "end": 127.83
+      },
+      {
+        "word": " paz",
+        "start": 127.83,
+        "end": 128.15
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "sigue tu camino",
+    "start": 128.95,
+    "end": 131.03,
+    "words": [
+      {
+        "word": " Sigue",
+        "start": 128.95,
+        "end": 129.63
+      },
+      {
+        "word": " tu",
+        "start": 129.63,
+        "end": 129.97
+      },
+      {
+        "word": " camino",
+        "start": 129.97,
+        "end": 131.03
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "ya tú cámbiate y yo no soy el mismo",
+    "start": 131.59,
+    "end": 135.35,
+    "words": [
+      {
+        "word": " Ya",
+        "start": 131.59,
+        "end": 132.25
+      },
+      {
+        "word": " tú",
+        "start": 132.25,
+        "end": 132.53
+      },
+      {
+        "word": " cámbiate",
+        "start": 132.53,
+        "end": 133.11
+      },
+      {
+        "word": " y",
+        "start": 133.11,
+        "end": 133.39
+      },
+      {
+        "word": " yo",
+        "start": 133.39,
+        "end": 133.55
+      },
+      {
+        "word": " no",
+        "start": 133.55,
+        "end": 133.87
+      },
+      {
+        "word": " soy",
+        "start": 133.87,
+        "end": 134.11
+      },
+      {
+        "word": " el",
+        "start": 134.11,
+        "end": 134.43
+      },
+      {
+        "word": " mismo",
+        "start": 134.43,
+        "end": 135.35
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "siempre recuerdo lo que un día fuimos",
+    "start": 136.03,
+    "end": 139.95,
+    "words": [
+      {
+        "word": " Siempre",
+        "start": 136.03,
+        "end": 136.53
+      },
+      {
+        "word": " recuerdo",
+        "start": 136.53,
+        "end": 137.19
+      },
+      {
+        "word": " lo",
+        "start": 137.19,
+        "end": 137.53
+      },
+      {
+        "word": " que",
+        "start": 137.53,
+        "end": 137.81
+      },
+      {
+        "word": " un",
+        "start": 137.81,
+        "end": 137.97
+      },
+      {
+        "word": " día",
+        "start": 137.97,
+        "end": 138.31
+      },
+      {
+        "word": " fuimos",
+        "start": 138.31,
+        "end": 139.95
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "sé en quién estás pensando, qué divino",
+    "start": 139.95,
+    "end": 143.03,
+    "words": [
+      {
+        "word": " Sé",
+        "start": 139.95,
+        "end": 140.29
+      },
+      {
+        "word": " en",
+        "start": 140.29,
+        "end": 140.47
+      },
+      {
+        "word": " quién",
+        "start": 140.47,
+        "end": 140.77
+      },
+      {
+        "word": " estás",
+        "start": 140.77,
+        "end": 141.09
+      },
+      {
+        "word": " pensando,",
+        "start": 141.09,
+        "end": 141.73
+      },
+      {
+        "word": " qué",
+        "start": 141.97,
+        "end": 142.21
+      },
+      {
+        "word": " divino",
+        "start": 142.21,
+        "end": 143.03
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "bebé",
+    "start": 144.93,
+    "end": 145.27,
+    "words": [
+      {
+        "word": " Bebé",
+        "start": 144.93,
+        "end": 145.27
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "dime qué somos",
+    "start": 145.61,
+    "end": 147.43,
+    "words": [
+      {
+        "word": " Dime",
+        "start": 145.61,
+        "end": 146.19
+      },
+      {
+        "word": " qué",
+        "start": 146.19,
+        "end": 146.53
+      },
+      {
+        "word": " somos",
+        "start": 146.53,
+        "end": 147.43
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "dime qué fuimos",
+    "start": 147.89,
+    "end": 149.51,
+    "words": [
+      {
+        "word": " Dime",
+        "start": 147.89,
+        "end": 148.23
+      },
+      {
+        "word": " qué",
+        "start": 148.23,
+        "end": 148.49
+      },
+      {
+        "word": " fuimos",
+        "start": 148.49,
+        "end": 149.51
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "dime qué sabremos",
+    "start": 149.81,
+    "end": 150.97,
+    "words": [
+      {
+        "word": " Dime",
+        "start": 149.81,
+        "end": 150.15
+      },
+      {
+        "word": " qué",
+        "start": 150.15,
+        "end": 150.39
+      },
+      {
+        "word": " sabremos",
+        "start": 150.39,
+        "end": 150.97
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "después del paso que nos dimos",
+    "start": 150.97,
+    "end": 153.03,
+    "words": [
+      {
+        "word": " Después",
+        "start": 150.97,
+        "end": 151.29
+      },
+      {
+        "word": " del",
+        "start": 151.29,
+        "end": 151.59
+      },
+      {
+        "word": " paso",
+        "start": 151.59,
+        "end": 151.99
+      },
+      {
+        "word": " que",
+        "start": 151.99,
+        "end": 152.41
+      },
+      {
+        "word": " nos",
+        "start": 152.41,
+        "end": 152.69
+      },
+      {
+        "word": " dimos",
+        "start": 152.69,
+        "end": 153.03
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "siento que al final ninguno de los dos",
+    "start": 153.87,
+    "end": 156.03,
+    "words": [
+      {
+        "word": " Siento",
+        "start": 153.87,
+        "end": 154.13
+      },
+      {
+        "word": " que",
+        "start": 154.13,
+        "end": 154.31
+      },
+      {
+        "word": " al",
+        "start": 154.31,
+        "end": 154.43
+      },
+      {
+        "word": " final",
+        "start": 154.43,
+        "end": 154.83
+      },
+      {
+        "word": " ninguno",
+        "start": 154.83,
+        "end": 155.29
+      },
+      {
+        "word": " de",
+        "start": 155.29,
+        "end": 155.43
+      },
+      {
+        "word": " los",
+        "start": 155.43,
+        "end": 155.67
+      },
+      {
+        "word": " dos",
+        "start": 155.67,
+        "end": 156.03
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "nos conocimos",
+    "start": 156.03,
+    "end": 157.27,
+    "words": [
+      {
+        "word": " Nos",
+        "start": 156.03,
+        "end": 156.27
+      },
+      {
+        "word": " conocimos",
+        "start": 156.27,
+        "end": 157.27
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "que diablo fue lo que hicimos",
+    "start": 157.27,
+    "end": 159.27,
+    "words": [
+      {
+        "word": " Que",
+        "start": 157.27,
+        "end": 157.65
+      },
+      {
+        "word": " diablo",
+        "start": 157.65,
+        "end": 158.07
+      },
+      {
+        "word": " fue",
+        "start": 158.07,
+        "end": 158.31
+      },
+      {
+        "word": " lo",
+        "start": 158.31,
+        "end": 158.45
+      },
+      {
+        "word": " que",
+        "start": 158.45,
+        "end": 158.67
+      },
+      {
+        "word": " hicimos",
+        "start": 158.67,
+        "end": 159.27
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "bebé",
+    "start": 160.83,
+    "end": 161.67,
+    "words": [
+      {
+        "word": " Bebé",
+        "start": 160.83,
+        "end": 161.67
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "pa' chingar estoy pa' ti",
+    "start": 161.99,
+    "end": 164.23,
+    "words": [
+      {
+        "word": " Pa'",
+        "start": 161.99,
+        "end": 162.41
+      },
+      {
+        "word": " chingar",
+        "start": 162.41,
+        "end": 163.17
+      },
+      {
+        "word": " estoy",
+        "start": 163.17,
+        "end": 163.45
+      },
+      {
+        "word": " pa'",
+        "start": 163.45,
+        "end": 163.83
+      },
+      {
+        "word": " ti",
+        "start": 163.89,
+        "end": 164.23
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "text": "todas las veces que tú pidas",
+    "start": 164.23,
+    "end": 166.49,
+    "words": [
+      {
+        "word": " Todas",
+        "start": 164.23,
+        "end": 164.69
+      },
+      {
+        "word": " las",
+        "start": 164.69,
+        "end": 164.85
+      },
+      {
+        "word": " veces",
+        "start": 164.85,
+        "end": 165.19
+      },
+      {
+        "word": " que",
+        "start": 165.19,
+        "end": 165.53
+      },
+      {
+        "word": " tú",
+        "start": 165.53,
+        "end": 165.89
+      },
+      {
+        "word": " pidas",
+        "start": 165.89,
+        "end": 166.49
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "text": "a ti yo te daría después el vida",
+    "start": 166.49,
+    "end": 169.65,
+    "words": [
+      {
+        "word": " A",
+        "start": 166.49,
+        "end": 166.91
+      },
+      {
+        "word": " ti",
+        "start": 166.91,
+        "end": 167.03
+      },
+      {
+        "word": " yo",
+        "start": 167.03,
+        "end": 167.29
+      },
+      {
+        "word": " te",
+        "start": 167.29,
+        "end": 167.67
+      },
+      {
+        "word": " daría",
+        "start": 167.67,
+        "end": 168.33
+      },
+      {
+        "word": " después",
+        "start": 168.33,
+        "end": 168.77
+      },
+      {
+        "word": " el",
+        "start": 168.77,
+        "end": 169.65
+      },
+      {
+        "word": " vida",
+        "start": 169.65,
+        "end": 169.65
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "text": "queremos la una, diablo",
+    "start": 170.27,
+    "end": 172.33,
+    "words": [
+      {
+        "word": " Queremos",
+        "start": 170.27,
+        "end": 171.13
+      },
+      {
+        "word": " la",
+        "start": 171.13,
+        "end": 171.55
+      },
+      {
+        "word": " una,",
+        "start": 171.55,
+        "end": 171.87
+      },
+      {
+        "word": " diablo",
+        "start": 171.87,
+        "end": 172.33
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "text": "venenosa se me olvida",
+    "start": 172.33,
+    "end": 174.69,
+    "words": [
+      {
+        "word": " Venenosa",
+        "start": 172.33,
+        "end": 173.31
+      },
+      {
+        "word": " se",
+        "start": 173.31,
+        "end": 173.65
+      },
+      {
+        "word": " me",
+        "start": 173.65,
+        "end": 173.93
+      },
+      {
+        "word": " olvida",
+        "start": 173.93,
+        "end": 174.69
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "text": "y quiero otra despedida",
+    "start": 175.03,
+    "end": 177.55,
+    "words": [
+      {
+        "word": " Y",
+        "start": 175.03,
+        "end": 175.45
+      },
+      {
+        "word": " quiero",
+        "start": 175.45,
+        "end": 175.93
+      },
+      {
+        "word": " otra",
+        "start": 175.93,
+        "end": 176.45
+      },
+      {
+        "word": " despedida",
+        "start": 176.45,
+        "end": 177.55
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "text": "pero ya, good boy",
+    "start": 178.27,
+    "end": 180.69,
+    "words": [
+      {
+        "word": " Pero",
+        "start": 178.27,
+        "end": 178.85
+      },
+      {
+        "word": " ya,",
+        "start": 178.85,
+        "end": 179.61
+      },
+      {
+        "word": " good",
+        "start": 179.93,
+        "end": 180.17
+      },
+      {
+        "word": " boy",
+        "start": 180.17,
+        "end": 180.69
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "text": "adiós, sayonara",
+    "start": 180.69,
+    "end": 182.27,
+    "words": [
+      {
+        "word": " Adiós,",
+        "start": 180.69,
+        "end": 181.75
+      },
+      {
+        "word": " sayonara",
+        "start": 181.77,
+        "end": 182.27
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "text": "no me beses",
+    "start": 183.07,
+    "end": 184.61,
+    "words": [
+      {
+        "word": " No",
+        "start": 183.07,
+        "end": 183.81
+      },
+      {
+        "word": " me",
+        "start": 183.81,
+        "end": 184.19
+      },
+      {
+        "word": " beses",
+        "start": 184.19,
+        "end": 184.61
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "text": "porque se me para",
+    "start": 184.61,
+    "end": 186.59,
+    "words": [
+      {
+        "word": " Porque",
+        "start": 184.61,
+        "end": 185.47
+      },
+      {
+        "word": " se",
+        "start": 185.47,
+        "end": 185.91
+      },
+      {
+        "word": " me",
+        "start": 185.91,
+        "end": 186.27
+      },
+      {
+        "word": " para",
+        "start": 186.27,
+        "end": 186.59
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "text": "imposible decirte que no con esa cara",
+    "start": 186.59,
+    "end": 190.67,
+    "words": [
+      {
+        "word": " Imposible",
+        "start": 186.59,
+        "end": 187.89
+      },
+      {
+        "word": " decirte",
+        "start": 187.89,
+        "end": 188.97
+      },
+      {
+        "word": " que",
+        "start": 188.97,
+        "end": 189.25
+      },
+      {
+        "word": " no",
+        "start": 189.25,
+        "end": 189.41
+      },
+      {
+        "word": " con",
+        "start": 189.41,
+        "end": 189.85
+      },
+      {
+        "word": " esa",
+        "start": 189.85,
+        "end": 190.23
+      },
+      {
+        "word": " cara",
+        "start": 190.23,
+        "end": 190.67
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "text": "nuestra historia de amor fue bonita y rara",
+    "start": 190.67,
+    "end": 193.69,
+    "words": [
+      {
+        "word": " Nuestra",
+        "start": 190.67,
+        "end": 191.17
+      },
+      {
+        "word": " historia",
+        "start": 191.17,
+        "end": 191.65
+      },
+      {
+        "word": " de",
+        "start": 191.65,
+        "end": 191.97
+      },
+      {
+        "word": " amor",
+        "start": 191.97,
+        "end": 192.21
+      },
+      {
+        "word": " fue",
+        "start": 192.21,
+        "end": 192.49
+      },
+      {
+        "word": " bonita",
+        "start": 192.49,
+        "end": 193.13
+      },
+      {
+        "word": " y",
+        "start": 193.13,
+        "end": 193.59
+      },
+      {
+        "word": " rara",
+        "start": 193.59,
+        "end": 193.69
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "text": "y es verdad",
+    "start": 194.51,
+    "end": 195.55,
+    "words": [
+      {
+        "word": " Y",
+        "start": 194.51,
+        "end": 194.87
+      },
+      {
+        "word": " es",
+        "start": 194.87,
+        "end": 195.11
+      },
+      {
+        "word": " verdad",
+        "start": 195.11,
+        "end": 195.55
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "text": "tú eres una diosa y como tú a otra yo no voy a encontrar",
+    "start": 195.55,
+    "end": 199.61,
+    "words": [
+      {
+        "word": " Tú",
+        "start": 195.55,
+        "end": 195.91
+      },
+      {
+        "word": " eres",
+        "start": 195.91,
+        "end": 196.03
+      },
+      {
+        "word": " una",
+        "start": 196.03,
+        "end": 196.33
+      },
+      {
+        "word": " diosa",
+        "start": 196.33,
+        "end": 196.69
+      },
+      {
+        "word": " y",
+        "start": 196.69,
+        "end": 196.89
+      },
+      {
+        "word": " como",
+        "start": 196.89,
+        "end": 197.27
+      },
+      {
+        "word": " tú",
+        "start": 197.27,
+        "end": 197.69
+      },
+      {
+        "word": " a",
+        "start": 197.69,
+        "end": 197.97
+      },
+      {
+        "word": " otra",
+        "start": 197.97,
+        "end": 198.23
+      },
+      {
+        "word": " yo",
+        "start": 198.23,
+        "end": 198.51
+      },
+      {
+        "word": " no",
+        "start": 198.51,
+        "end": 198.81
+      },
+      {
+        "word": " voy",
+        "start": 198.81,
+        "end": 199.01
+      },
+      {
+        "word": " a",
+        "start": 199.01,
+        "end": 199.17
+      },
+      {
+        "word": " encontrar",
+        "start": 199.17,
+        "end": 199.61
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "text": "tú tampoco",
+    "start": 199.61,
+    "end": 200.81,
+    "words": [
+      {
+        "word": " Tú",
+        "start": 199.61,
+        "end": 200.15
+      },
+      {
+        "word": " tampoco",
+        "start": 200.15,
+        "end": 200.81
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "text": "en tu vida yo fui lo más real",
+    "start": 200.81,
+    "end": 203.75,
+    "words": [
+      {
+        "word": " En",
+        "start": 200.81,
+        "end": 201.21
+      },
+      {
+        "word": " tu",
+        "start": 201.21,
+        "end": 201.47
+      },
+      {
+        "word": " vida",
+        "start": 201.47,
+        "end": 201.87
+      },
+      {
+        "word": " yo",
+        "start": 201.87,
+        "end": 202.35
+      },
+      {
+        "word": " fui",
+        "start": 202.35,
+        "end": 202.65
+      },
+      {
+        "word": " lo",
+        "start": 202.65,
+        "end": 202.99
+      },
+      {
+        "word": " más",
+        "start": 202.99,
+        "end": 203.21
+      },
+      {
+        "word": " real",
+        "start": 203.21,
+        "end": 203.75
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "text": "yo era fiel a tus ojos y a tus labios leal",
+    "start": 203.75,
+    "end": 207.87,
+    "words": [
+      {
+        "word": " Yo",
+        "start": 203.75,
+        "end": 204.13
+      },
+      {
+        "word": " era",
+        "start": 204.13,
+        "end": 204.41
+      },
+      {
+        "word": " fiel",
+        "start": 204.41,
+        "end": 204.79
+      },
+      {
+        "word": " a",
+        "start": 204.79,
+        "end": 205.29
+      },
+      {
+        "word": " tus",
+        "start": 205.29,
+        "end": 205.55
+      },
+      {
+        "word": " ojos",
+        "start": 205.55,
+        "end": 206.13
+      },
+      {
+        "word": " y",
+        "start": 206.13,
+        "end": 206.45
+      },
+      {
+        "word": " a",
+        "start": 206.45,
+        "end": 206.55
+      },
+      {
+        "word": " tus",
+        "start": 206.55,
+        "end": 206.77
+      },
+      {
+        "word": " labios",
+        "start": 206.77,
+        "end": 207.23
+      },
+      {
+        "word": " leal",
+        "start": 207.23,
+        "end": 207.87
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "text": "pero no, no somos igual",
+    "start": 207.87,
+    "end": 209.93,
+    "words": [
+      {
+        "word": " Pero",
+        "start": 207.87,
+        "end": 208.45
+      },
+      {
+        "word": " no,",
+        "start": 208.45,
+        "end": 208.77
+      },
+      {
+        "word": " no",
+        "start": 209.05,
+        "end": 209.05
+      },
+      {
+        "word": " somos",
+        "start": 209.05,
+        "end": 209.37
+      },
+      {
+        "word": " igual",
+        "start": 209.37,
+        "end": 209.93
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "text": "tú fuiste una de mis amores",
+    "start": 210.71,
+    "end": 213.77,
+    "words": [
+      {
+        "word": " Tú",
+        "start": 210.71,
+        "end": 211.43
+      },
+      {
+        "word": " fuiste",
+        "start": 211.43,
+        "end": 211.87
+      },
+      {
+        "word": " una",
+        "start": 211.87,
+        "end": 212.15
+      },
+      {
+        "word": " de",
+        "start": 212.15,
+        "end": 212.31
+      },
+      {
+        "word": " mis",
+        "start": 212.31,
+        "end": 212.49
+      },
+      {
+        "word": " amores",
+        "start": 212.49,
+        "end": 213.77
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "text": "yo solamente fui otra de tu ex",
+    "start": 213.77,
+    "end": 216.01,
+    "words": [
+      {
+        "word": " Yo",
+        "start": 213.77,
+        "end": 214.21
+      },
+      {
+        "word": " solamente",
+        "start": 214.21,
+        "end": 214.83
+      },
+      {
+        "word": " fui",
+        "start": 214.83,
+        "end": 215.15
+      },
+      {
+        "word": " otra",
+        "start": 215.15,
+        "end": 215.39
+      },
+      {
+        "word": " de",
+        "start": 215.39,
+        "end": 215.65
+      },
+      {
+        "word": " tu",
+        "start": 215.65,
+        "end": 215.71
+      },
+      {
+        "word": " ex",
+        "start": 215.71,
+        "end": 216.01
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "text": "a veces me río leyendo los textos",
+    "start": 216.67,
+    "end": 219.01,
+    "words": [
+      {
+        "word": " A",
+        "start": 216.67,
+        "end": 217.23
+      },
+      {
+        "word": " veces",
+        "start": 217.23,
+        "end": 217.41
+      },
+      {
+        "word": " me",
+        "start": 217.41,
+        "end": 217.71
+      },
+      {
+        "word": " río",
+        "start": 217.71,
+        "end": 217.95
+      },
+      {
+        "word": " leyendo",
+        "start": 217.95,
+        "end": 218.41
+      },
+      {
+        "word": " los",
+        "start": 218.41,
+        "end": 218.73
+      },
+      {
+        "word": " textos",
+        "start": 218.73,
+        "end": 219.01
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "text": "a veces me río pero de las tres",
+    "start": 219.55,
+    "end": 221.69,
+    "words": [
+      {
+        "word": " A",
+        "start": 219.55,
+        "end": 219.73
+      },
+      {
+        "word": " veces",
+        "start": 219.73,
+        "end": 219.95
+      },
+      {
+        "word": " me",
+        "start": 219.95,
+        "end": 220.27
+      },
+      {
+        "word": " río",
+        "start": 220.27,
+        "end": 220.51
+      },
+      {
+        "word": " pero",
+        "start": 220.51,
+        "end": 220.77
+      },
+      {
+        "word": " de",
+        "start": 220.77,
+        "end": 221.01
+      },
+      {
+        "word": " las",
+        "start": 221.01,
+        "end": 221.31
+      },
+      {
+        "word": " tres",
+        "start": 221.31,
+        "end": 221.69
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "text": "no sé cuándo fue que murió el interés",
+    "start": 221.69,
+    "end": 224.01,
+    "words": [
+      {
+        "word": " No",
+        "start": 221.69,
+        "end": 222.17
+      },
+      {
+        "word": " sé",
+        "start": 222.17,
+        "end": 222.33
+      },
+      {
+        "word": " cuándo",
+        "start": 222.33,
+        "end": 222.69
+      },
+      {
+        "word": " fue",
+        "start": 222.69,
+        "end": 222.89
+      },
+      {
+        "word": " que",
+        "start": 222.89,
+        "end": 223.15
+      },
+      {
+        "word": " murió",
+        "start": 223.15,
+        "end": 223.37
+      },
+      {
+        "word": " el",
+        "start": 223.37,
+        "end": 223.63
+      },
+      {
+        "word": " interés",
+        "start": 223.63,
+        "end": 224.01
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "text": "no sé si un tejamo vale lo mismo cuando es en inglés",
+    "start": 224.73,
+    "end": 228.01,
+    "words": [
+      {
+        "word": " No",
+        "start": 224.73,
+        "end": 225.29
+      },
+      {
+        "word": " sé",
+        "start": 225.29,
+        "end": 225.43
+      },
+      {
+        "word": " si",
+        "start": 225.43,
+        "end": 225.55
+      },
+      {
+        "word": " un",
+        "start": 225.55,
+        "end": 225.67
+      },
+      {
+        "word": " tejamo",
+        "start": 225.67,
+        "end": 226.25
+      },
+      {
+        "word": " vale",
+        "start": 226.25,
+        "end": 226.53
+      },
+      {
+        "word": " lo",
+        "start": 226.53,
+        "end": 226.85
+      },
+      {
+        "word": " mismo",
+        "start": 226.85,
+        "end": 227.09
+      },
+      {
+        "word": " cuando",
+        "start": 227.09,
+        "end": 227.37
+      },
+      {
+        "word": " es",
+        "start": 227.37,
+        "end": 227.57
+      },
+      {
+        "word": " en",
+        "start": 227.57,
+        "end": 227.73
+      },
+      {
+        "word": " inglés",
+        "start": 227.73,
+        "end": 228.01
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "text": "no sé si es buena idea que tú y yo chingamos otra vez",
+    "start": 230.63,
+    "end": 234.25,
+    "words": [
+      {
+        "word": " No",
+        "start": 230.63,
+        "end": 231.19
+      },
+      {
+        "word": " sé",
+        "start": 231.19,
+        "end": 231.35
+      },
+      {
+        "word": " si",
+        "start": 231.35,
+        "end": 231.49
+      },
+      {
+        "word": " es",
+        "start": 231.49,
+        "end": 231.67
+      },
+      {
+        "word": " buena",
+        "start": 231.67,
+        "end": 231.79
+      },
+      {
+        "word": " idea",
+        "start": 231.79,
+        "end": 232.17
+      },
+      {
+        "word": " que",
+        "start": 232.17,
+        "end": 232.45
+      },
+      {
+        "word": " tú",
+        "start": 232.45,
+        "end": 232.53
+      },
+      {
+        "word": " y",
+        "start": 232.53,
+        "end": 232.57
+      },
+      {
+        "word": " yo",
+        "start": 232.57,
+        "end": 232.71
+      },
+      {
+        "word": " chingamos",
+        "start": 232.71,
+        "end": 233.15
+      },
+      {
+        "word": " otra",
+        "start": 233.15,
+        "end": 233.55
+      },
+      {
+        "word": " vez",
+        "start": 233.55,
+        "end": 234.25
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "text": "que me mires otra vez",
+    "start": 234.25,
+    "end": 236.73,
+    "words": [
+      {
+        "word": " Que",
+        "start": 234.25,
+        "end": 235.01
+      },
+      {
+        "word": " me",
+        "start": 235.01,
+        "end": 235.29
+      },
+      {
+        "word": " mires",
+        "start": 235.29,
+        "end": 235.55
+      },
+      {
+        "word": " otra",
+        "start": 235.55,
+        "end": 236.05
+      },
+      {
+        "word": " vez",
+        "start": 236.05,
+        "end": 236.73
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "text": "que nos mintamos otra vez",
+    "start": 236.73,
+    "end": 239.17,
+    "words": [
+      {
+        "word": " Que",
+        "start": 236.73,
+        "end": 237.05
+      },
+      {
+        "word": " nos",
+        "start": 237.05,
+        "end": 237.27
+      },
+      {
+        "word": " mintamos",
+        "start": 237.27,
+        "end": 237.71
+      },
+      {
+        "word": " otra",
+        "start": 237.71,
+        "end": 238.17
+      },
+      {
+        "word": " vez",
+        "start": 238.17,
+        "end": 239.17
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "text": "que cometamos el mismo error otra vez",
+    "start": 239.17,
+    "end": 242.17,
+    "words": [
+      {
+        "word": " Que",
+        "start": 239.17,
+        "end": 239.71
+      },
+      {
+        "word": " cometamos",
+        "start": 239.71,
+        "end": 240.45
+      },
+      {
+        "word": " el",
+        "start": 240.45,
+        "end": 240.69
+      },
+      {
+        "word": " mismo",
+        "start": 240.69,
+        "end": 240.93
+      },
+      {
+        "word": " error",
+        "start": 240.93,
+        "end": 241.17
+      },
+      {
+        "word": " otra",
+        "start": 241.17,
+        "end": 241.69
+      },
+      {
+        "word": " vez",
+        "start": 241.69,
+        "end": 242.17
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "text": "mar, sigue tu camino",
+    "start": 242.17,
+    "end": 245.13,
+    "words": [
+      {
+        "word": " Mar,",
+        "start": 242.17,
+        "end": 242.91
+      },
+      {
+        "word": " sigue",
+        "start": 243.09,
+        "end": 243.49
+      },
+      {
+        "word": " tu",
+        "start": 243.49,
+        "end": 243.89
+      },
+      {
+        "word": " camino",
+        "start": 243.89,
+        "end": 245.13
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "text": "ya tú cambiaste y yo no soy el mismo",
+    "start": 245.13,
+    "end": 249.21,
+    "words": [
+      {
+        "word": " Ya",
+        "start": 245.13,
+        "end": 246.15
+      },
+      {
+        "word": " tú",
+        "start": 246.15,
+        "end": 246.43
+      },
+      {
+        "word": " cambiaste",
+        "start": 246.43,
+        "end": 247.05
+      },
+      {
+        "word": " y",
+        "start": 247.05,
+        "end": 247.31
+      },
+      {
+        "word": " yo",
+        "start": 247.31,
+        "end": 247.49
+      },
+      {
+        "word": " no",
+        "start": 247.49,
+        "end": 247.75
+      },
+      {
+        "word": " soy",
+        "start": 247.75,
+        "end": 247.99
+      },
+      {
+        "word": " el",
+        "start": 247.99,
+        "end": 248.29
+      },
+      {
+        "word": " mismo",
+        "start": 248.29,
+        "end": 249.21
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "text": "siempre recuerdo el loco un día firmo",
+    "start": 249.21,
+    "end": 253.85,
+    "words": [
+      {
+        "word": " Siempre",
+        "start": 249.21,
+        "end": 250.59
+      },
+      {
+        "word": " recuerdo",
+        "start": 250.59,
+        "end": 251.05
+      },
+      {
+        "word": " el",
+        "start": 251.05,
+        "end": 251.31
+      },
+      {
+        "word": " loco",
+        "start": 251.31,
+        "end": 251.67
+      },
+      {
+        "word": " un",
+        "start": 251.67,
+        "end": 251.81
+      },
+      {
+        "word": " día",
+        "start": 251.81,
+        "end": 252.13
+      },
+      {
+        "word": " firmo",
+        "start": 252.13,
+        "end": 253.85
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "text": "sé en quién estás pensando que divino",
+    "start": 253.85,
+    "end": 257.73,
+    "words": [
+      {
+        "word": " Sé",
+        "start": 253.85,
+        "end": 254.19
+      },
+      {
+        "word": " en",
+        "start": 254.19,
+        "end": 254.39
+      },
+      {
+        "word": " quién",
+        "start": 254.39,
+        "end": 254.65
+      },
+      {
+        "word": " estás",
+        "start": 254.65,
+        "end": 254.99
+      },
+      {
+        "word": " pensando",
+        "start": 254.99,
+        "end": 255.63
+      },
+      {
+        "word": " que",
+        "start": 255.63,
+        "end": 256.05
+      },
+      {
+        "word": " divino",
+        "start": 256.05,
+        "end": 257.73
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "text": "sigue tu camino",
+    "start": 259.15,
+    "end": 261.05,
+    "words": [
+      {
+        "word": " Sigue",
+        "start": 259.15,
+        "end": 259.87
+      },
+      {
+        "word": " tu",
+        "start": 259.87,
+        "end": 260.17
+      },
+      {
+        "word": " camino",
+        "start": 260.17,
+        "end": 261.05
+      }
+    ]
+  }
+]
