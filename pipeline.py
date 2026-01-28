@@ -19,7 +19,7 @@ def main():
     separate(SUBFOLDER + "/" + AUDIO)
     if not RUNFREE:
         input("Continue?")
-    transcribe(f"{AUDIO.removesuffix(".mp3")}/vocals.mp3", "vocals_whisper_segments.json", language=LANG, _align=True)
+    transcribe(f"{AUDIO.removesuffix('.mp3')}/vocals.mp3", "vocals_whisper_segments.json", language=LANG, _align=True)
     print("[pipeline] transcribed successfully.")
     #print("[pipeline] begin alignment...")
     align(f"{AUDIO.removesuffix('.mp3')}/vocals.mp3", "vocals_whisper_segments.json", "output.json", LANG)
@@ -30,8 +30,6 @@ def main():
     os.system(f"python test_audio/gui_player.py --audio {SUBFOLDER}/{AUDIO} --align vocals_whisper_segments_aligned.json")
 
 if __name__ == "__main__":
-    main()
-else: 
     SUBFOLDER = "test_audio"
     AUDIO = "RREGATON_ExperimentoMykeTowers.mp3"
     LANG = "en"
@@ -39,7 +37,7 @@ else:
     print("[pipeline] separate...")
     separate(SUBFOLDER + "/" + AUDIO)
     input("Continue?")
-    transcribe(f"{AUDIO.removesuffix(".mp3")}/vocals.mp3", "vocals_whisper_segments.json", language=LANG, _align=True)
+    transcribe(f"{AUDIO.removesuffix('.mp3')}/vocals.mp3", "vocals_whisper_segments.json", language=LANG, _align=True)
     print("[pipeline] transcribed successfully.")
     #print("[pipeline] begin alignment...")
     align(f"{AUDIO.removesuffix('.mp3')}/vocals.mp3", "vocals_whisper_segments.json", "output.json", LANG)
@@ -48,3 +46,5 @@ else:
     print("[pipeline] done.")
     #python3 '/Users/levi/Code/Sonex/test_audio/audio_sync_player.py' '/Users/levi/Code/Sonex/test_audio/RREGATON_ExperimentoMykeTowers.mp3' --json '/Users/levi/Code/Sonex/vocals_whisper_segments_aligned.json'
     os.system(f"python test_audio/gui_player.py --audio {SUBFOLDER}/{AUDIO} --align vocals_whisper_segments_aligned.json")
+else: 
+    main()
