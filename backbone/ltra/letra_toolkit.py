@@ -352,11 +352,11 @@ def align(
         output_path = Path(transcript_path).with_stem(f"{Path(transcript_path).stem}.aligned").with_suffix(".json")
 
     # -------------------------
-    # Load audio
+    # Load audio - proper preprocessing for whisperx
     # -------------------------
-    audio, sr = torchaudio.load(audio_path)
-    audio = audio.mean(dim=0)  # mono
-    audio = audio.numpy()
+    import librosa
+    audio, sr = librosa.load(audio_path, sr=16000, mono=True)
+    print(f"Loaded audio: {len(audio)} samples at {sr}Hz")
 
     # -------------------------
     # Load transcript from JSON with metadata
@@ -389,22 +389,48 @@ def align(
     # -------------------------
     # Load alignment model
     # -------------------------
-    align_model, align_model_metadata = whisperx.load_align_model(
-        language_code=language,
-        device=device
-    )
+    try:
+        align_model, align_model_metadata = whisperx.load_align_model(
+            language_code=language,
+            device=device
+        )
+        print(f"Loaded alignment model for language: {language}")
+    except Exception as e:
+        print(f"Failed to load alignment model: {e}")
+        print("Falling back to original Whisper timestamps...")
+        # Skip CTC alignment, use original timestamps
+        aligned = {"segments": transcript}
+        for seg in aligned["segments"]:
+            seg_id = seg.get("id")
+            if seg_id in metadata and metadata[seg_id]["words"]:
+                seg["words"] = metadata[seg_id]["words"]
+        # Save and return early
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(aligned, f, indent=2, ensure_ascii=False)
+        print(f"✓ Alignment (fallback) written to {output_path}")
+        return aligned
 
     # -------------------------
     # Run forced alignment
     # -------------------------
-    aligned = whisperx.align(
-        transcript,
-        align_model,
-        align_model_metadata,
-        audio,
-        device,
-        return_char_alignments=False
-    )
+    try:
+        aligned = whisperx.align(
+            transcript,
+            align_model,
+            align_model_metadata,
+            audio,
+            device,
+            return_char_alignments=False
+        )
+        print(f"CTC alignment successful")
+    except Exception as e:
+        print(f"CTC alignment failed: {e}")
+        print("Using original Whisper timestamps instead...")
+        aligned = {"segments": transcript}
+        for seg in aligned["segments"]:
+            seg_id = seg.get("id")
+            if seg_id in metadata and metadata[seg_id]["words"]:
+                seg["words"] = metadata[seg_id]["words"]
 
     # -------------------------
     # Merge original metadata with alignment results
@@ -413,11 +439,18 @@ def align(
         for seg in aligned["segments"]:
             seg_id = seg.get("id")
             if seg_id in metadata:
-                # Preserve original timing and word-level data
+                # Preserve original timing metadata
                 seg["original_start"] = metadata[seg_id]["start"]
                 seg["original_end"] = metadata[seg_id]["end"]
+                
+                # IMPORTANT: Use original Whisper word timings if available
+                # CTC alignment often produces worse word boundaries than Whisper's own
                 if metadata[seg_id]["words"]:
-                    seg["original_words"] = metadata[seg_id]["words"]
+                    seg["words"] = metadata[seg_id]["words"]
+                    print(f"  Segment {seg_id}: Using original Whisper word timings ({len(seg['words'])} words)")
+                else:
+                    # Fall back to CTC-aligned words if no original words
+                    print(f"  Segment {seg_id}: Using CTC-aligned words")
 
     # -------------------------
     # Save output
