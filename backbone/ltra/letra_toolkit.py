@@ -24,6 +24,16 @@ int24 = False
 two_stems = "vocals"
 
 
+def _is_fresh(outputs, inputs):
+    output_paths = [Path(p) for p in (outputs if isinstance(outputs, (list, tuple)) else [outputs])]
+    input_paths = [Path(p) for p in (inputs if isinstance(inputs, (list, tuple)) else [inputs])]
+    if not output_paths or any(not p.exists() for p in output_paths):
+        return False
+    newest_input = max(p.stat().st_mtime for p in input_paths if p.exists())
+    oldest_output = min(p.stat().st_mtime for p in output_paths)
+    return oldest_output >= newest_input
+
+
 def copy_process_streams(process: sp.Popen):
     def raw(stream: Optional[IO[bytes]]) -> IO[bytes]:
         assert stream is not None
@@ -52,11 +62,22 @@ def copy_process_streams(process: sp.Popen):
             std.flush()
 
 
-def separate(inp):
+def separate(inp, outp=None, force: bool = False):
     inp_path = Path(inp)
-    out_dir = inp_path.stem
+    if not outp:
+        out_dir = inp_path.stem
+    else:
+        out_dir = Path(outp)
     out_dir_path = Path(out_dir)
-    if out_dir_path.exists():
+    expected_outputs = [out_dir_path / "vocals.mp3"]
+    if two_stems is not None:
+        expected_outputs.append(out_dir_path / "other.mp3")
+
+    if not force and _is_fresh(expected_outputs, inp_path):
+        print("[separate] Using existing stems; skipping demucs.")
+        return
+
+    if out_dir_path.exists() and force:
         rmtree(out_dir_path)
     out_dir_path.mkdir(parents=True, exist_ok=True)
 
@@ -100,6 +121,7 @@ def transcribe(
     language: Optional[str] = None,
     model_size: Optional[str] = "medium",
     _align=False,
+    reuse_existing: bool = True,
 ):
     """
     Transcribe audio using faster-whisper WITH real timestamps.
@@ -110,6 +132,15 @@ def transcribe(
     import json
     from pathlib import Path
     from faster_whisper import WhisperModel
+
+    # -------------------------
+    # Reuse existing transcript if fresh
+    # -------------------------
+    if outp and reuse_existing and language is not None and _is_fresh(outp, inp):
+        with open(outp, "r", encoding="utf-8") as f:
+            transcript = json.load(f)
+        print(f"Using cached transcript: {outp}")
+        return transcript, None
 
     # -------------------------
     # Load model
@@ -334,6 +365,7 @@ def align(
     transcript_path: str,
     output_path: Optional[str] = None,
     language: str = detected or "en",
+    reuse_existing: bool = True,
 ):
     """
     Align transcript segments from JSON to audio using WhisperX CTC alignment.
@@ -350,6 +382,12 @@ def align(
 
     if output_path is None:
         output_path = Path(transcript_path).with_stem(f"{Path(transcript_path).stem}.aligned").with_suffix(".json")
+
+    if reuse_existing and _is_fresh(output_path, [audio_path, transcript_path]):
+        with open(output_path, "r", encoding="utf-8") as f:
+            aligned = json.load(f)
+        print(f"Using cached alignment: {output_path}")
+        return aligned
 
     # -------------------------
     # Load audio - proper preprocessing for whisperx
