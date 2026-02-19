@@ -1,4 +1,5 @@
 import io, os, select, sys, re
+import shutil
 from pathlib import Path
 from shutil import rmtree
 import subprocess as sp
@@ -113,6 +114,7 @@ def separate(inp, outp=None, force: bool = False):
         dst = out_dir_path / f"{stem}.mp3"
         if src.exists():
             src.replace(dst)
+    shutil.copy2(inp_path, out_dir_path / inp_path.name)
 
 
 def transcribe(
@@ -174,7 +176,7 @@ def transcribe(
     # -------------------------
     segments, _ = model.transcribe(
         inp,
-        beam_size=5,
+        beam_size=1,
         vad_filter=False,
         task="transcribe",
         language=chosen_lang,
