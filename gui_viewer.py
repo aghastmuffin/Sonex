@@ -55,7 +55,7 @@ def update_detected_chord(ms):
     global i
     elapsed = ms / 1000
     try:
-        start = lyrics[i][0] #TODO: Finish hooking this up to the lyric stream.
+        start = lyrics[i][0] #TODO: Finish hooking this up to the chord, finish migrating from lyric stream.
         end = lyrics[i][1]
         word = lyrics[i][2]
 

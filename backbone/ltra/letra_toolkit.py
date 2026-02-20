@@ -114,6 +114,7 @@ def separate(inp, outp=None, force: bool = False):
         dst = out_dir_path / f"{stem}.mp3"
         if src.exists():
             src.replace(dst)
+    print(inp_path, inp_path.stem)
     shutil.copy2(inp_path, out_dir_path / inp_path.name)
 
 
