@@ -7,7 +7,7 @@ pygame.init()
 
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("SONEX LyricViewer_DBG")
+pygame.display.set_caption("SONEX LyricViewer_DBG LATIN-SPANISH Iniciado Sesión Como: Levi Brown ORC:0009-0007-5278-6761")
 
 clock = pygame.time.Clock()
 dbgfont = pygame.font.SysFont(None, 18)
@@ -50,10 +50,30 @@ def update_lyric(ms):
     except IndexError:
         pass
 
+def update_detected_chord(ms):
+    global lyric_text
+    global i
+    elapsed = ms / 1000
+    try:
+        start = lyrics[i][0] #TODO: Finish hooking this up to the lyric stream.
+        end = lyrics[i][1]
+        word = lyrics[i][2]
 
+        if elapsed > 1:
+            if start <= elapsed < end:
+                chord_text = dbgfont.render(f"Chord", True, (255, 255, 255))
+                screen.blit(chord_text, (50, (55 + lyric_text.get_height())))
+
+            if elapsed >= end:
+                i += 1
+
+    except IndexError:
+        pass
 
 #unpack_lyrics("BEDROOM_Augustine_BloodOranges")
-unpack_lyrics("RREGATON_ExperimentoMykeTowers")
+buildfor = dbgfont.render(f"SPANISH(C1) TESTING-LEVITAISUNKIMBROWN", True, (255, 255, 255))
+unpack_lyrics("LATINRAP_JHAYCO_entolao")
+
 while running:
     dt = clock.tick(60)  # dt = milliseconds since last frame
 
@@ -65,11 +85,12 @@ while running:
     elapsed_ms = current_ticks - start_ticks
 
     screen.fill((30, 30, 30))
-
     time_text = dbgfont.render(f"Elapsed: {elapsed_ms} ms", True, (255, 255, 255))
+
     update_lyric(elapsed_ms)
 
     screen.blit(time_text, ((780 - time_text.get_width()), (600 - time_text.get_height())))
+    screen.blit(buildfor, ((0 + buildfor.get_width()), (0 + buildfor.get_height())))
     pygame.display.flip()
 
 pygame.quit()
