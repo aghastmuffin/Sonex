@@ -120,6 +120,8 @@ def separate(inp, outp=None, force: bool = False):
 
 def transcribe(
     inp,
+    beam_size=5,
+    pat=2,
     outp: Optional[str] = None,
     language: Optional[str] = None,
     model_size: Optional[str] = "medium",
@@ -177,7 +179,8 @@ def transcribe(
     # -------------------------
     segments, _ = model.transcribe(
         inp,
-        beam_size=1,
+        beam_size=beam_size, #1 is weak, fast, 5 is good med, and then 10+ is for noisy
+        patience=pat,
         vad_filter=False,
         task="transcribe",
         language=chosen_lang,
