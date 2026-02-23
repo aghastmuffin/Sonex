@@ -1,5 +1,17 @@
+from __future__ import annotations
+
 from typing import Optional
 import warnings
+import json
+import re
+from pathlib import Path
+from typing import Any, Dict, List, Optional
+
+# Global cache for model and tokenizer to avoid redownloading
+_model_cache = {}
+_tokenizer_cache = {}
+_translator_cache = {}
+
 def atranslate(text):
     import argostranslate as argos
     raise NotImplementedError("You are attempting to use a function not implemented until SONEX VER 1.3 or your buildtype doesn't specify access to test ARGOS. View _translation_layer.py. All code inside of RMO is intellectual property of Levi Taisun Kim Brown, who grants ownership of intellectual rights to Firstline LLC, a registered limited liability corporation of the great state of california. Redistribution or deobfuscation is expressly not allowed under any conditions and may be persecuted under the full extent of the law by firstline llc or any of its subsidiaries.")
@@ -35,11 +47,23 @@ def nllbtranslate(text:str, target_to:str, target_from:str):
     ]
     if target_from in flores_200_codes and target_to in flores_200_codes:
         if len(text) >= 360:
-            warnings.warn("Approaching Character Limit: Text length exceedes recommended amount. This program uses a model best suited for 360 chars or less, recommended at 400.")
+            warnings.warn("Approaching Character Limit: Text length exceeds recommended amount. This program uses a model best suited for 360 chars or less, recommended at 400.")
         checkpoint = "facebook/nllb-200-distilled-600M"
-        model = AutoModelForSeq2SeqLM.from_pretrained(checkpoint)
-        tokenizer = AutoTokenizer.from_pretrained(checkpoint)
-        translator = pipeline('translation', model = model, tokenizer = tokenizer, src_lang = target_from, tgt_lang = target_to, max_length = 400)
+        
+        # Create cache key for this language pair
+        cache_key = f"{checkpoint}_{target_from}_{target_to}"
+        
+        # Check if translator is already cached
+        if cache_key not in _translator_cache:
+            print(f"Loading model {checkpoint}... (first time, will be cached)")
+            model = AutoModelForSeq2SeqLM.from_pretrained(checkpoint, local_files_only=True)
+            tokenizer = AutoTokenizer.from_pretrained(checkpoint)
+            translator = pipeline('translation', model = model, tokenizer = tokenizer, src_lang = target_from, tgt_lang = target_to, max_length = 400)
+            _translator_cache[cache_key] = translator
+        else:
+            print(f"Using cached translator for {target_from} -> {target_to}")
+        
+        translator = _translator_cache[cache_key]
         output = translator(text)
         return output[0]['translation_text']
     else:
@@ -47,5 +71,119 @@ def nllbtranslate(text:str, target_to:str, target_from:str):
 
 def calcperplex(text):
     raise NotImplementedError("Not implemented yet. No timeline avaliable. 1/22/26 10:09pm PST")
+
+
+_WORD_RE = re.compile(r"\w+|[^\w\s]", re.UNICODE)
+
+def _tokenize_words_and_punct(s: str) -> List[str]:
+    """
+    Returns tokens like: ["Amor", ",", "yo", "varios", "días", ...]
+    (word chunks + punctuation as separate tokens)
+    """
+    s = s.strip()
+    if not s:
+        return []
+    return _WORD_RE.findall(s)
+
+def _weights(tokens: List[str]) -> List[int]:
+    """
+    Weight words more than punctuation so timing doesn't get dominated by commas.
+    """
+    out = []
+    for t in tokens:
+        if re.match(r"^\w+$", t, re.UNICODE):
+            out.append(max(1, len(t)))
+        else:
+            out.append(1)  # punctuation
+    return out
+
+def _assign_token_times(start: float, end: float, tokens: List[str]) -> List[Dict[str, Any]]:
+    """
+    Assigns each token a [start,end] inside the segment by proportional weights.
+    """
+    dur = max(0.0, float(end) - float(start))
+    if not tokens:
+        return []
+
+    w = _weights(tokens)
+    total = sum(w) or 1
+
+    out = []
+    cur = float(start)
+    for i, (tok, wi) in enumerate(zip(tokens, w)):
+        # Last token ends exactly at segment end to avoid drift
+        if i == len(tokens) - 1:
+            tok_start, tok_end = cur, float(end)
+        else:
+            tok_dur = dur * (wi / total)
+            tok_start, tok_end = cur, cur + tok_dur
+        out.append({"word": tok, "start": round(tok_start, 3), "end": round(tok_end, 3)})
+        cur = tok_end
+    return out
+
+def align_translated_text(
+    in_json: str | Path,
+    out_json: str | Path = "translated.json",
+    target_from: str = "eng_Latn",
+    target_to: str = "spa_Latn",
+    *,
+    keep_original_words: bool = False,
+) -> List[Dict[str, Any]]:
+    """
+    Reads a time-aligned transcript JSON (segments with start/end + words),
+    translates each segment text, and writes a translated.json with time-synced
+    translated word timestamps.
+
+    - keep_original_words=False: output 'words' are translated tokens with new timings
+    - keep_original_words=True : output also includes 'source_words' with original timings
+    """
+    in_json = Path(in_json)
+    out_json = Path(out_json)
+
+    segments: List[Dict[str, Any]] = json.loads(in_json.read_text(encoding="utf-8"))
+
+    translated_segments: List[Dict[str, Any]] = []
+    for seg in segments:
+        seg_id = seg.get("id")
+        start = float(seg["start"])
+        end = float(seg["end"])
+        src_text = seg.get("text", "")
+
+        # Translate the whole segment text (best MT quality)
+        tgt_text = nllbtranslate(src_text, target_from=target_from, target_to=target_to).strip()
+
+        # Build translated word timestamps within the same [start,end]
+        tgt_tokens = _tokenize_words_and_punct(tgt_text)
+        tgt_words = _assign_token_times(start, end, tgt_tokens)
+
+        out_seg: Dict[str, Any] = {
+            "id": seg_id,
+            "text": tgt_text,
+            "start": round(start, 3),
+            "end": round(end, 3),
+            "words": tgt_words,
+        }
+
+        if keep_original_words:
+            out_seg["source_text"] = src_text
+            out_seg["source_words"] = seg.get("words", [])
+
+        translated_segments.append(out_seg)
+
+    out_json.write_text(
+        json.dumps(translated_segments, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    return translated_segments
+
+# Example:
+# align_translated_text("vocals_whisper_segments.json", "translated.json",
+#                       target_from="spa_Latn", target_to="eng_Latn",
+#                       keep_original_words=True)
+
+
 if __name__ == "__main__":
-    print(nllbtranslate("The mitochondria is the powerhouse of the cell. Hello, Levi Brown!", target_from = "eng_Latn", target_to = "spa_Latn"))
+    #print(nllbtranslate("The mitochondria is the powerhouse of the cell. Hello, Levi Brown!", target_from = "eng_Latn", target_to = "spa_Latn"))
+    align_translated_text("vocals_whisper_segments.json", "translated.json",
+                           target_from="spa_Latn", target_to="eng_Latn",
+                           keep_original_words=True)
