@@ -6,6 +6,38 @@ from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn
 
 print("initializing the lyric analysis library")
 print("it's best to close all other open programs on the system before entering the ISO code.")
+language_dict = {
+    "en": "English",
+    "es": "Spanish",
+    "fr": "French",
+    "de": "German",
+    "it": "Italian",
+    "pt": "Portuguese",
+    "ru": "Russian",
+    "zh": "Chinese",
+    "ja": "Japanese",
+    "ko": "Korean",
+    "ar": "Arabic",
+    "hi": "Hindi",
+    "bn": "Bengali",
+    "pa": "Punjabi",
+    "tr": "Turkish",
+    "vi": "Vietnamese",
+    "pl": "Polish",
+    "nl": "Dutch",
+    "sv": "Swedish",
+    "no": "Norwegian",
+    "da": "Danish",
+    "fi": "Finnish",
+    "he": "Hebrew",
+    "el": "Greek",
+    "th": "Thai",
+    "id": "Indonesian",
+    "uk": "Ukrainian",
+    "cs": "Czech",
+    "ro": "Romanian",
+    "hu": "Hungarian"
+}
 console = Console()
 
 def choose_file(directory=".", pattern="*"):
@@ -67,9 +99,18 @@ separate(AUDIO)
 print("transcribing")
 AUDIO_BASE = os.path.basename(AUDIO).removesuffix(".mp3")
 os.makedirs(AUDIO_BASE, exist_ok=True)
-transcribe(f"{AUDIO_BASE}/vocals.mp3", 5, 2,f"{AUDIO_BASE}/vocals_whisper_segments.json", language=LANG, _align=True)
+_, detectlang = transcribe(f"{AUDIO_BASE}/vocals.mp3", 5, 2,f"{AUDIO_BASE}/vocals_whisper_segments.json", language=LANG, _align=True)
+if detectlang:
+    LANG = detectlang
 print(f"lyric analysis library completed required job: {AUDIO}")
 #os.system(f"python test_audio/gui_player.py --audio {SUBFOLDER}/{AUDIO} --align {OUT}/vocals_whisper_segments_aligned.json")
 print("requesting advanced alignment from MFA")
-print("this feature is only avaliable for conda installs currently")
-from backbone.rmo.AMT import *
+try:
+    from backbone.ltra import _mfa_aligner
+    _mfa_aligner.generate_aligned_v2(AUDIO_BASE, acoustic=f"{language_dict[detectlang]}", dictionary=f"{language_dict[detectlang]}_mfa", allow_fuzzy=True, fuzzy_max_lookahead=8)
+except Exception as e:
+    print("MFA Error:", e)
+    pass
+print("Trying ArgosWrapper")
+from backbone.ltra.argos_tranlsate import translate_file
+out = translate_file(f"{AUDIO_BASE}/vocals_whisper_segments.json", from_lang=detectlang, to_lang="en", verbose=True)

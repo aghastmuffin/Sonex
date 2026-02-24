@@ -1,4 +1,4 @@
-import io, os, select, sys, re
+import io, os, select, sys
 import shutil
 from pathlib import Path
 from shutil import rmtree
@@ -6,9 +6,7 @@ import subprocess as sp
 from typing import Dict, Tuple, Optional, IO
 #FFMPEG, openai-whisper, demucs 
 from faster_whisper import WhisperModel
-from backbone.ltra._NLLB import translate
-from backbone.ltra.perplex import compute_perplexity
-
+from ltra.depricated._NLLB import translate
 
 MINIMUM = (3, 9, 0)
 if sys.version_info < MINIMUM:
@@ -381,7 +379,6 @@ def align(
     import json
     import torch
     import whisperx #XXX: fails to recongize RREGATON test Experimento is spanish lang and transcription qual suffers as result.
-    import torchaudio
     from pathlib import Path
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
