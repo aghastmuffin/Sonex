@@ -10,7 +10,7 @@ from typing import Any, Dict, List, Tuple
 import argostranslate.package
 import argostranslate.translate
 
-from _translation_layer import translate_segment_words_time_synced
+from backbone.ltra._translation_layer import translate_segment_words_time_synced
 
 
 # -----------------------------

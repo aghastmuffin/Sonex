@@ -112,5 +112,5 @@ except Exception as e:
     print("MFA Error:", e)
     pass
 print("Trying ArgosWrapper")
-from backbone.ltra.argos_tranlsate import translate_file
+from backbone.ltra.argos_translate import translate_file
 out = translate_file(f"{AUDIO_BASE}/vocals_whisper_segments.json", from_lang=detectlang, to_lang="en", verbose=True)

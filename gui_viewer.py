@@ -72,7 +72,7 @@ def update_detected_chord(ms):
 
 #unpack_lyrics("BEDROOM_Augustine_BloodOranges")
 buildfor = dbgfont.render(f"SPANISH(C1) TESTING-LEVITAISUNKIMBROWN", True, (255, 255, 255))
-unpack_lyrics("anuel_bugatti")
+unpack_lyrics("tuchat")
 
 while running:
     dt = clock.tick(60)  # dt = milliseconds since last frame
