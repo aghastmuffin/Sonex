@@ -3,7 +3,16 @@ from rich.console import Console
 from rich.table import Table
 from rich.prompt import IntPrompt
 from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn
-
+print("DATALINK REQUEST")
+print("SONEX is a free-to-use program. I have one ask, we need data on song's performance (i.e identifiers of song, how your system + resources performed, the actual content of your runs), this is for our eyes only and is kept for a max of 2 weeks.")
+print("this is totally optional, and should use about 10kb of network traffic/month, thank you so much either way for using my program")
+if input("[Press Y/y] Do you agree to DataShare with SONEX TaesonTechnicalIndustries GMBH, Levi Taisun Kim Brown: ").lower() == "y":
+    print("Thank you so much! As a token of appreciation, you will recieve an email shortly with access to the beta channel!")
+    print("please include this system key, the application will continue to function without wifi. This syskey remains valid as long as Datalink is active.")
+    input("Press any key to continue...")
+    pass
+else:
+    print("Thank you anyways! Enjoy the program. If you ever change your mind just re-respond to the prompt.")
 print("initializing the lyric analysis library")
 print("it's best to close all other open programs on the system before entering the ISO code.")
 language_dict = {
