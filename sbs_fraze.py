@@ -8,7 +8,7 @@ pygame.init()
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption(
-    "SONEX LyricViewer_DBG LATIN-SPANISH Iniciado Sesión Como: Levi Brown ORC:0009-0007-5278-6761"
+    "SONEX MULTILyricViewer_DBG LATIN-SPANISH Iniciado Sesión Como: Levi Brown ORC:0009-0007-5278-6761"
 )
 
 clock = pygame.time.Clock()
@@ -102,6 +102,11 @@ def _render_highlighted_tokens(tokens, highlight_idx, x, y, max_width):
     Render tokens left-to-right. Highlight the token at highlight_idx.
     """
     x0 = x
+    line_h = font.get_height()
+    if line_h <= 0:
+        line_h = 48
+    current_line_h = line_h
+
     for idx, (lead_spaces, text) in enumerate(tokens):
         # advance for leading spaces
         if lead_spaces:
@@ -113,13 +118,17 @@ def _render_highlighted_tokens(tokens, highlight_idx, x, y, max_width):
 
         color = (255, 220, 80) if idx == highlight_idx else (255, 255, 255)
         surf = font.render(text, True, color)
+        current_line_h = max(current_line_h, surf.get_height())
         # wrap (simple): if next word would exceed width, go to next line
         if x + surf.get_width() > x0 + max_width:
             x = x0
-            y += surf.get_height() + 6
+            y += current_line_h + 6
+            current_line_h = surf.get_height()
 
         screen.blit(surf, (x, y))
         x += surf.get_width()
+
+    return y + current_line_h
 
 
 def update_segment_view(ms, seg_list, y, state_name):
@@ -132,7 +141,7 @@ def update_segment_view(ms, seg_list, y, state_name):
 
     elapsed = ms / 1000.0
     if elapsed <= 1 or not seg_list:
-        return
+        return y
 
     # choose which state vars/caches to use
     if state_name == "orig":
@@ -157,7 +166,7 @@ def update_segment_view(ms, seg_list, y, state_name):
         else:
             seg_i1, word_i1 = si, wi
             _cached_seg_id_1, _cached_tokens_1 = cache_id, cache_tokens
-        return
+        return y
 
     seg = seg_list[si]
     words = seg["words"]
@@ -179,7 +188,7 @@ def update_segment_view(ms, seg_list, y, state_name):
     # render: show segment text (built from word tokens) + highlight current word
     # If wi == len(words), highlight nothing (segment basically finished)
     highlight_idx = wi if wi < len(words) else -1
-    _render_highlighted_tokens(
+    bottom_y = _render_highlighted_tokens(
         cache_tokens,
         highlight_idx=highlight_idx,
         x=50,
@@ -194,6 +203,8 @@ def update_segment_view(ms, seg_list, y, state_name):
     else:
         seg_i1, word_i1 = si, wi
         _cached_seg_id_1, _cached_tokens_1 = cache_id, cache_tokens
+
+    return bottom_y
 
 
 def generarfrase():
@@ -221,8 +232,12 @@ while running:
     time_text = dbgfont.render(f"Elapsed: {elapsed_ms} ms", True, (255, 255, 255))
 
     # --- NEW: update per segment, highlight current word inside it ---
-    update_segment_view(elapsed_ms, segments, y=50, state_name="orig")
-    update_segment_view(elapsed_ms, segments1, y=140, state_name="trans")
+    orig_bottom_y = update_segment_view(elapsed_ms, segments, y=50, state_name="orig")
+
+    base_trans_y = 140
+    min_vertical_gap = 18
+    trans_y = max(base_trans_y, orig_bottom_y + min_vertical_gap)
+    update_segment_view(elapsed_ms, segments1, y=trans_y, state_name="trans")
 
     screen.blit(time_text, ((780 - time_text.get_width()), (600 - time_text.get_height())))
     screen.blit(buildfor, ((0 + buildfor.get_width()), (0 + buildfor.get_height())))
