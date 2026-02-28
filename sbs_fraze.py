@@ -3,14 +3,32 @@ from pygame import mixer
 import json
 import sys
 import os
+import subprocess
 
 pygame.init()
 
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption(
-    "SONEX MULTILyricViewer_DBG LATIN-SPANISH Iniciado Sesión Como: Levi Brown ORC:0009-0007-5278-6761"
+    "🗣️ SONEX MULTILyricViewer_DBG LATIN-SPANISH Iniciado Sesión Como: Levi Brown ORC:0009-0007-5278-6761"
 )
+
+brand_dir = os.path.join(os.path.dirname(__file__), "gui", "assets", "brand")
+icon_candidates = [
+    "resolution-logo.png",
+    "sonex-high-resolution-logo.png",
+    "sonex-high-resolution-logo-transparent.png",
+    "sonex-high-resolution-logo-grayscale.png",
+    "sonex-high-resolution-logo-grayscale-transparent.png",
+]
+for icon_name in icon_candidates:
+    icon_path = os.path.join(brand_dir, icon_name)
+    if os.path.exists(icon_path):
+        try:
+            pygame.display.set_icon(pygame.image.load(icon_path))
+            break
+        except pygame.error:
+            pass
 
 clock = pygame.time.Clock()
 font_path = os.path.join(
@@ -70,6 +88,117 @@ def _build_segment_list(json_data):
             }
         )
     return out
+
+
+def _load_segments_from_file(file_path):
+    with open(file_path, "r") as f:
+        json_data = json.load(f)
+    return _build_segment_list(json_data)
+
+
+def _start_audio_from_transcript_file(file_path):
+    parent = os.path.dirname(file_path)
+    parent_name = os.path.basename(parent)
+    audio_path = os.path.join(parent, f"{parent_name}.mp3")
+    if not os.path.exists(audio_path):
+        return
+
+    try:
+        if not mixer.get_init():
+            mixer.init()
+        mixer.Sound(audio_path).play()
+    except pygame.error:
+        pass
+
+
+def _pick_json_file(dialog_title):
+    script = (
+        f'set chosenFile to choose file with prompt "{dialog_title}" '
+        'of type {"public.json"}\n'
+        'POSIX path of chosenFile'
+    )
+    try:
+        result = subprocess.run(
+            ["osascript", "-e", script],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+    except OSError:
+        return ""
+
+    if result.returncode != 0:
+        return ""
+    return result.stdout.strip()
+
+
+def _shorten_path(path, max_len=64):
+    if not path:
+        return "(not selected)"
+    if len(path) <= max_len:
+        return path
+    return "..." + path[-(max_len - 3):]
+
+
+def choose_transcript_files():
+    file_1 = None
+    file_2 = None
+
+    btn1 = pygame.Rect(90, 200, 260, 56)
+    btn2 = pygame.Rect(450, 200, 260, 56)
+    start_btn = pygame.Rect(300, 420, 200, 64)
+
+    choosing = True
+    while choosing:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                return None, None
+
+            if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+                if btn1.collidepoint(event.pos):
+                    selected = _pick_json_file("Choose transcript file 1 (original)")
+                    if selected:
+                        file_1 = selected
+                elif btn2.collidepoint(event.pos):
+                    selected = _pick_json_file("Choose transcript file 2 (translated)")
+                    if selected:
+                        file_2 = selected
+                elif start_btn.collidepoint(event.pos) and file_1 and file_2:
+                    choosing = False
+
+        screen.fill((24, 24, 24))
+        title = font.render("Select transcript files", True, (245, 245, 245))
+        screen.blit(title, ((WIDTH - title.get_width()) // 2, 70))
+
+        pygame.draw.rect(screen, (58, 58, 58), btn1, border_radius=10)
+        pygame.draw.rect(screen, (58, 58, 58), btn2, border_radius=10)
+        pygame.draw.rect(
+            screen,
+            (70, 130, 95) if file_1 and file_2 else (55, 55, 55),
+            start_btn,
+            border_radius=10,
+        )
+
+        btn1_txt = dbgfont.render("Choose File 1", True, (255, 255, 255))
+        btn2_txt = dbgfont.render("Choose File 2", True, (255, 255, 255))
+        start_txt = dbgfont.render("Start", True, (255, 255, 255))
+
+        screen.blit(btn1_txt, (btn1.centerx - btn1_txt.get_width() // 2, btn1.centery - btn1_txt.get_height() // 2))
+        screen.blit(btn2_txt, (btn2.centerx - btn2_txt.get_width() // 2, btn2.centery - btn2_txt.get_height() // 2))
+        screen.blit(start_txt, (start_btn.centerx - start_txt.get_width() // 2, start_btn.centery - start_txt.get_height() // 2))
+
+        file1_label = dbgfont.render(f"File 1: {_shorten_path(file_1)}", True, (210, 210, 210))
+        file2_label = dbgfont.render(f"File 2: {_shorten_path(file_2)}", True, (210, 210, 210))
+        screen.blit(file1_label, (90, 285))
+        screen.blit(file2_label, (90, 320))
+
+        hint = dbgfont.render("Select both files, then click Start", True, (165, 165, 165))
+        screen.blit(hint, (WIDTH // 2 - hint.get_width() // 2, 515))
+
+        pygame.display.flip()
+        clock.tick(60)
+
+    return file_1, file_2
 
 
 def unpack_lyrics(parent):
@@ -221,8 +350,25 @@ def generarfrase():
 
 buildfor = dbgfont.render("SPANISH(C1) TESTING-LEVITAISUNKIMBROWN", True, (255, 255, 255))
 
-unpack_lyrics("generated_tested_audio/presiento")
-unpack_lyrics_1("generated_tested_audio/presiento")
+selected_file_1, selected_file_2 = choose_transcript_files()
+if not selected_file_1 or not selected_file_2:
+    pygame.quit()
+    sys.exit()
+
+segments = _load_segments_from_file(selected_file_1)
+segments1 = _load_segments_from_file(selected_file_2)
+_start_audio_from_transcript_file(selected_file_1)
+
+seg_i = 0
+word_i = 0
+seg_i1 = 0
+word_i1 = 0
+_cached_seg_id = None
+_cached_tokens = None
+_cached_seg_id_1 = None
+_cached_tokens_1 = None
+start_ticks = pygame.time.get_ticks()
+
 print("job checking for MFA/fasterwhisper alignment accuracy")
 print("cleared for levi brown")
 
