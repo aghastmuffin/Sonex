@@ -2,6 +2,7 @@ import pygame
 from pygame import mixer
 import json
 import sys
+import os
 
 pygame.init()
 
@@ -12,8 +13,15 @@ pygame.display.set_caption(
 )
 
 clock = pygame.time.Clock()
-dbgfont = pygame.font.SysFont(None, 18)
-font = pygame.font.SysFont(None, 48)
+font_path = os.path.join(
+    os.path.dirname(__file__), "gui", "assets", "brand", "Darker Grotesque.ttf"
+)
+try:
+    dbgfont = pygame.font.Font(font_path, 18)
+    font = pygame.font.Font(font_path, 48)
+except OSError:
+    dbgfont = pygame.font.SysFont(None, 18)
+    font = pygame.font.SysFont(None, 48)
 start_ticks = pygame.time.get_ticks()
 
 running = True
