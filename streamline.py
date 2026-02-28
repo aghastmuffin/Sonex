@@ -5,7 +5,7 @@ from rich.prompt import IntPrompt
 from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn
 DATALINK_ELLIGABILITY = False
 if DATALINK_ELLIGABILITY:
-    print("DATALINK REQUEST")
+    print("DATALINK REQUEST:")
     print("SONEX is a free-to-use program. I have one ask, we need data on song's performance (i.e identifiers of song, how your system + resources performed, the actual content of your runs), this is for our eyes only and is kept for a max of 2 weeks.")
     print("this is totally optional, and should use about 10kb of network traffic/month, thank you so much either way for using my program")
     if input("[Press Y/y] Do you agree to DataShare with SONEX TaesonTechnicalIndustries GMBH, Levi Taisun Kim Brown: ").lower() == "y":
