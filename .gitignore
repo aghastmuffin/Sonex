@@ -2,3 +2,9 @@
 *.pyc
 __pycache__/
 model_offload/
+.DS_Store
+/generated_tested/
+./_mfa_corpus/
+/generated/tested_audio/
+/generated_tested_audio/
+.idea/

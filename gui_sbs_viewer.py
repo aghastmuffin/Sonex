@@ -31,7 +31,7 @@ def unpack_lyrics(parent):
             word = word["word"]
             lyrics.append((start, end, word))
     mixer.init()
-    mixer.Sound(f"{parent}/{parent}.mp3").play() #program names the same
+    mixer.Sound(f"{parent}/{parent.split('/')[-1]}.mp3").play() #program names the same
 
 
 def update_lyric(ms):
@@ -89,8 +89,8 @@ def generarfrase():
     raise NotImplementedError
 
 buildfor = dbgfont.render(f"SPANISH(C1) TESTING-LEVITAISUNKIMBROWN", True, (255, 255, 255))
-unpack_lyrics("")
-unpack_lyrics_1("")
+unpack_lyrics("tuchat")
+unpack_lyrics_1("tuchat")
 print("job checking for MFA/fasterwhisper alignment accuracy")
 print("cleared for levi brown")
 
