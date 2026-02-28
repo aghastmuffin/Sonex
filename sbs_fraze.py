@@ -111,11 +111,10 @@ def _start_audio_from_transcript_file(file_path):
         pass
 
 
-def _pick_json_file(dialog_title):
+def _pick_folder(dialog_title):
     script = (
-        f'set chosenFile to choose file with prompt "{dialog_title}" '
-        'of type {"public.json"}\n'
-        'POSIX path of chosenFile'
+        f'set chosenFolder to choose folder with prompt "{dialog_title}"\n'
+        'POSIX path of chosenFolder'
     )
     try:
         result = subprocess.run(
@@ -132,6 +131,43 @@ def _pick_json_file(dialog_title):
     return result.stdout.strip()
 
 
+def _find_transcript_files(folder_path):
+    orig_candidates = [
+        "vocals_whisper_segments.json",
+        "vocals_whisper_segments_aligned.json",
+        "mfa_vocals_whisper_segments.json",
+    ]
+    trans_candidates = [
+        "argos_translated.json",
+        "translated.json",
+        "vocals_whisper_segments_translated.json",
+    ]
+
+    def _resolve_in_dir(path):
+        orig_path = next(
+            (os.path.join(path, name) for name in orig_candidates if os.path.exists(os.path.join(path, name))),
+            None,
+        )
+        trans_path = next(
+            (os.path.join(path, name) for name in trans_candidates if os.path.exists(os.path.join(path, name))),
+            None,
+        )
+        if orig_path and trans_path:
+            return orig_path, trans_path, path
+        return None, None, None
+
+    direct_orig, direct_trans, direct_folder = _resolve_in_dir(folder_path)
+    if direct_orig and direct_trans:
+        return direct_orig, direct_trans, direct_folder
+
+    for root, _, _ in os.walk(folder_path):
+        nested_orig, nested_trans, nested_folder = _resolve_in_dir(root)
+        if nested_orig and nested_trans:
+            return nested_orig, nested_trans, nested_folder
+
+    return None, None, None
+
+
 def _shorten_path(path, max_len=64):
     if not path:
         return "(not selected)"
@@ -140,38 +176,35 @@ def _shorten_path(path, max_len=64):
     return "..." + path[-(max_len - 3):]
 
 
-def choose_transcript_files():
+def choose_generated_folder():
+    folder_path = None
     file_1 = None
     file_2 = None
+    resolved_folder = None
 
-    btn1 = pygame.Rect(90, 200, 260, 56)
-    btn2 = pygame.Rect(450, 200, 260, 56)
+    btn_folder = pygame.Rect(270, 200, 260, 56)
     start_btn = pygame.Rect(300, 420, 200, 64)
 
     choosing = True
     while choosing:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                return None, None
+                return None, None, None
 
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
-                if btn1.collidepoint(event.pos):
-                    selected = _pick_json_file("Choose transcript file 1 (original)")
+                if btn_folder.collidepoint(event.pos):
+                    selected = _pick_folder("Choose generated folder (or parent folder)")
                     if selected:
-                        file_1 = selected
-                elif btn2.collidepoint(event.pos):
-                    selected = _pick_json_file("Choose transcript file 2 (translated)")
-                    if selected:
-                        file_2 = selected
+                        folder_path = selected
+                        file_1, file_2, resolved_folder = _find_transcript_files(folder_path)
                 elif start_btn.collidepoint(event.pos) and file_1 and file_2:
                     choosing = False
 
         screen.fill((24, 24, 24))
-        title = font.render("Select transcript files", True, (245, 245, 245))
+        title = font.render("Select generated folder", True, (245, 245, 245))
         screen.blit(title, ((WIDTH - title.get_width()) // 2, 70))
 
-        pygame.draw.rect(screen, (58, 58, 58), btn1, border_radius=10)
-        pygame.draw.rect(screen, (58, 58, 58), btn2, border_radius=10)
+        pygame.draw.rect(screen, (58, 58, 58), btn_folder, border_radius=10)
         pygame.draw.rect(
             screen,
             (70, 130, 95) if file_1 and file_2 else (55, 55, 55),
@@ -179,26 +212,31 @@ def choose_transcript_files():
             border_radius=10,
         )
 
-        btn1_txt = dbgfont.render("Choose File 1", True, (255, 255, 255))
-        btn2_txt = dbgfont.render("Choose File 2", True, (255, 255, 255))
+        folder_txt = dbgfont.render("Choose Folder", True, (255, 255, 255))
         start_txt = dbgfont.render("Start", True, (255, 255, 255))
 
-        screen.blit(btn1_txt, (btn1.centerx - btn1_txt.get_width() // 2, btn1.centery - btn1_txt.get_height() // 2))
-        screen.blit(btn2_txt, (btn2.centerx - btn2_txt.get_width() // 2, btn2.centery - btn2_txt.get_height() // 2))
+        screen.blit(folder_txt, (btn_folder.centerx - folder_txt.get_width() // 2, btn_folder.centery - folder_txt.get_height() // 2))
         screen.blit(start_txt, (start_btn.centerx - start_txt.get_width() // 2, start_btn.centery - start_txt.get_height() // 2))
 
-        file1_label = dbgfont.render(f"File 1: {_shorten_path(file_1)}", True, (210, 210, 210))
-        file2_label = dbgfont.render(f"File 2: {_shorten_path(file_2)}", True, (210, 210, 210))
-        screen.blit(file1_label, (90, 285))
-        screen.blit(file2_label, (90, 320))
+        folder_label = dbgfont.render(f"Folder: {_shorten_path(folder_path)}", True, (210, 210, 210))
+        resolved_label = dbgfont.render(f"Resolved: {_shorten_path(resolved_folder)}", True, (210, 210, 210))
+        file1_label = dbgfont.render(f"Original: {_shorten_path(file_1)}", True, (190, 220, 190) if file_1 else (210, 210, 210))
+        file2_label = dbgfont.render(f"Translated: {_shorten_path(file_2)}", True, (190, 220, 190) if file_2 else (210, 210, 210))
+        screen.blit(folder_label, (70, 285))
+        screen.blit(resolved_label, (70, 318))
+        screen.blit(file1_label, (70, 351))
+        screen.blit(file2_label, (70, 384))
 
-        hint = dbgfont.render("Select both files, then click Start", True, (165, 165, 165))
+        hint = dbgfont.render("Pick a folder, auto-find generated files, then click Start", True, (165, 165, 165))
+        if folder_path and (not file_1 or not file_2):
+            warn = dbgfont.render("Could not find both transcript files in that folder tree.", True, (230, 120, 120))
+            screen.blit(warn, (WIDTH // 2 - warn.get_width() // 2, 545))
         screen.blit(hint, (WIDTH // 2 - hint.get_width() // 2, 515))
 
         pygame.display.flip()
         clock.tick(60)
 
-    return file_1, file_2
+    return file_1, file_2, resolved_folder
 
 
 def unpack_lyrics(parent):
@@ -350,7 +388,7 @@ def generarfrase():
 
 buildfor = dbgfont.render("SPANISH(C1) TESTING-LEVITAISUNKIMBROWN", True, (255, 255, 255))
 
-selected_file_1, selected_file_2 = choose_transcript_files()
+selected_file_1, selected_file_2, resolved_folder = choose_generated_folder()
 if not selected_file_1 or not selected_file_2:
     pygame.quit()
     sys.exit()
