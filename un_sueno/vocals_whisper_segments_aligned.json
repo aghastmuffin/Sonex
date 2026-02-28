@@ -1,0 +1,3344 @@
+{
+  "segments": [
+    {
+      "start": 9.66,
+      "end": 20.58,
+      "text": "las horas pasan y yo sigo aquí, extrañándote",
+      "words": [
+        {
+          "word": "las",
+          "start": 9.66,
+          "end": 10.985,
+          "score": 0.605
+        },
+        {
+          "word": "horas",
+          "start": 11.005,
+          "end": 11.386,
+          "score": 0.687
+        },
+        {
+          "word": "pasan",
+          "start": 11.406,
+          "end": 11.848,
+          "score": 0.667
+        },
+        {
+          "word": "y",
+          "start": 12.009,
+          "end": 12.029,
+          "score": 0.002
+        },
+        {
+          "word": "yo",
+          "start": 12.049,
+          "end": 12.129,
+          "score": 0.682
+        },
+        {
+          "word": "sigo",
+          "start": 12.149,
+          "end": 12.591,
+          "score": 0.645
+        },
+        {
+          "word": "aquí,",
+          "start": 12.812,
+          "end": 13.394,
+          "score": 0.711
+        },
+        {
+          "word": "extrañándote",
+          "start": 14.839,
+          "end": 20.58,
+          "score": 0.558
+        }
+      ]
+    },
+    {
+      "start": 20.56,
+      "end": 26.78,
+      "text": "como un vicio que me amarra a ti, yo sigo deseándote",
+      "words": [
+        {
+          "word": "como",
+          "start": 20.56,
+          "end": 21.244,
+          "score": 0.834
+        },
+        {
+          "word": "un",
+          "start": 21.285,
+          "end": 21.466,
+          "score": 0.546
+        },
+        {
+          "word": "vicio",
+          "start": 21.546,
+          "end": 21.909,
+          "score": 0.768
+        },
+        {
+          "word": "que",
+          "start": 21.969,
+          "end": 22.05,
+          "score": 0.69
+        },
+        {
+          "word": "me",
+          "start": 22.211,
+          "end": 22.271,
+          "score": 0.434
+        },
+        {
+          "word": "amarra",
+          "start": 22.311,
+          "end": 22.955,
+          "score": 0.674
+        },
+        {
+          "word": "a",
+          "start": 22.976,
+          "end": 22.996,
+          "score": 0.013
+        },
+        {
+          "word": "ti,",
+          "start": 23.016,
+          "end": 23.378,
+          "score": 0.807
+        },
+        {
+          "word": "yo",
+          "start": 24.042,
+          "end": 24.123,
+          "score": 0.594
+        },
+        {
+          "word": "sigo",
+          "start": 24.143,
+          "end": 24.787,
+          "score": 0.778
+        },
+        {
+          "word": "deseándote",
+          "start": 24.888,
+          "end": 26.78,
+          "score": 0.56
+        }
+      ]
+    },
+    {
+      "start": 30.22,
+      "end": 38.78,
+      "text": "y cuando cae la noche, yo imagino que estás conmigo, no puedo vivir si no te tengo",
+      "words": [
+        {
+          "word": "y",
+          "start": 30.22,
+          "end": 31.124,
+          "score": 0.596
+        },
+        {
+          "word": "cuando",
+          "start": 31.144,
+          "end": 31.546,
+          "score": 0.942
+        },
+        {
+          "word": "cae",
+          "start": 31.767,
+          "end": 32.049,
+          "score": 0.791
+        },
+        {
+          "word": "la",
+          "start": 32.089,
+          "end": 32.149,
+          "score": 0.71
+        },
+        {
+          "word": "noche,",
+          "start": 32.33,
+          "end": 32.471,
+          "score": 0.37
+        },
+        {
+          "word": "yo",
+          "start": 32.491,
+          "end": 32.571,
+          "score": 0.796
+        },
+        {
+          "word": "imagino",
+          "start": 33.857,
+          "end": 34.219,
+          "score": 0.488
+        },
+        {
+          "word": "que",
+          "start": 34.279,
+          "end": 34.56,
+          "score": 0.702
+        },
+        {
+          "word": "estás",
+          "start": 34.58,
+          "end": 34.942,
+          "score": 0.576
+        },
+        {
+          "word": "conmigo,",
+          "start": 34.962,
+          "end": 36.007,
+          "score": 0.686
+        },
+        {
+          "word": "no",
+          "start": 36.329,
+          "end": 36.369,
+          "score": 0.008
+        },
+        {
+          "word": "puedo",
+          "start": 36.389,
+          "end": 36.63,
+          "score": 0.809
+        },
+        {
+          "word": "vivir",
+          "start": 36.71,
+          "end": 37.072,
+          "score": 0.377
+        },
+        {
+          "word": "si",
+          "start": 37.173,
+          "end": 37.333,
+          "score": 0.886
+        },
+        {
+          "word": "no",
+          "start": 37.353,
+          "end": 37.655,
+          "score": 0.69
+        },
+        {
+          "word": "te",
+          "start": 37.795,
+          "end": 38.117,
+          "score": 0.717
+        },
+        {
+          "word": "tengo",
+          "start": 38.137,
+          "end": 38.78,
+          "score": 0.694
+        }
+      ]
+    },
+    {
+      "start": 40.34,
+      "end": 48.42,
+      "text": "tú me comienzas a besar, te juro que no quiero despertar sobre la realidad",
+      "words": [
+        {
+          "word": "tú",
+          "start": 40.34,
+          "end": 41.244,
+          "score": 0.45
+        },
+        {
+          "word": "me",
+          "start": 41.265,
+          "end": 41.546,
+          "score": 0.406
+        },
+        {
+          "word": "comienzas",
+          "start": 41.566,
+          "end": 42.873,
+          "score": 0.54
+        },
+        {
+          "word": "a",
+          "start": 42.893,
+          "end": 42.913,
+          "score": 0.15
+        },
+        {
+          "word": "besar,",
+          "start": 42.933,
+          "end": 43.355,
+          "score": 0.89
+        },
+        {
+          "word": "te",
+          "start": 43.616,
+          "end": 43.717,
+          "score": 0.841
+        },
+        {
+          "word": "juro",
+          "start": 43.797,
+          "end": 44.018,
+          "score": 0.84
+        },
+        {
+          "word": "que",
+          "start": 44.079,
+          "end": 44.179,
+          "score": 0.684
+        },
+        {
+          "word": "no",
+          "start": 44.239,
+          "end": 44.32,
+          "score": 0.899
+        },
+        {
+          "word": "quiero",
+          "start": 44.44,
+          "end": 44.862,
+          "score": 0.849
+        },
+        {
+          "word": "despertar",
+          "start": 44.903,
+          "end": 46.089,
+          "score": 0.574
+        },
+        {
+          "word": "sobre",
+          "start": 46.772,
+          "end": 47.274,
+          "score": 0.478
+        },
+        {
+          "word": "la",
+          "start": 47.295,
+          "end": 47.676,
+          "score": 0.832
+        },
+        {
+          "word": "realidad",
+          "start": 47.777,
+          "end": 48.42,
+          "score": 0.746
+        }
+      ]
+    },
+    {
+      "start": 49.34,
+      "end": 56.5,
+      "text": "que solo un sueño, que no te tengo",
+      "words": [
+        {
+          "word": "que",
+          "start": 49.34,
+          "end": 50.909,
+          "score": 0.729
+        },
+        {
+          "word": "solo",
+          "start": 50.929,
+          "end": 51.009,
+          "score": 0.002
+        },
+        {
+          "word": "un",
+          "start": 51.029,
+          "end": 51.11,
+          "score": 0.708
+        },
+        {
+          "word": "sueño,",
+          "start": 51.371,
+          "end": 54.328,
+          "score": 0.37
+        },
+        {
+          "word": "que",
+          "start": 54.831,
+          "end": 55.173,
+          "score": 0.782
+        },
+        {
+          "word": "no",
+          "start": 55.193,
+          "end": 55.334,
+          "score": 0.966
+        },
+        {
+          "word": "te",
+          "start": 55.494,
+          "end": 55.716,
+          "score": 0.788
+        },
+        {
+          "word": "tengo",
+          "start": 55.796,
+          "end": 56.5,
+          "score": 0.668
+        }
+      ]
+    },
+    {
+      "start": 59.6,
+      "end": 66.58,
+      "text": "que solo un sueño, que no te tengo",
+      "words": [
+        {
+          "word": "que",
+          "start": 59.6,
+          "end": 60.143,
+          "score": 0.748
+        },
+        {
+          "word": "solo",
+          "start": 60.163,
+          "end": 61.37,
+          "score": 0.408
+        },
+        {
+          "word": "un",
+          "start": 61.39,
+          "end": 61.431,
+          "score": 0.046
+        },
+        {
+          "word": "sueño,",
+          "start": 61.451,
+          "end": 64.548,
+          "score": 0.447
+        },
+        {
+          "word": "que",
+          "start": 64.931,
+          "end": 65.051,
+          "score": 0.616
+        },
+        {
+          "word": "no",
+          "start": 65.273,
+          "end": 65.574,
+          "score": 0.635
+        },
+        {
+          "word": "te",
+          "start": 65.594,
+          "end": 65.876,
+          "score": 0.837
+        },
+        {
+          "word": "tengo",
+          "start": 65.896,
+          "end": 66.58,
+          "score": 0.508
+        }
+      ]
+    },
+    {
+      "start": 70.5,
+      "end": 75.32,
+      "text": "abrazando la almohada y no despierto, soñando que detengo me duele porque no es cierto",
+      "words": [
+        {
+          "word": "abrazando",
+          "start": 70.5,
+          "end": 71.166,
+          "score": 0.783
+        },
+        {
+          "word": "la",
+          "start": 71.246,
+          "end": 71.287,
+          "score": 0.875
+        },
+        {
+          "word": "almohada",
+          "start": 71.327,
+          "end": 71.75,
+          "score": 0.837
+        },
+        {
+          "word": "y",
+          "start": 71.871,
+          "end": 71.892,
+          "score": 0.016
+        },
+        {
+          "word": "no",
+          "start": 71.912,
+          "end": 71.972,
+          "score": 0.859
+        },
+        {
+          "word": "despierto,",
+          "start": 72.033,
+          "end": 72.618,
+          "score": 0.723
+        },
+        {
+          "word": "soñando",
+          "start": 72.658,
+          "end": 73.082,
+          "score": 0.782
+        },
+        {
+          "word": "que",
+          "start": 73.122,
+          "end": 73.203,
+          "score": 0.746
+        },
+        {
+          "word": "detengo",
+          "start": 73.324,
+          "end": 73.707,
+          "score": 0.839
+        },
+        {
+          "word": "me",
+          "start": 73.787,
+          "end": 73.969,
+          "score": 0.223
+        },
+        {
+          "word": "duele",
+          "start": 73.989,
+          "end": 74.191,
+          "score": 0.414
+        },
+        {
+          "word": "porque",
+          "start": 74.251,
+          "end": 74.554,
+          "score": 0.53
+        },
+        {
+          "word": "no",
+          "start": 74.574,
+          "end": 74.675,
+          "score": 0.255
+        },
+        {
+          "word": "es",
+          "start": 74.695,
+          "end": 74.735,
+          "score": 0.044
+        },
+        {
+          "word": "cierto",
+          "start": 74.755,
+          "end": 75.32,
+          "score": 0.792
+        }
+      ]
+    },
+    {
+      "start": 75.3,
+      "end": 80.54,
+      "text": "mike te juro que quisiera ser tu dueño, que conmigo maneja y solo te tengo el sueño",
+      "words": [
+        {
+          "word": "mike",
+          "start": 75.3,
+          "end": 75.784,
+          "score": 0.226
+        },
+        {
+          "word": "te",
+          "start": 75.804,
+          "end": 75.965,
+          "score": 0.452
+        },
+        {
+          "word": "juro",
+          "start": 76.026,
+          "end": 76.207,
+          "score": 0.856
+        },
+        {
+          "word": "que",
+          "start": 76.267,
+          "end": 76.368,
+          "score": 0.705
+        },
+        {
+          "word": "quisiera",
+          "start": 76.469,
+          "end": 76.791,
+          "score": 0.8
+        },
+        {
+          "word": "ser",
+          "start": 76.832,
+          "end": 77.074,
+          "score": 0.394
+        },
+        {
+          "word": "tu",
+          "start": 77.094,
+          "end": 77.255,
+          "score": 0.779
+        },
+        {
+          "word": "dueño,",
+          "start": 77.275,
+          "end": 77.719,
+          "score": 0.508
+        },
+        {
+          "word": "que",
+          "start": 77.739,
+          "end": 77.88,
+          "score": 0.562
+        },
+        {
+          "word": "conmigo",
+          "start": 77.9,
+          "end": 78.343,
+          "score": 0.796
+        },
+        {
+          "word": "maneja",
+          "start": 78.363,
+          "end": 78.867,
+          "score": 0.729
+        },
+        {
+          "word": "y",
+          "start": 78.887,
+          "end": 78.968,
+          "score": 0.498
+        },
+        {
+          "word": "solo",
+          "start": 78.988,
+          "end": 79.23,
+          "score": 0.872
+        },
+        {
+          "word": "te",
+          "start": 79.291,
+          "end": 79.371,
+          "score": 0.648
+        },
+        {
+          "word": "tengo",
+          "start": 79.472,
+          "end": 79.915,
+          "score": 0.824
+        },
+        {
+          "word": "el",
+          "start": 80.036,
+          "end": 80.419,
+          "score": 0.328
+        },
+        {
+          "word": "sueño",
+          "start": 80.439,
+          "end": 80.54,
+          "score": 0.199
+        }
+      ]
+    },
+    {
+      "start": 80.52,
+      "end": 85.72,
+      "text": "uno sabe cuanto te extraño, me hace daño, los días hacen meses y los meses hacen años",
+      "words": [
+        {
+          "word": "uno",
+          "start": 80.52,
+          "end": 81.044,
+          "score": 0.647
+        },
+        {
+          "word": "sabe",
+          "start": 81.105,
+          "end": 81.447,
+          "score": 0.745
+        },
+        {
+          "word": "cuanto",
+          "start": 81.508,
+          "end": 81.709,
+          "score": 0.743
+        },
+        {
+          "word": "te",
+          "start": 81.83,
+          "end": 81.891,
+          "score": 0.486
+        },
+        {
+          "word": "extraño,",
+          "start": 81.911,
+          "end": 82.475,
+          "score": 0.514
+        },
+        {
+          "word": "me",
+          "start": 82.495,
+          "end": 82.656,
+          "score": 0.73
+        },
+        {
+          "word": "hace",
+          "start": 82.677,
+          "end": 82.979,
+          "score": 0.696
+        },
+        {
+          "word": "daño,",
+          "start": 82.999,
+          "end": 83.422,
+          "score": 0.464
+        },
+        {
+          "word": "los",
+          "start": 83.443,
+          "end": 83.523,
+          "score": 0.549
+        },
+        {
+          "word": "días",
+          "start": 83.604,
+          "end": 83.926,
+          "score": 0.568
+        },
+        {
+          "word": "hacen",
+          "start": 83.946,
+          "end": 84.188,
+          "score": 0.635
+        },
+        {
+          "word": "meses",
+          "start": 84.249,
+          "end": 84.531,
+          "score": 0.811
+        },
+        {
+          "word": "y",
+          "start": 84.612,
+          "end": 84.652,
+          "score": 0.683
+        },
+        {
+          "word": "los",
+          "start": 84.712,
+          "end": 84.793,
+          "score": 0.795
+        },
+        {
+          "word": "meses",
+          "start": 84.874,
+          "end": 85.176,
+          "score": 0.66
+        },
+        {
+          "word": "hacen",
+          "start": 85.216,
+          "end": 85.519,
+          "score": 0.843
+        },
+        {
+          "word": "años",
+          "start": 85.539,
+          "end": 85.72,
+          "score": 0.412
+        }
+      ]
+    },
+    {
+      "start": 85.7,
+      "end": 91.1,
+      "text": "como duelen en no tenerte, a ti perderte y solamente en mi sueño tenerte",
+      "words": [
+        {
+          "word": "como",
+          "start": 85.7,
+          "end": 86.143,
+          "score": 0.136
+        },
+        {
+          "word": "duelen",
+          "start": 86.163,
+          "end": 86.627,
+          "score": 0.21
+        },
+        {
+          "word": "en",
+          "start": 86.647,
+          "end": 86.707,
+          "score": 0.606
+        },
+        {
+          "word": "no",
+          "start": 86.748,
+          "end": 86.869,
+          "score": 0.798
+        },
+        {
+          "word": "tenerte,",
+          "start": 86.889,
+          "end": 87.433,
+          "score": 0.917
+        },
+        {
+          "word": "a",
+          "start": 87.453,
+          "end": 87.473,
+          "score": 0.981
+        },
+        {
+          "word": "ti",
+          "start": 87.675,
+          "end": 87.856,
+          "score": 0.682
+        },
+        {
+          "word": "perderte",
+          "start": 87.876,
+          "end": 88.501,
+          "score": 0.827
+        },
+        {
+          "word": "y",
+          "start": 88.521,
+          "end": 88.541,
+          "score": 0.978
+        },
+        {
+          "word": "solamente",
+          "start": 89.085,
+          "end": 89.629,
+          "score": 0.832
+        },
+        {
+          "word": "en",
+          "start": 89.67,
+          "end": 89.71,
+          "score": 0.128
+        },
+        {
+          "word": "mi",
+          "start": 89.73,
+          "end": 89.851,
+          "score": 0.513
+        },
+        {
+          "word": "sueño",
+          "start": 89.911,
+          "end": 90.294,
+          "score": 0.555
+        },
+        {
+          "word": "tenerte",
+          "start": 90.455,
+          "end": 91.1,
+          "score": 0.744
+        }
+      ]
+    },
+    {
+      "start": 91.08,
+      "end": 99.92,
+      "text": "y cuando cae la noche, yo imagino que estás conmigo, no puedo vivir si no te tengo",
+      "words": [
+        {
+          "word": "y",
+          "start": 91.08,
+          "end": 91.763,
+          "score": 0.893
+        },
+        {
+          "word": "cuando",
+          "start": 91.783,
+          "end": 92.185,
+          "score": 0.837
+        },
+        {
+          "word": "cae",
+          "start": 92.406,
+          "end": 92.667,
+          "score": 0.811
+        },
+        {
+          "word": "la",
+          "start": 92.727,
+          "end": 93.009,
+          "score": 0.692
+        },
+        {
+          "word": "noche,",
+          "start": 93.029,
+          "end": 93.933,
+          "score": 0.621
+        },
+        {
+          "word": "yo",
+          "start": 94.315,
+          "end": 94.355,
+          "score": 0.248
+        },
+        {
+          "word": "imagino",
+          "start": 94.415,
+          "end": 94.857,
+          "score": 0.701
+        },
+        {
+          "word": "que",
+          "start": 94.917,
+          "end": 95.158,
+          "score": 0.651
+        },
+        {
+          "word": "estás",
+          "start": 95.179,
+          "end": 95.56,
+          "score": 0.584
+        },
+        {
+          "word": "conmigo,",
+          "start": 95.58,
+          "end": 96.665,
+          "score": 0.675
+        },
+        {
+          "word": "no",
+          "start": 97.208,
+          "end": 97.268,
+          "score": 0.824
+        },
+        {
+          "word": "puedo",
+          "start": 97.308,
+          "end": 97.429,
+          "score": 0.469
+        },
+        {
+          "word": "vivir",
+          "start": 97.529,
+          "end": 97.73,
+          "score": 0.336
+        },
+        {
+          "word": "si",
+          "start": 97.79,
+          "end": 98.052,
+          "score": 0.875
+        },
+        {
+          "word": "no",
+          "start": 98.072,
+          "end": 98.152,
+          "score": 0.891
+        },
+        {
+          "word": "te",
+          "start": 98.433,
+          "end": 98.654,
+          "score": 0.649
+        },
+        {
+          "word": "tengo",
+          "start": 98.755,
+          "end": 99.92,
+          "score": 0.843
+        }
+      ]
+    },
+    {
+      "start": 100.86,
+      "end": 108.96,
+      "text": "tú me comienzas a besar, te juro que no quiero despertar sobre la realidad",
+      "words": [
+        {
+          "word": "tú",
+          "start": 100.86,
+          "end": 101.885,
+          "score": 0.422
+        },
+        {
+          "word": "me",
+          "start": 101.905,
+          "end": 102.166,
+          "score": 0.83
+        },
+        {
+          "word": "comienzas",
+          "start": 102.187,
+          "end": 103.533,
+          "score": 0.66
+        },
+        {
+          "word": "a",
+          "start": 103.553,
+          "end": 103.573,
+          "score": 0.006
+        },
+        {
+          "word": "besar,",
+          "start": 103.594,
+          "end": 103.996,
+          "score": 0.87
+        },
+        {
+          "word": "te",
+          "start": 104.297,
+          "end": 104.398,
+          "score": 0.77
+        },
+        {
+          "word": "juro",
+          "start": 104.478,
+          "end": 104.679,
+          "score": 0.745
+        },
+        {
+          "word": "que",
+          "start": 104.719,
+          "end": 104.82,
+          "score": 0.865
+        },
+        {
+          "word": "no",
+          "start": 104.9,
+          "end": 104.96,
+          "score": 0.939
+        },
+        {
+          "word": "quiero",
+          "start": 105.081,
+          "end": 105.443,
+          "score": 0.715
+        },
+        {
+          "word": "despertar",
+          "start": 105.483,
+          "end": 106.729,
+          "score": 0.767
+        },
+        {
+          "word": "sobre",
+          "start": 107.412,
+          "end": 107.895,
+          "score": 0.53
+        },
+        {
+          "word": "la",
+          "start": 107.915,
+          "end": 108.297,
+          "score": 0.724
+        },
+        {
+          "word": "realidad",
+          "start": 108.317,
+          "end": 108.96,
+          "score": 0.38
+        }
+      ]
+    },
+    {
+      "start": 110.04,
+      "end": 117.12,
+      "text": "que solo un sueño, que no te tengo",
+      "words": [
+        {
+          "word": "que",
+          "start": 110.04,
+          "end": 110.664,
+          "score": 0.728
+        },
+        {
+          "word": "solo",
+          "start": 110.684,
+          "end": 111.931,
+          "score": 0.395
+        },
+        {
+          "word": "un",
+          "start": 111.951,
+          "end": 111.991,
+          "score": 0.008
+        },
+        {
+          "word": "sueño,",
+          "start": 112.011,
+          "end": 115.028,
+          "score": 0.381
+        },
+        {
+          "word": "que",
+          "start": 115.471,
+          "end": 115.853,
+          "score": 0.785
+        },
+        {
+          "word": "no",
+          "start": 115.873,
+          "end": 115.994,
+          "score": 0.932
+        },
+        {
+          "word": "te",
+          "start": 116.114,
+          "end": 116.356,
+          "score": 0.801
+        },
+        {
+          "word": "tengo",
+          "start": 116.456,
+          "end": 117.12,
+          "score": 0.709
+        }
+      ]
+    },
+    {
+      "start": 119.76,
+      "end": 127.2,
+      "text": "que solo un sueño, que no te tengo",
+      "words": [
+        {
+          "word": "que",
+          "start": 119.76,
+          "end": 120.645,
+          "score": 0.707
+        },
+        {
+          "word": "solo",
+          "start": 120.826,
+          "end": 121.228,
+          "score": 0.585
+        },
+        {
+          "word": "un",
+          "start": 121.248,
+          "end": 121.429,
+          "score": 0.764
+        },
+        {
+          "word": "sueño,",
+          "start": 121.449,
+          "end": 125.229,
+          "score": 0.805
+        },
+        {
+          "word": "que",
+          "start": 125.571,
+          "end": 125.672,
+          "score": 0.73
+        },
+        {
+          "word": "no",
+          "start": 125.913,
+          "end": 126.215,
+          "score": 0.571
+        },
+        {
+          "word": "te",
+          "start": 126.235,
+          "end": 126.516,
+          "score": 0.844
+        },
+        {
+          "word": "tengo",
+          "start": 126.537,
+          "end": 127.2,
+          "score": 0.524
+        }
+      ]
+    },
+    {
+      "start": 130.98,
+      "end": 138.0,
+      "text": "que solo pasan y yo sigo aquí, aquí, estrenándote",
+      "words": [
+        {
+          "word": "que",
+          "start": 130.98,
+          "end": 132.127,
+          "score": 0.707
+        },
+        {
+          "word": "solo",
+          "start": 132.207,
+          "end": 132.529,
+          "score": 0.816
+        },
+        {
+          "word": "pasan",
+          "start": 132.71,
+          "end": 133.092,
+          "score": 0.869
+        },
+        {
+          "word": "y",
+          "start": 133.213,
+          "end": 133.233,
+          "score": 0.595
+        },
+        {
+          "word": "yo",
+          "start": 133.313,
+          "end": 133.374,
+          "score": 0.791
+        },
+        {
+          "word": "sigo",
+          "start": 133.414,
+          "end": 133.957,
+          "score": 0.685
+        },
+        {
+          "word": "aquí,",
+          "start": 134.078,
+          "end": 134.621,
+          "score": 0.85
+        },
+        {
+          "word": "aquí,",
+          "start": 135.104,
+          "end": 136.049,
+          "score": 0.453
+        },
+        {
+          "word": "estrenándote",
+          "start": 136.069,
+          "end": 138.0,
+          "score": 0.526
+        }
+      ]
+    },
+    {
+      "start": 141.98,
+      "end": 148.0,
+      "text": "como un vicio que me amarra a ti, yo sigo deseándote",
+      "words": [
+        {
+          "word": "como",
+          "start": 141.98,
+          "end": 142.524,
+          "score": 0.938
+        },
+        {
+          "word": "un",
+          "start": 142.665,
+          "end": 142.785,
+          "score": 0.692
+        },
+        {
+          "word": "vicio",
+          "start": 142.806,
+          "end": 143.128,
+          "score": 0.773
+        },
+        {
+          "word": "que",
+          "start": 143.228,
+          "end": 143.309,
+          "score": 0.819
+        },
+        {
+          "word": "me",
+          "start": 143.329,
+          "end": 143.389,
+          "score": 0.679
+        },
+        {
+          "word": "amarra",
+          "start": 143.51,
+          "end": 144.195,
+          "score": 0.815
+        },
+        {
+          "word": "a",
+          "start": 144.215,
+          "end": 144.235,
+          "score": 0.001
+        },
+        {
+          "word": "ti,",
+          "start": 144.255,
+          "end": 144.678,
+          "score": 0.813
+        },
+        {
+          "word": "yo",
+          "start": 145.383,
+          "end": 145.423,
+          "score": 0.012
+        },
+        {
+          "word": "sigo",
+          "start": 145.443,
+          "end": 145.846,
+          "score": 0.789
+        },
+        {
+          "word": "deseándote",
+          "start": 146.108,
+          "end": 148.0,
+          "score": 0.77
+        }
+      ]
+    },
+    {
+      "start": 152.9,
+      "end": 155.24,
+      "text": "alex gargolas",
+      "words": [
+        {
+          "word": "alex",
+          "start": 152.9,
+          "end": 153.714,
+          "score": 0.542
+        },
+        {
+          "word": "gargolas",
+          "start": 153.734,
+          "end": 155.24,
+          "score": 0.66
+        }
+      ]
+    },
+    {
+      "start": 155.22,
+      "end": 157.24,
+      "text": "rakim migenwai",
+      "words": [
+        {
+          "word": "rakim",
+          "start": 155.22,
+          "end": 155.853,
+          "score": 0.237
+        },
+        {
+          "word": "migenwai",
+          "start": 155.893,
+          "end": 157.24,
+          "score": 0.519
+        }
+      ]
+    },
+    {
+      "start": 160.1,
+      "end": 161.82,
+      "text": "mambo king",
+      "words": [
+        {
+          "word": "mambo",
+          "start": 160.1,
+          "end": 161.493,
+          "score": 0.697
+        },
+        {
+          "word": "king",
+          "start": 161.513,
+          "end": 161.82,
+          "score": 0.706
+        }
+      ]
+    },
+    {
+      "start": 163.22,
+      "end": 165.24,
+      "text": "alex gargolas",
+      "words": [
+        {
+          "word": "alex",
+          "start": 163.22,
+          "end": 163.751,
+          "score": 0.604
+        },
+        {
+          "word": "gargolas",
+          "start": 163.996,
+          "end": 165.24,
+          "score": 0.679
+        }
+      ]
+    },
+    {
+      "start": 167.94,
+      "end": 170.76,
+      "text": "rakim migenwai",
+      "words": [
+        {
+          "word": "rakim",
+          "start": 167.94,
+          "end": 168.447,
+          "score": 0.323
+        },
+        {
+          "word": "migenwai",
+          "start": 168.528,
+          "end": 170.76,
+          "score": 0.436
+        }
+      ]
+    },
+    {
+      "start": 170.74,
+      "end": 173.24,
+      "text": "los magníficos",
+      "words": [
+        {
+          "word": "los",
+          "start": 170.74,
+          "end": 171.126,
+          "score": 0.679
+        },
+        {
+          "word": "magníficos",
+          "start": 171.167,
+          "end": 173.24,
+          "score": 0.337
+        }
+      ]
+    },
+    {
+      "start": 180.72,
+      "end": 183.54,
+      "text": "rakim migenwai",
+      "words": [
+        {
+          "word": "rakim",
+          "start": 180.72,
+          "end": 181.227,
+          "score": 0.369
+        },
+        {
+          "word": "migenwai",
+          "start": 181.45,
+          "end": 183.54,
+          "score": 0.447
+        }
+      ]
+    },
+    {
+      "start": 186.18,
+      "end": 187.241,
+      "text": "los catalogas",
+      "words": [
+        {
+          "word": "los",
+          "start": 186.18,
+          "end": 186.346,
+          "score": 0.221
+        },
+        {
+          "word": "catalogas",
+          "start": 186.367,
+          "end": 187.241,
+          "score": 0.76
+        }
+      ]
+    },
+    {
+      "start": 187.86,
+      "end": 189.241,
+      "text": "el tuo romano",
+      "words": [
+        {
+          "word": "el",
+          "start": 187.86,
+          "end": 188.231,
+          "score": 0.304
+        },
+        {
+          "word": "tuo",
+          "start": 188.252,
+          "end": 188.561,
+          "score": 0.763
+        },
+        {
+          "word": "romano",
+          "start": 188.684,
+          "end": 189.241,
+          "score": 0.606
+        }
+      ]
+    },
+    {
+      "start": 190.06,
+      "end": 193.36,
+      "text": "vas a importarte del estado",
+      "words": [
+        {
+          "word": "vas",
+          "start": 190.06,
+          "end": 190.627,
+          "score": 0.248
+        },
+        {
+          "word": "a",
+          "start": 190.647,
+          "end": 190.85,
+          "score": 0.772
+        },
+        {
+          "word": "importarte",
+          "start": 191.174,
+          "end": 191.7,
+          "score": 0.469
+        },
+        {
+          "word": "del",
+          "start": 191.72,
+          "end": 192.166,
+          "score": 0.245
+        },
+        {
+          "word": "estado",
+          "start": 192.186,
+          "end": 193.36,
+          "score": 0.492
+        }
+      ]
+    },
+    {
+      "start": 193.34,
+      "end": 195.64,
+      "text": "se que te molestan",
+      "words": [
+        {
+          "word": "se",
+          "start": 193.34,
+          "end": 194.521,
+          "score": 0.724
+        },
+        {
+          "word": "que",
+          "start": 194.541,
+          "end": 194.704,
+          "score": 0.609
+        },
+        {
+          "word": "te",
+          "start": 194.724,
+          "end": 194.846,
+          "score": 0.56
+        },
+        {
+          "word": "molestan",
+          "start": 194.907,
+          "end": 195.64,
+          "score": 0.881
+        }
+      ]
+    },
+    {
+      "start": 196.6,
+      "end": 198.6,
+      "text": "alex, alex, dile",
+      "words": [
+        {
+          "word": "alex,",
+          "start": 196.6,
+          "end": 197.58,
+          "score": 0.723
+        },
+        {
+          "word": "alex,",
+          "start": 197.6,
+          "end": 198.131,
+          "score": 0.607
+        },
+        {
+          "word": "dile",
+          "start": 198.151,
+          "end": 198.6,
+          "score": 0.86
+        }
+      ]
+    },
+    {
+      "start": 199.84,
+      "end": 205.32,
+      "text": "que pa' pasarlo en el ronco, quiero comprenderlo, pero",
+      "words": [
+        {
+          "word": "que",
+          "start": 199.84,
+          "end": 200.666,
+          "score": 0.806
+        },
+        {
+          "word": "pa'",
+          "start": 200.847,
+          "end": 200.948,
+          "score": 0.609
+        },
+        {
+          "word": "pasarlo",
+          "start": 200.968,
+          "end": 201.694,
+          "score": 0.841
+        },
+        {
+          "word": "en",
+          "start": 201.714,
+          "end": 201.754,
+          "score": 0.171
+        },
+        {
+          "word": "el",
+          "start": 201.774,
+          "end": 201.814,
+          "score": 0.002
+        },
+        {
+          "word": "ronco,",
+          "start": 201.835,
+          "end": 204.796,
+          "score": 0.564
+        },
+        {
+          "word": "quiero",
+          "start": 204.816,
+          "end": 204.937,
+          "score": 0.024
+        },
+        {
+          "word": "comprenderlo,",
+          "start": 204.957,
+          "end": 205.219,
+          "score": 0.025
+        },
+        {
+          "word": "pero",
+          "start": 205.24,
+          "end": 205.32,
+          "score": 0.234
+        }
+      ]
+    },
+    {
+      "start": 205.3,
+      "end": 211.12,
+      "text": "que no se me acabo, de hecho",
+      "words": [
+        {
+          "word": "que",
+          "start": 205.3,
+          "end": 206.528,
+          "score": 0.658
+        },
+        {
+          "word": "no",
+          "start": 206.77,
+          "end": 207.374,
+          "score": 0.668
+        },
+        {
+          "word": "se",
+          "start": 207.394,
+          "end": 207.435,
+          "score": 0.001
+        },
+        {
+          "word": "me",
+          "start": 207.455,
+          "end": 207.495,
+          "score": 0.076
+        },
+        {
+          "word": "acabo,",
+          "start": 207.515,
+          "end": 209.267,
+          "score": 0.65
+        },
+        {
+          "word": "de",
+          "start": 209.287,
+          "end": 209.811,
+          "score": 0.742
+        },
+        {
+          "word": "hecho",
+          "start": 209.831,
+          "end": 211.12,
+          "score": 0.425
+        }
+      ]
+    },
+    {
+      "start": 211.1,
+      "end": 213.22,
+      "text": "mambo king",
+      "words": [
+        {
+          "word": "mambo",
+          "start": 211.1,
+          "end": 212.201,
+          "score": 0.51
+        },
+        {
+          "word": "king",
+          "start": 213.139,
+          "end": 213.22,
+          "score": 0.211
+        }
+      ]
+    },
+    {
+      "start": 214.84,
+      "end": 215.223,
+      "text": "migenwai",
+      "words": [
+        {
+          "word": "migenwai",
+          "start": 214.84,
+          "end": 215.223,
+          "score": 0.2
+        }
+      ]
+    },
+    {
+      "start": 216.24,
+      "end": 217.221,
+      "text": "rakim migenwai",
+      "words": [
+        {
+          "word": "rakim",
+          "start": 216.24,
+          "end": 216.824,
+          "score": 0.144
+        },
+        {
+          "word": "migenwai",
+          "start": 216.845,
+          "end": 217.221,
+          "score": 0.233
+        }
+      ]
+    },
+    {
+      "start": 219.82,
+      "end": 221.88,
+      "text": "ay, ay",
+      "words": [
+        {
+          "word": "ay,",
+          "start": 219.82,
+          "end": 220.371,
+          "score": 0.631
+        },
+        {
+          "word": "ay",
+          "start": 220.738,
+          "end": 221.88,
+          "score": 0.868
+        }
+      ]
+    },
+    {
+      "start": 221.86,
+      "end": 224.02,
+      "text": "ay, ay",
+      "words": [
+        {
+          "word": "ay,",
+          "start": 221.86,
+          "end": 223.654,
+          "score": 0.651
+        },
+        {
+          "word": "ay",
+          "start": 223.98,
+          "end": 224.02,
+          "score": 0.491
+        }
+      ]
+    },
+    {
+      "start": 224.0,
+      "end": 225.141,
+      "text": "alex gargolas",
+      "words": [
+        {
+          "word": "alex",
+          "start": 224.0,
+          "end": 224.747,
+          "score": 0.338
+        },
+        {
+          "word": "gargolas",
+          "start": 224.767,
+          "end": 225.141,
+          "score": 0.526
+        }
+      ]
+    },
+    {
+      "start": 230.22,
+      "end": 231.641,
+      "text": "migenwai",
+      "words": [
+        {
+          "word": "migenwai",
+          "start": 230.22,
+          "end": 231.641,
+          "score": 0.512
+        }
+      ]
+    },
+    {
+      "start": 241.74,
+      "end": 243.161,
+      "text": "migenwai",
+      "words": [
+        {
+          "word": "migenwai",
+          "start": 241.74,
+          "end": 243.161,
+          "score": 0.247
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "las",
+      "start": 9.66,
+      "end": 10.985,
+      "score": 0.605
+    },
+    {
+      "word": "horas",
+      "start": 11.005,
+      "end": 11.386,
+      "score": 0.687
+    },
+    {
+      "word": "pasan",
+      "start": 11.406,
+      "end": 11.848,
+      "score": 0.667
+    },
+    {
+      "word": "y",
+      "start": 12.009,
+      "end": 12.029,
+      "score": 0.002
+    },
+    {
+      "word": "yo",
+      "start": 12.049,
+      "end": 12.129,
+      "score": 0.682
+    },
+    {
+      "word": "sigo",
+      "start": 12.149,
+      "end": 12.591,
+      "score": 0.645
+    },
+    {
+      "word": "aquí,",
+      "start": 12.812,
+      "end": 13.394,
+      "score": 0.711
+    },
+    {
+      "word": "extrañándote",
+      "start": 14.839,
+      "end": 20.58,
+      "score": 0.558
+    },
+    {
+      "word": "como",
+      "start": 20.56,
+      "end": 21.244,
+      "score": 0.834
+    },
+    {
+      "word": "un",
+      "start": 21.285,
+      "end": 21.466,
+      "score": 0.546
+    },
+    {
+      "word": "vicio",
+      "start": 21.546,
+      "end": 21.909,
+      "score": 0.768
+    },
+    {
+      "word": "que",
+      "start": 21.969,
+      "end": 22.05,
+      "score": 0.69
+    },
+    {
+      "word": "me",
+      "start": 22.211,
+      "end": 22.271,
+      "score": 0.434
+    },
+    {
+      "word": "amarra",
+      "start": 22.311,
+      "end": 22.955,
+      "score": 0.674
+    },
+    {
+      "word": "a",
+      "start": 22.976,
+      "end": 22.996,
+      "score": 0.013
+    },
+    {
+      "word": "ti,",
+      "start": 23.016,
+      "end": 23.378,
+      "score": 0.807
+    },
+    {
+      "word": "yo",
+      "start": 24.042,
+      "end": 24.123,
+      "score": 0.594
+    },
+    {
+      "word": "sigo",
+      "start": 24.143,
+      "end": 24.787,
+      "score": 0.778
+    },
+    {
+      "word": "deseándote",
+      "start": 24.888,
+      "end": 26.78,
+      "score": 0.56
+    },
+    {
+      "word": "y",
+      "start": 30.22,
+      "end": 31.124,
+      "score": 0.596
+    },
+    {
+      "word": "cuando",
+      "start": 31.144,
+      "end": 31.546,
+      "score": 0.942
+    },
+    {
+      "word": "cae",
+      "start": 31.767,
+      "end": 32.049,
+      "score": 0.791
+    },
+    {
+      "word": "la",
+      "start": 32.089,
+      "end": 32.149,
+      "score": 0.71
+    },
+    {
+      "word": "noche,",
+      "start": 32.33,
+      "end": 32.471,
+      "score": 0.37
+    },
+    {
+      "word": "yo",
+      "start": 32.491,
+      "end": 32.571,
+      "score": 0.796
+    },
+    {
+      "word": "imagino",
+      "start": 33.857,
+      "end": 34.219,
+      "score": 0.488
+    },
+    {
+      "word": "que",
+      "start": 34.279,
+      "end": 34.56,
+      "score": 0.702
+    },
+    {
+      "word": "estás",
+      "start": 34.58,
+      "end": 34.942,
+      "score": 0.576
+    },
+    {
+      "word": "conmigo,",
+      "start": 34.962,
+      "end": 36.007,
+      "score": 0.686
+    },
+    {
+      "word": "no",
+      "start": 36.329,
+      "end": 36.369,
+      "score": 0.008
+    },
+    {
+      "word": "puedo",
+      "start": 36.389,
+      "end": 36.63,
+      "score": 0.809
+    },
+    {
+      "word": "vivir",
+      "start": 36.71,
+      "end": 37.072,
+      "score": 0.377
+    },
+    {
+      "word": "si",
+      "start": 37.173,
+      "end": 37.333,
+      "score": 0.886
+    },
+    {
+      "word": "no",
+      "start": 37.353,
+      "end": 37.655,
+      "score": 0.69
+    },
+    {
+      "word": "te",
+      "start": 37.795,
+      "end": 38.117,
+      "score": 0.717
+    },
+    {
+      "word": "tengo",
+      "start": 38.137,
+      "end": 38.78,
+      "score": 0.694
+    },
+    {
+      "word": "tú",
+      "start": 40.34,
+      "end": 41.244,
+      "score": 0.45
+    },
+    {
+      "word": "me",
+      "start": 41.265,
+      "end": 41.546,
+      "score": 0.406
+    },
+    {
+      "word": "comienzas",
+      "start": 41.566,
+      "end": 42.873,
+      "score": 0.54
+    },
+    {
+      "word": "a",
+      "start": 42.893,
+      "end": 42.913,
+      "score": 0.15
+    },
+    {
+      "word": "besar,",
+      "start": 42.933,
+      "end": 43.355,
+      "score": 0.89
+    },
+    {
+      "word": "te",
+      "start": 43.616,
+      "end": 43.717,
+      "score": 0.841
+    },
+    {
+      "word": "juro",
+      "start": 43.797,
+      "end": 44.018,
+      "score": 0.84
+    },
+    {
+      "word": "que",
+      "start": 44.079,
+      "end": 44.179,
+      "score": 0.684
+    },
+    {
+      "word": "no",
+      "start": 44.239,
+      "end": 44.32,
+      "score": 0.899
+    },
+    {
+      "word": "quiero",
+      "start": 44.44,
+      "end": 44.862,
+      "score": 0.849
+    },
+    {
+      "word": "despertar",
+      "start": 44.903,
+      "end": 46.089,
+      "score": 0.574
+    },
+    {
+      "word": "sobre",
+      "start": 46.772,
+      "end": 47.274,
+      "score": 0.478
+    },
+    {
+      "word": "la",
+      "start": 47.295,
+      "end": 47.676,
+      "score": 0.832
+    },
+    {
+      "word": "realidad",
+      "start": 47.777,
+      "end": 48.42,
+      "score": 0.746
+    },
+    {
+      "word": "que",
+      "start": 49.34,
+      "end": 50.909,
+      "score": 0.729
+    },
+    {
+      "word": "solo",
+      "start": 50.929,
+      "end": 51.009,
+      "score": 0.002
+    },
+    {
+      "word": "un",
+      "start": 51.029,
+      "end": 51.11,
+      "score": 0.708
+    },
+    {
+      "word": "sueño,",
+      "start": 51.371,
+      "end": 54.328,
+      "score": 0.37
+    },
+    {
+      "word": "que",
+      "start": 54.831,
+      "end": 55.173,
+      "score": 0.782
+    },
+    {
+      "word": "no",
+      "start": 55.193,
+      "end": 55.334,
+      "score": 0.966
+    },
+    {
+      "word": "te",
+      "start": 55.494,
+      "end": 55.716,
+      "score": 0.788
+    },
+    {
+      "word": "tengo",
+      "start": 55.796,
+      "end": 56.5,
+      "score": 0.668
+    },
+    {
+      "word": "que",
+      "start": 59.6,
+      "end": 60.143,
+      "score": 0.748
+    },
+    {
+      "word": "solo",
+      "start": 60.163,
+      "end": 61.37,
+      "score": 0.408
+    },
+    {
+      "word": "un",
+      "start": 61.39,
+      "end": 61.431,
+      "score": 0.046
+    },
+    {
+      "word": "sueño,",
+      "start": 61.451,
+      "end": 64.548,
+      "score": 0.447
+    },
+    {
+      "word": "que",
+      "start": 64.931,
+      "end": 65.051,
+      "score": 0.616
+    },
+    {
+      "word": "no",
+      "start": 65.273,
+      "end": 65.574,
+      "score": 0.635
+    },
+    {
+      "word": "te",
+      "start": 65.594,
+      "end": 65.876,
+      "score": 0.837
+    },
+    {
+      "word": "tengo",
+      "start": 65.896,
+      "end": 66.58,
+      "score": 0.508
+    },
+    {
+      "word": "abrazando",
+      "start": 70.5,
+      "end": 71.166,
+      "score": 0.783
+    },
+    {
+      "word": "la",
+      "start": 71.246,
+      "end": 71.287,
+      "score": 0.875
+    },
+    {
+      "word": "almohada",
+      "start": 71.327,
+      "end": 71.75,
+      "score": 0.837
+    },
+    {
+      "word": "y",
+      "start": 71.871,
+      "end": 71.892,
+      "score": 0.016
+    },
+    {
+      "word": "no",
+      "start": 71.912,
+      "end": 71.972,
+      "score": 0.859
+    },
+    {
+      "word": "despierto,",
+      "start": 72.033,
+      "end": 72.618,
+      "score": 0.723
+    },
+    {
+      "word": "soñando",
+      "start": 72.658,
+      "end": 73.082,
+      "score": 0.782
+    },
+    {
+      "word": "que",
+      "start": 73.122,
+      "end": 73.203,
+      "score": 0.746
+    },
+    {
+      "word": "detengo",
+      "start": 73.324,
+      "end": 73.707,
+      "score": 0.839
+    },
+    {
+      "word": "me",
+      "start": 73.787,
+      "end": 73.969,
+      "score": 0.223
+    },
+    {
+      "word": "duele",
+      "start": 73.989,
+      "end": 74.191,
+      "score": 0.414
+    },
+    {
+      "word": "porque",
+      "start": 74.251,
+      "end": 74.554,
+      "score": 0.53
+    },
+    {
+      "word": "no",
+      "start": 74.574,
+      "end": 74.675,
+      "score": 0.255
+    },
+    {
+      "word": "es",
+      "start": 74.695,
+      "end": 74.735,
+      "score": 0.044
+    },
+    {
+      "word": "cierto",
+      "start": 74.755,
+      "end": 75.32,
+      "score": 0.792
+    },
+    {
+      "word": "mike",
+      "start": 75.3,
+      "end": 75.784,
+      "score": 0.226
+    },
+    {
+      "word": "te",
+      "start": 75.804,
+      "end": 75.965,
+      "score": 0.452
+    },
+    {
+      "word": "juro",
+      "start": 76.026,
+      "end": 76.207,
+      "score": 0.856
+    },
+    {
+      "word": "que",
+      "start": 76.267,
+      "end": 76.368,
+      "score": 0.705
+    },
+    {
+      "word": "quisiera",
+      "start": 76.469,
+      "end": 76.791,
+      "score": 0.8
+    },
+    {
+      "word": "ser",
+      "start": 76.832,
+      "end": 77.074,
+      "score": 0.394
+    },
+    {
+      "word": "tu",
+      "start": 77.094,
+      "end": 77.255,
+      "score": 0.779
+    },
+    {
+      "word": "dueño,",
+      "start": 77.275,
+      "end": 77.719,
+      "score": 0.508
+    },
+    {
+      "word": "que",
+      "start": 77.739,
+      "end": 77.88,
+      "score": 0.562
+    },
+    {
+      "word": "conmigo",
+      "start": 77.9,
+      "end": 78.343,
+      "score": 0.796
+    },
+    {
+      "word": "maneja",
+      "start": 78.363,
+      "end": 78.867,
+      "score": 0.729
+    },
+    {
+      "word": "y",
+      "start": 78.887,
+      "end": 78.968,
+      "score": 0.498
+    },
+    {
+      "word": "solo",
+      "start": 78.988,
+      "end": 79.23,
+      "score": 0.872
+    },
+    {
+      "word": "te",
+      "start": 79.291,
+      "end": 79.371,
+      "score": 0.648
+    },
+    {
+      "word": "tengo",
+      "start": 79.472,
+      "end": 79.915,
+      "score": 0.824
+    },
+    {
+      "word": "el",
+      "start": 80.036,
+      "end": 80.419,
+      "score": 0.328
+    },
+    {
+      "word": "sueño",
+      "start": 80.439,
+      "end": 80.54,
+      "score": 0.199
+    },
+    {
+      "word": "uno",
+      "start": 80.52,
+      "end": 81.044,
+      "score": 0.647
+    },
+    {
+      "word": "sabe",
+      "start": 81.105,
+      "end": 81.447,
+      "score": 0.745
+    },
+    {
+      "word": "cuanto",
+      "start": 81.508,
+      "end": 81.709,
+      "score": 0.743
+    },
+    {
+      "word": "te",
+      "start": 81.83,
+      "end": 81.891,
+      "score": 0.486
+    },
+    {
+      "word": "extraño,",
+      "start": 81.911,
+      "end": 82.475,
+      "score": 0.514
+    },
+    {
+      "word": "me",
+      "start": 82.495,
+      "end": 82.656,
+      "score": 0.73
+    },
+    {
+      "word": "hace",
+      "start": 82.677,
+      "end": 82.979,
+      "score": 0.696
+    },
+    {
+      "word": "daño,",
+      "start": 82.999,
+      "end": 83.422,
+      "score": 0.464
+    },
+    {
+      "word": "los",
+      "start": 83.443,
+      "end": 83.523,
+      "score": 0.549
+    },
+    {
+      "word": "días",
+      "start": 83.604,
+      "end": 83.926,
+      "score": 0.568
+    },
+    {
+      "word": "hacen",
+      "start": 83.946,
+      "end": 84.188,
+      "score": 0.635
+    },
+    {
+      "word": "meses",
+      "start": 84.249,
+      "end": 84.531,
+      "score": 0.811
+    },
+    {
+      "word": "y",
+      "start": 84.612,
+      "end": 84.652,
+      "score": 0.683
+    },
+    {
+      "word": "los",
+      "start": 84.712,
+      "end": 84.793,
+      "score": 0.795
+    },
+    {
+      "word": "meses",
+      "start": 84.874,
+      "end": 85.176,
+      "score": 0.66
+    },
+    {
+      "word": "hacen",
+      "start": 85.216,
+      "end": 85.519,
+      "score": 0.843
+    },
+    {
+      "word": "años",
+      "start": 85.539,
+      "end": 85.72,
+      "score": 0.412
+    },
+    {
+      "word": "como",
+      "start": 85.7,
+      "end": 86.143,
+      "score": 0.136
+    },
+    {
+      "word": "duelen",
+      "start": 86.163,
+      "end": 86.627,
+      "score": 0.21
+    },
+    {
+      "word": "en",
+      "start": 86.647,
+      "end": 86.707,
+      "score": 0.606
+    },
+    {
+      "word": "no",
+      "start": 86.748,
+      "end": 86.869,
+      "score": 0.798
+    },
+    {
+      "word": "tenerte,",
+      "start": 86.889,
+      "end": 87.433,
+      "score": 0.917
+    },
+    {
+      "word": "a",
+      "start": 87.453,
+      "end": 87.473,
+      "score": 0.981
+    },
+    {
+      "word": "ti",
+      "start": 87.675,
+      "end": 87.856,
+      "score": 0.682
+    },
+    {
+      "word": "perderte",
+      "start": 87.876,
+      "end": 88.501,
+      "score": 0.827
+    },
+    {
+      "word": "y",
+      "start": 88.521,
+      "end": 88.541,
+      "score": 0.978
+    },
+    {
+      "word": "solamente",
+      "start": 89.085,
+      "end": 89.629,
+      "score": 0.832
+    },
+    {
+      "word": "en",
+      "start": 89.67,
+      "end": 89.71,
+      "score": 0.128
+    },
+    {
+      "word": "mi",
+      "start": 89.73,
+      "end": 89.851,
+      "score": 0.513
+    },
+    {
+      "word": "sueño",
+      "start": 89.911,
+      "end": 90.294,
+      "score": 0.555
+    },
+    {
+      "word": "tenerte",
+      "start": 90.455,
+      "end": 91.1,
+      "score": 0.744
+    },
+    {
+      "word": "y",
+      "start": 91.08,
+      "end": 91.763,
+      "score": 0.893
+    },
+    {
+      "word": "cuando",
+      "start": 91.783,
+      "end": 92.185,
+      "score": 0.837
+    },
+    {
+      "word": "cae",
+      "start": 92.406,
+      "end": 92.667,
+      "score": 0.811
+    },
+    {
+      "word": "la",
+      "start": 92.727,
+      "end": 93.009,
+      "score": 0.692
+    },
+    {
+      "word": "noche,",
+      "start": 93.029,
+      "end": 93.933,
+      "score": 0.621
+    },
+    {
+      "word": "yo",
+      "start": 94.315,
+      "end": 94.355,
+      "score": 0.248
+    },
+    {
+      "word": "imagino",
+      "start": 94.415,
+      "end": 94.857,
+      "score": 0.701
+    },
+    {
+      "word": "que",
+      "start": 94.917,
+      "end": 95.158,
+      "score": 0.651
+    },
+    {
+      "word": "estás",
+      "start": 95.179,
+      "end": 95.56,
+      "score": 0.584
+    },
+    {
+      "word": "conmigo,",
+      "start": 95.58,
+      "end": 96.665,
+      "score": 0.675
+    },
+    {
+      "word": "no",
+      "start": 97.208,
+      "end": 97.268,
+      "score": 0.824
+    },
+    {
+      "word": "puedo",
+      "start": 97.308,
+      "end": 97.429,
+      "score": 0.469
+    },
+    {
+      "word": "vivir",
+      "start": 97.529,
+      "end": 97.73,
+      "score": 0.336
+    },
+    {
+      "word": "si",
+      "start": 97.79,
+      "end": 98.052,
+      "score": 0.875
+    },
+    {
+      "word": "no",
+      "start": 98.072,
+      "end": 98.152,
+      "score": 0.891
+    },
+    {
+      "word": "te",
+      "start": 98.433,
+      "end": 98.654,
+      "score": 0.649
+    },
+    {
+      "word": "tengo",
+      "start": 98.755,
+      "end": 99.92,
+      "score": 0.843
+    },
+    {
+      "word": "tú",
+      "start": 100.86,
+      "end": 101.885,
+      "score": 0.422
+    },
+    {
+      "word": "me",
+      "start": 101.905,
+      "end": 102.166,
+      "score": 0.83
+    },
+    {
+      "word": "comienzas",
+      "start": 102.187,
+      "end": 103.533,
+      "score": 0.66
+    },
+    {
+      "word": "a",
+      "start": 103.553,
+      "end": 103.573,
+      "score": 0.006
+    },
+    {
+      "word": "besar,",
+      "start": 103.594,
+      "end": 103.996,
+      "score": 0.87
+    },
+    {
+      "word": "te",
+      "start": 104.297,
+      "end": 104.398,
+      "score": 0.77
+    },
+    {
+      "word": "juro",
+      "start": 104.478,
+      "end": 104.679,
+      "score": 0.745
+    },
+    {
+      "word": "que",
+      "start": 104.719,
+      "end": 104.82,
+      "score": 0.865
+    },
+    {
+      "word": "no",
+      "start": 104.9,
+      "end": 104.96,
+      "score": 0.939
+    },
+    {
+      "word": "quiero",
+      "start": 105.081,
+      "end": 105.443,
+      "score": 0.715
+    },
+    {
+      "word": "despertar",
+      "start": 105.483,
+      "end": 106.729,
+      "score": 0.767
+    },
+    {
+      "word": "sobre",
+      "start": 107.412,
+      "end": 107.895,
+      "score": 0.53
+    },
+    {
+      "word": "la",
+      "start": 107.915,
+      "end": 108.297,
+      "score": 0.724
+    },
+    {
+      "word": "realidad",
+      "start": 108.317,
+      "end": 108.96,
+      "score": 0.38
+    },
+    {
+      "word": "que",
+      "start": 110.04,
+      "end": 110.664,
+      "score": 0.728
+    },
+    {
+      "word": "solo",
+      "start": 110.684,
+      "end": 111.931,
+      "score": 0.395
+    },
+    {
+      "word": "un",
+      "start": 111.951,
+      "end": 111.991,
+      "score": 0.008
+    },
+    {
+      "word": "sueño,",
+      "start": 112.011,
+      "end": 115.028,
+      "score": 0.381
+    },
+    {
+      "word": "que",
+      "start": 115.471,
+      "end": 115.853,
+      "score": 0.785
+    },
+    {
+      "word": "no",
+      "start": 115.873,
+      "end": 115.994,
+      "score": 0.932
+    },
+    {
+      "word": "te",
+      "start": 116.114,
+      "end": 116.356,
+      "score": 0.801
+    },
+    {
+      "word": "tengo",
+      "start": 116.456,
+      "end": 117.12,
+      "score": 0.709
+    },
+    {
+      "word": "que",
+      "start": 119.76,
+      "end": 120.645,
+      "score": 0.707
+    },
+    {
+      "word": "solo",
+      "start": 120.826,
+      "end": 121.228,
+      "score": 0.585
+    },
+    {
+      "word": "un",
+      "start": 121.248,
+      "end": 121.429,
+      "score": 0.764
+    },
+    {
+      "word": "sueño,",
+      "start": 121.449,
+      "end": 125.229,
+      "score": 0.805
+    },
+    {
+      "word": "que",
+      "start": 125.571,
+      "end": 125.672,
+      "score": 0.73
+    },
+    {
+      "word": "no",
+      "start": 125.913,
+      "end": 126.215,
+      "score": 0.571
+    },
+    {
+      "word": "te",
+      "start": 126.235,
+      "end": 126.516,
+      "score": 0.844
+    },
+    {
+      "word": "tengo",
+      "start": 126.537,
+      "end": 127.2,
+      "score": 0.524
+    },
+    {
+      "word": "que",
+      "start": 130.98,
+      "end": 132.127,
+      "score": 0.707
+    },
+    {
+      "word": "solo",
+      "start": 132.207,
+      "end": 132.529,
+      "score": 0.816
+    },
+    {
+      "word": "pasan",
+      "start": 132.71,
+      "end": 133.092,
+      "score": 0.869
+    },
+    {
+      "word": "y",
+      "start": 133.213,
+      "end": 133.233,
+      "score": 0.595
+    },
+    {
+      "word": "yo",
+      "start": 133.313,
+      "end": 133.374,
+      "score": 0.791
+    },
+    {
+      "word": "sigo",
+      "start": 133.414,
+      "end": 133.957,
+      "score": 0.685
+    },
+    {
+      "word": "aquí,",
+      "start": 134.078,
+      "end": 134.621,
+      "score": 0.85
+    },
+    {
+      "word": "aquí,",
+      "start": 135.104,
+      "end": 136.049,
+      "score": 0.453
+    },
+    {
+      "word": "estrenándote",
+      "start": 136.069,
+      "end": 138.0,
+      "score": 0.526
+    },
+    {
+      "word": "como",
+      "start": 141.98,
+      "end": 142.524,
+      "score": 0.938
+    },
+    {
+      "word": "un",
+      "start": 142.665,
+      "end": 142.785,
+      "score": 0.692
+    },
+    {
+      "word": "vicio",
+      "start": 142.806,
+      "end": 143.128,
+      "score": 0.773
+    },
+    {
+      "word": "que",
+      "start": 143.228,
+      "end": 143.309,
+      "score": 0.819
+    },
+    {
+      "word": "me",
+      "start": 143.329,
+      "end": 143.389,
+      "score": 0.679
+    },
+    {
+      "word": "amarra",
+      "start": 143.51,
+      "end": 144.195,
+      "score": 0.815
+    },
+    {
+      "word": "a",
+      "start": 144.215,
+      "end": 144.235,
+      "score": 0.001
+    },
+    {
+      "word": "ti,",
+      "start": 144.255,
+      "end": 144.678,
+      "score": 0.813
+    },
+    {
+      "word": "yo",
+      "start": 145.383,
+      "end": 145.423,
+      "score": 0.012
+    },
+    {
+      "word": "sigo",
+      "start": 145.443,
+      "end": 145.846,
+      "score": 0.789
+    },
+    {
+      "word": "deseándote",
+      "start": 146.108,
+      "end": 148.0,
+      "score": 0.77
+    },
+    {
+      "word": "alex",
+      "start": 152.9,
+      "end": 153.714,
+      "score": 0.542
+    },
+    {
+      "word": "gargolas",
+      "start": 153.734,
+      "end": 155.24,
+      "score": 0.66
+    },
+    {
+      "word": "rakim",
+      "start": 155.22,
+      "end": 155.853,
+      "score": 0.237
+    },
+    {
+      "word": "migenwai",
+      "start": 155.893,
+      "end": 157.24,
+      "score": 0.519
+    },
+    {
+      "word": "mambo",
+      "start": 160.1,
+      "end": 161.493,
+      "score": 0.697
+    },
+    {
+      "word": "king",
+      "start": 161.513,
+      "end": 161.82,
+      "score": 0.706
+    },
+    {
+      "word": "alex",
+      "start": 163.22,
+      "end": 163.751,
+      "score": 0.604
+    },
+    {
+      "word": "gargolas",
+      "start": 163.996,
+      "end": 165.24,
+      "score": 0.679
+    },
+    {
+      "word": "rakim",
+      "start": 167.94,
+      "end": 168.447,
+      "score": 0.323
+    },
+    {
+      "word": "migenwai",
+      "start": 168.528,
+      "end": 170.76,
+      "score": 0.436
+    },
+    {
+      "word": "los",
+      "start": 170.74,
+      "end": 171.126,
+      "score": 0.679
+    },
+    {
+      "word": "magníficos",
+      "start": 171.167,
+      "end": 173.24,
+      "score": 0.337
+    },
+    {
+      "word": "rakim",
+      "start": 180.72,
+      "end": 181.227,
+      "score": 0.369
+    },
+    {
+      "word": "migenwai",
+      "start": 181.45,
+      "end": 183.54,
+      "score": 0.447
+    },
+    {
+      "word": "los",
+      "start": 186.18,
+      "end": 186.346,
+      "score": 0.221
+    },
+    {
+      "word": "catalogas",
+      "start": 186.367,
+      "end": 187.241,
+      "score": 0.76
+    },
+    {
+      "word": "el",
+      "start": 187.86,
+      "end": 188.231,
+      "score": 0.304
+    },
+    {
+      "word": "tuo",
+      "start": 188.252,
+      "end": 188.561,
+      "score": 0.763
+    },
+    {
+      "word": "romano",
+      "start": 188.684,
+      "end": 189.241,
+      "score": 0.606
+    },
+    {
+      "word": "vas",
+      "start": 190.06,
+      "end": 190.627,
+      "score": 0.248
+    },
+    {
+      "word": "a",
+      "start": 190.647,
+      "end": 190.85,
+      "score": 0.772
+    },
+    {
+      "word": "importarte",
+      "start": 191.174,
+      "end": 191.7,
+      "score": 0.469
+    },
+    {
+      "word": "del",
+      "start": 191.72,
+      "end": 192.166,
+      "score": 0.245
+    },
+    {
+      "word": "estado",
+      "start": 192.186,
+      "end": 193.36,
+      "score": 0.492
+    },
+    {
+      "word": "se",
+      "start": 193.34,
+      "end": 194.521,
+      "score": 0.724
+    },
+    {
+      "word": "que",
+      "start": 194.541,
+      "end": 194.704,
+      "score": 0.609
+    },
+    {
+      "word": "te",
+      "start": 194.724,
+      "end": 194.846,
+      "score": 0.56
+    },
+    {
+      "word": "molestan",
+      "start": 194.907,
+      "end": 195.64,
+      "score": 0.881
+    },
+    {
+      "word": "alex,",
+      "start": 196.6,
+      "end": 197.58,
+      "score": 0.723
+    },
+    {
+      "word": "alex,",
+      "start": 197.6,
+      "end": 198.131,
+      "score": 0.607
+    },
+    {
+      "word": "dile",
+      "start": 198.151,
+      "end": 198.6,
+      "score": 0.86
+    },
+    {
+      "word": "que",
+      "start": 199.84,
+      "end": 200.666,
+      "score": 0.806
+    },
+    {
+      "word": "pa'",
+      "start": 200.847,
+      "end": 200.948,
+      "score": 0.609
+    },
+    {
+      "word": "pasarlo",
+      "start": 200.968,
+      "end": 201.694,
+      "score": 0.841
+    },
+    {
+      "word": "en",
+      "start": 201.714,
+      "end": 201.754,
+      "score": 0.171
+    },
+    {
+      "word": "el",
+      "start": 201.774,
+      "end": 201.814,
+      "score": 0.002
+    },
+    {
+      "word": "ronco,",
+      "start": 201.835,
+      "end": 204.796,
+      "score": 0.564
+    },
+    {
+      "word": "quiero",
+      "start": 204.816,
+      "end": 204.937,
+      "score": 0.024
+    },
+    {
+      "word": "comprenderlo,",
+      "start": 204.957,
+      "end": 205.219,
+      "score": 0.025
+    },
+    {
+      "word": "pero",
+      "start": 205.24,
+      "end": 205.32,
+      "score": 0.234
+    },
+    {
+      "word": "que",
+      "start": 205.3,
+      "end": 206.528,
+      "score": 0.658
+    },
+    {
+      "word": "no",
+      "start": 206.77,
+      "end": 207.374,
+      "score": 0.668
+    },
+    {
+      "word": "se",
+      "start": 207.394,
+      "end": 207.435,
+      "score": 0.001
+    },
+    {
+      "word": "me",
+      "start": 207.455,
+      "end": 207.495,
+      "score": 0.076
+    },
+    {
+      "word": "acabo,",
+      "start": 207.515,
+      "end": 209.267,
+      "score": 0.65
+    },
+    {
+      "word": "de",
+      "start": 209.287,
+      "end": 209.811,
+      "score": 0.742
+    },
+    {
+      "word": "hecho",
+      "start": 209.831,
+      "end": 211.12,
+      "score": 0.425
+    },
+    {
+      "word": "mambo",
+      "start": 211.1,
+      "end": 212.201,
+      "score": 0.51
+    },
+    {
+      "word": "king",
+      "start": 213.139,
+      "end": 213.22,
+      "score": 0.211
+    },
+    {
+      "word": "migenwai",
+      "start": 214.84,
+      "end": 215.223,
+      "score": 0.2
+    },
+    {
+      "word": "rakim",
+      "start": 216.24,
+      "end": 216.824,
+      "score": 0.144
+    },
+    {
+      "word": "migenwai",
+      "start": 216.845,
+      "end": 217.221,
+      "score": 0.233
+    },
+    {
+      "word": "ay,",
+      "start": 219.82,
+      "end": 220.371,
+      "score": 0.631
+    },
+    {
+      "word": "ay",
+      "start": 220.738,
+      "end": 221.88,
+      "score": 0.868
+    },
+    {
+      "word": "ay,",
+      "start": 221.86,
+      "end": 223.654,
+      "score": 0.651
+    },
+    {
+      "word": "ay",
+      "start": 223.98,
+      "end": 224.02,
+      "score": 0.491
+    },
+    {
+      "word": "alex",
+      "start": 224.0,
+      "end": 224.747,
+      "score": 0.338
+    },
+    {
+      "word": "gargolas",
+      "start": 224.767,
+      "end": 225.141,
+      "score": 0.526
+    },
+    {
+      "word": "migenwai",
+      "start": 230.22,
+      "end": 231.641,
+      "score": 0.512
+    },
+    {
+      "word": "migenwai",
+      "start": 241.74,
+      "end": 243.161,
+      "score": 0.247
+    }
+  ]
+}
