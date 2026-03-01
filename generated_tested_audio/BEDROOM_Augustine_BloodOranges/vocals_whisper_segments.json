@@ -1,0 +1,1415 @@
+[
+  {
+    "id": 0,
+    "text": "thank you for the promise of your faith.",
+    "start": 22.579999999999995,
+    "end": 28.8,
+    "words": [
+      {
+        "word": " Thank",
+        "start": 22.579999999999995,
+        "end": 23.779999999999998
+      },
+      {
+        "word": " you",
+        "start": 23.779999999999998,
+        "end": 24.98
+      },
+      {
+        "word": " for",
+        "start": 24.98,
+        "end": 25.14
+      },
+      {
+        "word": " the",
+        "start": 25.14,
+        "end": 25.46
+      },
+      {
+        "word": " promise",
+        "start": 25.46,
+        "end": 26.3
+      },
+      {
+        "word": " of",
+        "start": 26.3,
+        "end": 26.86
+      },
+      {
+        "word": " your",
+        "start": 26.86,
+        "end": 27.46
+      },
+      {
+        "word": " faith.",
+        "start": 27.46,
+        "end": 28.8
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "text": "thank you for all your praise, even if you promise me a way out of your gainless game.",
+    "start": 28.8,
+    "end": 40.8,
+    "words": [
+      {
+        "word": " Thank",
+        "start": 28.8,
+        "end": 29.92
+      },
+      {
+        "word": " you",
+        "start": 29.92,
+        "end": 30.16
+      },
+      {
+        "word": " for",
+        "start": 30.16,
+        "end": 30.46
+      },
+      {
+        "word": " all",
+        "start": 30.46,
+        "end": 30.96
+      },
+      {
+        "word": " your",
+        "start": 30.96,
+        "end": 31.5
+      },
+      {
+        "word": " praise,",
+        "start": 31.5,
+        "end": 32.5
+      },
+      {
+        "word": " even",
+        "start": 32.96,
+        "end": 33.28
+      },
+      {
+        "word": " if",
+        "start": 33.28,
+        "end": 33.58
+      },
+      {
+        "word": " you",
+        "start": 33.58,
+        "end": 33.94
+      },
+      {
+        "word": " promise",
+        "start": 33.94,
+        "end": 34.56
+      },
+      {
+        "word": " me",
+        "start": 34.56,
+        "end": 35.42
+      },
+      {
+        "word": " a",
+        "start": 35.42,
+        "end": 35.92
+      },
+      {
+        "word": " way",
+        "start": 35.92,
+        "end": 37.14
+      },
+      {
+        "word": " out",
+        "start": 37.14,
+        "end": 38.34
+      },
+      {
+        "word": " of",
+        "start": 38.34,
+        "end": 38.6
+      },
+      {
+        "word": " your",
+        "start": 38.6,
+        "end": 38.94
+      },
+      {
+        "word": " gainless",
+        "start": 38.94,
+        "end": 39.92
+      },
+      {
+        "word": " game.",
+        "start": 39.92,
+        "end": 40.8
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "my father was a young man.",
+    "start": 83.34,
+    "end": 86.62,
+    "words": [
+      {
+        "word": " My",
+        "start": 83.34,
+        "end": 84.3
+      },
+      {
+        "word": " father",
+        "start": 84.3,
+        "end": 84.78
+      },
+      {
+        "word": " was",
+        "start": 84.78,
+        "end": 85.18
+      },
+      {
+        "word": " a",
+        "start": 85.18,
+        "end": 85.3
+      },
+      {
+        "word": " young",
+        "start": 85.3,
+        "end": 85.6
+      },
+      {
+        "word": " man.",
+        "start": 85.6,
+        "end": 86.62
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "my mother off the boat.",
+    "start": 87.82,
+    "end": 90.5,
+    "words": [
+      {
+        "word": " My",
+        "start": 87.82,
+        "end": 88.46
+      },
+      {
+        "word": " mother",
+        "start": 88.46,
+        "end": 88.82
+      },
+      {
+        "word": " off",
+        "start": 88.82,
+        "end": 89.18
+      },
+      {
+        "word": " the",
+        "start": 89.18,
+        "end": 89.42
+      },
+      {
+        "word": " boat.",
+        "start": 89.42,
+        "end": 90.5
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "my eyes were fresh at 21.",
+    "start": 92.3,
+    "end": 94.48,
+    "words": [
+      {
+        "word": " My",
+        "start": 92.3,
+        "end": 92.36
+      },
+      {
+        "word": " eyes",
+        "start": 92.36,
+        "end": 92.66
+      },
+      {
+        "word": " were",
+        "start": 92.66,
+        "end": 92.98
+      },
+      {
+        "word": " fresh",
+        "start": 92.98,
+        "end": 93.18
+      },
+      {
+        "word": " at",
+        "start": 93.18,
+        "end": 93.48
+      },
+      {
+        "word": " 21.",
+        "start": 93.48,
+        "end": 94.48
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "bruised but still afloat.",
+    "start": 96.62,
+    "end": 99.06,
+    "words": [
+      {
+        "word": " Bruised",
+        "start": 96.62,
+        "end": 96.84
+      },
+      {
+        "word": " but",
+        "start": 96.84,
+        "end": 97.14
+      },
+      {
+        "word": " still",
+        "start": 97.14,
+        "end": 97.34
+      },
+      {
+        "word": " afloat.",
+        "start": 97.34,
+        "end": 99.06
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "our heads have hit the pavement.",
+    "start": 100.28,
+    "end": 102.14,
+    "words": [
+      {
+        "word": " Our",
+        "start": 100.28,
+        "end": 100.46
+      },
+      {
+        "word": " heads",
+        "start": 100.46,
+        "end": 100.74
+      },
+      {
+        "word": " have",
+        "start": 100.74,
+        "end": 101.0
+      },
+      {
+        "word": " hit",
+        "start": 101.0,
+        "end": 101.16
+      },
+      {
+        "word": " the",
+        "start": 101.16,
+        "end": 101.4
+      },
+      {
+        "word": " pavement.",
+        "start": 101.4,
+        "end": 102.14
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "many times before.",
+    "start": 104.5,
+    "end": 106.26,
+    "words": [
+      {
+        "word": " Many",
+        "start": 104.5,
+        "end": 104.68
+      },
+      {
+        "word": " times",
+        "start": 104.68,
+        "end": 105.28
+      },
+      {
+        "word": " before.",
+        "start": 105.28,
+        "end": 106.26
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "he's choked his face to soothe him.",
+    "start": 108.18,
+    "end": 111.46,
+    "words": [
+      {
+        "word": " He's",
+        "start": 108.18,
+        "end": 108.5
+      },
+      {
+        "word": " choked",
+        "start": 108.5,
+        "end": 108.66
+      },
+      {
+        "word": " his",
+        "start": 108.66,
+        "end": 108.96
+      },
+      {
+        "word": " face",
+        "start": 108.96,
+        "end": 109.24
+      },
+      {
+        "word": " to",
+        "start": 109.24,
+        "end": 109.56
+      },
+      {
+        "word": " soothe",
+        "start": 109.56,
+        "end": 109.92
+      },
+      {
+        "word": " him.",
+        "start": 109.92,
+        "end": 111.46
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "wondering that there's more.",
+    "start": 112.28,
+    "end": 113.88,
+    "words": [
+      {
+        "word": " Wondering",
+        "start": 112.28,
+        "end": 112.84
+      },
+      {
+        "word": " that",
+        "start": 112.84,
+        "end": 113.12
+      },
+      {
+        "word": " there's",
+        "start": 113.12,
+        "end": 113.4
+      },
+      {
+        "word": " more.",
+        "start": 113.4,
+        "end": 113.88
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "sing on my skin.",
+    "start": 116.35999999999999,
+    "end": 121.88,
+    "words": [
+      {
+        "word": " Sing",
+        "start": 116.35999999999999,
+        "end": 117.75999999999999
+      },
+      {
+        "word": " on",
+        "start": 117.75999999999999,
+        "end": 119.16
+      },
+      {
+        "word": " my",
+        "start": 119.16,
+        "end": 119.22
+      },
+      {
+        "word": " skin.",
+        "start": 119.22,
+        "end": 121.88
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "may have i loved and chose to sing.",
+    "start": 123.1,
+    "end": 128.28,
+    "words": [
+      {
+        "word": " May",
+        "start": 123.1,
+        "end": 123.52
+      },
+      {
+        "word": " have",
+        "start": 123.52,
+        "end": 124.18
+      },
+      {
+        "word": " I",
+        "start": 124.18,
+        "end": 124.6
+      },
+      {
+        "word": " loved",
+        "start": 124.6,
+        "end": 125.04
+      },
+      {
+        "word": " and",
+        "start": 125.04,
+        "end": 125.54
+      },
+      {
+        "word": " chose",
+        "start": 125.54,
+        "end": 126.6
+      },
+      {
+        "word": " to",
+        "start": 126.6,
+        "end": 127.84
+      },
+      {
+        "word": " sing.",
+        "start": 127.84,
+        "end": 128.28
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "sing on my skin.",
+    "start": 129.22,
+    "end": 138.14,
+    "words": [
+      {
+        "word": " Sing",
+        "start": 129.22,
+        "end": 130.62
+      },
+      {
+        "word": " on",
+        "start": 130.62,
+        "end": 135.08
+      },
+      {
+        "word": " my",
+        "start": 135.08,
+        "end": 138.14
+      },
+      {
+        "word": " skin.",
+        "start": 138.14,
+        "end": 138.14
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "all that i can feel within.",
+    "start": 138.14,
+    "end": 144.38,
+    "words": [
+      {
+        "word": " All",
+        "start": 138.14,
+        "end": 139.42
+      },
+      {
+        "word": " that",
+        "start": 139.42,
+        "end": 140.3
+      },
+      {
+        "word": " I",
+        "start": 140.3,
+        "end": 141.0
+      },
+      {
+        "word": " can",
+        "start": 141.0,
+        "end": 141.46
+      },
+      {
+        "word": " feel",
+        "start": 141.46,
+        "end": 142.84
+      },
+      {
+        "word": " within.",
+        "start": 142.84,
+        "end": 144.38
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "and no one even told me.",
+    "start": 148.14000000000001,
+    "end": 151.54,
+    "words": [
+      {
+        "word": " And",
+        "start": 148.02,
+        "end": 148.52
+      },
+      {
+        "word": " no",
+        "start": 148.52,
+        "end": 148.76
+      },
+      {
+        "word": " one",
+        "start": 148.76,
+        "end": 149.02
+      },
+      {
+        "word": " even",
+        "start": 149.02,
+        "end": 149.52
+      },
+      {
+        "word": " told",
+        "start": 149.52,
+        "end": 149.86
+      },
+      {
+        "word": " me.",
+        "start": 149.86,
+        "end": 151.54
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "the way that you should feel.",
+    "start": 152.14,
+    "end": 154.16,
+    "words": [
+      {
+        "word": " The",
+        "start": 152.14,
+        "end": 152.46
+      },
+      {
+        "word": " way",
+        "start": 152.46,
+        "end": 152.74
+      },
+      {
+        "word": " that",
+        "start": 152.74,
+        "end": 152.94
+      },
+      {
+        "word": " you",
+        "start": 152.94,
+        "end": 153.12
+      },
+      {
+        "word": " should",
+        "start": 153.12,
+        "end": 153.48
+      },
+      {
+        "word": " feel.",
+        "start": 153.48,
+        "end": 154.16
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "tell me that you lose your son.",
+    "start": 156.5,
+    "end": 159.12,
+    "words": [
+      {
+        "word": " Tell",
+        "start": 156.5,
+        "end": 156.74
+      },
+      {
+        "word": " me",
+        "start": 156.74,
+        "end": 156.9
+      },
+      {
+        "word": " that",
+        "start": 156.9,
+        "end": 157.18
+      },
+      {
+        "word": " you",
+        "start": 157.18,
+        "end": 157.44
+      },
+      {
+        "word": " lose",
+        "start": 157.44,
+        "end": 157.92
+      },
+      {
+        "word": " your",
+        "start": 157.92,
+        "end": 158.54
+      },
+      {
+        "word": " son.",
+        "start": 158.54,
+        "end": 159.12
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "tell me that you lose your love.",
+    "start": 160.42,
+    "end": 163.12,
+    "words": [
+      {
+        "word": " Tell",
+        "start": 160.42,
+        "end": 160.76
+      },
+      {
+        "word": " me",
+        "start": 160.76,
+        "end": 160.96
+      },
+      {
+        "word": " that",
+        "start": 160.96,
+        "end": 161.2
+      },
+      {
+        "word": " you",
+        "start": 161.2,
+        "end": 161.42
+      },
+      {
+        "word": " lose",
+        "start": 161.42,
+        "end": 161.96
+      },
+      {
+        "word": " your",
+        "start": 161.96,
+        "end": 162.58
+      },
+      {
+        "word": " love.",
+        "start": 162.58,
+        "end": 163.12
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "cry and burst my deafness.",
+    "start": 164.12,
+    "end": 167.78,
+    "words": [
+      {
+        "word": " Cry",
+        "start": 164.12,
+        "end": 164.8
+      },
+      {
+        "word": " and",
+        "start": 164.8,
+        "end": 165.06
+      },
+      {
+        "word": " burst",
+        "start": 165.06,
+        "end": 165.14
+      },
+      {
+        "word": " my",
+        "start": 165.14,
+        "end": 165.58
+      },
+      {
+        "word": " deafness.",
+        "start": 165.58,
+        "end": 167.78
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "and she even falls asleep.",
+    "start": 167.8,
+    "end": 170.14,
+    "words": [
+      {
+        "word": " And",
+        "start": 167.8,
+        "end": 168.52
+      },
+      {
+        "word": " she",
+        "start": 168.52,
+        "end": 168.72
+      },
+      {
+        "word": " even",
+        "start": 168.72,
+        "end": 169.04
+      },
+      {
+        "word": " falls",
+        "start": 169.04,
+        "end": 169.36
+      },
+      {
+        "word": " asleep.",
+        "start": 169.36,
+        "end": 170.14
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "the things that i can't do to you.",
+    "start": 172.3,
+    "end": 175.12,
+    "words": [
+      {
+        "word": " The",
+        "start": 172.3,
+        "end": 172.48
+      },
+      {
+        "word": " things",
+        "start": 172.48,
+        "end": 172.66
+      },
+      {
+        "word": " that",
+        "start": 172.66,
+        "end": 172.98
+      },
+      {
+        "word": " I",
+        "start": 172.98,
+        "end": 173.22
+      },
+      {
+        "word": " can't",
+        "start": 173.22,
+        "end": 173.58
+      },
+      {
+        "word": " do",
+        "start": 173.58,
+        "end": 173.8
+      },
+      {
+        "word": " to",
+        "start": 173.8,
+        "end": 174.42
+      },
+      {
+        "word": " you.",
+        "start": 174.42,
+        "end": 175.12
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "the things that i can't do to you.",
+    "start": 176.18,
+    "end": 179.26,
+    "words": [
+      {
+        "word": " The",
+        "start": 176.18,
+        "end": 176.34
+      },
+      {
+        "word": " things",
+        "start": 176.34,
+        "end": 176.68
+      },
+      {
+        "word": " that",
+        "start": 176.68,
+        "end": 176.98
+      },
+      {
+        "word": " I",
+        "start": 176.98,
+        "end": 177.24
+      },
+      {
+        "word": " can't",
+        "start": 177.24,
+        "end": 177.58
+      },
+      {
+        "word": " do",
+        "start": 177.58,
+        "end": 177.82
+      },
+      {
+        "word": " to",
+        "start": 177.82,
+        "end": 178.44
+      },
+      {
+        "word": " you.",
+        "start": 178.44,
+        "end": 179.26
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "sing on my skin.",
+    "start": 179.72,
+    "end": 184.42,
+    "words": [
+      {
+        "word": " Sing",
+        "start": 179.72,
+        "end": 180.28
+      },
+      {
+        "word": " on",
+        "start": 180.28,
+        "end": 182.66
+      },
+      {
+        "word": " my",
+        "start": 182.66,
+        "end": 184.42
+      },
+      {
+        "word": " skin.",
+        "start": 184.42,
+        "end": 184.42
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "may have i loved and chose to sing.",
+    "start": 186.84,
+    "end": 192.36,
+    "words": [
+      {
+        "word": " May",
+        "start": 186.84,
+        "end": 187.48
+      },
+      {
+        "word": " have",
+        "start": 187.48,
+        "end": 188.18
+      },
+      {
+        "word": " I",
+        "start": 188.18,
+        "end": 188.76
+      },
+      {
+        "word": " loved",
+        "start": 188.76,
+        "end": 189.16
+      },
+      {
+        "word": " and",
+        "start": 189.16,
+        "end": 189.2
+      },
+      {
+        "word": " chose",
+        "start": 189.2,
+        "end": 190.58
+      },
+      {
+        "word": " to",
+        "start": 190.58,
+        "end": 191.66
+      },
+      {
+        "word": " sing.",
+        "start": 191.66,
+        "end": 192.36
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "or i choose to sing on my skin.",
+    "start": 192.36,
+    "end": 200.16,
+    "words": [
+      {
+        "word": " Or",
+        "start": 192.36,
+        "end": 192.7
+      },
+      {
+        "word": " I",
+        "start": 192.7,
+        "end": 192.94
+      },
+      {
+        "word": " choose",
+        "start": 192.94,
+        "end": 193.18
+      },
+      {
+        "word": " to",
+        "start": 193.18,
+        "end": 193.58
+      },
+      {
+        "word": " sing",
+        "start": 193.58,
+        "end": 193.9
+      },
+      {
+        "word": " on",
+        "start": 193.9,
+        "end": 194.78
+      },
+      {
+        "word": " my",
+        "start": 194.78,
+        "end": 194.92
+      },
+      {
+        "word": " skin.",
+        "start": 194.92,
+        "end": 200.16
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "all that i can feel within.",
+    "start": 203.06,
+    "end": 209.02,
+    "words": [
+      {
+        "word": " All",
+        "start": 203.06,
+        "end": 203.42
+      },
+      {
+        "word": " that",
+        "start": 203.42,
+        "end": 204.18
+      },
+      {
+        "word": " I",
+        "start": 204.18,
+        "end": 204.98
+      },
+      {
+        "word": " can",
+        "start": 204.98,
+        "end": 205.62
+      },
+      {
+        "word": " feel",
+        "start": 205.62,
+        "end": 206.86
+      },
+      {
+        "word": " within.",
+        "start": 206.86,
+        "end": 209.02
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "motifah.",
+    "start": 211.51999999999998,
+    "end": 212.64,
+    "words": [
+      {
+        "word": " Motifah.",
+        "start": 211.51999999999998,
+        "end": 212.64
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "we heard it all for you.",
+    "start": 214.54,
+    "end": 218.1,
+    "words": [
+      {
+        "word": " We",
+        "start": 214.54,
+        "end": 215.66
+      },
+      {
+        "word": " heard",
+        "start": 215.66,
+        "end": 216.04
+      },
+      {
+        "word": " it",
+        "start": 216.04,
+        "end": 216.52
+      },
+      {
+        "word": " all",
+        "start": 216.52,
+        "end": 216.76
+      },
+      {
+        "word": " for",
+        "start": 216.76,
+        "end": 217.1
+      },
+      {
+        "word": " you.",
+        "start": 217.1,
+        "end": 218.1
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "motifah.",
+    "start": 221.44,
+    "end": 222.56,
+    "words": [
+      {
+        "word": " Motifah.",
+        "start": 221.44,
+        "end": 222.56
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "we waited here for you.",
+    "start": 223.16,
+    "end": 226.08,
+    "words": [
+      {
+        "word": " We",
+        "start": 223.16,
+        "end": 223.44
+      },
+      {
+        "word": " waited",
+        "start": 223.44,
+        "end": 224.06
+      },
+      {
+        "word": " here",
+        "start": 224.06,
+        "end": 224.64
+      },
+      {
+        "word": " for",
+        "start": 224.64,
+        "end": 225.16
+      },
+      {
+        "word": " you.",
+        "start": 225.16,
+        "end": 226.08
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "motifah.",
+    "start": 227.38,
+    "end": 228.5,
+    "words": [
+      {
+        "word": " Motifah.",
+        "start": 227.38,
+        "end": 228.5
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "we heard it all for you.",
+    "start": 230.92,
+    "end": 234.04,
+    "words": [
+      {
+        "word": " We",
+        "start": 230.92,
+        "end": 231.38
+      },
+      {
+        "word": " heard",
+        "start": 231.38,
+        "end": 231.98
+      },
+      {
+        "word": " it",
+        "start": 231.98,
+        "end": 232.52
+      },
+      {
+        "word": " all",
+        "start": 232.52,
+        "end": 232.84
+      },
+      {
+        "word": " for",
+        "start": 232.84,
+        "end": 233.16
+      },
+      {
+        "word": " you.",
+        "start": 233.16,
+        "end": 234.04
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "motifah.",
+    "start": 237.1,
+    "end": 238.38,
+    "words": [
+      {
+        "word": " Motifah.",
+        "start": 237.1,
+        "end": 238.38
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "we waited here for you.",
+    "start": 239.16,
+    "end": 242.1,
+    "words": [
+      {
+        "word": " We",
+        "start": 239.16,
+        "end": 239.5
+      },
+      {
+        "word": " waited",
+        "start": 239.5,
+        "end": 240.18
+      },
+      {
+        "word": " here",
+        "start": 240.18,
+        "end": 240.7
+      },
+      {
+        "word": " for",
+        "start": 240.7,
+        "end": 241.16
+      },
+      {
+        "word": " you.",
+        "start": 241.16,
+        "end": 242.1
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "motifah.",
+    "start": 245.32,
+    "end": 246.6,
+    "words": [
+      {
+        "word": " Motifah.",
+        "start": 245.32,
+        "end": 246.6
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "we heard it all for you.",
+    "start": 247.2,
+    "end": 250.32,
+    "words": [
+      {
+        "word": " We",
+        "start": 247.2,
+        "end": 247.78
+      },
+      {
+        "word": " heard",
+        "start": 247.78,
+        "end": 248.18
+      },
+      {
+        "word": " it",
+        "start": 248.18,
+        "end": 249.2
+      },
+      {
+        "word": " all",
+        "start": 249.2,
+        "end": 249.2
+      },
+      {
+        "word": " for",
+        "start": 249.2,
+        "end": 249.72
+      },
+      {
+        "word": " you.",
+        "start": 249.72,
+        "end": 250.32
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "motifah.",
+    "start": 252.48,
+    "end": 253.76,
+    "words": [
+      {
+        "word": " Motifah.",
+        "start": 252.48,
+        "end": 253.76
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "we waited here for you.",
+    "start": 255.2,
+    "end": 258.06,
+    "words": [
+      {
+        "word": " We",
+        "start": 255.2,
+        "end": 255.46
+      },
+      {
+        "word": " waited",
+        "start": 255.46,
+        "end": 256.26
+      },
+      {
+        "word": " here",
+        "start": 256.26,
+        "end": 256.86
+      },
+      {
+        "word": " for",
+        "start": 256.86,
+        "end": 257.3
+      },
+      {
+        "word": " you.",
+        "start": 257.3,
+        "end": 258.06
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "motifah.",
+    "start": 259.08,
+    "end": 260.36,
+    "words": [
+      {
+        "word": " Motifah.",
+        "start": 259.08,
+        "end": 260.36
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "we waited here for you.",
+    "start": 260.36,
+    "end": 263.02,
+    "words": [
+      {
+        "word": " We",
+        "start": 260.36,
+        "end": 260.36
+      },
+      {
+        "word": " waited",
+        "start": 260.36,
+        "end": 260.36
+      },
+      {
+        "word": " here",
+        "start": 260.36,
+        "end": 263.02
+      },
+      {
+        "word": " for",
+        "start": 263.02,
+        "end": 263.02
+      },
+      {
+        "word": " you.",
+        "start": 263.02,
+        "end": 263.02
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "we waited here for you.",
+    "start": 263.1,
+    "end": 269.3,
+    "words": [
+      {
+        "word": " We",
+        "start": 263.1,
+        "end": 263.56
+      },
+      {
+        "word": " waited",
+        "start": 263.56,
+        "end": 264.32
+      },
+      {
+        "word": " here",
+        "start": 264.32,
+        "end": 264.34
+      },
+      {
+        "word": " for",
+        "start": 264.34,
+        "end": 267.12
+      },
+      {
+        "word": " you.",
+        "start": 267.12,
+        "end": 269.3
+      }
+    ]
+  }
+]

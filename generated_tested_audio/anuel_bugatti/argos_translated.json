@@ -1,0 +1,3801 @@
+[
+  {
+    "id": 0,
+    "text": "she's exclusive she doesn't want new friends",
+    "start": 10.000000000000002,
+    "end": 14.22,
+    "words": [
+      {
+        "word": "she's",
+        "start": 10.000000000000002,
+        "end": 10.58
+      },
+      {
+        "word": "exclusive",
+        "start": 10.58,
+        "end": 10.88
+      },
+      {
+        "word": "she",
+        "start": 10.88,
+        "end": 12.18
+      },
+      {
+        "word": "doesn't",
+        "start": 12.18,
+        "end": 13.02
+      },
+      {
+        "word": "want",
+        "start": 13.02,
+        "end": 13.3
+      },
+      {
+        "word": "new",
+        "start": 13.3,
+        "end": 13.7
+      },
+      {
+        "word": "friends",
+        "start": 13.7,
+        "end": 14.22
+      }
+    ],
+    "source_text": "ella es exclusiva no quiere amigas nuevas",
+    "source_words": [
+      {
+        "word": " Ella",
+        "start": 10.000000000000002,
+        "end": 10.58
+      },
+      {
+        "word": " es",
+        "start": 10.58,
+        "end": 10.88
+      },
+      {
+        "word": " exclusiva",
+        "start": 10.88,
+        "end": 12.18
+      },
+      {
+        "word": " No",
+        "start": 12.18,
+        "end": 13.02
+      },
+      {
+        "word": " quiere",
+        "start": 13.02,
+        "end": 13.3
+      },
+      {
+        "word": " amigas",
+        "start": 13.3,
+        "end": 13.7
+      },
+      {
+        "word": " nuevas",
+        "start": 13.7,
+        "end": 14.22
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "text": "That's because she and hers are up high.",
+    "start": 14.22,
+    "end": 17.36,
+    "words": [
+      {
+        "word": "That's",
+        "start": 14.22,
+        "end": 14.68
+      },
+      {
+        "word": "because",
+        "start": 14.68,
+        "end": 15.0
+      },
+      {
+        "word": "she",
+        "start": 15.0,
+        "end": 15.14
+      },
+      {
+        "word": "and",
+        "start": 15.14,
+        "end": 15.4
+      },
+      {
+        "word": "hers",
+        "start": 15.4,
+        "end": 15.54
+      },
+      {
+        "word": "are",
+        "start": 15.66,
+        "end": 15.88
+      },
+      {
+        "word": "up",
+        "start": 16.0,
+        "end": 16.24
+      },
+      {
+        "word": "high.",
+        "start": 16.24,
+        "end": 17.36
+      }
+    ],
+    "source_text": "porque ella y las de ella ya están muy arriba",
+    "source_words": [
+      {
+        "word": " Porque",
+        "start": 14.22,
+        "end": 14.68
+      },
+      {
+        "word": " ella",
+        "start": 14.68,
+        "end": 15.0
+      },
+      {
+        "word": " y",
+        "start": 15.0,
+        "end": 15.14
+      },
+      {
+        "word": " las",
+        "start": 15.14,
+        "end": 15.4
+      },
+      {
+        "word": " de",
+        "start": 15.4,
+        "end": 15.54
+      },
+      {
+        "word": " ella",
+        "start": 15.54,
+        "end": 15.66
+      },
+      {
+        "word": " ya",
+        "start": 15.66,
+        "end": 15.88
+      },
+      {
+        "word": " están",
+        "start": 15.88,
+        "end": 16.0
+      },
+      {
+        "word": " muy",
+        "start": 16.0,
+        "end": 16.24
+      },
+      {
+        "word": " arriba",
+        "start": 16.24,
+        "end": 17.36
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "That bugatti doesn't have an owner.",
+    "start": 17.36,
+    "end": 22.82,
+    "words": [
+      {
+        "word": "That",
+        "start": 17.36,
+        "end": 18.06
+      },
+      {
+        "word": "bugatti",
+        "start": 18.06,
+        "end": 18.46
+      },
+      {
+        "word": "doesn't",
+        "start": 18.86,
+        "end": 20.0
+      },
+      {
+        "word": "have",
+        "start": 20.0,
+        "end": 20.68
+      },
+      {
+        "word": "an",
+        "start": 20.68,
+        "end": 21.16
+      },
+      {
+        "word": "owner.",
+        "start": 21.7,
+        "end": 22.82
+      }
+    ],
+    "source_text": "la frontea era de polvida ese bugatti no tiene dueño",
+    "source_words": [
+      {
+        "word": " La",
+        "start": 17.36,
+        "end": 18.06
+      },
+      {
+        "word": " frontea",
+        "start": 18.06,
+        "end": 18.46
+      },
+      {
+        "word": " era",
+        "start": 18.46,
+        "end": 18.64
+      },
+      {
+        "word": " de",
+        "start": 18.64,
+        "end": 18.86
+      },
+      {
+        "word": " polvida",
+        "start": 18.86,
+        "end": 20.0
+      },
+      {
+        "word": " Ese",
+        "start": 20.0,
+        "end": 20.68
+      },
+      {
+        "word": " bugatti",
+        "start": 20.68,
+        "end": 21.16
+      },
+      {
+        "word": " no",
+        "start": 21.16,
+        "end": 21.34
+      },
+      {
+        "word": " tiene",
+        "start": 21.34,
+        "end": 21.7
+      },
+      {
+        "word": " dueño",
+        "start": 21.7,
+        "end": 22.82
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Because that machine isn't for sale a big ass and a little ride",
+    "start": 22.82,
+    "end": 27.72,
+    "words": [
+      {
+        "word": "Because",
+        "start": 22.82,
+        "end": 23.1
+      },
+      {
+        "word": "that",
+        "start": 23.1,
+        "end": 23.36
+      },
+      {
+        "word": "machine",
+        "start": 23.36,
+        "end": 23.8
+      },
+      {
+        "word": "isn't",
+        "start": 23.8,
+        "end": 24.06
+      },
+      {
+        "word": "for",
+        "start": 24.06,
+        "end": 24.26
+      },
+      {
+        "word": "sale",
+        "start": 24.5,
+        "end": 25.2
+      },
+      {
+        "word": "a",
+        "start": 25.2,
+        "end": 25.42
+      },
+      {
+        "word": "big",
+        "start": 25.42,
+        "end": 25.72
+      },
+      {
+        "word": "ass",
+        "start": 25.72,
+        "end": 25.96
+      },
+      {
+        "word": "and",
+        "start": 25.96,
+        "end": 26.14
+      },
+      {
+        "word": "a",
+        "start": 26.14,
+        "end": 26.32
+      },
+      {
+        "word": "little",
+        "start": 26.32,
+        "end": 26.86
+      },
+      {
+        "word": "ride",
+        "start": 26.86,
+        "end": 27.72
+      }
+    ],
+    "source_text": "porque ese máquina no está a la venta un culo grande y un travesito pequeño",
+    "source_words": [
+      {
+        "word": " Porque",
+        "start": 22.82,
+        "end": 23.1
+      },
+      {
+        "word": " ese",
+        "start": 23.1,
+        "end": 23.36
+      },
+      {
+        "word": " máquina",
+        "start": 23.36,
+        "end": 23.8
+      },
+      {
+        "word": " no",
+        "start": 23.8,
+        "end": 24.06
+      },
+      {
+        "word": " está",
+        "start": 24.06,
+        "end": 24.26
+      },
+      {
+        "word": " a",
+        "start": 24.26,
+        "end": 24.38
+      },
+      {
+        "word": " la",
+        "start": 24.38,
+        "end": 24.5
+      },
+      {
+        "word": " venta",
+        "start": 24.5,
+        "end": 25.2
+      },
+      {
+        "word": " Un",
+        "start": 25.2,
+        "end": 25.42
+      },
+      {
+        "word": " culo",
+        "start": 25.42,
+        "end": 25.72
+      },
+      {
+        "word": " grande",
+        "start": 25.72,
+        "end": 25.96
+      },
+      {
+        "word": " y",
+        "start": 25.96,
+        "end": 26.14
+      },
+      {
+        "word": " un",
+        "start": 26.14,
+        "end": 26.32
+      },
+      {
+        "word": " travesito",
+        "start": 26.32,
+        "end": 26.86
+      },
+      {
+        "word": " pequeño",
+        "start": 26.86,
+        "end": 27.72
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "living his mind without his rent that bugatti doesn't have his own",
+    "start": 27.72,
+    "end": 35.88,
+    "words": [
+      {
+        "word": "living",
+        "start": 27.72,
+        "end": 28.48
+      },
+      {
+        "word": "his",
+        "start": 28.48,
+        "end": 28.68
+      },
+      {
+        "word": "mind",
+        "start": 28.68,
+        "end": 28.96
+      },
+      {
+        "word": "without",
+        "start": 28.96,
+        "end": 29.22
+      },
+      {
+        "word": "his",
+        "start": 29.22,
+        "end": 29.82
+      },
+      {
+        "word": "rent",
+        "start": 29.82,
+        "end": 30.86
+      },
+      {
+        "word": "that",
+        "start": 30.86,
+        "end": 31.42
+      },
+      {
+        "word": "bugatti",
+        "start": 31.42,
+        "end": 31.82
+      },
+      {
+        "word": "doesn't",
+        "start": 31.82,
+        "end": 32.08
+      },
+      {
+        "word": "have",
+        "start": 32.08,
+        "end": 32.38
+      },
+      {
+        "word": "his",
+        "start": 32.38,
+        "end": 34.13
+      },
+      {
+        "word": "own",
+        "start": 34.13,
+        "end": 35.88
+      }
+    ],
+    "source_text": "viviendo la mente sin pagarle renta ese bugatti no tiene dueño",
+    "source_words": [
+      {
+        "word": " Viviendo",
+        "start": 27.72,
+        "end": 28.48
+      },
+      {
+        "word": " la",
+        "start": 28.48,
+        "end": 28.68
+      },
+      {
+        "word": " mente",
+        "start": 28.68,
+        "end": 28.96
+      },
+      {
+        "word": " sin",
+        "start": 28.96,
+        "end": 29.22
+      },
+      {
+        "word": " pagarle",
+        "start": 29.22,
+        "end": 29.82
+      },
+      {
+        "word": " renta",
+        "start": 29.82,
+        "end": 30.86
+      },
+      {
+        "word": " Ese",
+        "start": 30.86,
+        "end": 31.42
+      },
+      {
+        "word": " bugatti",
+        "start": 31.42,
+        "end": 31.82
+      },
+      {
+        "word": " no",
+        "start": 31.82,
+        "end": 32.08
+      },
+      {
+        "word": " tiene",
+        "start": 32.08,
+        "end": 32.38
+      },
+      {
+        "word": " dueño",
+        "start": 32.38,
+        "end": 35.88
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Baby if I don't smoke I'll teach you I'm pink abababre Don't put up",
+    "start": 35.88,
+    "end": 41.2,
+    "words": [
+      {
+        "word": "Baby",
+        "start": 35.88,
+        "end": 36.66
+      },
+      {
+        "word": "if",
+        "start": 36.66,
+        "end": 36.86
+      },
+      {
+        "word": "I",
+        "start": 36.86,
+        "end": 37.02
+      },
+      {
+        "word": "don't",
+        "start": 37.02,
+        "end": 37.28
+      },
+      {
+        "word": "smoke",
+        "start": 37.28,
+        "end": 37.44
+      },
+      {
+        "word": "I'll",
+        "start": 37.44,
+        "end": 37.68
+      },
+      {
+        "word": "teach",
+        "start": 37.68,
+        "end": 38.42
+      },
+      {
+        "word": "you",
+        "start": 38.42,
+        "end": 38.74
+      },
+      {
+        "word": "I'm",
+        "start": 38.74,
+        "end": 38.96
+      },
+      {
+        "word": "pink",
+        "start": 38.96,
+        "end": 39.48
+      },
+      {
+        "word": "abababre",
+        "start": 39.48,
+        "end": 40.0
+      },
+      {
+        "word": "Don't",
+        "start": 40.0,
+        "end": 40.18
+      },
+      {
+        "word": "put",
+        "start": 40.18,
+        "end": 40.36
+      },
+      {
+        "word": "up",
+        "start": 40.36,
+        "end": 41.2
+      }
+    ],
+    "source_text": "baby si no fuma yo te enseño es soy ababro rosado no lo empeño",
+    "source_words": [
+      {
+        "word": " Baby",
+        "start": 35.88,
+        "end": 36.66
+      },
+      {
+        "word": " si",
+        "start": 36.66,
+        "end": 36.86
+      },
+      {
+        "word": " no",
+        "start": 36.86,
+        "end": 37.02
+      },
+      {
+        "word": " fuma",
+        "start": 37.02,
+        "end": 37.28
+      },
+      {
+        "word": " yo",
+        "start": 37.28,
+        "end": 37.44
+      },
+      {
+        "word": " te",
+        "start": 37.44,
+        "end": 37.68
+      },
+      {
+        "word": " enseño",
+        "start": 37.68,
+        "end": 38.42
+      },
+      {
+        "word": " Es",
+        "start": 38.42,
+        "end": 38.74
+      },
+      {
+        "word": " soy",
+        "start": 38.74,
+        "end": 38.96
+      },
+      {
+        "word": " Ababro",
+        "start": 38.96,
+        "end": 39.48
+      },
+      {
+        "word": " Rosado",
+        "start": 39.48,
+        "end": 40.0
+      },
+      {
+        "word": " no",
+        "start": 40.0,
+        "end": 40.18
+      },
+      {
+        "word": " lo",
+        "start": 40.18,
+        "end": 40.36
+      },
+      {
+        "word": " empeño",
+        "start": 40.36,
+        "end": 41.2
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "I have been sitting as a ronald since I put him in you. I feel as if I have been pounding an ass with an end.",
+    "start": 41.879999999999995,
+    "end": 47.46,
+    "words": [
+      {
+        "word": "I",
+        "start": 41.879999999999995,
+        "end": 42.2
+      },
+      {
+        "word": "have",
+        "start": 42.2,
+        "end": 42.48
+      },
+      {
+        "word": "been",
+        "start": 42.48,
+        "end": 42.61818181818182
+      },
+      {
+        "word": "sitting",
+        "start": 42.61818181818182,
+        "end": 42.86
+      },
+      {
+        "word": "as",
+        "start": 42.86,
+        "end": 43.166666666666664
+      },
+      {
+        "word": "a",
+        "start": 43.166666666666664,
+        "end": 43.32
+      },
+      {
+        "word": "ronald",
+        "start": 43.32,
+        "end": 43.64
+      },
+      {
+        "word": "since",
+        "start": 43.64,
+        "end": 43.92
+      },
+      {
+        "word": "I",
+        "start": 43.92,
+        "end": 44.06
+      },
+      {
+        "word": "put",
+        "start": 44.06,
+        "end": 44.28
+      },
+      {
+        "word": "him",
+        "start": 44.28,
+        "end": 44.475
+      },
+      {
+        "word": "in",
+        "start": 44.475,
+        "end": 44.605000000000004
+      },
+      {
+        "word": "you.",
+        "start": 44.605000000000004,
+        "end": 44.8
+      },
+      {
+        "word": "I",
+        "start": 44.8,
+        "end": 45.04
+      },
+      {
+        "word": "feel",
+        "start": 45.04,
+        "end": 45.34
+      },
+      {
+        "word": "as",
+        "start": 45.34,
+        "end": 45.52
+      },
+      {
+        "word": "if",
+        "start": 45.52,
+        "end": 45.7
+      },
+      {
+        "word": "I",
+        "start": 45.7,
+        "end": 45.75333333333334
+      },
+      {
+        "word": "have",
+        "start": 45.75333333333334,
+        "end": 45.96666666666667
+      },
+      {
+        "word": "been",
+        "start": 45.96666666666667,
+        "end": 46.18
+      },
+      {
+        "word": "pounding",
+        "start": 46.18,
+        "end": 46.4
+      },
+      {
+        "word": "an",
+        "start": 46.4,
+        "end": 46.66
+      },
+      {
+        "word": "ass",
+        "start": 46.66,
+        "end": 46.74
+      },
+      {
+        "word": "with",
+        "start": 46.74,
+        "end": 47.08
+      },
+      {
+        "word": "an",
+        "start": 47.08,
+        "end": 47.232
+      },
+      {
+        "word": "end.",
+        "start": 47.232,
+        "end": 47.46
+      }
+    ],
+    "source_text": "me siento como ronaldo desde que te lo metí me siento como rochico un culo en punta cana",
+    "source_words": [
+      {
+        "word": " Me",
+        "start": 41.879999999999995,
+        "end": 42.2
+      },
+      {
+        "word": " siento",
+        "start": 42.2,
+        "end": 42.48
+      },
+      {
+        "word": " como",
+        "start": 42.48,
+        "end": 42.86
+      },
+      {
+        "word": " Ronaldo",
+        "start": 42.86,
+        "end": 43.32
+      },
+      {
+        "word": " desde",
+        "start": 43.32,
+        "end": 43.64
+      },
+      {
+        "word": " que",
+        "start": 43.64,
+        "end": 43.92
+      },
+      {
+        "word": " te",
+        "start": 43.92,
+        "end": 44.06
+      },
+      {
+        "word": " lo",
+        "start": 44.06,
+        "end": 44.28
+      },
+      {
+        "word": " metí",
+        "start": 44.28,
+        "end": 44.8
+      },
+      {
+        "word": " Me",
+        "start": 44.8,
+        "end": 45.04
+      },
+      {
+        "word": " siento",
+        "start": 45.04,
+        "end": 45.34
+      },
+      {
+        "word": " como",
+        "start": 45.34,
+        "end": 45.7
+      },
+      {
+        "word": " Rochico",
+        "start": 45.7,
+        "end": 46.18
+      },
+      {
+        "word": " un",
+        "start": 46.18,
+        "end": 46.4
+      },
+      {
+        "word": " culo",
+        "start": 46.4,
+        "end": 46.66
+      },
+      {
+        "word": " en",
+        "start": 46.66,
+        "end": 46.74
+      },
+      {
+        "word": " Punta",
+        "start": 46.74,
+        "end": 47.08
+      },
+      {
+        "word": " Cana",
+        "start": 47.08,
+        "end": 47.46
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "And I put her up with her pong and I'm her sister and the pussy with your whole sister.",
+    "start": 47.46,
+    "end": 52.72,
+    "words": [
+      {
+        "word": "And",
+        "start": 47.46,
+        "end": 47.805
+      },
+      {
+        "word": "I",
+        "start": 47.805,
+        "end": 47.92
+      },
+      {
+        "word": "put",
+        "start": 47.92,
+        "end": 48.36
+      },
+      {
+        "word": "her",
+        "start": 48.36,
+        "end": 48.76
+      },
+      {
+        "word": "up",
+        "start": 48.76,
+        "end": 48.88
+      },
+      {
+        "word": "with",
+        "start": 48.88,
+        "end": 49.08
+      },
+      {
+        "word": "her",
+        "start": 49.08,
+        "end": 49.48
+      },
+      {
+        "word": "pong",
+        "start": 49.48,
+        "end": 49.78
+      },
+      {
+        "word": "and",
+        "start": 49.78,
+        "end": 49.96
+      },
+      {
+        "word": "I'm",
+        "start": 49.96,
+        "end": 50.18
+      },
+      {
+        "word": "her",
+        "start": 50.18,
+        "end": 50.4
+      },
+      {
+        "word": "sister",
+        "start": 50.4,
+        "end": 50.64
+      },
+      {
+        "word": "and",
+        "start": 50.64,
+        "end": 50.7
+      },
+      {
+        "word": "the",
+        "start": 50.7,
+        "end": 50.947500000000005
+      },
+      {
+        "word": "pussy",
+        "start": 50.947500000000005,
+        "end": 51.36
+      },
+      {
+        "word": "with",
+        "start": 51.36,
+        "end": 51.7
+      },
+      {
+        "word": "your",
+        "start": 51.7,
+        "end": 52.04
+      },
+      {
+        "word": "whole",
+        "start": 52.04,
+        "end": 52.28
+      },
+      {
+        "word": "sister.",
+        "start": 52.28,
+        "end": 52.72
+      }
+    ],
+    "source_text": "y la combi que ya tiene su pring soy su hermana la maricota entre toda tu hermana",
+    "source_words": [
+      {
+        "word": " Y",
+        "start": 47.46,
+        "end": 47.92
+      },
+      {
+        "word": " la",
+        "start": 47.92,
+        "end": 48.36
+      },
+      {
+        "word": " combi",
+        "start": 48.36,
+        "end": 48.76
+      },
+      {
+        "word": " que",
+        "start": 48.76,
+        "end": 48.88
+      },
+      {
+        "word": " ya",
+        "start": 48.88,
+        "end": 49.08
+      },
+      {
+        "word": " tiene",
+        "start": 49.08,
+        "end": 49.48
+      },
+      {
+        "word": " su",
+        "start": 49.48,
+        "end": 49.78
+      },
+      {
+        "word": " pring",
+        "start": 49.78,
+        "end": 49.96
+      },
+      {
+        "word": " Soy",
+        "start": 49.96,
+        "end": 50.18
+      },
+      {
+        "word": " su",
+        "start": 50.18,
+        "end": 50.4
+      },
+      {
+        "word": " hermana",
+        "start": 50.4,
+        "end": 50.64
+      },
+      {
+        "word": " la",
+        "start": 50.64,
+        "end": 50.7
+      },
+      {
+        "word": " maricota",
+        "start": 50.7,
+        "end": 51.36
+      },
+      {
+        "word": " entre",
+        "start": 51.36,
+        "end": 51.7
+      },
+      {
+        "word": " toda",
+        "start": 51.7,
+        "end": 52.04
+      },
+      {
+        "word": " tu",
+        "start": 52.04,
+        "end": 52.28
+      },
+      {
+        "word": " hermana",
+        "start": 52.28,
+        "end": 52.72
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "she knows I have a mini with that tipstick. That's a chiron.",
+    "start": 52.72,
+    "end": 56.68,
+    "words": [
+      {
+        "word": "she",
+        "start": 52.72,
+        "end": 53.02
+      },
+      {
+        "word": "knows",
+        "start": 53.02,
+        "end": 53.3
+      },
+      {
+        "word": "I",
+        "start": 53.3,
+        "end": 53.52
+      },
+      {
+        "word": "have",
+        "start": 53.6,
+        "end": 53.78
+      },
+      {
+        "word": "a",
+        "start": 53.78,
+        "end": 54.02
+      },
+      {
+        "word": "mini",
+        "start": 54.02,
+        "end": 54.24
+      },
+      {
+        "word": "with",
+        "start": 54.24,
+        "end": 54.58
+      },
+      {
+        "word": "that",
+        "start": 54.58,
+        "end": 55.04
+      },
+      {
+        "word": "tipstick.",
+        "start": 55.04,
+        "end": 55.74
+      },
+      {
+        "word": "That's",
+        "start": 55.74,
+        "end": 56.02
+      },
+      {
+        "word": "a",
+        "start": 56.02,
+        "end": 56.18
+      },
+      {
+        "word": "chiron.",
+        "start": 56.18,
+        "end": 56.68
+      }
+    ],
+    "source_text": "ella sabe que en el palo tengo el mini esa nalga son chiron",
+    "source_words": [
+      {
+        "word": " Ella",
+        "start": 52.72,
+        "end": 53.02
+      },
+      {
+        "word": " sabe",
+        "start": 53.02,
+        "end": 53.3
+      },
+      {
+        "word": " que",
+        "start": 53.3,
+        "end": 53.52
+      },
+      {
+        "word": " en",
+        "start": 53.52,
+        "end": 53.6
+      },
+      {
+        "word": " el",
+        "start": 53.6,
+        "end": 53.78
+      },
+      {
+        "word": " palo",
+        "start": 53.78,
+        "end": 54.02
+      },
+      {
+        "word": " tengo",
+        "start": 54.02,
+        "end": 54.24
+      },
+      {
+        "word": " el",
+        "start": 54.24,
+        "end": 54.58
+      },
+      {
+        "word": " mini",
+        "start": 54.58,
+        "end": 55.04
+      },
+      {
+        "word": " Esa",
+        "start": 55.04,
+        "end": 55.74
+      },
+      {
+        "word": " nalga",
+        "start": 55.74,
+        "end": 56.02
+      },
+      {
+        "word": " son",
+        "start": 56.02,
+        "end": 56.18
+      },
+      {
+        "word": " chiron",
+        "start": 56.18,
+        "end": 56.68
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "The motor sees 16 has a well-climbed million",
+    "start": 56.68,
+    "end": 61.82,
+    "words": [
+      {
+        "word": "The",
+        "start": 56.68,
+        "end": 56.98
+      },
+      {
+        "word": "motor",
+        "start": 56.98,
+        "end": 59.4
+      },
+      {
+        "word": "sees",
+        "start": 59.4,
+        "end": 60.24
+      },
+      {
+        "word": "16",
+        "start": 60.24,
+        "end": 60.76
+      },
+      {
+        "word": "has",
+        "start": 60.76,
+        "end": 60.94
+      },
+      {
+        "word": "a",
+        "start": 60.94,
+        "end": 61.3
+      },
+      {
+        "word": "well-climbed",
+        "start": 61.3,
+        "end": 61.54
+      },
+      {
+        "word": "million",
+        "start": 61.54,
+        "end": 61.82
+      }
+    ],
+    "source_text": "el motor ve 16 tiene el millaje bien trepado",
+    "source_words": [
+      {
+        "word": " El",
+        "start": 56.68,
+        "end": 56.68
+      },
+      {
+        "word": " motor",
+        "start": 56.68,
+        "end": 56.98
+      },
+      {
+        "word": " ve",
+        "start": 56.98,
+        "end": 59.4
+      },
+      {
+        "word": " 16",
+        "start": 59.4,
+        "end": 60.24
+      },
+      {
+        "word": " Tiene",
+        "start": 60.24,
+        "end": 60.76
+      },
+      {
+        "word": " el",
+        "start": 60.76,
+        "end": 60.94
+      },
+      {
+        "word": " millaje",
+        "start": 60.94,
+        "end": 61.3
+      },
+      {
+        "word": " bien",
+        "start": 61.3,
+        "end": 61.54
+      },
+      {
+        "word": " trepado",
+        "start": 61.54,
+        "end": 61.82
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "but looks new box at bikini machine isn't compact",
+    "start": 61.82,
+    "end": 66.03999999999999,
+    "words": [
+      {
+        "word": "but",
+        "start": 61.82,
+        "end": 62.16
+      },
+      {
+        "word": "looks",
+        "start": 62.16,
+        "end": 62.36
+      },
+      {
+        "word": "new",
+        "start": 62.54,
+        "end": 62.76
+      },
+      {
+        "word": "box",
+        "start": 62.76,
+        "end": 63.12
+      },
+      {
+        "word": "at",
+        "start": 63.64,
+        "end": 64.4
+      },
+      {
+        "word": "bikini",
+        "start": 64.4,
+        "end": 64.8
+      },
+      {
+        "word": "machine",
+        "start": 64.8,
+        "end": 65.12
+      },
+      {
+        "word": "isn't",
+        "start": 65.12,
+        "end": 65.5
+      },
+      {
+        "word": "compact",
+        "start": 65.54,
+        "end": 66.03999999999999
+      }
+    ],
+    "source_text": "pero se ve nueva de caja en el bikini el máquina no es compacto",
+    "source_words": [
+      {
+        "word": " Pero",
+        "start": 61.82,
+        "end": 62.16
+      },
+      {
+        "word": " se",
+        "start": 62.16,
+        "end": 62.36
+      },
+      {
+        "word": " ve",
+        "start": 62.36,
+        "end": 62.54
+      },
+      {
+        "word": " nueva",
+        "start": 62.54,
+        "end": 62.76
+      },
+      {
+        "word": " de",
+        "start": 62.76,
+        "end": 63.12
+      },
+      {
+        "word": " caja",
+        "start": 63.12,
+        "end": 63.28
+      },
+      {
+        "word": " en",
+        "start": 63.28,
+        "end": 63.44
+      },
+      {
+        "word": " el",
+        "start": 63.44,
+        "end": 63.64
+      },
+      {
+        "word": " bikini",
+        "start": 63.64,
+        "end": 64.4
+      },
+      {
+        "word": " El",
+        "start": 64.4,
+        "end": 64.8
+      },
+      {
+        "word": " máquina",
+        "start": 64.8,
+        "end": 65.12
+      },
+      {
+        "word": " no",
+        "start": 65.12,
+        "end": 65.5
+      },
+      {
+        "word": " es",
+        "start": 65.5,
+        "end": 65.54
+      },
+      {
+        "word": " compacto",
+        "start": 65.54,
+        "end": 66.03999999999999
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "and had been giving contact",
+    "start": 67.08,
+    "end": 71.4,
+    "words": [
+      {
+        "word": "and",
+        "start": 67.08,
+        "end": 67.4
+      },
+      {
+        "word": "had",
+        "start": 67.4,
+        "end": 67.78
+      },
+      {
+        "word": "been",
+        "start": 68.32,
+        "end": 69.98
+      },
+      {
+        "word": "giving",
+        "start": 70.16,
+        "end": 70.5
+      },
+      {
+        "word": "contact",
+        "start": 70.82,
+        "end": 71.4
+      }
+    ],
+    "source_text": "los chocos pero sin tacto y había dando contacto",
+    "source_words": [
+      {
+        "word": " Los",
+        "start": 67.08,
+        "end": 67.4
+      },
+      {
+        "word": " chocos",
+        "start": 67.4,
+        "end": 67.78
+      },
+      {
+        "word": " pero",
+        "start": 67.78,
+        "end": 68.0
+      },
+      {
+        "word": " sin",
+        "start": 68.0,
+        "end": 68.32
+      },
+      {
+        "word": " tacto",
+        "start": 68.32,
+        "end": 69.98
+      },
+      {
+        "word": " Y",
+        "start": 69.98,
+        "end": 70.16
+      },
+      {
+        "word": " había",
+        "start": 70.16,
+        "end": 70.5
+      },
+      {
+        "word": " dando",
+        "start": 70.5,
+        "end": 70.82
+      },
+      {
+        "word": " contacto",
+        "start": 70.82,
+        "end": 71.4
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "If you have a pact with him, that bugatti doesn't have an owner.",
+    "start": 72.48,
+    "end": 78.03999999999999,
+    "words": [
+      {
+        "word": "If",
+        "start": 72.48,
+        "end": 72.72
+      },
+      {
+        "word": "you",
+        "start": 72.72,
+        "end": 72.86
+      },
+      {
+        "word": "have",
+        "start": 72.86,
+        "end": 73.06
+      },
+      {
+        "word": "a",
+        "start": 73.06,
+        "end": 73.22
+      },
+      {
+        "word": "pact",
+        "start": 73.22,
+        "end": 73.36
+      },
+      {
+        "word": "with",
+        "start": 73.36,
+        "end": 73.5
+      },
+      {
+        "word": "him,",
+        "start": 73.5,
+        "end": 73.7
+      },
+      {
+        "word": "that",
+        "start": 73.7,
+        "end": 75.48
+      },
+      {
+        "word": "bugatti",
+        "start": 75.48,
+        "end": 76.68
+      },
+      {
+        "word": "doesn't",
+        "start": 76.68,
+        "end": 77.14
+      },
+      {
+        "word": "have",
+        "start": 77.14,
+        "end": 77.38
+      },
+      {
+        "word": "an",
+        "start": 77.38,
+        "end": 77.7
+      },
+      {
+        "word": "owner.",
+        "start": 77.7,
+        "end": 78.03999999999999
+      }
+    ],
+    "source_text": "yo si tú ya le hagas un pacto ese bugatti no tiene dueño",
+    "source_words": [
+      {
+        "word": " Yo",
+        "start": 72.48,
+        "end": 72.72
+      },
+      {
+        "word": " si",
+        "start": 72.72,
+        "end": 72.86
+      },
+      {
+        "word": " tú",
+        "start": 72.86,
+        "end": 73.06
+      },
+      {
+        "word": " ya",
+        "start": 73.06,
+        "end": 73.22
+      },
+      {
+        "word": " le",
+        "start": 73.22,
+        "end": 73.36
+      },
+      {
+        "word": " hagas",
+        "start": 73.36,
+        "end": 73.5
+      },
+      {
+        "word": " un",
+        "start": 73.5,
+        "end": 73.7
+      },
+      {
+        "word": " pacto",
+        "start": 73.7,
+        "end": 75.48
+      },
+      {
+        "word": " Ese",
+        "start": 75.48,
+        "end": 76.68
+      },
+      {
+        "word": " bugatti",
+        "start": 76.68,
+        "end": 77.14
+      },
+      {
+        "word": " no",
+        "start": 77.14,
+        "end": 77.38
+      },
+      {
+        "word": " tiene",
+        "start": 77.38,
+        "end": 77.7
+      },
+      {
+        "word": " dueño",
+        "start": 77.7,
+        "end": 78.03999999999999
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Because that machine isn't for sale a big ass and a little ride",
+    "start": 78.82,
+    "end": 83.8,
+    "words": [
+      {
+        "word": "Because",
+        "start": 78.82,
+        "end": 79.14
+      },
+      {
+        "word": "that",
+        "start": 79.14,
+        "end": 79.38
+      },
+      {
+        "word": "machine",
+        "start": 79.38,
+        "end": 79.8
+      },
+      {
+        "word": "isn't",
+        "start": 79.8,
+        "end": 80.14
+      },
+      {
+        "word": "for",
+        "start": 80.14,
+        "end": 80.32
+      },
+      {
+        "word": "sale",
+        "start": 80.32,
+        "end": 80.52
+      },
+      {
+        "word": "a",
+        "start": 80.54,
+        "end": 81.34
+      },
+      {
+        "word": "big",
+        "start": 81.34,
+        "end": 81.72
+      },
+      {
+        "word": "ass",
+        "start": 81.72,
+        "end": 81.96
+      },
+      {
+        "word": "and",
+        "start": 81.96,
+        "end": 82.18
+      },
+      {
+        "word": "a",
+        "start": 82.18,
+        "end": 82.32
+      },
+      {
+        "word": "little",
+        "start": 82.32,
+        "end": 82.84
+      },
+      {
+        "word": "ride",
+        "start": 82.84,
+        "end": 83.8
+      }
+    ],
+    "source_text": "porque ese máquina no está a la venta un culo grande y un travesito pequeño",
+    "source_words": [
+      {
+        "word": " Porque",
+        "start": 78.82,
+        "end": 79.14
+      },
+      {
+        "word": " ese",
+        "start": 79.14,
+        "end": 79.38
+      },
+      {
+        "word": " máquina",
+        "start": 79.38,
+        "end": 79.8
+      },
+      {
+        "word": " no",
+        "start": 79.8,
+        "end": 80.14
+      },
+      {
+        "word": " está",
+        "start": 80.14,
+        "end": 80.32
+      },
+      {
+        "word": " a",
+        "start": 80.32,
+        "end": 80.52
+      },
+      {
+        "word": " la",
+        "start": 80.52,
+        "end": 80.54
+      },
+      {
+        "word": " venta",
+        "start": 80.54,
+        "end": 81.34
+      },
+      {
+        "word": " Un",
+        "start": 81.34,
+        "end": 81.72
+      },
+      {
+        "word": " culo",
+        "start": 81.72,
+        "end": 81.72
+      },
+      {
+        "word": " grande",
+        "start": 81.72,
+        "end": 81.96
+      },
+      {
+        "word": " y",
+        "start": 81.96,
+        "end": 82.18
+      },
+      {
+        "word": " un",
+        "start": 82.18,
+        "end": 82.32
+      },
+      {
+        "word": " travesito",
+        "start": 82.32,
+        "end": 82.84
+      },
+      {
+        "word": " pequeño",
+        "start": 82.84,
+        "end": 83.8
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "living his mind without pay his rent",
+    "start": 83.8,
+    "end": 86.03999999999999,
+    "words": [
+      {
+        "word": "living",
+        "start": 83.8,
+        "end": 84.33333333333333
+      },
+      {
+        "word": "his",
+        "start": 84.33333333333333,
+        "end": 84.6
+      },
+      {
+        "word": "mind",
+        "start": 84.6,
+        "end": 84.68
+      },
+      {
+        "word": "without",
+        "start": 84.68,
+        "end": 84.94
+      },
+      {
+        "word": "pay",
+        "start": 84.94,
+        "end": 85.22
+      },
+      {
+        "word": "his",
+        "start": 85.22,
+        "end": 85.8
+      },
+      {
+        "word": "rent",
+        "start": 85.8,
+        "end": 86.03999999999999
+      }
+    ],
+    "source_text": "viviendo la mente sin pagarle renta",
+    "source_words": [
+      {
+        "word": " Viviendo",
+        "start": 83.8,
+        "end": 84.6
+      },
+      {
+        "word": " la",
+        "start": 84.6,
+        "end": 84.68
+      },
+      {
+        "word": " mente",
+        "start": 84.68,
+        "end": 84.94
+      },
+      {
+        "word": " sin",
+        "start": 84.94,
+        "end": 85.22
+      },
+      {
+        "word": " pagarle",
+        "start": 85.22,
+        "end": 85.8
+      },
+      {
+        "word": " renta",
+        "start": 85.8,
+        "end": 86.12
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "That bugatti doesn't own baby if she doesn't smoke I'll teach you",
+    "start": 86.9,
+    "end": 94.36,
+    "words": [
+      {
+        "word": "That",
+        "start": 86.9,
+        "end": 87.42
+      },
+      {
+        "word": "bugatti",
+        "start": 87.42,
+        "end": 87.82
+      },
+      {
+        "word": "doesn't",
+        "start": 87.82,
+        "end": 88.08
+      },
+      {
+        "word": "own",
+        "start": 88.08,
+        "end": 88.38
+      },
+      {
+        "word": "baby",
+        "start": 88.38,
+        "end": 91.92
+      },
+      {
+        "word": "if",
+        "start": 91.92,
+        "end": 92.62
+      },
+      {
+        "word": "she",
+        "start": 92.62,
+        "end": 92.88
+      },
+      {
+        "word": "doesn't",
+        "start": 92.88,
+        "end": 93.0
+      },
+      {
+        "word": "smoke",
+        "start": 93.0,
+        "end": 93.26
+      },
+      {
+        "word": "I'll",
+        "start": 93.26,
+        "end": 93.48
+      },
+      {
+        "word": "teach",
+        "start": 93.48,
+        "end": 93.68
+      },
+      {
+        "word": "you",
+        "start": 93.68,
+        "end": 94.36
+      }
+    ],
+    "source_text": "ese bugatti no tiene dueño baby si no fuma yo te enseño",
+    "source_words": [
+      {
+        "word": " Ese",
+        "start": 86.9,
+        "end": 87.42
+      },
+      {
+        "word": " bugatti",
+        "start": 87.42,
+        "end": 87.82
+      },
+      {
+        "word": " no",
+        "start": 87.82,
+        "end": 88.08
+      },
+      {
+        "word": " tiene",
+        "start": 88.08,
+        "end": 88.38
+      },
+      {
+        "word": " dueño",
+        "start": 88.38,
+        "end": 91.92
+      },
+      {
+        "word": " Baby",
+        "start": 91.92,
+        "end": 92.62
+      },
+      {
+        "word": " si",
+        "start": 92.62,
+        "end": 92.88
+      },
+      {
+        "word": " no",
+        "start": 92.88,
+        "end": 93.0
+      },
+      {
+        "word": " fuma",
+        "start": 93.0,
+        "end": 93.26
+      },
+      {
+        "word": " yo",
+        "start": 93.26,
+        "end": 93.48
+      },
+      {
+        "word": " te",
+        "start": 93.48,
+        "end": 93.68
+      },
+      {
+        "word": " enseño",
+        "start": 93.68,
+        "end": 94.36
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "It's a pink abababre. Don't put up with it.",
+    "start": 94.36,
+    "end": 97.32,
+    "words": [
+      {
+        "word": "It's",
+        "start": 94.36,
+        "end": 94.74
+      },
+      {
+        "word": "a",
+        "start": 94.74,
+        "end": 94.96
+      },
+      {
+        "word": "pink",
+        "start": 94.96,
+        "end": 95.46
+      },
+      {
+        "word": "abababre.",
+        "start": 95.46,
+        "end": 95.96
+      },
+      {
+        "word": "Don't",
+        "start": 95.96,
+        "end": 96.12
+      },
+      {
+        "word": "put",
+        "start": 96.12,
+        "end": 96.36
+      },
+      {
+        "word": "up",
+        "start": 96.36,
+        "end": 96.6
+      },
+      {
+        "word": "with",
+        "start": 96.6,
+        "end": 97.07999999999998
+      },
+      {
+        "word": "it.",
+        "start": 97.07999999999998,
+        "end": 97.32
+      }
+    ],
+    "source_text": "es soy ababro rosado no lo empeño",
+    "source_words": [
+      {
+        "word": " Es",
+        "start": 94.36,
+        "end": 94.74
+      },
+      {
+        "word": " soy",
+        "start": 94.74,
+        "end": 94.96
+      },
+      {
+        "word": " Ababro",
+        "start": 94.96,
+        "end": 95.46
+      },
+      {
+        "word": " Rosado",
+        "start": 95.46,
+        "end": 95.96
+      },
+      {
+        "word": " no",
+        "start": 95.96,
+        "end": 96.12
+      },
+      {
+        "word": " lo",
+        "start": 96.12,
+        "end": 96.36
+      },
+      {
+        "word": " empeño",
+        "start": 96.36,
+        "end": 97.32
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "At these curves I have no brake with operas and to 'his breasts",
+    "start": 98.86,
+    "end": 104.22,
+    "words": [
+      {
+        "word": "At",
+        "start": 98.86,
+        "end": 99.38
+      },
+      {
+        "word": "these",
+        "start": 99.38,
+        "end": 99.68
+      },
+      {
+        "word": "curves",
+        "start": 99.68,
+        "end": 100.02
+      },
+      {
+        "word": "I",
+        "start": 100.02,
+        "end": 100.22
+      },
+      {
+        "word": "have",
+        "start": 100.22,
+        "end": 100.38
+      },
+      {
+        "word": "no",
+        "start": 100.38,
+        "end": 100.71142857142857
+      },
+      {
+        "word": "brake",
+        "start": 100.71142857142857,
+        "end": 101.54
+      },
+      {
+        "word": "with",
+        "start": 101.54,
+        "end": 102.06
+      },
+      {
+        "word": "operas",
+        "start": 102.06,
+        "end": 102.6
+      },
+      {
+        "word": "and",
+        "start": 102.6,
+        "end": 102.74
+      },
+      {
+        "word": "to",
+        "start": 102.74,
+        "end": 102.86
+      },
+      {
+        "word": "'his",
+        "start": 102.86,
+        "end": 103.16
+      },
+      {
+        "word": "breasts",
+        "start": 103.16,
+        "end": 104.22
+      }
+    ],
+    "source_text": "en esas curvas yo no freno tiene operas y to' los senos",
+    "source_words": [
+      {
+        "word": " En",
+        "start": 98.86,
+        "end": 99.38
+      },
+      {
+        "word": " esas",
+        "start": 99.38,
+        "end": 99.68
+      },
+      {
+        "word": " curvas",
+        "start": 99.68,
+        "end": 100.02
+      },
+      {
+        "word": " yo",
+        "start": 100.02,
+        "end": 100.22
+      },
+      {
+        "word": " no",
+        "start": 100.22,
+        "end": 100.38
+      },
+      {
+        "word": " freno",
+        "start": 100.38,
+        "end": 101.54
+      },
+      {
+        "word": " Tiene",
+        "start": 101.54,
+        "end": 102.06
+      },
+      {
+        "word": " operas",
+        "start": 102.06,
+        "end": 102.6
+      },
+      {
+        "word": " y",
+        "start": 102.6,
+        "end": 102.74
+      },
+      {
+        "word": " to'",
+        "start": 102.74,
+        "end": 102.86
+      },
+      {
+        "word": " los",
+        "start": 102.86,
+        "end": 103.16
+      },
+      {
+        "word": " senos",
+        "start": 103.16,
+        "end": 104.22
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "I always lead her drunk I give her my time you lose time to the capchons",
+    "start": 104.22,
+    "end": 109.5,
+    "words": [
+      {
+        "word": "I",
+        "start": 104.22,
+        "end": 104.62
+      },
+      {
+        "word": "always",
+        "start": 104.62,
+        "end": 104.96
+      },
+      {
+        "word": "lead",
+        "start": 104.96,
+        "end": 105.2
+      },
+      {
+        "word": "her",
+        "start": 105.2,
+        "end": 105.44
+      },
+      {
+        "word": "drunk",
+        "start": 105.44,
+        "end": 106.1
+      },
+      {
+        "word": "I",
+        "start": 106.1,
+        "end": 106.3
+      },
+      {
+        "word": "give",
+        "start": 106.3,
+        "end": 106.48
+      },
+      {
+        "word": "her",
+        "start": 106.48,
+        "end": 106.66
+      },
+      {
+        "word": "my",
+        "start": 106.66,
+        "end": 106.96
+      },
+      {
+        "word": "time",
+        "start": 106.96,
+        "end": 107.18
+      },
+      {
+        "word": "you",
+        "start": 107.3,
+        "end": 107.52
+      },
+      {
+        "word": "lose",
+        "start": 107.52,
+        "end": 107.82
+      },
+      {
+        "word": "time",
+        "start": 107.82,
+        "end": 108.08
+      },
+      {
+        "word": "to",
+        "start": 108.08,
+        "end": 108.22
+      },
+      {
+        "word": "the",
+        "start": 108.22,
+        "end": 108.4
+      },
+      {
+        "word": "capchons",
+        "start": 108.4,
+        "end": 109.5
+      }
+    ],
+    "source_text": "yo siempre la guío borracho le doy mi tiempo a ella tu pierdes tiempo a los capchons",
+    "source_words": [
+      {
+        "word": " Yo",
+        "start": 104.22,
+        "end": 104.62
+      },
+      {
+        "word": " siempre",
+        "start": 104.62,
+        "end": 104.96
+      },
+      {
+        "word": " la",
+        "start": 104.96,
+        "end": 105.2
+      },
+      {
+        "word": " guío",
+        "start": 105.2,
+        "end": 105.44
+      },
+      {
+        "word": " borracho",
+        "start": 105.44,
+        "end": 106.1
+      },
+      {
+        "word": " Le",
+        "start": 106.1,
+        "end": 106.3
+      },
+      {
+        "word": " doy",
+        "start": 106.3,
+        "end": 106.48
+      },
+      {
+        "word": " mi",
+        "start": 106.48,
+        "end": 106.66
+      },
+      {
+        "word": " tiempo",
+        "start": 106.66,
+        "end": 106.96
+      },
+      {
+        "word": " a",
+        "start": 106.96,
+        "end": 107.18
+      },
+      {
+        "word": " ella",
+        "start": 107.18,
+        "end": 107.3
+      },
+      {
+        "word": " tu",
+        "start": 107.3,
+        "end": 107.52
+      },
+      {
+        "word": " pierdes",
+        "start": 107.52,
+        "end": 107.82
+      },
+      {
+        "word": " tiempo",
+        "start": 107.82,
+        "end": 108.08
+      },
+      {
+        "word": " a",
+        "start": 108.08,
+        "end": 108.22
+      },
+      {
+        "word": " los",
+        "start": 108.22,
+        "end": 108.4
+      },
+      {
+        "word": " capchons",
+        "start": 108.4,
+        "end": 109.5
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "That's how I put it.",
+    "start": 109.5,
+    "end": 114.78,
+    "words": [
+      {
+        "word": "That's",
+        "start": 109.5,
+        "end": 109.92
+      },
+      {
+        "word": "how",
+        "start": 109.92,
+        "end": 110.48
+      },
+      {
+        "word": "I",
+        "start": 110.64,
+        "end": 111.68
+      },
+      {
+        "word": "put",
+        "start": 111.68,
+        "end": 112.66
+      },
+      {
+        "word": "it.",
+        "start": 113.8,
+        "end": 114.78
+      }
+    ],
+    "source_text": "guión gozado te asistoreto eres el tipo al que te lo meto",
+    "source_words": [
+      {
+        "word": " Guión",
+        "start": 109.5,
+        "end": 109.92
+      },
+      {
+        "word": " gozado",
+        "start": 109.92,
+        "end": 110.48
+      },
+      {
+        "word": " te",
+        "start": 110.48,
+        "end": 110.64
+      },
+      {
+        "word": " asistoreto",
+        "start": 110.64,
+        "end": 111.68
+      },
+      {
+        "word": " Eres",
+        "start": 111.68,
+        "end": 112.66
+      },
+      {
+        "word": " el",
+        "start": 112.66,
+        "end": 112.82
+      },
+      {
+        "word": " tipo",
+        "start": 112.82,
+        "end": 113.04
+      },
+      {
+        "word": " al",
+        "start": 113.04,
+        "end": 113.24
+      },
+      {
+        "word": " que",
+        "start": 113.24,
+        "end": 113.34
+      },
+      {
+        "word": " te",
+        "start": 113.34,
+        "end": 113.56
+      },
+      {
+        "word": " lo",
+        "start": 113.56,
+        "end": 113.8
+      },
+      {
+        "word": " meto",
+        "start": 113.8,
+        "end": 114.78
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "The ground goes down and I'll put it in four and the nitro tightens it up",
+    "start": 114.78,
+    "end": 120.06,
+    "words": [
+      {
+        "word": "The",
+        "start": 114.78,
+        "end": 115.0
+      },
+      {
+        "word": "ground",
+        "start": 115.0,
+        "end": 115.36
+      },
+      {
+        "word": "goes",
+        "start": 115.36,
+        "end": 115.8
+      },
+      {
+        "word": "down",
+        "start": 115.8,
+        "end": 115.96
+      },
+      {
+        "word": "and",
+        "start": 115.96,
+        "end": 116.1
+      },
+      {
+        "word": "I'll",
+        "start": 116.1,
+        "end": 116.2
+      },
+      {
+        "word": "put",
+        "start": 116.2,
+        "end": 116.48
+      },
+      {
+        "word": "it",
+        "start": 116.48,
+        "end": 117.38
+      },
+      {
+        "word": "in",
+        "start": 117.38,
+        "end": 117.7
+      },
+      {
+        "word": "four",
+        "start": 117.7,
+        "end": 117.92
+      },
+      {
+        "word": "and",
+        "start": 117.92,
+        "end": 118.08
+      },
+      {
+        "word": "the",
+        "start": 118.08,
+        "end": 118.32
+      },
+      {
+        "word": "nitro",
+        "start": 118.4,
+        "end": 118.56
+      },
+      {
+        "word": "tightens",
+        "start": 118.56,
+        "end": 118.82
+      },
+      {
+        "word": "it",
+        "start": 118.82,
+        "end": 119.08
+      },
+      {
+        "word": "up",
+        "start": 119.08,
+        "end": 120.06
+      }
+    ],
+    "source_text": "la piso caiga y to' en la metro la pongo en cuatro y el nitro la aprieto",
+    "source_words": [
+      {
+        "word": " La",
+        "start": 114.78,
+        "end": 115.0
+      },
+      {
+        "word": " piso",
+        "start": 115.0,
+        "end": 115.36
+      },
+      {
+        "word": " caiga",
+        "start": 115.36,
+        "end": 115.8
+      },
+      {
+        "word": " y",
+        "start": 115.8,
+        "end": 115.96
+      },
+      {
+        "word": " to'",
+        "start": 115.96,
+        "end": 116.1
+      },
+      {
+        "word": " en",
+        "start": 116.1,
+        "end": 116.2
+      },
+      {
+        "word": " la",
+        "start": 116.2,
+        "end": 116.48
+      },
+      {
+        "word": " metro",
+        "start": 116.48,
+        "end": 117.38
+      },
+      {
+        "word": " La",
+        "start": 117.38,
+        "end": 117.7
+      },
+      {
+        "word": " pongo",
+        "start": 117.7,
+        "end": 117.92
+      },
+      {
+        "word": " en",
+        "start": 117.92,
+        "end": 118.08
+      },
+      {
+        "word": " cuatro",
+        "start": 118.08,
+        "end": 118.32
+      },
+      {
+        "word": " y",
+        "start": 118.32,
+        "end": 118.4
+      },
+      {
+        "word": " el",
+        "start": 118.4,
+        "end": 118.56
+      },
+      {
+        "word": " nitro",
+        "start": 118.56,
+        "end": 118.82
+      },
+      {
+        "word": " la",
+        "start": 118.82,
+        "end": 119.08
+      },
+      {
+        "word": " aprieto",
+        "start": 119.08,
+        "end": 120.06
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "He doesn't run out of gasoline. I moved to his vulva to be my neighbor.",
+    "start": 120.06,
+    "end": 125.74,
+    "words": [
+      {
+        "word": "He",
+        "start": 120.06,
+        "end": 120.64
+      },
+      {
+        "word": "doesn't",
+        "start": 120.64,
+        "end": 120.9
+      },
+      {
+        "word": "run",
+        "start": 120.9,
+        "end": 121.1
+      },
+      {
+        "word": "out",
+        "start": 121.1,
+        "end": 121.38
+      },
+      {
+        "word": "of",
+        "start": 121.38,
+        "end": 122.36
+      },
+      {
+        "word": "gasoline.",
+        "start": 122.36,
+        "end": 123.02
+      },
+      {
+        "word": "I",
+        "start": 123.02,
+        "end": 123.32
+      },
+      {
+        "word": "moved",
+        "start": 123.32,
+        "end": 123.5
+      },
+      {
+        "word": "to",
+        "start": 123.52,
+        "end": 123.74
+      },
+      {
+        "word": "his",
+        "start": 123.74,
+        "end": 123.96
+      },
+      {
+        "word": "vulva",
+        "start": 123.96,
+        "end": 124.18
+      },
+      {
+        "word": "to",
+        "start": 124.18,
+        "end": 124.42
+      },
+      {
+        "word": "be",
+        "start": 124.42,
+        "end": 124.62
+      },
+      {
+        "word": "my",
+        "start": 124.62,
+        "end": 124.88
+      },
+      {
+        "word": "neighbor.",
+        "start": 124.88,
+        "end": 125.74
+      }
+    ],
+    "source_text": "no se queda sin gasolina me mudé pa' tu vulva pa' que sea mi vecina",
+    "source_words": [
+      {
+        "word": " No",
+        "start": 120.06,
+        "end": 120.64
+      },
+      {
+        "word": " se",
+        "start": 120.64,
+        "end": 120.9
+      },
+      {
+        "word": " queda",
+        "start": 120.9,
+        "end": 121.1
+      },
+      {
+        "word": " sin",
+        "start": 121.1,
+        "end": 121.38
+      },
+      {
+        "word": " gasolina",
+        "start": 121.38,
+        "end": 122.36
+      },
+      {
+        "word": " Me",
+        "start": 122.36,
+        "end": 123.02
+      },
+      {
+        "word": " mudé",
+        "start": 123.02,
+        "end": 123.32
+      },
+      {
+        "word": " pa'",
+        "start": 123.32,
+        "end": 123.5
+      },
+      {
+        "word": " tu",
+        "start": 123.52,
+        "end": 123.74
+      },
+      {
+        "word": " vulva",
+        "start": 123.74,
+        "end": 123.96
+      },
+      {
+        "word": " pa'",
+        "start": 123.96,
+        "end": 124.18
+      },
+      {
+        "word": " que",
+        "start": 124.18,
+        "end": 124.42
+      },
+      {
+        "word": " sea",
+        "start": 124.42,
+        "end": 124.62
+      },
+      {
+        "word": " mi",
+        "start": 124.62,
+        "end": 124.88
+      },
+      {
+        "word": " vecina",
+        "start": 124.88,
+        "end": 125.74
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "That's how bad the horn sounds. I've been shouting. That's more about a rap visa in Argentina.",
+    "start": 125.74,
+    "end": 130.94,
+    "words": [
+      {
+        "word": "That's",
+        "start": 125.74,
+        "end": 126.1
+      },
+      {
+        "word": "how",
+        "start": 126.1,
+        "end": 126.34
+      },
+      {
+        "word": "bad",
+        "start": 126.34,
+        "end": 126.62
+      },
+      {
+        "word": "the",
+        "start": 126.62,
+        "end": 126.84
+      },
+      {
+        "word": "horn",
+        "start": 126.84,
+        "end": 127.14769230769231
+      },
+      {
+        "word": "sounds.",
+        "start": 127.14769230769231,
+        "end": 127.60923076923078
+      },
+      {
+        "word": "I've",
+        "start": 127.60923076923078,
+        "end": 127.84
+      },
+      {
+        "word": "been",
+        "start": 127.84,
+        "end": 128.16
+      },
+      {
+        "word": "shouting.",
+        "start": 128.16,
+        "end": 128.68
+      },
+      {
+        "word": "That's",
+        "start": 128.68,
+        "end": 128.96
+      },
+      {
+        "word": "more",
+        "start": 128.96,
+        "end": 129.24
+      },
+      {
+        "word": "about",
+        "start": 129.24,
+        "end": 129.4
+      },
+      {
+        "word": "a",
+        "start": 129.4,
+        "end": 129.6
+      },
+      {
+        "word": "rap",
+        "start": 129.6,
+        "end": 129.9
+      },
+      {
+        "word": "visa",
+        "start": 129.9,
+        "end": 130.14
+      },
+      {
+        "word": "in",
+        "start": 130.14,
+        "end": 130.28545454545454
+      },
+      {
+        "word": "Argentina.",
+        "start": 130.28545454545454,
+        "end": 130.94
+      }
+    ],
+    "source_text": "que duro suena la bocina estuve gritando suena más que visa rap en argentina",
+    "source_words": [
+      {
+        "word": " Que",
+        "start": 125.74,
+        "end": 126.1
+      },
+      {
+        "word": " duro",
+        "start": 126.1,
+        "end": 126.34
+      },
+      {
+        "word": " suena",
+        "start": 126.34,
+        "end": 126.62
+      },
+      {
+        "word": " la",
+        "start": 126.62,
+        "end": 126.84
+      },
+      {
+        "word": " bocina",
+        "start": 126.84,
+        "end": 127.84
+      },
+      {
+        "word": " Estuve",
+        "start": 127.84,
+        "end": 128.16
+      },
+      {
+        "word": " gritando",
+        "start": 128.16,
+        "end": 128.68
+      },
+      {
+        "word": " suena",
+        "start": 128.68,
+        "end": 128.96
+      },
+      {
+        "word": " más",
+        "start": 128.96,
+        "end": 129.24
+      },
+      {
+        "word": " que",
+        "start": 129.24,
+        "end": 129.4
+      },
+      {
+        "word": " visa",
+        "start": 129.4,
+        "end": 129.6
+      },
+      {
+        "word": " rap",
+        "start": 129.6,
+        "end": 129.9
+      },
+      {
+        "word": " en",
+        "start": 129.9,
+        "end": 130.14
+      },
+      {
+        "word": " Argentina",
+        "start": 130.14,
+        "end": 130.94
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "The machine doesn't compact them but without touch",
+    "start": 130.94,
+    "end": 136.56,
+    "words": [
+      {
+        "word": "The",
+        "start": 130.94,
+        "end": 131.46
+      },
+      {
+        "word": "machine",
+        "start": 131.46,
+        "end": 131.78
+      },
+      {
+        "word": "doesn't",
+        "start": 131.78,
+        "end": 132.04
+      },
+      {
+        "word": "compact",
+        "start": 132.26,
+        "end": 133.7
+      },
+      {
+        "word": "them",
+        "start": 133.7,
+        "end": 134.06
+      },
+      {
+        "word": "but",
+        "start": 134.06,
+        "end": 134.42
+      },
+      {
+        "word": "without",
+        "start": 134.64,
+        "end": 135.04
+      },
+      {
+        "word": "touch",
+        "start": 135.04,
+        "end": 136.56
+      }
+    ],
+    "source_text": "el máquina no lo compacto los chocos pero sin tacto",
+    "source_words": [
+      {
+        "word": " El",
+        "start": 130.94,
+        "end": 131.46
+      },
+      {
+        "word": " máquina",
+        "start": 131.46,
+        "end": 131.78
+      },
+      {
+        "word": " no",
+        "start": 131.78,
+        "end": 132.04
+      },
+      {
+        "word": " lo",
+        "start": 132.04,
+        "end": 132.26
+      },
+      {
+        "word": " compacto",
+        "start": 132.26,
+        "end": 133.7
+      },
+      {
+        "word": " Los",
+        "start": 133.7,
+        "end": 134.06
+      },
+      {
+        "word": " chocos",
+        "start": 134.06,
+        "end": 134.42
+      },
+      {
+        "word": " pero",
+        "start": 134.42,
+        "end": 134.64
+      },
+      {
+        "word": " sin",
+        "start": 134.64,
+        "end": 135.04
+      },
+      {
+        "word": " tacto",
+        "start": 135.04,
+        "end": 136.56
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "and I had made contact with him if you have made him a covenant",
+    "start": 136.56,
+    "end": 141.96,
+    "words": [
+      {
+        "word": "and",
+        "start": 136.56,
+        "end": 136.84
+      },
+      {
+        "word": "I",
+        "start": 136.84,
+        "end": 137.16
+      },
+      {
+        "word": "had",
+        "start": 137.16,
+        "end": 137.5
+      },
+      {
+        "word": "made",
+        "start": 137.5,
+        "end": 138.0890909090909
+      },
+      {
+        "word": "contact",
+        "start": 138.0890909090909,
+        "end": 139.12
+      },
+      {
+        "word": "with",
+        "start": 139.12,
+        "end": 139.4
+      },
+      {
+        "word": "him",
+        "start": 139.4,
+        "end": 139.52
+      },
+      {
+        "word": "if",
+        "start": 139.52,
+        "end": 139.72
+      },
+      {
+        "word": "you",
+        "start": 139.72,
+        "end": 139.88
+      },
+      {
+        "word": "have",
+        "start": 139.88,
+        "end": 140.0
+      },
+      {
+        "word": "made",
+        "start": 140.0,
+        "end": 140.16
+      },
+      {
+        "word": "him",
+        "start": 140.16,
+        "end": 140.38
+      },
+      {
+        "word": "a",
+        "start": 140.38,
+        "end": 140.55555555555554
+      },
+      {
+        "word": "covenant",
+        "start": 140.55555555555554,
+        "end": 141.96
+      }
+    ],
+    "source_text": "y había dando contacto yo si tú ya le hagas un pacto",
+    "source_words": [
+      {
+        "word": " Y",
+        "start": 136.56,
+        "end": 136.84
+      },
+      {
+        "word": " había",
+        "start": 136.84,
+        "end": 137.16
+      },
+      {
+        "word": " dando",
+        "start": 137.16,
+        "end": 137.5
+      },
+      {
+        "word": " contacto",
+        "start": 137.5,
+        "end": 139.12
+      },
+      {
+        "word": " Yo",
+        "start": 139.12,
+        "end": 139.4
+      },
+      {
+        "word": " si",
+        "start": 139.4,
+        "end": 139.52
+      },
+      {
+        "word": " tú",
+        "start": 139.52,
+        "end": 139.72
+      },
+      {
+        "word": " ya",
+        "start": 139.72,
+        "end": 139.88
+      },
+      {
+        "word": " le",
+        "start": 139.88,
+        "end": 140.0
+      },
+      {
+        "word": " hagas",
+        "start": 140.0,
+        "end": 140.16
+      },
+      {
+        "word": " un",
+        "start": 140.16,
+        "end": 140.38
+      },
+      {
+        "word": " pacto",
+        "start": 140.38,
+        "end": 141.96
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "That bugatti doesn't have an owner because that machine isn't for sale.",
+    "start": 142.7,
+    "end": 147.78,
+    "words": [
+      {
+        "word": "That",
+        "start": 142.7,
+        "end": 143.42
+      },
+      {
+        "word": "bugatti",
+        "start": 143.42,
+        "end": 143.78
+      },
+      {
+        "word": "doesn't",
+        "start": 143.78,
+        "end": 144.06
+      },
+      {
+        "word": "have",
+        "start": 144.06,
+        "end": 144.4
+      },
+      {
+        "word": "an",
+        "start": 144.4,
+        "end": 145.36
+      },
+      {
+        "word": "owner",
+        "start": 145.36,
+        "end": 145.76
+      },
+      {
+        "word": "because",
+        "start": 145.76,
+        "end": 146.0
+      },
+      {
+        "word": "that",
+        "start": 146.0,
+        "end": 146.42
+      },
+      {
+        "word": "machine",
+        "start": 146.42,
+        "end": 146.72
+      },
+      {
+        "word": "isn't",
+        "start": 146.72,
+        "end": 146.92
+      },
+      {
+        "word": "for",
+        "start": 146.92,
+        "end": 147.06
+      },
+      {
+        "word": "sale.",
+        "start": 147.18,
+        "end": 147.78
+      }
+    ],
+    "source_text": "ese bugatti no tiene dueño porque ese máquina no está a la venta",
+    "source_words": [
+      {
+        "word": " Ese",
+        "start": 142.7,
+        "end": 143.42
+      },
+      {
+        "word": " bugatti",
+        "start": 143.42,
+        "end": 143.78
+      },
+      {
+        "word": " no",
+        "start": 143.78,
+        "end": 144.06
+      },
+      {
+        "word": " tiene",
+        "start": 144.06,
+        "end": 144.4
+      },
+      {
+        "word": " dueño",
+        "start": 144.4,
+        "end": 145.36
+      },
+      {
+        "word": " Porque",
+        "start": 145.36,
+        "end": 145.76
+      },
+      {
+        "word": " ese",
+        "start": 145.76,
+        "end": 146.0
+      },
+      {
+        "word": " máquina",
+        "start": 146.0,
+        "end": 146.42
+      },
+      {
+        "word": " no",
+        "start": 146.42,
+        "end": 146.72
+      },
+      {
+        "word": " está",
+        "start": 146.72,
+        "end": 146.92
+      },
+      {
+        "word": " a",
+        "start": 146.92,
+        "end": 147.06
+      },
+      {
+        "word": " la",
+        "start": 147.06,
+        "end": 147.18
+      },
+      {
+        "word": " venta",
+        "start": 147.18,
+        "end": 147.78
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "A big ass a little ride living his mind without pay his rent",
+    "start": 147.78,
+    "end": 153.58,
+    "words": [
+      {
+        "word": "A",
+        "start": 147.78,
+        "end": 148.12
+      },
+      {
+        "word": "big",
+        "start": 148.12,
+        "end": 148.36
+      },
+      {
+        "word": "ass",
+        "start": 148.36,
+        "end": 148.64
+      },
+      {
+        "word": "a",
+        "start": 148.64,
+        "end": 148.96
+      },
+      {
+        "word": "little",
+        "start": 148.96,
+        "end": 149.5
+      },
+      {
+        "word": "ride",
+        "start": 149.5,
+        "end": 150.48
+      },
+      {
+        "word": "living",
+        "start": 150.48,
+        "end": 151.1
+      },
+      {
+        "word": "his",
+        "start": 151.1,
+        "end": 151.34
+      },
+      {
+        "word": "mind",
+        "start": 151.34,
+        "end": 151.62
+      },
+      {
+        "word": "without",
+        "start": 151.62,
+        "end": 151.92
+      },
+      {
+        "word": "pay",
+        "start": 151.92,
+        "end": 152.5
+      },
+      {
+        "word": "his",
+        "start": 152.5,
+        "end": 152.96285714285716
+      },
+      {
+        "word": "rent",
+        "start": 152.96285714285716,
+        "end": 153.58
+      }
+    ],
+    "source_text": "un culo grande un travesito pequeño viviendo la mente sin pagarle renta",
+    "source_words": [
+      {
+        "word": " Un",
+        "start": 147.78,
+        "end": 148.12
+      },
+      {
+        "word": " culo",
+        "start": 148.12,
+        "end": 148.36
+      },
+      {
+        "word": " grande",
+        "start": 148.36,
+        "end": 148.64
+      },
+      {
+        "word": " un",
+        "start": 148.64,
+        "end": 148.96
+      },
+      {
+        "word": " travesito",
+        "start": 148.96,
+        "end": 149.5
+      },
+      {
+        "word": " pequeño",
+        "start": 149.5,
+        "end": 150.48
+      },
+      {
+        "word": " Viviendo",
+        "start": 150.48,
+        "end": 151.1
+      },
+      {
+        "word": " la",
+        "start": 151.1,
+        "end": 151.34
+      },
+      {
+        "word": " mente",
+        "start": 151.34,
+        "end": 151.62
+      },
+      {
+        "word": " sin",
+        "start": 151.62,
+        "end": 151.92
+      },
+      {
+        "word": " pagarle",
+        "start": 151.92,
+        "end": 152.5
+      },
+      {
+        "word": " renta",
+        "start": 152.5,
+        "end": 153.58
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "That bugatti doesn't own baby if she doesn't smoke I'll teach you",
+    "start": 153.58,
+    "end": 161.12,
+    "words": [
+      {
+        "word": "That",
+        "start": 153.58,
+        "end": 154.1
+      },
+      {
+        "word": "bugatti",
+        "start": 154.1,
+        "end": 154.48
+      },
+      {
+        "word": "doesn't",
+        "start": 154.48,
+        "end": 154.74
+      },
+      {
+        "word": "own",
+        "start": 154.74,
+        "end": 155.1
+      },
+      {
+        "word": "baby",
+        "start": 155.1,
+        "end": 158.7
+      },
+      {
+        "word": "if",
+        "start": 158.7,
+        "end": 159.28
+      },
+      {
+        "word": "she",
+        "start": 159.28,
+        "end": 159.6
+      },
+      {
+        "word": "doesn't",
+        "start": 159.6,
+        "end": 159.8
+      },
+      {
+        "word": "smoke",
+        "start": 159.8,
+        "end": 160.06
+      },
+      {
+        "word": "I'll",
+        "start": 160.06,
+        "end": 160.22
+      },
+      {
+        "word": "teach",
+        "start": 160.22,
+        "end": 160.46
+      },
+      {
+        "word": "you",
+        "start": 160.46,
+        "end": 161.12
+      }
+    ],
+    "source_text": "ese bugatti no tiene dueño baby si no fuma yo te enseño",
+    "source_words": [
+      {
+        "word": " Ese",
+        "start": 153.58,
+        "end": 154.1
+      },
+      {
+        "word": " bugatti",
+        "start": 154.1,
+        "end": 154.48
+      },
+      {
+        "word": " no",
+        "start": 154.48,
+        "end": 154.74
+      },
+      {
+        "word": " tiene",
+        "start": 154.74,
+        "end": 155.1
+      },
+      {
+        "word": " dueño",
+        "start": 155.1,
+        "end": 158.7
+      },
+      {
+        "word": " Baby",
+        "start": 158.7,
+        "end": 159.28
+      },
+      {
+        "word": " si",
+        "start": 159.28,
+        "end": 159.6
+      },
+      {
+        "word": " no",
+        "start": 159.6,
+        "end": 159.8
+      },
+      {
+        "word": " fuma",
+        "start": 159.8,
+        "end": 160.06
+      },
+      {
+        "word": " yo",
+        "start": 160.06,
+        "end": 160.22
+      },
+      {
+        "word": " te",
+        "start": 160.22,
+        "end": 160.46
+      },
+      {
+        "word": " enseño",
+        "start": 160.46,
+        "end": 161.12
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "It's a pink abababre. Don't put up with it.",
+    "start": 161.12,
+    "end": 164.88,
+    "words": [
+      {
+        "word": "It's",
+        "start": 161.12,
+        "end": 161.56
+      },
+      {
+        "word": "a",
+        "start": 161.56,
+        "end": 162.1
+      },
+      {
+        "word": "pink",
+        "start": 162.1,
+        "end": 162.36
+      },
+      {
+        "word": "abababre.",
+        "start": 162.36,
+        "end": 162.77333333333334
+      },
+      {
+        "word": "Don't",
+        "start": 162.77333333333334,
+        "end": 162.98
+      },
+      {
+        "word": "put",
+        "start": 162.98,
+        "end": 163.52
+      },
+      {
+        "word": "up",
+        "start": 163.52,
+        "end": 163.86
+      },
+      {
+        "word": "with",
+        "start": 163.86,
+        "end": 164.54000000000002
+      },
+      {
+        "word": "it.",
+        "start": 164.54000000000002,
+        "end": 164.88
+      }
+    ],
+    "source_text": "es soy ababro rosado no lo empeño",
+    "source_words": [
+      {
+        "word": " Es",
+        "start": 161.12,
+        "end": 161.56
+      },
+      {
+        "word": " soy",
+        "start": 161.56,
+        "end": 162.1
+      },
+      {
+        "word": " Ababro",
+        "start": 162.1,
+        "end": 162.36
+      },
+      {
+        "word": " Rosado",
+        "start": 162.36,
+        "end": 162.98
+      },
+      {
+        "word": " no",
+        "start": 162.98,
+        "end": 162.98
+      },
+      {
+        "word": " lo",
+        "start": 162.98,
+        "end": 163.52
+      },
+      {
+        "word": " empeño",
+        "start": 163.52,
+        "end": 164.88
+      }
+    ]
+  }
+]

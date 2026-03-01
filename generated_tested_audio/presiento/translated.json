@@ -1,0 +1,4348 @@
+[
+  {
+    "id": 0,
+    "text": "love, I've been noticing you for days and the truth...",
+    "start": 3.26,
+    "end": 10.0,
+    "words": [
+      {
+        "word": "love",
+        "start": 3.26,
+        "end": 3.859
+      },
+      {
+        "word": ",",
+        "start": 3.859,
+        "end": 4.009
+      },
+      {
+        "word": "I",
+        "start": 4.009,
+        "end": 4.159
+      },
+      {
+        "word": "'",
+        "start": 4.159,
+        "end": 4.308
+      },
+      {
+        "word": "ve",
+        "start": 4.308,
+        "end": 4.608
+      },
+      {
+        "word": "been",
+        "start": 4.608,
+        "end": 5.207
+      },
+      {
+        "word": "noticing",
+        "start": 5.207,
+        "end": 6.405
+      },
+      {
+        "word": "you",
+        "start": 6.405,
+        "end": 6.855
+      },
+      {
+        "word": "for",
+        "start": 6.855,
+        "end": 7.304
+      },
+      {
+        "word": "days",
+        "start": 7.304,
+        "end": 7.903
+      },
+      {
+        "word": "and",
+        "start": 7.903,
+        "end": 8.352
+      },
+      {
+        "word": "the",
+        "start": 8.352,
+        "end": 8.802
+      },
+      {
+        "word": "truth",
+        "start": 8.802,
+        "end": 9.551
+      },
+      {
+        "word": ".",
+        "start": 9.551,
+        "end": 9.7
+      },
+      {
+        "word": ".",
+        "start": 9.7,
+        "end": 9.85
+      },
+      {
+        "word": ".",
+        "start": 9.85,
+        "end": 10.0
+      }
+    ],
+    "source_text": "amor, yo varios días en que te noto rara y la verdad...",
+    "source_words": [
+      {
+        "word": " Amor,",
+        "start": 3.259999999999999,
+        "end": 4.22
+      },
+      {
+        "word": " yo",
+        "start": 4.76,
+        "end": 4.8
+      },
+      {
+        "word": " varios",
+        "start": 4.8,
+        "end": 5.04
+      },
+      {
+        "word": " días",
+        "start": 5.04,
+        "end": 5.3
+      },
+      {
+        "word": " en",
+        "start": 5.3,
+        "end": 5.54
+      },
+      {
+        "word": " que",
+        "start": 5.54,
+        "end": 6.56
+      },
+      {
+        "word": " te",
+        "start": 6.56,
+        "end": 6.76
+      },
+      {
+        "word": " noto",
+        "start": 6.76,
+        "end": 7.0
+      },
+      {
+        "word": " rara",
+        "start": 7.0,
+        "end": 7.34
+      },
+      {
+        "word": " y",
+        "start": 7.34,
+        "end": 8.88
+      },
+      {
+        "word": " la",
+        "start": 8.88,
+        "end": 9.18
+      },
+      {
+        "word": " verdad...",
+        "start": 9.18,
+        "end": 10.0
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "text": "I'm here because I want to talk to you about us, let's be clear, love.",
+    "start": 10.0,
+    "end": 16.2,
+    "words": [
+      {
+        "word": "I",
+        "start": 10.0,
+        "end": 10.111
+      },
+      {
+        "word": "'",
+        "start": 10.111,
+        "end": 10.221
+      },
+      {
+        "word": "m",
+        "start": 10.221,
+        "end": 10.332
+      },
+      {
+        "word": "here",
+        "start": 10.332,
+        "end": 10.775
+      },
+      {
+        "word": "because",
+        "start": 10.775,
+        "end": 11.55
+      },
+      {
+        "word": "I",
+        "start": 11.55,
+        "end": 11.661
+      },
+      {
+        "word": "want",
+        "start": 11.661,
+        "end": 12.104
+      },
+      {
+        "word": "to",
+        "start": 12.104,
+        "end": 12.325
+      },
+      {
+        "word": "talk",
+        "start": 12.325,
+        "end": 12.768
+      },
+      {
+        "word": "to",
+        "start": 12.768,
+        "end": 12.989
+      },
+      {
+        "word": "you",
+        "start": 12.989,
+        "end": 13.321
+      },
+      {
+        "word": "about",
+        "start": 13.321,
+        "end": 13.875
+      },
+      {
+        "word": "us",
+        "start": 13.875,
+        "end": 14.096
+      },
+      {
+        "word": ",",
+        "start": 14.096,
+        "end": 14.207
+      },
+      {
+        "word": "let",
+        "start": 14.207,
+        "end": 14.539
+      },
+      {
+        "word": "'",
+        "start": 14.539,
+        "end": 14.65
+      },
+      {
+        "word": "s",
+        "start": 14.65,
+        "end": 14.761
+      },
+      {
+        "word": "be",
+        "start": 14.761,
+        "end": 14.982
+      },
+      {
+        "word": "clear",
+        "start": 14.982,
+        "end": 15.536
+      },
+      {
+        "word": ",",
+        "start": 15.536,
+        "end": 15.646
+      },
+      {
+        "word": "love",
+        "start": 15.646,
+        "end": 16.089
+      },
+      {
+        "word": ".",
+        "start": 16.089,
+        "end": 16.2
+      }
+    ],
+    "source_text": "estoy aquí porque quiero hablarte de lo nuestro, hablemos claro, amor.",
+    "source_words": [
+      {
+        "word": " Estoy",
+        "start": 10.0,
+        "end": 10.0
+      },
+      {
+        "word": " aquí",
+        "start": 10.0,
+        "end": 11.3
+      },
+      {
+        "word": " porque",
+        "start": 11.3,
+        "end": 12.66
+      },
+      {
+        "word": " quiero",
+        "start": 12.66,
+        "end": 13.12
+      },
+      {
+        "word": " hablarte",
+        "start": 13.12,
+        "end": 13.64
+      },
+      {
+        "word": " de",
+        "start": 13.64,
+        "end": 13.9
+      },
+      {
+        "word": " lo",
+        "start": 13.9,
+        "end": 14.12
+      },
+      {
+        "word": " nuestro,",
+        "start": 14.12,
+        "end": 14.38
+      },
+      {
+        "word": " hablemos",
+        "start": 14.4,
+        "end": 15.02
+      },
+      {
+        "word": " claro,",
+        "start": 15.02,
+        "end": 15.58
+      },
+      {
+        "word": " amor.",
+        "start": 16.2,
+        "end": 16.2
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "I miss you and I don't just get a love call that says I miss you.",
+    "start": 17.0,
+    "end": 29.0,
+    "words": [
+      {
+        "word": "I",
+        "start": 17.0,
+        "end": 17.24
+      },
+      {
+        "word": "miss",
+        "start": 17.24,
+        "end": 18.2
+      },
+      {
+        "word": "you",
+        "start": 18.2,
+        "end": 18.92
+      },
+      {
+        "word": "and",
+        "start": 18.92,
+        "end": 19.64
+      },
+      {
+        "word": "I",
+        "start": 19.64,
+        "end": 19.88
+      },
+      {
+        "word": "don",
+        "start": 19.88,
+        "end": 20.6
+      },
+      {
+        "word": "'",
+        "start": 20.6,
+        "end": 20.84
+      },
+      {
+        "word": "t",
+        "start": 20.84,
+        "end": 21.08
+      },
+      {
+        "word": "just",
+        "start": 21.08,
+        "end": 22.04
+      },
+      {
+        "word": "get",
+        "start": 22.04,
+        "end": 22.76
+      },
+      {
+        "word": "a",
+        "start": 22.76,
+        "end": 23.0
+      },
+      {
+        "word": "love",
+        "start": 23.0,
+        "end": 23.96
+      },
+      {
+        "word": "call",
+        "start": 23.96,
+        "end": 24.92
+      },
+      {
+        "word": "that",
+        "start": 24.92,
+        "end": 25.88
+      },
+      {
+        "word": "says",
+        "start": 25.88,
+        "end": 26.84
+      },
+      {
+        "word": "I",
+        "start": 26.84,
+        "end": 27.08
+      },
+      {
+        "word": "miss",
+        "start": 27.08,
+        "end": 28.04
+      },
+      {
+        "word": "you",
+        "start": 28.04,
+        "end": 28.76
+      },
+      {
+        "word": ".",
+        "start": 28.76,
+        "end": 29.0
+      }
+    ],
+    "source_text": "te extraño y no recibo tan solo una llamada amor que diga que me extrañas.",
+    "source_words": [
+      {
+        "word": " Te",
+        "start": 16.9,
+        "end": 17.38
+      },
+      {
+        "word": " extraño",
+        "start": 17.38,
+        "end": 19.08
+      },
+      {
+        "word": " y",
+        "start": 19.08,
+        "end": 20.08
+      },
+      {
+        "word": " no",
+        "start": 20.08,
+        "end": 21.96
+      },
+      {
+        "word": " recibo",
+        "start": 21.96,
+        "end": 23.06
+      },
+      {
+        "word": " tan",
+        "start": 23.06,
+        "end": 23.4
+      },
+      {
+        "word": " solo",
+        "start": 23.4,
+        "end": 23.66
+      },
+      {
+        "word": " una",
+        "start": 23.66,
+        "end": 23.98
+      },
+      {
+        "word": " llamada",
+        "start": 23.98,
+        "end": 24.54
+      },
+      {
+        "word": " amor",
+        "start": 24.54,
+        "end": 24.88
+      },
+      {
+        "word": " que",
+        "start": 24.88,
+        "end": 25.08
+      },
+      {
+        "word": " diga",
+        "start": 25.08,
+        "end": 25.64
+      },
+      {
+        "word": " que",
+        "start": 25.64,
+        "end": 26.12
+      },
+      {
+        "word": " me",
+        "start": 26.12,
+        "end": 27.6
+      },
+      {
+        "word": " extrañas.",
+        "start": 27.6,
+        "end": 29.0
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "I feel like you don't love me the same way you did yesterday.",
+    "start": 29.0,
+    "end": 37.0,
+    "words": [
+      {
+        "word": "I",
+        "start": 29.0,
+        "end": 29.163
+      },
+      {
+        "word": "feel",
+        "start": 29.163,
+        "end": 29.816
+      },
+      {
+        "word": "like",
+        "start": 29.816,
+        "end": 30.469
+      },
+      {
+        "word": "you",
+        "start": 30.469,
+        "end": 30.959
+      },
+      {
+        "word": "don",
+        "start": 30.959,
+        "end": 31.449
+      },
+      {
+        "word": "'",
+        "start": 31.449,
+        "end": 31.612
+      },
+      {
+        "word": "t",
+        "start": 31.612,
+        "end": 31.776
+      },
+      {
+        "word": "love",
+        "start": 31.776,
+        "end": 32.429
+      },
+      {
+        "word": "me",
+        "start": 32.429,
+        "end": 32.755
+      },
+      {
+        "word": "the",
+        "start": 32.755,
+        "end": 33.245
+      },
+      {
+        "word": "same",
+        "start": 33.245,
+        "end": 33.898
+      },
+      {
+        "word": "way",
+        "start": 33.898,
+        "end": 34.388
+      },
+      {
+        "word": "you",
+        "start": 34.388,
+        "end": 34.878
+      },
+      {
+        "word": "did",
+        "start": 34.878,
+        "end": 35.367
+      },
+      {
+        "word": "yesterday",
+        "start": 35.367,
+        "end": 36.837
+      },
+      {
+        "word": ".",
+        "start": 36.837,
+        "end": 37.0
+      }
+    ],
+    "source_text": "te siento que tú no me amas igual que ayer.",
+    "source_words": [
+      {
+        "word": " Te",
+        "start": 29.0,
+        "end": 29.52
+      },
+      {
+        "word": " siento",
+        "start": 29.52,
+        "end": 32.06
+      },
+      {
+        "word": " que",
+        "start": 32.06,
+        "end": 32.6
+      },
+      {
+        "word": " tú",
+        "start": 32.6,
+        "end": 33.44
+      },
+      {
+        "word": " no",
+        "start": 33.44,
+        "end": 33.98
+      },
+      {
+        "word": " me",
+        "start": 33.98,
+        "end": 34.48
+      },
+      {
+        "word": " amas",
+        "start": 34.48,
+        "end": 34.98
+      },
+      {
+        "word": " igual",
+        "start": 34.98,
+        "end": 35.58
+      },
+      {
+        "word": " que",
+        "start": 35.58,
+        "end": 36.38
+      },
+      {
+        "word": " ayer.",
+        "start": 36.38,
+        "end": 37.0
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Tell me if it is or not.",
+    "start": 38.88,
+    "end": 40.92,
+    "words": [
+      {
+        "word": "Tell",
+        "start": 38.88,
+        "end": 39.333
+      },
+      {
+        "word": "me",
+        "start": 39.333,
+        "end": 39.56
+      },
+      {
+        "word": "if",
+        "start": 39.56,
+        "end": 39.787
+      },
+      {
+        "word": "it",
+        "start": 39.787,
+        "end": 40.013
+      },
+      {
+        "word": "is",
+        "start": 40.013,
+        "end": 40.24
+      },
+      {
+        "word": "or",
+        "start": 40.24,
+        "end": 40.467
+      },
+      {
+        "word": "not",
+        "start": 40.467,
+        "end": 40.807
+      },
+      {
+        "word": ".",
+        "start": 40.807,
+        "end": 40.92
+      }
+    ],
+    "source_text": "dime si es así o no.",
+    "source_words": [
+      {
+        "word": " Dime",
+        "start": 38.88,
+        "end": 39.28
+      },
+      {
+        "word": " si",
+        "start": 39.28,
+        "end": 39.52
+      },
+      {
+        "word": " es",
+        "start": 39.52,
+        "end": 39.64
+      },
+      {
+        "word": " así",
+        "start": 39.64,
+        "end": 40.02
+      },
+      {
+        "word": " o",
+        "start": 40.02,
+        "end": 40.3
+      },
+      {
+        "word": " no.",
+        "start": 40.3,
+        "end": 40.92
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "I feel like you're not breathing like yesterday.",
+    "start": 41.2,
+    "end": 47.76,
+    "words": [
+      {
+        "word": "I",
+        "start": 41.2,
+        "end": 41.36
+      },
+      {
+        "word": "feel",
+        "start": 41.36,
+        "end": 42.0
+      },
+      {
+        "word": "like",
+        "start": 42.0,
+        "end": 42.64
+      },
+      {
+        "word": "you",
+        "start": 42.64,
+        "end": 43.12
+      },
+      {
+        "word": "'",
+        "start": 43.12,
+        "end": 43.28
+      },
+      {
+        "word": "re",
+        "start": 43.28,
+        "end": 43.6
+      },
+      {
+        "word": "not",
+        "start": 43.6,
+        "end": 44.08
+      },
+      {
+        "word": "breathing",
+        "start": 44.08,
+        "end": 45.52
+      },
+      {
+        "word": "like",
+        "start": 45.52,
+        "end": 46.16
+      },
+      {
+        "word": "yesterday",
+        "start": 46.16,
+        "end": 47.6
+      },
+      {
+        "word": ".",
+        "start": 47.6,
+        "end": 47.76
+      }
+    ],
+    "source_text": "te siento que tú ya no suspiras como ayer.",
+    "source_words": [
+      {
+        "word": " Te",
+        "start": 41.2,
+        "end": 41.58
+      },
+      {
+        "word": " siento",
+        "start": 41.58,
+        "end": 42.32
+      },
+      {
+        "word": " que",
+        "start": 42.32,
+        "end": 42.92
+      },
+      {
+        "word": " tú",
+        "start": 42.92,
+        "end": 43.68
+      },
+      {
+        "word": " ya",
+        "start": 43.68,
+        "end": 44.12
+      },
+      {
+        "word": " no",
+        "start": 44.12,
+        "end": 44.74
+      },
+      {
+        "word": " suspiras",
+        "start": 44.74,
+        "end": 45.76
+      },
+      {
+        "word": " como",
+        "start": 45.76,
+        "end": 46.38
+      },
+      {
+        "word": " ayer.",
+        "start": 46.38,
+        "end": 47.76
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Tell me if it is or not.",
+    "start": 49.02,
+    "end": 50.22,
+    "words": [
+      {
+        "word": "Tell",
+        "start": 49.02,
+        "end": 49.287
+      },
+      {
+        "word": "me",
+        "start": 49.287,
+        "end": 49.42
+      },
+      {
+        "word": "if",
+        "start": 49.42,
+        "end": 49.553
+      },
+      {
+        "word": "it",
+        "start": 49.553,
+        "end": 49.687
+      },
+      {
+        "word": "is",
+        "start": 49.687,
+        "end": 49.82
+      },
+      {
+        "word": "or",
+        "start": 49.82,
+        "end": 49.953
+      },
+      {
+        "word": "not",
+        "start": 49.953,
+        "end": 50.153
+      },
+      {
+        "word": ".",
+        "start": 50.153,
+        "end": 50.22
+      }
+    ],
+    "source_text": "dime si es así o no.",
+    "source_words": [
+      {
+        "word": " Dime",
+        "start": 49.02,
+        "end": 49.46
+      },
+      {
+        "word": " si",
+        "start": 49.46,
+        "end": 49.6
+      },
+      {
+        "word": " es",
+        "start": 49.6,
+        "end": 49.76
+      },
+      {
+        "word": " así",
+        "start": 49.76,
+        "end": 50.16
+      },
+      {
+        "word": " o",
+        "start": 50.16,
+        "end": 50.22
+      },
+      {
+        "word": " no.",
+        "start": 50.22,
+        "end": 50.22
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "I came to you today to tell you that I miss you, that for your love I am suffering and this is hurting me.",
+    "start": 50.24,
+    "end": 55.4,
+    "words": [
+      {
+        "word": "I",
+        "start": 50.24,
+        "end": 50.302
+      },
+      {
+        "word": "came",
+        "start": 50.302,
+        "end": 50.551
+      },
+      {
+        "word": "to",
+        "start": 50.551,
+        "end": 50.675
+      },
+      {
+        "word": "you",
+        "start": 50.675,
+        "end": 50.862
+      },
+      {
+        "word": "today",
+        "start": 50.862,
+        "end": 51.173
+      },
+      {
+        "word": "to",
+        "start": 51.173,
+        "end": 51.297
+      },
+      {
+        "word": "tell",
+        "start": 51.297,
+        "end": 51.546
+      },
+      {
+        "word": "you",
+        "start": 51.546,
+        "end": 51.732
+      },
+      {
+        "word": "that",
+        "start": 51.732,
+        "end": 51.981
+      },
+      {
+        "word": "I",
+        "start": 51.981,
+        "end": 52.043
+      },
+      {
+        "word": "miss",
+        "start": 52.043,
+        "end": 52.292
+      },
+      {
+        "word": "you",
+        "start": 52.292,
+        "end": 52.478
+      },
+      {
+        "word": ",",
+        "start": 52.478,
+        "end": 52.54
+      },
+      {
+        "word": "that",
+        "start": 52.54,
+        "end": 52.789
+      },
+      {
+        "word": "for",
+        "start": 52.789,
+        "end": 52.975
+      },
+      {
+        "word": "your",
+        "start": 52.975,
+        "end": 53.224
+      },
+      {
+        "word": "love",
+        "start": 53.224,
+        "end": 53.473
+      },
+      {
+        "word": "I",
+        "start": 53.473,
+        "end": 53.535
+      },
+      {
+        "word": "am",
+        "start": 53.535,
+        "end": 53.659
+      },
+      {
+        "word": "suffering",
+        "start": 53.659,
+        "end": 54.219
+      },
+      {
+        "word": "and",
+        "start": 54.219,
+        "end": 54.405
+      },
+      {
+        "word": "this",
+        "start": 54.405,
+        "end": 54.654
+      },
+      {
+        "word": "is",
+        "start": 54.654,
+        "end": 54.778
+      },
+      {
+        "word": "hurting",
+        "start": 54.778,
+        "end": 55.213
+      },
+      {
+        "word": "me",
+        "start": 55.213,
+        "end": 55.338
+      },
+      {
+        "word": ".",
+        "start": 55.338,
+        "end": 55.4
+      }
+    ],
+    "source_text": "hoy he venido a donde te ha decirte que te extraño, que por tu amor estoy sufriendo y esto me está haciendo daño.",
+    "source_words": [
+      {
+        "word": " Hoy",
+        "start": 50.24,
+        "end": 50.46
+      },
+      {
+        "word": " he",
+        "start": 50.46,
+        "end": 50.6
+      },
+      {
+        "word": " venido",
+        "start": 50.6,
+        "end": 50.92
+      },
+      {
+        "word": " a",
+        "start": 50.92,
+        "end": 51.02
+      },
+      {
+        "word": " donde",
+        "start": 51.02,
+        "end": 51.24
+      },
+      {
+        "word": " te",
+        "start": 51.24,
+        "end": 51.4
+      },
+      {
+        "word": " ha",
+        "start": 51.4,
+        "end": 51.56
+      },
+      {
+        "word": " decirte",
+        "start": 51.56,
+        "end": 51.94
+      },
+      {
+        "word": " que",
+        "start": 51.94,
+        "end": 52.06
+      },
+      {
+        "word": " te",
+        "start": 52.06,
+        "end": 52.32
+      },
+      {
+        "word": " extraño,",
+        "start": 52.32,
+        "end": 52.64
+      },
+      {
+        "word": " que",
+        "start": 52.82,
+        "end": 52.88
+      },
+      {
+        "word": " por",
+        "start": 52.88,
+        "end": 53.06
+      },
+      {
+        "word": " tu",
+        "start": 53.06,
+        "end": 53.22
+      },
+      {
+        "word": " amor",
+        "start": 53.22,
+        "end": 53.44
+      },
+      {
+        "word": " estoy",
+        "start": 53.44,
+        "end": 53.64
+      },
+      {
+        "word": " sufriendo",
+        "start": 53.64,
+        "end": 54.08
+      },
+      {
+        "word": " y",
+        "start": 54.08,
+        "end": 54.26
+      },
+      {
+        "word": " esto",
+        "start": 54.26,
+        "end": 54.42
+      },
+      {
+        "word": " me",
+        "start": 54.42,
+        "end": 54.64
+      },
+      {
+        "word": " está",
+        "start": 54.64,
+        "end": 54.74
+      },
+      {
+        "word": " haciendo",
+        "start": 54.74,
+        "end": 55.06
+      },
+      {
+        "word": " daño.",
+        "start": 55.06,
+        "end": 55.4
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "I've tried to take refuge in another love and another burden, but I'm addicted to your body and I feel trapped.",
+    "start": 55.4,
+    "end": 60.32,
+    "words": [
+      {
+        "word": "I",
+        "start": 55.4,
+        "end": 55.454
+      },
+      {
+        "word": "'",
+        "start": 55.454,
+        "end": 55.508
+      },
+      {
+        "word": "ve",
+        "start": 55.508,
+        "end": 55.616
+      },
+      {
+        "word": "tried",
+        "start": 55.616,
+        "end": 55.887
+      },
+      {
+        "word": "to",
+        "start": 55.887,
+        "end": 55.995
+      },
+      {
+        "word": "take",
+        "start": 55.995,
+        "end": 56.211
+      },
+      {
+        "word": "refuge",
+        "start": 56.211,
+        "end": 56.535
+      },
+      {
+        "word": "in",
+        "start": 56.535,
+        "end": 56.644
+      },
+      {
+        "word": "another",
+        "start": 56.644,
+        "end": 57.022
+      },
+      {
+        "word": "love",
+        "start": 57.022,
+        "end": 57.238
+      },
+      {
+        "word": "and",
+        "start": 57.238,
+        "end": 57.4
+      },
+      {
+        "word": "another",
+        "start": 57.4,
+        "end": 57.779
+      },
+      {
+        "word": "burden",
+        "start": 57.779,
+        "end": 58.103
+      },
+      {
+        "word": ",",
+        "start": 58.103,
+        "end": 58.157
+      },
+      {
+        "word": "but",
+        "start": 58.157,
+        "end": 58.32
+      },
+      {
+        "word": "I",
+        "start": 58.32,
+        "end": 58.374
+      },
+      {
+        "word": "'",
+        "start": 58.374,
+        "end": 58.428
+      },
+      {
+        "word": "m",
+        "start": 58.428,
+        "end": 58.482
+      },
+      {
+        "word": "addicted",
+        "start": 58.482,
+        "end": 58.914
+      },
+      {
+        "word": "to",
+        "start": 58.914,
+        "end": 59.022
+      },
+      {
+        "word": "your",
+        "start": 59.022,
+        "end": 59.239
+      },
+      {
+        "word": "body",
+        "start": 59.239,
+        "end": 59.455
+      },
+      {
+        "word": "and",
+        "start": 59.455,
+        "end": 59.617
+      },
+      {
+        "word": "I",
+        "start": 59.617,
+        "end": 59.671
+      },
+      {
+        "word": "feel",
+        "start": 59.671,
+        "end": 59.887
+      },
+      {
+        "word": "trapped",
+        "start": 59.887,
+        "end": 60.266
+      },
+      {
+        "word": ".",
+        "start": 60.266,
+        "end": 60.32
+      }
+    ],
+    "source_text": "he tratado de refugiarme en otro amor y en otro peso, pero de tu cuerpo soy adicto y me siento preso.",
+    "source_words": [
+      {
+        "word": " He",
+        "start": 55.4,
+        "end": 55.62
+      },
+      {
+        "word": " tratado",
+        "start": 55.62,
+        "end": 55.96
+      },
+      {
+        "word": " de",
+        "start": 55.96,
+        "end": 56.18
+      },
+      {
+        "word": " refugiarme",
+        "start": 56.18,
+        "end": 56.68
+      },
+      {
+        "word": " en",
+        "start": 56.68,
+        "end": 56.8
+      },
+      {
+        "word": " otro",
+        "start": 56.8,
+        "end": 56.94
+      },
+      {
+        "word": " amor",
+        "start": 56.94,
+        "end": 57.16
+      },
+      {
+        "word": " y",
+        "start": 57.16,
+        "end": 57.3
+      },
+      {
+        "word": " en",
+        "start": 57.3,
+        "end": 57.42
+      },
+      {
+        "word": " otro",
+        "start": 57.42,
+        "end": 57.64
+      },
+      {
+        "word": " peso,",
+        "start": 57.64,
+        "end": 57.88
+      },
+      {
+        "word": " pero",
+        "start": 58.0,
+        "end": 58.2
+      },
+      {
+        "word": " de",
+        "start": 58.2,
+        "end": 58.44
+      },
+      {
+        "word": " tu",
+        "start": 58.44,
+        "end": 58.56
+      },
+      {
+        "word": " cuerpo",
+        "start": 58.56,
+        "end": 58.84
+      },
+      {
+        "word": " soy",
+        "start": 58.84,
+        "end": 59.1
+      },
+      {
+        "word": " adicto",
+        "start": 59.1,
+        "end": 59.56
+      },
+      {
+        "word": " y",
+        "start": 59.56,
+        "end": 59.68
+      },
+      {
+        "word": " me",
+        "start": 59.68,
+        "end": 59.86
+      },
+      {
+        "word": " siento",
+        "start": 59.86,
+        "end": 60.14
+      },
+      {
+        "word": " preso.",
+        "start": 60.14,
+        "end": 60.32
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "I gave the lily because you would come back to me, forgive me once and forget the past.",
+    "start": 60.5,
+    "end": 65.1,
+    "words": [
+      {
+        "word": "I",
+        "start": 60.5,
+        "end": 60.566
+      },
+      {
+        "word": "gave",
+        "start": 60.566,
+        "end": 60.829
+      },
+      {
+        "word": "the",
+        "start": 60.829,
+        "end": 61.026
+      },
+      {
+        "word": "lily",
+        "start": 61.026,
+        "end": 61.289
+      },
+      {
+        "word": "because",
+        "start": 61.289,
+        "end": 61.749
+      },
+      {
+        "word": "you",
+        "start": 61.749,
+        "end": 61.946
+      },
+      {
+        "word": "would",
+        "start": 61.946,
+        "end": 62.274
+      },
+      {
+        "word": "come",
+        "start": 62.274,
+        "end": 62.537
+      },
+      {
+        "word": "back",
+        "start": 62.537,
+        "end": 62.8
+      },
+      {
+        "word": "to",
+        "start": 62.8,
+        "end": 62.931
+      },
+      {
+        "word": "me",
+        "start": 62.931,
+        "end": 63.063
+      },
+      {
+        "word": ",",
+        "start": 63.063,
+        "end": 63.129
+      },
+      {
+        "word": "forgive",
+        "start": 63.129,
+        "end": 63.589
+      },
+      {
+        "word": "me",
+        "start": 63.589,
+        "end": 63.72
+      },
+      {
+        "word": "once",
+        "start": 63.72,
+        "end": 63.983
+      },
+      {
+        "word": "and",
+        "start": 63.983,
+        "end": 64.18
+      },
+      {
+        "word": "forget",
+        "start": 64.18,
+        "end": 64.574
+      },
+      {
+        "word": "the",
+        "start": 64.574,
+        "end": 64.771
+      },
+      {
+        "word": "past",
+        "start": 64.771,
+        "end": 65.034
+      },
+      {
+        "word": ".",
+        "start": 65.034,
+        "end": 65.1
+      }
+    ],
+    "source_text": "doyó la lilla porque tú volvieras a mi lado, que me perdones una vez y olvides el pasado.",
+    "source_words": [
+      {
+        "word": " Doyó",
+        "start": 60.5,
+        "end": 60.72
+      },
+      {
+        "word": " la",
+        "start": 60.72,
+        "end": 60.86
+      },
+      {
+        "word": " lilla",
+        "start": 60.86,
+        "end": 61.04
+      },
+      {
+        "word": " porque",
+        "start": 61.04,
+        "end": 61.34
+      },
+      {
+        "word": " tú",
+        "start": 61.34,
+        "end": 61.58
+      },
+      {
+        "word": " volvieras",
+        "start": 61.58,
+        "end": 62.14
+      },
+      {
+        "word": " a",
+        "start": 62.14,
+        "end": 62.24
+      },
+      {
+        "word": " mi",
+        "start": 62.24,
+        "end": 62.44
+      },
+      {
+        "word": " lado,",
+        "start": 62.44,
+        "end": 62.68
+      },
+      {
+        "word": " que",
+        "start": 62.86,
+        "end": 63.0
+      },
+      {
+        "word": " me",
+        "start": 63.0,
+        "end": 63.28
+      },
+      {
+        "word": " perdones",
+        "start": 63.28,
+        "end": 63.56
+      },
+      {
+        "word": " una",
+        "start": 63.56,
+        "end": 63.9
+      },
+      {
+        "word": " vez",
+        "start": 63.9,
+        "end": 64.14
+      },
+      {
+        "word": " y",
+        "start": 64.14,
+        "end": 64.24
+      },
+      {
+        "word": " olvides",
+        "start": 64.24,
+        "end": 64.58
+      },
+      {
+        "word": " el",
+        "start": 64.58,
+        "end": 64.82
+      },
+      {
+        "word": " pasado.",
+        "start": 64.82,
+        "end": 65.1
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "I accept that I failed and played you with your feelings, but I call God as a witness to my suffering.",
+    "start": 65.24,
+    "end": 71.16,
+    "words": [
+      {
+        "word": "I",
+        "start": 65.24,
+        "end": 65.312
+      },
+      {
+        "word": "accept",
+        "start": 65.312,
+        "end": 65.745
+      },
+      {
+        "word": "that",
+        "start": 65.745,
+        "end": 66.034
+      },
+      {
+        "word": "I",
+        "start": 66.034,
+        "end": 66.106
+      },
+      {
+        "word": "failed",
+        "start": 66.106,
+        "end": 66.54
+      },
+      {
+        "word": "and",
+        "start": 66.54,
+        "end": 66.756
+      },
+      {
+        "word": "played",
+        "start": 66.756,
+        "end": 67.189
+      },
+      {
+        "word": "you",
+        "start": 67.189,
+        "end": 67.406
+      },
+      {
+        "word": "with",
+        "start": 67.406,
+        "end": 67.695
+      },
+      {
+        "word": "your",
+        "start": 67.695,
+        "end": 67.983
+      },
+      {
+        "word": "feelings",
+        "start": 67.983,
+        "end": 68.561
+      },
+      {
+        "word": ",",
+        "start": 68.561,
+        "end": 68.633
+      },
+      {
+        "word": "but",
+        "start": 68.633,
+        "end": 68.85
+      },
+      {
+        "word": "I",
+        "start": 68.85,
+        "end": 68.922
+      },
+      {
+        "word": "call",
+        "start": 68.922,
+        "end": 69.211
+      },
+      {
+        "word": "God",
+        "start": 69.211,
+        "end": 69.427
+      },
+      {
+        "word": "as",
+        "start": 69.427,
+        "end": 69.572
+      },
+      {
+        "word": "a",
+        "start": 69.572,
+        "end": 69.644
+      },
+      {
+        "word": "witness",
+        "start": 69.644,
+        "end": 70.149
+      },
+      {
+        "word": "to",
+        "start": 70.149,
+        "end": 70.294
+      },
+      {
+        "word": "my",
+        "start": 70.294,
+        "end": 70.438
+      },
+      {
+        "word": "suffering",
+        "start": 70.438,
+        "end": 71.088
+      },
+      {
+        "word": ".",
+        "start": 71.088,
+        "end": 71.16
+      }
+    ],
+    "source_text": "acepto que fallé y te jugué con tus sentimientos, pero pongo a dios de testigo de mi sufrimiento.",
+    "source_words": [
+      {
+        "word": " Acepto",
+        "start": 65.24,
+        "end": 65.54
+      },
+      {
+        "word": " que",
+        "start": 65.54,
+        "end": 65.8
+      },
+      {
+        "word": " fallé",
+        "start": 65.8,
+        "end": 66.1
+      },
+      {
+        "word": " y",
+        "start": 66.1,
+        "end": 66.26
+      },
+      {
+        "word": " te",
+        "start": 66.26,
+        "end": 66.38
+      },
+      {
+        "word": " jugué",
+        "start": 66.38,
+        "end": 66.74
+      },
+      {
+        "word": " con",
+        "start": 66.74,
+        "end": 67.0
+      },
+      {
+        "word": " tus",
+        "start": 67.0,
+        "end": 67.1
+      },
+      {
+        "word": " sentimientos,",
+        "start": 67.1,
+        "end": 67.74
+      },
+      {
+        "word": " pero",
+        "start": 68.18,
+        "end": 68.34
+      },
+      {
+        "word": " pongo",
+        "start": 68.34,
+        "end": 68.62
+      },
+      {
+        "word": " a",
+        "start": 68.62,
+        "end": 68.76
+      },
+      {
+        "word": " Dios",
+        "start": 68.76,
+        "end": 68.96
+      },
+      {
+        "word": " de",
+        "start": 68.96,
+        "end": 69.16
+      },
+      {
+        "word": " testigo",
+        "start": 69.16,
+        "end": 69.62
+      },
+      {
+        "word": " de",
+        "start": 69.62,
+        "end": 69.8
+      },
+      {
+        "word": " mi",
+        "start": 69.8,
+        "end": 69.98
+      },
+      {
+        "word": " sufrimiento.",
+        "start": 69.98,
+        "end": 71.16
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Look me in the face, let's talk straight between you and me, unfortunately things aren't going well.",
+    "start": 71.52,
+    "end": 76.68,
+    "words": [
+      {
+        "word": "Look",
+        "start": 71.52,
+        "end": 71.766
+      },
+      {
+        "word": "me",
+        "start": 71.766,
+        "end": 71.889
+      },
+      {
+        "word": "in",
+        "start": 71.889,
+        "end": 72.011
+      },
+      {
+        "word": "the",
+        "start": 72.011,
+        "end": 72.196
+      },
+      {
+        "word": "face",
+        "start": 72.196,
+        "end": 72.441
+      },
+      {
+        "word": ",",
+        "start": 72.441,
+        "end": 72.503
+      },
+      {
+        "word": "let",
+        "start": 72.503,
+        "end": 72.687
+      },
+      {
+        "word": "'",
+        "start": 72.687,
+        "end": 72.749
+      },
+      {
+        "word": "s",
+        "start": 72.749,
+        "end": 72.81
+      },
+      {
+        "word": "talk",
+        "start": 72.81,
+        "end": 73.056
+      },
+      {
+        "word": "straight",
+        "start": 73.056,
+        "end": 73.547
+      },
+      {
+        "word": "between",
+        "start": 73.547,
+        "end": 73.977
+      },
+      {
+        "word": "you",
+        "start": 73.977,
+        "end": 74.161
+      },
+      {
+        "word": "and",
+        "start": 74.161,
+        "end": 74.346
+      },
+      {
+        "word": "me",
+        "start": 74.346,
+        "end": 74.469
+      },
+      {
+        "word": ",",
+        "start": 74.469,
+        "end": 74.53
+      },
+      {
+        "word": "unfortunately",
+        "start": 74.53,
+        "end": 75.329
+      },
+      {
+        "word": "things",
+        "start": 75.329,
+        "end": 75.697
+      },
+      {
+        "word": "aren",
+        "start": 75.697,
+        "end": 75.943
+      },
+      {
+        "word": "'",
+        "start": 75.943,
+        "end": 76.004
+      },
+      {
+        "word": "t",
+        "start": 76.004,
+        "end": 76.066
+      },
+      {
+        "word": "going",
+        "start": 76.066,
+        "end": 76.373
+      },
+      {
+        "word": "well",
+        "start": 76.373,
+        "end": 76.619
+      },
+      {
+        "word": ".",
+        "start": 76.619,
+        "end": 76.68
+      }
+    ],
+    "source_text": "mírame a la cara, hablemos claro entre tú y yo, por desgracia las cosas no van bien.",
+    "source_words": [
+      {
+        "word": " Mírame",
+        "start": 71.52,
+        "end": 71.82
+      },
+      {
+        "word": " a",
+        "start": 71.82,
+        "end": 72.04
+      },
+      {
+        "word": " la",
+        "start": 72.04,
+        "end": 72.24
+      },
+      {
+        "word": " cara,",
+        "start": 72.24,
+        "end": 72.46
+      },
+      {
+        "word": " hablemos",
+        "start": 72.48,
+        "end": 73.02
+      },
+      {
+        "word": " claro",
+        "start": 73.02,
+        "end": 73.24
+      },
+      {
+        "word": " entre",
+        "start": 73.24,
+        "end": 73.58
+      },
+      {
+        "word": " tú",
+        "start": 73.58,
+        "end": 73.78
+      },
+      {
+        "word": " y",
+        "start": 73.78,
+        "end": 73.86
+      },
+      {
+        "word": " yo,",
+        "start": 73.86,
+        "end": 74.06
+      },
+      {
+        "word": " por",
+        "start": 74.08,
+        "end": 74.32
+      },
+      {
+        "word": " desgracia",
+        "start": 74.32,
+        "end": 74.86
+      },
+      {
+        "word": " las",
+        "start": 74.86,
+        "end": 75.16
+      },
+      {
+        "word": " cosas",
+        "start": 75.16,
+        "end": 75.68
+      },
+      {
+        "word": " no",
+        "start": 75.68,
+        "end": 76.04
+      },
+      {
+        "word": " van",
+        "start": 76.04,
+        "end": 76.3
+      },
+      {
+        "word": " bien.",
+        "start": 76.3,
+        "end": 76.68
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "I feel like touching your hands freezes me like a piece of ice.",
+    "start": 76.84,
+    "end": 81.6,
+    "words": [
+      {
+        "word": "I",
+        "start": 76.84,
+        "end": 76.933
+      },
+      {
+        "word": "feel",
+        "start": 76.933,
+        "end": 77.307
+      },
+      {
+        "word": "like",
+        "start": 77.307,
+        "end": 77.68
+      },
+      {
+        "word": "touching",
+        "start": 77.68,
+        "end": 78.427
+      },
+      {
+        "word": "your",
+        "start": 78.427,
+        "end": 78.8
+      },
+      {
+        "word": "hands",
+        "start": 78.8,
+        "end": 79.267
+      },
+      {
+        "word": "freezes",
+        "start": 79.267,
+        "end": 79.92
+      },
+      {
+        "word": "me",
+        "start": 79.92,
+        "end": 80.107
+      },
+      {
+        "word": "like",
+        "start": 80.107,
+        "end": 80.48
+      },
+      {
+        "word": "a",
+        "start": 80.48,
+        "end": 80.573
+      },
+      {
+        "word": "piece",
+        "start": 80.573,
+        "end": 81.04
+      },
+      {
+        "word": "of",
+        "start": 81.04,
+        "end": 81.227
+      },
+      {
+        "word": "ice",
+        "start": 81.227,
+        "end": 81.507
+      },
+      {
+        "word": ".",
+        "start": 81.507,
+        "end": 81.6
+      }
+    ],
+    "source_text": "siento que al tocar tus manos me congelo como tempano de hielo.",
+    "source_words": [
+      {
+        "word": " Siento",
+        "start": 76.84,
+        "end": 76.86
+      },
+      {
+        "word": " que",
+        "start": 76.86,
+        "end": 76.98
+      },
+      {
+        "word": " al",
+        "start": 76.98,
+        "end": 77.16
+      },
+      {
+        "word": " tocar",
+        "start": 77.16,
+        "end": 77.46
+      },
+      {
+        "word": " tus",
+        "start": 77.46,
+        "end": 77.72
+      },
+      {
+        "word": " manos",
+        "start": 77.72,
+        "end": 78.02
+      },
+      {
+        "word": " me",
+        "start": 78.02,
+        "end": 78.34
+      },
+      {
+        "word": " congelo",
+        "start": 78.34,
+        "end": 78.74
+      },
+      {
+        "word": " como",
+        "start": 78.74,
+        "end": 79.16
+      },
+      {
+        "word": " tempano",
+        "start": 79.16,
+        "end": 79.74
+      },
+      {
+        "word": " de",
+        "start": 79.74,
+        "end": 80.0
+      },
+      {
+        "word": " hielo.",
+        "start": 80.0,
+        "end": 81.6
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Our bed has been empty for days, without you and me.",
+    "start": 81.6,
+    "end": 87.72,
+    "words": [
+      {
+        "word": "Our",
+        "start": 81.6,
+        "end": 82.037
+      },
+      {
+        "word": "bed",
+        "start": 82.037,
+        "end": 82.474
+      },
+      {
+        "word": "has",
+        "start": 82.474,
+        "end": 82.911
+      },
+      {
+        "word": "been",
+        "start": 82.911,
+        "end": 83.494
+      },
+      {
+        "word": "empty",
+        "start": 83.494,
+        "end": 84.223
+      },
+      {
+        "word": "for",
+        "start": 84.223,
+        "end": 84.66
+      },
+      {
+        "word": "days",
+        "start": 84.66,
+        "end": 85.243
+      },
+      {
+        "word": ",",
+        "start": 85.243,
+        "end": 85.389
+      },
+      {
+        "word": "without",
+        "start": 85.389,
+        "end": 86.409
+      },
+      {
+        "word": "you",
+        "start": 86.409,
+        "end": 86.846
+      },
+      {
+        "word": "and",
+        "start": 86.846,
+        "end": 87.283
+      },
+      {
+        "word": "me",
+        "start": 87.283,
+        "end": 87.574
+      },
+      {
+        "word": ".",
+        "start": 87.574,
+        "end": 87.72
+      }
+    ],
+    "source_text": "nuestra cama lleva días igual vacía, sin ti y sin mí.",
+    "source_words": [
+      {
+        "word": " Nuestra",
+        "start": 81.6,
+        "end": 82.3
+      },
+      {
+        "word": " cama",
+        "start": 82.3,
+        "end": 82.96
+      },
+      {
+        "word": " lleva",
+        "start": 82.96,
+        "end": 83.48
+      },
+      {
+        "word": " días",
+        "start": 83.48,
+        "end": 84.0
+      },
+      {
+        "word": " igual",
+        "start": 84.0,
+        "end": 84.56
+      },
+      {
+        "word": " vacía,",
+        "start": 84.56,
+        "end": 85.5
+      },
+      {
+        "word": " sin",
+        "start": 85.76,
+        "end": 85.98
+      },
+      {
+        "word": " ti",
+        "start": 85.98,
+        "end": 86.56
+      },
+      {
+        "word": " y",
+        "start": 86.56,
+        "end": 86.72
+      },
+      {
+        "word": " sin",
+        "start": 86.72,
+        "end": 86.98
+      },
+      {
+        "word": " mí.",
+        "start": 86.98,
+        "end": 87.72
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "If you love me, hurry up. I felt it.",
+    "start": 88.16,
+    "end": 91.54,
+    "words": [
+      {
+        "word": "If",
+        "start": 88.16,
+        "end": 88.401
+      },
+      {
+        "word": "you",
+        "start": 88.401,
+        "end": 88.764
+      },
+      {
+        "word": "love",
+        "start": 88.764,
+        "end": 89.246
+      },
+      {
+        "word": "me",
+        "start": 89.246,
+        "end": 89.488
+      },
+      {
+        "word": ",",
+        "start": 89.488,
+        "end": 89.609
+      },
+      {
+        "word": "hurry",
+        "start": 89.609,
+        "end": 90.212
+      },
+      {
+        "word": "up",
+        "start": 90.212,
+        "end": 90.454
+      },
+      {
+        "word": ".",
+        "start": 90.454,
+        "end": 90.574
+      },
+      {
+        "word": "I",
+        "start": 90.574,
+        "end": 90.695
+      },
+      {
+        "word": "felt",
+        "start": 90.695,
+        "end": 91.178
+      },
+      {
+        "word": "it",
+        "start": 91.178,
+        "end": 91.419
+      },
+      {
+        "word": ".",
+        "start": 91.419,
+        "end": 91.54
+      }
+    ],
+    "source_text": "si me amas prisas me lo sentí.",
+    "source_words": [
+      {
+        "word": " Si",
+        "start": 88.16,
+        "end": 88.38
+      },
+      {
+        "word": " me",
+        "start": 88.38,
+        "end": 88.72
+      },
+      {
+        "word": " amas",
+        "start": 88.72,
+        "end": 89.08
+      },
+      {
+        "word": " prisas",
+        "start": 89.08,
+        "end": 89.62
+      },
+      {
+        "word": " me",
+        "start": 89.62,
+        "end": 89.86
+      },
+      {
+        "word": " lo",
+        "start": 89.86,
+        "end": 90.06
+      },
+      {
+        "word": " sentí.",
+        "start": 90.06,
+        "end": 91.54
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "I feel scared because I have you and I don't have you and I feel like our thing is over.",
+    "start": 91.74,
+    "end": 99.48,
+    "words": [
+      {
+        "word": "I",
+        "start": 91.74,
+        "end": 91.852
+      },
+      {
+        "word": "feel",
+        "start": 91.852,
+        "end": 92.301
+      },
+      {
+        "word": "scared",
+        "start": 92.301,
+        "end": 92.974
+      },
+      {
+        "word": "because",
+        "start": 92.974,
+        "end": 93.759
+      },
+      {
+        "word": "I",
+        "start": 93.759,
+        "end": 93.871
+      },
+      {
+        "word": "have",
+        "start": 93.871,
+        "end": 94.32
+      },
+      {
+        "word": "you",
+        "start": 94.32,
+        "end": 94.657
+      },
+      {
+        "word": "and",
+        "start": 94.657,
+        "end": 94.993
+      },
+      {
+        "word": "I",
+        "start": 94.993,
+        "end": 95.105
+      },
+      {
+        "word": "don",
+        "start": 95.105,
+        "end": 95.442
+      },
+      {
+        "word": "'",
+        "start": 95.442,
+        "end": 95.554
+      },
+      {
+        "word": "t",
+        "start": 95.554,
+        "end": 95.666
+      },
+      {
+        "word": "have",
+        "start": 95.666,
+        "end": 96.115
+      },
+      {
+        "word": "you",
+        "start": 96.115,
+        "end": 96.451
+      },
+      {
+        "word": "and",
+        "start": 96.451,
+        "end": 96.788
+      },
+      {
+        "word": "I",
+        "start": 96.788,
+        "end": 96.9
+      },
+      {
+        "word": "feel",
+        "start": 96.9,
+        "end": 97.349
+      },
+      {
+        "word": "like",
+        "start": 97.349,
+        "end": 97.797
+      },
+      {
+        "word": "our",
+        "start": 97.797,
+        "end": 98.134
+      },
+      {
+        "word": "thing",
+        "start": 98.134,
+        "end": 98.695
+      },
+      {
+        "word": "is",
+        "start": 98.695,
+        "end": 98.919
+      },
+      {
+        "word": "over",
+        "start": 98.919,
+        "end": 99.368
+      },
+      {
+        "word": ".",
+        "start": 99.368,
+        "end": 99.48
+      }
+    ],
+    "source_text": "que siento miedo porque te tengo y no te tengo y siento que lo nuestro terminó.",
+    "source_words": [
+      {
+        "word": " Que",
+        "start": 91.74,
+        "end": 92.06
+      },
+      {
+        "word": " siento",
+        "start": 92.06,
+        "end": 93.02
+      },
+      {
+        "word": " miedo",
+        "start": 93.02,
+        "end": 93.96
+      },
+      {
+        "word": " porque",
+        "start": 93.96,
+        "end": 94.68
+      },
+      {
+        "word": " te",
+        "start": 94.68,
+        "end": 95.1
+      },
+      {
+        "word": " tengo",
+        "start": 95.1,
+        "end": 95.44
+      },
+      {
+        "word": " y",
+        "start": 95.44,
+        "end": 95.68
+      },
+      {
+        "word": " no",
+        "start": 95.68,
+        "end": 95.94
+      },
+      {
+        "word": " te",
+        "start": 95.94,
+        "end": 96.24
+      },
+      {
+        "word": " tengo",
+        "start": 96.24,
+        "end": 96.46
+      },
+      {
+        "word": " y",
+        "start": 96.46,
+        "end": 96.66
+      },
+      {
+        "word": " siento",
+        "start": 96.66,
+        "end": 96.98
+      },
+      {
+        "word": " que",
+        "start": 96.98,
+        "end": 97.36
+      },
+      {
+        "word": " lo",
+        "start": 97.36,
+        "end": 97.62
+      },
+      {
+        "word": " nuestro",
+        "start": 97.62,
+        "end": 97.96
+      },
+      {
+        "word": " terminó.",
+        "start": 97.96,
+        "end": 99.48
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "- No, no, I'm not going to.",
+    "start": 100.62,
+    "end": 101.82,
+    "words": [
+      {
+        "word": "-",
+        "start": 100.62,
+        "end": 100.677
+      },
+      {
+        "word": "No",
+        "start": 100.677,
+        "end": 100.791
+      },
+      {
+        "word": ",",
+        "start": 100.791,
+        "end": 100.849
+      },
+      {
+        "word": "no",
+        "start": 100.849,
+        "end": 100.963
+      },
+      {
+        "word": ",",
+        "start": 100.963,
+        "end": 101.02
+      },
+      {
+        "word": "I",
+        "start": 101.02,
+        "end": 101.077
+      },
+      {
+        "word": "'",
+        "start": 101.077,
+        "end": 101.134
+      },
+      {
+        "word": "m",
+        "start": 101.134,
+        "end": 101.191
+      },
+      {
+        "word": "not",
+        "start": 101.191,
+        "end": 101.363
+      },
+      {
+        "word": "going",
+        "start": 101.363,
+        "end": 101.649
+      },
+      {
+        "word": "to",
+        "start": 101.649,
+        "end": 101.763
+      },
+      {
+        "word": ".",
+        "start": 101.763,
+        "end": 101.82
+      }
+    ],
+    "source_text": "no, no.",
+    "source_words": [
+      {
+        "word": " No,",
+        "start": 100.62,
+        "end": 100.62
+      },
+      {
+        "word": " no.",
+        "start": 100.66,
+        "end": 101.82
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "I feel like you don't love me the same way you did yesterday.",
+    "start": 101.82,
+    "end": 108.34,
+    "words": [
+      {
+        "word": "I",
+        "start": 101.82,
+        "end": 101.953
+      },
+      {
+        "word": "feel",
+        "start": 101.953,
+        "end": 102.485
+      },
+      {
+        "word": "like",
+        "start": 102.485,
+        "end": 103.018
+      },
+      {
+        "word": "you",
+        "start": 103.018,
+        "end": 103.417
+      },
+      {
+        "word": "don",
+        "start": 103.417,
+        "end": 103.816
+      },
+      {
+        "word": "'",
+        "start": 103.816,
+        "end": 103.949
+      },
+      {
+        "word": "t",
+        "start": 103.949,
+        "end": 104.082
+      },
+      {
+        "word": "love",
+        "start": 104.082,
+        "end": 104.614
+      },
+      {
+        "word": "me",
+        "start": 104.614,
+        "end": 104.88
+      },
+      {
+        "word": "the",
+        "start": 104.88,
+        "end": 105.28
+      },
+      {
+        "word": "same",
+        "start": 105.28,
+        "end": 105.812
+      },
+      {
+        "word": "way",
+        "start": 105.812,
+        "end": 106.211
+      },
+      {
+        "word": "you",
+        "start": 106.211,
+        "end": 106.61
+      },
+      {
+        "word": "did",
+        "start": 106.61,
+        "end": 107.009
+      },
+      {
+        "word": "yesterday",
+        "start": 107.009,
+        "end": 108.207
+      },
+      {
+        "word": ".",
+        "start": 108.207,
+        "end": 108.34
+      }
+    ],
+    "source_text": "te siento que tú no me amas igual que ayer.",
+    "source_words": [
+      {
+        "word": " Te",
+        "start": 101.82,
+        "end": 102.22
+      },
+      {
+        "word": " siento",
+        "start": 102.22,
+        "end": 102.9
+      },
+      {
+        "word": " que",
+        "start": 102.9,
+        "end": 103.44
+      },
+      {
+        "word": " tú",
+        "start": 103.44,
+        "end": 104.18
+      },
+      {
+        "word": " no",
+        "start": 104.18,
+        "end": 104.64
+      },
+      {
+        "word": " me",
+        "start": 104.64,
+        "end": 105.24
+      },
+      {
+        "word": " amas",
+        "start": 105.24,
+        "end": 105.7
+      },
+      {
+        "word": " igual",
+        "start": 105.7,
+        "end": 106.34
+      },
+      {
+        "word": " que",
+        "start": 106.34,
+        "end": 107.16
+      },
+      {
+        "word": " ayer.",
+        "start": 107.16,
+        "end": 108.34
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Tell me if it is or not.",
+    "start": 109.48,
+    "end": 111.34,
+    "words": [
+      {
+        "word": "Tell",
+        "start": 109.48,
+        "end": 109.893
+      },
+      {
+        "word": "me",
+        "start": 109.893,
+        "end": 110.1
+      },
+      {
+        "word": "if",
+        "start": 110.1,
+        "end": 110.307
+      },
+      {
+        "word": "it",
+        "start": 110.307,
+        "end": 110.513
+      },
+      {
+        "word": "is",
+        "start": 110.513,
+        "end": 110.72
+      },
+      {
+        "word": "or",
+        "start": 110.72,
+        "end": 110.927
+      },
+      {
+        "word": "not",
+        "start": 110.927,
+        "end": 111.237
+      },
+      {
+        "word": ".",
+        "start": 111.237,
+        "end": 111.34
+      }
+    ],
+    "source_text": "dime si es así o no.",
+    "source_words": [
+      {
+        "word": " Dime",
+        "start": 109.48,
+        "end": 110.0
+      },
+      {
+        "word": " si",
+        "start": 110.0,
+        "end": 110.12
+      },
+      {
+        "word": " es",
+        "start": 110.12,
+        "end": 110.34
+      },
+      {
+        "word": " así",
+        "start": 110.34,
+        "end": 110.78
+      },
+      {
+        "word": " o",
+        "start": 110.78,
+        "end": 111.0
+      },
+      {
+        "word": " no.",
+        "start": 111.0,
+        "end": 111.34
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "I feel like you're not breathing like yesterday.",
+    "start": 112.2,
+    "end": 118.48,
+    "words": [
+      {
+        "word": "I",
+        "start": 112.2,
+        "end": 112.353
+      },
+      {
+        "word": "feel",
+        "start": 112.353,
+        "end": 112.966
+      },
+      {
+        "word": "like",
+        "start": 112.966,
+        "end": 113.579
+      },
+      {
+        "word": "you",
+        "start": 113.579,
+        "end": 114.038
+      },
+      {
+        "word": "'",
+        "start": 114.038,
+        "end": 114.191
+      },
+      {
+        "word": "re",
+        "start": 114.191,
+        "end": 114.498
+      },
+      {
+        "word": "not",
+        "start": 114.498,
+        "end": 114.957
+      },
+      {
+        "word": "breathing",
+        "start": 114.957,
+        "end": 116.336
+      },
+      {
+        "word": "like",
+        "start": 116.336,
+        "end": 116.948
+      },
+      {
+        "word": "yesterday",
+        "start": 116.948,
+        "end": 118.327
+      },
+      {
+        "word": ".",
+        "start": 118.327,
+        "end": 118.48
+      }
+    ],
+    "source_text": "te siento que tú ya no suspiras como ayer.",
+    "source_words": [
+      {
+        "word": " Te",
+        "start": 112.2,
+        "end": 112.3
+      },
+      {
+        "word": " siento",
+        "start": 112.3,
+        "end": 112.98
+      },
+      {
+        "word": " que",
+        "start": 112.98,
+        "end": 113.58
+      },
+      {
+        "word": " tú",
+        "start": 113.58,
+        "end": 114.4
+      },
+      {
+        "word": " ya",
+        "start": 114.4,
+        "end": 114.9
+      },
+      {
+        "word": " no",
+        "start": 114.9,
+        "end": 115.5
+      },
+      {
+        "word": " suspiras",
+        "start": 115.5,
+        "end": 116.52
+      },
+      {
+        "word": " como",
+        "start": 116.52,
+        "end": 117.16
+      },
+      {
+        "word": " ayer.",
+        "start": 117.16,
+        "end": 118.48
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Tell me if it is or not.",
+    "start": 119.86,
+    "end": 121.02,
+    "words": [
+      {
+        "word": "Tell",
+        "start": 119.86,
+        "end": 120.118
+      },
+      {
+        "word": "me",
+        "start": 120.118,
+        "end": 120.247
+      },
+      {
+        "word": "if",
+        "start": 120.247,
+        "end": 120.376
+      },
+      {
+        "word": "it",
+        "start": 120.376,
+        "end": 120.504
+      },
+      {
+        "word": "is",
+        "start": 120.504,
+        "end": 120.633
+      },
+      {
+        "word": "or",
+        "start": 120.633,
+        "end": 120.762
+      },
+      {
+        "word": "not",
+        "start": 120.762,
+        "end": 120.956
+      },
+      {
+        "word": ".",
+        "start": 120.956,
+        "end": 121.02
+      }
+    ],
+    "source_text": "dime si es así o no.",
+    "source_words": [
+      {
+        "word": " Dime",
+        "start": 119.86,
+        "end": 120.14
+      },
+      {
+        "word": " si",
+        "start": 120.14,
+        "end": 120.26
+      },
+      {
+        "word": " es",
+        "start": 120.26,
+        "end": 120.52
+      },
+      {
+        "word": " así",
+        "start": 120.52,
+        "end": 120.94
+      },
+      {
+        "word": " o",
+        "start": 120.94,
+        "end": 121.02
+      },
+      {
+        "word": " no.",
+        "start": 121.02,
+        "end": 121.02
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "I feel like you don't love me anymore, that you don't sigh when you and I are in bed.",
+    "start": 121.54,
+    "end": 125.8,
+    "words": [
+      {
+        "word": "I",
+        "start": 121.54,
+        "end": 121.604
+      },
+      {
+        "word": "feel",
+        "start": 121.604,
+        "end": 121.858
+      },
+      {
+        "word": "like",
+        "start": 121.858,
+        "end": 122.112
+      },
+      {
+        "word": "you",
+        "start": 122.112,
+        "end": 122.303
+      },
+      {
+        "word": "don",
+        "start": 122.303,
+        "end": 122.494
+      },
+      {
+        "word": "'",
+        "start": 122.494,
+        "end": 122.557
+      },
+      {
+        "word": "t",
+        "start": 122.557,
+        "end": 122.621
+      },
+      {
+        "word": "love",
+        "start": 122.621,
+        "end": 122.875
+      },
+      {
+        "word": "me",
+        "start": 122.875,
+        "end": 123.002
+      },
+      {
+        "word": "anymore",
+        "start": 123.002,
+        "end": 123.447
+      },
+      {
+        "word": ",",
+        "start": 123.447,
+        "end": 123.511
+      },
+      {
+        "word": "that",
+        "start": 123.511,
+        "end": 123.765
+      },
+      {
+        "word": "you",
+        "start": 123.765,
+        "end": 123.956
+      },
+      {
+        "word": "don",
+        "start": 123.956,
+        "end": 124.147
+      },
+      {
+        "word": "'",
+        "start": 124.147,
+        "end": 124.21
+      },
+      {
+        "word": "t",
+        "start": 124.21,
+        "end": 124.274
+      },
+      {
+        "word": "sigh",
+        "start": 124.274,
+        "end": 124.528
+      },
+      {
+        "word": "when",
+        "start": 124.528,
+        "end": 124.783
+      },
+      {
+        "word": "you",
+        "start": 124.783,
+        "end": 124.973
+      },
+      {
+        "word": "and",
+        "start": 124.973,
+        "end": 125.164
+      },
+      {
+        "word": "I",
+        "start": 125.164,
+        "end": 125.228
+      },
+      {
+        "word": "are",
+        "start": 125.228,
+        "end": 125.419
+      },
+      {
+        "word": "in",
+        "start": 125.419,
+        "end": 125.546
+      },
+      {
+        "word": "bed",
+        "start": 125.546,
+        "end": 125.736
+      },
+      {
+        "word": ".",
+        "start": 125.736,
+        "end": 125.8
+      }
+    ],
+    "source_text": "te siento que como antes ya no me amas, que no suspira cuando tú y yo estamos en la cama.",
+    "source_words": [
+      {
+        "word": " Te",
+        "start": 121.54,
+        "end": 121.54
+      },
+      {
+        "word": " siento",
+        "start": 121.54,
+        "end": 121.68
+      },
+      {
+        "word": " que",
+        "start": 121.68,
+        "end": 121.92
+      },
+      {
+        "word": " como",
+        "start": 121.92,
+        "end": 122.16
+      },
+      {
+        "word": " antes",
+        "start": 122.16,
+        "end": 122.5
+      },
+      {
+        "word": " ya",
+        "start": 122.5,
+        "end": 122.7
+      },
+      {
+        "word": " no",
+        "start": 122.7,
+        "end": 122.84
+      },
+      {
+        "word": " me",
+        "start": 122.84,
+        "end": 123.08
+      },
+      {
+        "word": " amas,",
+        "start": 123.08,
+        "end": 123.38
+      },
+      {
+        "word": " que",
+        "start": 123.56,
+        "end": 123.64
+      },
+      {
+        "word": " no",
+        "start": 123.64,
+        "end": 123.8
+      },
+      {
+        "word": " suspira",
+        "start": 123.8,
+        "end": 124.22
+      },
+      {
+        "word": " cuando",
+        "start": 124.22,
+        "end": 124.48
+      },
+      {
+        "word": " tú",
+        "start": 124.48,
+        "end": 124.68
+      },
+      {
+        "word": " y",
+        "start": 124.68,
+        "end": 124.72
+      },
+      {
+        "word": " yo",
+        "start": 124.72,
+        "end": 124.88
+      },
+      {
+        "word": " estamos",
+        "start": 124.88,
+        "end": 125.12
+      },
+      {
+        "word": " en",
+        "start": 125.12,
+        "end": 125.4
+      },
+      {
+        "word": " la",
+        "start": 125.4,
+        "end": 125.6
+      },
+      {
+        "word": " cama.",
+        "start": 125.6,
+        "end": 125.8
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "That because of me you feel hurt and rebellious and I'm realizing our love is being lost.",
+    "start": 126.0,
+    "end": 130.86,
+    "words": [
+      {
+        "word": "That",
+        "start": 126.0,
+        "end": 126.266
+      },
+      {
+        "word": "because",
+        "start": 126.266,
+        "end": 126.732
+      },
+      {
+        "word": "of",
+        "start": 126.732,
+        "end": 126.865
+      },
+      {
+        "word": "me",
+        "start": 126.865,
+        "end": 126.999
+      },
+      {
+        "word": "you",
+        "start": 126.999,
+        "end": 127.198
+      },
+      {
+        "word": "feel",
+        "start": 127.198,
+        "end": 127.465
+      },
+      {
+        "word": "hurt",
+        "start": 127.465,
+        "end": 127.731
+      },
+      {
+        "word": "and",
+        "start": 127.731,
+        "end": 127.931
+      },
+      {
+        "word": "rebellious",
+        "start": 127.931,
+        "end": 128.596
+      },
+      {
+        "word": "and",
+        "start": 128.596,
+        "end": 128.796
+      },
+      {
+        "word": "I",
+        "start": 128.796,
+        "end": 128.863
+      },
+      {
+        "word": "'",
+        "start": 128.863,
+        "end": 128.929
+      },
+      {
+        "word": "m",
+        "start": 128.929,
+        "end": 128.996
+      },
+      {
+        "word": "realizing",
+        "start": 128.996,
+        "end": 129.595
+      },
+      {
+        "word": "our",
+        "start": 129.595,
+        "end": 129.795
+      },
+      {
+        "word": "love",
+        "start": 129.795,
+        "end": 130.061
+      },
+      {
+        "word": "is",
+        "start": 130.061,
+        "end": 130.194
+      },
+      {
+        "word": "being",
+        "start": 130.194,
+        "end": 130.527
+      },
+      {
+        "word": "lost",
+        "start": 130.527,
+        "end": 130.793
+      },
+      {
+        "word": ".",
+        "start": 130.793,
+        "end": 130.86
+      }
+    ],
+    "source_text": "que por mi culpa te sientes herida y rebelde y me estoy dando cuenta que nuestro amor se pierde.",
+    "source_words": [
+      {
+        "word": " Que",
+        "start": 126.0,
+        "end": 126.14
+      },
+      {
+        "word": " por",
+        "start": 126.14,
+        "end": 126.3
+      },
+      {
+        "word": " mi",
+        "start": 126.3,
+        "end": 126.48
+      },
+      {
+        "word": " culpa",
+        "start": 126.48,
+        "end": 126.72
+      },
+      {
+        "word": " te",
+        "start": 126.72,
+        "end": 127.06
+      },
+      {
+        "word": " sientes",
+        "start": 127.06,
+        "end": 127.24
+      },
+      {
+        "word": " herida",
+        "start": 127.24,
+        "end": 127.7
+      },
+      {
+        "word": " y",
+        "start": 127.7,
+        "end": 127.98
+      },
+      {
+        "word": " rebelde",
+        "start": 127.98,
+        "end": 128.38
+      },
+      {
+        "word": " y",
+        "start": 128.38,
+        "end": 128.64
+      },
+      {
+        "word": " me",
+        "start": 128.64,
+        "end": 128.8
+      },
+      {
+        "word": " estoy",
+        "start": 128.8,
+        "end": 128.96
+      },
+      {
+        "word": " dando",
+        "start": 128.96,
+        "end": 129.28
+      },
+      {
+        "word": " cuenta",
+        "start": 129.28,
+        "end": 129.6
+      },
+      {
+        "word": " que",
+        "start": 129.6,
+        "end": 129.94
+      },
+      {
+        "word": " nuestro",
+        "start": 129.94,
+        "end": 130.16
+      },
+      {
+        "word": " amor",
+        "start": 130.16,
+        "end": 130.36
+      },
+      {
+        "word": " se",
+        "start": 130.36,
+        "end": 130.6
+      },
+      {
+        "word": " pierde.",
+        "start": 130.6,
+        "end": 130.86
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "I'm here because I want to talk to you about us, let's be clear, love.",
+    "start": 131.12,
+    "end": 137.4,
+    "words": [
+      {
+        "word": "I",
+        "start": 131.12,
+        "end": 131.232
+      },
+      {
+        "word": "'",
+        "start": 131.232,
+        "end": 131.344
+      },
+      {
+        "word": "m",
+        "start": 131.344,
+        "end": 131.456
+      },
+      {
+        "word": "here",
+        "start": 131.456,
+        "end": 131.905
+      },
+      {
+        "word": "because",
+        "start": 131.905,
+        "end": 132.69
+      },
+      {
+        "word": "I",
+        "start": 132.69,
+        "end": 132.802
+      },
+      {
+        "word": "want",
+        "start": 132.802,
+        "end": 133.251
+      },
+      {
+        "word": "to",
+        "start": 133.251,
+        "end": 133.475
+      },
+      {
+        "word": "talk",
+        "start": 133.475,
+        "end": 133.924
+      },
+      {
+        "word": "to",
+        "start": 133.924,
+        "end": 134.148
+      },
+      {
+        "word": "you",
+        "start": 134.148,
+        "end": 134.484
+      },
+      {
+        "word": "about",
+        "start": 134.484,
+        "end": 135.045
+      },
+      {
+        "word": "us",
+        "start": 135.045,
+        "end": 135.269
+      },
+      {
+        "word": ",",
+        "start": 135.269,
+        "end": 135.381
+      },
+      {
+        "word": "let",
+        "start": 135.381,
+        "end": 135.718
+      },
+      {
+        "word": "'",
+        "start": 135.718,
+        "end": 135.83
+      },
+      {
+        "word": "s",
+        "start": 135.83,
+        "end": 135.942
+      },
+      {
+        "word": "be",
+        "start": 135.942,
+        "end": 136.166
+      },
+      {
+        "word": "clear",
+        "start": 136.166,
+        "end": 136.727
+      },
+      {
+        "word": ",",
+        "start": 136.727,
+        "end": 136.839
+      },
+      {
+        "word": "love",
+        "start": 136.839,
+        "end": 137.288
+      },
+      {
+        "word": ".",
+        "start": 137.288,
+        "end": 137.4
+      }
+    ],
+    "source_text": "estoy aquí porque quiero hablarte de lo nuestro, hablemos claro, amor.",
+    "source_words": [
+      {
+        "word": " Estoy",
+        "start": 131.12,
+        "end": 131.38
+      },
+      {
+        "word": " aquí",
+        "start": 131.38,
+        "end": 132.3
+      },
+      {
+        "word": " porque",
+        "start": 132.3,
+        "end": 133.9
+      },
+      {
+        "word": " quiero",
+        "start": 133.9,
+        "end": 134.34
+      },
+      {
+        "word": " hablarte",
+        "start": 134.34,
+        "end": 134.88
+      },
+      {
+        "word": " de",
+        "start": 134.88,
+        "end": 135.14
+      },
+      {
+        "word": " lo",
+        "start": 135.14,
+        "end": 135.32
+      },
+      {
+        "word": " nuestro,",
+        "start": 135.32,
+        "end": 135.66
+      },
+      {
+        "word": " hablemos",
+        "start": 135.68,
+        "end": 136.2
+      },
+      {
+        "word": " claro,",
+        "start": 136.2,
+        "end": 136.78
+      },
+      {
+        "word": " amor.",
+        "start": 137.38,
+        "end": 137.4
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "I miss you and I don't.",
+    "start": 137.4,
+    "end": 142.4,
+    "words": [
+      {
+        "word": "I",
+        "start": 137.4,
+        "end": 137.678
+      },
+      {
+        "word": "miss",
+        "start": 137.678,
+        "end": 138.789
+      },
+      {
+        "word": "you",
+        "start": 138.789,
+        "end": 139.622
+      },
+      {
+        "word": "and",
+        "start": 139.622,
+        "end": 140.456
+      },
+      {
+        "word": "I",
+        "start": 140.456,
+        "end": 140.733
+      },
+      {
+        "word": "don",
+        "start": 140.733,
+        "end": 141.567
+      },
+      {
+        "word": "'",
+        "start": 141.567,
+        "end": 141.844
+      },
+      {
+        "word": "t",
+        "start": 141.844,
+        "end": 142.122
+      },
+      {
+        "word": ".",
+        "start": 142.122,
+        "end": 142.4
+      }
+    ],
+    "source_text": "te extraño y no.",
+    "source_words": [
+      {
+        "word": " Te",
+        "start": 137.4,
+        "end": 138.56
+      },
+      {
+        "word": " extraño",
+        "start": 138.56,
+        "end": 140.7
+      },
+      {
+        "word": " y",
+        "start": 140.7,
+        "end": 141.44
+      },
+      {
+        "word": " no.",
+        "start": 141.44,
+        "end": 142.4
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "I just get a call, love, saying I miss you.",
+    "start": 143.8,
+    "end": 151.12,
+    "words": [
+      {
+        "word": "I",
+        "start": 143.8,
+        "end": 144.015
+      },
+      {
+        "word": "just",
+        "start": 144.015,
+        "end": 144.876
+      },
+      {
+        "word": "get",
+        "start": 144.876,
+        "end": 145.522
+      },
+      {
+        "word": "a",
+        "start": 145.522,
+        "end": 145.738
+      },
+      {
+        "word": "call",
+        "start": 145.738,
+        "end": 146.599
+      },
+      {
+        "word": ",",
+        "start": 146.599,
+        "end": 146.814
+      },
+      {
+        "word": "love",
+        "start": 146.814,
+        "end": 147.675
+      },
+      {
+        "word": ",",
+        "start": 147.675,
+        "end": 147.891
+      },
+      {
+        "word": "saying",
+        "start": 147.891,
+        "end": 149.182
+      },
+      {
+        "word": "I",
+        "start": 149.182,
+        "end": 149.398
+      },
+      {
+        "word": "miss",
+        "start": 149.398,
+        "end": 150.259
+      },
+      {
+        "word": "you",
+        "start": 150.259,
+        "end": 150.905
+      },
+      {
+        "word": ".",
+        "start": 150.905,
+        "end": 151.12
+      }
+    ],
+    "source_text": "recibo tan solo una llamada, amor, que diga que me extrañas.",
+    "source_words": [
+      {
+        "word": " Recibo",
+        "start": 143.8,
+        "end": 144.28
+      },
+      {
+        "word": " tan",
+        "start": 144.28,
+        "end": 144.6
+      },
+      {
+        "word": " solo",
+        "start": 144.6,
+        "end": 144.9
+      },
+      {
+        "word": " una",
+        "start": 144.9,
+        "end": 145.22
+      },
+      {
+        "word": " llamada,",
+        "start": 145.22,
+        "end": 145.74
+      },
+      {
+        "word": " amor,",
+        "start": 145.78,
+        "end": 146.1
+      },
+      {
+        "word": " que",
+        "start": 146.22,
+        "end": 146.32
+      },
+      {
+        "word": " diga",
+        "start": 146.32,
+        "end": 146.84
+      },
+      {
+        "word": " que",
+        "start": 146.84,
+        "end": 147.92
+      },
+      {
+        "word": " me",
+        "start": 147.92,
+        "end": 148.92
+      },
+      {
+        "word": " extrañas.",
+        "start": 148.92,
+        "end": 151.12
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "Mom, this feeling keeps me up.",
+    "start": 152.98,
+    "end": 158.78,
+    "words": [
+      {
+        "word": "Mom",
+        "start": 152.98,
+        "end": 153.676
+      },
+      {
+        "word": ",",
+        "start": 153.676,
+        "end": 153.908
+      },
+      {
+        "word": "this",
+        "start": 153.908,
+        "end": 154.836
+      },
+      {
+        "word": "feeling",
+        "start": 154.836,
+        "end": 156.46
+      },
+      {
+        "word": "keeps",
+        "start": 156.46,
+        "end": 157.62
+      },
+      {
+        "word": "me",
+        "start": 157.62,
+        "end": 158.084
+      },
+      {
+        "word": "up",
+        "start": 158.084,
+        "end": 158.548
+      },
+      {
+        "word": ".",
+        "start": 158.548,
+        "end": 158.78
+      }
+    ],
+    "source_text": "mamá, este presentimiento no me deja dormir.",
+    "source_words": [
+      {
+        "word": " Mamá,",
+        "start": 152.98,
+        "end": 153.82
+      },
+      {
+        "word": " este",
+        "start": 154.58,
+        "end": 154.74
+      },
+      {
+        "word": " presentimiento",
+        "start": 154.74,
+        "end": 155.7
+      },
+      {
+        "word": " no",
+        "start": 155.7,
+        "end": 157.9
+      },
+      {
+        "word": " me",
+        "start": 157.9,
+        "end": 158.06
+      },
+      {
+        "word": " deja",
+        "start": 158.06,
+        "end": 158.32
+      },
+      {
+        "word": " dormir.",
+        "start": 158.32,
+        "end": 158.78
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "What's the matter with you?",
+    "start": 161.46,
+    "end": 162.3,
+    "words": [
+      {
+        "word": "What",
+        "start": 161.46,
+        "end": 161.606
+      },
+      {
+        "word": "'",
+        "start": 161.606,
+        "end": 161.643
+      },
+      {
+        "word": "s",
+        "start": 161.643,
+        "end": 161.679
+      },
+      {
+        "word": "the",
+        "start": 161.679,
+        "end": 161.789
+      },
+      {
+        "word": "matter",
+        "start": 161.789,
+        "end": 162.008
+      },
+      {
+        "word": "with",
+        "start": 162.008,
+        "end": 162.154
+      },
+      {
+        "word": "you",
+        "start": 162.154,
+        "end": 162.263
+      },
+      {
+        "word": "?",
+        "start": 162.263,
+        "end": 162.3
+      }
+    ],
+    "source_text": "¿qué te pasa?",
+    "source_words": [
+      {
+        "word": " ¿Qué",
+        "start": 161.46,
+        "end": 161.64
+      },
+      {
+        "word": " te",
+        "start": 161.64,
+        "end": 161.92
+      },
+      {
+        "word": " pasa?",
+        "start": 161.92,
+        "end": 162.3
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "Let's have a talk.",
+    "start": 163.52,
+    "end": 164.36,
+    "words": [
+      {
+        "word": "Let",
+        "start": 163.52,
+        "end": 163.688
+      },
+      {
+        "word": "'",
+        "start": 163.688,
+        "end": 163.744
+      },
+      {
+        "word": "s",
+        "start": 163.744,
+        "end": 163.8
+      },
+      {
+        "word": "have",
+        "start": 163.8,
+        "end": 164.024
+      },
+      {
+        "word": "a",
+        "start": 164.024,
+        "end": 164.08
+      },
+      {
+        "word": "talk",
+        "start": 164.08,
+        "end": 164.304
+      },
+      {
+        "word": ".",
+        "start": 164.304,
+        "end": 164.36
+      }
+    ],
+    "source_text": "hablemos.",
+    "source_words": [
+      {
+        "word": " Hablemos.",
+        "start": 163.52,
+        "end": 164.36
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "I know you feel the same way I do.",
+    "start": 165.14,
+    "end": 166.82,
+    "words": [
+      {
+        "word": "I",
+        "start": 165.14,
+        "end": 165.205
+      },
+      {
+        "word": "know",
+        "start": 165.205,
+        "end": 165.463
+      },
+      {
+        "word": "you",
+        "start": 165.463,
+        "end": 165.657
+      },
+      {
+        "word": "feel",
+        "start": 165.657,
+        "end": 165.915
+      },
+      {
+        "word": "the",
+        "start": 165.915,
+        "end": 166.109
+      },
+      {
+        "word": "same",
+        "start": 166.109,
+        "end": 166.368
+      },
+      {
+        "word": "way",
+        "start": 166.368,
+        "end": 166.562
+      },
+      {
+        "word": "I",
+        "start": 166.562,
+        "end": 166.626
+      },
+      {
+        "word": "do",
+        "start": 166.626,
+        "end": 166.755
+      },
+      {
+        "word": ".",
+        "start": 166.755,
+        "end": 166.82
+      }
+    ],
+    "source_text": "yo sé que te sientes igual que yo.",
+    "source_words": [
+      {
+        "word": " Yo",
+        "start": 165.14,
+        "end": 165.34
+      },
+      {
+        "word": " sé",
+        "start": 165.34,
+        "end": 165.44
+      },
+      {
+        "word": " que",
+        "start": 165.44,
+        "end": 165.6
+      },
+      {
+        "word": " te",
+        "start": 165.6,
+        "end": 165.8
+      },
+      {
+        "word": " sientes",
+        "start": 165.8,
+        "end": 166.04
+      },
+      {
+        "word": " igual",
+        "start": 166.04,
+        "end": 166.34
+      },
+      {
+        "word": " que",
+        "start": 166.34,
+        "end": 166.54
+      },
+      {
+        "word": " yo.",
+        "start": 166.54,
+        "end": 166.82
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "But it's not here anymore.",
+    "start": 169.96,
+    "end": 171.96,
+    "words": [
+      {
+        "word": "But",
+        "start": 169.96,
+        "end": 170.233
+      },
+      {
+        "word": "it",
+        "start": 170.233,
+        "end": 170.415
+      },
+      {
+        "word": "'",
+        "start": 170.415,
+        "end": 170.505
+      },
+      {
+        "word": "s",
+        "start": 170.505,
+        "end": 170.596
+      },
+      {
+        "word": "not",
+        "start": 170.596,
+        "end": 170.869
+      },
+      {
+        "word": "here",
+        "start": 170.869,
+        "end": 171.233
+      },
+      {
+        "word": "anymore",
+        "start": 171.233,
+        "end": 171.869
+      },
+      {
+        "word": ".",
+        "start": 171.869,
+        "end": 171.96
+      }
+    ],
+    "source_text": "pero aquí ya no hay.",
+    "source_words": [
+      {
+        "word": " Pero",
+        "start": 169.95999999999998,
+        "end": 170.7
+      },
+      {
+        "word": " aquí",
+        "start": 170.7,
+        "end": 171.0
+      },
+      {
+        "word": " ya",
+        "start": 171.0,
+        "end": 171.44
+      },
+      {
+        "word": " no",
+        "start": 171.44,
+        "end": 171.74
+      },
+      {
+        "word": " hay.",
+        "start": 171.74,
+        "end": 171.96
+      }
+    ]
+  }
+]

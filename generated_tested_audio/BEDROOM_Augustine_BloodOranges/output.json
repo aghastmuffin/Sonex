@@ -1,0 +1,2897 @@
+{
+  "segments": [
+    {
+      "start": 22.58,
+      "end": 28.82,
+      "text": "thank you for the promise of your faith.",
+      "words": [
+        {
+          "word": "thank",
+          "start": 22.58,
+          "end": 24.754,
+          "score": 0.162
+        },
+        {
+          "word": "you",
+          "start": 24.774,
+          "end": 25.76,
+          "score": 0.337
+        },
+        {
+          "word": "for",
+          "start": 25.781,
+          "end": 25.841,
+          "score": 0.245
+        },
+        {
+          "word": "the",
+          "start": 26.384,
+          "end": 27.149,
+          "score": 0.481
+        },
+        {
+          "word": "promise",
+          "start": 28.055,
+          "end": 28.397,
+          "score": 0.168
+        },
+        {
+          "word": "of",
+          "start": 28.418,
+          "end": 28.458,
+          "score": 0.006
+        },
+        {
+          "word": "your",
+          "start": 28.478,
+          "end": 28.558,
+          "score": 0.022
+        },
+        {
+          "word": "faith.",
+          "start": 28.579,
+          "end": 28.82,
+          "score": 0.412
+        }
+      ]
+    },
+    {
+      "start": 28.8,
+      "end": 40.82,
+      "text": "thank you for all your praise, even if you promise me a way out of your gainless game.",
+      "words": [
+        {
+          "word": "thank",
+          "start": 28.8,
+          "end": 30.165,
+          "score": 0.568
+        },
+        {
+          "word": "you",
+          "start": 30.466,
+          "end": 34.439,
+          "score": 0.557
+        },
+        {
+          "word": "for",
+          "start": 34.459,
+          "end": 34.88,
+          "score": 0.509
+        },
+        {
+          "word": "all",
+          "start": 34.9,
+          "end": 34.961,
+          "score": 0.003
+        },
+        {
+          "word": "your",
+          "start": 34.981,
+          "end": 35.061,
+          "score": 0.01
+        },
+        {
+          "word": "praise,",
+          "start": 35.081,
+          "end": 38.412,
+          "score": 0.511
+        },
+        {
+          "word": "even",
+          "start": 38.432,
+          "end": 38.512,
+          "score": 0.006
+        },
+        {
+          "word": "if",
+          "start": 38.532,
+          "end": 38.573,
+          "score": 0.002
+        },
+        {
+          "word": "you",
+          "start": 38.593,
+          "end": 38.653,
+          "score": 0.198
+        },
+        {
+          "word": "promise",
+          "start": 39.797,
+          "end": 39.937,
+          "score": 0.011
+        },
+        {
+          "word": "me",
+          "start": 39.957,
+          "end": 39.997,
+          "score": 0.078
+        },
+        {
+          "word": "a",
+          "start": 40.017,
+          "end": 40.037,
+          "score": 0.189
+        },
+        {
+          "word": "way",
+          "start": 40.058,
+          "end": 40.118,
+          "score": 0.0
+        },
+        {
+          "word": "out",
+          "start": 40.138,
+          "end": 40.198,
+          "score": 0.003
+        },
+        {
+          "word": "of",
+          "start": 40.218,
+          "end": 40.258,
+          "score": 0.068
+        },
+        {
+          "word": "your",
+          "start": 40.278,
+          "end": 40.359,
+          "score": 0.076
+        },
+        {
+          "word": "gainless",
+          "start": 40.379,
+          "end": 40.539,
+          "score": 0.008
+        },
+        {
+          "word": "game.",
+          "start": 40.559,
+          "end": 40.82,
+          "score": 0.45
+        }
+      ]
+    },
+    {
+      "start": 83.34,
+      "end": 86.64,
+      "text": "my father was a young man.",
+      "words": [
+        {
+          "word": "my",
+          "start": 83.34,
+          "end": 84.879,
+          "score": 0.88
+        },
+        {
+          "word": "father",
+          "start": 85.405,
+          "end": 86.175,
+          "score": 0.457
+        },
+        {
+          "word": "was",
+          "start": 86.195,
+          "end": 86.256,
+          "score": 0.021
+        },
+        {
+          "word": "a",
+          "start": 86.276,
+          "end": 86.296,
+          "score": 0.038
+        },
+        {
+          "word": "young",
+          "start": 86.316,
+          "end": 86.418,
+          "score": 0.01
+        },
+        {
+          "word": "man.",
+          "start": 86.438,
+          "end": 86.64,
+          "score": 0.444
+        }
+      ]
+    },
+    {
+      "start": 87.82,
+      "end": 90.52,
+      "text": "my mother off the boat.",
+      "words": [
+        {
+          "word": "my",
+          "start": 87.82,
+          "end": 88.185,
+          "score": 0.587
+        },
+        {
+          "word": "mother",
+          "start": 88.916,
+          "end": 90.216,
+          "score": 0.196
+        },
+        {
+          "word": "off",
+          "start": 90.236,
+          "end": 90.297,
+          "score": 0.0
+        },
+        {
+          "word": "the",
+          "start": 90.317,
+          "end": 90.378,
+          "score": 0.002
+        },
+        {
+          "word": "boat.",
+          "start": 90.398,
+          "end": 90.52,
+          "score": 0.413
+        }
+      ]
+    },
+    {
+      "start": 92.3,
+      "end": 94.5,
+      "text": "my eyes were fresh at 21.",
+      "words": [
+        {
+          "word": "my",
+          "start": 92.3,
+          "end": 92.728,
+          "score": 0.766
+        },
+        {
+          "word": "eyes",
+          "start": 93.359,
+          "end": 93.848,
+          "score": 0.368
+        },
+        {
+          "word": "were",
+          "start": 93.869,
+          "end": 93.95,
+          "score": 0.006
+        },
+        {
+          "word": "fresh",
+          "start": 93.971,
+          "end": 94.073,
+          "score": 0.006
+        },
+        {
+          "word": "at",
+          "start": 94.093,
+          "end": 94.215,
+          "score": 0.244
+        },
+        {
+          "word": "21.",
+          "start": 94.236,
+          "end": 94.5,
+          "score": 0.923
+        }
+      ]
+    },
+    {
+      "start": 96.62,
+      "end": 99.08,
+      "text": "bruised but still afloat.",
+      "words": [
+        {
+          "word": "bruised",
+          "start": 96.62,
+          "end": 98.409,
+          "score": 0.383
+        },
+        {
+          "word": "but",
+          "start": 98.511,
+          "end": 98.572,
+          "score": 0.089
+        },
+        {
+          "word": "still",
+          "start": 98.592,
+          "end": 98.694,
+          "score": 0.001
+        },
+        {
+          "word": "afloat.",
+          "start": 98.714,
+          "end": 99.08,
+          "score": 0.246
+        }
+      ]
+    },
+    {
+      "start": 100.28,
+      "end": 102.16,
+      "text": "our heads have hit the pavement.",
+      "words": [
+        {
+          "word": "our",
+          "start": 100.28,
+          "end": 101.465,
+          "score": 0.258
+        },
+        {
+          "word": "heads",
+          "start": 101.486,
+          "end": 101.588,
+          "score": 0.014
+        },
+        {
+          "word": "have",
+          "start": 101.609,
+          "end": 101.69,
+          "score": 0.014
+        },
+        {
+          "word": "hit",
+          "start": 101.711,
+          "end": 101.772,
+          "score": 0.03
+        },
+        {
+          "word": "the",
+          "start": 101.793,
+          "end": 101.915,
+          "score": 0.309
+        },
+        {
+          "word": "pavement.",
+          "start": 101.936,
+          "end": 102.16,
+          "score": 0.198
+        }
+      ]
+    },
+    {
+      "start": 104.5,
+      "end": 106.28,
+      "text": "many times before.",
+      "words": [
+        {
+          "word": "many",
+          "start": 104.5,
+          "end": 105.36,
+          "score": 0.346
+        },
+        {
+          "word": "times",
+          "start": 105.564,
+          "end": 105.667,
+          "score": 0.007
+        },
+        {
+          "word": "before.",
+          "start": 105.687,
+          "end": 106.28,
+          "score": 0.313
+        }
+      ]
+    },
+    {
+      "start": 108.18,
+      "end": 111.48,
+      "text": "he's choked his face to soothe him.",
+      "words": [
+        {
+          "word": "he's",
+          "start": 108.18,
+          "end": 108.747,
+          "score": 0.368
+        },
+        {
+          "word": "choked",
+          "start": 108.767,
+          "end": 108.97,
+          "score": 0.294
+        },
+        {
+          "word": "his",
+          "start": 110.043,
+          "end": 110.103,
+          "score": 0.001
+        },
+        {
+          "word": "face",
+          "start": 110.124,
+          "end": 111.177,
+          "score": 0.741
+        },
+        {
+          "word": "to",
+          "start": 111.197,
+          "end": 111.237,
+          "score": 0.001
+        },
+        {
+          "word": "soothe",
+          "start": 111.258,
+          "end": 111.379,
+          "score": 0.015
+        },
+        {
+          "word": "him.",
+          "start": 111.399,
+          "end": 111.48,
+          "score": 0.234
+        }
+      ]
+    },
+    {
+      "start": 112.28,
+      "end": 113.901,
+      "text": "wondering that there's more.",
+      "words": [
+        {
+          "word": "wondering",
+          "start": 112.28,
+          "end": 113.511,
+          "score": 0.19
+        },
+        {
+          "word": "that",
+          "start": 113.531,
+          "end": 113.613,
+          "score": 0.004
+        },
+        {
+          "word": "there's",
+          "start": 113.634,
+          "end": 113.777,
+          "score": 0.068
+        },
+        {
+          "word": "more.",
+          "start": 113.798,
+          "end": 113.901,
+          "score": 0.196
+        }
+      ]
+    },
+    {
+      "start": 116.36,
+      "end": 121.9,
+      "text": "sing on my skin.",
+      "words": [
+        {
+          "word": "sing",
+          "start": 116.36,
+          "end": 121.658,
+          "score": 0.232
+        },
+        {
+          "word": "on",
+          "start": 121.679,
+          "end": 121.719,
+          "score": 0.004
+        },
+        {
+          "word": "my",
+          "start": 121.739,
+          "end": 121.779,
+          "score": 0.002
+        },
+        {
+          "word": "skin.",
+          "start": 121.799,
+          "end": 121.9,
+          "score": 0.199
+        }
+      ]
+    },
+    {
+      "start": 123.1,
+      "end": 128.3,
+      "text": "may have i loved and chose to sing.",
+      "words": [
+        {
+          "word": "may",
+          "start": 123.1,
+          "end": 127.655,
+          "score": 0.301
+        },
+        {
+          "word": "have",
+          "start": 127.675,
+          "end": 127.756,
+          "score": 0.014
+        },
+        {
+          "word": "i",
+          "start": 127.776,
+          "end": 127.796,
+          "score": 0.018
+        },
+        {
+          "word": "loved",
+          "start": 127.816,
+          "end": 127.917,
+          "score": 0.012
+        },
+        {
+          "word": "and",
+          "start": 127.937,
+          "end": 127.998,
+          "score": 0.009
+        },
+        {
+          "word": "chose",
+          "start": 128.018,
+          "end": 128.119,
+          "score": 0.015
+        },
+        {
+          "word": "to",
+          "start": 128.139,
+          "end": 128.179,
+          "score": 0.021
+        },
+        {
+          "word": "sing.",
+          "start": 128.199,
+          "end": 128.3,
+          "score": 0.164
+        }
+      ]
+    },
+    {
+      "start": 129.22,
+      "end": 138.16,
+      "text": "sing on my skin.",
+      "words": [
+        {
+          "word": "sing",
+          "start": 129.22,
+          "end": 137.919,
+          "score": 0.233
+        },
+        {
+          "word": "on",
+          "start": 137.939,
+          "end": 137.979,
+          "score": 0.014
+        },
+        {
+          "word": "my",
+          "start": 137.999,
+          "end": 138.04,
+          "score": 0.01
+        },
+        {
+          "word": "skin.",
+          "start": 138.06,
+          "end": 138.16,
+          "score": 0.159
+        }
+      ]
+    },
+    {
+      "start": 138.14,
+      "end": 144.4,
+      "text": "all that i can feel within.",
+      "words": [
+        {
+          "word": "all",
+          "start": 138.14,
+          "end": 143.917,
+          "score": 0.328
+        },
+        {
+          "word": "that",
+          "start": 143.937,
+          "end": 144.018,
+          "score": 0.016
+        },
+        {
+          "word": "i",
+          "start": 144.038,
+          "end": 144.058,
+          "score": 0.019
+        },
+        {
+          "word": "can",
+          "start": 144.078,
+          "end": 144.138,
+          "score": 0.018
+        },
+        {
+          "word": "feel",
+          "start": 144.159,
+          "end": 144.239,
+          "score": 0.016
+        },
+        {
+          "word": "within.",
+          "start": 144.259,
+          "end": 144.4,
+          "score": 0.132
+        }
+      ]
+    },
+    {
+      "start": 148.14,
+      "end": 151.56,
+      "text": "and no one even told me.",
+      "words": [
+        {
+          "word": "and",
+          "start": 148.14,
+          "end": 149.698,
+          "score": 0.474
+        },
+        {
+          "word": "no",
+          "start": 149.779,
+          "end": 149.82,
+          "score": 0.103
+        },
+        {
+          "word": "one",
+          "start": 149.84,
+          "end": 151.277,
+          "score": 0.498
+        },
+        {
+          "word": "even",
+          "start": 151.297,
+          "end": 151.378,
+          "score": 0.013
+        },
+        {
+          "word": "told",
+          "start": 151.398,
+          "end": 151.479,
+          "score": 0.001
+        },
+        {
+          "word": "me.",
+          "start": 151.5,
+          "end": 151.56,
+          "score": 0.311
+        }
+      ]
+    },
+    {
+      "start": 152.14,
+      "end": 154.18,
+      "text": "the way that you should feel.",
+      "words": [
+        {
+          "word": "the",
+          "start": 152.14,
+          "end": 153.65,
+          "score": 0.296
+        },
+        {
+          "word": "way",
+          "start": 153.67,
+          "end": 153.732,
+          "score": 0.011
+        },
+        {
+          "word": "that",
+          "start": 153.752,
+          "end": 153.834,
+          "score": 0.01
+        },
+        {
+          "word": "you",
+          "start": 153.854,
+          "end": 153.915,
+          "score": 0.01
+        },
+        {
+          "word": "should",
+          "start": 153.936,
+          "end": 154.058,
+          "score": 0.008
+        },
+        {
+          "word": "feel.",
+          "start": 154.078,
+          "end": 154.18,
+          "score": 0.199
+        }
+      ]
+    },
+    {
+      "start": 156.5,
+      "end": 159.14,
+      "text": "tell me that you lose your son.",
+      "words": [
+        {
+          "word": "tell",
+          "start": 156.5,
+          "end": 158.592,
+          "score": 0.218
+        },
+        {
+          "word": "me",
+          "start": 158.612,
+          "end": 158.653,
+          "score": 0.013
+        },
+        {
+          "word": "that",
+          "start": 158.673,
+          "end": 158.754,
+          "score": 0.01
+        },
+        {
+          "word": "you",
+          "start": 158.775,
+          "end": 158.836,
+          "score": 0.008
+        },
+        {
+          "word": "lose",
+          "start": 158.856,
+          "end": 158.937,
+          "score": 0.01
+        },
+        {
+          "word": "your",
+          "start": 158.958,
+          "end": 159.039,
+          "score": 0.009
+        },
+        {
+          "word": "son.",
+          "start": 159.059,
+          "end": 159.14,
+          "score": 0.232
+        }
+      ]
+    },
+    {
+      "start": 160.42,
+      "end": 163.14,
+      "text": "tell me that you lose your love.",
+      "words": [
+        {
+          "word": "tell",
+          "start": 160.42,
+          "end": 162.186,
+          "score": 0.214
+        },
+        {
+          "word": "me",
+          "start": 162.206,
+          "end": 162.247,
+          "score": 0.003
+        },
+        {
+          "word": "that",
+          "start": 162.267,
+          "end": 162.511,
+          "score": 0.549
+        },
+        {
+          "word": "you",
+          "start": 162.612,
+          "end": 162.815,
+          "score": 0.485
+        },
+        {
+          "word": "lose",
+          "start": 162.836,
+          "end": 162.917,
+          "score": 0.006
+        },
+        {
+          "word": "your",
+          "start": 162.937,
+          "end": 163.018,
+          "score": 0.003
+        },
+        {
+          "word": "love.",
+          "start": 163.039,
+          "end": 163.14,
+          "score": 0.194
+        }
+      ]
+    },
+    {
+      "start": 164.12,
+      "end": 167.8,
+      "text": "cry and burst my deafness.",
+      "words": [
+        {
+          "word": "cry",
+          "start": 164.12,
+          "end": 166.021,
+          "score": 0.233
+        },
+        {
+          "word": "and",
+          "start": 166.041,
+          "end": 166.324,
+          "score": 0.353
+        },
+        {
+          "word": "burst",
+          "start": 167.436,
+          "end": 167.537,
+          "score": 0.004
+        },
+        {
+          "word": "my",
+          "start": 167.558,
+          "end": 167.598,
+          "score": 0.017
+        },
+        {
+          "word": "deafness.",
+          "start": 167.618,
+          "end": 167.8,
+          "score": 0.11
+        }
+      ]
+    },
+    {
+      "start": 167.8,
+      "end": 170.16,
+      "text": "and she even falls asleep.",
+      "words": [
+        {
+          "word": "and",
+          "start": 167.8,
+          "end": 169.692,
+          "score": 0.249
+        },
+        {
+          "word": "she",
+          "start": 169.713,
+          "end": 169.774,
+          "score": 0.009
+        },
+        {
+          "word": "even",
+          "start": 169.794,
+          "end": 169.875,
+          "score": 0.04
+        },
+        {
+          "word": "falls",
+          "start": 169.896,
+          "end": 169.998,
+          "score": 0.012
+        },
+        {
+          "word": "asleep.",
+          "start": 170.018,
+          "end": 170.16,
+          "score": 0.14
+        }
+      ]
+    },
+    {
+      "start": 172.3,
+      "end": 175.14,
+      "text": "the things that i can't do to you.",
+      "words": [
+        {
+          "word": "the",
+          "start": 172.3,
+          "end": 172.361,
+          "score": 0.091
+        },
+        {
+          "word": "things",
+          "start": 174.532,
+          "end": 174.653,
+          "score": 0.01
+        },
+        {
+          "word": "that",
+          "start": 174.674,
+          "end": 174.755,
+          "score": 0.01
+        },
+        {
+          "word": "i",
+          "start": 174.775,
+          "end": 174.795,
+          "score": 0.028
+        },
+        {
+          "word": "can't",
+          "start": 174.816,
+          "end": 174.917,
+          "score": 0.021
+        },
+        {
+          "word": "do",
+          "start": 174.937,
+          "end": 174.978,
+          "score": 0.018
+        },
+        {
+          "word": "to",
+          "start": 174.998,
+          "end": 175.039,
+          "score": 0.022
+        },
+        {
+          "word": "you.",
+          "start": 175.059,
+          "end": 175.14,
+          "score": 0.22
+        }
+      ]
+    },
+    {
+      "start": 176.18,
+      "end": 179.28,
+      "text": "the things that i can't do to you.",
+      "words": [
+        {
+          "word": "the",
+          "start": 176.18,
+          "end": 178.652,
+          "score": 0.687
+        },
+        {
+          "word": "things",
+          "start": 178.672,
+          "end": 178.794,
+          "score": 0.007
+        },
+        {
+          "word": "that",
+          "start": 178.814,
+          "end": 178.895,
+          "score": 0.009
+        },
+        {
+          "word": "i",
+          "start": 178.916,
+          "end": 178.936,
+          "score": 0.018
+        },
+        {
+          "word": "can't",
+          "start": 178.956,
+          "end": 179.057,
+          "score": 0.012
+        },
+        {
+          "word": "do",
+          "start": 179.078,
+          "end": 179.118,
+          "score": 0.012
+        },
+        {
+          "word": "to",
+          "start": 179.138,
+          "end": 179.179,
+          "score": 0.014
+        },
+        {
+          "word": "you.",
+          "start": 179.199,
+          "end": 179.28,
+          "score": 0.227
+        }
+      ]
+    },
+    {
+      "start": 179.72,
+      "end": 184.44,
+      "text": "sing on my skin.",
+      "words": [
+        {
+          "word": "sing",
+          "start": 179.72,
+          "end": 184.198,
+          "score": 0.212
+        },
+        {
+          "word": "on",
+          "start": 184.218,
+          "end": 184.259,
+          "score": 0.019
+        },
+        {
+          "word": "my",
+          "start": 184.279,
+          "end": 184.319,
+          "score": 0.016
+        },
+        {
+          "word": "skin.",
+          "start": 184.339,
+          "end": 184.44,
+          "score": 0.158
+        }
+      ]
+    },
+    {
+      "start": 186.84,
+      "end": 192.38,
+      "text": "may have i loved and chose to sing.",
+      "words": [
+        {
+          "word": "may",
+          "start": 186.84,
+          "end": 191.735,
+          "score": 0.291
+        },
+        {
+          "word": "have",
+          "start": 191.756,
+          "end": 191.836,
+          "score": 0.023
+        },
+        {
+          "word": "i",
+          "start": 191.856,
+          "end": 191.876,
+          "score": 0.023
+        },
+        {
+          "word": "loved",
+          "start": 191.897,
+          "end": 191.997,
+          "score": 0.019
+        },
+        {
+          "word": "and",
+          "start": 192.018,
+          "end": 192.078,
+          "score": 0.016
+        },
+        {
+          "word": "chose",
+          "start": 192.098,
+          "end": 192.199,
+          "score": 0.023
+        },
+        {
+          "word": "to",
+          "start": 192.219,
+          "end": 192.259,
+          "score": 0.027
+        },
+        {
+          "word": "sing.",
+          "start": 192.279,
+          "end": 192.38,
+          "score": 0.166
+        }
+      ]
+    },
+    {
+      "start": 192.36,
+      "end": 200.18,
+      "text": "or i choose to sing on my skin.",
+      "words": [
+        {
+          "word": "or",
+          "start": 192.36,
+          "end": 199.597,
+          "score": 0.448
+        },
+        {
+          "word": "i",
+          "start": 199.617,
+          "end": 199.637,
+          "score": 0.023
+        },
+        {
+          "word": "choose",
+          "start": 199.657,
+          "end": 199.778,
+          "score": 0.023
+        },
+        {
+          "word": "to",
+          "start": 199.798,
+          "end": 199.838,
+          "score": 0.026
+        },
+        {
+          "word": "sing",
+          "start": 199.858,
+          "end": 199.939,
+          "score": 0.012
+        },
+        {
+          "word": "on",
+          "start": 199.959,
+          "end": 199.999,
+          "score": 0.016
+        },
+        {
+          "word": "my",
+          "start": 200.019,
+          "end": 200.059,
+          "score": 0.012
+        },
+        {
+          "word": "skin.",
+          "start": 200.08,
+          "end": 200.18,
+          "score": 0.158
+        }
+      ]
+    },
+    {
+      "start": 203.06,
+      "end": 209.04,
+      "text": "all that i can feel within.",
+      "words": [
+        {
+          "word": "all",
+          "start": 203.06,
+          "end": 208.557,
+          "score": 0.304
+        },
+        {
+          "word": "that",
+          "start": 208.577,
+          "end": 208.658,
+          "score": 0.008
+        },
+        {
+          "word": "i",
+          "start": 208.678,
+          "end": 208.698,
+          "score": 0.015
+        },
+        {
+          "word": "can",
+          "start": 208.718,
+          "end": 208.778,
+          "score": 0.008
+        },
+        {
+          "word": "feel",
+          "start": 208.799,
+          "end": 208.879,
+          "score": 0.006
+        },
+        {
+          "word": "within.",
+          "start": 208.899,
+          "end": 209.04,
+          "score": 0.139
+        }
+      ]
+    },
+    {
+      "start": 211.52,
+      "end": 212.661,
+      "text": "motifah.",
+      "words": [
+        {
+          "word": "motifah.",
+          "start": 211.52,
+          "end": 212.661,
+          "score": 0.218
+        }
+      ]
+    },
+    {
+      "start": 214.54,
+      "end": 218.12,
+      "text": "we heard it all for you.",
+      "words": [
+        {
+          "word": "we",
+          "start": 214.54,
+          "end": 217.271,
+          "score": 0.448
+        },
+        {
+          "word": "heard",
+          "start": 217.291,
+          "end": 217.797,
+          "score": 0.209
+        },
+        {
+          "word": "it",
+          "start": 217.817,
+          "end": 217.857,
+          "score": 0.016
+        },
+        {
+          "word": "all",
+          "start": 217.877,
+          "end": 217.938,
+          "score": 0.009
+        },
+        {
+          "word": "for",
+          "start": 217.958,
+          "end": 218.019,
+          "score": 0.003
+        },
+        {
+          "word": "you.",
+          "start": 218.039,
+          "end": 218.12,
+          "score": 0.244
+        }
+      ]
+    },
+    {
+      "start": 221.44,
+      "end": 222.581,
+      "text": "motifah.",
+      "words": [
+        {
+          "word": "motifah.",
+          "start": 221.44,
+          "end": 222.581,
+          "score": 0.217
+        }
+      ]
+    },
+    {
+      "start": 223.16,
+      "end": 226.1,
+      "text": "we waited here for you.",
+      "words": [
+        {
+          "word": "we",
+          "start": 223.16,
+          "end": 225.674,
+          "score": 0.432
+        },
+        {
+          "word": "waited",
+          "start": 225.695,
+          "end": 225.816,
+          "score": 0.014
+        },
+        {
+          "word": "here",
+          "start": 225.837,
+          "end": 225.918,
+          "score": 0.015
+        },
+        {
+          "word": "for",
+          "start": 225.938,
+          "end": 225.999,
+          "score": 0.01
+        },
+        {
+          "word": "you.",
+          "start": 226.019,
+          "end": 226.1,
+          "score": 0.234
+        }
+      ]
+    },
+    {
+      "start": 227.38,
+      "end": 228.521,
+      "text": "motifah.",
+      "words": [
+        {
+          "word": "motifah.",
+          "start": 227.38,
+          "end": 228.521,
+          "score": 0.243
+        }
+      ]
+    },
+    {
+      "start": 230.92,
+      "end": 234.06,
+      "text": "we heard it all for you.",
+      "words": [
+        {
+          "word": "we",
+          "start": 230.92,
+          "end": 233.068,
+          "score": 0.43
+        },
+        {
+          "word": "heard",
+          "start": 233.088,
+          "end": 233.736,
+          "score": 0.244
+        },
+        {
+          "word": "it",
+          "start": 233.756,
+          "end": 233.797,
+          "score": 0.002
+        },
+        {
+          "word": "all",
+          "start": 233.817,
+          "end": 233.878,
+          "score": 0.01
+        },
+        {
+          "word": "for",
+          "start": 233.898,
+          "end": 233.959,
+          "score": 0.002
+        },
+        {
+          "word": "you.",
+          "start": 233.979,
+          "end": 234.06,
+          "score": 0.238
+        }
+      ]
+    },
+    {
+      "start": 237.1,
+      "end": 238.401,
+      "text": "motifah.",
+      "words": [
+        {
+          "word": "motifah.",
+          "start": 237.1,
+          "end": 238.401,
+          "score": 0.198
+        }
+      ]
+    },
+    {
+      "start": 239.16,
+      "end": 242.12,
+      "text": "we waited here for you.",
+      "words": [
+        {
+          "word": "we",
+          "start": 239.16,
+          "end": 241.694,
+          "score": 0.406
+        },
+        {
+          "word": "waited",
+          "start": 241.715,
+          "end": 241.836,
+          "score": 0.004
+        },
+        {
+          "word": "here",
+          "start": 241.857,
+          "end": 241.938,
+          "score": 0.006
+        },
+        {
+          "word": "for",
+          "start": 241.958,
+          "end": 242.019,
+          "score": 0.004
+        },
+        {
+          "word": "you.",
+          "start": 242.039,
+          "end": 242.12,
+          "score": 0.243
+        }
+      ]
+    },
+    {
+      "start": 245.32,
+      "end": 246.621,
+      "text": "motifah.",
+      "words": [
+        {
+          "word": "motifah.",
+          "start": 245.32,
+          "end": 246.621,
+          "score": 0.456
+        }
+      ]
+    },
+    {
+      "start": 247.2,
+      "end": 250.34,
+      "text": "we heard it all for you.",
+      "words": [
+        {
+          "word": "we",
+          "start": 247.2,
+          "end": 249.895,
+          "score": 0.442
+        },
+        {
+          "word": "heard",
+          "start": 249.915,
+          "end": 250.016,
+          "score": 0.007
+        },
+        {
+          "word": "it",
+          "start": 250.036,
+          "end": 250.077,
+          "score": 0.01
+        },
+        {
+          "word": "all",
+          "start": 250.097,
+          "end": 250.158,
+          "score": 0.008
+        },
+        {
+          "word": "for",
+          "start": 250.178,
+          "end": 250.239,
+          "score": 0.008
+        },
+        {
+          "word": "you.",
+          "start": 250.259,
+          "end": 250.34,
+          "score": 0.234
+        }
+      ]
+    },
+    {
+      "start": 252.48,
+      "end": 253.781,
+      "text": "motifah.",
+      "words": [
+        {
+          "word": "motifah.",
+          "start": 252.48,
+          "end": 253.781,
+          "score": 0.227
+        }
+      ]
+    },
+    {
+      "start": 255.2,
+      "end": 258.08,
+      "text": "we waited here for you.",
+      "words": [
+        {
+          "word": "we",
+          "start": 255.2,
+          "end": 257.026,
+          "score": 0.674
+        },
+        {
+          "word": "waited",
+          "start": 257.593,
+          "end": 257.715,
+          "score": 0.026
+        },
+        {
+          "word": "here",
+          "start": 257.735,
+          "end": 257.898,
+          "score": 0.246
+        },
+        {
+          "word": "for",
+          "start": 257.918,
+          "end": 257.979,
+          "score": 0.015
+        },
+        {
+          "word": "you.",
+          "start": 257.999,
+          "end": 258.08,
+          "score": 0.245
+        }
+      ]
+    },
+    {
+      "start": 259.08,
+      "end": 260.381,
+      "text": "motifah.",
+      "words": [
+        {
+          "word": "motifah.",
+          "start": 259.08,
+          "end": 260.381,
+          "score": 0.24
+        }
+      ]
+    },
+    {
+      "start": 260.36,
+      "end": 263.04,
+      "text": "we waited here for you.",
+      "words": [
+        {
+          "word": "we",
+          "start": 260.36,
+          "end": 262.614,
+          "score": 0.472
+        },
+        {
+          "word": "waited",
+          "start": 262.634,
+          "end": 262.756,
+          "score": 0.0
+        },
+        {
+          "word": "here",
+          "start": 262.776,
+          "end": 262.858,
+          "score": 0.0
+        },
+        {
+          "word": "for",
+          "start": 262.878,
+          "end": 262.939,
+          "score": 0.0
+        },
+        {
+          "word": "you.",
+          "start": 262.959,
+          "end": 263.04,
+          "score": 0.25
+        }
+      ]
+    },
+    {
+      "start": 263.1,
+      "end": 269.32,
+      "text": "we waited here for you.",
+      "words": [
+        {
+          "word": "we",
+          "start": 263.1,
+          "end": 266.965,
+          "score": 0.441
+        },
+        {
+          "word": "waited",
+          "start": 266.985,
+          "end": 267.831,
+          "score": 0.181
+        },
+        {
+          "word": "here",
+          "start": 267.851,
+          "end": 268.958,
+          "score": 0.784
+        },
+        {
+          "word": "for",
+          "start": 268.978,
+          "end": 269.038,
+          "score": 0.008
+        },
+        {
+          "word": "you.",
+          "start": 269.058,
+          "end": 269.32,
+          "score": 0.457
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "thank",
+      "start": 22.58,
+      "end": 24.754,
+      "score": 0.162
+    },
+    {
+      "word": "you",
+      "start": 24.774,
+      "end": 25.76,
+      "score": 0.337
+    },
+    {
+      "word": "for",
+      "start": 25.781,
+      "end": 25.841,
+      "score": 0.245
+    },
+    {
+      "word": "the",
+      "start": 26.384,
+      "end": 27.149,
+      "score": 0.481
+    },
+    {
+      "word": "promise",
+      "start": 28.055,
+      "end": 28.397,
+      "score": 0.168
+    },
+    {
+      "word": "of",
+      "start": 28.418,
+      "end": 28.458,
+      "score": 0.006
+    },
+    {
+      "word": "your",
+      "start": 28.478,
+      "end": 28.558,
+      "score": 0.022
+    },
+    {
+      "word": "faith.",
+      "start": 28.579,
+      "end": 28.82,
+      "score": 0.412
+    },
+    {
+      "word": "thank",
+      "start": 28.8,
+      "end": 30.165,
+      "score": 0.568
+    },
+    {
+      "word": "you",
+      "start": 30.466,
+      "end": 34.439,
+      "score": 0.557
+    },
+    {
+      "word": "for",
+      "start": 34.459,
+      "end": 34.88,
+      "score": 0.509
+    },
+    {
+      "word": "all",
+      "start": 34.9,
+      "end": 34.961,
+      "score": 0.003
+    },
+    {
+      "word": "your",
+      "start": 34.981,
+      "end": 35.061,
+      "score": 0.01
+    },
+    {
+      "word": "praise,",
+      "start": 35.081,
+      "end": 38.412,
+      "score": 0.511
+    },
+    {
+      "word": "even",
+      "start": 38.432,
+      "end": 38.512,
+      "score": 0.006
+    },
+    {
+      "word": "if",
+      "start": 38.532,
+      "end": 38.573,
+      "score": 0.002
+    },
+    {
+      "word": "you",
+      "start": 38.593,
+      "end": 38.653,
+      "score": 0.198
+    },
+    {
+      "word": "promise",
+      "start": 39.797,
+      "end": 39.937,
+      "score": 0.011
+    },
+    {
+      "word": "me",
+      "start": 39.957,
+      "end": 39.997,
+      "score": 0.078
+    },
+    {
+      "word": "a",
+      "start": 40.017,
+      "end": 40.037,
+      "score": 0.189
+    },
+    {
+      "word": "way",
+      "start": 40.058,
+      "end": 40.118,
+      "score": 0.0
+    },
+    {
+      "word": "out",
+      "start": 40.138,
+      "end": 40.198,
+      "score": 0.003
+    },
+    {
+      "word": "of",
+      "start": 40.218,
+      "end": 40.258,
+      "score": 0.068
+    },
+    {
+      "word": "your",
+      "start": 40.278,
+      "end": 40.359,
+      "score": 0.076
+    },
+    {
+      "word": "gainless",
+      "start": 40.379,
+      "end": 40.539,
+      "score": 0.008
+    },
+    {
+      "word": "game.",
+      "start": 40.559,
+      "end": 40.82,
+      "score": 0.45
+    },
+    {
+      "word": "my",
+      "start": 83.34,
+      "end": 84.879,
+      "score": 0.88
+    },
+    {
+      "word": "father",
+      "start": 85.405,
+      "end": 86.175,
+      "score": 0.457
+    },
+    {
+      "word": "was",
+      "start": 86.195,
+      "end": 86.256,
+      "score": 0.021
+    },
+    {
+      "word": "a",
+      "start": 86.276,
+      "end": 86.296,
+      "score": 0.038
+    },
+    {
+      "word": "young",
+      "start": 86.316,
+      "end": 86.418,
+      "score": 0.01
+    },
+    {
+      "word": "man.",
+      "start": 86.438,
+      "end": 86.64,
+      "score": 0.444
+    },
+    {
+      "word": "my",
+      "start": 87.82,
+      "end": 88.185,
+      "score": 0.587
+    },
+    {
+      "word": "mother",
+      "start": 88.916,
+      "end": 90.216,
+      "score": 0.196
+    },
+    {
+      "word": "off",
+      "start": 90.236,
+      "end": 90.297,
+      "score": 0.0
+    },
+    {
+      "word": "the",
+      "start": 90.317,
+      "end": 90.378,
+      "score": 0.002
+    },
+    {
+      "word": "boat.",
+      "start": 90.398,
+      "end": 90.52,
+      "score": 0.413
+    },
+    {
+      "word": "my",
+      "start": 92.3,
+      "end": 92.728,
+      "score": 0.766
+    },
+    {
+      "word": "eyes",
+      "start": 93.359,
+      "end": 93.848,
+      "score": 0.368
+    },
+    {
+      "word": "were",
+      "start": 93.869,
+      "end": 93.95,
+      "score": 0.006
+    },
+    {
+      "word": "fresh",
+      "start": 93.971,
+      "end": 94.073,
+      "score": 0.006
+    },
+    {
+      "word": "at",
+      "start": 94.093,
+      "end": 94.215,
+      "score": 0.244
+    },
+    {
+      "word": "21.",
+      "start": 94.236,
+      "end": 94.5,
+      "score": 0.923
+    },
+    {
+      "word": "bruised",
+      "start": 96.62,
+      "end": 98.409,
+      "score": 0.383
+    },
+    {
+      "word": "but",
+      "start": 98.511,
+      "end": 98.572,
+      "score": 0.089
+    },
+    {
+      "word": "still",
+      "start": 98.592,
+      "end": 98.694,
+      "score": 0.001
+    },
+    {
+      "word": "afloat.",
+      "start": 98.714,
+      "end": 99.08,
+      "score": 0.246
+    },
+    {
+      "word": "our",
+      "start": 100.28,
+      "end": 101.465,
+      "score": 0.258
+    },
+    {
+      "word": "heads",
+      "start": 101.486,
+      "end": 101.588,
+      "score": 0.014
+    },
+    {
+      "word": "have",
+      "start": 101.609,
+      "end": 101.69,
+      "score": 0.014
+    },
+    {
+      "word": "hit",
+      "start": 101.711,
+      "end": 101.772,
+      "score": 0.03
+    },
+    {
+      "word": "the",
+      "start": 101.793,
+      "end": 101.915,
+      "score": 0.309
+    },
+    {
+      "word": "pavement.",
+      "start": 101.936,
+      "end": 102.16,
+      "score": 0.198
+    },
+    {
+      "word": "many",
+      "start": 104.5,
+      "end": 105.36,
+      "score": 0.346
+    },
+    {
+      "word": "times",
+      "start": 105.564,
+      "end": 105.667,
+      "score": 0.007
+    },
+    {
+      "word": "before.",
+      "start": 105.687,
+      "end": 106.28,
+      "score": 0.313
+    },
+    {
+      "word": "he's",
+      "start": 108.18,
+      "end": 108.747,
+      "score": 0.368
+    },
+    {
+      "word": "choked",
+      "start": 108.767,
+      "end": 108.97,
+      "score": 0.294
+    },
+    {
+      "word": "his",
+      "start": 110.043,
+      "end": 110.103,
+      "score": 0.001
+    },
+    {
+      "word": "face",
+      "start": 110.124,
+      "end": 111.177,
+      "score": 0.741
+    },
+    {
+      "word": "to",
+      "start": 111.197,
+      "end": 111.237,
+      "score": 0.001
+    },
+    {
+      "word": "soothe",
+      "start": 111.258,
+      "end": 111.379,
+      "score": 0.015
+    },
+    {
+      "word": "him.",
+      "start": 111.399,
+      "end": 111.48,
+      "score": 0.234
+    },
+    {
+      "word": "wondering",
+      "start": 112.28,
+      "end": 113.511,
+      "score": 0.19
+    },
+    {
+      "word": "that",
+      "start": 113.531,
+      "end": 113.613,
+      "score": 0.004
+    },
+    {
+      "word": "there's",
+      "start": 113.634,
+      "end": 113.777,
+      "score": 0.068
+    },
+    {
+      "word": "more.",
+      "start": 113.798,
+      "end": 113.901,
+      "score": 0.196
+    },
+    {
+      "word": "sing",
+      "start": 116.36,
+      "end": 121.658,
+      "score": 0.232
+    },
+    {
+      "word": "on",
+      "start": 121.679,
+      "end": 121.719,
+      "score": 0.004
+    },
+    {
+      "word": "my",
+      "start": 121.739,
+      "end": 121.779,
+      "score": 0.002
+    },
+    {
+      "word": "skin.",
+      "start": 121.799,
+      "end": 121.9,
+      "score": 0.199
+    },
+    {
+      "word": "may",
+      "start": 123.1,
+      "end": 127.655,
+      "score": 0.301
+    },
+    {
+      "word": "have",
+      "start": 127.675,
+      "end": 127.756,
+      "score": 0.014
+    },
+    {
+      "word": "i",
+      "start": 127.776,
+      "end": 127.796,
+      "score": 0.018
+    },
+    {
+      "word": "loved",
+      "start": 127.816,
+      "end": 127.917,
+      "score": 0.012
+    },
+    {
+      "word": "and",
+      "start": 127.937,
+      "end": 127.998,
+      "score": 0.009
+    },
+    {
+      "word": "chose",
+      "start": 128.018,
+      "end": 128.119,
+      "score": 0.015
+    },
+    {
+      "word": "to",
+      "start": 128.139,
+      "end": 128.179,
+      "score": 0.021
+    },
+    {
+      "word": "sing.",
+      "start": 128.199,
+      "end": 128.3,
+      "score": 0.164
+    },
+    {
+      "word": "sing",
+      "start": 129.22,
+      "end": 137.919,
+      "score": 0.233
+    },
+    {
+      "word": "on",
+      "start": 137.939,
+      "end": 137.979,
+      "score": 0.014
+    },
+    {
+      "word": "my",
+      "start": 137.999,
+      "end": 138.04,
+      "score": 0.01
+    },
+    {
+      "word": "skin.",
+      "start": 138.06,
+      "end": 138.16,
+      "score": 0.159
+    },
+    {
+      "word": "all",
+      "start": 138.14,
+      "end": 143.917,
+      "score": 0.328
+    },
+    {
+      "word": "that",
+      "start": 143.937,
+      "end": 144.018,
+      "score": 0.016
+    },
+    {
+      "word": "i",
+      "start": 144.038,
+      "end": 144.058,
+      "score": 0.019
+    },
+    {
+      "word": "can",
+      "start": 144.078,
+      "end": 144.138,
+      "score": 0.018
+    },
+    {
+      "word": "feel",
+      "start": 144.159,
+      "end": 144.239,
+      "score": 0.016
+    },
+    {
+      "word": "within.",
+      "start": 144.259,
+      "end": 144.4,
+      "score": 0.132
+    },
+    {
+      "word": "and",
+      "start": 148.14,
+      "end": 149.698,
+      "score": 0.474
+    },
+    {
+      "word": "no",
+      "start": 149.779,
+      "end": 149.82,
+      "score": 0.103
+    },
+    {
+      "word": "one",
+      "start": 149.84,
+      "end": 151.277,
+      "score": 0.498
+    },
+    {
+      "word": "even",
+      "start": 151.297,
+      "end": 151.378,
+      "score": 0.013
+    },
+    {
+      "word": "told",
+      "start": 151.398,
+      "end": 151.479,
+      "score": 0.001
+    },
+    {
+      "word": "me.",
+      "start": 151.5,
+      "end": 151.56,
+      "score": 0.311
+    },
+    {
+      "word": "the",
+      "start": 152.14,
+      "end": 153.65,
+      "score": 0.296
+    },
+    {
+      "word": "way",
+      "start": 153.67,
+      "end": 153.732,
+      "score": 0.011
+    },
+    {
+      "word": "that",
+      "start": 153.752,
+      "end": 153.834,
+      "score": 0.01
+    },
+    {
+      "word": "you",
+      "start": 153.854,
+      "end": 153.915,
+      "score": 0.01
+    },
+    {
+      "word": "should",
+      "start": 153.936,
+      "end": 154.058,
+      "score": 0.008
+    },
+    {
+      "word": "feel.",
+      "start": 154.078,
+      "end": 154.18,
+      "score": 0.199
+    },
+    {
+      "word": "tell",
+      "start": 156.5,
+      "end": 158.592,
+      "score": 0.218
+    },
+    {
+      "word": "me",
+      "start": 158.612,
+      "end": 158.653,
+      "score": 0.013
+    },
+    {
+      "word": "that",
+      "start": 158.673,
+      "end": 158.754,
+      "score": 0.01
+    },
+    {
+      "word": "you",
+      "start": 158.775,
+      "end": 158.836,
+      "score": 0.008
+    },
+    {
+      "word": "lose",
+      "start": 158.856,
+      "end": 158.937,
+      "score": 0.01
+    },
+    {
+      "word": "your",
+      "start": 158.958,
+      "end": 159.039,
+      "score": 0.009
+    },
+    {
+      "word": "son.",
+      "start": 159.059,
+      "end": 159.14,
+      "score": 0.232
+    },
+    {
+      "word": "tell",
+      "start": 160.42,
+      "end": 162.186,
+      "score": 0.214
+    },
+    {
+      "word": "me",
+      "start": 162.206,
+      "end": 162.247,
+      "score": 0.003
+    },
+    {
+      "word": "that",
+      "start": 162.267,
+      "end": 162.511,
+      "score": 0.549
+    },
+    {
+      "word": "you",
+      "start": 162.612,
+      "end": 162.815,
+      "score": 0.485
+    },
+    {
+      "word": "lose",
+      "start": 162.836,
+      "end": 162.917,
+      "score": 0.006
+    },
+    {
+      "word": "your",
+      "start": 162.937,
+      "end": 163.018,
+      "score": 0.003
+    },
+    {
+      "word": "love.",
+      "start": 163.039,
+      "end": 163.14,
+      "score": 0.194
+    },
+    {
+      "word": "cry",
+      "start": 164.12,
+      "end": 166.021,
+      "score": 0.233
+    },
+    {
+      "word": "and",
+      "start": 166.041,
+      "end": 166.324,
+      "score": 0.353
+    },
+    {
+      "word": "burst",
+      "start": 167.436,
+      "end": 167.537,
+      "score": 0.004
+    },
+    {
+      "word": "my",
+      "start": 167.558,
+      "end": 167.598,
+      "score": 0.017
+    },
+    {
+      "word": "deafness.",
+      "start": 167.618,
+      "end": 167.8,
+      "score": 0.11
+    },
+    {
+      "word": "and",
+      "start": 167.8,
+      "end": 169.692,
+      "score": 0.249
+    },
+    {
+      "word": "she",
+      "start": 169.713,
+      "end": 169.774,
+      "score": 0.009
+    },
+    {
+      "word": "even",
+      "start": 169.794,
+      "end": 169.875,
+      "score": 0.04
+    },
+    {
+      "word": "falls",
+      "start": 169.896,
+      "end": 169.998,
+      "score": 0.012
+    },
+    {
+      "word": "asleep.",
+      "start": 170.018,
+      "end": 170.16,
+      "score": 0.14
+    },
+    {
+      "word": "the",
+      "start": 172.3,
+      "end": 172.361,
+      "score": 0.091
+    },
+    {
+      "word": "things",
+      "start": 174.532,
+      "end": 174.653,
+      "score": 0.01
+    },
+    {
+      "word": "that",
+      "start": 174.674,
+      "end": 174.755,
+      "score": 0.01
+    },
+    {
+      "word": "i",
+      "start": 174.775,
+      "end": 174.795,
+      "score": 0.028
+    },
+    {
+      "word": "can't",
+      "start": 174.816,
+      "end": 174.917,
+      "score": 0.021
+    },
+    {
+      "word": "do",
+      "start": 174.937,
+      "end": 174.978,
+      "score": 0.018
+    },
+    {
+      "word": "to",
+      "start": 174.998,
+      "end": 175.039,
+      "score": 0.022
+    },
+    {
+      "word": "you.",
+      "start": 175.059,
+      "end": 175.14,
+      "score": 0.22
+    },
+    {
+      "word": "the",
+      "start": 176.18,
+      "end": 178.652,
+      "score": 0.687
+    },
+    {
+      "word": "things",
+      "start": 178.672,
+      "end": 178.794,
+      "score": 0.007
+    },
+    {
+      "word": "that",
+      "start": 178.814,
+      "end": 178.895,
+      "score": 0.009
+    },
+    {
+      "word": "i",
+      "start": 178.916,
+      "end": 178.936,
+      "score": 0.018
+    },
+    {
+      "word": "can't",
+      "start": 178.956,
+      "end": 179.057,
+      "score": 0.012
+    },
+    {
+      "word": "do",
+      "start": 179.078,
+      "end": 179.118,
+      "score": 0.012
+    },
+    {
+      "word": "to",
+      "start": 179.138,
+      "end": 179.179,
+      "score": 0.014
+    },
+    {
+      "word": "you.",
+      "start": 179.199,
+      "end": 179.28,
+      "score": 0.227
+    },
+    {
+      "word": "sing",
+      "start": 179.72,
+      "end": 184.198,
+      "score": 0.212
+    },
+    {
+      "word": "on",
+      "start": 184.218,
+      "end": 184.259,
+      "score": 0.019
+    },
+    {
+      "word": "my",
+      "start": 184.279,
+      "end": 184.319,
+      "score": 0.016
+    },
+    {
+      "word": "skin.",
+      "start": 184.339,
+      "end": 184.44,
+      "score": 0.158
+    },
+    {
+      "word": "may",
+      "start": 186.84,
+      "end": 191.735,
+      "score": 0.291
+    },
+    {
+      "word": "have",
+      "start": 191.756,
+      "end": 191.836,
+      "score": 0.023
+    },
+    {
+      "word": "i",
+      "start": 191.856,
+      "end": 191.876,
+      "score": 0.023
+    },
+    {
+      "word": "loved",
+      "start": 191.897,
+      "end": 191.997,
+      "score": 0.019
+    },
+    {
+      "word": "and",
+      "start": 192.018,
+      "end": 192.078,
+      "score": 0.016
+    },
+    {
+      "word": "chose",
+      "start": 192.098,
+      "end": 192.199,
+      "score": 0.023
+    },
+    {
+      "word": "to",
+      "start": 192.219,
+      "end": 192.259,
+      "score": 0.027
+    },
+    {
+      "word": "sing.",
+      "start": 192.279,
+      "end": 192.38,
+      "score": 0.166
+    },
+    {
+      "word": "or",
+      "start": 192.36,
+      "end": 199.597,
+      "score": 0.448
+    },
+    {
+      "word": "i",
+      "start": 199.617,
+      "end": 199.637,
+      "score": 0.023
+    },
+    {
+      "word": "choose",
+      "start": 199.657,
+      "end": 199.778,
+      "score": 0.023
+    },
+    {
+      "word": "to",
+      "start": 199.798,
+      "end": 199.838,
+      "score": 0.026
+    },
+    {
+      "word": "sing",
+      "start": 199.858,
+      "end": 199.939,
+      "score": 0.012
+    },
+    {
+      "word": "on",
+      "start": 199.959,
+      "end": 199.999,
+      "score": 0.016
+    },
+    {
+      "word": "my",
+      "start": 200.019,
+      "end": 200.059,
+      "score": 0.012
+    },
+    {
+      "word": "skin.",
+      "start": 200.08,
+      "end": 200.18,
+      "score": 0.158
+    },
+    {
+      "word": "all",
+      "start": 203.06,
+      "end": 208.557,
+      "score": 0.304
+    },
+    {
+      "word": "that",
+      "start": 208.577,
+      "end": 208.658,
+      "score": 0.008
+    },
+    {
+      "word": "i",
+      "start": 208.678,
+      "end": 208.698,
+      "score": 0.015
+    },
+    {
+      "word": "can",
+      "start": 208.718,
+      "end": 208.778,
+      "score": 0.008
+    },
+    {
+      "word": "feel",
+      "start": 208.799,
+      "end": 208.879,
+      "score": 0.006
+    },
+    {
+      "word": "within.",
+      "start": 208.899,
+      "end": 209.04,
+      "score": 0.139
+    },
+    {
+      "word": "motifah.",
+      "start": 211.52,
+      "end": 212.661,
+      "score": 0.218
+    },
+    {
+      "word": "we",
+      "start": 214.54,
+      "end": 217.271,
+      "score": 0.448
+    },
+    {
+      "word": "heard",
+      "start": 217.291,
+      "end": 217.797,
+      "score": 0.209
+    },
+    {
+      "word": "it",
+      "start": 217.817,
+      "end": 217.857,
+      "score": 0.016
+    },
+    {
+      "word": "all",
+      "start": 217.877,
+      "end": 217.938,
+      "score": 0.009
+    },
+    {
+      "word": "for",
+      "start": 217.958,
+      "end": 218.019,
+      "score": 0.003
+    },
+    {
+      "word": "you.",
+      "start": 218.039,
+      "end": 218.12,
+      "score": 0.244
+    },
+    {
+      "word": "motifah.",
+      "start": 221.44,
+      "end": 222.581,
+      "score": 0.217
+    },
+    {
+      "word": "we",
+      "start": 223.16,
+      "end": 225.674,
+      "score": 0.432
+    },
+    {
+      "word": "waited",
+      "start": 225.695,
+      "end": 225.816,
+      "score": 0.014
+    },
+    {
+      "word": "here",
+      "start": 225.837,
+      "end": 225.918,
+      "score": 0.015
+    },
+    {
+      "word": "for",
+      "start": 225.938,
+      "end": 225.999,
+      "score": 0.01
+    },
+    {
+      "word": "you.",
+      "start": 226.019,
+      "end": 226.1,
+      "score": 0.234
+    },
+    {
+      "word": "motifah.",
+      "start": 227.38,
+      "end": 228.521,
+      "score": 0.243
+    },
+    {
+      "word": "we",
+      "start": 230.92,
+      "end": 233.068,
+      "score": 0.43
+    },
+    {
+      "word": "heard",
+      "start": 233.088,
+      "end": 233.736,
+      "score": 0.244
+    },
+    {
+      "word": "it",
+      "start": 233.756,
+      "end": 233.797,
+      "score": 0.002
+    },
+    {
+      "word": "all",
+      "start": 233.817,
+      "end": 233.878,
+      "score": 0.01
+    },
+    {
+      "word": "for",
+      "start": 233.898,
+      "end": 233.959,
+      "score": 0.002
+    },
+    {
+      "word": "you.",
+      "start": 233.979,
+      "end": 234.06,
+      "score": 0.238
+    },
+    {
+      "word": "motifah.",
+      "start": 237.1,
+      "end": 238.401,
+      "score": 0.198
+    },
+    {
+      "word": "we",
+      "start": 239.16,
+      "end": 241.694,
+      "score": 0.406
+    },
+    {
+      "word": "waited",
+      "start": 241.715,
+      "end": 241.836,
+      "score": 0.004
+    },
+    {
+      "word": "here",
+      "start": 241.857,
+      "end": 241.938,
+      "score": 0.006
+    },
+    {
+      "word": "for",
+      "start": 241.958,
+      "end": 242.019,
+      "score": 0.004
+    },
+    {
+      "word": "you.",
+      "start": 242.039,
+      "end": 242.12,
+      "score": 0.243
+    },
+    {
+      "word": "motifah.",
+      "start": 245.32,
+      "end": 246.621,
+      "score": 0.456
+    },
+    {
+      "word": "we",
+      "start": 247.2,
+      "end": 249.895,
+      "score": 0.442
+    },
+    {
+      "word": "heard",
+      "start": 249.915,
+      "end": 250.016,
+      "score": 0.007
+    },
+    {
+      "word": "it",
+      "start": 250.036,
+      "end": 250.077,
+      "score": 0.01
+    },
+    {
+      "word": "all",
+      "start": 250.097,
+      "end": 250.158,
+      "score": 0.008
+    },
+    {
+      "word": "for",
+      "start": 250.178,
+      "end": 250.239,
+      "score": 0.008
+    },
+    {
+      "word": "you.",
+      "start": 250.259,
+      "end": 250.34,
+      "score": 0.234
+    },
+    {
+      "word": "motifah.",
+      "start": 252.48,
+      "end": 253.781,
+      "score": 0.227
+    },
+    {
+      "word": "we",
+      "start": 255.2,
+      "end": 257.026,
+      "score": 0.674
+    },
+    {
+      "word": "waited",
+      "start": 257.593,
+      "end": 257.715,
+      "score": 0.026
+    },
+    {
+      "word": "here",
+      "start": 257.735,
+      "end": 257.898,
+      "score": 0.246
+    },
+    {
+      "word": "for",
+      "start": 257.918,
+      "end": 257.979,
+      "score": 0.015
+    },
+    {
+      "word": "you.",
+      "start": 257.999,
+      "end": 258.08,
+      "score": 0.245
+    },
+    {
+      "word": "motifah.",
+      "start": 259.08,
+      "end": 260.381,
+      "score": 0.24
+    },
+    {
+      "word": "we",
+      "start": 260.36,
+      "end": 262.614,
+      "score": 0.472
+    },
+    {
+      "word": "waited",
+      "start": 262.634,
+      "end": 262.756,
+      "score": 0.0
+    },
+    {
+      "word": "here",
+      "start": 262.776,
+      "end": 262.858,
+      "score": 0.0
+    },
+    {
+      "word": "for",
+      "start": 262.878,
+      "end": 262.939,
+      "score": 0.0
+    },
+    {
+      "word": "you.",
+      "start": 262.959,
+      "end": 263.04,
+      "score": 0.25
+    },
+    {
+      "word": "we",
+      "start": 263.1,
+      "end": 266.965,
+      "score": 0.441
+    },
+    {
+      "word": "waited",
+      "start": 266.985,
+      "end": 267.831,
+      "score": 0.181
+    },
+    {
+      "word": "here",
+      "start": 267.851,
+      "end": 268.958,
+      "score": 0.784
+    },
+    {
+      "word": "for",
+      "start": 268.978,
+      "end": 269.038,
+      "score": 0.008
+    },
+    {
+      "word": "you.",
+      "start": 269.058,
+      "end": 269.32,
+      "score": 0.457
+    }
+  ]
+}

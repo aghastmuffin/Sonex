@@ -1,0 +1,2068 @@
+[
+  {
+    "id": 0,
+    "text": "amor, yo varios días en que te noto rara y la verdad...",
+    "start": 3.2,
+    "end": 10.0,
+    "words": [
+      {
+        "word": " Amor,",
+        "start": 3.2,
+        "end": 4.22
+      },
+      {
+        "word": " yo",
+        "start": 4.74,
+        "end": 4.8
+      },
+      {
+        "word": " varios",
+        "start": 4.8,
+        "end": 5.04
+      },
+      {
+        "word": " días",
+        "start": 5.04,
+        "end": 5.3
+      },
+      {
+        "word": " en",
+        "start": 5.3,
+        "end": 5.54
+      },
+      {
+        "word": " que",
+        "start": 5.54,
+        "end": 6.56
+      },
+      {
+        "word": " te",
+        "start": 6.56,
+        "end": 6.76
+      },
+      {
+        "word": " noto",
+        "start": 6.76,
+        "end": 7.0
+      },
+      {
+        "word": " rara",
+        "start": 7.0,
+        "end": 7.34
+      },
+      {
+        "word": " y",
+        "start": 7.34,
+        "end": 8.62
+      },
+      {
+        "word": " la",
+        "start": 8.62,
+        "end": 9.16
+      },
+      {
+        "word": " verdad...",
+        "start": 9.16,
+        "end": 10.0
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "text": "estoy aquí porque quiero hablarte de lo nuestro hablemos claro amor",
+    "start": 10.0,
+    "end": 16.22,
+    "words": [
+      {
+        "word": " Estoy",
+        "start": 10.0,
+        "end": 10.0
+      },
+      {
+        "word": " aquí",
+        "start": 10.0,
+        "end": 11.24
+      },
+      {
+        "word": " porque",
+        "start": 11.24,
+        "end": 12.66
+      },
+      {
+        "word": " quiero",
+        "start": 12.66,
+        "end": 13.12
+      },
+      {
+        "word": " hablarte",
+        "start": 13.12,
+        "end": 13.64
+      },
+      {
+        "word": " de",
+        "start": 13.64,
+        "end": 13.9
+      },
+      {
+        "word": " lo",
+        "start": 13.9,
+        "end": 14.14
+      },
+      {
+        "word": " nuestro",
+        "start": 14.14,
+        "end": 14.38
+      },
+      {
+        "word": " hablemos",
+        "start": 14.38,
+        "end": 15.02
+      },
+      {
+        "word": " claro",
+        "start": 15.02,
+        "end": 15.6
+      },
+      {
+        "word": " amor",
+        "start": 15.6,
+        "end": 16.22
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "te extraño, te escucho fallir",
+    "start": 16.22,
+    "end": 20.32,
+    "words": [
+      {
+        "word": " Te",
+        "start": 16.22,
+        "end": 17.34
+      },
+      {
+        "word": " extraño,",
+        "start": 17.34,
+        "end": 19.06
+      },
+      {
+        "word": " te",
+        "start": 19.12,
+        "end": 19.18
+      },
+      {
+        "word": " escucho",
+        "start": 19.18,
+        "end": 19.7
+      },
+      {
+        "word": " fallir",
+        "start": 19.7,
+        "end": 20.32
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "recibo tan solo una llamada amor que diga que",
+    "start": 22.04,
+    "end": 26.12,
+    "words": [
+      {
+        "word": " Recibo",
+        "start": 22.04,
+        "end": 23.06
+      },
+      {
+        "word": " tan",
+        "start": 23.06,
+        "end": 23.42
+      },
+      {
+        "word": " solo",
+        "start": 23.42,
+        "end": 23.64
+      },
+      {
+        "word": " una",
+        "start": 23.64,
+        "end": 23.96
+      },
+      {
+        "word": " llamada",
+        "start": 23.96,
+        "end": 24.54
+      },
+      {
+        "word": " amor",
+        "start": 24.54,
+        "end": 24.88
+      },
+      {
+        "word": " que",
+        "start": 24.88,
+        "end": 25.08
+      },
+      {
+        "word": " diga",
+        "start": 25.08,
+        "end": 25.62
+      },
+      {
+        "word": " que",
+        "start": 25.62,
+        "end": 26.12
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "me extrañas",
+    "start": 26.12,
+    "end": 29.28,
+    "words": [
+      {
+        "word": " Me",
+        "start": 26.12,
+        "end": 26.68
+      },
+      {
+        "word": " extrañas",
+        "start": 26.68,
+        "end": 29.28
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "te siento que tu no me amas igual que ayer",
+    "start": 30.739999999999995,
+    "end": 37.120000000000005,
+    "words": [
+      {
+        "word": " Te",
+        "start": 30.739999999999995,
+        "end": 31.419999999999998
+      },
+      {
+        "word": " siento",
+        "start": 31.419999999999998,
+        "end": 32.1
+      },
+      {
+        "word": " que",
+        "start": 32.1,
+        "end": 32.62
+      },
+      {
+        "word": " tu",
+        "start": 32.62,
+        "end": 33.42
+      },
+      {
+        "word": " no",
+        "start": 33.42,
+        "end": 33.88
+      },
+      {
+        "word": " me",
+        "start": 33.88,
+        "end": 34.52
+      },
+      {
+        "word": " amas",
+        "start": 34.52,
+        "end": 34.98
+      },
+      {
+        "word": " igual",
+        "start": 34.98,
+        "end": 35.6
+      },
+      {
+        "word": " que",
+        "start": 35.6,
+        "end": 36.36
+      },
+      {
+        "word": " ayer",
+        "start": 36.36,
+        "end": 37.120000000000005
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "como al que antes dime si es así o no",
+    "start": 37.74,
+    "end": 41.0,
+    "words": [
+      {
+        "word": " Como",
+        "start": 37.74,
+        "end": 38.08
+      },
+      {
+        "word": " al",
+        "start": 38.08,
+        "end": 38.46
+      },
+      {
+        "word": " que",
+        "start": 38.46,
+        "end": 38.68
+      },
+      {
+        "word": " antes",
+        "start": 38.68,
+        "end": 38.94
+      },
+      {
+        "word": " dime",
+        "start": 38.94,
+        "end": 39.28
+      },
+      {
+        "word": " si",
+        "start": 39.28,
+        "end": 39.52
+      },
+      {
+        "word": " es",
+        "start": 39.52,
+        "end": 39.66
+      },
+      {
+        "word": " así",
+        "start": 39.66,
+        "end": 40.04
+      },
+      {
+        "word": " o",
+        "start": 40.04,
+        "end": 40.32
+      },
+      {
+        "word": " no",
+        "start": 40.32,
+        "end": 41.0
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "te siento que tu ya no suspiras como ayer",
+    "start": 41.0,
+    "end": 47.120000000000005,
+    "words": [
+      {
+        "word": " Te",
+        "start": 41.0,
+        "end": 41.56
+      },
+      {
+        "word": " siento",
+        "start": 41.56,
+        "end": 42.32
+      },
+      {
+        "word": " que",
+        "start": 42.32,
+        "end": 42.84
+      },
+      {
+        "word": " tu",
+        "start": 42.84,
+        "end": 43.66
+      },
+      {
+        "word": " ya",
+        "start": 43.66,
+        "end": 44.12
+      },
+      {
+        "word": " no",
+        "start": 44.12,
+        "end": 44.72
+      },
+      {
+        "word": " suspiras",
+        "start": 44.72,
+        "end": 45.76
+      },
+      {
+        "word": " como",
+        "start": 45.76,
+        "end": 46.4
+      },
+      {
+        "word": " ayer",
+        "start": 46.4,
+        "end": 47.120000000000005
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "dime si es así o no",
+    "start": 48.739999999999995,
+    "end": 50.24,
+    "words": [
+      {
+        "word": " Dime",
+        "start": 48.739999999999995,
+        "end": 49.42
+      },
+      {
+        "word": " si",
+        "start": 49.42,
+        "end": 49.6
+      },
+      {
+        "word": " es",
+        "start": 49.6,
+        "end": 49.76
+      },
+      {
+        "word": " así",
+        "start": 49.76,
+        "end": 50.14
+      },
+      {
+        "word": " o",
+        "start": 50.14,
+        "end": 50.24
+      },
+      {
+        "word": " no",
+        "start": 50.24,
+        "end": 50.24
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "hoy he venido a donde te ha decirte que te extraño",
+    "start": 50.24,
+    "end": 52.68,
+    "words": [
+      {
+        "word": " Hoy",
+        "start": 50.24,
+        "end": 50.46
+      },
+      {
+        "word": " he",
+        "start": 50.46,
+        "end": 50.6
+      },
+      {
+        "word": " venido",
+        "start": 50.6,
+        "end": 50.9
+      },
+      {
+        "word": " a",
+        "start": 50.9,
+        "end": 51.04
+      },
+      {
+        "word": " donde",
+        "start": 51.04,
+        "end": 51.22
+      },
+      {
+        "word": " te",
+        "start": 51.22,
+        "end": 51.4
+      },
+      {
+        "word": " ha",
+        "start": 51.4,
+        "end": 51.54
+      },
+      {
+        "word": " decirte",
+        "start": 51.54,
+        "end": 51.94
+      },
+      {
+        "word": " que",
+        "start": 51.94,
+        "end": 52.06
+      },
+      {
+        "word": " te",
+        "start": 52.06,
+        "end": 52.32
+      },
+      {
+        "word": " extraño",
+        "start": 52.32,
+        "end": 52.68
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "que por tu amor estoy sufriendo y esto me esta haciendo daño",
+    "start": 52.68,
+    "end": 55.4,
+    "words": [
+      {
+        "word": " Que",
+        "start": 52.68,
+        "end": 52.86
+      },
+      {
+        "word": " por",
+        "start": 52.86,
+        "end": 53.06
+      },
+      {
+        "word": " tu",
+        "start": 53.06,
+        "end": 53.2
+      },
+      {
+        "word": " amor",
+        "start": 53.2,
+        "end": 53.44
+      },
+      {
+        "word": " estoy",
+        "start": 53.44,
+        "end": 53.66
+      },
+      {
+        "word": " sufriendo",
+        "start": 53.66,
+        "end": 54.08
+      },
+      {
+        "word": " y",
+        "start": 54.08,
+        "end": 54.28
+      },
+      {
+        "word": " esto",
+        "start": 54.28,
+        "end": 54.42
+      },
+      {
+        "word": " me",
+        "start": 54.42,
+        "end": 54.62
+      },
+      {
+        "word": " esta",
+        "start": 54.62,
+        "end": 54.74
+      },
+      {
+        "word": " haciendo",
+        "start": 54.74,
+        "end": 55.06
+      },
+      {
+        "word": " daño",
+        "start": 55.06,
+        "end": 55.4
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "he tratado de refugiarme en otro amor y en otro peso",
+    "start": 55.4,
+    "end": 57.88,
+    "words": [
+      {
+        "word": " He",
+        "start": 55.4,
+        "end": 55.62
+      },
+      {
+        "word": " tratado",
+        "start": 55.62,
+        "end": 55.94
+      },
+      {
+        "word": " de",
+        "start": 55.94,
+        "end": 56.18
+      },
+      {
+        "word": " refugiarme",
+        "start": 56.18,
+        "end": 56.68
+      },
+      {
+        "word": " en",
+        "start": 56.68,
+        "end": 56.8
+      },
+      {
+        "word": " otro",
+        "start": 56.8,
+        "end": 56.96
+      },
+      {
+        "word": " amor",
+        "start": 56.96,
+        "end": 57.16
+      },
+      {
+        "word": " y",
+        "start": 57.16,
+        "end": 57.32
+      },
+      {
+        "word": " en",
+        "start": 57.32,
+        "end": 57.42
+      },
+      {
+        "word": " otro",
+        "start": 57.42,
+        "end": 57.62
+      },
+      {
+        "word": " peso",
+        "start": 57.62,
+        "end": 57.88
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "pero de tu cuerpo soy adicto y me siento preso",
+    "start": 57.88,
+    "end": 60.36,
+    "words": [
+      {
+        "word": " Pero",
+        "start": 57.88,
+        "end": 58.2
+      },
+      {
+        "word": " de",
+        "start": 58.2,
+        "end": 58.44
+      },
+      {
+        "word": " tu",
+        "start": 58.44,
+        "end": 58.56
+      },
+      {
+        "word": " cuerpo",
+        "start": 58.56,
+        "end": 58.84
+      },
+      {
+        "word": " soy",
+        "start": 58.84,
+        "end": 59.1
+      },
+      {
+        "word": " adicto",
+        "start": 59.1,
+        "end": 59.56
+      },
+      {
+        "word": " y",
+        "start": 59.56,
+        "end": 59.68
+      },
+      {
+        "word": " me",
+        "start": 59.68,
+        "end": 59.86
+      },
+      {
+        "word": " siento",
+        "start": 59.86,
+        "end": 60.14
+      },
+      {
+        "word": " preso",
+        "start": 60.14,
+        "end": 60.36
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "lo lloraría porque tu volvieras a mi lado",
+    "start": 60.36,
+    "end": 62.7,
+    "words": [
+      {
+        "word": " Lo",
+        "start": 60.36,
+        "end": 60.56
+      },
+      {
+        "word": " lloraría",
+        "start": 60.56,
+        "end": 61.04
+      },
+      {
+        "word": " porque",
+        "start": 61.04,
+        "end": 61.34
+      },
+      {
+        "word": " tu",
+        "start": 61.34,
+        "end": 61.58
+      },
+      {
+        "word": " volvieras",
+        "start": 61.58,
+        "end": 62.14
+      },
+      {
+        "word": " a",
+        "start": 62.14,
+        "end": 62.26
+      },
+      {
+        "word": " mi",
+        "start": 62.26,
+        "end": 62.44
+      },
+      {
+        "word": " lado",
+        "start": 62.44,
+        "end": 62.7
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "que me perdones tu una vez y olvides el pasado",
+    "start": 62.7,
+    "end": 65.1,
+    "words": [
+      {
+        "word": " Que",
+        "start": 62.7,
+        "end": 62.98
+      },
+      {
+        "word": " me",
+        "start": 62.98,
+        "end": 63.28
+      },
+      {
+        "word": " perdones",
+        "start": 63.28,
+        "end": 63.56
+      },
+      {
+        "word": " tu",
+        "start": 63.56,
+        "end": 63.76
+      },
+      {
+        "word": " una",
+        "start": 63.76,
+        "end": 63.98
+      },
+      {
+        "word": " vez",
+        "start": 63.98,
+        "end": 64.14
+      },
+      {
+        "word": " y",
+        "start": 64.14,
+        "end": 64.24
+      },
+      {
+        "word": " olvides",
+        "start": 64.24,
+        "end": 64.58
+      },
+      {
+        "word": " el",
+        "start": 64.58,
+        "end": 64.82
+      },
+      {
+        "word": " pasado",
+        "start": 64.82,
+        "end": 65.1
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "acepto que falle y te unque con tus sentimientos",
+    "start": 65.1,
+    "end": 67.4,
+    "words": [
+      {
+        "word": " Acepto",
+        "start": 65.1,
+        "end": 65.56
+      },
+      {
+        "word": " que",
+        "start": 65.56,
+        "end": 65.76
+      },
+      {
+        "word": " falle",
+        "start": 65.76,
+        "end": 66.06
+      },
+      {
+        "word": " y",
+        "start": 66.06,
+        "end": 66.24
+      },
+      {
+        "word": " te",
+        "start": 66.24,
+        "end": 66.4
+      },
+      {
+        "word": " unque",
+        "start": 66.4,
+        "end": 66.7
+      },
+      {
+        "word": " con",
+        "start": 66.7,
+        "end": 66.94
+      },
+      {
+        "word": " tus",
+        "start": 66.94,
+        "end": 67.1
+      },
+      {
+        "word": " sentimientos",
+        "start": 67.1,
+        "end": 67.4
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "pero pongo a dios de testigo de mi sufrimiento",
+    "start": 67.94,
+    "end": 70.4,
+    "words": [
+      {
+        "word": " Pero",
+        "start": 67.94,
+        "end": 68.32
+      },
+      {
+        "word": " pongo",
+        "start": 68.32,
+        "end": 68.62
+      },
+      {
+        "word": " a",
+        "start": 68.62,
+        "end": 68.76
+      },
+      {
+        "word": " Dios",
+        "start": 68.76,
+        "end": 68.96
+      },
+      {
+        "word": " de",
+        "start": 68.96,
+        "end": 69.14
+      },
+      {
+        "word": " testigo",
+        "start": 69.14,
+        "end": 69.62
+      },
+      {
+        "word": " de",
+        "start": 69.62,
+        "end": 69.8
+      },
+      {
+        "word": " mi",
+        "start": 69.8,
+        "end": 69.96
+      },
+      {
+        "word": " sufrimiento",
+        "start": 69.96,
+        "end": 70.4
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "mírame a la cara hablemos claro entre tu y yo",
+    "start": 71.3,
+    "end": 74.06,
+    "words": [
+      {
+        "word": " Mírame",
+        "start": 71.3,
+        "end": 71.82
+      },
+      {
+        "word": " a",
+        "start": 71.82,
+        "end": 72.04
+      },
+      {
+        "word": " la",
+        "start": 72.04,
+        "end": 72.24
+      },
+      {
+        "word": " cara",
+        "start": 72.24,
+        "end": 72.48
+      },
+      {
+        "word": " hablemos",
+        "start": 72.48,
+        "end": 73.02
+      },
+      {
+        "word": " claro",
+        "start": 73.02,
+        "end": 73.24
+      },
+      {
+        "word": " entre",
+        "start": 73.24,
+        "end": 73.58
+      },
+      {
+        "word": " tu",
+        "start": 73.58,
+        "end": 73.78
+      },
+      {
+        "word": " y",
+        "start": 73.78,
+        "end": 73.9
+      },
+      {
+        "word": " yo",
+        "start": 73.9,
+        "end": 74.06
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "por desgracia las cosas no van bien",
+    "start": 74.06,
+    "end": 76.7,
+    "words": [
+      {
+        "word": " Por",
+        "start": 74.06,
+        "end": 74.32
+      },
+      {
+        "word": " desgracia",
+        "start": 74.32,
+        "end": 74.86
+      },
+      {
+        "word": " las",
+        "start": 74.86,
+        "end": 75.16
+      },
+      {
+        "word": " cosas",
+        "start": 75.16,
+        "end": 75.68
+      },
+      {
+        "word": " no",
+        "start": 75.68,
+        "end": 76.04
+      },
+      {
+        "word": " van",
+        "start": 76.04,
+        "end": 76.3
+      },
+      {
+        "word": " bien",
+        "start": 76.3,
+        "end": 76.7
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "que al tocar tus manos me congelo como tempano de hielo",
+    "start": 76.7,
+    "end": 80.4,
+    "words": [
+      {
+        "word": " Que",
+        "start": 76.7,
+        "end": 76.9
+      },
+      {
+        "word": " al",
+        "start": 76.9,
+        "end": 77.14
+      },
+      {
+        "word": " tocar",
+        "start": 77.14,
+        "end": 77.46
+      },
+      {
+        "word": " tus",
+        "start": 77.46,
+        "end": 77.7
+      },
+      {
+        "word": " manos",
+        "start": 77.7,
+        "end": 78.02
+      },
+      {
+        "word": " me",
+        "start": 78.02,
+        "end": 78.34
+      },
+      {
+        "word": " congelo",
+        "start": 78.34,
+        "end": 78.76
+      },
+      {
+        "word": " como",
+        "start": 78.76,
+        "end": 79.14
+      },
+      {
+        "word": " tempano",
+        "start": 79.14,
+        "end": 79.74
+      },
+      {
+        "word": " de",
+        "start": 79.74,
+        "end": 80.0
+      },
+      {
+        "word": " hielo",
+        "start": 80.0,
+        "end": 80.4
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "nuestra cama lleva días igual vacía",
+    "start": 81.4,
+    "end": 85.5,
+    "words": [
+      {
+        "word": " Nuestra",
+        "start": 81.4,
+        "end": 82.3
+      },
+      {
+        "word": " cama",
+        "start": 82.3,
+        "end": 82.98
+      },
+      {
+        "word": " lleva",
+        "start": 82.98,
+        "end": 83.48
+      },
+      {
+        "word": " días",
+        "start": 83.48,
+        "end": 84.02
+      },
+      {
+        "word": " igual",
+        "start": 84.02,
+        "end": 84.56
+      },
+      {
+        "word": " vacía",
+        "start": 84.56,
+        "end": 85.5
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "sin ti y sin mi",
+    "start": 85.5,
+    "end": 87.4,
+    "words": [
+      {
+        "word": " Sin",
+        "start": 85.5,
+        "end": 85.96
+      },
+      {
+        "word": " ti",
+        "start": 85.96,
+        "end": 86.58
+      },
+      {
+        "word": " y",
+        "start": 86.58,
+        "end": 86.66
+      },
+      {
+        "word": " sin",
+        "start": 86.66,
+        "end": 86.98
+      },
+      {
+        "word": " mi",
+        "start": 86.98,
+        "end": 87.51
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "si me amas prisas me lo sentí",
+    "start": 87.98,
+    "end": 91.52,
+    "words": [
+      {
+        "word": " Si",
+        "start": 87.98,
+        "end": 88.38
+      },
+      {
+        "word": " me",
+        "start": 88.38,
+        "end": 88.72
+      },
+      {
+        "word": " amas",
+        "start": 88.72,
+        "end": 89.08
+      },
+      {
+        "word": " prisas",
+        "start": 89.08,
+        "end": 89.62
+      },
+      {
+        "word": " me",
+        "start": 89.62,
+        "end": 89.84
+      },
+      {
+        "word": " lo",
+        "start": 89.84,
+        "end": 90.08
+      },
+      {
+        "word": " sentí",
+        "start": 90.08,
+        "end": 91.52
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "que siento miedo",
+    "start": 91.52,
+    "end": 93.98,
+    "words": [
+      {
+        "word": " Que",
+        "start": 91.52,
+        "end": 92.04
+      },
+      {
+        "word": " siento",
+        "start": 92.04,
+        "end": 93.04
+      },
+      {
+        "word": " miedo",
+        "start": 93.04,
+        "end": 93.98
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "porque te tengo y no te tengo",
+    "start": 93.98,
+    "end": 96.46,
+    "words": [
+      {
+        "word": " Porque",
+        "start": 93.98,
+        "end": 94.68
+      },
+      {
+        "word": " te",
+        "start": 94.68,
+        "end": 95.1
+      },
+      {
+        "word": " tengo",
+        "start": 95.1,
+        "end": 95.44
+      },
+      {
+        "word": " y",
+        "start": 95.44,
+        "end": 95.68
+      },
+      {
+        "word": " no",
+        "start": 95.68,
+        "end": 95.96
+      },
+      {
+        "word": " te",
+        "start": 95.96,
+        "end": 96.26
+      },
+      {
+        "word": " tengo",
+        "start": 96.26,
+        "end": 96.46
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "y siento que lo nuestro termino",
+    "start": 96.46,
+    "end": 99.58,
+    "words": [
+      {
+        "word": " Y",
+        "start": 96.46,
+        "end": 96.68
+      },
+      {
+        "word": " siento",
+        "start": 96.68,
+        "end": 97.0
+      },
+      {
+        "word": " que",
+        "start": 97.0,
+        "end": 97.4
+      },
+      {
+        "word": " lo",
+        "start": 97.4,
+        "end": 97.62
+      },
+      {
+        "word": " nuestro",
+        "start": 97.62,
+        "end": 97.98
+      },
+      {
+        "word": " termino",
+        "start": 97.98,
+        "end": 99.58
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "no, no",
+    "start": 99.58,
+    "end": 101.82,
+    "words": [
+      {
+        "word": " No,",
+        "start": 99.58,
+        "end": 100.48
+      },
+      {
+        "word": " no",
+        "start": 100.48,
+        "end": 101.82
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "te siento que tu no me amas igual que ayer",
+    "start": 101.82,
+    "end": 108.48,
+    "words": [
+      {
+        "word": " Te",
+        "start": 101.82,
+        "end": 102.24
+      },
+      {
+        "word": " siento",
+        "start": 102.24,
+        "end": 102.9
+      },
+      {
+        "word": " que",
+        "start": 102.9,
+        "end": 103.46
+      },
+      {
+        "word": " tu",
+        "start": 103.46,
+        "end": 104.16
+      },
+      {
+        "word": " no",
+        "start": 104.16,
+        "end": 104.62
+      },
+      {
+        "word": " me",
+        "start": 104.62,
+        "end": 105.16
+      },
+      {
+        "word": " amas",
+        "start": 105.16,
+        "end": 105.7
+      },
+      {
+        "word": " igual",
+        "start": 105.7,
+        "end": 106.5
+      },
+      {
+        "word": " que",
+        "start": 106.5,
+        "end": 107.16
+      },
+      {
+        "word": " ayer",
+        "start": 107.16,
+        "end": 108.48
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "dime si es así o no",
+    "start": 109.47999999999999,
+    "end": 111.86,
+    "words": [
+      {
+        "word": " Dime",
+        "start": 109.47999999999999,
+        "end": 110.0
+      },
+      {
+        "word": " si",
+        "start": 110.0,
+        "end": 110.12
+      },
+      {
+        "word": " es",
+        "start": 110.12,
+        "end": 110.32
+      },
+      {
+        "word": " así",
+        "start": 110.32,
+        "end": 110.78
+      },
+      {
+        "word": " o",
+        "start": 110.78,
+        "end": 111.0
+      },
+      {
+        "word": " no",
+        "start": 111.0,
+        "end": 111.86
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "te siento que tu ya no suspiras como ayer",
+    "start": 111.86,
+    "end": 118.5,
+    "words": [
+      {
+        "word": " Te",
+        "start": 111.86,
+        "end": 112.28
+      },
+      {
+        "word": " siento",
+        "start": 112.28,
+        "end": 112.98
+      },
+      {
+        "word": " que",
+        "start": 112.98,
+        "end": 113.54
+      },
+      {
+        "word": " tu",
+        "start": 113.54,
+        "end": 114.28
+      },
+      {
+        "word": " ya",
+        "start": 114.28,
+        "end": 114.86
+      },
+      {
+        "word": " no",
+        "start": 114.86,
+        "end": 115.52
+      },
+      {
+        "word": " suspiras",
+        "start": 115.52,
+        "end": 116.56
+      },
+      {
+        "word": " como",
+        "start": 116.56,
+        "end": 117.14
+      },
+      {
+        "word": " ayer",
+        "start": 117.14,
+        "end": 118.5
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "dime si es así o no",
+    "start": 119.62,
+    "end": 121.04,
+    "words": [
+      {
+        "word": " Dime",
+        "start": 119.62,
+        "end": 120.14
+      },
+      {
+        "word": " si",
+        "start": 120.14,
+        "end": 120.26
+      },
+      {
+        "word": " es",
+        "start": 120.26,
+        "end": 120.52
+      },
+      {
+        "word": " así",
+        "start": 120.52,
+        "end": 120.94
+      },
+      {
+        "word": " o",
+        "start": 120.94,
+        "end": 121.02
+      },
+      {
+        "word": " no",
+        "start": 121.02,
+        "end": 121.04
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "te siento que como antes ya no me amas",
+    "start": 121.04,
+    "end": 123.4,
+    "words": [
+      {
+        "word": " Te",
+        "start": 121.04,
+        "end": 121.48
+      },
+      {
+        "word": " siento",
+        "start": 121.48,
+        "end": 121.66
+      },
+      {
+        "word": " que",
+        "start": 121.66,
+        "end": 121.92
+      },
+      {
+        "word": " como",
+        "start": 121.92,
+        "end": 122.16
+      },
+      {
+        "word": " antes",
+        "start": 122.16,
+        "end": 122.5
+      },
+      {
+        "word": " ya",
+        "start": 122.5,
+        "end": 122.7
+      },
+      {
+        "word": " no",
+        "start": 122.7,
+        "end": 122.86
+      },
+      {
+        "word": " me",
+        "start": 122.86,
+        "end": 123.08
+      },
+      {
+        "word": " amas",
+        "start": 123.08,
+        "end": 123.4
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "que no suspira cuando tu y yo estamos en la cama",
+    "start": 123.4,
+    "end": 125.84,
+    "words": [
+      {
+        "word": " Que",
+        "start": 123.4,
+        "end": 123.64
+      },
+      {
+        "word": " no",
+        "start": 123.64,
+        "end": 123.8
+      },
+      {
+        "word": " suspira",
+        "start": 123.8,
+        "end": 124.22
+      },
+      {
+        "word": " cuando",
+        "start": 124.22,
+        "end": 124.5
+      },
+      {
+        "word": " tu",
+        "start": 124.5,
+        "end": 124.68
+      },
+      {
+        "word": " y",
+        "start": 124.68,
+        "end": 124.74
+      },
+      {
+        "word": " yo",
+        "start": 124.74,
+        "end": 124.88
+      },
+      {
+        "word": " estamos",
+        "start": 124.88,
+        "end": 125.14
+      },
+      {
+        "word": " en",
+        "start": 125.14,
+        "end": 125.4
+      },
+      {
+        "word": " la",
+        "start": 125.4,
+        "end": 125.6
+      },
+      {
+        "word": " cama",
+        "start": 125.6,
+        "end": 125.84
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "que por mi culpa te sentes herida y rebelde",
+    "start": 125.84,
+    "end": 128.42,
+    "words": [
+      {
+        "word": " Que",
+        "start": 125.84,
+        "end": 126.12
+      },
+      {
+        "word": " por",
+        "start": 126.12,
+        "end": 126.3
+      },
+      {
+        "word": " mi",
+        "start": 126.3,
+        "end": 126.48
+      },
+      {
+        "word": " culpa",
+        "start": 126.48,
+        "end": 126.72
+      },
+      {
+        "word": " te",
+        "start": 126.72,
+        "end": 126.98
+      },
+      {
+        "word": " sentes",
+        "start": 126.98,
+        "end": 127.3
+      },
+      {
+        "word": " herida",
+        "start": 127.3,
+        "end": 127.7
+      },
+      {
+        "word": " y",
+        "start": 127.7,
+        "end": 127.96
+      },
+      {
+        "word": " rebelde",
+        "start": 127.96,
+        "end": 128.42
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "y me estoy dando cuenta que nuestro amor se pierde",
+    "start": 128.42,
+    "end": 130.86,
+    "words": [
+      {
+        "word": " Y",
+        "start": 128.42,
+        "end": 128.66
+      },
+      {
+        "word": " me",
+        "start": 128.66,
+        "end": 128.8
+      },
+      {
+        "word": " estoy",
+        "start": 128.8,
+        "end": 128.98
+      },
+      {
+        "word": " dando",
+        "start": 128.98,
+        "end": 129.28
+      },
+      {
+        "word": " cuenta",
+        "start": 129.28,
+        "end": 129.62
+      },
+      {
+        "word": " que",
+        "start": 129.62,
+        "end": 129.94
+      },
+      {
+        "word": " nuestro",
+        "start": 129.94,
+        "end": 130.16
+      },
+      {
+        "word": " amor",
+        "start": 130.16,
+        "end": 130.36
+      },
+      {
+        "word": " se",
+        "start": 130.36,
+        "end": 130.6
+      },
+      {
+        "word": " pierde",
+        "start": 130.6,
+        "end": 130.86
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "estoy aquí",
+    "start": 130.86,
+    "end": 132.4,
+    "words": [
+      {
+        "word": " Estoy",
+        "start": 130.86,
+        "end": 131.36
+      },
+      {
+        "word": " aquí",
+        "start": 131.36,
+        "end": 132.4
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "porque quiero hablarte de lo nuestro hablemos claro amor",
+    "start": 133.39999999999998,
+    "end": 137.4,
+    "words": [
+      {
+        "word": " Porque",
+        "start": 133.39999999999998,
+        "end": 133.92
+      },
+      {
+        "word": " quiero",
+        "start": 133.92,
+        "end": 134.36
+      },
+      {
+        "word": " hablarte",
+        "start": 134.36,
+        "end": 134.88
+      },
+      {
+        "word": " de",
+        "start": 134.88,
+        "end": 135.12
+      },
+      {
+        "word": " lo",
+        "start": 135.12,
+        "end": 135.3
+      },
+      {
+        "word": " nuestro",
+        "start": 135.3,
+        "end": 135.64
+      },
+      {
+        "word": " hablemos",
+        "start": 135.64,
+        "end": 136.22
+      },
+      {
+        "word": " claro",
+        "start": 136.22,
+        "end": 136.84
+      },
+      {
+        "word": " amor",
+        "start": 136.84,
+        "end": 137.4
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "te extraño y no",
+    "start": 137.4,
+    "end": 142.4,
+    "words": [
+      {
+        "word": " Te",
+        "start": 137.4,
+        "end": 138.58
+      },
+      {
+        "word": " extraño",
+        "start": 138.58,
+        "end": 140.68
+      },
+      {
+        "word": " y",
+        "start": 140.68,
+        "end": 141.44
+      },
+      {
+        "word": " no",
+        "start": 141.44,
+        "end": 142.4
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "recibo tan solo una llamada amor que diga que",
+    "start": 143.4,
+    "end": 147.4,
+    "words": [
+      {
+        "word": " Recibo",
+        "start": 143.4,
+        "end": 144.28
+      },
+      {
+        "word": " tan",
+        "start": 144.28,
+        "end": 144.6
+      },
+      {
+        "word": " solo",
+        "start": 144.6,
+        "end": 144.9
+      },
+      {
+        "word": " una",
+        "start": 144.9,
+        "end": 145.22
+      },
+      {
+        "word": " llamada",
+        "start": 145.22,
+        "end": 145.74
+      },
+      {
+        "word": " amor",
+        "start": 145.74,
+        "end": 146.12
+      },
+      {
+        "word": " que",
+        "start": 146.12,
+        "end": 146.34
+      },
+      {
+        "word": " diga",
+        "start": 146.34,
+        "end": 146.84
+      },
+      {
+        "word": " que",
+        "start": 146.84,
+        "end": 147.54
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "me extrañas",
+    "start": 147.96,
+    "end": 151.38,
+    "words": [
+      {
+        "word": " Me",
+        "start": 147.96,
+        "end": 148.9
+      },
+      {
+        "word": " extrañas",
+        "start": 148.9,
+        "end": 151.38
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "ma",
+    "start": 151.38,
+    "end": 153.14,
+    "words": [
+      {
+        "word": " Ma",
+        "start": 151.38,
+        "end": 153.14
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "te presentimiento",
+    "start": 153.14,
+    "end": 155.76,
+    "words": [
+      {
+        "word": " Te",
+        "start": 153.14,
+        "end": 154.68
+      },
+      {
+        "word": " presentimiento",
+        "start": 154.68,
+        "end": 155.76
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "no me deja dormir",
+    "start": 156.4,
+    "end": 158.96,
+    "words": [
+      {
+        "word": " No",
+        "start": 156.4,
+        "end": 157.9
+      },
+      {
+        "word": " me",
+        "start": 157.9,
+        "end": 158.04
+      },
+      {
+        "word": " deja",
+        "start": 158.04,
+        "end": 158.32
+      },
+      {
+        "word": " dormir",
+        "start": 158.32,
+        "end": 158.96
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "¿qué te pasa?",
+    "start": 158.96,
+    "end": 162.38,
+    "words": [
+      {
+        "word": " ¿Qué",
+        "start": 158.96,
+        "end": 161.64
+      },
+      {
+        "word": " te",
+        "start": 161.64,
+        "end": 161.92
+      },
+      {
+        "word": " pasa?",
+        "start": 161.92,
+        "end": 162.38
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "hablemos",
+    "start": 163.62,
+    "end": 164.42,
+    "words": [
+      {
+        "word": " Hablemos",
+        "start": 163.62,
+        "end": 164.42
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "yo sé que te sientes igual que yo",
+    "start": 164.42,
+    "end": 168.86,
+    "words": [
+      {
+        "word": " Yo",
+        "start": 164.42,
+        "end": 165.3
+      },
+      {
+        "word": " sé",
+        "start": 165.3,
+        "end": 165.46
+      },
+      {
+        "word": " que",
+        "start": 165.46,
+        "end": 165.64
+      },
+      {
+        "word": " te",
+        "start": 165.64,
+        "end": 165.76
+      },
+      {
+        "word": " sientes",
+        "start": 165.76,
+        "end": 166.04
+      },
+      {
+        "word": " igual",
+        "start": 166.04,
+        "end": 166.34
+      },
+      {
+        "word": " que",
+        "start": 166.34,
+        "end": 166.54
+      },
+      {
+        "word": " yo",
+        "start": 166.54,
+        "end": 168.86
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "la que me can why",
+    "start": 170.18,
+    "end": 171.96,
+    "words": [
+      {
+        "word": " La",
+        "start": 170.18,
+        "end": 170.74
+      },
+      {
+        "word": " que",
+        "start": 170.74,
+        "end": 171.04
+      },
+      {
+        "word": " me",
+        "start": 171.04,
+        "end": 171.4
+      },
+      {
+        "word": " can",
+        "start": 171.4,
+        "end": 171.68
+      },
+      {
+        "word": " why",
+        "start": 171.68,
+        "end": 171.96
+      }
+    ]
+  }
+]

@@ -1,0 +1,1735 @@
+[
+  {
+    "id": 0,
+    "text": "i wanna, i wanna, i wanna love you and tell you that you are mine",
+    "start": 1.2399999999999998,
+    "end": 8.76,
+    "words": [
+      {
+        "word": " I",
+        "start": 1.2399999999999998,
+        "end": 1.9
+      },
+      {
+        "word": " wanna,",
+        "start": 1.9,
+        "end": 2.24
+      },
+      {
+        "word": " I",
+        "start": 2.78,
+        "end": 4.08
+      },
+      {
+        "word": " wanna,",
+        "start": 4.08,
+        "end": 4.78
+      },
+      {
+        "word": " I",
+        "start": 5.64,
+        "end": 5.64
+      },
+      {
+        "word": " wanna",
+        "start": 5.64,
+        "end": 6.06
+      },
+      {
+        "word": " love",
+        "start": 6.06,
+        "end": 6.54
+      },
+      {
+        "word": " you",
+        "start": 6.54,
+        "end": 6.88
+      },
+      {
+        "word": " and",
+        "start": 6.88,
+        "end": 7.08
+      },
+      {
+        "word": " tell",
+        "start": 7.08,
+        "end": 7.36
+      },
+      {
+        "word": " you",
+        "start": 7.36,
+        "end": 7.62
+      },
+      {
+        "word": " that",
+        "start": 7.62,
+        "end": 7.9
+      },
+      {
+        "word": " you",
+        "start": 7.9,
+        "end": 8.2
+      },
+      {
+        "word": " are",
+        "start": 8.2,
+        "end": 8.56
+      },
+      {
+        "word": " mine",
+        "start": 8.56,
+        "end": 8.76
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "text": "you told me you think that i smell good then told me zip but not fly",
+    "start": 8.76,
+    "end": 13.02,
+    "words": [
+      {
+        "word": " You",
+        "start": 8.76,
+        "end": 8.98
+      },
+      {
+        "word": " told",
+        "start": 8.98,
+        "end": 9.26
+      },
+      {
+        "word": " me",
+        "start": 9.26,
+        "end": 9.56
+      },
+      {
+        "word": " you",
+        "start": 9.56,
+        "end": 9.82
+      },
+      {
+        "word": " think",
+        "start": 9.82,
+        "end": 10.06
+      },
+      {
+        "word": " that",
+        "start": 10.06,
+        "end": 10.4
+      },
+      {
+        "word": " I",
+        "start": 10.4,
+        "end": 10.66
+      },
+      {
+        "word": " smell",
+        "start": 10.66,
+        "end": 10.88
+      },
+      {
+        "word": " good",
+        "start": 10.88,
+        "end": 11.16
+      },
+      {
+        "word": " then",
+        "start": 11.16,
+        "end": 11.42
+      },
+      {
+        "word": " told",
+        "start": 11.42,
+        "end": 11.76
+      },
+      {
+        "word": " me",
+        "start": 11.76,
+        "end": 12.0
+      },
+      {
+        "word": " zip",
+        "start": 12.0,
+        "end": 12.24
+      },
+      {
+        "word": " but",
+        "start": 12.24,
+        "end": 12.52
+      },
+      {
+        "word": " not",
+        "start": 12.52,
+        "end": 12.88
+      },
+      {
+        "word": " fly",
+        "start": 12.88,
+        "end": 13.02
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "i wanna kiss you in the back of my car that i barely drive",
+    "start": 13.02,
+    "end": 17.46,
+    "words": [
+      {
+        "word": " I",
+        "start": 13.02,
+        "end": 13.34
+      },
+      {
+        "word": " wanna",
+        "start": 13.34,
+        "end": 13.78
+      },
+      {
+        "word": " kiss",
+        "start": 13.78,
+        "end": 14.18
+      },
+      {
+        "word": " you",
+        "start": 14.18,
+        "end": 14.48
+      },
+      {
+        "word": " in",
+        "start": 14.48,
+        "end": 14.8
+      },
+      {
+        "word": " the",
+        "start": 14.8,
+        "end": 15.1
+      },
+      {
+        "word": " back",
+        "start": 15.1,
+        "end": 15.3
+      },
+      {
+        "word": " of",
+        "start": 15.3,
+        "end": 15.56
+      },
+      {
+        "word": " my",
+        "start": 15.56,
+        "end": 15.9
+      },
+      {
+        "word": " car",
+        "start": 15.9,
+        "end": 16.1
+      },
+      {
+        "word": " that",
+        "start": 16.1,
+        "end": 16.36
+      },
+      {
+        "word": " I",
+        "start": 16.36,
+        "end": 16.8
+      },
+      {
+        "word": " barely",
+        "start": 16.8,
+        "end": 17.1
+      },
+      {
+        "word": " drive",
+        "start": 17.1,
+        "end": 17.46
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "because i share it with my mom in my mom's busy balls",
+    "start": 17.46,
+    "end": 21.3,
+    "words": [
+      {
+        "word": " Because",
+        "start": 17.46,
+        "end": 17.92
+      },
+      {
+        "word": " I",
+        "start": 17.92,
+        "end": 18.36
+      },
+      {
+        "word": " share",
+        "start": 18.36,
+        "end": 18.54
+      },
+      {
+        "word": " it",
+        "start": 18.54,
+        "end": 18.78
+      },
+      {
+        "word": " with",
+        "start": 18.78,
+        "end": 19.14
+      },
+      {
+        "word": " my",
+        "start": 19.14,
+        "end": 19.44
+      },
+      {
+        "word": " mom",
+        "start": 19.44,
+        "end": 19.62
+      },
+      {
+        "word": " in",
+        "start": 19.62,
+        "end": 19.86
+      },
+      {
+        "word": " my",
+        "start": 19.86,
+        "end": 20.18
+      },
+      {
+        "word": " mom's",
+        "start": 20.18,
+        "end": 20.58
+      },
+      {
+        "word": " busy",
+        "start": 20.58,
+        "end": 20.98
+      },
+      {
+        "word": " balls",
+        "start": 20.98,
+        "end": 21.3
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "time i tell ya, you're so cool",
+    "start": 21.3,
+    "end": 25.66,
+    "words": [
+      {
+        "word": " Time",
+        "start": 21.3,
+        "end": 21.8
+      },
+      {
+        "word": " I",
+        "start": 21.8,
+        "end": 22.12
+      },
+      {
+        "word": " tell",
+        "start": 22.12,
+        "end": 22.38
+      },
+      {
+        "word": " ya,",
+        "start": 22.38,
+        "end": 22.76
+      },
+      {
+        "word": " you're",
+        "start": 23.56,
+        "end": 24.16
+      },
+      {
+        "word": " so",
+        "start": 24.16,
+        "end": 24.9
+      },
+      {
+        "word": " cool",
+        "start": 24.9,
+        "end": 25.66
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "you like reading and swimming in the pool",
+    "start": 25.66,
+    "end": 29.9,
+    "words": [
+      {
+        "word": " You",
+        "start": 25.66,
+        "end": 26.46
+      },
+      {
+        "word": " like",
+        "start": 26.46,
+        "end": 26.96
+      },
+      {
+        "word": " reading",
+        "start": 26.96,
+        "end": 27.72
+      },
+      {
+        "word": " and",
+        "start": 27.72,
+        "end": 28.14
+      },
+      {
+        "word": " swimming",
+        "start": 28.14,
+        "end": 28.56
+      },
+      {
+        "word": " in",
+        "start": 28.56,
+        "end": 28.94
+      },
+      {
+        "word": " the",
+        "start": 28.94,
+        "end": 29.32
+      },
+      {
+        "word": " pool",
+        "start": 29.32,
+        "end": 29.9
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "oh, i'm so eager",
+    "start": 30.0,
+    "end": 34.42,
+    "words": [
+      {
+        "word": " Oh,",
+        "start": 30.0,
+        "end": 30.76
+      },
+      {
+        "word": " I'm",
+        "start": 30.76,
+        "end": 33.02
+      },
+      {
+        "word": " so",
+        "start": 33.02,
+        "end": 33.66
+      },
+      {
+        "word": " eager",
+        "start": 33.66,
+        "end": 34.42
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "i keep staring then wiping off my drool",
+    "start": 34.42,
+    "end": 38.86,
+    "words": [
+      {
+        "word": " I",
+        "start": 34.42,
+        "end": 35.08
+      },
+      {
+        "word": " keep",
+        "start": 35.08,
+        "end": 35.58
+      },
+      {
+        "word": " staring",
+        "start": 35.58,
+        "end": 36.42
+      },
+      {
+        "word": " then",
+        "start": 36.42,
+        "end": 36.78
+      },
+      {
+        "word": " wiping",
+        "start": 36.78,
+        "end": 37.22
+      },
+      {
+        "word": " off",
+        "start": 37.22,
+        "end": 37.62
+      },
+      {
+        "word": " my",
+        "start": 37.62,
+        "end": 37.98
+      },
+      {
+        "word": " drool",
+        "start": 37.98,
+        "end": 38.86
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "but i don't wanna be the one who tries",
+    "start": 38.86,
+    "end": 41.26,
+    "words": [
+      {
+        "word": " But",
+        "start": 38.86,
+        "end": 39.32
+      },
+      {
+        "word": " I",
+        "start": 39.32,
+        "end": 39.46
+      },
+      {
+        "word": " don't",
+        "start": 39.46,
+        "end": 39.6
+      },
+      {
+        "word": " wanna",
+        "start": 39.6,
+        "end": 39.74
+      },
+      {
+        "word": " be",
+        "start": 39.74,
+        "end": 39.9
+      },
+      {
+        "word": " the",
+        "start": 39.9,
+        "end": 40.14
+      },
+      {
+        "word": " one",
+        "start": 40.14,
+        "end": 40.34
+      },
+      {
+        "word": " who",
+        "start": 40.34,
+        "end": 40.68
+      },
+      {
+        "word": " tries",
+        "start": 40.68,
+        "end": 41.26
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "i don't wanna be the one who hits your line",
+    "start": 41.26,
+    "end": 43.9,
+    "words": [
+      {
+        "word": " I",
+        "start": 41.26,
+        "end": 41.56
+      },
+      {
+        "word": " don't",
+        "start": 41.56,
+        "end": 41.78
+      },
+      {
+        "word": " wanna",
+        "start": 41.78,
+        "end": 41.94
+      },
+      {
+        "word": " be",
+        "start": 41.94,
+        "end": 42.12
+      },
+      {
+        "word": " the",
+        "start": 42.12,
+        "end": 42.36
+      },
+      {
+        "word": " one",
+        "start": 42.36,
+        "end": 42.52
+      },
+      {
+        "word": " who",
+        "start": 42.52,
+        "end": 42.82
+      },
+      {
+        "word": " hits",
+        "start": 42.82,
+        "end": 43.04
+      },
+      {
+        "word": " your",
+        "start": 43.04,
+        "end": 43.48
+      },
+      {
+        "word": " line",
+        "start": 43.48,
+        "end": 43.9
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "cause i'm just too cool",
+    "start": 43.9,
+    "end": 45.44,
+    "words": [
+      {
+        "word": " Cause",
+        "start": 43.9,
+        "end": 44.28
+      },
+      {
+        "word": " I'm",
+        "start": 44.28,
+        "end": 44.52
+      },
+      {
+        "word": " just",
+        "start": 44.52,
+        "end": 44.76
+      },
+      {
+        "word": " too",
+        "start": 44.76,
+        "end": 45.14
+      },
+      {
+        "word": " cool",
+        "start": 45.14,
+        "end": 45.44
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "cause i'm just too cool for you",
+    "start": 45.44,
+    "end": 47.4,
+    "words": [
+      {
+        "word": " Cause",
+        "start": 45.44,
+        "end": 45.7
+      },
+      {
+        "word": " I'm",
+        "start": 45.7,
+        "end": 46.14
+      },
+      {
+        "word": " just",
+        "start": 46.14,
+        "end": 46.36
+      },
+      {
+        "word": " too",
+        "start": 46.36,
+        "end": 46.7
+      },
+      {
+        "word": " cool",
+        "start": 46.7,
+        "end": 46.8
+      },
+      {
+        "word": " for",
+        "start": 46.8,
+        "end": 47.12
+      },
+      {
+        "word": " you",
+        "start": 47.12,
+        "end": 47.4
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "girl, i'm too cool",
+    "start": 47.4,
+    "end": 48.98,
+    "words": [
+      {
+        "word": " Girl,",
+        "start": 47.4,
+        "end": 47.66
+      },
+      {
+        "word": " I'm",
+        "start": 47.66,
+        "end": 48.08
+      },
+      {
+        "word": " too",
+        "start": 48.08,
+        "end": 48.4
+      },
+      {
+        "word": " cool",
+        "start": 48.4,
+        "end": 48.98
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "but that's a front-bone no",
+    "start": 48.98,
+    "end": 50.64,
+    "words": [
+      {
+        "word": " But",
+        "start": 48.98,
+        "end": 49.34
+      },
+      {
+        "word": " that's",
+        "start": 49.34,
+        "end": 49.88
+      },
+      {
+        "word": " a",
+        "start": 49.88,
+        "end": 49.98
+      },
+      {
+        "word": " front",
+        "start": 49.98,
+        "end": 50.18
+      },
+      {
+        "word": "-bone",
+        "start": 50.18,
+        "end": 50.42
+      },
+      {
+        "word": " no",
+        "start": 50.42,
+        "end": 50.64
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "i think that i'm in love because the second that i fall out of bed",
+    "start": 50.64,
+    "end": 56.06,
+    "words": [
+      {
+        "word": " I",
+        "start": 50.64,
+        "end": 50.94
+      },
+      {
+        "word": " think",
+        "start": 50.94,
+        "end": 51.22
+      },
+      {
+        "word": " that",
+        "start": 51.22,
+        "end": 51.46
+      },
+      {
+        "word": " I'm",
+        "start": 51.46,
+        "end": 51.78
+      },
+      {
+        "word": " in",
+        "start": 51.78,
+        "end": 52.12
+      },
+      {
+        "word": " love",
+        "start": 52.12,
+        "end": 52.38
+      },
+      {
+        "word": " because",
+        "start": 52.38,
+        "end": 52.88
+      },
+      {
+        "word": " the",
+        "start": 52.88,
+        "end": 53.26
+      },
+      {
+        "word": " second",
+        "start": 53.26,
+        "end": 53.6
+      },
+      {
+        "word": " that",
+        "start": 53.6,
+        "end": 54.02
+      },
+      {
+        "word": " I",
+        "start": 54.02,
+        "end": 54.4
+      },
+      {
+        "word": " fall",
+        "start": 54.4,
+        "end": 54.62
+      },
+      {
+        "word": " out",
+        "start": 54.62,
+        "end": 55.1
+      },
+      {
+        "word": " of",
+        "start": 55.1,
+        "end": 55.3
+      },
+      {
+        "word": " bed",
+        "start": 55.3,
+        "end": 56.06
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "i wanna, i wanna, i wanna love you and tell you",
+    "start": 56.06,
+    "end": 59.98,
+    "words": [
+      {
+        "word": " I",
+        "start": 56.06,
+        "end": 56.98
+      },
+      {
+        "word": " wanna,",
+        "start": 56.98,
+        "end": 57.5
+      },
+      {
+        "word": " I",
+        "start": 57.88,
+        "end": 58.12
+      },
+      {
+        "word": " wanna,",
+        "start": 58.12,
+        "end": 58.5
+      },
+      {
+        "word": " I",
+        "start": 58.66,
+        "end": 58.66
+      },
+      {
+        "word": " wanna",
+        "start": 58.66,
+        "end": 58.66
+      },
+      {
+        "word": " love",
+        "start": 58.66,
+        "end": 58.96
+      },
+      {
+        "word": " you",
+        "start": 58.96,
+        "end": 59.26
+      },
+      {
+        "word": " and",
+        "start": 59.26,
+        "end": 59.48
+      },
+      {
+        "word": " tell",
+        "start": 59.48,
+        "end": 59.76
+      },
+      {
+        "word": " you",
+        "start": 59.76,
+        "end": 59.98
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "that you are mine",
+    "start": 59.98,
+    "end": 61.1,
+    "words": [
+      {
+        "word": " that",
+        "start": 59.98,
+        "end": 60.24
+      },
+      {
+        "word": " you",
+        "start": 60.24,
+        "end": 60.48
+      },
+      {
+        "word": " are",
+        "start": 60.48,
+        "end": 60.86
+      },
+      {
+        "word": " mine",
+        "start": 60.86,
+        "end": 61.1
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "you told me you think that i smell good then told me zip but not fly",
+    "start": 61.1,
+    "end": 65.4,
+    "words": [
+      {
+        "word": " You",
+        "start": 61.1,
+        "end": 61.34
+      },
+      {
+        "word": " told",
+        "start": 61.34,
+        "end": 61.64
+      },
+      {
+        "word": " me",
+        "start": 61.64,
+        "end": 61.92
+      },
+      {
+        "word": " you",
+        "start": 61.92,
+        "end": 62.18
+      },
+      {
+        "word": " think",
+        "start": 62.18,
+        "end": 62.44
+      },
+      {
+        "word": " that",
+        "start": 62.44,
+        "end": 62.76
+      },
+      {
+        "word": " I",
+        "start": 62.76,
+        "end": 63.02
+      },
+      {
+        "word": " smell",
+        "start": 63.02,
+        "end": 63.24
+      },
+      {
+        "word": " good",
+        "start": 63.24,
+        "end": 63.52
+      },
+      {
+        "word": " then",
+        "start": 63.52,
+        "end": 63.78
+      },
+      {
+        "word": " told",
+        "start": 63.78,
+        "end": 64.14
+      },
+      {
+        "word": " me",
+        "start": 64.14,
+        "end": 64.36
+      },
+      {
+        "word": " zip",
+        "start": 64.36,
+        "end": 64.58
+      },
+      {
+        "word": " but",
+        "start": 64.58,
+        "end": 64.94
+      },
+      {
+        "word": " not",
+        "start": 64.94,
+        "end": 65.26
+      },
+      {
+        "word": " fly",
+        "start": 65.26,
+        "end": 65.4
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "i wanna kiss you in the back of my car that i barely drive",
+    "start": 65.4,
+    "end": 69.8,
+    "words": [
+      {
+        "word": " I",
+        "start": 65.4,
+        "end": 65.7
+      },
+      {
+        "word": " wanna",
+        "start": 65.7,
+        "end": 66.14
+      },
+      {
+        "word": " kiss",
+        "start": 66.14,
+        "end": 66.54
+      },
+      {
+        "word": " you",
+        "start": 66.54,
+        "end": 66.84
+      },
+      {
+        "word": " in",
+        "start": 66.84,
+        "end": 67.18
+      },
+      {
+        "word": " the",
+        "start": 67.18,
+        "end": 67.46
+      },
+      {
+        "word": " back",
+        "start": 67.46,
+        "end": 67.66
+      },
+      {
+        "word": " of",
+        "start": 67.66,
+        "end": 67.9
+      },
+      {
+        "word": " my",
+        "start": 67.9,
+        "end": 68.26
+      },
+      {
+        "word": " car",
+        "start": 68.26,
+        "end": 68.44
+      },
+      {
+        "word": " that",
+        "start": 68.44,
+        "end": 68.7
+      },
+      {
+        "word": " I",
+        "start": 68.7,
+        "end": 69.14
+      },
+      {
+        "word": " barely",
+        "start": 69.14,
+        "end": 69.42
+      },
+      {
+        "word": " drive",
+        "start": 69.42,
+        "end": 69.8
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "because i share it with my mom in my mom's busy balls",
+    "start": 69.8,
+    "end": 73.72,
+    "words": [
+      {
+        "word": " Because",
+        "start": 69.8,
+        "end": 70.26
+      },
+      {
+        "word": " I",
+        "start": 70.26,
+        "end": 70.68
+      },
+      {
+        "word": " share",
+        "start": 70.68,
+        "end": 70.9
+      },
+      {
+        "word": " it",
+        "start": 70.9,
+        "end": 71.12
+      },
+      {
+        "word": " with",
+        "start": 71.12,
+        "end": 71.52
+      },
+      {
+        "word": " my",
+        "start": 71.52,
+        "end": 71.8
+      },
+      {
+        "word": " mom",
+        "start": 71.8,
+        "end": 72.0
+      },
+      {
+        "word": " in",
+        "start": 72.0,
+        "end": 72.2
+      },
+      {
+        "word": " my",
+        "start": 72.2,
+        "end": 72.54
+      },
+      {
+        "word": " mom's",
+        "start": 72.54,
+        "end": 72.92
+      },
+      {
+        "word": " busy",
+        "start": 72.92,
+        "end": 73.34
+      },
+      {
+        "word": " balls",
+        "start": 73.34,
+        "end": 73.72
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "time i tell ya, i really like you",
+    "start": 73.72,
+    "end": 77.66,
+    "words": [
+      {
+        "word": " Time",
+        "start": 73.72,
+        "end": 74.16
+      },
+      {
+        "word": " I",
+        "start": 74.16,
+        "end": 74.48
+      },
+      {
+        "word": " tell",
+        "start": 74.48,
+        "end": 74.74
+      },
+      {
+        "word": " ya,",
+        "start": 74.74,
+        "end": 75.26
+      },
+      {
+        "word": " I",
+        "start": 75.26,
+        "end": 76.04
+      },
+      {
+        "word": " really",
+        "start": 76.04,
+        "end": 77.12
+      },
+      {
+        "word": " like",
+        "start": 77.12,
+        "end": 77.6
+      },
+      {
+        "word": " you",
+        "start": 77.6,
+        "end": 77.91999999999999
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "i gotta see you",
+    "start": 80.46,
+    "end": 84.08,
+    "words": [
+      {
+        "word": " I",
+        "start": 80.46,
+        "end": 81.1
+      },
+      {
+        "word": " gotta",
+        "start": 81.1,
+        "end": 81.46
+      },
+      {
+        "word": " see",
+        "start": 81.46,
+        "end": 82.0
+      },
+      {
+        "word": " you",
+        "start": 82.0,
+        "end": 84.08
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "i really want you",
+    "start": 84.86,
+    "end": 86.30000000000001,
+    "words": [
+      {
+        "word": " I",
+        "start": 84.86,
+        "end": 85.5
+      },
+      {
+        "word": " really",
+        "start": 85.5,
+        "end": 85.96
+      },
+      {
+        "word": " want",
+        "start": 85.96,
+        "end": 86.24
+      },
+      {
+        "word": " you",
+        "start": 86.24,
+        "end": 86.55999999999999
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "whoa",
+    "start": 90.22,
+    "end": 90.82,
+    "words": [
+      {
+        "word": " Whoa",
+        "start": 90.22,
+        "end": 90.82
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "break it down",
+    "start": 92.16,
+    "end": 93.10000000000001,
+    "words": [
+      {
+        "word": " Break",
+        "start": 92.16,
+        "end": 92.76
+      },
+      {
+        "word": " it",
+        "start": 92.76,
+        "end": 93.06
+      },
+      {
+        "word": " down",
+        "start": 93.06,
+        "end": 93.36
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "i wanna love you and tell you that you are mine",
+    "start": 94.46000000000001,
+    "end": 98.16,
+    "words": [
+      {
+        "word": " I",
+        "start": 94.46000000000001,
+        "end": 95.06
+      },
+      {
+        "word": " wanna",
+        "start": 95.06,
+        "end": 95.56
+      },
+      {
+        "word": " love",
+        "start": 95.56,
+        "end": 96.02
+      },
+      {
+        "word": " you",
+        "start": 96.02,
+        "end": 96.36
+      },
+      {
+        "word": " and",
+        "start": 96.36,
+        "end": 96.56
+      },
+      {
+        "word": " tell",
+        "start": 96.56,
+        "end": 96.82
+      },
+      {
+        "word": " you",
+        "start": 96.82,
+        "end": 97.08
+      },
+      {
+        "word": " that",
+        "start": 97.08,
+        "end": 97.32
+      },
+      {
+        "word": " you",
+        "start": 97.32,
+        "end": 97.64
+      },
+      {
+        "word": " are",
+        "start": 97.64,
+        "end": 97.98
+      },
+      {
+        "word": " mine",
+        "start": 97.98,
+        "end": 98.16
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "you told me you think that i smell good then told me zip up my fly",
+    "start": 98.16,
+    "end": 102.48,
+    "words": [
+      {
+        "word": " You",
+        "start": 98.16,
+        "end": 98.44
+      },
+      {
+        "word": " told",
+        "start": 98.44,
+        "end": 98.68
+      },
+      {
+        "word": " me",
+        "start": 98.68,
+        "end": 99.0
+      },
+      {
+        "word": " you",
+        "start": 99.0,
+        "end": 99.26
+      },
+      {
+        "word": " think",
+        "start": 99.26,
+        "end": 99.54
+      },
+      {
+        "word": " that",
+        "start": 99.54,
+        "end": 99.84
+      },
+      {
+        "word": " I",
+        "start": 99.84,
+        "end": 100.06
+      },
+      {
+        "word": " smell",
+        "start": 100.06,
+        "end": 100.32
+      },
+      {
+        "word": " good",
+        "start": 100.32,
+        "end": 100.62
+      },
+      {
+        "word": " then",
+        "start": 100.62,
+        "end": 100.84
+      },
+      {
+        "word": " told",
+        "start": 100.84,
+        "end": 101.14
+      },
+      {
+        "word": " me",
+        "start": 101.14,
+        "end": 101.42
+      },
+      {
+        "word": " zip",
+        "start": 101.42,
+        "end": 101.66
+      },
+      {
+        "word": " up",
+        "start": 101.66,
+        "end": 102.02
+      },
+      {
+        "word": " my",
+        "start": 102.02,
+        "end": 102.34
+      },
+      {
+        "word": " fly",
+        "start": 102.34,
+        "end": 102.48
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "i wanna kiss you in the back of my car that i barely drive",
+    "start": 102.48,
+    "end": 106.86,
+    "words": [
+      {
+        "word": " I",
+        "start": 102.48,
+        "end": 102.8
+      },
+      {
+        "word": " wanna",
+        "start": 102.8,
+        "end": 103.24
+      },
+      {
+        "word": " kiss",
+        "start": 103.24,
+        "end": 103.62
+      },
+      {
+        "word": " you",
+        "start": 103.62,
+        "end": 103.96
+      },
+      {
+        "word": " in",
+        "start": 103.96,
+        "end": 104.26
+      },
+      {
+        "word": " the",
+        "start": 104.26,
+        "end": 104.54
+      },
+      {
+        "word": " back",
+        "start": 104.54,
+        "end": 104.76
+      },
+      {
+        "word": " of",
+        "start": 104.76,
+        "end": 105.04
+      },
+      {
+        "word": " my",
+        "start": 105.04,
+        "end": 105.34
+      },
+      {
+        "word": " car",
+        "start": 105.34,
+        "end": 105.54
+      },
+      {
+        "word": " that",
+        "start": 105.54,
+        "end": 105.78
+      },
+      {
+        "word": " I",
+        "start": 105.78,
+        "end": 106.18
+      },
+      {
+        "word": " barely",
+        "start": 106.18,
+        "end": 106.6
+      },
+      {
+        "word": " drive",
+        "start": 106.6,
+        "end": 106.86
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "because i share it with my mom in my mom's busy all the time",
+    "start": 106.86,
+    "end": 111.3,
+    "words": [
+      {
+        "word": " Because",
+        "start": 106.86,
+        "end": 107.38
+      },
+      {
+        "word": " I",
+        "start": 107.38,
+        "end": 107.8
+      },
+      {
+        "word": " share",
+        "start": 107.8,
+        "end": 108.0
+      },
+      {
+        "word": " it",
+        "start": 108.0,
+        "end": 108.22
+      },
+      {
+        "word": " with",
+        "start": 108.22,
+        "end": 108.58
+      },
+      {
+        "word": " my",
+        "start": 108.58,
+        "end": 108.92
+      },
+      {
+        "word": " mom",
+        "start": 108.92,
+        "end": 109.08
+      },
+      {
+        "word": " in",
+        "start": 109.08,
+        "end": 109.32
+      },
+      {
+        "word": " my",
+        "start": 109.32,
+        "end": 109.62
+      },
+      {
+        "word": " mom's",
+        "start": 109.62,
+        "end": 110.0
+      },
+      {
+        "word": " busy",
+        "start": 110.0,
+        "end": 110.32
+      },
+      {
+        "word": " all",
+        "start": 110.32,
+        "end": 110.74
+      },
+      {
+        "word": " the",
+        "start": 110.74,
+        "end": 111.0
+      },
+      {
+        "word": " time",
+        "start": 111.0,
+        "end": 111.3
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "i tell ya, i really like you",
+    "start": 111.3,
+    "end": 119.96,
+    "words": [
+      {
+        "word": " I",
+        "start": 111.3,
+        "end": 111.56
+      },
+      {
+        "word": " tell",
+        "start": 111.56,
+        "end": 111.82
+      },
+      {
+        "word": " ya,",
+        "start": 111.82,
+        "end": 112.24
+      },
+      {
+        "word": " I",
+        "start": 117.28,
+        "end": 117.28
+      },
+      {
+        "word": " really",
+        "start": 117.28,
+        "end": 118.26
+      },
+      {
+        "word": " like",
+        "start": 118.26,
+        "end": 118.26
+      },
+      {
+        "word": " you",
+        "start": 118.26,
+        "end": 119.96
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "i wanna love you and tell you that i smell good then told me zip up my fly",
+    "start": 120.78,
+    "end": 131.94,
+    "words": [
+      {
+        "word": " I",
+        "start": 120.1,
+        "end": 120.8
+      },
+      {
+        "word": " wanna",
+        "start": 120.8,
+        "end": 121.42
+      },
+      {
+        "word": " love",
+        "start": 121.42,
+        "end": 121.56
+      },
+      {
+        "word": " you",
+        "start": 121.56,
+        "end": 121.56
+      },
+      {
+        "word": " and",
+        "start": 121.56,
+        "end": 121.56
+      },
+      {
+        "word": " tell",
+        "start": 121.56,
+        "end": 121.56
+      },
+      {
+        "word": " you",
+        "start": 121.56,
+        "end": 122.4
+      },
+      {
+        "word": " that",
+        "start": 122.4,
+        "end": 122.94
+      },
+      {
+        "word": " I",
+        "start": 122.94,
+        "end": 122.94
+      },
+      {
+        "word": " smell",
+        "start": 122.94,
+        "end": 125.34
+      },
+      {
+        "word": " good",
+        "start": 125.34,
+        "end": 127.94
+      },
+      {
+        "word": " then",
+        "start": 127.94,
+        "end": 128.06
+      },
+      {
+        "word": " told",
+        "start": 128.06,
+        "end": 129.62
+      },
+      {
+        "word": " me",
+        "start": 129.62,
+        "end": 130.1
+      },
+      {
+        "word": " zip",
+        "start": 130.1,
+        "end": 130.1
+      },
+      {
+        "word": " up",
+        "start": 130.1,
+        "end": 131.94
+      },
+      {
+        "word": " my",
+        "start": 131.94,
+        "end": 131.94
+      },
+      {
+        "word": " fly",
+        "start": 131.94,
+        "end": 131.94
+      }
+    ]
+  }
+]

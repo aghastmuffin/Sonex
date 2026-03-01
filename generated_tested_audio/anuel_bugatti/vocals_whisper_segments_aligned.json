@@ -1,0 +1,4445 @@
+{
+  "segments": [
+    {
+      "start": 10.0,
+      "end": 14.24,
+      "text": "ella es exclusiva no quiere amigas nuevas",
+      "words": [
+        {
+          "word": "ella",
+          "start": 10.0,
+          "end": 10.646,
+          "score": 0.638
+        },
+        {
+          "word": "es",
+          "start": 10.747,
+          "end": 10.787,
+          "score": 0.005
+        },
+        {
+          "word": "exclusiva",
+          "start": 10.808,
+          "end": 12.12,
+          "score": 0.793
+        },
+        {
+          "word": "no",
+          "start": 13.029,
+          "end": 13.069,
+          "score": 0.0
+        },
+        {
+          "word": "quiere",
+          "start": 13.089,
+          "end": 13.332,
+          "score": 0.301
+        },
+        {
+          "word": "amigas",
+          "start": 13.392,
+          "end": 13.695,
+          "score": 0.656
+        },
+        {
+          "word": "nuevas",
+          "start": 13.715,
+          "end": 14.24,
+          "score": 0.636
+        }
+      ]
+    },
+    {
+      "start": 14.22,
+      "end": 17.38,
+      "text": "porque ella y las de ella ya están muy arriba",
+      "words": [
+        {
+          "word": "porque",
+          "start": 14.22,
+          "end": 14.645,
+          "score": 0.845
+        },
+        {
+          "word": "ella",
+          "start": 14.848,
+          "end": 15.111,
+          "score": 0.31
+        },
+        {
+          "word": "y",
+          "start": 15.132,
+          "end": 15.152,
+          "score": 0.312
+        },
+        {
+          "word": "las",
+          "start": 15.172,
+          "end": 15.354,
+          "score": 0.495
+        },
+        {
+          "word": "de",
+          "start": 15.375,
+          "end": 15.618,
+          "score": 0.755
+        },
+        {
+          "word": "ella",
+          "start": 15.638,
+          "end": 15.719,
+          "score": 0.01
+        },
+        {
+          "word": "ya",
+          "start": 15.739,
+          "end": 15.82,
+          "score": 0.584
+        },
+        {
+          "word": "están",
+          "start": 15.841,
+          "end": 15.982,
+          "score": 0.568
+        },
+        {
+          "word": "muy",
+          "start": 16.063,
+          "end": 16.205,
+          "score": 0.822
+        },
+        {
+          "word": "arriba",
+          "start": 16.286,
+          "end": 17.38,
+          "score": 0.715
+        }
+      ]
+    },
+    {
+      "start": 17.36,
+      "end": 22.84,
+      "text": "la frontea era de polvida ese bugatti no tiene dueño",
+      "words": [
+        {
+          "word": "la",
+          "start": 17.36,
+          "end": 17.985,
+          "score": 0.532
+        },
+        {
+          "word": "frontea",
+          "start": 18.045,
+          "end": 18.428,
+          "score": 0.7
+        },
+        {
+          "word": "era",
+          "start": 18.508,
+          "end": 18.67,
+          "score": 0.677
+        },
+        {
+          "word": "de",
+          "start": 18.69,
+          "end": 18.79,
+          "score": 0.688
+        },
+        {
+          "word": "polvida",
+          "start": 18.871,
+          "end": 19.979,
+          "score": 0.8
+        },
+        {
+          "word": "ese",
+          "start": 20.422,
+          "end": 20.725,
+          "score": 0.732
+        },
+        {
+          "word": "bugatti",
+          "start": 20.745,
+          "end": 21.148,
+          "score": 0.64
+        },
+        {
+          "word": "no",
+          "start": 21.168,
+          "end": 21.269,
+          "score": 0.668
+        },
+        {
+          "word": "tiene",
+          "start": 21.369,
+          "end": 21.792,
+          "score": 0.886
+        },
+        {
+          "word": "dueño",
+          "start": 22.518,
+          "end": 22.84,
+          "score": 0.446
+        }
+      ]
+    },
+    {
+      "start": 22.82,
+      "end": 27.74,
+      "text": "porque ese máquina no está a la venta un culo grande y un travesito pequeño",
+      "words": [
+        {
+          "word": "porque",
+          "start": 22.82,
+          "end": 23.183,
+          "score": 0.654
+        },
+        {
+          "word": "ese",
+          "start": 23.223,
+          "end": 23.344,
+          "score": 0.909
+        },
+        {
+          "word": "máquina",
+          "start": 23.405,
+          "end": 23.788,
+          "score": 0.794
+        },
+        {
+          "word": "no",
+          "start": 23.889,
+          "end": 24.01,
+          "score": 0.574
+        },
+        {
+          "word": "está",
+          "start": 24.03,
+          "end": 24.252,
+          "score": 0.568
+        },
+        {
+          "word": "a",
+          "start": 24.272,
+          "end": 24.312,
+          "score": 0.746
+        },
+        {
+          "word": "la",
+          "start": 24.433,
+          "end": 24.473,
+          "score": 0.016
+        },
+        {
+          "word": "venta",
+          "start": 24.494,
+          "end": 24.978,
+          "score": 0.95
+        },
+        {
+          "word": "un",
+          "start": 25.26,
+          "end": 25.381,
+          "score": 0.566
+        },
+        {
+          "word": "culo",
+          "start": 25.401,
+          "end": 25.704,
+          "score": 0.173
+        },
+        {
+          "word": "grande",
+          "start": 25.724,
+          "end": 26.026,
+          "score": 0.772
+        },
+        {
+          "word": "y",
+          "start": 26.067,
+          "end": 26.087,
+          "score": 0.002
+        },
+        {
+          "word": "un",
+          "start": 26.107,
+          "end": 26.228,
+          "score": 0.793
+        },
+        {
+          "word": "travesito",
+          "start": 26.248,
+          "end": 26.873,
+          "score": 0.768
+        },
+        {
+          "word": "pequeño",
+          "start": 26.893,
+          "end": 27.74,
+          "score": 0.797
+        }
+      ]
+    },
+    {
+      "start": 27.72,
+      "end": 35.9,
+      "text": "viviendo la mente sin pagarle renta ese bugatti no tiene dueño",
+      "words": [
+        {
+          "word": "viviendo",
+          "start": 27.72,
+          "end": 28.504,
+          "score": 0.194
+        },
+        {
+          "word": "la",
+          "start": 28.524,
+          "end": 28.665,
+          "score": 0.805
+        },
+        {
+          "word": "mente",
+          "start": 28.685,
+          "end": 28.906,
+          "score": 0.873
+        },
+        {
+          "word": "sin",
+          "start": 29.026,
+          "end": 29.147,
+          "score": 0.718
+        },
+        {
+          "word": "pagarle",
+          "start": 29.489,
+          "end": 29.67,
+          "score": 0.195
+        },
+        {
+          "word": "renta",
+          "start": 29.77,
+          "end": 31.177,
+          "score": 0.98
+        },
+        {
+          "word": "ese",
+          "start": 31.197,
+          "end": 31.398,
+          "score": 0.842
+        },
+        {
+          "word": "bugatti",
+          "start": 31.418,
+          "end": 31.84,
+          "score": 0.708
+        },
+        {
+          "word": "no",
+          "start": 31.86,
+          "end": 31.941,
+          "score": 0.838
+        },
+        {
+          "word": "tiene",
+          "start": 32.061,
+          "end": 32.383,
+          "score": 0.814
+        },
+        {
+          "word": "dueño",
+          "start": 32.483,
+          "end": 35.9,
+          "score": 0.715
+        }
+      ]
+    },
+    {
+      "start": 35.88,
+      "end": 41.22,
+      "text": "baby si no fuma yo te enseño es soy ababro rosado no lo empeño",
+      "words": [
+        {
+          "word": "baby",
+          "start": 35.88,
+          "end": 36.666,
+          "score": 0.194
+        },
+        {
+          "word": "si",
+          "start": 36.686,
+          "end": 36.827,
+          "score": 0.745
+        },
+        {
+          "word": "no",
+          "start": 36.847,
+          "end": 36.908,
+          "score": 0.851
+        },
+        {
+          "word": "fuma",
+          "start": 37.029,
+          "end": 37.25,
+          "score": 0.779
+        },
+        {
+          "word": "yo",
+          "start": 37.432,
+          "end": 37.472,
+          "score": 0.018
+        },
+        {
+          "word": "te",
+          "start": 37.492,
+          "end": 38.218,
+          "score": 0.828
+        },
+        {
+          "word": "enseño",
+          "start": 38.238,
+          "end": 38.439,
+          "score": 0.198
+        },
+        {
+          "word": "es",
+          "start": 38.459,
+          "end": 38.721,
+          "score": 0.641
+        },
+        {
+          "word": "soy",
+          "start": 39.024,
+          "end": 39.084,
+          "score": 0.508
+        },
+        {
+          "word": "ababro",
+          "start": 39.145,
+          "end": 39.548,
+          "score": 0.458
+        },
+        {
+          "word": "rosado",
+          "start": 39.568,
+          "end": 40.011,
+          "score": 0.873
+        },
+        {
+          "word": "no",
+          "start": 40.051,
+          "end": 40.152,
+          "score": 0.718
+        },
+        {
+          "word": "lo",
+          "start": 40.172,
+          "end": 40.233,
+          "score": 0.207
+        },
+        {
+          "word": "empeño",
+          "start": 40.253,
+          "end": 41.22,
+          "score": 0.635
+        }
+      ]
+    },
+    {
+      "start": 41.88,
+      "end": 47.48,
+      "text": "me siento como ronaldo desde que te lo metí me siento como rochico un culo en punta cana",
+      "words": [
+        {
+          "word": "me",
+          "start": 41.88,
+          "end": 42.182,
+          "score": 0.46
+        },
+        {
+          "word": "siento",
+          "start": 42.202,
+          "end": 42.504,
+          "score": 0.715
+        },
+        {
+          "word": "como",
+          "start": 42.565,
+          "end": 42.786,
+          "score": 0.758
+        },
+        {
+          "word": "ronaldo",
+          "start": 42.907,
+          "end": 43.351,
+          "score": 0.811
+        },
+        {
+          "word": "desde",
+          "start": 43.411,
+          "end": 43.673,
+          "score": 0.541
+        },
+        {
+          "word": "que",
+          "start": 43.693,
+          "end": 43.854,
+          "score": 0.546
+        },
+        {
+          "word": "te",
+          "start": 43.874,
+          "end": 44.015,
+          "score": 0.624
+        },
+        {
+          "word": "lo",
+          "start": 44.056,
+          "end": 44.156,
+          "score": 0.61
+        },
+        {
+          "word": "metí",
+          "start": 44.197,
+          "end": 44.922,
+          "score": 0.333
+        },
+        {
+          "word": "me",
+          "start": 44.942,
+          "end": 45.023,
+          "score": 0.547
+        },
+        {
+          "word": "siento",
+          "start": 45.043,
+          "end": 45.345,
+          "score": 0.581
+        },
+        {
+          "word": "como",
+          "start": 45.405,
+          "end": 45.707,
+          "score": 0.654
+        },
+        {
+          "word": "rochico",
+          "start": 45.728,
+          "end": 46.151,
+          "score": 0.83
+        },
+        {
+          "word": "un",
+          "start": 46.271,
+          "end": 46.372,
+          "score": 0.654
+        },
+        {
+          "word": "culo",
+          "start": 46.392,
+          "end": 46.594,
+          "score": 0.572
+        },
+        {
+          "word": "en",
+          "start": 46.614,
+          "end": 46.654,
+          "score": 0.643
+        },
+        {
+          "word": "punta",
+          "start": 46.715,
+          "end": 47.037,
+          "score": 0.803
+        },
+        {
+          "word": "cana",
+          "start": 47.057,
+          "end": 47.48,
+          "score": 0.931
+        }
+      ]
+    },
+    {
+      "start": 47.46,
+      "end": 52.74,
+      "text": "y la combi que ya tiene su pring soy su hermana la maricota entre toda tu hermana",
+      "words": [
+        {
+          "word": "y",
+          "start": 47.46,
+          "end": 48.206,
+          "score": 0.702
+        },
+        {
+          "word": "la",
+          "start": 48.226,
+          "end": 48.306,
+          "score": 0.892
+        },
+        {
+          "word": "combi",
+          "start": 48.387,
+          "end": 48.689,
+          "score": 0.611
+        },
+        {
+          "word": "que",
+          "start": 48.71,
+          "end": 48.81,
+          "score": 0.507
+        },
+        {
+          "word": "ya",
+          "start": 48.911,
+          "end": 48.971,
+          "score": 0.478
+        },
+        {
+          "word": "tiene",
+          "start": 49.052,
+          "end": 49.395,
+          "score": 0.812
+        },
+        {
+          "word": "su",
+          "start": 49.435,
+          "end": 49.677,
+          "score": 0.718
+        },
+        {
+          "word": "pring",
+          "start": 49.737,
+          "end": 50.1,
+          "score": 0.145
+        },
+        {
+          "word": "soy",
+          "start": 50.12,
+          "end": 50.181,
+          "score": 0.013
+        },
+        {
+          "word": "su",
+          "start": 50.201,
+          "end": 50.302,
+          "score": 0.5
+        },
+        {
+          "word": "hermana",
+          "start": 50.402,
+          "end": 50.725,
+          "score": 0.208
+        },
+        {
+          "word": "la",
+          "start": 50.745,
+          "end": 50.805,
+          "score": 0.624
+        },
+        {
+          "word": "maricota",
+          "start": 50.846,
+          "end": 51.39,
+          "score": 0.686
+        },
+        {
+          "word": "entre",
+          "start": 51.45,
+          "end": 51.672,
+          "score": 0.768
+        },
+        {
+          "word": "toda",
+          "start": 51.753,
+          "end": 51.994,
+          "score": 0.885
+        },
+        {
+          "word": "tu",
+          "start": 52.055,
+          "end": 52.236,
+          "score": 0.596
+        },
+        {
+          "word": "hermana",
+          "start": 52.357,
+          "end": 52.74,
+          "score": 0.694
+        }
+      ]
+    },
+    {
+      "start": 52.72,
+      "end": 56.7,
+      "text": "ella sabe que en el palo tengo el mini esa nalga son chiron",
+      "words": [
+        {
+          "word": "ella",
+          "start": 52.72,
+          "end": 53.104,
+          "score": 0.194
+        },
+        {
+          "word": "sabe",
+          "start": 53.124,
+          "end": 53.286,
+          "score": 0.398
+        },
+        {
+          "word": "que",
+          "start": 53.306,
+          "end": 53.427,
+          "score": 0.367
+        },
+        {
+          "word": "en",
+          "start": 53.447,
+          "end": 53.548,
+          "score": 0.248
+        },
+        {
+          "word": "el",
+          "start": 53.569,
+          "end": 53.73,
+          "score": 0.26
+        },
+        {
+          "word": "palo",
+          "start": 53.75,
+          "end": 53.952,
+          "score": 0.881
+        },
+        {
+          "word": "tengo",
+          "start": 54.094,
+          "end": 54.276,
+          "score": 0.431
+        },
+        {
+          "word": "el",
+          "start": 54.296,
+          "end": 54.357,
+          "score": 0.709
+        },
+        {
+          "word": "mini",
+          "start": 54.417,
+          "end": 55.023,
+          "score": 0.636
+        },
+        {
+          "word": "esa",
+          "start": 55.448,
+          "end": 55.69,
+          "score": 0.732
+        },
+        {
+          "word": "nalga",
+          "start": 55.71,
+          "end": 56.033,
+          "score": 0.724
+        },
+        {
+          "word": "son",
+          "start": 56.054,
+          "end": 56.195,
+          "score": 0.781
+        },
+        {
+          "word": "chiron",
+          "start": 56.256,
+          "end": 56.7,
+          "score": 0.747
+        }
+      ]
+    },
+    {
+      "start": 56.68,
+      "end": 61.84,
+      "text": "el motor ve 16 tiene el millaje bien trepado",
+      "words": [
+        {
+          "word": "el",
+          "start": 56.68,
+          "end": 56.801,
+          "score": 0.434
+        },
+        {
+          "word": "motor",
+          "start": 56.982,
+          "end": 57.265,
+          "score": 0.523
+        },
+        {
+          "word": "ve",
+          "start": 57.385,
+          "end": 57.426,
+          "score": 0.282
+        },
+        {
+          "word": "16",
+          "start": 57.446,
+          "end": 57.708,
+          "score": 0.768
+        },
+        {
+          "word": "tiene",
+          "start": 57.728,
+          "end": 58.796,
+          "score": 0.579
+        },
+        {
+          "word": "el",
+          "start": 59.26,
+          "end": 59.522,
+          "score": 0.656
+        },
+        {
+          "word": "millaje",
+          "start": 59.603,
+          "end": 60.53,
+          "score": 0.534
+        },
+        {
+          "word": "bien",
+          "start": 60.59,
+          "end": 60.752,
+          "score": 0.536
+        },
+        {
+          "word": "trepado",
+          "start": 61.699,
+          "end": 61.84,
+          "score": 0.145
+        }
+      ]
+    },
+    {
+      "start": 61.82,
+      "end": 66.06,
+      "text": "pero se ve nueva de caja en el bikini el máquina no es compacto",
+      "words": [
+        {
+          "word": "pero",
+          "start": 61.82,
+          "end": 62.143,
+          "score": 0.748
+        },
+        {
+          "word": "se",
+          "start": 62.183,
+          "end": 62.284,
+          "score": 0.888
+        },
+        {
+          "word": "ve",
+          "start": 62.345,
+          "end": 62.486,
+          "score": 0.848
+        },
+        {
+          "word": "nueva",
+          "start": 62.507,
+          "end": 62.749,
+          "score": 0.529
+        },
+        {
+          "word": "de",
+          "start": 62.789,
+          "end": 63.011,
+          "score": 0.624
+        },
+        {
+          "word": "caja",
+          "start": 63.031,
+          "end": 63.294,
+          "score": 0.69
+        },
+        {
+          "word": "en",
+          "start": 63.314,
+          "end": 63.375,
+          "score": 0.946
+        },
+        {
+          "word": "el",
+          "start": 63.415,
+          "end": 63.496,
+          "score": 0.946
+        },
+        {
+          "word": "bikini",
+          "start": 63.556,
+          "end": 64.344,
+          "score": 0.548
+        },
+        {
+          "word": "el",
+          "start": 64.627,
+          "end": 64.687,
+          "score": 0.786
+        },
+        {
+          "word": "máquina",
+          "start": 64.768,
+          "end": 65.374,
+          "score": 0.594
+        },
+        {
+          "word": "no",
+          "start": 65.394,
+          "end": 65.434,
+          "score": 0.0
+        },
+        {
+          "word": "es",
+          "start": 65.454,
+          "end": 65.495,
+          "score": 0.276
+        },
+        {
+          "word": "compacto",
+          "start": 65.576,
+          "end": 66.06,
+          "score": 0.619
+        }
+      ]
+    },
+    {
+      "start": 67.08,
+      "end": 71.42,
+      "text": "los chocos pero sin tacto y había dando contacto",
+      "words": [
+        {
+          "word": "los",
+          "start": 67.08,
+          "end": 67.383,
+          "score": 0.288
+        },
+        {
+          "word": "chocos",
+          "start": 67.403,
+          "end": 67.706,
+          "score": 0.619
+        },
+        {
+          "word": "pero",
+          "start": 67.726,
+          "end": 67.948,
+          "score": 0.937
+        },
+        {
+          "word": "sin",
+          "start": 68.029,
+          "end": 68.21,
+          "score": 0.907
+        },
+        {
+          "word": "tacto",
+          "start": 68.412,
+          "end": 70.169,
+          "score": 0.969
+        },
+        {
+          "word": "y",
+          "start": 70.411,
+          "end": 70.431,
+          "score": 0.0
+        },
+        {
+          "word": "había",
+          "start": 70.451,
+          "end": 70.734,
+          "score": 0.602
+        },
+        {
+          "word": "dando",
+          "start": 70.774,
+          "end": 70.875,
+          "score": 0.082
+        },
+        {
+          "word": "contacto",
+          "start": 70.895,
+          "end": 71.42,
+          "score": 0.823
+        }
+      ]
+    },
+    {
+      "start": 72.48,
+      "end": 78.06,
+      "text": "yo si tú ya le hagas un pacto ese bugatti no tiene dueño",
+      "words": [
+        {
+          "word": "yo",
+          "start": 72.48,
+          "end": 72.742,
+          "score": 0.414
+        },
+        {
+          "word": "si",
+          "start": 72.762,
+          "end": 72.863,
+          "score": 0.74
+        },
+        {
+          "word": "tú",
+          "start": 72.883,
+          "end": 73.004,
+          "score": 0.28
+        },
+        {
+          "word": "ya",
+          "start": 73.024,
+          "end": 73.104,
+          "score": 0.849
+        },
+        {
+          "word": "le",
+          "start": 73.185,
+          "end": 73.326,
+          "score": 0.615
+        },
+        {
+          "word": "hagas",
+          "start": 73.346,
+          "end": 73.548,
+          "score": 0.277
+        },
+        {
+          "word": "un",
+          "start": 73.568,
+          "end": 73.648,
+          "score": 0.824
+        },
+        {
+          "word": "pacto",
+          "start": 73.709,
+          "end": 75.018,
+          "score": 0.945
+        },
+        {
+          "word": "ese",
+          "start": 75.723,
+          "end": 76.872,
+          "score": 0.746
+        },
+        {
+          "word": "bugatti",
+          "start": 76.892,
+          "end": 77.154,
+          "score": 0.581
+        },
+        {
+          "word": "no",
+          "start": 77.174,
+          "end": 77.274,
+          "score": 0.893
+        },
+        {
+          "word": "tiene",
+          "start": 77.395,
+          "end": 77.778,
+          "score": 0.815
+        },
+        {
+          "word": "dueño",
+          "start": 77.798,
+          "end": 78.06,
+          "score": 0.466
+        }
+      ]
+    },
+    {
+      "start": 78.82,
+      "end": 83.82,
+      "text": "porque ese máquina no está a la venta un culo grande y un travesito pequeño",
+      "words": [
+        {
+          "word": "porque",
+          "start": 78.82,
+          "end": 79.183,
+          "score": 0.328
+        },
+        {
+          "word": "ese",
+          "start": 79.203,
+          "end": 79.364,
+          "score": 0.735
+        },
+        {
+          "word": "máquina",
+          "start": 79.405,
+          "end": 79.868,
+          "score": 0.659
+        },
+        {
+          "word": "no",
+          "start": 79.889,
+          "end": 79.969,
+          "score": 0.644
+        },
+        {
+          "word": "está",
+          "start": 80.03,
+          "end": 80.251,
+          "score": 0.559
+        },
+        {
+          "word": "a",
+          "start": 80.272,
+          "end": 80.312,
+          "score": 0.819
+        },
+        {
+          "word": "la",
+          "start": 80.393,
+          "end": 80.433,
+          "score": 0.008
+        },
+        {
+          "word": "venta",
+          "start": 80.453,
+          "end": 80.917,
+          "score": 0.952
+        },
+        {
+          "word": "un",
+          "start": 80.937,
+          "end": 80.977,
+          "score": 0.466
+        },
+        {
+          "word": "culo",
+          "start": 81.018,
+          "end": 81.743,
+          "score": 0.402
+        },
+        {
+          "word": "grande",
+          "start": 81.764,
+          "end": 82.026,
+          "score": 0.406
+        },
+        {
+          "word": "y",
+          "start": 82.046,
+          "end": 82.066,
+          "score": 0.604
+        },
+        {
+          "word": "un",
+          "start": 82.106,
+          "end": 82.187,
+          "score": 0.742
+        },
+        {
+          "word": "travesito",
+          "start": 82.248,
+          "end": 82.873,
+          "score": 0.709
+        },
+        {
+          "word": "pequeño",
+          "start": 82.893,
+          "end": 83.82,
+          "score": 0.452
+        }
+      ]
+    },
+    {
+      "start": 83.8,
+      "end": 86.06,
+      "text": "viviendo la mente sin pagarle renta",
+      "words": [
+        {
+          "word": "viviendo",
+          "start": 83.8,
+          "end": 84.513,
+          "score": 0.198
+        },
+        {
+          "word": "la",
+          "start": 84.533,
+          "end": 84.594,
+          "score": 0.568
+        },
+        {
+          "word": "mente",
+          "start": 84.696,
+          "end": 84.94,
+          "score": 0.821
+        },
+        {
+          "word": "sin",
+          "start": 84.961,
+          "end": 85.164,
+          "score": 0.79
+        },
+        {
+          "word": "pagarle",
+          "start": 85.246,
+          "end": 85.714,
+          "score": 0.424
+        },
+        {
+          "word": "renta",
+          "start": 85.796,
+          "end": 86.06,
+          "score": 0.666
+        }
+      ]
+    },
+    {
+      "start": 86.9,
+      "end": 94.38,
+      "text": "ese bugatti no tiene dueño baby si no fuma yo te enseño",
+      "words": [
+        {
+          "word": "ese",
+          "start": 86.9,
+          "end": 87.523,
+          "score": 0.836
+        },
+        {
+          "word": "bugatti",
+          "start": 87.564,
+          "end": 87.825,
+          "score": 0.565
+        },
+        {
+          "word": "no",
+          "start": 87.845,
+          "end": 87.905,
+          "score": 0.619
+        },
+        {
+          "word": "tiene",
+          "start": 88.026,
+          "end": 88.368,
+          "score": 0.804
+        },
+        {
+          "word": "dueño",
+          "start": 92.249,
+          "end": 92.349,
+          "score": 0.002
+        },
+        {
+          "word": "baby",
+          "start": 92.369,
+          "end": 92.691,
+          "score": 0.392
+        },
+        {
+          "word": "si",
+          "start": 92.711,
+          "end": 92.832,
+          "score": 0.779
+        },
+        {
+          "word": "no",
+          "start": 92.852,
+          "end": 92.932,
+          "score": 0.808
+        },
+        {
+          "word": "fuma",
+          "start": 93.053,
+          "end": 93.435,
+          "score": 0.704
+        },
+        {
+          "word": "yo",
+          "start": 93.455,
+          "end": 93.495,
+          "score": 0.03
+        },
+        {
+          "word": "te",
+          "start": 93.515,
+          "end": 93.676,
+          "score": 0.768
+        },
+        {
+          "word": "enseño",
+          "start": 93.696,
+          "end": 94.38,
+          "score": 0.671
+        }
+      ]
+    },
+    {
+      "start": 94.36,
+      "end": 97.34,
+      "text": "es soy ababro rosado no lo empeño",
+      "words": [
+        {
+          "word": "es",
+          "start": 94.36,
+          "end": 94.847,
+          "score": 0.522
+        },
+        {
+          "word": "soy",
+          "start": 94.867,
+          "end": 94.928,
+          "score": 0.004
+        },
+        {
+          "word": "ababro",
+          "start": 94.948,
+          "end": 95.556,
+          "score": 0.741
+        },
+        {
+          "word": "rosado",
+          "start": 95.576,
+          "end": 95.982,
+          "score": 0.851
+        },
+        {
+          "word": "no",
+          "start": 96.043,
+          "end": 96.164,
+          "score": 0.777
+        },
+        {
+          "word": "lo",
+          "start": 96.185,
+          "end": 96.266,
+          "score": 0.328
+        },
+        {
+          "word": "empeño",
+          "start": 96.286,
+          "end": 97.34,
+          "score": 0.701
+        }
+      ]
+    },
+    {
+      "start": 98.86,
+      "end": 104.24,
+      "text": "en esas curvas yo no freno tiene operas y to' los senos",
+      "words": [
+        {
+          "word": "en",
+          "start": 98.86,
+          "end": 99.344,
+          "score": 0.726
+        },
+        {
+          "word": "esas",
+          "start": 99.424,
+          "end": 99.646,
+          "score": 0.676
+        },
+        {
+          "word": "curvas",
+          "start": 99.706,
+          "end": 99.948,
+          "score": 0.55
+        },
+        {
+          "word": "yo",
+          "start": 100.029,
+          "end": 100.17,
+          "score": 0.597
+        },
+        {
+          "word": "no",
+          "start": 100.19,
+          "end": 100.351,
+          "score": 0.778
+        },
+        {
+          "word": "freno",
+          "start": 100.371,
+          "end": 101.298,
+          "score": 0.864
+        },
+        {
+          "word": "tiene",
+          "start": 101.742,
+          "end": 102.124,
+          "score": 0.807
+        },
+        {
+          "word": "operas",
+          "start": 102.205,
+          "end": 102.447,
+          "score": 0.646
+        },
+        {
+          "word": "y",
+          "start": 102.588,
+          "end": 102.628,
+          "score": 0.859
+        },
+        {
+          "word": "to'",
+          "start": 102.709,
+          "end": 102.87,
+          "score": 0.573
+        },
+        {
+          "word": "los",
+          "start": 102.89,
+          "end": 102.991,
+          "score": 0.774
+        },
+        {
+          "word": "senos",
+          "start": 103.354,
+          "end": 104.24,
+          "score": 0.624
+        }
+      ]
+    },
+    {
+      "start": 104.22,
+      "end": 109.52,
+      "text": "yo siempre la guío borracho le doy mi tiempo a ella tu pierdes tiempo a los capchons",
+      "words": [
+        {
+          "word": "yo",
+          "start": 104.22,
+          "end": 104.643,
+          "score": 0.414
+        },
+        {
+          "word": "siempre",
+          "start": 104.663,
+          "end": 104.905,
+          "score": 0.667
+        },
+        {
+          "word": "la",
+          "start": 105.046,
+          "end": 105.288,
+          "score": 0.326
+        },
+        {
+          "word": "guío",
+          "start": 105.308,
+          "end": 105.409,
+          "score": 0.244
+        },
+        {
+          "word": "borracho",
+          "start": 105.53,
+          "end": 106.114,
+          "score": 0.756
+        },
+        {
+          "word": "le",
+          "start": 106.195,
+          "end": 106.255,
+          "score": 0.376
+        },
+        {
+          "word": "doy",
+          "start": 106.356,
+          "end": 106.517,
+          "score": 0.171
+        },
+        {
+          "word": "mi",
+          "start": 106.538,
+          "end": 106.638,
+          "score": 0.643
+        },
+        {
+          "word": "tiempo",
+          "start": 106.679,
+          "end": 107.162,
+          "score": 0.847
+        },
+        {
+          "word": "a",
+          "start": 107.182,
+          "end": 107.203,
+          "score": 0.001
+        },
+        {
+          "word": "ella",
+          "start": 107.223,
+          "end": 107.324,
+          "score": 0.468
+        },
+        {
+          "word": "tu",
+          "start": 107.384,
+          "end": 107.505,
+          "score": 0.789
+        },
+        {
+          "word": "pierdes",
+          "start": 107.525,
+          "end": 107.807,
+          "score": 0.286
+        },
+        {
+          "word": "tiempo",
+          "start": 107.868,
+          "end": 108.271,
+          "score": 0.827
+        },
+        {
+          "word": "a",
+          "start": 108.513,
+          "end": 108.775,
+          "score": 0.738
+        },
+        {
+          "word": "los",
+          "start": 108.795,
+          "end": 108.875,
+          "score": 0.737
+        },
+        {
+          "word": "capchons",
+          "start": 109.137,
+          "end": 109.52,
+          "score": 0.535
+        }
+      ]
+    },
+    {
+      "start": 109.5,
+      "end": 114.8,
+      "text": "guión gozado te asistoreto eres el tipo al que te lo meto",
+      "words": [
+        {
+          "word": "guión",
+          "start": 109.5,
+          "end": 109.903,
+          "score": 0.363
+        },
+        {
+          "word": "gozado",
+          "start": 109.923,
+          "end": 110.508,
+          "score": 0.43
+        },
+        {
+          "word": "te",
+          "start": 110.528,
+          "end": 110.629,
+          "score": 0.51
+        },
+        {
+          "word": "asistoreto",
+          "start": 110.649,
+          "end": 111.676,
+          "score": 0.744
+        },
+        {
+          "word": "eres",
+          "start": 112.442,
+          "end": 112.583,
+          "score": 0.568
+        },
+        {
+          "word": "el",
+          "start": 112.624,
+          "end": 112.724,
+          "score": 0.876
+        },
+        {
+          "word": "tipo",
+          "start": 112.865,
+          "end": 113.107,
+          "score": 0.558
+        },
+        {
+          "word": "al",
+          "start": 113.127,
+          "end": 113.168,
+          "score": 0.002
+        },
+        {
+          "word": "que",
+          "start": 113.188,
+          "end": 113.309,
+          "score": 0.746
+        },
+        {
+          "word": "te",
+          "start": 113.329,
+          "end": 113.41,
+          "score": 0.91
+        },
+        {
+          "word": "lo",
+          "start": 113.45,
+          "end": 113.752,
+          "score": 0.426
+        },
+        {
+          "word": "meto",
+          "start": 113.813,
+          "end": 114.8,
+          "score": 0.704
+        }
+      ]
+    },
+    {
+      "start": 114.78,
+      "end": 120.08,
+      "text": "la piso caiga y to' en la metro la pongo en cuatro y el nitro la aprieto",
+      "words": [
+        {
+          "word": "la",
+          "start": 114.78,
+          "end": 115.445,
+          "score": 0.543
+        },
+        {
+          "word": "piso",
+          "start": 115.465,
+          "end": 115.546,
+          "score": 0.047
+        },
+        {
+          "word": "caiga",
+          "start": 115.566,
+          "end": 115.868,
+          "score": 0.233
+        },
+        {
+          "word": "y",
+          "start": 115.888,
+          "end": 115.909,
+          "score": 0.0
+        },
+        {
+          "word": "to'",
+          "start": 115.929,
+          "end": 116.372,
+          "score": 0.421
+        },
+        {
+          "word": "en",
+          "start": 116.392,
+          "end": 116.433,
+          "score": 0.003
+        },
+        {
+          "word": "la",
+          "start": 116.453,
+          "end": 116.493,
+          "score": 0.001
+        },
+        {
+          "word": "metro",
+          "start": 116.513,
+          "end": 117.36,
+          "score": 0.896
+        },
+        {
+          "word": "la",
+          "start": 117.622,
+          "end": 117.702,
+          "score": 0.576
+        },
+        {
+          "word": "pongo",
+          "start": 117.722,
+          "end": 117.924,
+          "score": 0.862
+        },
+        {
+          "word": "en",
+          "start": 117.944,
+          "end": 118.004,
+          "score": 0.834
+        },
+        {
+          "word": "cuatro",
+          "start": 118.045,
+          "end": 118.428,
+          "score": 0.604
+        },
+        {
+          "word": "y",
+          "start": 118.448,
+          "end": 118.468,
+          "score": 0.001
+        },
+        {
+          "word": "el",
+          "start": 118.488,
+          "end": 118.528,
+          "score": 0.019
+        },
+        {
+          "word": "nitro",
+          "start": 118.549,
+          "end": 118.811,
+          "score": 0.9
+        },
+        {
+          "word": "la",
+          "start": 118.911,
+          "end": 118.952,
+          "score": 0.47
+        },
+        {
+          "word": "aprieto",
+          "start": 118.992,
+          "end": 120.08,
+          "score": 0.684
+        }
+      ]
+    },
+    {
+      "start": 120.06,
+      "end": 125.76,
+      "text": "no se queda sin gasolina me mudé pa' tu vulva pa' que sea mi vecina",
+      "words": [
+        {
+          "word": "no",
+          "start": 120.06,
+          "end": 120.624,
+          "score": 0.724
+        },
+        {
+          "word": "se",
+          "start": 120.684,
+          "end": 120.825,
+          "score": 0.806
+        },
+        {
+          "word": "queda",
+          "start": 120.846,
+          "end": 121.087,
+          "score": 0.402
+        },
+        {
+          "word": "sin",
+          "start": 121.168,
+          "end": 121.329,
+          "score": 0.804
+        },
+        {
+          "word": "gasolina",
+          "start": 121.349,
+          "end": 122.316,
+          "score": 0.757
+        },
+        {
+          "word": "me",
+          "start": 122.981,
+          "end": 123.021,
+          "score": 0.273
+        },
+        {
+          "word": "mudé",
+          "start": 123.101,
+          "end": 123.303,
+          "score": 0.547
+        },
+        {
+          "word": "pa'",
+          "start": 123.383,
+          "end": 123.565,
+          "score": 0.649
+        },
+        {
+          "word": "tu",
+          "start": 123.585,
+          "end": 123.726,
+          "score": 0.631
+        },
+        {
+          "word": "vulva",
+          "start": 123.746,
+          "end": 124.028,
+          "score": 0.635
+        },
+        {
+          "word": "pa'",
+          "start": 124.048,
+          "end": 124.189,
+          "score": 0.567
+        },
+        {
+          "word": "que",
+          "start": 124.209,
+          "end": 124.35,
+          "score": 0.492
+        },
+        {
+          "word": "sea",
+          "start": 124.37,
+          "end": 124.632,
+          "score": 0.677
+        },
+        {
+          "word": "mi",
+          "start": 124.713,
+          "end": 124.854,
+          "score": 0.715
+        },
+        {
+          "word": "vecina",
+          "start": 124.874,
+          "end": 125.76,
+          "score": 0.701
+        }
+      ]
+    },
+    {
+      "start": 125.74,
+      "end": 130.96,
+      "text": "que duro suena la bocina estuve gritando suena más que visa rap en argentina",
+      "words": [
+        {
+          "word": "que",
+          "start": 125.74,
+          "end": 126.264,
+          "score": 0.24
+        },
+        {
+          "word": "duro",
+          "start": 126.284,
+          "end": 126.365,
+          "score": 0.068
+        },
+        {
+          "word": "suena",
+          "start": 126.385,
+          "end": 126.667,
+          "score": 0.482
+        },
+        {
+          "word": "la",
+          "start": 126.687,
+          "end": 126.788,
+          "score": 0.716
+        },
+        {
+          "word": "bocina",
+          "start": 126.889,
+          "end": 127.655,
+          "score": 0.789
+        },
+        {
+          "word": "estuve",
+          "start": 128.038,
+          "end": 128.32,
+          "score": 0.238
+        },
+        {
+          "word": "gritando",
+          "start": 128.34,
+          "end": 128.642,
+          "score": 0.567
+        },
+        {
+          "word": "suena",
+          "start": 128.703,
+          "end": 128.945,
+          "score": 0.703
+        },
+        {
+          "word": "más",
+          "start": 129.066,
+          "end": 129.207,
+          "score": 0.376
+        },
+        {
+          "word": "que",
+          "start": 129.227,
+          "end": 129.408,
+          "score": 0.42
+        },
+        {
+          "word": "visa",
+          "start": 129.428,
+          "end": 129.69,
+          "score": 0.765
+        },
+        {
+          "word": "rap",
+          "start": 129.751,
+          "end": 129.932,
+          "score": 0.763
+        },
+        {
+          "word": "en",
+          "start": 129.952,
+          "end": 130.073,
+          "score": 0.428
+        },
+        {
+          "word": "argentina",
+          "start": 130.093,
+          "end": 130.96,
+          "score": 0.655
+        }
+      ]
+    },
+    {
+      "start": 130.94,
+      "end": 136.58,
+      "text": "el máquina no lo compacto los chocos pero sin tacto",
+      "words": [
+        {
+          "word": "el",
+          "start": 130.94,
+          "end": 131.383,
+          "score": 0.851
+        },
+        {
+          "word": "máquina",
+          "start": 131.423,
+          "end": 131.806,
+          "score": 0.689
+        },
+        {
+          "word": "no",
+          "start": 131.887,
+          "end": 131.987,
+          "score": 0.902
+        },
+        {
+          "word": "lo",
+          "start": 132.048,
+          "end": 132.128,
+          "score": 0.726
+        },
+        {
+          "word": "compacto",
+          "start": 132.229,
+          "end": 132.995,
+          "score": 0.936
+        },
+        {
+          "word": "los",
+          "start": 133.962,
+          "end": 134.022,
+          "score": 0.002
+        },
+        {
+          "word": "chocos",
+          "start": 134.042,
+          "end": 134.364,
+          "score": 0.652
+        },
+        {
+          "word": "pero",
+          "start": 134.385,
+          "end": 134.646,
+          "score": 0.883
+        },
+        {
+          "word": "sin",
+          "start": 134.908,
+          "end": 135.049,
+          "score": 0.647
+        },
+        {
+          "word": "tacto",
+          "start": 135.069,
+          "end": 136.58,
+          "score": 0.939
+        }
+      ]
+    },
+    {
+      "start": 136.56,
+      "end": 141.98,
+      "text": "y había dando contacto yo si tú ya le hagas un pacto",
+      "words": [
+        {
+          "word": "y",
+          "start": 136.56,
+          "end": 137.023,
+          "score": 0.778
+        },
+        {
+          "word": "había",
+          "start": 137.044,
+          "end": 137.185,
+          "score": 0.215
+        },
+        {
+          "word": "dando",
+          "start": 137.205,
+          "end": 137.406,
+          "score": 0.969
+        },
+        {
+          "word": "contacto",
+          "start": 137.447,
+          "end": 139.28,
+          "score": 0.636
+        },
+        {
+          "word": "yo",
+          "start": 139.3,
+          "end": 139.341,
+          "score": 0.081
+        },
+        {
+          "word": "si",
+          "start": 139.361,
+          "end": 139.522,
+          "score": 0.76
+        },
+        {
+          "word": "tú",
+          "start": 139.542,
+          "end": 139.683,
+          "score": 0.328
+        },
+        {
+          "word": "ya",
+          "start": 139.703,
+          "end": 139.764,
+          "score": 0.638
+        },
+        {
+          "word": "le",
+          "start": 139.844,
+          "end": 139.885,
+          "score": 0.006
+        },
+        {
+          "word": "hagas",
+          "start": 139.905,
+          "end": 140.187,
+          "score": 0.7
+        },
+        {
+          "word": "un",
+          "start": 140.247,
+          "end": 140.328,
+          "score": 0.795
+        },
+        {
+          "word": "pacto",
+          "start": 140.409,
+          "end": 141.98,
+          "score": 0.918
+        }
+      ]
+    },
+    {
+      "start": 142.7,
+      "end": 147.8,
+      "text": "ese bugatti no tiene dueño porque ese máquina no está a la venta",
+      "words": [
+        {
+          "word": "ese",
+          "start": 142.7,
+          "end": 143.365,
+          "score": 0.567
+        },
+        {
+          "word": "bugatti",
+          "start": 143.385,
+          "end": 143.789,
+          "score": 0.633
+        },
+        {
+          "word": "no",
+          "start": 143.809,
+          "end": 143.91,
+          "score": 0.746
+        },
+        {
+          "word": "tiene",
+          "start": 144.01,
+          "end": 144.474,
+          "score": 0.824
+        },
+        {
+          "word": "dueño",
+          "start": 144.534,
+          "end": 144.917,
+          "score": 0.581
+        },
+        {
+          "word": "porque",
+          "start": 144.958,
+          "end": 145.764,
+          "score": 0.368
+        },
+        {
+          "word": "ese",
+          "start": 145.845,
+          "end": 146.026,
+          "score": 0.582
+        },
+        {
+          "word": "máquina",
+          "start": 146.046,
+          "end": 146.55,
+          "score": 0.516
+        },
+        {
+          "word": "no",
+          "start": 146.57,
+          "end": 146.671,
+          "score": 0.581
+        },
+        {
+          "word": "está",
+          "start": 146.691,
+          "end": 146.853,
+          "score": 0.361
+        },
+        {
+          "word": "a",
+          "start": 146.873,
+          "end": 146.893,
+          "score": 0.163
+        },
+        {
+          "word": "la",
+          "start": 146.913,
+          "end": 147.195,
+          "score": 0.847
+        },
+        {
+          "word": "venta",
+          "start": 147.216,
+          "end": 147.8,
+          "score": 0.857
+        }
+      ]
+    },
+    {
+      "start": 147.78,
+      "end": 153.6,
+      "text": "un culo grande un travesito pequeño viviendo la mente sin pagarle renta",
+      "words": [
+        {
+          "word": "un",
+          "start": 147.78,
+          "end": 148.143,
+          "score": 0.448
+        },
+        {
+          "word": "culo",
+          "start": 148.163,
+          "end": 148.263,
+          "score": 0.456
+        },
+        {
+          "word": "grande",
+          "start": 148.384,
+          "end": 148.706,
+          "score": 0.487
+        },
+        {
+          "word": "un",
+          "start": 148.767,
+          "end": 148.868,
+          "score": 0.79
+        },
+        {
+          "word": "travesito",
+          "start": 148.888,
+          "end": 149.532,
+          "score": 0.702
+        },
+        {
+          "word": "pequeño",
+          "start": 149.552,
+          "end": 150.338,
+          "score": 0.624
+        },
+        {
+          "word": "viviendo",
+          "start": 150.72,
+          "end": 151.183,
+          "score": 0.557
+        },
+        {
+          "word": "la",
+          "start": 151.224,
+          "end": 151.304,
+          "score": 0.853
+        },
+        {
+          "word": "mente",
+          "start": 151.385,
+          "end": 151.667,
+          "score": 0.766
+        },
+        {
+          "word": "sin",
+          "start": 151.707,
+          "end": 151.888,
+          "score": 0.491
+        },
+        {
+          "word": "pagarle",
+          "start": 151.908,
+          "end": 152.311,
+          "score": 0.703
+        },
+        {
+          "word": "renta",
+          "start": 152.452,
+          "end": 153.6,
+          "score": 0.914
+        }
+      ]
+    },
+    {
+      "start": 153.58,
+      "end": 161.14,
+      "text": "ese bugatti no tiene dueño baby si no fuma yo te enseño",
+      "words": [
+        {
+          "word": "ese",
+          "start": 153.58,
+          "end": 154.706,
+          "score": 0.268
+        },
+        {
+          "word": "bugatti",
+          "start": 154.726,
+          "end": 154.947,
+          "score": 0.285
+        },
+        {
+          "word": "no",
+          "start": 154.967,
+          "end": 155.028,
+          "score": 0.619
+        },
+        {
+          "word": "tiene",
+          "start": 155.209,
+          "end": 157.682,
+          "score": 0.588
+        },
+        {
+          "word": "dueño",
+          "start": 159.049,
+          "end": 159.19,
+          "score": 0.413
+        },
+        {
+          "word": "baby",
+          "start": 159.27,
+          "end": 159.351,
+          "score": 0.022
+        },
+        {
+          "word": "si",
+          "start": 159.371,
+          "end": 159.612,
+          "score": 0.715
+        },
+        {
+          "word": "no",
+          "start": 159.632,
+          "end": 159.692,
+          "score": 0.26
+        },
+        {
+          "word": "fuma",
+          "start": 159.713,
+          "end": 160.074,
+          "score": 0.57
+        },
+        {
+          "word": "yo",
+          "start": 160.095,
+          "end": 160.296,
+          "score": 0.395
+        },
+        {
+          "word": "te",
+          "start": 160.316,
+          "end": 160.416,
+          "score": 0.351
+        },
+        {
+          "word": "enseño",
+          "start": 160.436,
+          "end": 161.14,
+          "score": 0.474
+        }
+      ]
+    },
+    {
+      "start": 161.12,
+      "end": 164.9,
+      "text": "es soy ababro rosado no lo empeño",
+      "words": [
+        {
+          "word": "es",
+          "start": 161.12,
+          "end": 162.353,
+          "score": 0.5
+        },
+        {
+          "word": "soy",
+          "start": 162.373,
+          "end": 162.535,
+          "score": 0.168
+        },
+        {
+          "word": "ababro",
+          "start": 162.555,
+          "end": 163.04,
+          "score": 0.403
+        },
+        {
+          "word": "rosado",
+          "start": 163.061,
+          "end": 163.91,
+          "score": 0.313
+        },
+        {
+          "word": "no",
+          "start": 163.93,
+          "end": 163.97,
+          "score": 0.391
+        },
+        {
+          "word": "lo",
+          "start": 164.718,
+          "end": 164.759,
+          "score": 0.002
+        },
+        {
+          "word": "empeño",
+          "start": 164.779,
+          "end": 164.9,
+          "score": 0.163
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "ella",
+      "start": 10.0,
+      "end": 10.646,
+      "score": 0.638
+    },
+    {
+      "word": "es",
+      "start": 10.747,
+      "end": 10.787,
+      "score": 0.005
+    },
+    {
+      "word": "exclusiva",
+      "start": 10.808,
+      "end": 12.12,
+      "score": 0.793
+    },
+    {
+      "word": "no",
+      "start": 13.029,
+      "end": 13.069,
+      "score": 0.0
+    },
+    {
+      "word": "quiere",
+      "start": 13.089,
+      "end": 13.332,
+      "score": 0.301
+    },
+    {
+      "word": "amigas",
+      "start": 13.392,
+      "end": 13.695,
+      "score": 0.656
+    },
+    {
+      "word": "nuevas",
+      "start": 13.715,
+      "end": 14.24,
+      "score": 0.636
+    },
+    {
+      "word": "porque",
+      "start": 14.22,
+      "end": 14.645,
+      "score": 0.845
+    },
+    {
+      "word": "ella",
+      "start": 14.848,
+      "end": 15.111,
+      "score": 0.31
+    },
+    {
+      "word": "y",
+      "start": 15.132,
+      "end": 15.152,
+      "score": 0.312
+    },
+    {
+      "word": "las",
+      "start": 15.172,
+      "end": 15.354,
+      "score": 0.495
+    },
+    {
+      "word": "de",
+      "start": 15.375,
+      "end": 15.618,
+      "score": 0.755
+    },
+    {
+      "word": "ella",
+      "start": 15.638,
+      "end": 15.719,
+      "score": 0.01
+    },
+    {
+      "word": "ya",
+      "start": 15.739,
+      "end": 15.82,
+      "score": 0.584
+    },
+    {
+      "word": "están",
+      "start": 15.841,
+      "end": 15.982,
+      "score": 0.568
+    },
+    {
+      "word": "muy",
+      "start": 16.063,
+      "end": 16.205,
+      "score": 0.822
+    },
+    {
+      "word": "arriba",
+      "start": 16.286,
+      "end": 17.38,
+      "score": 0.715
+    },
+    {
+      "word": "la",
+      "start": 17.36,
+      "end": 17.985,
+      "score": 0.532
+    },
+    {
+      "word": "frontea",
+      "start": 18.045,
+      "end": 18.428,
+      "score": 0.7
+    },
+    {
+      "word": "era",
+      "start": 18.508,
+      "end": 18.67,
+      "score": 0.677
+    },
+    {
+      "word": "de",
+      "start": 18.69,
+      "end": 18.79,
+      "score": 0.688
+    },
+    {
+      "word": "polvida",
+      "start": 18.871,
+      "end": 19.979,
+      "score": 0.8
+    },
+    {
+      "word": "ese",
+      "start": 20.422,
+      "end": 20.725,
+      "score": 0.732
+    },
+    {
+      "word": "bugatti",
+      "start": 20.745,
+      "end": 21.148,
+      "score": 0.64
+    },
+    {
+      "word": "no",
+      "start": 21.168,
+      "end": 21.269,
+      "score": 0.668
+    },
+    {
+      "word": "tiene",
+      "start": 21.369,
+      "end": 21.792,
+      "score": 0.886
+    },
+    {
+      "word": "dueño",
+      "start": 22.518,
+      "end": 22.84,
+      "score": 0.446
+    },
+    {
+      "word": "porque",
+      "start": 22.82,
+      "end": 23.183,
+      "score": 0.654
+    },
+    {
+      "word": "ese",
+      "start": 23.223,
+      "end": 23.344,
+      "score": 0.909
+    },
+    {
+      "word": "máquina",
+      "start": 23.405,
+      "end": 23.788,
+      "score": 0.794
+    },
+    {
+      "word": "no",
+      "start": 23.889,
+      "end": 24.01,
+      "score": 0.574
+    },
+    {
+      "word": "está",
+      "start": 24.03,
+      "end": 24.252,
+      "score": 0.568
+    },
+    {
+      "word": "a",
+      "start": 24.272,
+      "end": 24.312,
+      "score": 0.746
+    },
+    {
+      "word": "la",
+      "start": 24.433,
+      "end": 24.473,
+      "score": 0.016
+    },
+    {
+      "word": "venta",
+      "start": 24.494,
+      "end": 24.978,
+      "score": 0.95
+    },
+    {
+      "word": "un",
+      "start": 25.26,
+      "end": 25.381,
+      "score": 0.566
+    },
+    {
+      "word": "culo",
+      "start": 25.401,
+      "end": 25.704,
+      "score": 0.173
+    },
+    {
+      "word": "grande",
+      "start": 25.724,
+      "end": 26.026,
+      "score": 0.772
+    },
+    {
+      "word": "y",
+      "start": 26.067,
+      "end": 26.087,
+      "score": 0.002
+    },
+    {
+      "word": "un",
+      "start": 26.107,
+      "end": 26.228,
+      "score": 0.793
+    },
+    {
+      "word": "travesito",
+      "start": 26.248,
+      "end": 26.873,
+      "score": 0.768
+    },
+    {
+      "word": "pequeño",
+      "start": 26.893,
+      "end": 27.74,
+      "score": 0.797
+    },
+    {
+      "word": "viviendo",
+      "start": 27.72,
+      "end": 28.504,
+      "score": 0.194
+    },
+    {
+      "word": "la",
+      "start": 28.524,
+      "end": 28.665,
+      "score": 0.805
+    },
+    {
+      "word": "mente",
+      "start": 28.685,
+      "end": 28.906,
+      "score": 0.873
+    },
+    {
+      "word": "sin",
+      "start": 29.026,
+      "end": 29.147,
+      "score": 0.718
+    },
+    {
+      "word": "pagarle",
+      "start": 29.489,
+      "end": 29.67,
+      "score": 0.195
+    },
+    {
+      "word": "renta",
+      "start": 29.77,
+      "end": 31.177,
+      "score": 0.98
+    },
+    {
+      "word": "ese",
+      "start": 31.197,
+      "end": 31.398,
+      "score": 0.842
+    },
+    {
+      "word": "bugatti",
+      "start": 31.418,
+      "end": 31.84,
+      "score": 0.708
+    },
+    {
+      "word": "no",
+      "start": 31.86,
+      "end": 31.941,
+      "score": 0.838
+    },
+    {
+      "word": "tiene",
+      "start": 32.061,
+      "end": 32.383,
+      "score": 0.814
+    },
+    {
+      "word": "dueño",
+      "start": 32.483,
+      "end": 35.9,
+      "score": 0.715
+    },
+    {
+      "word": "baby",
+      "start": 35.88,
+      "end": 36.666,
+      "score": 0.194
+    },
+    {
+      "word": "si",
+      "start": 36.686,
+      "end": 36.827,
+      "score": 0.745
+    },
+    {
+      "word": "no",
+      "start": 36.847,
+      "end": 36.908,
+      "score": 0.851
+    },
+    {
+      "word": "fuma",
+      "start": 37.029,
+      "end": 37.25,
+      "score": 0.779
+    },
+    {
+      "word": "yo",
+      "start": 37.432,
+      "end": 37.472,
+      "score": 0.018
+    },
+    {
+      "word": "te",
+      "start": 37.492,
+      "end": 38.218,
+      "score": 0.828
+    },
+    {
+      "word": "enseño",
+      "start": 38.238,
+      "end": 38.439,
+      "score": 0.198
+    },
+    {
+      "word": "es",
+      "start": 38.459,
+      "end": 38.721,
+      "score": 0.641
+    },
+    {
+      "word": "soy",
+      "start": 39.024,
+      "end": 39.084,
+      "score": 0.508
+    },
+    {
+      "word": "ababro",
+      "start": 39.145,
+      "end": 39.548,
+      "score": 0.458
+    },
+    {
+      "word": "rosado",
+      "start": 39.568,
+      "end": 40.011,
+      "score": 0.873
+    },
+    {
+      "word": "no",
+      "start": 40.051,
+      "end": 40.152,
+      "score": 0.718
+    },
+    {
+      "word": "lo",
+      "start": 40.172,
+      "end": 40.233,
+      "score": 0.207
+    },
+    {
+      "word": "empeño",
+      "start": 40.253,
+      "end": 41.22,
+      "score": 0.635
+    },
+    {
+      "word": "me",
+      "start": 41.88,
+      "end": 42.182,
+      "score": 0.46
+    },
+    {
+      "word": "siento",
+      "start": 42.202,
+      "end": 42.504,
+      "score": 0.715
+    },
+    {
+      "word": "como",
+      "start": 42.565,
+      "end": 42.786,
+      "score": 0.758
+    },
+    {
+      "word": "ronaldo",
+      "start": 42.907,
+      "end": 43.351,
+      "score": 0.811
+    },
+    {
+      "word": "desde",
+      "start": 43.411,
+      "end": 43.673,
+      "score": 0.541
+    },
+    {
+      "word": "que",
+      "start": 43.693,
+      "end": 43.854,
+      "score": 0.546
+    },
+    {
+      "word": "te",
+      "start": 43.874,
+      "end": 44.015,
+      "score": 0.624
+    },
+    {
+      "word": "lo",
+      "start": 44.056,
+      "end": 44.156,
+      "score": 0.61
+    },
+    {
+      "word": "metí",
+      "start": 44.197,
+      "end": 44.922,
+      "score": 0.333
+    },
+    {
+      "word": "me",
+      "start": 44.942,
+      "end": 45.023,
+      "score": 0.547
+    },
+    {
+      "word": "siento",
+      "start": 45.043,
+      "end": 45.345,
+      "score": 0.581
+    },
+    {
+      "word": "como",
+      "start": 45.405,
+      "end": 45.707,
+      "score": 0.654
+    },
+    {
+      "word": "rochico",
+      "start": 45.728,
+      "end": 46.151,
+      "score": 0.83
+    },
+    {
+      "word": "un",
+      "start": 46.271,
+      "end": 46.372,
+      "score": 0.654
+    },
+    {
+      "word": "culo",
+      "start": 46.392,
+      "end": 46.594,
+      "score": 0.572
+    },
+    {
+      "word": "en",
+      "start": 46.614,
+      "end": 46.654,
+      "score": 0.643
+    },
+    {
+      "word": "punta",
+      "start": 46.715,
+      "end": 47.037,
+      "score": 0.803
+    },
+    {
+      "word": "cana",
+      "start": 47.057,
+      "end": 47.48,
+      "score": 0.931
+    },
+    {
+      "word": "y",
+      "start": 47.46,
+      "end": 48.206,
+      "score": 0.702
+    },
+    {
+      "word": "la",
+      "start": 48.226,
+      "end": 48.306,
+      "score": 0.892
+    },
+    {
+      "word": "combi",
+      "start": 48.387,
+      "end": 48.689,
+      "score": 0.611
+    },
+    {
+      "word": "que",
+      "start": 48.71,
+      "end": 48.81,
+      "score": 0.507
+    },
+    {
+      "word": "ya",
+      "start": 48.911,
+      "end": 48.971,
+      "score": 0.478
+    },
+    {
+      "word": "tiene",
+      "start": 49.052,
+      "end": 49.395,
+      "score": 0.812
+    },
+    {
+      "word": "su",
+      "start": 49.435,
+      "end": 49.677,
+      "score": 0.718
+    },
+    {
+      "word": "pring",
+      "start": 49.737,
+      "end": 50.1,
+      "score": 0.145
+    },
+    {
+      "word": "soy",
+      "start": 50.12,
+      "end": 50.181,
+      "score": 0.013
+    },
+    {
+      "word": "su",
+      "start": 50.201,
+      "end": 50.302,
+      "score": 0.5
+    },
+    {
+      "word": "hermana",
+      "start": 50.402,
+      "end": 50.725,
+      "score": 0.208
+    },
+    {
+      "word": "la",
+      "start": 50.745,
+      "end": 50.805,
+      "score": 0.624
+    },
+    {
+      "word": "maricota",
+      "start": 50.846,
+      "end": 51.39,
+      "score": 0.686
+    },
+    {
+      "word": "entre",
+      "start": 51.45,
+      "end": 51.672,
+      "score": 0.768
+    },
+    {
+      "word": "toda",
+      "start": 51.753,
+      "end": 51.994,
+      "score": 0.885
+    },
+    {
+      "word": "tu",
+      "start": 52.055,
+      "end": 52.236,
+      "score": 0.596
+    },
+    {
+      "word": "hermana",
+      "start": 52.357,
+      "end": 52.74,
+      "score": 0.694
+    },
+    {
+      "word": "ella",
+      "start": 52.72,
+      "end": 53.104,
+      "score": 0.194
+    },
+    {
+      "word": "sabe",
+      "start": 53.124,
+      "end": 53.286,
+      "score": 0.398
+    },
+    {
+      "word": "que",
+      "start": 53.306,
+      "end": 53.427,
+      "score": 0.367
+    },
+    {
+      "word": "en",
+      "start": 53.447,
+      "end": 53.548,
+      "score": 0.248
+    },
+    {
+      "word": "el",
+      "start": 53.569,
+      "end": 53.73,
+      "score": 0.26
+    },
+    {
+      "word": "palo",
+      "start": 53.75,
+      "end": 53.952,
+      "score": 0.881
+    },
+    {
+      "word": "tengo",
+      "start": 54.094,
+      "end": 54.276,
+      "score": 0.431
+    },
+    {
+      "word": "el",
+      "start": 54.296,
+      "end": 54.357,
+      "score": 0.709
+    },
+    {
+      "word": "mini",
+      "start": 54.417,
+      "end": 55.023,
+      "score": 0.636
+    },
+    {
+      "word": "esa",
+      "start": 55.448,
+      "end": 55.69,
+      "score": 0.732
+    },
+    {
+      "word": "nalga",
+      "start": 55.71,
+      "end": 56.033,
+      "score": 0.724
+    },
+    {
+      "word": "son",
+      "start": 56.054,
+      "end": 56.195,
+      "score": 0.781
+    },
+    {
+      "word": "chiron",
+      "start": 56.256,
+      "end": 56.7,
+      "score": 0.747
+    },
+    {
+      "word": "el",
+      "start": 56.68,
+      "end": 56.801,
+      "score": 0.434
+    },
+    {
+      "word": "motor",
+      "start": 56.982,
+      "end": 57.265,
+      "score": 0.523
+    },
+    {
+      "word": "ve",
+      "start": 57.385,
+      "end": 57.426,
+      "score": 0.282
+    },
+    {
+      "word": "16",
+      "start": 57.446,
+      "end": 57.708,
+      "score": 0.768
+    },
+    {
+      "word": "tiene",
+      "start": 57.728,
+      "end": 58.796,
+      "score": 0.579
+    },
+    {
+      "word": "el",
+      "start": 59.26,
+      "end": 59.522,
+      "score": 0.656
+    },
+    {
+      "word": "millaje",
+      "start": 59.603,
+      "end": 60.53,
+      "score": 0.534
+    },
+    {
+      "word": "bien",
+      "start": 60.59,
+      "end": 60.752,
+      "score": 0.536
+    },
+    {
+      "word": "trepado",
+      "start": 61.699,
+      "end": 61.84,
+      "score": 0.145
+    },
+    {
+      "word": "pero",
+      "start": 61.82,
+      "end": 62.143,
+      "score": 0.748
+    },
+    {
+      "word": "se",
+      "start": 62.183,
+      "end": 62.284,
+      "score": 0.888
+    },
+    {
+      "word": "ve",
+      "start": 62.345,
+      "end": 62.486,
+      "score": 0.848
+    },
+    {
+      "word": "nueva",
+      "start": 62.507,
+      "end": 62.749,
+      "score": 0.529
+    },
+    {
+      "word": "de",
+      "start": 62.789,
+      "end": 63.011,
+      "score": 0.624
+    },
+    {
+      "word": "caja",
+      "start": 63.031,
+      "end": 63.294,
+      "score": 0.69
+    },
+    {
+      "word": "en",
+      "start": 63.314,
+      "end": 63.375,
+      "score": 0.946
+    },
+    {
+      "word": "el",
+      "start": 63.415,
+      "end": 63.496,
+      "score": 0.946
+    },
+    {
+      "word": "bikini",
+      "start": 63.556,
+      "end": 64.344,
+      "score": 0.548
+    },
+    {
+      "word": "el",
+      "start": 64.627,
+      "end": 64.687,
+      "score": 0.786
+    },
+    {
+      "word": "máquina",
+      "start": 64.768,
+      "end": 65.374,
+      "score": 0.594
+    },
+    {
+      "word": "no",
+      "start": 65.394,
+      "end": 65.434,
+      "score": 0.0
+    },
+    {
+      "word": "es",
+      "start": 65.454,
+      "end": 65.495,
+      "score": 0.276
+    },
+    {
+      "word": "compacto",
+      "start": 65.576,
+      "end": 66.06,
+      "score": 0.619
+    },
+    {
+      "word": "los",
+      "start": 67.08,
+      "end": 67.383,
+      "score": 0.288
+    },
+    {
+      "word": "chocos",
+      "start": 67.403,
+      "end": 67.706,
+      "score": 0.619
+    },
+    {
+      "word": "pero",
+      "start": 67.726,
+      "end": 67.948,
+      "score": 0.937
+    },
+    {
+      "word": "sin",
+      "start": 68.029,
+      "end": 68.21,
+      "score": 0.907
+    },
+    {
+      "word": "tacto",
+      "start": 68.412,
+      "end": 70.169,
+      "score": 0.969
+    },
+    {
+      "word": "y",
+      "start": 70.411,
+      "end": 70.431,
+      "score": 0.0
+    },
+    {
+      "word": "había",
+      "start": 70.451,
+      "end": 70.734,
+      "score": 0.602
+    },
+    {
+      "word": "dando",
+      "start": 70.774,
+      "end": 70.875,
+      "score": 0.082
+    },
+    {
+      "word": "contacto",
+      "start": 70.895,
+      "end": 71.42,
+      "score": 0.823
+    },
+    {
+      "word": "yo",
+      "start": 72.48,
+      "end": 72.742,
+      "score": 0.414
+    },
+    {
+      "word": "si",
+      "start": 72.762,
+      "end": 72.863,
+      "score": 0.74
+    },
+    {
+      "word": "tú",
+      "start": 72.883,
+      "end": 73.004,
+      "score": 0.28
+    },
+    {
+      "word": "ya",
+      "start": 73.024,
+      "end": 73.104,
+      "score": 0.849
+    },
+    {
+      "word": "le",
+      "start": 73.185,
+      "end": 73.326,
+      "score": 0.615
+    },
+    {
+      "word": "hagas",
+      "start": 73.346,
+      "end": 73.548,
+      "score": 0.277
+    },
+    {
+      "word": "un",
+      "start": 73.568,
+      "end": 73.648,
+      "score": 0.824
+    },
+    {
+      "word": "pacto",
+      "start": 73.709,
+      "end": 75.018,
+      "score": 0.945
+    },
+    {
+      "word": "ese",
+      "start": 75.723,
+      "end": 76.872,
+      "score": 0.746
+    },
+    {
+      "word": "bugatti",
+      "start": 76.892,
+      "end": 77.154,
+      "score": 0.581
+    },
+    {
+      "word": "no",
+      "start": 77.174,
+      "end": 77.274,
+      "score": 0.893
+    },
+    {
+      "word": "tiene",
+      "start": 77.395,
+      "end": 77.778,
+      "score": 0.815
+    },
+    {
+      "word": "dueño",
+      "start": 77.798,
+      "end": 78.06,
+      "score": 0.466
+    },
+    {
+      "word": "porque",
+      "start": 78.82,
+      "end": 79.183,
+      "score": 0.328
+    },
+    {
+      "word": "ese",
+      "start": 79.203,
+      "end": 79.364,
+      "score": 0.735
+    },
+    {
+      "word": "máquina",
+      "start": 79.405,
+      "end": 79.868,
+      "score": 0.659
+    },
+    {
+      "word": "no",
+      "start": 79.889,
+      "end": 79.969,
+      "score": 0.644
+    },
+    {
+      "word": "está",
+      "start": 80.03,
+      "end": 80.251,
+      "score": 0.559
+    },
+    {
+      "word": "a",
+      "start": 80.272,
+      "end": 80.312,
+      "score": 0.819
+    },
+    {
+      "word": "la",
+      "start": 80.393,
+      "end": 80.433,
+      "score": 0.008
+    },
+    {
+      "word": "venta",
+      "start": 80.453,
+      "end": 80.917,
+      "score": 0.952
+    },
+    {
+      "word": "un",
+      "start": 80.937,
+      "end": 80.977,
+      "score": 0.466
+    },
+    {
+      "word": "culo",
+      "start": 81.018,
+      "end": 81.743,
+      "score": 0.402
+    },
+    {
+      "word": "grande",
+      "start": 81.764,
+      "end": 82.026,
+      "score": 0.406
+    },
+    {
+      "word": "y",
+      "start": 82.046,
+      "end": 82.066,
+      "score": 0.604
+    },
+    {
+      "word": "un",
+      "start": 82.106,
+      "end": 82.187,
+      "score": 0.742
+    },
+    {
+      "word": "travesito",
+      "start": 82.248,
+      "end": 82.873,
+      "score": 0.709
+    },
+    {
+      "word": "pequeño",
+      "start": 82.893,
+      "end": 83.82,
+      "score": 0.452
+    },
+    {
+      "word": "viviendo",
+      "start": 83.8,
+      "end": 84.513,
+      "score": 0.198
+    },
+    {
+      "word": "la",
+      "start": 84.533,
+      "end": 84.594,
+      "score": 0.568
+    },
+    {
+      "word": "mente",
+      "start": 84.696,
+      "end": 84.94,
+      "score": 0.821
+    },
+    {
+      "word": "sin",
+      "start": 84.961,
+      "end": 85.164,
+      "score": 0.79
+    },
+    {
+      "word": "pagarle",
+      "start": 85.246,
+      "end": 85.714,
+      "score": 0.424
+    },
+    {
+      "word": "renta",
+      "start": 85.796,
+      "end": 86.06,
+      "score": 0.666
+    },
+    {
+      "word": "ese",
+      "start": 86.9,
+      "end": 87.523,
+      "score": 0.836
+    },
+    {
+      "word": "bugatti",
+      "start": 87.564,
+      "end": 87.825,
+      "score": 0.565
+    },
+    {
+      "word": "no",
+      "start": 87.845,
+      "end": 87.905,
+      "score": 0.619
+    },
+    {
+      "word": "tiene",
+      "start": 88.026,
+      "end": 88.368,
+      "score": 0.804
+    },
+    {
+      "word": "dueño",
+      "start": 92.249,
+      "end": 92.349,
+      "score": 0.002
+    },
+    {
+      "word": "baby",
+      "start": 92.369,
+      "end": 92.691,
+      "score": 0.392
+    },
+    {
+      "word": "si",
+      "start": 92.711,
+      "end": 92.832,
+      "score": 0.779
+    },
+    {
+      "word": "no",
+      "start": 92.852,
+      "end": 92.932,
+      "score": 0.808
+    },
+    {
+      "word": "fuma",
+      "start": 93.053,
+      "end": 93.435,
+      "score": 0.704
+    },
+    {
+      "word": "yo",
+      "start": 93.455,
+      "end": 93.495,
+      "score": 0.03
+    },
+    {
+      "word": "te",
+      "start": 93.515,
+      "end": 93.676,
+      "score": 0.768
+    },
+    {
+      "word": "enseño",
+      "start": 93.696,
+      "end": 94.38,
+      "score": 0.671
+    },
+    {
+      "word": "es",
+      "start": 94.36,
+      "end": 94.847,
+      "score": 0.522
+    },
+    {
+      "word": "soy",
+      "start": 94.867,
+      "end": 94.928,
+      "score": 0.004
+    },
+    {
+      "word": "ababro",
+      "start": 94.948,
+      "end": 95.556,
+      "score": 0.741
+    },
+    {
+      "word": "rosado",
+      "start": 95.576,
+      "end": 95.982,
+      "score": 0.851
+    },
+    {
+      "word": "no",
+      "start": 96.043,
+      "end": 96.164,
+      "score": 0.777
+    },
+    {
+      "word": "lo",
+      "start": 96.185,
+      "end": 96.266,
+      "score": 0.328
+    },
+    {
+      "word": "empeño",
+      "start": 96.286,
+      "end": 97.34,
+      "score": 0.701
+    },
+    {
+      "word": "en",
+      "start": 98.86,
+      "end": 99.344,
+      "score": 0.726
+    },
+    {
+      "word": "esas",
+      "start": 99.424,
+      "end": 99.646,
+      "score": 0.676
+    },
+    {
+      "word": "curvas",
+      "start": 99.706,
+      "end": 99.948,
+      "score": 0.55
+    },
+    {
+      "word": "yo",
+      "start": 100.029,
+      "end": 100.17,
+      "score": 0.597
+    },
+    {
+      "word": "no",
+      "start": 100.19,
+      "end": 100.351,
+      "score": 0.778
+    },
+    {
+      "word": "freno",
+      "start": 100.371,
+      "end": 101.298,
+      "score": 0.864
+    },
+    {
+      "word": "tiene",
+      "start": 101.742,
+      "end": 102.124,
+      "score": 0.807
+    },
+    {
+      "word": "operas",
+      "start": 102.205,
+      "end": 102.447,
+      "score": 0.646
+    },
+    {
+      "word": "y",
+      "start": 102.588,
+      "end": 102.628,
+      "score": 0.859
+    },
+    {
+      "word": "to'",
+      "start": 102.709,
+      "end": 102.87,
+      "score": 0.573
+    },
+    {
+      "word": "los",
+      "start": 102.89,
+      "end": 102.991,
+      "score": 0.774
+    },
+    {
+      "word": "senos",
+      "start": 103.354,
+      "end": 104.24,
+      "score": 0.624
+    },
+    {
+      "word": "yo",
+      "start": 104.22,
+      "end": 104.643,
+      "score": 0.414
+    },
+    {
+      "word": "siempre",
+      "start": 104.663,
+      "end": 104.905,
+      "score": 0.667
+    },
+    {
+      "word": "la",
+      "start": 105.046,
+      "end": 105.288,
+      "score": 0.326
+    },
+    {
+      "word": "guío",
+      "start": 105.308,
+      "end": 105.409,
+      "score": 0.244
+    },
+    {
+      "word": "borracho",
+      "start": 105.53,
+      "end": 106.114,
+      "score": 0.756
+    },
+    {
+      "word": "le",
+      "start": 106.195,
+      "end": 106.255,
+      "score": 0.376
+    },
+    {
+      "word": "doy",
+      "start": 106.356,
+      "end": 106.517,
+      "score": 0.171
+    },
+    {
+      "word": "mi",
+      "start": 106.538,
+      "end": 106.638,
+      "score": 0.643
+    },
+    {
+      "word": "tiempo",
+      "start": 106.679,
+      "end": 107.162,
+      "score": 0.847
+    },
+    {
+      "word": "a",
+      "start": 107.182,
+      "end": 107.203,
+      "score": 0.001
+    },
+    {
+      "word": "ella",
+      "start": 107.223,
+      "end": 107.324,
+      "score": 0.468
+    },
+    {
+      "word": "tu",
+      "start": 107.384,
+      "end": 107.505,
+      "score": 0.789
+    },
+    {
+      "word": "pierdes",
+      "start": 107.525,
+      "end": 107.807,
+      "score": 0.286
+    },
+    {
+      "word": "tiempo",
+      "start": 107.868,
+      "end": 108.271,
+      "score": 0.827
+    },
+    {
+      "word": "a",
+      "start": 108.513,
+      "end": 108.775,
+      "score": 0.738
+    },
+    {
+      "word": "los",
+      "start": 108.795,
+      "end": 108.875,
+      "score": 0.737
+    },
+    {
+      "word": "capchons",
+      "start": 109.137,
+      "end": 109.52,
+      "score": 0.535
+    },
+    {
+      "word": "guión",
+      "start": 109.5,
+      "end": 109.903,
+      "score": 0.363
+    },
+    {
+      "word": "gozado",
+      "start": 109.923,
+      "end": 110.508,
+      "score": 0.43
+    },
+    {
+      "word": "te",
+      "start": 110.528,
+      "end": 110.629,
+      "score": 0.51
+    },
+    {
+      "word": "asistoreto",
+      "start": 110.649,
+      "end": 111.676,
+      "score": 0.744
+    },
+    {
+      "word": "eres",
+      "start": 112.442,
+      "end": 112.583,
+      "score": 0.568
+    },
+    {
+      "word": "el",
+      "start": 112.624,
+      "end": 112.724,
+      "score": 0.876
+    },
+    {
+      "word": "tipo",
+      "start": 112.865,
+      "end": 113.107,
+      "score": 0.558
+    },
+    {
+      "word": "al",
+      "start": 113.127,
+      "end": 113.168,
+      "score": 0.002
+    },
+    {
+      "word": "que",
+      "start": 113.188,
+      "end": 113.309,
+      "score": 0.746
+    },
+    {
+      "word": "te",
+      "start": 113.329,
+      "end": 113.41,
+      "score": 0.91
+    },
+    {
+      "word": "lo",
+      "start": 113.45,
+      "end": 113.752,
+      "score": 0.426
+    },
+    {
+      "word": "meto",
+      "start": 113.813,
+      "end": 114.8,
+      "score": 0.704
+    },
+    {
+      "word": "la",
+      "start": 114.78,
+      "end": 115.445,
+      "score": 0.543
+    },
+    {
+      "word": "piso",
+      "start": 115.465,
+      "end": 115.546,
+      "score": 0.047
+    },
+    {
+      "word": "caiga",
+      "start": 115.566,
+      "end": 115.868,
+      "score": 0.233
+    },
+    {
+      "word": "y",
+      "start": 115.888,
+      "end": 115.909,
+      "score": 0.0
+    },
+    {
+      "word": "to'",
+      "start": 115.929,
+      "end": 116.372,
+      "score": 0.421
+    },
+    {
+      "word": "en",
+      "start": 116.392,
+      "end": 116.433,
+      "score": 0.003
+    },
+    {
+      "word": "la",
+      "start": 116.453,
+      "end": 116.493,
+      "score": 0.001
+    },
+    {
+      "word": "metro",
+      "start": 116.513,
+      "end": 117.36,
+      "score": 0.896
+    },
+    {
+      "word": "la",
+      "start": 117.622,
+      "end": 117.702,
+      "score": 0.576
+    },
+    {
+      "word": "pongo",
+      "start": 117.722,
+      "end": 117.924,
+      "score": 0.862
+    },
+    {
+      "word": "en",
+      "start": 117.944,
+      "end": 118.004,
+      "score": 0.834
+    },
+    {
+      "word": "cuatro",
+      "start": 118.045,
+      "end": 118.428,
+      "score": 0.604
+    },
+    {
+      "word": "y",
+      "start": 118.448,
+      "end": 118.468,
+      "score": 0.001
+    },
+    {
+      "word": "el",
+      "start": 118.488,
+      "end": 118.528,
+      "score": 0.019
+    },
+    {
+      "word": "nitro",
+      "start": 118.549,
+      "end": 118.811,
+      "score": 0.9
+    },
+    {
+      "word": "la",
+      "start": 118.911,
+      "end": 118.952,
+      "score": 0.47
+    },
+    {
+      "word": "aprieto",
+      "start": 118.992,
+      "end": 120.08,
+      "score": 0.684
+    },
+    {
+      "word": "no",
+      "start": 120.06,
+      "end": 120.624,
+      "score": 0.724
+    },
+    {
+      "word": "se",
+      "start": 120.684,
+      "end": 120.825,
+      "score": 0.806
+    },
+    {
+      "word": "queda",
+      "start": 120.846,
+      "end": 121.087,
+      "score": 0.402
+    },
+    {
+      "word": "sin",
+      "start": 121.168,
+      "end": 121.329,
+      "score": 0.804
+    },
+    {
+      "word": "gasolina",
+      "start": 121.349,
+      "end": 122.316,
+      "score": 0.757
+    },
+    {
+      "word": "me",
+      "start": 122.981,
+      "end": 123.021,
+      "score": 0.273
+    },
+    {
+      "word": "mudé",
+      "start": 123.101,
+      "end": 123.303,
+      "score": 0.547
+    },
+    {
+      "word": "pa'",
+      "start": 123.383,
+      "end": 123.565,
+      "score": 0.649
+    },
+    {
+      "word": "tu",
+      "start": 123.585,
+      "end": 123.726,
+      "score": 0.631
+    },
+    {
+      "word": "vulva",
+      "start": 123.746,
+      "end": 124.028,
+      "score": 0.635
+    },
+    {
+      "word": "pa'",
+      "start": 124.048,
+      "end": 124.189,
+      "score": 0.567
+    },
+    {
+      "word": "que",
+      "start": 124.209,
+      "end": 124.35,
+      "score": 0.492
+    },
+    {
+      "word": "sea",
+      "start": 124.37,
+      "end": 124.632,
+      "score": 0.677
+    },
+    {
+      "word": "mi",
+      "start": 124.713,
+      "end": 124.854,
+      "score": 0.715
+    },
+    {
+      "word": "vecina",
+      "start": 124.874,
+      "end": 125.76,
+      "score": 0.701
+    },
+    {
+      "word": "que",
+      "start": 125.74,
+      "end": 126.264,
+      "score": 0.24
+    },
+    {
+      "word": "duro",
+      "start": 126.284,
+      "end": 126.365,
+      "score": 0.068
+    },
+    {
+      "word": "suena",
+      "start": 126.385,
+      "end": 126.667,
+      "score": 0.482
+    },
+    {
+      "word": "la",
+      "start": 126.687,
+      "end": 126.788,
+      "score": 0.716
+    },
+    {
+      "word": "bocina",
+      "start": 126.889,
+      "end": 127.655,
+      "score": 0.789
+    },
+    {
+      "word": "estuve",
+      "start": 128.038,
+      "end": 128.32,
+      "score": 0.238
+    },
+    {
+      "word": "gritando",
+      "start": 128.34,
+      "end": 128.642,
+      "score": 0.567
+    },
+    {
+      "word": "suena",
+      "start": 128.703,
+      "end": 128.945,
+      "score": 0.703
+    },
+    {
+      "word": "más",
+      "start": 129.066,
+      "end": 129.207,
+      "score": 0.376
+    },
+    {
+      "word": "que",
+      "start": 129.227,
+      "end": 129.408,
+      "score": 0.42
+    },
+    {
+      "word": "visa",
+      "start": 129.428,
+      "end": 129.69,
+      "score": 0.765
+    },
+    {
+      "word": "rap",
+      "start": 129.751,
+      "end": 129.932,
+      "score": 0.763
+    },
+    {
+      "word": "en",
+      "start": 129.952,
+      "end": 130.073,
+      "score": 0.428
+    },
+    {
+      "word": "argentina",
+      "start": 130.093,
+      "end": 130.96,
+      "score": 0.655
+    },
+    {
+      "word": "el",
+      "start": 130.94,
+      "end": 131.383,
+      "score": 0.851
+    },
+    {
+      "word": "máquina",
+      "start": 131.423,
+      "end": 131.806,
+      "score": 0.689
+    },
+    {
+      "word": "no",
+      "start": 131.887,
+      "end": 131.987,
+      "score": 0.902
+    },
+    {
+      "word": "lo",
+      "start": 132.048,
+      "end": 132.128,
+      "score": 0.726
+    },
+    {
+      "word": "compacto",
+      "start": 132.229,
+      "end": 132.995,
+      "score": 0.936
+    },
+    {
+      "word": "los",
+      "start": 133.962,
+      "end": 134.022,
+      "score": 0.002
+    },
+    {
+      "word": "chocos",
+      "start": 134.042,
+      "end": 134.364,
+      "score": 0.652
+    },
+    {
+      "word": "pero",
+      "start": 134.385,
+      "end": 134.646,
+      "score": 0.883
+    },
+    {
+      "word": "sin",
+      "start": 134.908,
+      "end": 135.049,
+      "score": 0.647
+    },
+    {
+      "word": "tacto",
+      "start": 135.069,
+      "end": 136.58,
+      "score": 0.939
+    },
+    {
+      "word": "y",
+      "start": 136.56,
+      "end": 137.023,
+      "score": 0.778
+    },
+    {
+      "word": "había",
+      "start": 137.044,
+      "end": 137.185,
+      "score": 0.215
+    },
+    {
+      "word": "dando",
+      "start": 137.205,
+      "end": 137.406,
+      "score": 0.969
+    },
+    {
+      "word": "contacto",
+      "start": 137.447,
+      "end": 139.28,
+      "score": 0.636
+    },
+    {
+      "word": "yo",
+      "start": 139.3,
+      "end": 139.341,
+      "score": 0.081
+    },
+    {
+      "word": "si",
+      "start": 139.361,
+      "end": 139.522,
+      "score": 0.76
+    },
+    {
+      "word": "tú",
+      "start": 139.542,
+      "end": 139.683,
+      "score": 0.328
+    },
+    {
+      "word": "ya",
+      "start": 139.703,
+      "end": 139.764,
+      "score": 0.638
+    },
+    {
+      "word": "le",
+      "start": 139.844,
+      "end": 139.885,
+      "score": 0.006
+    },
+    {
+      "word": "hagas",
+      "start": 139.905,
+      "end": 140.187,
+      "score": 0.7
+    },
+    {
+      "word": "un",
+      "start": 140.247,
+      "end": 140.328,
+      "score": 0.795
+    },
+    {
+      "word": "pacto",
+      "start": 140.409,
+      "end": 141.98,
+      "score": 0.918
+    },
+    {
+      "word": "ese",
+      "start": 142.7,
+      "end": 143.365,
+      "score": 0.567
+    },
+    {
+      "word": "bugatti",
+      "start": 143.385,
+      "end": 143.789,
+      "score": 0.633
+    },
+    {
+      "word": "no",
+      "start": 143.809,
+      "end": 143.91,
+      "score": 0.746
+    },
+    {
+      "word": "tiene",
+      "start": 144.01,
+      "end": 144.474,
+      "score": 0.824
+    },
+    {
+      "word": "dueño",
+      "start": 144.534,
+      "end": 144.917,
+      "score": 0.581
+    },
+    {
+      "word": "porque",
+      "start": 144.958,
+      "end": 145.764,
+      "score": 0.368
+    },
+    {
+      "word": "ese",
+      "start": 145.845,
+      "end": 146.026,
+      "score": 0.582
+    },
+    {
+      "word": "máquina",
+      "start": 146.046,
+      "end": 146.55,
+      "score": 0.516
+    },
+    {
+      "word": "no",
+      "start": 146.57,
+      "end": 146.671,
+      "score": 0.581
+    },
+    {
+      "word": "está",
+      "start": 146.691,
+      "end": 146.853,
+      "score": 0.361
+    },
+    {
+      "word": "a",
+      "start": 146.873,
+      "end": 146.893,
+      "score": 0.163
+    },
+    {
+      "word": "la",
+      "start": 146.913,
+      "end": 147.195,
+      "score": 0.847
+    },
+    {
+      "word": "venta",
+      "start": 147.216,
+      "end": 147.8,
+      "score": 0.857
+    },
+    {
+      "word": "un",
+      "start": 147.78,
+      "end": 148.143,
+      "score": 0.448
+    },
+    {
+      "word": "culo",
+      "start": 148.163,
+      "end": 148.263,
+      "score": 0.456
+    },
+    {
+      "word": "grande",
+      "start": 148.384,
+      "end": 148.706,
+      "score": 0.487
+    },
+    {
+      "word": "un",
+      "start": 148.767,
+      "end": 148.868,
+      "score": 0.79
+    },
+    {
+      "word": "travesito",
+      "start": 148.888,
+      "end": 149.532,
+      "score": 0.702
+    },
+    {
+      "word": "pequeño",
+      "start": 149.552,
+      "end": 150.338,
+      "score": 0.624
+    },
+    {
+      "word": "viviendo",
+      "start": 150.72,
+      "end": 151.183,
+      "score": 0.557
+    },
+    {
+      "word": "la",
+      "start": 151.224,
+      "end": 151.304,
+      "score": 0.853
+    },
+    {
+      "word": "mente",
+      "start": 151.385,
+      "end": 151.667,
+      "score": 0.766
+    },
+    {
+      "word": "sin",
+      "start": 151.707,
+      "end": 151.888,
+      "score": 0.491
+    },
+    {
+      "word": "pagarle",
+      "start": 151.908,
+      "end": 152.311,
+      "score": 0.703
+    },
+    {
+      "word": "renta",
+      "start": 152.452,
+      "end": 153.6,
+      "score": 0.914
+    },
+    {
+      "word": "ese",
+      "start": 153.58,
+      "end": 154.706,
+      "score": 0.268
+    },
+    {
+      "word": "bugatti",
+      "start": 154.726,
+      "end": 154.947,
+      "score": 0.285
+    },
+    {
+      "word": "no",
+      "start": 154.967,
+      "end": 155.028,
+      "score": 0.619
+    },
+    {
+      "word": "tiene",
+      "start": 155.209,
+      "end": 157.682,
+      "score": 0.588
+    },
+    {
+      "word": "dueño",
+      "start": 159.049,
+      "end": 159.19,
+      "score": 0.413
+    },
+    {
+      "word": "baby",
+      "start": 159.27,
+      "end": 159.351,
+      "score": 0.022
+    },
+    {
+      "word": "si",
+      "start": 159.371,
+      "end": 159.612,
+      "score": 0.715
+    },
+    {
+      "word": "no",
+      "start": 159.632,
+      "end": 159.692,
+      "score": 0.26
+    },
+    {
+      "word": "fuma",
+      "start": 159.713,
+      "end": 160.074,
+      "score": 0.57
+    },
+    {
+      "word": "yo",
+      "start": 160.095,
+      "end": 160.296,
+      "score": 0.395
+    },
+    {
+      "word": "te",
+      "start": 160.316,
+      "end": 160.416,
+      "score": 0.351
+    },
+    {
+      "word": "enseño",
+      "start": 160.436,
+      "end": 161.14,
+      "score": 0.474
+    },
+    {
+      "word": "es",
+      "start": 161.12,
+      "end": 162.353,
+      "score": 0.5
+    },
+    {
+      "word": "soy",
+      "start": 162.373,
+      "end": 162.535,
+      "score": 0.168
+    },
+    {
+      "word": "ababro",
+      "start": 162.555,
+      "end": 163.04,
+      "score": 0.403
+    },
+    {
+      "word": "rosado",
+      "start": 163.061,
+      "end": 163.91,
+      "score": 0.313
+    },
+    {
+      "word": "no",
+      "start": 163.93,
+      "end": 163.97,
+      "score": 0.391
+    },
+    {
+      "word": "lo",
+      "start": 164.718,
+      "end": 164.759,
+      "score": 0.002
+    },
+    {
+      "word": "empeño",
+      "start": 164.779,
+      "end": 164.9,
+      "score": 0.163
+    }
+  ]
+}
