@@ -1,0 +1,1586 @@
+[
+  {
+    "id": 0,
+    "text": "las horas pasan y yo sigo aquí, extrañándote",
+    "start": 9.660000000000002,
+    "end": 20.56,
+    "words": [
+      {
+        "word": " las",
+        "start": 9.660000000000002,
+        "end": 10.9
+      },
+      {
+        "word": " horas",
+        "start": 10.9,
+        "end": 11.3
+      },
+      {
+        "word": " pasan",
+        "start": 11.3,
+        "end": 11.92
+      },
+      {
+        "word": " y",
+        "start": 11.92,
+        "end": 12.02
+      },
+      {
+        "word": " yo",
+        "start": 12.02,
+        "end": 12.3
+      },
+      {
+        "word": " sigo",
+        "start": 12.3,
+        "end": 12.78
+      },
+      {
+        "word": " aquí,",
+        "start": 12.78,
+        "end": 14.58
+      },
+      {
+        "word": " extrañándote",
+        "start": 15.32,
+        "end": 20.56
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "text": "como un vicio que me amarra a ti, yo sigo deseándote",
+    "start": 20.56,
+    "end": 26.759999999999998,
+    "words": [
+      {
+        "word": " como",
+        "start": 20.56,
+        "end": 21.26
+      },
+      {
+        "word": " un",
+        "start": 21.26,
+        "end": 21.62
+      },
+      {
+        "word": " vicio",
+        "start": 21.62,
+        "end": 21.94
+      },
+      {
+        "word": " que",
+        "start": 21.94,
+        "end": 22.12
+      },
+      {
+        "word": " me",
+        "start": 22.12,
+        "end": 22.3
+      },
+      {
+        "word": " amarra",
+        "start": 22.3,
+        "end": 22.94
+      },
+      {
+        "word": " a",
+        "start": 22.94,
+        "end": 23.18
+      },
+      {
+        "word": " ti,",
+        "start": 23.18,
+        "end": 23.78
+      },
+      {
+        "word": " yo",
+        "start": 23.78,
+        "end": 24.2
+      },
+      {
+        "word": " sigo",
+        "start": 24.2,
+        "end": 25.0
+      },
+      {
+        "word": " deseándote",
+        "start": 25.0,
+        "end": 26.759999999999998
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "y cuando cae la noche, yo imagino que estás conmigo, no puedo vivir si no te tengo",
+    "start": 30.219999999999995,
+    "end": 38.76,
+    "words": [
+      {
+        "word": " y",
+        "start": 30.219999999999995,
+        "end": 31.06
+      },
+      {
+        "word": " cuando",
+        "start": 31.06,
+        "end": 31.7
+      },
+      {
+        "word": " cae",
+        "start": 31.7,
+        "end": 32.24
+      },
+      {
+        "word": " la",
+        "start": 32.24,
+        "end": 32.44
+      },
+      {
+        "word": " noche,",
+        "start": 32.44,
+        "end": 32.86
+      },
+      {
+        "word": " yo",
+        "start": 33.44,
+        "end": 33.72
+      },
+      {
+        "word": " imagino",
+        "start": 33.72,
+        "end": 34.26
+      },
+      {
+        "word": " que",
+        "start": 34.26,
+        "end": 34.6
+      },
+      {
+        "word": " estás",
+        "start": 34.6,
+        "end": 34.92
+      },
+      {
+        "word": " conmigo,",
+        "start": 34.92,
+        "end": 36.12
+      },
+      {
+        "word": " no",
+        "start": 36.16,
+        "end": 36.44
+      },
+      {
+        "word": " puedo",
+        "start": 36.44,
+        "end": 36.64
+      },
+      {
+        "word": " vivir",
+        "start": 36.64,
+        "end": 37.06
+      },
+      {
+        "word": " si",
+        "start": 37.06,
+        "end": 37.44
+      },
+      {
+        "word": " no",
+        "start": 37.44,
+        "end": 37.84
+      },
+      {
+        "word": " te",
+        "start": 37.84,
+        "end": 38.3
+      },
+      {
+        "word": " tengo",
+        "start": 38.3,
+        "end": 38.76
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "tú me comienzas a besar, te juro que no quiero despertar sobre la realidad",
+    "start": 40.339999999999996,
+    "end": 48.4,
+    "words": [
+      {
+        "word": " tú",
+        "start": 40.339999999999996,
+        "end": 41.18
+      },
+      {
+        "word": " me",
+        "start": 41.18,
+        "end": 41.68
+      },
+      {
+        "word": " comienzas",
+        "start": 41.68,
+        "end": 42.48
+      },
+      {
+        "word": " a",
+        "start": 42.48,
+        "end": 42.94
+      },
+      {
+        "word": " besar,",
+        "start": 42.94,
+        "end": 43.38
+      },
+      {
+        "word": " te",
+        "start": 43.68,
+        "end": 43.82
+      },
+      {
+        "word": " juro",
+        "start": 43.82,
+        "end": 44.02
+      },
+      {
+        "word": " que",
+        "start": 44.02,
+        "end": 44.22
+      },
+      {
+        "word": " no",
+        "start": 44.22,
+        "end": 44.46
+      },
+      {
+        "word": " quiero",
+        "start": 44.46,
+        "end": 44.98
+      },
+      {
+        "word": " despertar",
+        "start": 44.98,
+        "end": 46.24
+      },
+      {
+        "word": " sobre",
+        "start": 46.24,
+        "end": 47.12
+      },
+      {
+        "word": " la",
+        "start": 47.12,
+        "end": 47.54
+      },
+      {
+        "word": " realidad",
+        "start": 47.54,
+        "end": 48.4
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "que solo un sueño, que no te tengo",
+    "start": 49.34,
+    "end": 56.48,
+    "words": [
+      {
+        "word": " que",
+        "start": 49.34,
+        "end": 50.04
+      },
+      {
+        "word": " solo",
+        "start": 50.04,
+        "end": 50.54
+      },
+      {
+        "word": " un",
+        "start": 50.54,
+        "end": 50.86
+      },
+      {
+        "word": " sueño,",
+        "start": 50.86,
+        "end": 54.38
+      },
+      {
+        "word": " que",
+        "start": 55.0,
+        "end": 55.12
+      },
+      {
+        "word": " no",
+        "start": 55.12,
+        "end": 55.54
+      },
+      {
+        "word": " te",
+        "start": 55.54,
+        "end": 55.9
+      },
+      {
+        "word": " tengo",
+        "start": 55.9,
+        "end": 56.48
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "que solo un sueño, que no te tengo",
+    "start": 59.599999999999994,
+    "end": 66.56,
+    "words": [
+      {
+        "word": " que",
+        "start": 59.599999999999994,
+        "end": 60.3
+      },
+      {
+        "word": " solo",
+        "start": 60.3,
+        "end": 60.64
+      },
+      {
+        "word": " un",
+        "start": 60.64,
+        "end": 60.82
+      },
+      {
+        "word": " sueño,",
+        "start": 60.82,
+        "end": 64.76
+      },
+      {
+        "word": " que",
+        "start": 65.1,
+        "end": 65.28
+      },
+      {
+        "word": " no",
+        "start": 65.28,
+        "end": 65.64
+      },
+      {
+        "word": " te",
+        "start": 65.64,
+        "end": 66.26
+      },
+      {
+        "word": " tengo",
+        "start": 66.26,
+        "end": 66.61
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "abrazando la almohada y no despierto, soñando que detengo me duele porque no es cierto",
+    "start": 70.5,
+    "end": 75.3,
+    "words": [
+      {
+        "word": " abrazando",
+        "start": 70.5,
+        "end": 71.2
+      },
+      {
+        "word": " la",
+        "start": 71.2,
+        "end": 71.36
+      },
+      {
+        "word": " almohada",
+        "start": 71.36,
+        "end": 71.8
+      },
+      {
+        "word": " y",
+        "start": 71.8,
+        "end": 71.94
+      },
+      {
+        "word": " no",
+        "start": 71.94,
+        "end": 72.1
+      },
+      {
+        "word": " despierto,",
+        "start": 72.1,
+        "end": 72.58
+      },
+      {
+        "word": " soñando",
+        "start": 72.8,
+        "end": 73.1
+      },
+      {
+        "word": " que",
+        "start": 73.1,
+        "end": 73.3
+      },
+      {
+        "word": " detengo",
+        "start": 73.3,
+        "end": 73.72
+      },
+      {
+        "word": " me",
+        "start": 73.72,
+        "end": 73.92
+      },
+      {
+        "word": " duele",
+        "start": 73.92,
+        "end": 74.2
+      },
+      {
+        "word": " porque",
+        "start": 74.2,
+        "end": 74.48
+      },
+      {
+        "word": " no",
+        "start": 74.48,
+        "end": 74.7
+      },
+      {
+        "word": " es",
+        "start": 74.7,
+        "end": 74.86
+      },
+      {
+        "word": " cierto",
+        "start": 74.86,
+        "end": 75.3
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "mike te juro que quisiera ser tu dueño, que conmigo maneja y solo te tengo el sueño",
+    "start": 75.3,
+    "end": 80.52,
+    "words": [
+      {
+        "word": " Mike",
+        "start": 75.3,
+        "end": 75.76
+      },
+      {
+        "word": " te",
+        "start": 75.76,
+        "end": 76.02
+      },
+      {
+        "word": " juro",
+        "start": 76.02,
+        "end": 76.26
+      },
+      {
+        "word": " que",
+        "start": 76.26,
+        "end": 76.5
+      },
+      {
+        "word": " quisiera",
+        "start": 76.5,
+        "end": 76.86
+      },
+      {
+        "word": " ser",
+        "start": 76.86,
+        "end": 77.08
+      },
+      {
+        "word": " tu",
+        "start": 77.08,
+        "end": 77.34
+      },
+      {
+        "word": " dueño,",
+        "start": 77.34,
+        "end": 77.62
+      },
+      {
+        "word": " que",
+        "start": 77.64,
+        "end": 77.88
+      },
+      {
+        "word": " conmigo",
+        "start": 77.88,
+        "end": 78.3
+      },
+      {
+        "word": " maneja",
+        "start": 78.3,
+        "end": 78.78
+      },
+      {
+        "word": " y",
+        "start": 78.78,
+        "end": 79.0
+      },
+      {
+        "word": " solo",
+        "start": 79.0,
+        "end": 79.24
+      },
+      {
+        "word": " te",
+        "start": 79.24,
+        "end": 79.48
+      },
+      {
+        "word": " tengo",
+        "start": 79.48,
+        "end": 79.66
+      },
+      {
+        "word": " el",
+        "start": 79.66,
+        "end": 79.86
+      },
+      {
+        "word": " sueño",
+        "start": 79.86,
+        "end": 80.52
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "uno sabe cuanto te extraño, me hace daño, los días hacen meses y los meses hacen años",
+    "start": 80.52,
+    "end": 85.7,
+    "words": [
+      {
+        "word": " uno",
+        "start": 80.52,
+        "end": 81.0
+      },
+      {
+        "word": " sabe",
+        "start": 81.0,
+        "end": 81.44
+      },
+      {
+        "word": " cuanto",
+        "start": 81.44,
+        "end": 81.74
+      },
+      {
+        "word": " te",
+        "start": 81.74,
+        "end": 82.08
+      },
+      {
+        "word": " extraño,",
+        "start": 82.08,
+        "end": 82.4
+      },
+      {
+        "word": " me",
+        "start": 82.42,
+        "end": 82.66
+      },
+      {
+        "word": " hace",
+        "start": 82.66,
+        "end": 82.98
+      },
+      {
+        "word": " daño,",
+        "start": 82.98,
+        "end": 83.36
+      },
+      {
+        "word": " los",
+        "start": 83.48,
+        "end": 83.58
+      },
+      {
+        "word": " días",
+        "start": 83.58,
+        "end": 83.86
+      },
+      {
+        "word": " hacen",
+        "start": 83.86,
+        "end": 84.18
+      },
+      {
+        "word": " meses",
+        "start": 84.18,
+        "end": 84.48
+      },
+      {
+        "word": " y",
+        "start": 84.48,
+        "end": 84.66
+      },
+      {
+        "word": " los",
+        "start": 84.66,
+        "end": 84.84
+      },
+      {
+        "word": " meses",
+        "start": 84.84,
+        "end": 85.1
+      },
+      {
+        "word": " hacen",
+        "start": 85.1,
+        "end": 85.44
+      },
+      {
+        "word": " años",
+        "start": 85.44,
+        "end": 85.7
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "como duelen en no tenerte, a ti perderte y solamente en mi sueño tenerte",
+    "start": 85.7,
+    "end": 91.08,
+    "words": [
+      {
+        "word": " como",
+        "start": 85.7,
+        "end": 86.04
+      },
+      {
+        "word": " duelen",
+        "start": 86.04,
+        "end": 86.56
+      },
+      {
+        "word": " en",
+        "start": 86.56,
+        "end": 86.76
+      },
+      {
+        "word": " no",
+        "start": 86.76,
+        "end": 86.94
+      },
+      {
+        "word": " tenerte,",
+        "start": 86.94,
+        "end": 87.46
+      },
+      {
+        "word": " a",
+        "start": 87.62,
+        "end": 87.7
+      },
+      {
+        "word": " ti",
+        "start": 87.7,
+        "end": 87.82
+      },
+      {
+        "word": " perderte",
+        "start": 87.82,
+        "end": 88.82
+      },
+      {
+        "word": " y",
+        "start": 88.82,
+        "end": 89.12
+      },
+      {
+        "word": " solamente",
+        "start": 89.12,
+        "end": 89.56
+      },
+      {
+        "word": " en",
+        "start": 89.56,
+        "end": 89.76
+      },
+      {
+        "word": " mi",
+        "start": 89.76,
+        "end": 89.88
+      },
+      {
+        "word": " sueño",
+        "start": 89.88,
+        "end": 90.34
+      },
+      {
+        "word": " tenerte",
+        "start": 90.34,
+        "end": 91.08
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "y cuando cae la noche, yo imagino que estás conmigo, no puedo vivir si no te tengo",
+    "start": 91.08,
+    "end": 99.9,
+    "words": [
+      {
+        "word": " y",
+        "start": 91.08,
+        "end": 91.76
+      },
+      {
+        "word": " cuando",
+        "start": 91.76,
+        "end": 92.34
+      },
+      {
+        "word": " cae",
+        "start": 92.34,
+        "end": 92.9
+      },
+      {
+        "word": " la",
+        "start": 92.9,
+        "end": 93.1
+      },
+      {
+        "word": " noche,",
+        "start": 93.1,
+        "end": 93.52
+      },
+      {
+        "word": " yo",
+        "start": 93.94,
+        "end": 94.3
+      },
+      {
+        "word": " imagino",
+        "start": 94.3,
+        "end": 94.88
+      },
+      {
+        "word": " que",
+        "start": 94.88,
+        "end": 95.2
+      },
+      {
+        "word": " estás",
+        "start": 95.2,
+        "end": 95.58
+      },
+      {
+        "word": " conmigo,",
+        "start": 95.58,
+        "end": 96.76
+      },
+      {
+        "word": " no",
+        "start": 96.82,
+        "end": 97.04
+      },
+      {
+        "word": " puedo",
+        "start": 97.04,
+        "end": 97.26
+      },
+      {
+        "word": " vivir",
+        "start": 97.26,
+        "end": 97.72
+      },
+      {
+        "word": " si",
+        "start": 97.72,
+        "end": 98.08
+      },
+      {
+        "word": " no",
+        "start": 98.08,
+        "end": 98.44
+      },
+      {
+        "word": " te",
+        "start": 98.44,
+        "end": 98.98
+      },
+      {
+        "word": " tengo",
+        "start": 98.98,
+        "end": 99.9
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "tú me comienzas a besar, te juro que no quiero despertar sobre la realidad",
+    "start": 100.86,
+    "end": 108.94000000000001,
+    "words": [
+      {
+        "word": " tú",
+        "start": 100.86,
+        "end": 101.78
+      },
+      {
+        "word": " me",
+        "start": 101.78,
+        "end": 102.3
+      },
+      {
+        "word": " comienzas",
+        "start": 102.3,
+        "end": 103.1
+      },
+      {
+        "word": " a",
+        "start": 103.1,
+        "end": 103.58
+      },
+      {
+        "word": " besar,",
+        "start": 103.58,
+        "end": 104.14
+      },
+      {
+        "word": " te",
+        "start": 104.52,
+        "end": 104.52
+      },
+      {
+        "word": " juro",
+        "start": 104.52,
+        "end": 104.68
+      },
+      {
+        "word": " que",
+        "start": 104.68,
+        "end": 104.88
+      },
+      {
+        "word": " no",
+        "start": 104.88,
+        "end": 105.08
+      },
+      {
+        "word": " quiero",
+        "start": 105.08,
+        "end": 105.62
+      },
+      {
+        "word": " despertar",
+        "start": 105.62,
+        "end": 106.86
+      },
+      {
+        "word": " sobre",
+        "start": 106.86,
+        "end": 107.7
+      },
+      {
+        "word": " la",
+        "start": 107.7,
+        "end": 108.12
+      },
+      {
+        "word": " realidad",
+        "start": 108.12,
+        "end": 108.94000000000001
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "que solo un sueño, que no te tengo",
+    "start": 110.04,
+    "end": 117.10000000000001,
+    "words": [
+      {
+        "word": " que",
+        "start": 110.04,
+        "end": 110.74
+      },
+      {
+        "word": " solo",
+        "start": 110.74,
+        "end": 111.16
+      },
+      {
+        "word": " un",
+        "start": 111.16,
+        "end": 111.56
+      },
+      {
+        "word": " sueño,",
+        "start": 111.56,
+        "end": 115.08
+      },
+      {
+        "word": " que",
+        "start": 115.66,
+        "end": 115.74
+      },
+      {
+        "word": " no",
+        "start": 115.74,
+        "end": 116.2
+      },
+      {
+        "word": " te",
+        "start": 116.2,
+        "end": 116.72
+      },
+      {
+        "word": " tengo",
+        "start": 116.72,
+        "end": 117.25
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "que solo un sueño, que no te tengo",
+    "start": 119.75999999999999,
+    "end": 127.18,
+    "words": [
+      {
+        "word": " que",
+        "start": 119.75999999999999,
+        "end": 120.82
+      },
+      {
+        "word": " solo",
+        "start": 120.82,
+        "end": 121.32
+      },
+      {
+        "word": " un",
+        "start": 121.32,
+        "end": 121.64
+      },
+      {
+        "word": " sueño,",
+        "start": 121.64,
+        "end": 125.18
+      },
+      {
+        "word": " que",
+        "start": 125.72,
+        "end": 125.88
+      },
+      {
+        "word": " no",
+        "start": 125.88,
+        "end": 126.3
+      },
+      {
+        "word": " te",
+        "start": 126.3,
+        "end": 126.86
+      },
+      {
+        "word": " tengo",
+        "start": 126.86,
+        "end": 127.39
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "que solo pasan y yo sigo aquí, aquí, estrenándote",
+    "start": 130.98,
+    "end": 137.98000000000002,
+    "words": [
+      {
+        "word": " que",
+        "start": 130.98,
+        "end": 132.14
+      },
+      {
+        "word": " solo",
+        "start": 132.14,
+        "end": 132.48
+      },
+      {
+        "word": " pasan",
+        "start": 132.48,
+        "end": 133.18
+      },
+      {
+        "word": " y",
+        "start": 133.18,
+        "end": 133.32
+      },
+      {
+        "word": " yo",
+        "start": 133.32,
+        "end": 133.62
+      },
+      {
+        "word": " sigo",
+        "start": 133.62,
+        "end": 134.08
+      },
+      {
+        "word": " aquí,",
+        "start": 134.08,
+        "end": 134.8
+      },
+      {
+        "word": " aquí,",
+        "start": 134.8,
+        "end": 136.04
+      },
+      {
+        "word": " estrenándote",
+        "start": 136.04,
+        "end": 137.98000000000002
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "como un vicio que me amarra a ti, yo sigo deseándote",
+    "start": 141.98000000000002,
+    "end": 147.98000000000002,
+    "words": [
+      {
+        "word": " como",
+        "start": 141.95999999999998,
+        "end": 142.54
+      },
+      {
+        "word": " un",
+        "start": 142.54,
+        "end": 142.9
+      },
+      {
+        "word": " vicio",
+        "start": 142.9,
+        "end": 143.22
+      },
+      {
+        "word": " que",
+        "start": 143.22,
+        "end": 143.44
+      },
+      {
+        "word": " me",
+        "start": 143.44,
+        "end": 143.6
+      },
+      {
+        "word": " amarra",
+        "start": 143.6,
+        "end": 144.18
+      },
+      {
+        "word": " a",
+        "start": 144.18,
+        "end": 144.46
+      },
+      {
+        "word": " ti,",
+        "start": 144.46,
+        "end": 145.18
+      },
+      {
+        "word": " yo",
+        "start": 145.42,
+        "end": 145.58
+      },
+      {
+        "word": " sigo",
+        "start": 145.58,
+        "end": 146.24
+      },
+      {
+        "word": " deseándote",
+        "start": 146.24,
+        "end": 147.98000000000002
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "alex gargolas",
+    "start": 152.9,
+    "end": 155.22,
+    "words": [
+      {
+        "word": " Alex",
+        "start": 152.9,
+        "end": 154.06
+      },
+      {
+        "word": " Gargolas",
+        "start": 154.06,
+        "end": 155.22
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "rakim migenwai",
+    "start": 155.22,
+    "end": 157.22,
+    "words": [
+      {
+        "word": " Rakim",
+        "start": 155.22,
+        "end": 156.0
+      },
+      {
+        "word": " Migenwai",
+        "start": 156.0,
+        "end": 157.22
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "mambo king",
+    "start": 160.1,
+    "end": 161.8,
+    "words": [
+      {
+        "word": " Mambo",
+        "start": 160.1,
+        "end": 161.5
+      },
+      {
+        "word": " King",
+        "start": 161.5,
+        "end": 161.8
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "alex gargolas",
+    "start": 163.22,
+    "end": 165.22,
+    "words": [
+      {
+        "word": " Alex",
+        "start": 162.94,
+        "end": 163.64
+      },
+      {
+        "word": " Gargolas",
+        "start": 163.64,
+        "end": 165.22
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "rakim migenwai",
+    "start": 167.94,
+    "end": 170.74,
+    "words": [
+      {
+        "word": " Rakim",
+        "start": 167.94,
+        "end": 169.34
+      },
+      {
+        "word": " Migenwai",
+        "start": 169.34,
+        "end": 170.74
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "los magníficos",
+    "start": 170.74,
+    "end": 173.22,
+    "words": [
+      {
+        "word": " Los",
+        "start": 170.74,
+        "end": 171.18
+      },
+      {
+        "word": " Magníficos",
+        "start": 171.18,
+        "end": 173.22
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "rakim migenwai",
+    "start": 180.72,
+    "end": 183.52,
+    "words": [
+      {
+        "word": " Rakim",
+        "start": 180.72,
+        "end": 182.12
+      },
+      {
+        "word": " Migenwai",
+        "start": 182.12,
+        "end": 183.52
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "los catalogas",
+    "start": 186.18,
+    "end": 187.22,
+    "words": [
+      {
+        "word": " Los",
+        "start": 186.18,
+        "end": 187.02
+      },
+      {
+        "word": " Catalogas",
+        "start": 187.02,
+        "end": 187.44
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "el tuo romano",
+    "start": 187.86,
+    "end": 189.22,
+    "words": [
+      {
+        "word": " El",
+        "start": 187.86,
+        "end": 188.26
+      },
+      {
+        "word": " Tuo",
+        "start": 188.26,
+        "end": 188.64
+      },
+      {
+        "word": " Romano",
+        "start": 188.64,
+        "end": 189.22
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "vas a importarte del estado",
+    "start": 190.06,
+    "end": 193.34,
+    "words": [
+      {
+        "word": " Vas",
+        "start": 190.06,
+        "end": 190.8
+      },
+      {
+        "word": " a",
+        "start": 190.8,
+        "end": 190.94
+      },
+      {
+        "word": " importarte",
+        "start": 190.94,
+        "end": 191.74
+      },
+      {
+        "word": " del",
+        "start": 191.74,
+        "end": 191.98
+      },
+      {
+        "word": " estado",
+        "start": 191.98,
+        "end": 193.34
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "se que te molestan",
+    "start": 193.34,
+    "end": 195.62,
+    "words": [
+      {
+        "word": " Se",
+        "start": 193.34,
+        "end": 194.52
+      },
+      {
+        "word": " que",
+        "start": 194.52,
+        "end": 194.7
+      },
+      {
+        "word": " te",
+        "start": 194.7,
+        "end": 194.96
+      },
+      {
+        "word": " molestan",
+        "start": 194.96,
+        "end": 195.62
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "alex, alex, dile",
+    "start": 196.6,
+    "end": 198.58,
+    "words": [
+      {
+        "word": " Alex,",
+        "start": 196.6,
+        "end": 197.44
+      },
+      {
+        "word": " Alex,",
+        "start": 197.44,
+        "end": 198.28
+      },
+      {
+        "word": " dile",
+        "start": 198.28,
+        "end": 198.58
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "que pa' pasarlo en el ronco, quiero comprenderlo, pero",
+    "start": 199.84,
+    "end": 205.3,
+    "words": [
+      {
+        "word": " Que",
+        "start": 199.84,
+        "end": 200.68
+      },
+      {
+        "word": " pa'",
+        "start": 200.68,
+        "end": 200.96
+      },
+      {
+        "word": " pasarlo",
+        "start": 201.38,
+        "end": 201.64
+      },
+      {
+        "word": " en",
+        "start": 201.64,
+        "end": 201.82
+      },
+      {
+        "word": " el",
+        "start": 201.82,
+        "end": 202.0
+      },
+      {
+        "word": " ronco,",
+        "start": 202.0,
+        "end": 203.02
+      },
+      {
+        "word": " quiero",
+        "start": 203.04,
+        "end": 203.44
+      },
+      {
+        "word": " comprenderlo,",
+        "start": 203.44,
+        "end": 204.58
+      },
+      {
+        "word": " pero",
+        "start": 204.66,
+        "end": 205.3
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "que no se me acabo, de hecho",
+    "start": 205.3,
+    "end": 211.1,
+    "words": [
+      {
+        "word": " que",
+        "start": 205.3,
+        "end": 206.76
+      },
+      {
+        "word": " no",
+        "start": 206.76,
+        "end": 207.18
+      },
+      {
+        "word": " se",
+        "start": 207.18,
+        "end": 207.26
+      },
+      {
+        "word": " me",
+        "start": 207.26,
+        "end": 207.5
+      },
+      {
+        "word": " acabo,",
+        "start": 207.5,
+        "end": 208.86
+      },
+      {
+        "word": " de",
+        "start": 209.14,
+        "end": 209.4
+      },
+      {
+        "word": " hecho",
+        "start": 209.4,
+        "end": 211.1
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "mambo king",
+    "start": 211.1,
+    "end": 213.2,
+    "words": [
+      {
+        "word": " Mambo",
+        "start": 211.1,
+        "end": 212.3
+      },
+      {
+        "word": " King",
+        "start": 212.3,
+        "end": 213.2
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "migenwai",
+    "start": 214.84,
+    "end": 215.20000000000002,
+    "words": [
+      {
+        "word": " Migenwai",
+        "start": 214.84,
+        "end": 215.54
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "rakim migenwai",
+    "start": 216.24,
+    "end": 217.20000000000002,
+    "words": [
+      {
+        "word": " Rakim",
+        "start": 216.24,
+        "end": 216.88
+      },
+      {
+        "word": " Migenwai",
+        "start": 216.88,
+        "end": 217.57999999999998
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "ay, ay",
+    "start": 219.82,
+    "end": 221.86,
+    "words": [
+      {
+        "word": " Ay,",
+        "start": 219.82,
+        "end": 221.22
+      },
+      {
+        "word": " Ay",
+        "start": 221.44,
+        "end": 221.86
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "ay, ay",
+    "start": 221.86,
+    "end": 224.0,
+    "words": [
+      {
+        "word": " Ay,",
+        "start": 221.86,
+        "end": 223.32
+      },
+      {
+        "word": " Ay",
+        "start": 224.0,
+        "end": 224.0
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "alex gargolas",
+    "start": 224.0,
+    "end": 225.12,
+    "words": [
+      {
+        "word": " Alex",
+        "start": 224.0,
+        "end": 224.0
+      },
+      {
+        "word": " Gargolas",
+        "start": 224.0,
+        "end": 225.12
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "migenwai",
+    "start": 230.22,
+    "end": 231.62,
+    "words": [
+      {
+        "word": " Migenwai",
+        "start": 230.22,
+        "end": 231.62
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "migenwai",
+    "start": 241.73999999999998,
+    "end": 243.14,
+    "words": [
+      {
+        "word": " Migenwai",
+        "start": 241.73999999999998,
+        "end": 243.14
+      }
+    ]
+  }
+]

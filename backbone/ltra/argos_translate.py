@@ -166,6 +166,17 @@ def translate_segments(
     translated: List[Dict[str, Any]] = []
     total = len(input_segments)
 
+    def _prefix_word_spaces(words: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        out = []
+        for idx, w in enumerate(words):
+            nw = dict(w)
+            text = str(nw.get("word", ""))
+            if idx > 0:
+                text = f" {text}"
+            nw["word"] = text
+            out.append(nw)
+        return out
+
     # IMPORTANT: ensure model once
     _, _, translation = ensure_model_once(
         from_code,
@@ -213,6 +224,8 @@ def translate_segments(
             print(f"[{idx + 1}/{total}] align done in {(t3 - t2):.3f}s", flush=True)
 
         print(f"[{idx + 1}/{total}] words: src={len(seg.get('words', []) or [])} tgt={len(target_words)}", flush=True)
+
+        target_words = _prefix_word_spaces(target_words)
 
         new_seg = dict(seg)
         new_seg["text"] = translated_text

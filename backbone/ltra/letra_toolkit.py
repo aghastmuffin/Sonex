@@ -7,7 +7,7 @@ from typing import Dict, Tuple, Optional, IO
 #FFMPEG, openai-whisper, demucs 
 from faster_whisper import WhisperModel
 from ltra.depricated._NLLB import translate
-
+"""Lyrics timing"""
 MINIMUM = (3, 9, 0)
 if sys.version_info < MINIMUM:
     sys.stderr.write(f"Python {MINIMUM[0]}.{MINIMUM[1]}.{MINIMUM[2]} or later is required.\n")
@@ -234,9 +234,7 @@ def transcribe(
     if _align:
         print("[Letra Toolkit] _align=true was depricated in ver 0.1.2, please switch to calling align() separately.")
         align(inp, outp, outp.replace(".json", "_aligned.json"), chosen_lang) #TODO: Remove/direct user more aggressively
-    if language == None:
-        return transcript, chosen_lang
-    return transcript, None #TODO: Change all to fix reformatted return type
+    return transcript, chosen_lang
 
 
 
@@ -514,8 +512,21 @@ def select_best_transcript():
     return
 
 if __name__ == "__main__":
+    def example_progress(index: int, total: int, text: Optional[str] = None):
+        try:
+            pct = ((index + 1) / total * 100) if total else 0
+        except Exception:
+            pct = 0
+        if text:
+            print(f"[progress] {index+1}/{total} ({pct:.1f}%) - {text[:60]}")
+        else:
+            print(f"[progress] {index+1}/{total} ({pct:.1f}%)")
+        sys.stdout.flush()
+
     if not os.path.exists("ADV") and os.path.isdir("ADV"):
         separate("ADV.mp3")
     else:
         print("DEMUCS SKIPPED")
-    transcribe("ADV/vocals.mp3")
+
+    # Example: caller receives progress callbacks during transcription
+    transcribe("ADV/vocals.mp3", on_progress=example_progress)
