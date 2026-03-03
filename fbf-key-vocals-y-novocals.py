@@ -198,7 +198,7 @@ if __name__ == "__main__":
             beat_map[start:end] = True
 
     # --- Save Everything ---
-    np.savez_compressed(f"{AUDIO}/{AUDIO}_novocs_analysis.npz", 
+    np.savez_compressed(f"{AUDIO}/{AUDIO}_vocs_analysis.npz", 
                         hpcp=frame_hpcps, 
                         beats=beat_map, 
                         beat_centers=beat_centers,
