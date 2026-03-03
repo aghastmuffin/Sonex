@@ -41,7 +41,7 @@ def extract_best_rhythm(audio, duration_sec):
 if __name__ == "__main__":
     AUDIO = "22"
     #file_path = f"{AUDIO}/{AUDIO}.mp3"
-    file_path = f"{AUDIO}/htdemucs/{AUDIO}.mp3"
+    file_path = f"{AUDIO}/htdemucs/{AUDIO}/no_vocals.mp3"
     sr = 48000 # 1ms = 48 samples
     audio = MonoLoader(filename=file_path, sampleRate=sr)().astype(np.float32)
 
