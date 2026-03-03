@@ -2,7 +2,7 @@
 #Analysis Library
 from essentia.standard import MonoLoader, FrameGenerator, Windowing, Spectrum, SpectralPeaks, HPCP, RhythmExtractor2013
 import numpy as np
-
+import threading
 def _score_beats(beats, bpm, confidence, duration_sec):
     if len(beats) < 2 or bpm <= 0:
         return -1e9
@@ -38,11 +38,9 @@ def extract_best_rhythm(audio, duration_sec):
             best = result
     return best
 
-if __name__ == "__main__":
-    AUDIO = "22"
-    #file_path = f"{AUDIO}/{AUDIO}.mp3"
-    file_path = f"{AUDIO}/htdemucs/{AUDIO}/no_vocals.mp3"
-    sr = 48000 # 1ms = 48 samples
+def save_novocs(af, fp, sr):
+    file_path = fp
+    AUDIO = af
     audio = MonoLoader(filename=file_path, sampleRate=sr)().astype(np.float32)
 
     # Normalize
@@ -126,7 +124,11 @@ if __name__ == "__main__":
                         frame_size=np.array([frame_size]),
                         hop_size=np.array([hop_size]))
     
-    #scan vocals now
+def savevocs(af, fp, sr):
+    AUDIO = af
+    file_path = fp
+
+     #scan vocals now
     file_path = f"{AUDIO}/vocals.mp3"
     audio = MonoLoader(filename=file_path, sampleRate=sr)().astype(np.float32)
 
@@ -210,3 +212,15 @@ if __name__ == "__main__":
                         sample_rate=np.array([sr]),
                         frame_size=np.array([frame_size]),
                         hop_size=np.array([hop_size]))
+if __name__ == "__main__":
+    AUDIO = "22"
+    #file_path = f"{AUDIO}/{AUDIO}.mp3"
+    file_path = f"{AUDIO}/htdemucs/{AUDIO}/no_vocals.mp3"
+    sr = 48000 # 1ms = 48 samples
+    t1 = threading.Thread(target=save_novocs, args=(AUDIO, file_path, sr))
+    t2 = threading.Thread(target=savevocs, args=(AUDIO, file_path, sr))
+    t1.start()
+    t2.start()
+
+    
+   
