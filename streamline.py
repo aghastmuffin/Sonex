@@ -92,5 +92,17 @@ except Exception as e:
     print("MFA Error:", e)
     pass
 print("Trying ArgosWrapper")
-from backbone.ltra.argos_translate import translate_file
-out = translate_file(f"{AUDIO_BASE}/vocals_whisper_segments.json", from_lang=detectlang, to_lang="en", verbose=True)
+from backbone.ltra.argos_translate import translate_file, normalize_lang_code
+
+source_lang = normalize_lang_code(detectlang or LANG or "es")
+target_lang = normalize_lang_code("en")
+
+if source_lang == target_lang:
+    print(f"Skipping Argos translation: source and target are both '{target_lang}'.")
+else:
+    out = translate_file(
+        f"{AUDIO_BASE}/vocals_whisper_segments.json",
+        from_lang=source_lang,
+        to_lang=target_lang,
+        verbose=True,
+    )

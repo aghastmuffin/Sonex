@@ -1,98 +1,78 @@
 [
   {
     "id": 0,
-    "text": "I only pulled a seventeen-for-seven since I grabbed this crap that's got me in trouble now",
+    "text": "나는 단지 이상 17 밖으로 7 때 나는이 문장을 잡았을 때 나는 나를 칭찬",
     "start": 19.06,
     "end": 26.12,
     "words": [
       {
-        "word": "That",
+        "word": "나는",
         "start": 19.06,
         "end": 19.62
       },
       {
-        "word": " I",
+        "word": " 단지",
         "start": 19.62,
         "end": 19.86
       },
       {
-        "word": " do",
+        "word": " 이상",
         "start": 19.86,
         "end": 20.14
       },
       {
-        "word": " only",
+        "word": " 17",
         "start": 20.14,
         "end": 20.4
       },
       {
-        "word": " more",
-        "start": 20.4,
-        "end": 20.52
-      },
-      {
-        "word": " than",
+        "word": " 밖으로",
         "start": 20.52,
         "end": 20.84
       },
       {
-        "word": " 17",
+        "word": " 7",
         "start": 20.84,
         "end": 21.12
       },
       {
-        "word": " out",
+        "word": " 때",
         "start": 21.12,
         "end": 21.78
       },
       {
-        "word": " of",
+        "word": " 나는이",
         "start": 21.78,
         "end": 22.84
       },
       {
-        "word": " 7",
+        "word": " 문장을",
         "start": 22.84,
         "end": 23.14
       },
       {
-        "word": " when",
+        "word": " 잡았을",
         "start": 23.14,
         "end": 23.4
       },
       {
-        "word": " I",
+        "word": " 때",
         "start": 23.4,
         "end": 23.6
       },
       {
-        "word": " caught",
+        "word": " 나는",
         "start": 23.6,
         "end": 23.96
       },
       {
-        "word": " this",
-        "start": 23.96,
-        "end": 24.14
-      },
-      {
-        "word": " shit",
-        "start": 24.14,
-        "end": 24.32
-      },
-      {
-        "word": " that's",
+        "word": " 나를",
         "start": 24.32,
         "end": 24.6
       },
       {
-        "word": " compromising",
+        "word": " 칭찬",
         "start": 24.6,
-        "end": 25.902857142857144
-      },
-      {
-        "word": " me",
-        "start": 25.902857142857144,
         "end": 26.12
       }
     ],
@@ -192,78 +172,48 @@
   },
   {
     "id": 1,
-    "text": "I thought I'd be happy here at the party, sleeping with just anyone now.",
+    "text": "나는 얼굴과 수면에 여기에 행복하게 앉아 있다고 생각했습니다.",
     "start": 26.12,
     "end": 30.3,
     "words": [
       {
-        "word": "I",
+        "word": "나는",
         "start": 26.12,
         "end": 26.58
       },
       {
-        "word": " thought",
-        "start": 26.58,
-        "end": 26.76
-      },
-      {
-        "word": " I'd",
+        "word": " 얼굴과",
         "start": 26.76,
         "end": 27.04
       },
       {
-        "word": " be",
+        "word": " 수면에",
         "start": 27.04,
-        "end": 27.2
-      },
-      {
-        "word": " happy",
-        "start": 27.2,
         "end": 27.6
       },
       {
-        "word": " sitting",
+        "word": " 여기에",
         "start": 27.6,
         "end": 27.96
       },
       {
-        "word": " here",
-        "start": 27.96,
-        "end": 28.12
-      },
-      {
-        "word": " at",
-        "start": 28.12,
-        "end": 28.24
-      },
-      {
-        "word": " the",
-        "start": 28.24,
-        "end": 28.44
-      },
-      {
-        "word": " face",
+        "word": " 행복하게",
         "start": 28.44,
         "end": 28.86
       },
       {
-        "word": " and",
+        "word": " 앉아",
         "start": 28.86,
         "end": 29.3
       },
       {
-        "word": " sleeping",
+        "word": " 있다고",
         "start": 29.3,
         "end": 29.6
       },
       {
-        "word": " with",
+        "word": " 생각했습니다.",
         "start": 29.6,
-        "end": 29.880000000000003
-      },
-      {
-        "word": " anyone.",
-        "start": 29.880000000000003,
         "end": 30.3
       }
     ],
@@ -333,82 +283,62 @@
   },
   {
     "id": 2,
-    "text": "If I said your photos with him don't matter to me, they'd still make me sick.",
+    "text": "나는 그와 함께 사진을 돌보는 것을 알고 있다면 나는 나쁜 느낌",
     "start": 30.3,
     "end": 36.76,
     "words": [
       {
-        "word": "and",
+        "word": "나는",
         "start": 30.3,
         "end": 30.64
       },
       {
-        "word": " if",
-        "start": 30.64,
-        "end": 30.78
-      },
-      {
-        "word": " I",
+        "word": " 그와",
         "start": 30.78,
         "end": 31.42
       },
       {
-        "word": " knew",
+        "word": " 함께",
         "start": 31.42,
         "end": 31.74
       },
       {
-        "word": " that",
-        "start": 31.74,
-        "end": 32.02
-      },
-      {
-        "word": " I",
+        "word": " 사진을",
         "start": 32.02,
         "end": 32.36
       },
       {
-        "word": " care",
+        "word": " 돌보는",
         "start": 32.36,
         "end": 32.76
       },
       {
-        "word": " about",
+        "word": " 것을",
         "start": 32.76,
         "end": 33.5
       },
       {
-        "word": " your",
+        "word": " 알고",
         "start": 33.5,
         "end": 34.16
       },
       {
-        "word": " photos",
+        "word": " 있다면",
         "start": 34.16,
         "end": 34.8
       },
       {
-        "word": " with",
+        "word": " 나는",
         "start": 34.8,
         "end": 35.28
       },
       {
-        "word": " him",
-        "start": 35.28,
-        "end": 35.46
-      },
-      {
-        "word": " I",
-        "start": 35.46,
-        "end": 35.68
-      },
-      {
-        "word": " feel",
+        "word": " 나쁜",
         "start": 35.68,
         "end": 36.2
       },
       {
-        "word": " bad",
+        "word": " 느낌",
         "start": 36.2,
         "end": 36.76
       }
@@ -494,37 +424,27 @@
   },
   {
     "id": 3,
-    "text": "and look, it does bother me",
+    "text": "그리고 나는 배려하지 않는다",
     "start": 36.76,
     "end": 39.52,
     "words": [
       {
-        "word": "and",
+        "word": "그리고",
         "start": 36.76,
         "end": 37.14
       },
       {
-        "word": " I",
+        "word": " 나는",
         "start": 37.14,
         "end": 37.6
       },
       {
-        "word": " figure",
-        "start": 37.88,
-        "end": 38.24
-      },
-      {
-        "word": " I",
+        "word": " 배려하지",
         "start": 38.24,
         "end": 38.7
       },
       {
-        "word": " don't",
-        "start": 38.7,
-        "end": 39.0
-      },
-      {
-        "word": " care",
+        "word": " 않는다",
         "start": 39.0,
         "end": 39.52
       }
@@ -570,92 +490,82 @@
   },
   {
     "id": 4,
-    "text": "I'm right here; if he can't win you, I'll take him to QuickCreep to pay you back.",
+    "text": "나는 여기에 준비가되어 있습니다. 그가 당신을 이길 수없는 경우, 나는 당신에게 신속하게 그를 얻을 것이다.",
     "start": 39.52,
     "end": 49.74,
     "words": [
       {
-        "word": "I'm",
+        "word": "나는",
         "start": 39.52,
-        "end": 39.902857142857144
-      },
-      {
-        "word": " ready",
-        "start": 39.902857142857144,
         "end": 40.86
       },
       {
-        "word": " here,",
+        "word": " 여기에",
         "start": 40.86,
         "end": 41.3
       },
       {
-        "word": " if",
+        "word": " 준비가되어",
         "start": 41.3,
         "end": 42.52
       },
       {
-        "word": " he",
+        "word": " 있습니다.",
         "start": 42.98,
         "end": 43.1
       },
       {
-        "word": " doesn't",
+        "word": " 그가",
         "start": 43.1,
         "end": 43.32
       },
       {
-        "word": " beat",
+        "word": " 당신을",
         "start": 43.32,
         "end": 43.52
       },
       {
-        "word": " you,",
+        "word": " 이길",
         "start": 43.52,
         "end": 43.82
       },
       {
-        "word": " I'll",
+        "word": " 수없는",
         "start": 43.82,
         "end": 45.02
       },
       {
-        "word": " get",
+        "word": " 경우,",
         "start": 45.02,
         "end": 45.64
       },
       {
-        "word": " him",
+        "word": " 나는",
         "start": 45.64,
         "end": 46.18
       },
       {
-        "word": " to",
+        "word": " 당신에게",
         "start": 46.18,
         "end": 46.28
       },
       {
-        "word": " QuickReed",
+        "word": " 신속하게",
         "start": 46.28,
-        "end": 47.36
-      },
-      {
-        "word": " to",
-        "start": 47.36,
         "end": 47.6
       },
       {
-        "word": " give",
+        "word": " 그를",
         "start": 47.6,
         "end": 48.06
       },
       {
-        "word": " you",
+        "word": " 얻을",
         "start": 48.06,
         "end": 48.58
       },
       {
-        "word": " some.",
+        "word": " 것이다.",
         "start": 48.58,
         "end": 49.74
       }
@@ -741,47 +651,32 @@
   },
   {
     "id": 5,
-    "text": "stuck in your chat, lying on the bed",
+    "text": "내 채팅에서, 세비야 '에서 침대",
     "start": 49.92,
     "end": 54.54,
     "words": [
       {
-        "word": "in",
-        "start": 49.92,
-        "end": 50.18
-      },
-      {
-        "word": " your",
-        "start": 50.18,
-        "end": 50.48
-      },
-      {
-        "word": " chat",
+        "word": "내",
         "start": 50.48,
         "end": 50.78
       },
       {
-        "word": " with",
+        "word": " 채팅에서,",
         "start": 50.78,
         "end": 52.1
       },
       {
-        "word": " me,",
+        "word": " 세비야",
         "start": 52.56,
         "end": 53.04
       },
       {
-        "word": " Seville",
-        "start": 53.06,
-        "end": 53.34
-      },
-      {
-        "word": " 'in",
+        "word": " '에서",
         "start": 53.34,
         "end": 53.7
       },
       {
-        "word": " bed",
+        "word": " 침대",
         "start": 53.7,
         "end": 54.54
       }
@@ -832,63 +727,58 @@
   },
   {
     "id": 6,
-    "text": "waiting you talk to me when he won't talk to you",
+    "text": "그녀가 당신을 이야기하지 않을 때 그녀는 나에게 이야기 할 것입니다.",
     "start": 54.54,
     "end": 60.08,
     "words": [
       {
-        "word": "hoping",
+        "word": "그녀가",
         "start": 54.54,
         "end": 55.58
       },
       {
-        "word": " she'll",
+        "word": " 당신을",
         "start": 55.58,
         "end": 55.92
       },
       {
-        "word": " talk",
+        "word": " 이야기하지",
         "start": 55.92,
         "end": 56.24
       },
       {
-        "word": " to",
+        "word": " 않을",
         "start": 56.24,
         "end": 57.06
       },
       {
-        "word": " me",
+        "word": " 때",
         "start": 57.06,
         "end": 57.62
       },
       {
-        "word": " when",
+        "word": " 그녀는",
         "start": 57.62,
         "end": 58.02
       },
       {
-        "word": " she",
+        "word": " 나에게",
         "start": 58.02,
         "end": 58.24
       },
       {
-        "word": " doesn't",
+        "word": " 이야기",
         "start": 58.24,
         "end": 58.62
       },
       {
-        "word": " talk",
+        "word": " 할",
         "start": 58.62,
-        "end": 59.26888888888889
+        "end": 58.912
       },
       {
-        "word": " to",
-        "start": 59.26888888888889,
-        "end": 59.593333333333334
-      },
-      {
-        "word": " you.",
-        "start": 59.593333333333334,
+        "word": " 것입니다.",
+        "start": 58.912,
         "end": 60.08
       }
     ],
@@ -943,62 +833,57 @@
   },
   {
     "id": 7,
-    "text": "mami, don't talk to me, this is to forget you, help",
+    "text": "엄마,이에 대해 얘기하지 마십시오. 그것은 당신을 잊는 것에 관하여 입니다.",
     "start": 60.08,
     "end": 64.62,
     "words": [
       {
-        "word": "Mummy,",
+        "word": "엄마,이에",
         "start": 60.08,
         "end": 60.86
       },
       {
-        "word": " don't",
+        "word": " 대해",
         "start": 60.88,
         "end": 61.24
       },
       {
-        "word": " talk",
+        "word": " 얘기하지",
         "start": 61.24,
         "end": 61.58
       },
       {
-        "word": " to",
+        "word": " 마십시오.",
         "start": 61.58,
         "end": 62.08
       },
       {
-        "word": " me",
+        "word": " 그것은",
         "start": 62.08,
         "end": 62.34
       },
       {
-        "word": " about",
-        "start": 62.34,
-        "end": 62.46
-      },
-      {
-        "word": " this.",
+        "word": " 당신을",
         "start": 62.46,
         "end": 62.6
       },
       {
-        "word": " It's",
+        "word": " 잊는",
         "start": 62.6,
         "end": 63.22
       },
       {
-        "word": " about",
+        "word": " 것에",
         "start": 63.26,
         "end": 63.74
       },
       {
-        "word": " forgetting",
+        "word": " 관하여",
         "start": 63.74,
         "end": 64.02
       },
       {
-        "word": " you.",
+        "word": " 입니다.",
         "start": 64.02,
         "end": 64.62
       }
@@ -1064,62 +949,47 @@
   },
   {
     "id": 8,
-    "text": "let it be; if not, I won't delete it, mami, ever",
+    "text": "내가하지 않는 경우, 나는 노래를 가지고 있지 않습니다.",
     "start": 64.62,
     "end": 70.2,
     "words": [
       {
-        "word": "Let",
+        "word": "내가하지",
         "start": 64.62,
         "end": 65.26
       },
       {
-        "word": " if",
+        "word": " 않는",
         "start": 65.26,
         "end": 65.52
       },
       {
-        "word": " I",
-        "start": 65.52,
-        "end": 65.68
-      },
-      {
-        "word": " don't,",
+        "word": " 경우,",
         "start": 65.96,
         "end": 66.2
       },
       {
-        "word": " I",
+        "word": " 나는",
         "start": 66.2,
         "end": 67.0
       },
       {
-        "word": " don't",
+        "word": " 노래를",
         "start": 67.12,
         "end": 67.42
       },
       {
-        "word": " have",
+        "word": " 가지고",
         "start": 67.42,
         "end": 67.96
       },
       {
-        "word": " to",
+        "word": " 있지",
         "start": 68.04,
         "end": 68.24
       },
       {
-        "word": " have",
-        "start": 68.24,
-        "end": 68.4
-      },
-      {
-        "word": " a",
-        "start": 68.4,
-        "end": 68.56
-      },
-      {
-        "word": " song.",
+        "word": " 않습니다.",
         "start": 68.56,
         "end": 70.2
       }
@@ -1200,53 +1070,33 @@
   },
   {
     "id": 9,
-    "text": "explain how I forget that bellybutton piercing of yours",
+    "text": "amleague에서 pisco를 잊어 버리는 방법",
     "start": 70.2,
     "end": 75.46,
     "words": [
       {
-        "word": "explain",
+        "word": "amleague에서",
         "start": 70.2,
         "end": 70.76
       },
       {
-        "word": " how",
+        "word": " pisco를",
         "start": 70.76,
         "end": 71.16
       },
       {
-        "word": " I",
+        "word": " 잊어",
         "start": 71.16,
         "end": 72.54
       },
       {
-        "word": " forgot",
+        "word": " 버리는",
         "start": 72.54,
         "end": 73.0
       },
       {
-        "word": " that",
-        "start": 73.0,
-        "end": 73.32
-      },
-      {
-        "word": " pisco",
-        "start": 73.32,
-        "end": 73.44
-      },
-      {
-        "word": " from",
-        "start": 73.44,
-        "end": 73.62
-      },
-      {
-        "word": " your",
+        "word": " 방법",
         "start": 73.62,
-        "end": 74.23333333333333
-      },
-      {
-        "word": " amleague",
-        "start": 74.23333333333333,
         "end": 75.46
       }
     ],
@@ -1296,98 +1146,58 @@
   },
   {
     "id": 10,
-    "text": "Hey, tell all that I felt down below when we touched, you always got so so wet then",
+    "text": "안녕하세요, 우리가 연주 한 것처럼 바닥에 살고있는 것은, 항상 젖은",
     "start": 75.46,
     "end": 83.86,
     "words": [
       {
-        "word": "Hey,",
+        "word": "안녕하세요,",
         "start": 75.46,
-        "end": 75.96
-      },
-      {
-        "word": " say",
-        "start": 75.96,
         "end": 76.46
       },
       {
-        "word": " to",
-        "start": 76.58,
-        "end": 76.7
-      },
-      {
-        "word": " 'what",
-        "start": 76.7,
-        "end": 76.82
-      },
-      {
-        "word": " I",
-        "start": 76.82,
-        "end": 76.96
-      },
-      {
-        "word": " have",
+        "word": " 우리가",
         "start": 76.96,
         "end": 77.12
       },
       {
-        "word": " been",
-        "start": 77.12,
-        "end": 77.28
-      },
-      {
-        "word": " living",
+        "word": " 연주",
         "start": 77.28,
         "end": 77.66
       },
       {
-        "word": " at",
+        "word": " 한",
         "start": 77.66,
         "end": 78.02
       },
       {
-        "word": " the",
+        "word": " 것처럼",
         "start": 78.02,
         "end": 78.26
       },
       {
-        "word": " bottom",
+        "word": " 바닥에",
         "start": 78.26,
         "end": 78.56
       },
       {
-        "word": " as",
+        "word": " 살고있는",
         "start": 78.56,
         "end": 79.24
       },
       {
-        "word": " we",
+        "word": " 것은,",
         "start": 79.4,
         "end": 79.6
       },
       {
-        "word": " were",
+        "word": " 항상",
         "start": 79.6,
         "end": 79.78
       },
       {
-        "word": " playing,",
+        "word": " 젖은",
         "start": 79.78,
-        "end": 81.208
-      },
-      {
-        "word": " always",
-        "start": 81.208,
-        "end": 82.432
-      },
-      {
-        "word": " gets",
-        "start": 82.432,
-        "end": 83.248
-      },
-      {
-        "word": " wet",
-        "start": 83.248,
         "end": 83.86
       }
     ],
@@ -1467,47 +1277,27 @@
   },
   {
     "id": 11,
-    "text": "Why say you weren't with him—my mistake.",
+    "text": "왜 당신은 그를하지 않았다?",
     "start": 83.86,
     "end": 89.04,
     "words": [
       {
-        "word": "Why",
-        "start": 84.04,
-        "end": 84.34
-      },
-      {
-        "word": " did",
+        "word": "왜",
         "start": 84.34,
         "end": 84.88
       },
       {
-        "word": " you",
+        "word": " 당신은",
         "start": 85.32,
         "end": 85.7
       },
       {
-        "word": " say",
+        "word": " 그를하지",
         "start": 85.7,
         "end": 86.12
       },
       {
-        "word": " you",
-        "start": 86.12,
-        "end": 86.42
-      },
-      {
-        "word": " weren't",
-        "start": 86.92,
-        "end": 87.18
-      },
-      {
-        "word": " with",
-        "start": 87.6,
-        "end": 87.88
-      },
-      {
-        "word": " him?",
+        "word": " 않았다?",
         "start": 88.24,
         "end": 89.04
       }
@@ -1598,52 +1388,32 @@
   },
   {
     "id": 12,
-    "text": "The little one slips, how easy to get fooled",
+    "text": "나쁜 Yadite, 어떻게 쉽게 속임수",
     "start": 89.04,
     "end": 94.08,
     "words": [
       {
-        "word": "The",
+        "word": "나쁜",
         "start": 89.04,
         "end": 89.8
       },
       {
-        "word": " bad",
+        "word": " Yadite,",
         "start": 89.8,
         "end": 90.52
       },
       {
-        "word": " Yadite,",
+        "word": " 어떻게",
         "start": 90.52,
         "end": 91.46
       },
       {
-        "word": " how",
-        "start": 91.74,
-        "end": 91.92
-      },
-      {
-        "word": " easy",
+        "word": " 쉽게",
         "start": 91.92,
         "end": 92.46
       },
       {
-        "word": " you",
-        "start": 92.46,
-        "end": 92.72
-      },
-      {
-        "word": " come",
-        "start": 92.72,
-        "end": 93.0
-      },
-      {
-        "word": " to",
-        "start": 93.0,
-        "end": 93.34
-      },
-      {
-        "word": " fool",
+        "word": " 속임수",
         "start": 93.34,
         "end": 94.08
       }
@@ -1699,57 +1469,57 @@
   },
   {
     "id": 13,
-    "text": "you won't see this again, but I know even so",
+    "text": "나는 이것을 다시 볼 수 없다, 그러나 나는 아직도 알고",
     "start": 94.08,
     "end": 99.54,
     "words": [
       {
-        "word": "you",
+        "word": "나는",
         "start": 94.08,
         "end": 94.7
       },
       {
-        "word": " don't",
+        "word": " 이것을",
         "start": 94.7,
         "end": 95.04
       },
       {
-        "word": " see",
+        "word": " 다시",
         "start": 95.04,
         "end": 95.24
       },
       {
-        "word": " this",
+        "word": " 볼",
         "start": 95.24,
         "end": 95.44
       },
       {
-        "word": " again,",
+        "word": " 수",
         "start": 95.44,
         "end": 95.88
       },
       {
-        "word": " but",
+        "word": " 없다,",
         "start": 95.88,
         "end": 96.2
       },
       {
-        "word": " I",
+        "word": " 그러나",
         "start": 96.22,
         "end": 96.66
       },
       {
-        "word": " know",
+        "word": " 나는",
         "start": 96.66,
         "end": 97.12
       },
       {
-        "word": " that",
+        "word": " 아직도",
         "start": 97.28,
         "end": 97.62
       },
       {
-        "word": " still",
+        "word": " 알고",
         "start": 97.62,
         "end": 99.54
       }
@@ -1815,78 +1585,28 @@
   },
   {
     "id": 14,
-    "text": "I'd fall a thousand times in your game while you keep wanting to play",
+    "text": "게임으로 천 번 떨어졌습니다.",
     "start": 99.54,
     "end": 103.6,
     "words": [
       {
-        "word": "I'd",
+        "word": "게임으로",
         "start": 99.54,
-        "end": 99.80666666666667
-      },
-      {
-        "word": " fall",
-        "start": 99.80666666666667,
         "end": 100.34
       },
       {
-        "word": " a",
-        "start": 100.34,
-        "end": 100.46
-      },
-      {
-        "word": " thousand",
-        "start": 100.46,
-        "end": 100.64
-      },
-      {
-        "word": " times",
-        "start": 100.64,
-        "end": 100.94
-      },
-      {
-        "word": " into",
-        "start": 100.94,
-        "end": 101.16
-      },
-      {
-        "word": " your",
-        "start": 101.16,
-        "end": 101.28
-      },
-      {
-        "word": " game",
-        "start": 101.28,
-        "end": 101.52
-      },
-      {
-        "word": " while",
+        "word": " 천",
         "start": 101.52,
         "end": 101.92
       },
       {
-        "word": " you're",
-        "start": 101.92,
-        "end": 102.24
-      },
-      {
-        "word": " still",
-        "start": 102.24,
-        "end": 102.5
-      },
-      {
-        "word": " wanting",
+        "word": " 번",
         "start": 102.5,
         "end": 102.92
       },
       {
-        "word": " to",
+        "word": " 떨어졌습니다.",
         "start": 102.92,
-        "end": 103.14666666666666
-      },
-      {
-        "word": " play",
-        "start": 103.14666666666666,
         "end": 103.6
       }
     ],
@@ -1956,52 +1676,42 @@
   },
   {
     "id": 15,
-    "text": "I see you everywhere even when I change the place",
+    "text": "내가 장소를 변경하면 어디에서 볼 수 있습니다.",
     "start": 104.5,
     "end": 107.1,
     "words": [
       {
-        "word": "I'll",
+        "word": "내가",
         "start": 104.5,
         "end": 105.02
       },
       {
-        "word": " see",
-        "start": 105.02,
-        "end": 105.14
-      },
-      {
-        "word": " you",
+        "word": " 장소를",
         "start": 105.14,
         "end": 105.38
       },
       {
-        "word": " anywhere",
+        "word": " 변경하면",
         "start": 105.38,
         "end": 105.62
       },
       {
-        "word": " if",
+        "word": " 어디에서",
         "start": 105.62,
         "end": 105.86
       },
       {
-        "word": " I",
+        "word": " 볼",
         "start": 105.86,
         "end": 106.08
       },
       {
-        "word": " change",
+        "word": " 수",
         "start": 106.08,
         "end": 106.52
       },
       {
-        "word": " the",
-        "start": 106.52,
-        "end": 106.7
-      },
-      {
-        "word": " place",
+        "word": " 있습니다.",
         "start": 106.7,
         "end": 107.1
       }
@@ -2057,54 +1767,39 @@
   },
   {
     "id": 16,
-    "text": "and of course it counts; a year ago you were hanging by my side",
+    "text": "그리고 물론 괜찮아, ah if year ago you was with me",
     "start": 107.1,
     "end": 111.4,
     "words": [
       {
-        "word": "and",
+        "word": "그리고",
         "start": 107.1,
         "end": 107.36
       },
       {
-        "word": " of",
+        "word": " 물론",
         "start": 107.36,
         "end": 107.52
       },
       {
-        "word": " course",
+        "word": " 괜찮아,",
         "start": 107.52,
         "end": 107.8
       },
       {
-        "word": " it's",
+        "word": " ah",
         "start": 107.8,
         "end": 108.2
       },
       {
-        "word": " okay,",
-        "start": 108.8,
-        "end": 108.84
-      },
-      {
-        "word": " ah",
+        "word": " if",
         "start": 108.84,
         "end": 109.0
       },
       {
-        "word": " if",
+        "word": " year",
         "start": 109.0,
         "end": 109.2
-      },
-      {
-        "word": " a",
-        "start": 109.2,
-        "end": 109.34
-      },
-      {
-        "word": " year",
-        "start": 109.34,
-        "end": 109.48
       },
       {
         "word": " ago",
@@ -2117,7 +1812,7 @@
         "end": 110.26
       },
       {
-        "word": " were",
+        "word": " was",
         "start": 110.26,
         "end": 110.44
       },
@@ -2208,98 +1903,73 @@
   },
   {
     "id": 17,
-    "text": "He's waiting; my ice cream melts, and if I hit a long line now",
+    "text": "그는 나를 기다리고 있습니다, 나는 그의 아이스크림을 녹고 나는 긴 분말이 있다면 지금",
     "start": 111.4,
     "end": 115.96,
     "words": [
       {
-        "word": "He's",
+        "word": "그는",
         "start": 111.4,
         "end": 111.5
       },
       {
-        "word": " waiting",
+        "word": " 나를",
         "start": 111.5,
         "end": 111.92
       },
       {
-        "word": " for",
+        "word": " 기다리고",
         "start": 112.06,
         "end": 112.22
       },
       {
-        "word": " me,",
+        "word": " 있습니다,",
         "start": 112.22,
         "end": 112.38
       },
       {
-        "word": " and",
+        "word": " 나는",
         "start": 112.38,
         "end": 112.68
       },
       {
-        "word": " I'm",
+        "word": " 그의",
         "start": 112.68,
         "end": 112.88
       },
       {
-        "word": " melting",
+        "word": " 아이스크림을",
         "start": 112.88,
-        "end": 113.31076923076924
-      },
-      {
-        "word": " his",
-        "start": 113.31076923076924,
-        "end": 113.49538461538462
-      },
-      {
-        "word": " ice",
-        "start": 113.49538461538462,
         "end": 113.68
       },
       {
-        "word": " cream",
+        "word": " 녹고",
         "start": 113.68,
-        "end": 113.95500000000001
-      },
-      {
-        "word": " and",
-        "start": 113.95500000000001,
         "end": 114.12
       },
       {
-        "word": " if",
+        "word": " 나는",
         "start": 114.12,
         "end": 114.24
       },
       {
-        "word": " I",
+        "word": " 긴",
         "start": 114.24,
         "end": 114.46
       },
       {
-        "word": " have",
+        "word": " 분말이",
         "start": 114.46,
         "end": 114.76
       },
       {
-        "word": " a",
+        "word": " 있다면",
         "start": 114.76,
         "end": 115.04
       },
       {
-        "word": " long",
+        "word": " 지금",
         "start": 115.04,
-        "end": 115.32307692307693
-      },
-      {
-        "word": " powder",
-        "start": 115.32307692307693,
-        "end": 115.7476923076923
-      },
-      {
-        "word": " now",
-        "start": 115.7476923076923,
         "end": 115.96
       }
     ],
@@ -2379,32 +2049,17 @@
   },
   {
     "id": 18,
-    "text": "though it doesn't matter anymore",
+    "text": "하지만 그대",
     "start": 115.96,
     "end": 117.9,
     "words": [
       {
-        "word": "but",
-        "start": 115.96,
-        "end": 116.46
-      },
-      {
-        "word": " as",
+        "word": "하지만",
         "start": 116.46,
-        "end": 116.724
-      },
-      {
-        "word": " old",
-        "start": 116.724,
         "end": 117.12
       },
       {
-        "word": " as",
-        "start": 117.12,
-        "end": 117.32
-      },
-      {
-        "word": " that",
+        "word": " 그대",
         "start": 117.32,
         "end": 117.9
       }
@@ -2435,52 +2090,47 @@
   },
   {
     "id": 19,
-    "text": "I'm right here if he doesn't talk to you.",
+    "text": "나는 당신을 얘기하지 않는 경우 여기에 준비가되어 있습니다.",
     "start": 118.60000000000001,
     "end": 123.38,
     "words": [
       {
-        "word": "I'm",
+        "word": "나는",
         "start": 118.60000000000001,
         "end": 119.2
       },
       {
-        "word": " ready",
+        "word": " 당신을",
         "start": 119.2,
         "end": 119.66
       },
       {
-        "word": " here",
+        "word": " 얘기하지",
         "start": 119.66,
-        "end": 120.56666666666666
-      },
-      {
-        "word": " if",
-        "start": 120.56666666666666,
         "end": 121.02
       },
       {
-        "word": " he",
+        "word": " 않는",
         "start": 121.36,
         "end": 121.5
       },
       {
-        "word": " doesn't",
+        "word": " 경우",
         "start": 121.5,
         "end": 121.7
       },
       {
-        "word": " talk",
+        "word": " 여기에",
         "start": 121.7,
         "end": 121.8
       },
       {
-        "word": " to",
+        "word": " 준비가되어",
         "start": 121.8,
         "end": 122.24
       },
       {
-        "word": " you.",
+        "word": " 있습니다.",
         "start": 122.24,
         "end": 123.38
       }
@@ -2531,47 +2181,47 @@
   },
   {
     "id": 20,
-    "text": "I'll take him to QuickCreep to give you cash",
+    "text": "나는 그의 두드리는 빠른 주름에 그를 얻을 것이다.",
     "start": 123.38,
     "end": 127.60000000000001,
     "words": [
       {
-        "word": "I'll",
+        "word": "나는",
         "start": 123.38,
         "end": 124.02
       },
       {
-        "word": " get",
+        "word": " 그의",
         "start": 124.02,
         "end": 124.56
       },
       {
-        "word": " him",
+        "word": " 두드리는",
         "start": 124.56,
         "end": 124.9
       },
       {
-        "word": " to",
+        "word": " 빠른",
         "start": 124.9,
-        "end": 125.19714285714286
+        "end": 125.316
       },
       {
-        "word": " quick",
-        "start": 125.19714285714286,
+        "word": " 주름에",
+        "start": 125.316,
         "end": 125.94
       },
       {
-        "word": " creep",
+        "word": " 그를",
         "start": 125.94,
         "end": 126.46
       },
       {
-        "word": " his",
+        "word": " 얻을",
         "start": 126.66,
         "end": 127.0
       },
       {
-        "word": " pounding.",
+        "word": " 것이다.",
         "start": 127.0,
         "end": 127.60000000000001
       }
@@ -2617,47 +2267,32 @@
   },
   {
     "id": 21,
-    "text": "stuck in your chat, lying on the bed",
+    "text": "내 채팅에서, 세비야 '에서 침대",
     "start": 128.18,
     "end": 132.82,
     "words": [
       {
-        "word": "in",
+        "word": "내",
         "start": 128.18,
         "end": 128.58
       },
       {
-        "word": " your",
-        "start": 128.58,
-        "end": 128.82
-      },
-      {
-        "word": " chat",
-        "start": 128.82,
-        "end": 129.16
-      },
-      {
-        "word": " with",
+        "word": " 채팅에서,",
         "start": 129.16,
         "end": 130.48
       },
       {
-        "word": " me,",
+        "word": " 세비야",
         "start": 130.82,
         "end": 131.4
       },
       {
-        "word": " Seville",
-        "start": 131.4,
-        "end": 131.7
-      },
-      {
-        "word": " 'in",
+        "word": " '에서",
         "start": 131.7,
         "end": 132.06
       },
       {
-        "word": " bed",
+        "word": " 침대",
         "start": 132.06,
         "end": 132.82
       }
@@ -2708,63 +2343,58 @@
   },
   {
     "id": 22,
-    "text": "waiting you talk to me when he won't talk to you",
+    "text": "그녀가 당신을 이야기하지 않을 때 그녀는 나에게 이야기 할 것입니다.",
     "start": 132.82,
     "end": 137.92,
     "words": [
       {
-        "word": "hoping",
+        "word": "그녀가",
         "start": 132.82,
-        "end": 133.4309090909091
+        "end": 133.38
       },
       {
-        "word": " she'll",
-        "start": 133.4309090909091,
+        "word": " 당신을",
+        "start": 133.38,
         "end": 133.94
       },
       {
-        "word": " talk",
+        "word": " 이야기하지",
         "start": 133.94,
         "end": 134.28
       },
       {
-        "word": " to",
+        "word": " 않을",
         "start": 134.28,
         "end": 134.78
       },
       {
-        "word": " me",
+        "word": " 때",
         "start": 134.78,
         "end": 135.38
       },
       {
-        "word": " when",
+        "word": " 그녀는",
         "start": 135.38,
         "end": 135.98
       },
       {
-        "word": " she",
+        "word": " 나에게",
         "start": 135.98,
         "end": 136.4
       },
       {
-        "word": " doesn't",
+        "word": " 이야기",
         "start": 136.4,
         "end": 136.66
       },
       {
-        "word": " talk",
+        "word": " 할",
         "start": 136.66,
         "end": 137.06
       },
       {
-        "word": " to",
+        "word": " 것입니다.",
         "start": 137.06,
-        "end": 137.404
-      },
-      {
-        "word": " you.",
-        "start": 137.404,
         "end": 137.92
       }
     ],
@@ -2819,52 +2449,42 @@
   },
   {
     "id": 23,
-    "text": "still around, not in my bed but in my mind",
+    "text": "그는 여전히 저와 함께,하지만 그의 마음은 나를.",
     "start": 139.44,
     "end": 142.16,
     "words": [
       {
-        "word": "He's",
+        "word": "그는",
         "start": 139.44,
         "end": 139.9
       },
       {
-        "word": " still",
+        "word": " 여전히",
         "start": 139.9,
         "end": 140.36
       },
       {
-        "word": " with",
+        "word": " 저와",
         "start": 140.66,
         "end": 140.84
       },
       {
-        "word": " me,",
+        "word": " 함께,하지만",
         "start": 140.84,
         "end": 141.02
       },
       {
-        "word": " but",
+        "word": " 그의",
         "start": 141.02,
         "end": 141.32
       },
       {
-        "word": " his",
-        "start": 141.32,
-        "end": 141.46
-      },
-      {
-        "word": " mind's",
+        "word": " 마음은",
         "start": 141.46,
         "end": 141.62
       },
       {
-        "word": " with",
-        "start": 141.62,
-        "end": 141.76
-      },
-      {
-        "word": " me.",
+        "word": " 나를.",
         "start": 141.76,
         "end": 142.16
       }
@@ -2930,32 +2550,32 @@
   },
   {
     "id": 24,
-    "text": "with you, everything was different; it's still present",
+    "text": "당신과 함께, 모든 것이 다릅니다.",
     "start": 142.16,
     "end": 145.24,
     "words": [
       {
-        "word": "with",
+        "word": "당신과",
         "start": 142.16,
         "end": 142.74
       },
       {
-        "word": " you,",
+        "word": " 함께,",
         "start": 142.74,
         "end": 143.02
       },
       {
-        "word": " everything",
+        "word": " 모든",
         "start": 143.2,
         "end": 143.74
       },
       {
-        "word": " was",
+        "word": " 것이",
         "start": 144.2,
         "end": 144.54
       },
       {
-        "word": " different.",
+        "word": " 다릅니다.",
         "start": 144.54,
         "end": 145.24
       }
@@ -3001,47 +2621,32 @@
   },
   {
     "id": 25,
-    "text": "not in my bed but in my mind",
+    "text": "내 침대는 아니지만 내 마음에서",
     "start": 145.24,
     "end": 147.06,
     "words": [
       {
-        "word": "Not",
+        "word": "내",
         "start": 145.24,
         "end": 145.5
       },
       {
-        "word": " in",
+        "word": " 침대는",
         "start": 145.52,
         "end": 145.76
       },
       {
-        "word": " my",
-        "start": 145.76,
-        "end": 145.94
-      },
-      {
-        "word": " bed",
+        "word": " 아니지만",
         "start": 145.94,
         "end": 146.22
       },
       {
-        "word": " but",
-        "start": 146.22,
-        "end": 146.34
-      },
-      {
-        "word": " in",
-        "start": 146.34,
-        "end": 146.46
-      },
-      {
-        "word": " my",
+        "word": " 내",
         "start": 146.46,
         "end": 146.7
       },
       {
-        "word": " mind",
+        "word": " 마음에서",
         "start": 146.7,
         "end": 147.06
       }
@@ -3097,52 +2702,52 @@
   },
   {
     "id": 26,
-    "text": "still around, not in my bed but in my mind",
+    "text": "그는 여전히 그의 자리에 있지만 그의 마음은 그렇지 않습니다.",
     "start": 148.72,
     "end": 152.02,
     "words": [
       {
-        "word": "He's",
+        "word": "그는",
         "start": 148.72,
         "end": 149.18
       },
       {
-        "word": " still",
+        "word": " 여전히",
         "start": 149.18,
         "end": 149.44
       },
       {
-        "word": " at",
+        "word": " 그의",
         "start": 149.44,
         "end": 150.12
       },
       {
-        "word": " his",
+        "word": " 자리에",
         "start": 150.42,
         "end": 150.62
       },
       {
-        "word": " place,",
+        "word": " 있지만",
         "start": 150.62,
         "end": 150.84
       },
       {
-        "word": " but",
+        "word": " 그의",
         "start": 150.84,
         "end": 151.12
       },
       {
-        "word": " his",
+        "word": " 마음은",
         "start": 151.26,
         "end": 151.4
       },
       {
-        "word": " mind",
+        "word": " 그렇지",
         "start": 151.4,
         "end": 151.6
       },
       {
-        "word": " isn't.",
+        "word": " 않습니다.",
         "start": 151.6,
         "end": 152.02
       }
@@ -3213,53 +2818,38 @@
   },
   {
     "id": 27,
-    "text": "with you everything was different, everything felt present",
+    "text": "모든 것이 다르고, 모든 것이 현재",
     "start": 152.02,
     "end": 154.98,
     "words": [
       {
-        "word": "with",
+        "word": "모든",
         "start": 152.02,
         "end": 152.58
       },
       {
-        "word": " you",
+        "word": " 것이",
         "start": 152.58,
         "end": 152.8
       },
       {
-        "word": " everything",
+        "word": " 다르고,",
         "start": 152.8,
         "end": 153.02
       },
       {
-        "word": " was",
+        "word": " 모든",
         "start": 153.02,
         "end": 153.54
       },
       {
-        "word": " different,",
-        "start": 153.82,
-        "end": 153.9
-      },
-      {
-        "word": " everything",
-        "start": 153.9,
-        "end": 154.06
-      },
-      {
-        "word": " had",
+        "word": " 것이",
         "start": 154.06,
         "end": 154.38
       },
       {
-        "word": " been",
+        "word": " 현재",
         "start": 154.38,
-        "end": 154.5981818181818
-      },
-      {
-        "word": " present",
-        "start": 154.5981818181818,
         "end": 154.98
       }
     ],
@@ -3309,57 +2899,47 @@
   },
   {
     "id": 28,
-    "text": "not in my bed but in my mind; by your side everything was different",
+    "text": "그러나 당신의 측에 의하여 나의 마음에서 모두는 다릅니다",
     "start": 154.98,
     "end": 158.68,
     "words": [
       {
-        "word": "not",
+        "word": "그러나",
         "start": 154.98,
         "end": 155.28
       },
       {
-        "word": " in",
+        "word": " 당신의",
         "start": 155.32,
         "end": 155.52
       },
       {
-        "word": " my",
+        "word": " 측에",
         "start": 155.52,
         "end": 155.74
       },
       {
-        "word": " mind",
-        "start": 156.3,
-        "end": 156.5
+        "word": " 의하여",
+        "start": 155.74,
+        "end": 156.02
       },
       {
-        "word": " by",
+        "word": " 나의",
         "start": 156.5,
         "end": 156.9
       },
       {
-        "word": " your",
+        "word": " 마음에서",
         "start": 156.9,
         "end": 157.22
       },
       {
-        "word": " side",
+        "word": " 모두는",
         "start": 157.32,
         "end": 157.56
       },
       {
-        "word": " everything",
-        "start": 157.56,
-        "end": 157.76
-      },
-      {
-        "word": " was",
-        "start": 157.76,
-        "end": 157.96
-      },
-      {
-        "word": " different",
+        "word": " 다릅니다",
         "start": 157.96,
         "end": 158.68
       }
@@ -3445,27 +3025,22 @@
   },
   {
     "id": 29,
-    "text": "and if you're leaving",
+    "text": "당신이 가고 있다면",
     "start": 158.68,
     "end": 160.7,
     "words": [
       {
-        "word": "and",
+        "word": "당신이",
         "start": 158.68,
         "end": 159.0
       },
       {
-        "word": " if",
-        "start": 159.18,
-        "end": 159.44
-      },
-      {
-        "word": " you're",
+        "word": " 가고",
         "start": 159.44,
         "end": 159.76
       },
       {
-        "word": " going",
+        "word": " 있다면",
         "start": 159.76,
         "end": 160.7
       }
@@ -3501,7 +3076,7 @@
   },
   {
     "id": 30,
-    "text": "they've racked up twenty more",
+    "text": "20 더",
     "start": 161.2,
     "end": 162.9,
     "words": [
@@ -3511,7 +3086,7 @@
         "end": 161.66
       },
       {
-        "word": " more",
+        "word": " 더",
         "start": 162.12,
         "end": 162.9
       }
@@ -3537,63 +3112,38 @@
   },
   {
     "id": 31,
-    "text": "If I get to it I forget you, you know I'm KAPA",
+    "text": "내가 잊을 때, 나는 kapa입니다 알고",
     "start": 164.44,
     "end": 167.52,
     "words": [
       {
-        "word": "If",
+        "word": "내가",
         "start": 164.44,
         "end": 164.9
       },
       {
-        "word": " I",
+        "word": " 잊을",
         "start": 164.9,
         "end": 165.18
       },
       {
-        "word": " wear",
-        "start": 165.18,
-        "end": 165.36
-      },
-      {
-        "word": " myself",
-        "start": 165.36,
-        "end": 165.56
-      },
-      {
-        "word": " I",
+        "word": " 때,",
         "start": 165.56,
         "end": 165.86
       },
       {
-        "word": " forget",
-        "start": 165.96,
-        "end": 166.08
-      },
-      {
-        "word": " you,",
+        "word": " 나는",
         "start": 166.08,
         "end": 166.3
       },
       {
-        "word": " you",
-        "start": 166.3,
-        "end": 166.5
-      },
-      {
-        "word": " know",
+        "word": " kapa입니다",
         "start": 166.5,
         "end": 166.72
       },
       {
-        "word": " I'm",
+        "word": " 알고",
         "start": 166.72,
-        "end": 166.98666666666668
-      },
-      {
-        "word": " kapa",
-        "start": 166.98666666666668,
         "end": 167.52
       }
     ],
@@ -3653,57 +3203,37 @@
   },
   {
     "id": 32,
-    "text": "the problem is I don't just want to kiss with you, nothing more",
+    "text": "문제는 내가 당신과 키스하고 싶지 않습니다, ma'am.",
     "start": 167.92,
     "end": 173.2,
     "words": [
       {
-        "word": "The",
+        "word": "문제는",
         "start": 167.92,
         "end": 168.34
       },
       {
-        "word": " problem",
+        "word": " 내가",
         "start": 168.34,
         "end": 168.7
       },
       {
-        "word": " is",
-        "start": 168.7,
-        "end": 168.84
-      },
-      {
-        "word": " I",
-        "start": 168.84,
-        "end": 168.94
-      },
-      {
-        "word": " don't",
-        "start": 168.94,
-        "end": 169.16
-      },
-      {
-        "word": " want",
-        "start": 169.16,
-        "end": 169.48
-      },
-      {
-        "word": " to",
+        "word": " 당신과",
         "start": 169.48,
         "end": 170.44
       },
       {
-        "word": " kiss",
+        "word": " 키스하고",
         "start": 170.44,
         "end": 171.16
       },
       {
-        "word": " with",
+        "word": " 싶지",
         "start": 171.16,
         "end": 171.56
       },
       {
-        "word": " you,",
+        "word": " 않습니다,",
         "start": 171.56,
         "end": 172.52
       },
@@ -3779,69 +3309,49 @@
   },
   {
     "id": 33,
-    "text": "I want to get nasty with you, just hook up with you, nothing more",
+    "text": "나는 너와 함께, 너와 더 chichichar, 나 더",
     "start": 173.2,
     "end": 178.18,
     "words": [
       {
-        "word": "I",
+        "word": "나는",
         "start": 173.2,
         "end": 173.72
       },
       {
-        "word": " wanna",
+        "word": " 너와",
         "start": 173.72,
         "end": 174.02
       },
       {
-        "word": " bitch",
+        "word": " 함께,",
         "start": 174.02,
-        "end": 174.55333333333334
-      },
-      {
-        "word": " with",
-        "start": 174.55333333333334,
         "end": 174.98
       },
       {
-        "word": " you,",
+        "word": " 너와",
         "start": 174.98,
         "end": 175.48
       },
       {
-        "word": " nah",
+        "word": " 더",
         "start": 175.56,
         "end": 175.74
       },
       {
-        "word": " more",
+        "word": " chichichar,",
         "start": 175.74,
         "end": 176.44
       },
       {
-        "word": " chichichar",
+        "word": " 나",
         "start": 176.44,
-        "end": 177.04
-      },
-      {
-        "word": " with",
-        "start": 177.04,
-        "end": 177.28
-      },
-      {
-        "word": " you,",
-        "start": 177.28,
         "end": 177.46
       },
       {
-        "word": " nah",
+        "word": " 더",
         "start": 177.56,
         "end": 177.92
-      },
-      {
-        "word": " more",
-        "start": 178.0,
-        "end": 178.18
       }
     ],
     "source_text": "quiero perra' contigo, na' más chichichichar contigo, na' más",
@@ -3895,72 +3405,47 @@
   },
   {
     "id": 34,
-    "text": "not in my bed but in my mind with you everything was different, it's still here",
+    "text": "하지만 내 마음으로 모든 것이 다르지만, 여전히 사실입니다.",
     "start": 178.18,
     "end": 184.4,
     "words": [
       {
-        "word": "but",
-        "start": 178.18,
-        "end": 178.4
-      },
-      {
-        "word": " if",
+        "word": "하지만",
         "start": 178.4,
         "end": 178.68
       },
       {
-        "word": " in",
+        "word": " 내",
         "start": 178.68,
         "end": 180.2
       },
       {
-        "word": " my",
-        "start": 180.46,
-        "end": 180.66
-      },
-      {
-        "word": " mind",
-        "start": 180.78,
-        "end": 180.98
-      },
-      {
-        "word": " with",
+        "word": " 마음으로",
         "start": 180.98,
         "end": 181.38
       },
       {
-        "word": " you",
+        "word": " 모든",
         "start": 181.38,
         "end": 181.92
       },
       {
-        "word": " everything",
-        "start": 181.92,
-        "end": 182.18
-      },
-      {
-        "word": " was",
-        "start": 182.18,
-        "end": 182.38
-      },
-      {
-        "word": " different,",
+        "word": " 것이",
         "start": 182.38,
         "end": 182.94
       },
       {
-        "word": " it's",
+        "word": " 다르지만,",
         "start": 183.12,
         "end": 183.4
       },
       {
-        "word": " still",
+        "word": " 여전히",
         "start": 183.4,
         "end": 183.68
       },
       {
-        "word": " true.",
+        "word": " 사실입니다.",
         "start": 183.86,
         "end": 184.4
       }
@@ -4056,62 +3541,47 @@
   },
   {
     "id": 35,
-    "text": "not in my bed but in my mind by your side everything was different",
+    "text": "그러나 당신의 측에 의하여 나의 마음에서 모두는 다릅니다",
     "start": 184.4,
     "end": 187.86,
     "words": [
       {
-        "word": "but",
+        "word": "그러나",
         "start": 184.4,
         "end": 184.66
       },
       {
-        "word": " if",
+        "word": " 당신의",
         "start": 184.7,
         "end": 184.94
       },
       {
-        "word": " in",
+        "word": " 측에",
         "start": 184.94,
         "end": 185.12
       },
       {
-        "word": " my",
-        "start": 185.54,
-        "end": 185.72
-      },
-      {
-        "word": " mind",
-        "start": 185.72,
-        "end": 185.9
-      },
-      {
-        "word": " by",
+        "word": " 의하여",
         "start": 185.9,
         "end": 186.32
       },
       {
-        "word": " your",
+        "word": " 나의",
         "start": 186.32,
         "end": 186.6
       },
       {
-        "word": " side",
+        "word": " 마음에서",
         "start": 186.7,
         "end": 186.92
       },
       {
-        "word": " everything",
-        "start": 186.92,
-        "end": 187.1
-      },
-      {
-        "word": " was",
+        "word": " 모두는",
         "start": 187.1,
         "end": 187.32
       },
       {
-        "word": " different",
+        "word": " 다릅니다",
         "start": 187.32,
         "end": 187.86
       }
@@ -4197,52 +3667,42 @@
   },
   {
     "id": 36,
-    "text": "still here, not in my bed but in my mind",
+    "text": "그는 여전히 저와 함께,하지만 그의 마음은 나를.",
     "start": 187.86,
     "end": 191.18,
     "words": [
       {
-        "word": "He's",
+        "word": "그는",
         "start": 187.86,
         "end": 188.36
       },
       {
-        "word": " still",
+        "word": " 여전히",
         "start": 188.36,
         "end": 188.58
       },
       {
-        "word": " with",
+        "word": " 저와",
         "start": 188.76,
         "end": 189.3
       },
       {
-        "word": " me,",
+        "word": " 함께,하지만",
         "start": 189.3,
         "end": 189.54
       },
       {
-        "word": " but",
+        "word": " 그의",
         "start": 189.6,
         "end": 189.82
       },
       {
-        "word": " his",
-        "start": 189.82,
-        "end": 190.04
-      },
-      {
-        "word": " mind's",
+        "word": " 마음은",
         "start": 190.04,
         "end": 190.34
       },
       {
-        "word": " with",
-        "start": 190.58,
-        "end": 190.78
-      },
-      {
-        "word": " me.",
+        "word": " 나를.",
         "start": 190.78,
         "end": 191.18
       }
@@ -4318,32 +3778,32 @@
   },
   {
     "id": 37,
-    "text": "with you everything was different, still here",
+    "text": "당신과 함께, 모든 것이 다릅니다.",
     "start": 191.18,
     "end": 194.18,
     "words": [
       {
-        "word": "with",
+        "word": "당신과",
         "start": 191.18,
         "end": 191.7
       },
       {
-        "word": " you,",
+        "word": " 함께,",
         "start": 191.94,
         "end": 192.22
       },
       {
-        "word": " everything",
+        "word": " 모든",
         "start": 192.22,
         "end": 192.68
       },
       {
-        "word": " was",
+        "word": " 것이",
         "start": 192.68,
         "end": 193.24
       },
       {
-        "word": " different.",
+        "word": " 다릅니다.",
         "start": 193.64,
         "end": 194.18
       }
@@ -4394,62 +3854,47 @@
   },
   {
     "id": 38,
-    "text": "not in my bed but in my mind by your side everything was different",
+    "text": "그러나 당신의 측에 의하여 나의 마음에서 모두는 다릅니다",
     "start": 194.18,
     "end": 197.84,
     "words": [
       {
-        "word": "but",
+        "word": "그러나",
         "start": 194.18,
         "end": 194.48
       },
       {
-        "word": " if",
+        "word": " 당신의",
         "start": 194.5,
         "end": 194.72
       },
       {
-        "word": " in",
+        "word": " 측에",
         "start": 194.72,
         "end": 194.94
       },
       {
-        "word": " my",
+        "word": " 의하여",
         "start": 194.94,
         "end": 195.26
       },
       {
-        "word": " mind",
-        "start": 195.34,
-        "end": 195.5
-      },
-      {
-        "word": " by",
-        "start": 195.5,
-        "end": 195.7
-      },
-      {
-        "word": " your",
+        "word": " 나의",
         "start": 195.7,
         "end": 196.02
       },
       {
-        "word": " side",
+        "word": " 마음에서",
         "start": 196.02,
         "end": 196.42
       },
       {
-        "word": " everything",
-        "start": 196.54,
-        "end": 196.76
-      },
-      {
-        "word": " was",
+        "word": " 모두는",
         "start": 196.92,
         "end": 197.16
       },
       {
-        "word": " different",
+        "word": " 다릅니다",
         "start": 197.16,
         "end": 197.84
       }
@@ -4519,68 +3964,48 @@
       {
         "word": " todo",
         "start": 196.76,
-        "end": 197.1
+        "end": 196.92
       },
       {
         "word": " era",
-        "start": 197.1,
-        "end": 197.32
+        "start": 196.92,
+        "end": 197.16
       },
       {
         "word": " diferente",
-        "start": 197.32,
+        "start": 197.16,
         "end": 197.84
       }
     ]
   },
   {
     "id": 39,
-    "text": "Summer goes by fast, summer's about to end",
+    "text": "여름의 통과, 여름에 대한 끝",
     "start": 206.42000000000002,
     "end": 211.82,
     "words": [
       {
-        "word": "The",
+        "word": "여름의",
         "start": 206.42000000000002,
         "end": 207.24
       },
       {
-        "word": " summer's",
+        "word": " 통과,",
         "start": 207.24,
         "end": 208.06
       },
       {
-        "word": " passing",
-        "start": 208.06,
-        "end": 208.46
-      },
-      {
-        "word": " fast,",
+        "word": " 여름에",
         "start": 208.46,
         "end": 209.26
       },
       {
-        "word": " the",
+        "word": " 대한",
         "start": 209.26,
-        "end": 209.59
-      },
-      {
-        "word": " summer's",
-        "start": 209.59,
         "end": 210.36
       },
       {
-        "word": " about",
-        "start": 210.36,
-        "end": 210.58
-      },
-      {
-        "word": " to",
-        "start": 210.58,
-        "end": 210.9
-      },
-      {
-        "word": " end",
+        "word": " 끝",
         "start": 210.9,
         "end": 211.82
       }
@@ -4636,77 +4061,37 @@
   },
   {
     "id": 40,
-    "text": "and I don't want it to end without giving it to you again",
+    "text": "그리고 나는 그(것)들을 끝으로 원하지 않는다.",
     "start": 211.82,
     "end": 216.46,
     "words": [
       {
-        "word": "and",
+        "word": "그리고",
         "start": 211.82,
-        "end": 212.375
-      },
-      {
-        "word": " I",
-        "start": 212.375,
         "end": 212.56
       },
       {
-        "word": " don't",
-        "start": 212.56,
-        "end": 212.7
-      },
-      {
-        "word": " want",
+        "word": " 나는",
         "start": 212.7,
         "end": 212.96
       },
       {
-        "word": " them",
+        "word": " 그(것)들을",
         "start": 212.96,
         "end": 213.4
       },
       {
-        "word": " to",
+        "word": " 끝으로",
         "start": 213.4,
-        "end": 213.56666666666666
-      },
-      {
-        "word": " end,",
-        "start": 213.56666666666666,
-        "end": 213.81666666666666
-      },
-      {
-        "word": " without",
-        "start": 213.81666666666666,
         "end": 214.4
       },
       {
-        "word": " them",
-        "start": 214.82,
-        "end": 215.02
-      },
-      {
-        "word": " giving",
-        "start": 215.02,
-        "end": 215.24
-      },
-      {
-        "word": " them",
-        "start": 215.24,
-        "end": 215.38
-      },
-      {
-        "word": " to",
-        "start": 215.38,
-        "end": 215.56
-      },
-      {
-        "word": " you",
+        "word": " 원하지",
         "start": 215.56,
         "end": 216.18
       },
       {
-        "word": " again",
+        "word": " 않는다.",
         "start": 216.18,
         "end": 216.46
       }
@@ -4777,53 +4162,33 @@
   },
   {
     "id": 41,
-    "text": "Summer goes by fast, summer's about to end",
+    "text": "여름의 통과, 여름에 대한 끝",
     "start": 227.84,
     "end": 227.88,
     "words": [
       {
-        "word": "The",
+        "word": "여름의",
         "start": 227.84,
-        "end": 227.84444444444443
+        "end": 227.848
       },
       {
-        "word": " summer's",
-        "start": 227.84444444444443,
-        "end": 227.8488888888889
+        "word": " 통과,",
+        "start": 227.848,
+        "end": 227.856
       },
       {
-        "word": " passing",
-        "start": 227.8488888888889,
-        "end": 227.85333333333332
+        "word": " 여름에",
+        "start": 227.856,
+        "end": 227.864
       },
       {
-        "word": " fast,",
-        "start": 227.85333333333332,
-        "end": 227.85777777777778
+        "word": " 대한",
+        "start": 227.864,
+        "end": 227.87199999999999
       },
       {
-        "word": " the",
-        "start": 227.85777777777778,
-        "end": 227.86222222222221
-      },
-      {
-        "word": " summer's",
-        "start": 227.86222222222221,
-        "end": 227.86666666666667
-      },
-      {
-        "word": " about",
-        "start": 227.86666666666667,
-        "end": 227.8711111111111
-      },
-      {
-        "word": " to",
-        "start": 227.8711111111111,
-        "end": 227.87555555555556
-      },
-      {
-        "word": " end",
-        "start": 227.87555555555556,
+        "word": " 끝",
+        "start": 227.87199999999999,
         "end": 227.88
       }
     ],
@@ -4878,63 +4243,53 @@
   },
   {
     "id": 42,
-    "text": "and I don't want to give it to you again",
+    "text": "그리고 나는 당신을 다시 줄 것이다 그녀를 원하지 않는다",
     "start": 227.88,
     "end": 227.9,
     "words": [
       {
-        "word": "and",
+        "word": "그리고",
         "start": 227.88,
-        "end": 227.88181818181818
+        "end": 227.88260869565218
       },
       {
-        "word": " I",
-        "start": 227.88181818181818,
-        "end": 227.88242424242424
+        "word": " 나는",
+        "start": 227.88260869565218,
+        "end": 227.88434782608695
       },
       {
-        "word": " don't",
-        "start": 227.88242424242424,
-        "end": 227.88484848484848
+        "word": " 당신을",
+        "start": 227.88434782608695,
+        "end": 227.88695652173914
       },
       {
-        "word": " want",
-        "start": 227.88484848484848,
-        "end": 227.88727272727272
+        "word": " 다시",
+        "start": 227.88695652173914,
+        "end": 227.8886956521739
       },
       {
-        "word": " her",
-        "start": 227.88727272727272,
-        "end": 227.8890909090909
+        "word": " 줄",
+        "start": 227.8886956521739,
+        "end": 227.8895652173913
       },
       {
-        "word": " to",
-        "start": 227.8890909090909,
-        "end": 227.89030303030302
+        "word": " 것이다",
+        "start": 227.8895652173913,
+        "end": 227.89217391304348
       },
       {
-        "word": " give",
-        "start": 227.89030303030302,
-        "end": 227.89272727272726
+        "word": " 그녀를",
+        "start": 227.89217391304348,
+        "end": 227.89478260869566
       },
       {
-        "word": " it",
-        "start": 227.89272727272726,
-        "end": 227.89393939393938
+        "word": " 원하지",
+        "start": 227.89478260869566,
+        "end": 227.89739130434785
       },
       {
-        "word": " to",
-        "start": 227.89393939393938,
-        "end": 227.8951515151515
-      },
-      {
-        "word": " you",
-        "start": 227.8951515151515,
-        "end": 227.89696969696968
-      },
-      {
-        "word": " again",
-        "start": 227.89696969696968,
+        "word": " 않는다",
+        "start": 227.89739130434785,
         "end": 227.9
       }
     ],
@@ -4989,63 +4344,53 @@
   },
   {
     "id": 43,
-    "text": "and I don't want to give it to you again",
+    "text": "그리고 나는 당신을 다시 줄 것이다 그녀를 원하지 않는다",
     "start": 227.9,
     "end": 229.24,
     "words": [
       {
-        "word": "and",
+        "word": "그리고",
         "start": 227.9,
         "end": 227.92
       },
       {
-        "word": " I",
+        "word": " 나는",
         "start": 227.92,
-        "end": 227.968
+        "end": 228.016
       },
       {
-        "word": " don't",
-        "start": 227.968,
+        "word": " 당신을",
+        "start": 228.016,
         "end": 228.16
       },
       {
-        "word": " want",
+        "word": " 다시",
         "start": 228.16,
-        "end": 228.35733333333334
+        "end": 228.32444444444445
       },
       {
-        "word": " her",
-        "start": 228.35733333333334,
-        "end": 228.50533333333334
+        "word": " 줄",
+        "start": 228.32444444444445,
+        "end": 228.40666666666667
       },
       {
-        "word": " to",
-        "start": 228.50533333333334,
-        "end": 228.604
+        "word": " 것이다",
+        "start": 228.40666666666667,
+        "end": 228.65333333333334
       },
       {
-        "word": " give",
-        "start": 228.604,
-        "end": 228.80133333333336
-      },
-      {
-        "word": " it",
-        "start": 228.80133333333336,
+        "word": " 그녀를",
+        "start": 228.65333333333334,
         "end": 228.9
       },
       {
-        "word": " to",
+        "word": " 원하지",
         "start": 228.9,
-        "end": 228.96800000000002
+        "end": 229.07
       },
       {
-        "word": " you",
-        "start": 228.96800000000002,
-        "end": 229.07000000000002
-      },
-      {
-        "word": " again",
-        "start": 229.07000000000002,
+        "word": " 않는다",
+        "start": 229.07,
         "end": 229.24
       }
     ],

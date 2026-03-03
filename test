@@ -1,0 +1,30 @@
+Collecting madmom
+  Using cached madmom-0.16.1.tar.gz (20.0 MB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... error
+  error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [17 lines of output]
+      Traceback (most recent call last):
+        File "/Users/levi/Code/Sonex/.venv/lib/python3.9/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 389, in <module>
+          main()
+        File "/Users/levi/Code/Sonex/.venv/lib/python3.9/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 373, in main
+          json_out["return_val"] = hook(**hook_input["kwargs"])
+        File "/Users/levi/Code/Sonex/.venv/lib/python3.9/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 143, in get_requires_for_build_wheel
+          return hook(config_settings)
+        File "/private/var/folders/j9/34ztk94d61vcs_fwkbrv4rmm0000gn/T/pip-build-env-6wn3i38i/overlay/lib/python3.9/site-packages/setuptools/build_meta.py", line 333, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=[])
+        File "/private/var/folders/j9/34ztk94d61vcs_fwkbrv4rmm0000gn/T/pip-build-env-6wn3i38i/overlay/lib/python3.9/site-packages/setuptools/build_meta.py", line 301, in _get_build_requires
+          self.run_setup()
+        File "/private/var/folders/j9/34ztk94d61vcs_fwkbrv4rmm0000gn/T/pip-build-env-6wn3i38i/overlay/lib/python3.9/site-packages/setuptools/build_meta.py", line 520, in run_setup
+          super().run_setup(setup_script=setup_script)
+        File "/private/var/folders/j9/34ztk94d61vcs_fwkbrv4rmm0000gn/T/pip-build-env-6wn3i38i/overlay/lib/python3.9/site-packages/setuptools/build_meta.py", line 317, in run_setup
+          exec(code, locals())
+        File "<string>", line 12, in <module>
+      ModuleNotFoundError: No module named 'Cython'
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+ERROR: Failed to build 'madmom' when getting requirements to build wheel
