@@ -222,6 +222,7 @@ def generate_aligned_v2(
     def run(cmd):
         subprocess.run(cmd, check=True)
 
+
     # ---- deterministic clean slate ----
     if force_fresh_run:
         if CORPUS.exists():

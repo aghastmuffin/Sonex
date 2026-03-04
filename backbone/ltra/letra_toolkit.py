@@ -1,5 +1,6 @@
 import io, os, select, sys
 import shutil
+import re
 from pathlib import Path
 from shutil import rmtree
 import subprocess as sp
@@ -33,7 +34,10 @@ def _is_fresh(outputs, inputs):
     return oldest_output >= newest_input
 
 
-def copy_process_streams(process: sp.Popen):
+_DEMUCS_PROGRESS_RE = re.compile(r"(\d{1,3})%\|")
+
+
+def copy_process_streams(process: sp.Popen, progress_cb=None):
     def raw(stream: Optional[IO[bytes]]) -> IO[bytes]:
         assert stream is not None
         if isinstance(stream, io.BufferedIOBase):
@@ -59,9 +63,16 @@ def copy_process_streams(process: sp.Popen):
             buf = raw_buf.decode()
             std.write(buf)
             std.flush()
+            if progress_cb is not None:
+                for match in _DEMUCS_PROGRESS_RE.finditer(buf):
+                    try:
+                        progress_value = max(0, min(100, int(match.group(1))))
+                    except ValueError:
+                        continue
+                    progress_cb(progress_value)
 
 
-def separate(inp, outp=None, force: bool = False):
+def separate(inp, outp=None, force: bool = False, demucs_progress_cb=None):
     inp_path = Path(inp)
     if not outp:
         out_dir = inp_path.stem
@@ -99,7 +110,7 @@ def separate(inp, outp=None, force: bool = False):
     print(str(inp_path))
     print("With command: ", " ".join(cmd + files))
     p = sp.Popen(cmd + files, stdout=sp.PIPE, stderr=sp.PIPE)
-    copy_process_streams(p)
+    copy_process_streams(p, progress_cb=demucs_progress_cb)
     p.wait()
     if p.returncode != 0:
         print("Command failed, something went wrong.")
@@ -123,6 +134,7 @@ def transcribe(
     outp: Optional[str] = None,
     language: Optional[str] = None,
     model_size: Optional[str] = "medium",
+    task: str = "transcribe",
     _align=False,
     reuse_existing: bool = True,
 ):
@@ -139,6 +151,10 @@ def transcribe(
     # -------------------------
     # Reuse existing transcript if fresh
     # -------------------------
+    task = (task or "transcribe").strip().lower()
+    if task not in {"transcribe", "translate"}:
+        raise ValueError(f"Unsupported Whisper task: {task}")
+
     if outp and reuse_existing and language is not None and _is_fresh(outp, inp):
         with open(outp, "r", encoding="utf-8") as f:
             transcript = json.load(f)
@@ -170,7 +186,7 @@ def transcribe(
         _ = list(detect_segments)
         chosen_lang = getattr(detect_info, "language", None) or "en"
 
-    print(f"Transcribing in: {chosen_lang}")
+    print(f"Whisper task={task} in: {chosen_lang}")
 
     # -------------------------
     # Transcribe WITH timestamps
@@ -180,13 +196,13 @@ def transcribe(
         beam_size=beam_size, #1 is weak, fast, 5 is good med, and then 10+ is for noisy
         patience=pat,
         vad_filter=False,
-        task="transcribe",
+        task=task,
         language=chosen_lang,
         word_timestamps=True
     )
 
     segments = list(segments)
-    print(f"Native transcription complete: {len(segments)} segments")
+    print(f"Whisper {task} complete: {len(segments)} segments")
 
     if not segments:
         raise RuntimeError("No transcription segments produced.")
@@ -229,8 +245,8 @@ def transcribe(
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(transcript, f, indent=2, ensure_ascii=False)
 
-    print("\n✓ Transcription complete!")
-    print(f"  WhisperX-ready transcript: {out_path}")
+    print(f"\n✓ Whisper {task} complete!")
+    print(f"  Whisper-ready transcript: {out_path}")
     if _align:
         print("[Letra Toolkit] _align=true was depricated in ver 0.1.2, please switch to calling align() separately.")
         align(inp, outp, outp.replace(".json", "_aligned.json"), chosen_lang) #TODO: Remove/direct user more aggressively
