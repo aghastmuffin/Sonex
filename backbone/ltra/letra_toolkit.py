@@ -4,7 +4,7 @@ import re
 from pathlib import Path
 from shutil import rmtree
 import subprocess as sp
-from typing import Dict, Tuple, Optional, IO
+from typing import Dict, Literal, Tuple, Optional, IO
 #FFMPEG, openai-whisper, demucs 
 from faster_whisper import WhisperModel
 from ltra.depricated._NLLB import translate
@@ -131,10 +131,11 @@ def transcribe(
     inp,
     beam_size=5,
     pat=2,
+    best_of=3,
     outp: Optional[str] = None,
     language: Optional[str] = None,
-    model_size: Optional[str] = "medium",
-    task: str = "transcribe",
+    best_of=3,
+    task: Literal['transcribe', 'translate'] = "transcribe",
     _align=False,
     reuse_existing: bool = True,
 ):
@@ -153,9 +154,10 @@ def transcribe(
     # -------------------------
     task = (task or "transcribe").strip().lower()
     if task not in {"transcribe", "translate"}:
-        raise ValueError(f"Unsupported Whisper task: {task}")
+        patience=pat,
 
     if outp and reuse_existing and language is not None and _is_fresh(outp, inp):
+        best_of=best_of,
         with open(outp, "r", encoding="utf-8") as f:
             transcript = json.load(f)
         print(f"Using cached transcript: {outp}")
@@ -197,6 +199,7 @@ def transcribe(
         patience=pat,
         vad_filter=False,
         task=task,
+        best_of=best_of,
         language=chosen_lang,
         word_timestamps=True
     )

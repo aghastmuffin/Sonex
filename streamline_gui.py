@@ -1,10 +1,98 @@
-from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QVBoxLayout, QWidget, QProgressBar, QFileDialog, QComboBox
+from PyQt6.QtWidgets import (
+    QApplication,
+    QMainWindow,
+    QPushButton,
+    QVBoxLayout,
+    QWidget,
+    QProgressBar,
+    QFileDialog,
+    QComboBox,
+    QDialog,
+    QDialogButtonBox,
+    QFormLayout,
+    QSpinBox,
+    QCheckBox,
+)
 from PyQt6.QtCore import QObject, QThread, pyqtSignal, pyqtSlot, QProcess
 from PyQt6.QtGui import QIcon
-import sys, os
+import sys, os, json
 
 language_dict = {'en': 'english', 'es': 'spanish', 'fr': 'french', 'de': 'german', 'it': 'italian', 'pt': 'portuguese', 'ru': 'russian', 'zh': 'chinese', 'ja': 'japanese', 'ko': 'korean', 'ar': 'arabic', 'hi': 'hindi', 'bn': 'bengali', 'pa': 'punjabi', 'tr': 'turkish', 'vi': 'vietnamese', 'pl': 'polish', 'nl': 'dutch', 'sv': 'swedish', 'no': 'norwegian', 'da': 'danish', 'fi': 'finnish', 'he': 'hebrew', 'el': 'greek', 'th': 'thai', 'id': 'indonesian', 'uk': 'ukrainian', 'cs': 'czech', 'ro': 'romanian', 'hu': 'hungarian'}
+#settings variables
+# TODO: Hook them up
+DEMUCS_MODEL = "htdemucs" #or "tasnet"
+DEMUCS_STEMS = "vocals" #or "other" or "both"
+WHISPER_MODEL = "medium" #or "tiny", "base", "small", "large-v2"
+WHISPER_BEAMSIZE = 5
+WHISPER_PAT = 2
+WHISPER_BESTOF = 3
+GPU = False
+WHISPER_TASK = "transcribe" #or "translate" !! Translate targets only English
 
+
+class AdvancedSettingsDialog(QDialog):
+    def __init__(self, settings, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Advanced Settings")
+        self.setModal(True)
+
+        form = QFormLayout(self)
+
+        self.demucs_model_input = QComboBox(self)
+        self.demucs_model_input.addItems(["htdemucs", "htdemucs_ft", "mdx_extra"])
+        self.demucs_model_input.setCurrentText(settings["demucs_model"])
+        form.addRow("Demucs model", self.demucs_model_input)
+
+        self.demucs_stems_input = QComboBox(self)
+        self.demucs_stems_input.addItems(["vocals", "other", "both"])
+        self.demucs_stems_input.setCurrentText(settings["demucs_stems"])
+        form.addRow("Demucs stems", self.demucs_stems_input)
+
+        self.whisper_model_input = QComboBox(self)
+        self.whisper_model_input.addItems(["tiny", "base", "small", "medium", "large-v2", "large-v3"])
+        self.whisper_model_input.setCurrentText(settings["whisper_model"])
+        form.addRow("Whisper model", self.whisper_model_input)
+
+        self.whisper_beam_input = QSpinBox(self)
+        self.whisper_beam_input.setRange(1, 20)
+        self.whisper_beam_input.setValue(int(settings["whisper_beam_size"]))
+        form.addRow("Whisper beam size", self.whisper_beam_input)
+
+        self.whisper_pat_input = QSpinBox(self)
+        self.whisper_pat_input.setRange(1, 10)
+        self.whisper_pat_input.setValue(int(settings["whisper_patience"]))
+        form.addRow("Whisper patience", self.whisper_pat_input)
+
+        self.whisper_bestof_input = QSpinBox(self)
+        self.whisper_bestof_input.setRange(1, 20)
+        self.whisper_bestof_input.setValue(int(settings["whisper_best_of"]))
+        form.addRow("Whisper best_of", self.whisper_bestof_input)
+
+        self.whisper_task_input = QComboBox(self)
+        self.whisper_task_input.addItems(["transcribe", "translate"])
+        self.whisper_task_input.setCurrentText(settings["whisper_task"])
+        form.addRow("Whisper task", self.whisper_task_input)
+
+        self.gpu_input = QCheckBox("Enable GPU")
+        self.gpu_input.setChecked(bool(settings["gpu"]))
+        form.addRow(self.gpu_input)
+
+        buttons = QDialogButtonBox(QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel, self)
+        buttons.accepted.connect(self.accept)
+        buttons.rejected.connect(self.reject)
+        form.addRow(buttons)
+
+    def get_settings(self):
+        return {
+            "demucs_model": self.demucs_model_input.currentText(),
+            "demucs_stems": self.demucs_stems_input.currentText(),
+            "whisper_model": self.whisper_model_input.currentText(),
+            "whisper_beam_size": int(self.whisper_beam_input.value()),
+            "whisper_patience": int(self.whisper_pat_input.value()),
+            "whisper_best_of": int(self.whisper_bestof_input.value()),
+            "whisper_task": self.whisper_task_input.currentText(),
+            "gpu": bool(self.gpu_input.isChecked()),
+        }
 
 def resolve_app_icon_path():
     base_dir = os.path.dirname(__file__)
@@ -54,6 +142,17 @@ class Window(QMainWindow):
     def __init__(self):
         super().__init__()
 
+        self.advanced_settings = {
+            "demucs_model": DEMUCS_MODEL,
+            "demucs_stems": DEMUCS_STEMS,
+            "whisper_model": WHISPER_MODEL,
+            "whisper_beam_size": WHISPER_BEAMSIZE,
+            "whisper_patience": WHISPER_PAT,
+            "whisper_best_of": WHISPER_BESTOF,
+            "whisper_task": WHISPER_TASK,
+            "gpu": GPU,
+        }
+
         self.setWindowTitle("Streamline GUI")
         self.setGeometry(100, 100, 400, 200)
 
@@ -79,6 +178,10 @@ class Window(QMainWindow):
         self.button.setEnabled(False)
         self.button.clicked.connect(self.on_button_click)
         layout.addWidget(self.button)
+
+        self.advanced_button = QPushButton("Advanced")
+        self.advanced_button.clicked.connect(self.open_advanced_settings)
+        layout.addWidget(self.advanced_button)
         
         self.prog_bar = QProgressBar(self)
         self.prog_bar.setGeometry(50, 100, 250, 30)
@@ -142,16 +245,22 @@ class Window(QMainWindow):
         worker_script = os.path.join(os.path.dirname(__file__), "streamline_worker_process.py")
         lang_arg = self.lang_code if self.lang_code else ""
         translation_mode_arg = self.translation_mode if self.translation_mode else "argos"
+        settings_arg = json.dumps(self.advanced_settings)
 
         self.pipeline_process = QProcess(self)
         self.pipeline_process.setWorkingDirectory(os.path.dirname(__file__))
         self.pipeline_process.setProgram(sys.executable)
-        self.pipeline_process.setArguments([worker_script, self.file_path, lang_arg, translation_mode_arg])
+        self.pipeline_process.setArguments([worker_script, self.file_path, lang_arg, translation_mode_arg, settings_arg])
         self.pipeline_process.setProcessChannelMode(QProcess.ProcessChannelMode.MergedChannels)
         self.pipeline_process.readyReadStandardOutput.connect(self.on_pipeline_stdout)
         self.pipeline_process.finished.connect(self.on_pipeline_finished)
         self.pipeline_process.errorOccurred.connect(self.on_pipeline_process_error)
         self.pipeline_process.start()
+
+    def open_advanced_settings(self):
+        dialog = AdvancedSettingsDialog(self.advanced_settings, self)
+        if dialog.exec():
+            self.advanced_settings = dialog.get_settings()
 
     def on_pipeline_stdout(self):
         if self.pipeline_process is None:
@@ -236,7 +345,7 @@ class Window(QMainWindow):
         audiobase = os.path.basename(file_path).removesuffix(".mp3")
         os.makedirs(audiobase, exist_ok=True)
         progress(25, "Transcribing vocals...")
-        _, detectlang = transcribe(f"{audiobase}/vocals.mp3", 5, 2,f"{audiobase}/vocals_whisper_segments.json", language=lang_code) #TODO: allow advanced settings to set whisper custom settings, i.e model strength etc.
+        _, detectlang = transcribe(inp=f"{audiobase}/vocals.mp3", beam_size=WHISPER_BEAMSIZE, pat=WHISPER_PAT, best_of=WHISPER_BESTOF, outp=f"{audiobase}/vocals_whisper_segments.json", language=lang_code, model_size=WHISPER_MODEL, task=WHISPER_TASK) #TODO: allow advanced settings to set whisper custom settings, i.e model strength etc.
         #whisperx align
         progress(40, "Aligning words...")
         align(f"{audiobase}/vocals.mp3", f"{audiobase}/vocals_whisper_segments.json", f"{audiobase}/lyrics.txt", language=lang_code)
@@ -288,11 +397,18 @@ class Window(QMainWindow):
             coverage = float(np.clip(coverage, 0.0, 1.0))
             conf = float(np.clip(confidence, 0.0, 1.0))
             return 0.5 * stability + 0.3 * coverage + 0.2 * conf
-        def extract_best_rhythm(audio, duration_sec):
+        def extract_best_rhythm(audio, duration_sec, sr):
+            # Use HPSS to isolate percussive component for better beat detection
+            import librosa
+            print("Isolating percussive component for beat detection...")
+            audio_np = audio.astype(np.float32)
+            _, y_percussive = librosa.effects.hpss(audio_np)
+            
             best = None
             for method in ("multifeature", "degara"):
                 extractor = RhythmExtractor2013(method=method)
-                bpm, beats, confidence, estimates, bpm_intervals = extractor(audio)
+                # Run beat detection on percussive component only
+                bpm, beats, confidence, estimates, bpm_intervals = extractor(y_percussive)
                 score = _score_beats(beats, bpm, confidence, duration_sec)
                 result = {
                     "method": method,
@@ -399,7 +515,7 @@ class Window(QMainWindow):
             # --- Rhythm Extraction ---
             print("Extracting rhythm (BPM and Beats)...")
             # This returns timestamps in seconds
-            rhythm = extract_best_rhythm(audio, duration_sec)
+            rhythm = extract_best_rhythm(audio, duration_sec, sr)
             bpm = rhythm["bpm"]
             beats = rhythm["beats"]
             filtered_beats, beat_strengths, beat_strength_threshold = filter_beats_by_strength(audio, sr, beats)
@@ -493,7 +609,7 @@ class Window(QMainWindow):
             # --- Rhythm Extraction ---
             print("Extracting rhythm (BPM and Beats)...")
             # This returns timestamps in seconds
-            rhythm = extract_best_rhythm(audio, duration_sec)
+            rhythm = extract_best_rhythm(audio, duration_sec, sr)
             bpm = rhythm["bpm"]
             beats = rhythm["beats"]
             filtered_beats, beat_strengths, beat_strength_threshold = filter_beats_by_strength(audio, sr, beats)

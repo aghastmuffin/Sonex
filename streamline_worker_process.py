@@ -2,6 +2,7 @@ import os
 import sys
 import traceback
 import faulthandler
+import json
 
 faulthandler.enable()
 
@@ -26,9 +27,27 @@ def emit_demucs_progress(value, label="Demucs separating stems..."):
     print(f"DEMUCS_PROGRESS|{int(value)}|{label}", flush=True)
 
 
-def splitter(file_path, lang_code=None, translation_mode="argos"):
+def splitter(file_path, lang_code=None, translation_mode="argos", settings=None):
+    from backbone.ltra import letra_toolkit as lt
     from backbone.ltra.letra_toolkit import transcribe, align, separate
     from backbone.ltra.argos_translate import translate_file
+
+    settings = settings or {}
+    demucs_model = settings.get("demucs_model", "htdemucs")
+    demucs_stems = settings.get("demucs_stems", "vocals")
+    whisper_model = settings.get("whisper_model", "medium")
+    whisper_beam_size = int(settings.get("whisper_beam_size", 5))
+    whisper_patience = int(settings.get("whisper_patience", 2))
+    whisper_best_of = int(settings.get("whisper_best_of", 3))
+    whisper_task = settings.get("whisper_task", "transcribe")
+    use_gpu = bool(settings.get("gpu", False))
+
+    if not use_gpu:
+        # Force CPU path for demucs/whisper when GPU is disabled in advanced settings.
+        os.environ["CUDA_VISIBLE_DEVICES"] = ""
+
+    lt.model = demucs_model
+    lt.two_stems = None if demucs_stems == "both" else demucs_stems
 
     translation_mode = (translation_mode or "argos").strip().lower()
     if translation_mode not in {"argos", "whisper", "both"}:
@@ -49,11 +68,13 @@ def splitter(file_path, lang_code=None, translation_mode="argos"):
     emit_progress(25, "Transcribing vocals...")
     _, detectlang = transcribe(
         f"{audiobase}/vocals.mp3",
-        5,
-        2,
+        whisper_beam_size,
+        whisper_patience,
+        whisper_best_of,
         f"{audiobase}/vocals_whisper_segments.json",
         language=lang_code,
-        task="transcribe",
+        model_size=whisper_model,
+        task=whisper_task,
     )
 
     emit_progress(40, "Aligning words...")
@@ -100,10 +121,12 @@ def splitter(file_path, lang_code=None, translation_mode="argos"):
         emit_progress(58, "Whisper translation pass...")
         transcribe(
             f"{audiobase}/vocals.mp3",
-            5,
-            2,
+            whisper_beam_size,
+            whisper_patience,
+            whisper_best_of,
             f"{audiobase}/whisper_translated.json",
             language=(detectlang or lang_code),
+            model_size=whisper_model,
             task="translate",
             reuse_existing=False,
         )
@@ -145,11 +168,18 @@ def notesanalysis(af, sr=48000, beat_strength_quantile=0.60, min_relative_beat_s
         conf = float(np.clip(confidence, 0.0, 1.0))
         return 0.5 * stability + 0.3 * coverage + 0.2 * conf
 
-    def extract_best_rhythm(audio, duration_sec):
+    def extract_best_rhythm(audio, duration_sec, sr_local):
+        # Use HPSS to isolate percussive component for better beat detection
+        import librosa
+        print("Isolating percussive component for beat detection...")
+        audio_np = audio.astype(np.float32)
+        _, y_percussive = librosa.effects.hpss(audio_np)
+        
         best = None
         for method in ("multifeature", "degara"):
             extractor = RhythmExtractor2013(method=method)
-            bpm, beats, confidence, estimates, bpm_intervals = extractor(audio)
+            # Run beat detection on percussive component only
+            bpm, beats, confidence, estimates, bpm_intervals = extractor(y_percussive)
             score = _score_beats(beats, bpm, confidence, duration_sec)
             result = {
                 "method": method,
@@ -246,7 +276,7 @@ def notesanalysis(af, sr=48000, beat_strength_quantile=0.60, min_relative_beat_s
         num_frames = len(frame_hpcps)
         duration_sec = num_frames * hop_size / sr
 
-        rhythm = extract_best_rhythm(audio, duration_sec)
+        rhythm = extract_best_rhythm(audio, duration_sec, sr)
         bpm = rhythm["bpm"]
         beats = rhythm["beats"]
         filtered_beats, beat_strengths, beat_strength_threshold = filter_beats_by_strength(audio, sr, beats)
@@ -304,10 +334,21 @@ def main():
     file_path = sys.argv[1]
     lang_code = sys.argv[2] if len(sys.argv) > 2 and sys.argv[2] else None
     translation_mode = sys.argv[3] if len(sys.argv) > 3 and sys.argv[3] else "argos"
+    raw_settings = sys.argv[4] if len(sys.argv) > 4 and sys.argv[4] else "{}"
+
+    try:
+        settings = json.loads(raw_settings)
+    except json.JSONDecodeError:
+        settings = {}
 
     try:
         emit_progress(5, "Starting...")
-        audiobase, detected_lang = splitter(file_path, lang_code=lang_code, translation_mode=translation_mode)
+        audiobase, detected_lang = splitter(
+            file_path,
+            lang_code=lang_code,
+            translation_mode=translation_mode,
+            settings=settings,
+        )
         print(f"AUDIOBASE|{audiobase}", flush=True)
         if detected_lang:
             print(f"LANG|{detected_lang}", flush=True)
@@ -322,4 +363,5 @@ def main():
 
 
 if __name__ == "__main__":
+    print("You've ran a worker process! This is not meant to be run directly. If you're seeing this, something went wrong.", flush=True)
     sys.exit(main())

@@ -27,11 +27,18 @@ def _score_beats(beats, bpm, confidence, duration_sec):
     return 0.5 * stability + 0.3 * coverage + 0.2 * conf
 
 
-def extract_best_rhythm(audio, duration_sec):
+def extract_best_rhythm(audio, duration_sec, sr):
+    # Use HPSS to isolate percussive component for better beat detection
+    import librosa
+    print("Isolating percussive component for beat detection...")
+    audio_np = audio.astype(np.float32)
+    _, y_percussive = librosa.effects.hpss(audio_np)
+    
     best = None
     for method in ("multifeature", "degara"):
         extractor = RhythmExtractor2013(method=method)
-        bpm, beats, confidence, estimates, bpm_intervals = extractor(audio)
+        # Run beat detection on percussive component only
+        bpm, beats, confidence, estimates, bpm_intervals = extractor(y_percussive)
         score = _score_beats(beats, bpm, confidence, duration_sec)
         result = {
             "method": method,
@@ -139,7 +146,7 @@ def save_novocs(af, fp, sr):
     # --- Rhythm Extraction ---
     print("Extracting rhythm (BPM and Beats)...")
     # This returns timestamps in seconds
-    rhythm = extract_best_rhythm(audio, duration_sec)
+    rhythm = extract_best_rhythm(audio, duration_sec, sr)
     bpm = rhythm["bpm"]
     beats = rhythm["beats"]
     filtered_beats, beat_strengths, beat_strength_threshold = filter_beats_by_strength(audio, sr, beats)
@@ -233,7 +240,7 @@ def savevocs(af, fp, sr):
     # --- Rhythm Extraction ---
     print("Extracting rhythm (BPM and Beats)...")
     # This returns timestamps in seconds
-    rhythm = extract_best_rhythm(audio, duration_sec)
+    rhythm = extract_best_rhythm(audio, duration_sec, sr)
     bpm = rhythm["bpm"]
     beats = rhythm["beats"]
     filtered_beats, beat_strengths, beat_strength_threshold = filter_beats_by_strength(audio, sr, beats)
