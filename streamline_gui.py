@@ -75,7 +75,7 @@ class AdvancedSettingsDialog(QDialog):
 
         self.gpu_input = QCheckBox("Enable GPU")
         self.gpu_input.setChecked(bool(settings["gpu"]))
-        try:
+        try: #Wisegpu
             subprocess.check_output(['nvidia-smi'], timeout=1)
             self.gpu_input.setEnabled(False)
             return True
@@ -175,24 +175,29 @@ class Window(QMainWindow):
             self.lang_input.addItem(f"{name.title()}", code)
         layout.addWidget(self.lang_input)
 
-        self.translation_mode_input = QComboBox(self)
-        self.translation_mode_input.addItem("Argos (default)", "argos")
-        self.translation_mode_input.addItem("Whisper", "whisper")
-        self.translation_mode_input.addItem("Both", "both")
-        layout.addWidget(self.translation_mode_input)
         
+
         self.filebtn = QPushButton("Choose Media File (.MP3 Only)")
         self.filebtn.clicked.connect(self.on_want_file)
         layout.addWidget(self.filebtn)
 
-        self.button = QPushButton("Begin")
+        config_holder = QFormLayout()
+        self.advanced_button = QPushButton("Advanced")
+        self.advanced_button.clicked.connect(self.open_advanced_settings)
+
+        self.translation_mode_input = QComboBox(self)
+        self.translation_mode_input.addItem("Argos (default)", "argos")
+        self.translation_mode_input.addItem("Whisper", "whisper")
+        self.translation_mode_input.addItem("Both", "both")
+        config_holder.addRow(self.advanced_button, self.translation_mode_input)
+
+        layout.addLayout(config_holder)
+
+        
+        self.button = QPushButton("Choose File First")
         self.button.setEnabled(False)
         self.button.clicked.connect(self.on_button_click)
         layout.addWidget(self.button)
-
-        self.advanced_button = QPushButton("Advanced")
-        self.advanced_button.clicked.connect(self.open_advanced_settings)
-        layout.addWidget(self.advanced_button)
         
         self.prog_bar = QProgressBar(self)
         self.prog_bar.setGeometry(50, 100, 250, 30)
@@ -218,7 +223,7 @@ class Window(QMainWindow):
     def on_want_file(self):
         self.file_path, _ = QFileDialog.getOpenFileName(self, "Select an audio file", "", "Audio Files (*.mp3)")
         self.filebtn.setText(os.path.basename(self.file_path) if self.file_path else "Choose Media File (.MP3 Only)")
-        self.filebtn.setEnabled(bool(self.file_path))
+        self.button.setText("Listo" if self.file_path else "Choose File First")
         self.button.setEnabled(bool(self.file_path))
 
     def set_progress(self, value, label=None):
