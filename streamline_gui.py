@@ -15,7 +15,7 @@ from PyQt6.QtWidgets import (
 )
 from PyQt6.QtCore import QObject, QThread, pyqtSignal, pyqtSlot, QProcess
 from PyQt6.QtGui import QIcon
-import sys, os, json
+import sys, os, json, subprocess
 
 language_dict = {'en': 'english', 'es': 'spanish', 'fr': 'french', 'de': 'german', 'it': 'italian', 'pt': 'portuguese', 'ru': 'russian', 'zh': 'chinese', 'ja': 'japanese', 'ko': 'korean', 'ar': 'arabic', 'hi': 'hindi', 'bn': 'bengali', 'pa': 'punjabi', 'tr': 'turkish', 'vi': 'vietnamese', 'pl': 'polish', 'nl': 'dutch', 'sv': 'swedish', 'no': 'norwegian', 'da': 'danish', 'fi': 'finnish', 'he': 'hebrew', 'el': 'greek', 'th': 'thai', 'id': 'indonesian', 'uk': 'ukrainian', 'cs': 'czech', 'ro': 'romanian', 'hu': 'hungarian'}
 #settings variables
@@ -75,6 +75,17 @@ class AdvancedSettingsDialog(QDialog):
 
         self.gpu_input = QCheckBox("Enable GPU")
         self.gpu_input.setChecked(bool(settings["gpu"]))
+        try:
+            subprocess.check_output(['nvidia-smi'], timeout=1)
+            self.gpu_input.setEnabled(False)
+            return True
+        except (subprocess.CalledProcessError, FileNotFoundError):
+            self.gpu_input.setEnabled(False)
+            self.gpu_input.setText("No Compatiable GPU Detected, Using CPU")
+        except subprocess.TimeoutExpired:
+            self.gpu_input.setEnabled(False)
+            self.gpu_input.setText("GPU Timed Out, Using CPU")
+
         form.addRow(self.gpu_input)
 
         buttons = QDialogButtonBox(QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel, self)

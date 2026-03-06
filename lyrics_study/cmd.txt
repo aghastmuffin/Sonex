@@ -1,0 +1,6 @@
+/Users/levi/Code/Sonex/.venv/bin/python /Users/levi/Code/Sonex/lyrics_study/json_to_equivlyrics.py 
+/Users/levi/Code/Sonex/.venv/bin/python /Users/levi/Code/Sonex/lyrics_study/json_to_equivlyrics.py 
+/Users/levi/Code/Sonex/.venv/bin/python /Users/levi/Code/Sonex/lyrics_study/json_to_equivlyrics.py 
+/Users/levi/Code/Sonex/.venv/bin/python /Users/levi/Code/Sonex/lyrics_study/json_to_equivlyrics.py 
+/Users/levi/Code/Sonex/.venv/bin/python /Users/levi/Code/Sonex/lyrics_study/json_to_equivlyrics.py 
+/Users/levi/Code/Sonex/.venv/bin/python /Users/levi/Code/Sonex/lyrics_study/json_to_equivlyrics.py 
