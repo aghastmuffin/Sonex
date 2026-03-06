@@ -4,6 +4,7 @@ from rich.table import Table
 from rich.prompt import IntPrompt
 from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn
 DATALINK_ELLIGABILITY = False
+print("DEPIRCATION NOTICE: this version of streamline is depracated @sonex:0.1, please use GUI")
 if DATALINK_ELLIGABILITY:
     print("DATALINK REQUEST:")
     print("SONEX is a free-to-use program. I have one ask, we need data on song's performance (i.e identifiers of song, how your system + resources performed, the actual content of your runs), this is for our eyes only and is kept for a max of 2 weeks.")

@@ -27,6 +27,31 @@ def emit_demucs_progress(value, label="Demucs separating stems..."):
     print(f"DEMUCS_PROGRESS|{int(value)}|{label}", flush=True)
 
 
+def emit_whisper_active(is_active):
+    print(f"WHISPER_ACTIVE|{1 if is_active else 0}", flush=True)
+
+
+def emit_whisper_progress(value, label="Whisper transcribing..."):
+    print(f"WHISPER_PROGRESS|{int(value)}|{label}", flush=True)
+
+
+def _stage_progress_cb(stage_start, stage_end, default_label, whisper_label=None):
+    stage_start = int(stage_start)
+    stage_end = int(stage_end)
+    span = max(0, stage_end - stage_start)
+
+    def _cb(value, label=None):
+        try:
+            clamped = max(0, min(100, int(value)))
+        except (TypeError, ValueError):
+            return
+        mapped = stage_start + int((clamped / 100.0) * span)
+        emit_progress(mapped, label or f"{default_label} {clamped}%")
+        emit_whisper_progress(clamped, label or f"{whisper_label or default_label} {clamped}%")
+
+    return _cb
+
+
 def splitter(file_path, lang_code=None, translation_mode="argos", settings=None):
     from backbone.ltra import letra_toolkit as lt
     from backbone.ltra.letra_toolkit import transcribe, align, separate
@@ -66,6 +91,8 @@ def splitter(file_path, lang_code=None, translation_mode="argos", settings=None)
     os.makedirs(audiobase, exist_ok=True)
 
     emit_progress(25, "Transcribing vocals...")
+    emit_whisper_active(True)
+    emit_whisper_progress(0, "Whisper transcribing...")
     _, detectlang = transcribe(
         f"{audiobase}/vocals.mp3",
         whisper_beam_size,
@@ -75,7 +102,10 @@ def splitter(file_path, lang_code=None, translation_mode="argos", settings=None)
         language=lang_code,
         model_size=whisper_model,
         task=whisper_task,
+        progress_cb=_stage_progress_cb(25, 39, "Transcribing vocals...", whisper_label="Whisper transcribing..."),
     )
+    emit_whisper_progress(100, "Whisper transcribing complete")
+    emit_whisper_active(False)
 
     emit_progress(40, "Aligning words...")
     align(
@@ -119,6 +149,8 @@ def splitter(file_path, lang_code=None, translation_mode="argos", settings=None)
 
     if translation_mode in {"whisper", "both"}:
         emit_progress(58, "Whisper translation pass...")
+        emit_whisper_active(True)
+        emit_whisper_progress(0, "Whisper translating...")
         transcribe(
             f"{audiobase}/vocals.mp3",
             whisper_beam_size,
@@ -129,7 +161,10 @@ def splitter(file_path, lang_code=None, translation_mode="argos", settings=None)
             model_size=whisper_model,
             task="translate",
             reuse_existing=False,
+            progress_cb=_stage_progress_cb(58, 61, "Whisper translation pass...", whisper_label="Whisper translating..."),
         )
+        emit_whisper_progress(100, "Whisper translation complete")
+        emit_whisper_active(False)
 
     if translation_mode in {"argos", "both"}:
         if source_lang == target_lang:

@@ -127,6 +127,25 @@ def separate(inp, outp=None, force: bool = False, demucs_progress_cb=None):
     shutil.copy2(inp_path, out_dir_path / inp_path.name)
 
 
+def _probe_audio_duration_seconds(inp) -> Optional[float]:
+    cmd = [
+        "ffprobe",
+        "-v",
+        "error",
+        "-show_entries",
+        "format=duration",
+        "-of",
+        "default=noprint_wrappers=1:nokey=1",
+        str(inp),
+    ]
+    try:
+        out = sp.check_output(cmd, stderr=sp.DEVNULL, text=True).strip()
+        duration = float(out)
+        return duration if duration > 0 else None
+    except Exception:
+        return None
+
+
 def transcribe(
     inp,
     beam_size=5,
@@ -134,10 +153,11 @@ def transcribe(
     best_of=3,
     outp: Optional[str] = None,
     language: Optional[str] = None,
-    best_of=3,
+    model_size="medium",
     task: Literal['transcribe', 'translate'] = "transcribe",
     _align=False,
     reuse_existing: bool = True,
+    progress_cb=None,
 ):
     """
     Transcribe audio using faster-whisper WITH real timestamps.
@@ -154,13 +174,14 @@ def transcribe(
     # -------------------------
     task = (task or "transcribe").strip().lower()
     if task not in {"transcribe", "translate"}:
-        patience=pat,
+        task = "transcribe"
 
     if outp and reuse_existing and language is not None and _is_fresh(outp, inp):
-        best_of=best_of,
         with open(outp, "r", encoding="utf-8") as f:
             transcript = json.load(f)
         print(f"Using cached transcript: {outp}")
+        if progress_cb is not None:
+            progress_cb(100, f"Whisper {task} complete (cached)")
         return transcript, None
 
     # -------------------------
@@ -193,7 +214,7 @@ def transcribe(
     # -------------------------
     # Transcribe WITH timestamps
     # -------------------------
-    segments, _ = model.transcribe(
+    segments, info = model.transcribe(
         inp,
         beam_size=beam_size, #1 is weak, fast, 5 is good med, and then 10+ is for noisy
         patience=pat,
@@ -204,7 +225,30 @@ def transcribe(
         word_timestamps=True
     )
 
-    segments = list(segments)
+    audio_duration = (
+        getattr(info, "duration_after_vad", None)
+        or getattr(info, "duration", None)
+        or _probe_audio_duration_seconds(inp)
+    )
+
+    collected_segments = []
+    last_progress = -1
+    for seg in segments:
+        collected_segments.append(seg)
+        if progress_cb is None or audio_duration is None:
+            continue
+        try:
+            pct = max(0, min(100, int((float(seg.end) / float(audio_duration)) * 100)))
+        except (TypeError, ValueError, ZeroDivisionError):
+            continue
+        if pct != last_progress:
+            progress_cb(pct, f"Whisper {task} {pct}%")
+            last_progress = pct
+
+    segments = collected_segments
+    if progress_cb is not None:
+        progress_cb(100, f"Whisper {task} complete")
+
     print(f"Whisper {task} complete: {len(segments)} segments")
 
     if not segments:

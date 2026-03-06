@@ -209,12 +209,20 @@ class Window(QMainWindow):
         self.demucs_prog_bar.setValue(0)
         self.demucs_prog_bar.setFormat("Demucs idle")
         self.demucs_prog_bar.setVisible(False)
+
+        self.whisper_prog_bar = QProgressBar(self)
+        self.whisper_prog_bar.setGeometry(50, 100, 250, 30)
+        self.whisper_prog_bar.setValue(0)
+        self.whisper_prog_bar.setFormat("Whisper idle")
+        self.whisper_prog_bar.setVisible(False)
+
         self.worker_thread = None
         self.worker = None
         self.pipeline_process = None
 
         layout.addWidget(self.prog_bar)
         layout.addWidget(self.demucs_prog_bar)
+        layout.addWidget(self.whisper_prog_bar)
 
         container = QWidget()
         container.setLayout(layout)
@@ -245,6 +253,19 @@ class Window(QMainWindow):
             self.demucs_prog_bar.setFormat(label)
         QApplication.processEvents()
 
+    def set_whisper_active(self, active):
+        self.whisper_prog_bar.setVisible(bool(active))
+        if active:
+            self.whisper_prog_bar.setValue(0)
+            self.whisper_prog_bar.setFormat("Whisper transcribing...")
+        QApplication.processEvents()
+
+    def set_whisper_progress(self, value, label=None):
+        self.whisper_prog_bar.setValue(max(0, min(100, int(value))))
+        if label is not None:
+            self.whisper_prog_bar.setFormat(label)
+        QApplication.processEvents()
+
     def on_button_click(self):
         self.lang_code = self.lang_input.currentData()
         self.translation_mode = self.translation_mode_input.currentData() or "argos"
@@ -257,6 +278,7 @@ class Window(QMainWindow):
         self.button.setEnabled(False)
         self.set_progress(5, "Starting...")
         self.set_demucs_active(False)
+        self.set_whisper_active(False)
 
         worker_script = os.path.join(os.path.dirname(__file__), "streamline_worker_process.py")
         lang_arg = self.lang_code if self.lang_code else ""
@@ -314,6 +336,21 @@ class Window(QMainWindow):
                     except ValueError:
                         pass
                 continue
+            if line.startswith("WHISPER_ACTIVE|"):
+                parts = line.split("|", 1)
+                if len(parts) == 2:
+                    self.set_whisper_active(parts[1] == "1")
+                continue
+            if line.startswith("WHISPER_PROGRESS|"):
+                parts = line.split("|", 2)
+                if len(parts) >= 2:
+                    try:
+                        progress_value = int(parts[1])
+                        label = parts[2] if len(parts) == 3 else None
+                        self.set_whisper_progress(progress_value, label)
+                    except ValueError:
+                        pass
+                continue
             if line.startswith("LANG|"):
                 parts = line.split("|", 1)
                 if len(parts) == 2 and parts[1]:
@@ -327,6 +364,7 @@ class Window(QMainWindow):
         else:
             self.set_progress(0, f"Error ({exit_code})")
         self.set_demucs_active(False)
+        self.set_whisper_active(False)
         self.button.setEnabled(True)
         if self.pipeline_process is not None:
             self.pipeline_process.deleteLater()
@@ -336,6 +374,7 @@ class Window(QMainWindow):
         print("Processing Error: worker process failed")
         self.set_progress(0, "Error")
         self.set_demucs_active(False)
+        self.set_whisper_active(False)
         self.button.setEnabled(True)
         if self.pipeline_process is not None:
             self.pipeline_process.deleteLater()
