@@ -20,8 +20,8 @@ import sys, os, json, subprocess
 language_dict = {'en': 'english', 'es': 'spanish', 'fr': 'french', 'de': 'german', 'it': 'italian', 'pt': 'portuguese', 'ru': 'russian', 'zh': 'chinese', 'ja': 'japanese', 'ko': 'korean', 'ar': 'arabic', 'hi': 'hindi', 'bn': 'bengali', 'pa': 'punjabi', 'tr': 'turkish', 'vi': 'vietnamese', 'pl': 'polish', 'nl': 'dutch', 'sv': 'swedish', 'no': 'norwegian', 'da': 'danish', 'fi': 'finnish', 'he': 'hebrew', 'el': 'greek', 'th': 'thai', 'id': 'indonesian', 'uk': 'ukrainian', 'cs': 'czech', 'ro': 'romanian', 'hu': 'hungarian'}
 #settings variables
 # TODO: Hook them up
-DEMUCS_MODEL = "htdemucs" #or "tasnet"
-DEMUCS_STEMS = "vocals" #or "other" or "both"
+DEMUCS_MODEL = "htdemucs" #or "tasnet" or htdemucs 
+DEMUCS_STEMS = "vocals" #or "other" or "both" or vocals
 WHISPER_MODEL = "medium" #or "tiny", "base", "small", "large-v2"
 WHISPER_BEAMSIZE = 5
 WHISPER_PAT = 2
@@ -44,7 +44,7 @@ class AdvancedSettingsDialog(QDialog):
         form.addRow("Demucs model", self.demucs_model_input)
 
         self.demucs_stems_input = QComboBox(self)
-        self.demucs_stems_input.addItems(["vocals", "other", "both"])
+        self.demucs_stems_input.addItems(["default", "vocals", "other", "both"])
         self.demucs_stems_input.setCurrentText(settings["demucs_stems"])
         form.addRow("Demucs stems", self.demucs_stems_input)
 

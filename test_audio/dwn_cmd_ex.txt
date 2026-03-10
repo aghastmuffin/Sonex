@@ -7,3 +7,5 @@ yt-dlp -x --audio-format mp3 --audio-quality 0 -o "code/sonex/test_audio/alt_kid
 yt-dlp -x --audio-format mp3 --audio-quality 0 -o "code/sonex/test_audio/makeittothemorning_alt_PND.mp3" "https://www.youtube.com/watch?v=Zzl20a6AmRE"
 yt-dlp -x --audio-format mp3 --audio-quality 0 -o "code/sonex/test_audio/alt_handsup_bloodoranges.mp3" "https://www.youtube.com/watch?v=7LVHsTzAiMw"
 
+
+yt-dlp -x --audio-format mp3 --audio-quality 0 -o "code/sonex/test_audio/onelove.mp3" "https://www.youtube.com/watch?v=Zk17KhMuZHc"

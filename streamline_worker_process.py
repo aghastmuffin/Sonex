@@ -4,6 +4,8 @@ import traceback
 import faulthandler
 import json
 
+import demucs
+
 faulthandler.enable()
 
 language_dict = {
@@ -56,6 +58,7 @@ def splitter(file_path, lang_code=None, translation_mode="argos", settings=None)
     from backbone.ltra import letra_toolkit as lt
     from backbone.ltra.letra_toolkit import transcribe, align, separate
     from backbone.ltra.argos_translate import translate_file
+    global demucs_stems
 
     settings = settings or {}
     demucs_model = settings.get("demucs_model", "htdemucs")
@@ -72,7 +75,7 @@ def splitter(file_path, lang_code=None, translation_mode="argos", settings=None)
         os.environ["CUDA_VISIBLE_DEVICES"] = ""
 
     lt.model = demucs_model
-    lt.two_stems = None if demucs_stems == "both" else demucs_stems
+    lt.two_stems = None if demucs_stems in ("both", "default") else demucs_stems
 
     translation_mode = (translation_mode or "argos").strip().lower()
     if translation_mode not in {"argos", "whisper", "both"}:
@@ -264,13 +267,19 @@ def notesanalysis(af, sr=48000, beat_strength_quantile=0.60, min_relative_beat_s
 
         return np.array(filtered, dtype=np.float32), beat_strengths, strength_threshold
 
-    def analyze_and_save(audio_name, file_path, out_name):
+    def analyze_and_save(audio_name, file_path, out_name, rhythm_file_path=None):
         audio = MonoLoader(filename=file_path, sampleRate=sr)().astype(np.float32)
+        rhythm_audio = MonoLoader(filename=(rhythm_file_path or file_path), sampleRate=sr)().astype(np.float32)
 
         audio_max = np.max(np.abs(audio))
         if audio_max > 0:
             audio = audio / audio_max
         audio *= 20.0
+
+        rhythm_max = np.max(np.abs(rhythm_audio))
+        if rhythm_max > 0:
+            rhythm_audio = rhythm_audio / rhythm_max
+        rhythm_audio *= 20.0
 
         frame_size = 4096
         hop_size = 48
@@ -309,12 +318,12 @@ def notesanalysis(af, sr=48000, beat_strength_quantile=0.60, min_relative_beat_s
 
         frame_hpcps = np.array(frame_hpcps)
         num_frames = len(frame_hpcps)
-        duration_sec = num_frames * hop_size / sr
+        duration_sec = len(rhythm_audio) / sr
 
-        rhythm = extract_best_rhythm(audio, duration_sec, sr)
+        rhythm = extract_best_rhythm(rhythm_audio, duration_sec, sr)
         bpm = rhythm["bpm"]
         beats = rhythm["beats"]
-        filtered_beats, beat_strengths, beat_strength_threshold = filter_beats_by_strength(audio, sr, beats)
+        filtered_beats, beat_strengths, beat_strength_threshold = filter_beats_by_strength(rhythm_audio, sr, beats)
         confidence = rhythm["confidence"]
         selected_method = rhythm["method"]
 
@@ -351,8 +360,17 @@ def notesanalysis(af, sr=48000, beat_strength_quantile=0.60, min_relative_beat_s
         )
 
     emit_progress(78, "Analyzing instrumental notes/beats...")
-    novocal_path = f"{af}/htdemucs/{af}/no_vocals.mp3"
-    analyze_and_save(af, novocal_path, "novocs_analysis")
+    if demucs_stems in ("both", "default"):
+        novocal_path = f"{af}/htdemucs/{af}/drums.mp3"
+        melodic_path = f"{af}/other.mp3"
+        if not os.path.exists(melodic_path):
+            melodic_path = f"{af}/htdemucs/{af}/other.mp3"
+    else:
+        novocal_path = f"{af}/htdemucs/{af}/no_vocals.mp3"
+        # Keep old behavior for non-full-stem runs (e.g., vocals): one source for both rhythm and melodic.
+        melodic_path = novocal_path
+    
+    analyze_and_save(af, melodic_path, "novocs_analysis", rhythm_file_path=novocal_path)
 
     emit_progress(87, "Analyzing vocals notes/beats...")
     vocal_path = f"{af}/vocals.mp3"
