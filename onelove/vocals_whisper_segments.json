@@ -2,17 +2,17 @@
   {
     "id": 0,
     "text": "i won't let the night stand in my way i know what i want, i know what i can",
-    "start": 15.440000000000005,
-    "end": 27.56,
+    "start": 15.360000000000007,
+    "end": 27.52,
     "words": [
       {
         "word": " I",
-        "start": 15.440000000000005,
-        "end": 16.180000000000003
+        "start": 15.360000000000007,
+        "end": 16.140000000000004
       },
       {
         "word": " won't",
-        "start": 16.180000000000003,
+        "start": 16.140000000000004,
         "end": 16.92
       },
       {
@@ -33,11 +33,11 @@
       {
         "word": " stand",
         "start": 18.36,
-        "end": 18.9
+        "end": 18.92
       },
       {
         "word": " in",
-        "start": 18.9,
+        "start": 18.92,
         "end": 19.16
       },
       {
@@ -53,11 +53,11 @@
       {
         "word": " I",
         "start": 20.42,
-        "end": 24.18
+        "end": 24.14
       },
       {
         "word": " know",
-        "start": 24.18,
+        "start": 24.14,
         "end": 24.42
       },
       {
@@ -68,12 +68,12 @@
       {
         "word": " I",
         "start": 24.76,
-        "end": 25.1
+        "end": 25.08
       },
       {
         "word": " want,",
-        "start": 25.1,
-        "end": 25.6
+        "start": 25.08,
+        "end": 25.56
       },
       {
         "word": " I",
@@ -88,29 +88,29 @@
       {
         "word": " what",
         "start": 26.36,
-        "end": 26.66
+        "end": 26.64
       },
       {
         "word": " I",
-        "start": 26.66,
+        "start": 26.64,
         "end": 27.0
       },
       {
         "word": " can",
         "start": 27.0,
-        "end": 27.56
+        "end": 27.52
       }
     ]
   },
   {
     "id": 1,
-    "text": "yeah, i'm only here to find you, you all i need is you by my side",
-    "start": 27.56,
-    "end": 38.68,
+    "text": "yeah, i'm only here to find you, you all i needed to buy my sight, all i wanna do",
+    "start": 27.52,
+    "end": 41.92,
     "words": [
       {
         "word": " Yeah,",
-        "start": 27.56,
+        "start": 27.52,
         "end": 29.0
       },
       {
@@ -141,89 +141,84 @@
       {
         "word": " you,",
         "start": 31.7,
-        "end": 33.0
+        "end": 32.76
       },
       {
         "word": " you",
-        "start": 34.0,
-        "end": 34.74
+        "start": 32.76,
+        "end": 34.72
       },
       {
         "word": " All",
-        "start": 34.74,
-        "end": 35.9
+        "start": 34.72,
+        "end": 35.92
       },
       {
         "word": " I",
-        "start": 35.9,
+        "start": 35.92,
         "end": 36.38
       },
       {
-        "word": " need",
+        "word": " needed",
         "start": 36.38,
-        "end": 36.76
+        "end": 36.82
       },
       {
-        "word": " is",
-        "start": 36.76,
-        "end": 37.02
-      },
-      {
-        "word": " you",
-        "start": 37.02,
+        "word": " to",
+        "start": 36.82,
         "end": 37.26
       },
       {
-        "word": " by",
+        "word": " buy",
         "start": 37.26,
-        "end": 37.5
+        "end": 37.46
       },
       {
         "word": " my",
-        "start": 37.5,
-        "end": 38.06
+        "start": 37.46,
+        "end": 38.12
       },
       {
-        "word": " side",
-        "start": 38.06,
+        "word": " sight,",
+        "start": 38.12,
         "end": 38.68
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "text": "all i wanna do is lay down next to you",
-    "start": 38.68,
-    "end": 44.5,
-    "words": [
+      },
       {
-        "word": " All",
-        "start": 38.68,
-        "end": 39.72
+        "word": " all",
+        "start": 39.46,
+        "end": 39.76
       },
       {
         "word": " I",
-        "start": 39.72,
-        "end": 40.4
+        "start": 39.76,
+        "end": 40.42
       },
       {
         "word": " wanna",
-        "start": 40.4,
+        "start": 40.42,
         "end": 40.78
       },
       {
         "word": " do",
         "start": 40.78,
-        "end": 42.02
-      },
+        "end": 41.92
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "just lay down next to you",
+    "start": 41.92,
+    "end": 44.5,
+    "words": [
       {
-        "word": " is",
-        "start": 42.02,
-        "end": 42.88
+        "word": " Just",
+        "start": 41.92,
+        "end": 42.94
       },
       {
         "word": " lay",
-        "start": 42.88,
+        "start": 42.94,
         "end": 43.18
       },
       {
@@ -234,11 +229,11 @@
       {
         "word": " next",
         "start": 43.4,
-        "end": 43.72
+        "end": 43.74
       },
       {
         "word": " to",
-        "start": 43.72,
+        "start": 43.74,
         "end": 44.08
       },
       {
@@ -252,7 +247,7 @@
     "id": 3,
     "text": "cause all i need is one love, one love, one heart",
     "start": 44.5,
-    "end": 51.06,
+    "end": 51.08,
     "words": [
       {
         "word": " Cause",
@@ -287,40 +282,40 @@
       {
         "word": " love,",
         "start": 46.24,
-        "end": 47.44
+        "end": 47.46
       },
       {
         "word": " one",
         "start": 47.62,
-        "end": 48.02
+        "end": 48.0
       },
       {
         "word": " love,",
-        "start": 48.02,
+        "start": 48.0,
         "end": 49.22
       },
       {
         "word": " one",
         "start": 49.52,
-        "end": 49.92
+        "end": 49.94
       },
       {
         "word": " heart",
-        "start": 49.92,
-        "end": 51.06
+        "start": 49.94,
+        "end": 51.08
       }
     ]
   },
   {
     "id": 4,
     "text": "baby, give it to me",
-    "start": 58.04,
+    "start": 58.06,
     "end": 60.0,
     "words": [
       {
         "word": " Baby,",
-        "start": 58.04,
-        "end": 58.68
+        "start": 58.06,
+        "end": 58.7
       },
       {
         "word": " give",
@@ -346,9 +341,9 @@
   },
   {
     "id": 5,
-    "text": "cause i don't want nobody when i got got your body, baby",
+    "text": "cause i don't want, want nobody when i got, got your body, baby",
     "start": 60.0,
-    "end": 64.5,
+    "end": 64.48,
     "words": [
       {
         "word": " Cause",
@@ -358,46 +353,51 @@
       {
         "word": " I",
         "start": 60.32,
-        "end": 60.5
+        "end": 60.48
       },
       {
         "word": " don't",
-        "start": 60.5,
-        "end": 60.86
+        "start": 60.48,
+        "end": 60.84
       },
       {
-        "word": " want",
-        "start": 60.86,
+        "word": " want,",
+        "start": 60.84,
         "end": 61.22
       },
       {
+        "word": " want",
+        "start": 61.54,
+        "end": 61.54
+      },
+      {
         "word": " nobody",
-        "start": 61.22,
-        "end": 61.94
+        "start": 61.54,
+        "end": 62.08
       },
       {
         "word": " when",
-        "start": 61.94,
-        "end": 62.42
+        "start": 62.08,
+        "end": 62.44
       },
       {
         "word": " I",
-        "start": 62.42,
-        "end": 62.76
+        "start": 62.44,
+        "end": 62.74
+      },
+      {
+        "word": " got,",
+        "start": 62.74,
+        "end": 62.98
       },
       {
         "word": " got",
-        "start": 62.76,
-        "end": 63.06
-      },
-      {
-        "word": " got",
-        "start": 63.06,
-        "end": 63.4
+        "start": 62.98,
+        "end": 63.3
       },
       {
         "word": " your",
-        "start": 63.4,
+        "start": 63.3,
         "end": 63.64
       },
       {
@@ -407,20 +407,20 @@
       },
       {
         "word": " baby",
-        "start": 64.02,
-        "end": 64.5
+        "start": 64.0,
+        "end": 64.48
       }
     ]
   },
   {
     "id": 6,
     "text": "no, no, nobody",
-    "start": 64.5,
+    "start": 64.48,
     "end": 65.88,
     "words": [
       {
         "word": " No,",
-        "start": 64.5,
+        "start": 64.48,
         "end": 64.9
       },
       {
@@ -430,7 +430,7 @@
       },
       {
         "word": " nobody",
-        "start": 65.5,
+        "start": 65.24,
         "end": 65.88
       }
     ]
@@ -459,64 +459,69 @@
       {
         "word": " I",
         "start": 66.9,
-        "end": 67.2
+        "end": 67.18
       },
       {
         "word": " need",
-        "start": 67.2,
+        "start": 67.18,
         "end": 67.48
       }
     ]
   },
   {
     "id": 8,
-    "text": "cause i don't want nobody when i got got your body, baby",
+    "text": "cause i don't want, want nobody when i got, got your body, baby",
     "start": 67.48,
-    "end": 72.0,
+    "end": 71.98,
     "words": [
       {
         "word": " Cause",
         "start": 67.48,
-        "end": 67.94
+        "end": 67.9
       },
       {
         "word": " I",
-        "start": 67.94,
-        "end": 68.14
+        "start": 67.9,
+        "end": 68.12
       },
       {
         "word": " don't",
-        "start": 68.14,
-        "end": 68.4
+        "start": 68.12,
+        "end": 68.38
+      },
+      {
+        "word": " want,",
+        "start": 68.38,
+        "end": 68.66
       },
       {
         "word": " want",
-        "start": 68.4,
-        "end": 68.8
+        "start": 69.08,
+        "end": 69.08
       },
       {
         "word": " nobody",
-        "start": 68.8,
-        "end": 69.54
+        "start": 69.08,
+        "end": 69.58
       },
       {
         "word": " when",
-        "start": 69.54,
+        "start": 69.58,
         "end": 69.98
       },
       {
         "word": " I",
         "start": 69.98,
-        "end": 70.24
+        "end": 70.12
+      },
+      {
+        "word": " got,",
+        "start": 70.12,
+        "end": 70.46
       },
       {
         "word": " got",
-        "start": 70.24,
-        "end": 70.5
-      },
-      {
-        "word": " got",
-        "start": 70.5,
+        "start": 70.82,
         "end": 70.82
       },
       {
@@ -532,25 +537,25 @@
       {
         "word": " baby",
         "start": 71.78,
-        "end": 72.0
+        "end": 71.98
       }
     ]
   },
   {
     "id": 9,
     "text": "no, no, nobody",
-    "start": 72.0,
+    "start": 71.98,
     "end": 73.38,
     "words": [
       {
         "word": " No,",
-        "start": 72.0,
-        "end": 72.42
+        "start": 71.98,
+        "end": 72.4
       },
       {
         "word": " no,",
-        "start": 72.42,
-        "end": 72.74
+        "start": 72.4,
+        "end": 72.7
       },
       {
         "word": " nobody",
@@ -563,49 +568,49 @@
     "id": 10,
     "text": "cause got what i need tonight",
     "start": 73.38,
-    "end": 75.94,
+    "end": 75.92,
     "words": [
       {
         "word": " Cause",
         "start": 73.38,
-        "end": 73.46
+        "end": 73.38
       },
       {
         "word": " got",
-        "start": 73.46,
+        "start": 73.38,
         "end": 74.1
       },
       {
         "word": " what",
         "start": 74.1,
-        "end": 74.36
+        "end": 74.38
       },
       {
         "word": " I",
-        "start": 74.36,
-        "end": 74.74
+        "start": 74.38,
+        "end": 74.76
       },
       {
         "word": " need",
-        "start": 74.74,
+        "start": 74.76,
         "end": 75.04
       },
       {
         "word": " tonight",
         "start": 75.04,
-        "end": 75.94
+        "end": 75.92
       }
     ]
   },
   {
     "id": 11,
-    "text": "see, i've made mistakes, time after time time, time",
-    "start": 75.94,
-    "end": 83.28,
+    "text": "see, i've made mistakes, time after time, time, time",
+    "start": 75.92,
+    "end": 83.3,
     "words": [
       {
         "word": " See,",
-        "start": 75.94,
+        "start": 75.92,
         "end": 76.72
       },
       {
@@ -616,145 +621,129 @@
       {
         "word": " made",
         "start": 77.04,
-        "end": 77.18
+        "end": 77.16
       },
       {
         "word": " mistakes,",
-        "start": 77.18,
-        "end": 78.26
+        "start": 77.16,
+        "end": 78.22
       },
       {
         "word": " time",
-        "start": 78.32,
+        "start": 78.72,
         "end": 78.88
       },
       {
         "word": " after",
         "start": 78.88,
-        "end": 79.18
+        "end": 79.2
+      },
+      {
+        "word": " time,",
+        "start": 79.2,
+        "end": 80.36
+      },
+      {
+        "word": " time,",
+        "start": 80.56,
+        "end": 81.7
       },
       {
         "word": " time",
-        "start": 79.18,
-        "end": 80.34
-      },
-      {
-        "word": " Time,",
-        "start": 80.34,
-        "end": 81.66
-      },
-      {
-        "word": " time",
-        "start": 82.82,
-        "end": 83.28
+        "start": 82.72,
+        "end": 83.3
       }
     ]
   },
   {
     "id": 12,
-    "text": "but no, not today won't leave till i find",
-    "start": 83.28,
-    "end": 87.52,
+    "text": "but no, not today, won't leave till i find what i'm looking for, i'm only here to find you, you",
+    "start": 83.3,
+    "end": 94.82,
     "words": [
       {
         "word": " But",
-        "start": 83.28,
+        "start": 83.3,
         "end": 84.22
       },
       {
         "word": " no,",
         "start": 84.22,
-        "end": 84.52
+        "end": 84.5
       },
       {
         "word": " not",
-        "start": 84.6,
-        "end": 84.72
+        "start": 84.62,
+        "end": 84.74
       },
       {
-        "word": " today",
-        "start": 84.72,
+        "word": " today,",
+        "start": 84.74,
         "end": 85.62
       },
       {
-        "word": " Won't",
-        "start": 85.62,
-        "end": 86.12
+        "word": " won't",
+        "start": 85.94,
+        "end": 86.14
       },
       {
         "word": " leave",
-        "start": 86.12,
-        "end": 86.32
+        "start": 86.14,
+        "end": 86.36
       },
       {
         "word": " till",
-        "start": 86.32,
-        "end": 86.64
+        "start": 86.36,
+        "end": 86.72
       },
       {
         "word": " I",
-        "start": 86.64,
-        "end": 86.96
+        "start": 86.72,
+        "end": 86.94
       },
       {
         "word": " find",
-        "start": 86.96,
-        "end": 87.52
-      }
-    ]
-  },
-  {
-    "id": 13,
-    "text": "what i'm looking for",
-    "start": 87.52,
-    "end": 89.98,
-    "words": [
+        "start": 86.94,
+        "end": 87.6
+      },
       {
         "word": " What",
-        "start": 87.52,
+        "start": 87.6,
         "end": 88.66
       },
       {
         "word": " I'm",
         "start": 88.66,
-        "end": 88.98
+        "end": 88.96
       },
       {
         "word": " looking",
-        "start": 88.98,
+        "start": 88.96,
         "end": 89.46
       },
       {
-        "word": " for",
+        "word": " for,",
         "start": 89.46,
-        "end": 89.98
-      }
-    ]
-  },
-  {
-    "id": 14,
-    "text": "i'm only here to find you, you all i need is you by my side",
-    "start": 89.98,
-    "end": 98.76,
-    "words": [
+        "end": 90.0
+      },
       {
         "word": " I'm",
-        "start": 89.98,
+        "start": 90.12,
         "end": 90.36
       },
       {
         "word": " only",
         "start": 90.36,
-        "end": 90.68
+        "end": 90.7
       },
       {
         "word": " here",
-        "start": 90.68,
-        "end": 91.12
+        "start": 90.7,
+        "end": 91.14
       },
       {
         "word": " to",
-        "start": 91.12,
+        "start": 91.14,
         "end": 91.34
       },
       {
@@ -765,142 +754,145 @@
       {
         "word": " you,",
         "start": 91.62,
-        "end": 92.82
+        "end": 92.98
       },
       {
         "word": " you",
-        "start": 92.82,
-        "end": 94.7
-      },
+        "start": 93.46,
+        "end": 94.82
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "all i needed to buy my sight, all i wanna do",
+    "start": 94.82,
+    "end": 102.1,
+    "words": [
       {
         "word": " All",
-        "start": 94.7,
-        "end": 95.9
+        "start": 94.82,
+        "end": 95.92
       },
       {
         "word": " I",
-        "start": 95.9,
+        "start": 95.92,
         "end": 96.32
       },
       {
-        "word": " need",
+        "word": " needed",
         "start": 96.32,
-        "end": 96.68
+        "end": 96.82
       },
       {
-        "word": " is",
-        "start": 96.68,
-        "end": 96.9
+        "word": " to",
+        "start": 96.82,
+        "end": 97.22
       },
       {
-        "word": " you",
-        "start": 96.9,
-        "end": 97.28
-      },
-      {
-        "word": " by",
-        "start": 97.28,
+        "word": " buy",
+        "start": 97.22,
         "end": 97.52
       },
       {
         "word": " my",
         "start": 97.52,
-        "end": 98.1
+        "end": 98.12
       },
       {
-        "word": " side",
-        "start": 98.1,
+        "word": " sight,",
+        "start": 98.12,
         "end": 98.76
+      },
+      {
+        "word": " all",
+        "start": 98.98,
+        "end": 99.7
+      },
+      {
+        "word": " I",
+        "start": 99.7,
+        "end": 100.32
+      },
+      {
+        "word": " wanna",
+        "start": 100.32,
+        "end": 100.8
+      },
+      {
+        "word": " do",
+        "start": 100.8,
+        "end": 102.1
       }
     ]
   },
   {
-    "id": 15,
-    "text": "all i wanna do is dance under the moon",
-    "start": 98.76,
-    "end": 104.4,
+    "id": 14,
+    "text": "just dance under the moon",
+    "start": 102.1,
+    "end": 104.5,
     "words": [
       {
-        "word": " All",
-        "start": 98.76,
-        "end": 99.5
-      },
-      {
-        "word": " I",
-        "start": 99.5,
-        "end": 100.22
-      },
-      {
-        "word": " wanna",
-        "start": 100.22,
-        "end": 100.86
-      },
-      {
-        "word": " do",
-        "start": 100.86,
-        "end": 102.16
-      },
-      {
-        "word": " is",
-        "start": 102.16,
-        "end": 102.82
+        "word": " Just",
+        "start": 102.1,
+        "end": 102.86
       },
       {
         "word": " dance",
-        "start": 102.82,
-        "end": 103.24
+        "start": 102.86,
+        "end": 103.28
       },
       {
         "word": " under",
-        "start": 103.24,
-        "end": 103.68
+        "start": 103.28,
+        "end": 103.62
       },
       {
         "word": " the",
-        "start": 103.68,
+        "start": 103.62,
         "end": 104.02
       },
       {
         "word": " moon",
         "start": 104.02,
-        "end": 104.4
+        "end": 104.5
       }
     ]
   },
   {
-    "id": 16,
+    "id": 15,
     "text": "cause all i need is one love, one love, one heart",
-    "start": 104.4,
-    "end": 111.46,
+    "start": 104.5,
+    "end": 111.44,
     "words": [
       {
         "word": " Cause",
-        "start": 104.4,
-        "end": 104.88
+        "start": 104.5,
+        "end": 104.86
       },
       {
         "word": " all",
-        "start": 104.88,
-        "end": 105.22
+        "start": 104.86,
+        "end": 105.24
       },
       {
         "word": " I",
-        "start": 105.22,
+        "start": 105.24,
         "end": 105.42
       },
       {
         "word": " need",
         "start": 105.42,
-        "end": 105.62
+        "end": 105.6
       },
       {
         "word": " is",
-        "start": 105.62,
-        "end": 105.88
+        "start": 105.6,
+        "end": 105.9
       },
       {
         "word": " one",
-        "start": 105.88,
+        "start": 105.9,
         "end": 106.18
       },
       {
@@ -910,45 +902,45 @@
       },
       {
         "word": " one",
-        "start": 107.58,
-        "end": 108.0
+        "start": 107.64,
+        "end": 107.98
       },
       {
         "word": " love,",
-        "start": 108.0,
+        "start": 107.98,
         "end": 109.26
       },
       {
         "word": " one",
-        "start": 109.48,
-        "end": 109.88
+        "start": 109.52,
+        "end": 109.92
       },
       {
         "word": " heart",
-        "start": 109.88,
-        "end": 111.46
+        "start": 109.92,
+        "end": 111.44
       }
     ]
   },
   {
-    "id": 17,
+    "id": 16,
     "text": "baby, give it to me",
-    "start": 118.02000000000001,
+    "start": 118.06,
     "end": 120.0,
     "words": [
       {
         "word": " Baby,",
-        "start": 118.02000000000001,
+        "start": 118.06,
         "end": 118.7
       },
       {
         "word": " give",
-        "start": 119.14,
-        "end": 119.14
+        "start": 118.82,
+        "end": 119.16
       },
       {
         "word": " it",
-        "start": 119.14,
+        "start": 119.16,
         "end": 119.38
       },
       {
@@ -964,39 +956,44 @@
     ]
   },
   {
-    "id": 18,
-    "text": "cause i don't want nobody when i got got your body, baby",
+    "id": 17,
+    "text": "cause i don't want, want nobody when i got, got your body, baby",
     "start": 120.0,
-    "end": 124.48,
+    "end": 124.44,
     "words": [
       {
         "word": " Cause",
         "start": 120.0,
-        "end": 120.3
+        "end": 120.28
       },
       {
         "word": " I",
-        "start": 120.3,
-        "end": 120.52
+        "start": 120.28,
+        "end": 120.48
       },
       {
         "word": " don't",
-        "start": 120.52,
+        "start": 120.48,
         "end": 120.9
       },
       {
-        "word": " want",
+        "word": " want,",
         "start": 120.9,
-        "end": 121.24
+        "end": 121.22
+      },
+      {
+        "word": " want",
+        "start": 121.52,
+        "end": 121.52
       },
       {
         "word": " nobody",
-        "start": 121.24,
-        "end": 121.96
+        "start": 121.52,
+        "end": 122.08
       },
       {
         "word": " when",
-        "start": 121.96,
+        "start": 122.08,
         "end": 122.44
       },
       {
@@ -1005,57 +1002,57 @@
         "end": 122.76
       },
       {
-        "word": " got",
+        "word": " got,",
         "start": 122.76,
-        "end": 123.04
+        "end": 122.98
       },
       {
         "word": " got",
-        "start": 123.04,
-        "end": 123.42
+        "start": 122.98,
+        "end": 123.3
       },
       {
         "word": " your",
-        "start": 123.42,
-        "end": 123.64
+        "start": 123.3,
+        "end": 123.62
       },
       {
         "word": " body,",
-        "start": 123.64,
-        "end": 123.98
+        "start": 123.62,
+        "end": 123.96
       },
       {
         "word": " baby",
         "start": 124.04,
-        "end": 124.48
+        "end": 124.44
       }
     ]
   },
   {
-    "id": 19,
+    "id": 18,
     "text": "no, no, nobody",
-    "start": 124.48,
+    "start": 124.44,
     "end": 125.9,
     "words": [
       {
         "word": " No,",
-        "start": 124.48,
-        "end": 124.88
+        "start": 124.44,
+        "end": 124.86
       },
       {
         "word": " no,",
-        "start": 124.94,
-        "end": 125.22
+        "start": 124.9,
+        "end": 125.18
       },
       {
         "word": " nobody",
-        "start": 125.36,
+        "start": 125.34,
         "end": 125.9
       }
     ]
   },
   {
-    "id": 20,
+    "id": 19,
     "text": "cause got what i need",
     "start": 125.9,
     "end": 127.48,
@@ -1063,84 +1060,89 @@
       {
         "word": " Cause",
         "start": 125.9,
-        "end": 126.4
+        "end": 126.42
       },
       {
         "word": " got",
-        "start": 126.4,
-        "end": 126.62
+        "start": 126.42,
+        "end": 126.6
       },
       {
         "word": " what",
-        "start": 126.62,
-        "end": 126.92
+        "start": 126.6,
+        "end": 126.9
       },
       {
         "word": " I",
-        "start": 126.92,
-        "end": 127.2
+        "start": 126.9,
+        "end": 127.22
       },
       {
         "word": " need",
-        "start": 127.2,
+        "start": 127.22,
         "end": 127.48
       }
     ]
   },
   {
-    "id": 21,
-    "text": "cause i don't want nobody when i got got your body, baby",
+    "id": 20,
+    "text": "cause i don't want, want nobody when i got, got your body, baby",
     "start": 127.48,
-    "end": 131.96,
+    "end": 131.92,
     "words": [
       {
         "word": " Cause",
         "start": 127.48,
-        "end": 127.48
+        "end": 127.88
       },
       {
         "word": " I",
-        "start": 127.48,
-        "end": 128.06
+        "start": 127.88,
+        "end": 128.16
       },
       {
         "word": " don't",
-        "start": 128.06,
-        "end": 128.4
+        "start": 128.16,
+        "end": 128.36
+      },
+      {
+        "word": " want,",
+        "start": 128.36,
+        "end": 128.62
       },
       {
         "word": " want",
-        "start": 128.4,
-        "end": 128.72
+        "start": 129.0,
+        "end": 129.0
       },
       {
         "word": " nobody",
-        "start": 128.72,
-        "end": 129.5
+        "start": 129.0,
+        "end": 129.56
       },
       {
         "word": " when",
-        "start": 129.5,
+        "start": 129.56,
         "end": 129.94
       },
       {
         "word": " I",
         "start": 129.94,
-        "end": 130.26
+        "end": 130.14
+      },
+      {
+        "word": " got,",
+        "start": 130.14,
+        "end": 130.5
       },
       {
         "word": " got",
-        "start": 130.26,
-        "end": 130.58
-      },
-      {
-        "word": " got",
-        "start": 130.58,
-        "end": 130.92
+        "start": 130.5,
+        "end": 130.78
       },
       {
         "word": " your",
-        "start": 130.92,
+        "start": 130.78,
         "end": 131.14
       },
       {
@@ -1150,48 +1152,48 @@
       },
       {
         "word": " baby",
-        "start": 131.8,
-        "end": 131.96
+        "start": 131.74,
+        "end": 131.92
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "no, no, nobody",
+    "start": 131.92,
+    "end": 133.38,
+    "words": [
+      {
+        "word": " No,",
+        "start": 131.92,
+        "end": 132.34
+      },
+      {
+        "word": " no,",
+        "start": 132.34,
+        "end": 132.76
+      },
+      {
+        "word": " nobody",
+        "start": 132.76,
+        "end": 133.38
       }
     ]
   },
   {
     "id": 22,
-    "text": "no, no, nobody",
-    "start": 131.96,
-    "end": 133.36,
-    "words": [
-      {
-        "word": " No,",
-        "start": 131.96,
-        "end": 132.36
-      },
-      {
-        "word": " no,",
-        "start": 132.42,
-        "end": 132.72
-      },
-      {
-        "word": " nobody",
-        "start": 132.86,
-        "end": 133.36
-      }
-    ]
-  },
-  {
-    "id": 23,
     "text": "cause got what i need tonight",
-    "start": 133.88,
+    "start": 133.38,
     "end": 136.04,
     "words": [
       {
         "word": " Cause",
-        "start": 133.78,
-        "end": 134.12
+        "start": 133.38,
+        "end": 134.1
       },
       {
         "word": " got",
-        "start": 134.12,
+        "start": 134.1,
         "end": 134.12
       },
       {
@@ -1202,34 +1204,34 @@
       {
         "word": " I",
         "start": 134.42,
-        "end": 134.82
+        "end": 134.8
       },
       {
         "word": " need",
-        "start": 134.82,
-        "end": 135.06
+        "start": 134.8,
+        "end": 135.04
       },
       {
         "word": " tonight",
-        "start": 135.06,
+        "start": 135.04,
         "end": 136.04
       }
     ]
   },
   {
-    "id": 24,
-    "text": "your love is like a roller-coaster",
+    "id": 23,
+    "text": "your love is like a roller coaster",
     "start": 136.04,
-    "end": 140.02,
+    "end": 139.9,
     "words": [
       {
         "word": " Your",
         "start": 136.04,
-        "end": 136.68
+        "end": 136.7
       },
       {
         "word": " love",
-        "start": 136.68,
+        "start": 136.7,
         "end": 136.94
       },
       {
@@ -1245,73 +1247,73 @@
       {
         "word": " a",
         "start": 137.56,
-        "end": 137.8
+        "end": 137.82
       },
       {
         "word": " roller",
-        "start": 137.8,
+        "start": 137.82,
         "end": 138.34
       },
       {
-        "word": "-coaster",
+        "word": " coaster",
         "start": 138.34,
-        "end": 140.02
+        "end": 139.9
       }
     ]
   },
   {
-    "id": 25,
+    "id": 24,
     "text": "the way that you take my breath away",
-    "start": 140.02,
+    "start": 139.9,
     "end": 143.78,
     "words": [
       {
         "word": " The",
-        "start": 140.02,
-        "end": 140.54
+        "start": 139.9,
+        "end": 140.52
       },
       {
         "word": " way",
-        "start": 140.54,
-        "end": 140.76
+        "start": 140.52,
+        "end": 140.8
       },
       {
         "word": " that",
-        "start": 140.76,
-        "end": 141.02
+        "start": 140.8,
+        "end": 141.06
       },
       {
         "word": " you",
-        "start": 141.02,
-        "end": 141.36
+        "start": 141.06,
+        "end": 141.34
       },
       {
         "word": " take",
-        "start": 141.36,
+        "start": 141.34,
         "end": 141.84
       },
       {
         "word": " my",
         "start": 141.84,
-        "end": 142.32
+        "end": 142.42
       },
       {
         "word": " breath",
-        "start": 142.32,
-        "end": 142.88
+        "start": 142.42,
+        "end": 142.82
       },
       {
         "word": " away",
-        "start": 142.88,
+        "start": 142.82,
         "end": 143.78
       }
     ]
   },
   {
-    "id": 26,
+    "id": 25,
     "text": "it feels like i'm slowly falling",
     "start": 143.78,
-    "end": 146.88,
+    "end": 146.82,
     "words": [
       {
         "word": " It",
@@ -1326,236 +1328,226 @@
       {
         "word": " like",
         "start": 144.42,
-        "end": 144.76
+        "end": 144.72
       },
       {
         "word": " I'm",
-        "start": 144.76,
-        "end": 145.12
+        "start": 144.72,
+        "end": 145.1
       },
       {
         "word": " slowly",
-        "start": 145.12,
+        "start": 145.1,
         "end": 145.76
       },
       {
         "word": " falling",
         "start": 145.76,
-        "end": 146.88
+        "end": 146.82
       }
     ]
   },
   {
-    "id": 27,
+    "id": 26,
     "text": "deeper and deeper, deeper and deeper",
-    "start": 146.88,
-    "end": 150.02,
+    "start": 146.82,
+    "end": 150.0,
     "words": [
       {
         "word": " Deeper",
-        "start": 146.88,
-        "end": 147.76
+        "start": 146.82,
+        "end": 147.8
       },
       {
         "word": " and",
-        "start": 147.76,
-        "end": 148.0
+        "start": 147.8,
+        "end": 147.92
       },
       {
         "word": " deeper,",
-        "start": 148.0,
-        "end": 148.54
+        "start": 147.92,
+        "end": 148.48
       },
       {
         "word": " deeper",
         "start": 148.82,
-        "end": 149.32
+        "end": 149.3
       },
       {
         "word": " and",
-        "start": 149.32,
+        "start": 149.3,
         "end": 149.7
       },
       {
         "word": " deeper",
         "start": 149.7,
-        "end": 150.02
+        "end": 150.0
       }
     ]
   },
   {
-    "id": 28,
+    "id": 27,
     "text": "cause all i need is one love, one love, one heart",
-    "start": 150.02,
-    "end": 155.64,
+    "start": 150.0,
+    "end": 155.94,
     "words": [
       {
         "word": " Cause",
-        "start": 150.02,
-        "end": 150.04
+        "start": 150.0,
+        "end": 150.02
       },
       {
         "word": " all",
-        "start": 150.04,
-        "end": 150.2
+        "start": 150.02,
+        "end": 150.22
       },
       {
         "word": " I",
-        "start": 150.2,
-        "end": 150.42
+        "start": 150.22,
+        "end": 150.3
       },
       {
         "word": " need",
-        "start": 150.42,
-        "end": 150.62
+        "start": 150.3,
+        "end": 150.64
       },
       {
         "word": " is",
-        "start": 150.62,
+        "start": 150.64,
         "end": 150.92
       },
       {
         "word": " one",
         "start": 150.92,
-        "end": 151.24
+        "end": 151.26
       },
       {
         "word": " love,",
-        "start": 151.24,
-        "end": 152.34
+        "start": 151.26,
+        "end": 152.36
       },
       {
         "word": " one",
-        "start": 152.34,
-        "end": 153.04
+        "start": 152.36,
+        "end": 153.02
       },
       {
         "word": " love,",
-        "start": 153.04,
-        "end": 153.08
+        "start": 153.02,
+        "end": 153.72
       },
       {
         "word": " one",
-        "start": 153.08,
-        "end": 154.8
+        "start": 154.06,
+        "end": 154.84
       },
       {
         "word": " heart",
-        "start": 154.8,
-        "end": 155.64
+        "start": 154.84,
+        "end": 155.94
       }
     ]
   },
   {
-    "id": 29,
+    "id": 28,
     "text": "i don't need nobody",
-    "start": 155.64,
-    "end": 157.88,
+    "start": 155.94,
+    "end": 157.9,
     "words": [
       {
         "word": " I",
-        "start": 155.64,
+        "start": 155.94,
         "end": 156.48
       },
       {
         "word": " don't",
         "start": 156.48,
-        "end": 157.06
+        "end": 156.96
       },
       {
         "word": " need",
-        "start": 157.06,
-        "end": 157.28
+        "start": 156.96,
+        "end": 157.3
       },
       {
         "word": " nobody",
-        "start": 157.28,
-        "end": 157.88
+        "start": 157.3,
+        "end": 157.9
       }
     ]
   },
   {
-    "id": 30,
-    "text": "cause all i need is one love, one love, one heart",
-    "start": 157.88,
-    "end": 163.24,
+    "id": 29,
+    "text": "cause all i need is one love, one heart",
+    "start": 157.9,
+    "end": 161.74,
     "words": [
       {
         "word": " Cause",
-        "start": 157.88,
-        "end": 157.88
+        "start": 157.9,
+        "end": 157.9
       },
       {
         "word": " all",
-        "start": 157.88,
-        "end": 157.88
+        "start": 157.9,
+        "end": 157.9
       },
       {
         "word": " I",
-        "start": 157.88,
+        "start": 157.9,
         "end": 158.12
       },
       {
         "word": " need",
         "start": 158.12,
-        "end": 158.22
+        "end": 158.2
       },
       {
         "word": " is",
-        "start": 158.22,
-        "end": 158.36
+        "start": 158.2,
+        "end": 158.32
       },
       {
         "word": " one",
-        "start": 158.36,
-        "end": 158.76
+        "start": 158.32,
+        "end": 158.64
       },
       {
         "word": " love,",
-        "start": 158.76,
-        "end": 159.92
+        "start": 158.64,
+        "end": 159.88
       },
       {
         "word": " one",
-        "start": 159.92,
-        "end": 160.52
-      },
-      {
-        "word": " love,",
-        "start": 160.52,
-        "end": 161.84
-      },
-      {
-        "word": " one",
-        "start": 161.84,
-        "end": 162.48
+        "start": 160.1,
+        "end": 161.22
       },
       {
         "word": " heart",
-        "start": 162.48,
-        "end": 163.24
+        "start": 161.22,
+        "end": 161.74
       }
     ]
   },
   {
-    "id": 31,
+    "id": 30,
     "text": "baby, give it to me",
-    "start": 163.24,
-    "end": 164.96,
+    "start": 162.84,
+    "end": 164.98,
     "words": [
       {
         "word": " Baby,",
-        "start": 163.24,
-        "end": 163.78
+        "start": 162.84,
+        "end": 163.48
       },
       {
         "word": " give",
-        "start": 163.84,
-        "end": 164.2
+        "start": 163.82,
+        "end": 164.16
       },
       {
         "word": " it",
-        "start": 164.2,
+        "start": 164.16,
         "end": 164.4
       },
       {
@@ -1566,120 +1558,125 @@
       {
         "word": " me",
         "start": 164.58,
-        "end": 164.96
+        "end": 164.98
       }
     ]
   },
   {
-    "id": 32,
-    "text": "cause i don't want nobody when i got got your body, baby",
-    "start": 164.96,
-    "end": 169.5,
+    "id": 31,
+    "text": "cause i don't want, want nobody when i got, got your body, baby",
+    "start": 164.98,
+    "end": 169.46,
     "words": [
       {
         "word": " Cause",
-        "start": 164.96,
-        "end": 165.36
+        "start": 164.98,
+        "end": 165.32
       },
       {
         "word": " I",
-        "start": 165.36,
+        "start": 165.32,
         "end": 165.66
       },
       {
         "word": " don't",
         "start": 165.66,
-        "end": 165.94
+        "end": 166.06
+      },
+      {
+        "word": " want,",
+        "start": 166.06,
+        "end": 166.24
       },
       {
         "word": " want",
-        "start": 165.94,
-        "end": 166.28
+        "start": 166.54,
+        "end": 166.54
       },
       {
         "word": " nobody",
-        "start": 166.28,
-        "end": 167.02
+        "start": 166.54,
+        "end": 167.06
       },
       {
         "word": " when",
-        "start": 167.02,
-        "end": 167.46
+        "start": 167.06,
+        "end": 167.4
       },
       {
         "word": " I",
-        "start": 167.46,
-        "end": 167.76
+        "start": 167.4,
+        "end": 167.74
+      },
+      {
+        "word": " got,",
+        "start": 167.74,
+        "end": 167.96
       },
       {
         "word": " got",
-        "start": 167.76,
-        "end": 168.02
-      },
-      {
-        "word": " got",
-        "start": 168.02,
-        "end": 168.4
+        "start": 167.96,
+        "end": 168.3
       },
       {
         "word": " your",
-        "start": 168.4,
+        "start": 168.3,
         "end": 168.64
       },
       {
         "word": " body,",
         "start": 168.64,
-        "end": 168.98
+        "end": 168.94
       },
       {
         "word": " baby",
-        "start": 169.04,
-        "end": 169.5
+        "start": 169.14,
+        "end": 169.46
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "no, no, nobody",
+    "start": 169.46,
+    "end": 170.92,
+    "words": [
+      {
+        "word": " No,",
+        "start": 169.46,
+        "end": 169.84
+      },
+      {
+        "word": " no,",
+        "start": 169.84,
+        "end": 170.18
+      },
+      {
+        "word": " nobody",
+        "start": 170.22,
+        "end": 170.92
       }
     ]
   },
   {
     "id": 33,
-    "text": "no, no, nobody",
-    "start": 169.5,
-    "end": 170.86,
-    "words": [
-      {
-        "word": " No,",
-        "start": 169.5,
-        "end": 169.88
-      },
-      {
-        "word": " no,",
-        "start": 170.22,
-        "end": 170.22
-      },
-      {
-        "word": " nobody",
-        "start": 170.86,
-        "end": 170.86
-      }
-    ]
-  },
-  {
-    "id": 34,
     "text": "cause got what i need",
-    "start": 170.86,
+    "start": 170.92,
     "end": 172.48,
     "words": [
       {
         "word": " Cause",
-        "start": 170.86,
-        "end": 171.36
+        "start": 170.92,
+        "end": 171.38
       },
       {
         "word": " got",
-        "start": 171.36,
-        "end": 171.64
+        "start": 171.38,
+        "end": 171.62
       },
       {
         "word": " what",
-        "start": 171.64,
+        "start": 171.62,
         "end": 171.94
       },
       {
@@ -1695,34 +1692,39 @@
     ]
   },
   {
-    "id": 35,
-    "text": "cause i don't want nobody when i got got your body, baby",
+    "id": 34,
+    "text": "cause i don't want, want nobody when i got, got your body, baby",
     "start": 172.48,
-    "end": 176.98,
+    "end": 176.96,
     "words": [
       {
         "word": " Cause",
         "start": 172.48,
-        "end": 172.94
+        "end": 173.02
       },
       {
         "word": " I",
-        "start": 172.94,
-        "end": 173.24
+        "start": 173.02,
+        "end": 173.26
       },
       {
         "word": " don't",
-        "start": 173.24,
+        "start": 173.26,
         "end": 173.48
       },
       {
-        "word": " want",
+        "word": " want,",
         "start": 173.48,
-        "end": 173.96
+        "end": 173.76
+      },
+      {
+        "word": " want",
+        "start": 174.1,
+        "end": 174.1
       },
       {
         "word": " nobody",
-        "start": 173.96,
+        "start": 174.1,
         "end": 174.6
       },
       {
@@ -1733,82 +1735,82 @@
       {
         "word": " I",
         "start": 174.96,
-        "end": 175.26
+        "end": 175.2
+      },
+      {
+        "word": " got,",
+        "start": 175.2,
+        "end": 175.46
       },
       {
         "word": " got",
-        "start": 175.26,
-        "end": 175.5
-      },
-      {
-        "word": " got",
-        "start": 175.5,
+        "start": 175.88,
         "end": 175.88
       },
       {
         "word": " your",
         "start": 175.88,
-        "end": 176.2
+        "end": 176.14
       },
       {
         "word": " body,",
-        "start": 176.2,
+        "start": 176.14,
         "end": 176.52
       },
       {
         "word": " baby",
-        "start": 176.72,
-        "end": 176.98
+        "start": 176.78,
+        "end": 176.96
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "no, no, nobody",
+    "start": 176.96,
+    "end": 178.5,
+    "words": [
+      {
+        "word": " No,",
+        "start": 176.96,
+        "end": 177.42
+      },
+      {
+        "word": " no,",
+        "start": 177.42,
+        "end": 177.66
+      },
+      {
+        "word": " nobody",
+        "start": 177.88,
+        "end": 178.5
       }
     ]
   },
   {
     "id": 36,
-    "text": "no, no, nobody",
-    "start": 176.98,
-    "end": 178.62,
-    "words": [
-      {
-        "word": " No,",
-        "start": 176.98,
-        "end": 177.44
-      },
-      {
-        "word": " no,",
-        "start": 177.44,
-        "end": 177.8
-      },
-      {
-        "word": " nobody",
-        "start": 177.94,
-        "end": 178.62
-      }
-    ]
-  },
-  {
-    "id": 37,
     "text": "baby, give it to me",
-    "start": 178.62,
+    "start": 178.5,
     "end": 179.96,
     "words": [
       {
         "word": " Baby,",
-        "start": 178.62,
-        "end": 178.9
+        "start": 178.5,
+        "end": 179.06
       },
       {
         "word": " give",
-        "start": 179.22,
-        "end": 179.22
+        "start": 179.06,
+        "end": 179.16
       },
       {
         "word": " it",
-        "start": 179.22,
-        "end": 179.46
+        "start": 179.16,
+        "end": 179.42
       },
       {
         "word": " to",
-        "start": 179.46,
+        "start": 179.42,
         "end": 179.6
       },
       {
@@ -1819,150 +1821,168 @@
     ]
   },
   {
-    "id": 38,
-    "text": "cause i don't want nobody when i got got your body, baby",
+    "id": 37,
+    "text": "cause i don't want, want nobody when i got, got your body, baby",
     "start": 179.96,
-    "end": 184.48,
+    "end": 184.46,
     "words": [
       {
         "word": " Cause",
         "start": 179.96,
-        "end": 180.38
+        "end": 180.42
       },
       {
         "word": " I",
-        "start": 180.38,
-        "end": 180.66
+        "start": 180.42,
+        "end": 180.62
       },
       {
         "word": " don't",
-        "start": 180.66,
+        "start": 180.62,
         "end": 180.9
       },
       {
-        "word": " want",
+        "word": " want,",
         "start": 180.9,
-        "end": 181.3
+        "end": 181.04
+      },
+      {
+        "word": " want",
+        "start": 181.5,
+        "end": 181.5
       },
       {
         "word": " nobody",
-        "start": 181.3,
+        "start": 181.5,
         "end": 182.1
       },
       {
         "word": " when",
         "start": 182.1,
-        "end": 182.4
+        "end": 182.42
       },
       {
         "word": " I",
-        "start": 182.4,
-        "end": 182.64
+        "start": 182.42,
+        "end": 182.62
+      },
+      {
+        "word": " got,",
+        "start": 182.62,
+        "end": 182.86
       },
       {
         "word": " got",
-        "start": 182.64,
-        "end": 182.98
-      },
-      {
-        "word": " got",
-        "start": 182.98,
-        "end": 183.36
+        "start": 182.9,
+        "end": 183.32
       },
       {
         "word": " your",
-        "start": 183.36,
-        "end": 183.6
+        "start": 183.32,
+        "end": 183.58
       },
       {
         "word": " body,",
-        "start": 183.6,
-        "end": 183.96
+        "start": 183.58,
+        "end": 183.98
       },
       {
         "word": " baby",
-        "start": 184.28,
-        "end": 184.48
+        "start": 184.42,
+        "end": 184.46
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "no, no, nobody",
+    "start": 184.46,
+    "end": 185.9,
+    "words": [
+      {
+        "word": " No,",
+        "start": 184.46,
+        "end": 184.9
+      },
+      {
+        "word": " no,",
+        "start": 184.96,
+        "end": 185.14
+      },
+      {
+        "word": " nobody",
+        "start": 185.14,
+        "end": 185.9
       }
     ]
   },
   {
     "id": 39,
-    "text": "no, no, nobody has got what i need",
-    "start": 184.48,
-    "end": 187.5,
+    "text": "cause got what i need",
+    "start": 185.9,
+    "end": 187.48,
     "words": [
       {
-        "word": " No,",
-        "start": 184.48,
-        "end": 184.88
-      },
-      {
-        "word": " no,",
-        "start": 184.88,
-        "end": 185.38
-      },
-      {
-        "word": " nobody",
-        "start": 185.84,
-        "end": 185.84
-      },
-      {
-        "word": " has",
-        "start": 185.84,
-        "end": 186.42
+        "word": " Cause",
+        "start": 185.9,
+        "end": 186.36
       },
       {
         "word": " got",
-        "start": 186.42,
-        "end": 186.7
+        "start": 186.36,
+        "end": 186.64
       },
       {
         "word": " what",
-        "start": 186.7,
-        "end": 186.92
+        "start": 186.64,
+        "end": 186.94
       },
       {
         "word": " I",
-        "start": 186.92,
-        "end": 187.22
+        "start": 186.94,
+        "end": 187.18
       },
       {
         "word": " need",
-        "start": 187.22,
-        "end": 187.5
+        "start": 187.18,
+        "end": 187.48
       }
     ]
   },
   {
     "id": 40,
-    "text": "cause i don't want nobody when i got, got your body, baby",
-    "start": 187.5,
-    "end": 191.94,
+    "text": "cause i don't want, want nobody when i got, got your body, baby",
+    "start": 187.48,
+    "end": 191.72,
     "words": [
       {
         "word": " Cause",
-        "start": 187.5,
-        "end": 187.82
+        "start": 187.48,
+        "end": 187.9
       },
       {
         "word": " I",
-        "start": 187.82,
-        "end": 188.1
+        "start": 187.9,
+        "end": 188.16
       },
       {
         "word": " don't",
-        "start": 188.1,
-        "end": 188.44
+        "start": 188.16,
+        "end": 188.36
+      },
+      {
+        "word": " want,",
+        "start": 188.36,
+        "end": 188.58
       },
       {
         "word": " want",
-        "start": 188.44,
-        "end": 188.8
+        "start": 189.0,
+        "end": 189.0
       },
       {
         "word": " nobody",
-        "start": 188.8,
+        "start": 189.0,
         "end": 189.48
       },
       {
@@ -1973,133 +1993,111 @@
       {
         "word": " I",
         "start": 189.94,
-        "end": 190.26
+        "end": 190.08
       },
       {
         "word": " got,",
-        "start": 190.26,
-        "end": 190.52
+        "start": 190.08,
+        "end": 190.44
       },
       {
         "word": " got",
-        "start": 190.84,
-        "end": 190.84
+        "start": 190.86,
+        "end": 190.86
       },
       {
         "word": " your",
-        "start": 190.84,
-        "end": 191.14
+        "start": 190.86,
+        "end": 191.16
       },
       {
         "word": " body,",
-        "start": 191.14,
+        "start": 191.16,
         "end": 191.48
       },
       {
         "word": " baby",
-        "start": 191.76,
-        "end": 191.94
+        "start": 191.72,
+        "end": 191.72
       }
     ]
   },
   {
     "id": 41,
-    "text": "no, no, nobody has got what i need tonight",
-    "start": 191.94,
-    "end": 195.9,
+    "text": "we don't know nobody",
+    "start": 191.72,
+    "end": 193.46,
     "words": [
       {
-        "word": " No,",
-        "start": 191.94,
-        "end": 192.38
+        "word": " We",
+        "start": 191.72,
+        "end": 192.02
       },
       {
-        "word": " no,",
-        "start": 192.46,
-        "end": 192.76
+        "word": " don't",
+        "start": 192.02,
+        "end": 192.44
+      },
+      {
+        "word": " know",
+        "start": 192.44,
+        "end": 192.72
       },
       {
         "word": " nobody",
-        "start": 192.86,
+        "start": 192.72,
         "end": 193.46
-      },
-      {
-        "word": " has",
-        "start": 193.46,
-        "end": 193.96
-      },
-      {
-        "word": " got",
-        "start": 193.96,
-        "end": 194.2
-      },
-      {
-        "word": " what",
-        "start": 194.2,
-        "end": 194.46
-      },
-      {
-        "word": " I",
-        "start": 194.46,
-        "end": 194.64
-      },
-      {
-        "word": " need",
-        "start": 194.64,
-        "end": 195.04
-      },
-      {
-        "word": " tonight",
-        "start": 195.04,
-        "end": 195.9
       }
     ]
   },
   {
     "id": 42,
-    "text": "oh, oh, oh, oh, oh, oh, oh, oh",
-    "start": 214.48,
-    "end": 223.48000000000002,
+    "text": "you're what i need tonight",
+    "start": 193.46,
+    "end": 196.06,
     "words": [
       {
-        "word": " Oh,",
-        "start": 214.48,
-        "end": 215.82
+        "word": " You're",
+        "start": 193.46,
+        "end": 194.16
       },
       {
-        "word": " oh,",
-        "start": 215.82,
-        "end": 216.14
+        "word": " what",
+        "start": 194.16,
+        "end": 194.42
       },
       {
-        "word": " oh,",
-        "start": 220.1,
-        "end": 221.12
+        "word": " I",
+        "start": 194.42,
+        "end": 194.72
       },
       {
-        "word": " oh,",
-        "start": 221.26,
-        "end": 221.46
+        "word": " need",
+        "start": 194.72,
+        "end": 195.04
       },
       {
-        "word": " oh,",
-        "start": 221.46,
-        "end": 222.16
+        "word": " tonight",
+        "start": 195.04,
+        "end": 196.06
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "i am",
+    "start": 221.72,
+    "end": 223.62,
+    "words": [
+      {
+        "word": " I",
+        "start": 221.72,
+        "end": 223.02
       },
       {
-        "word": " oh,",
-        "start": 222.16,
-        "end": 222.22
-      },
-      {
-        "word": " oh,",
-        "start": 222.22,
-        "end": 223.48
-      },
-      {
-        "word": " oh",
-        "start": 223.48,
-        "end": 224.17999999999998
+        "word": " am",
+        "start": 223.02,
+        "end": 223.62
       }
     ]
   }

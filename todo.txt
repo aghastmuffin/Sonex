@@ -1,0 +1,5 @@
+split into 4 stems and then analyze each independently, drums for beats, vocals for vocals notes and main for like guitar and stuff.
+htdemucs_4s, change vocals to nothing or default
+fix mfa download
+add language selector
+add manual mfa model name selection

@@ -12,6 +12,7 @@ from PyQt6.QtWidgets import (
     QFormLayout,
     QSpinBox,
     QCheckBox,
+    QLabel,
 )
 from PyQt6.QtCore import QObject, QThread, pyqtSignal, pyqtSlot, QProcess
 from PyQt6.QtGui import QIcon
@@ -30,10 +31,40 @@ GPU = False
 WHISPER_TASK = "transcribe" #or "translate" !! Translate targets only English
 
 
+def notify(title, message):
+    CMD = '''
+    on run argv
+    display notification (item 2 of argv) with title (item 1 of argv)
+    end run
+    '''
+    subprocess.call(['osascript', '-e', CMD, title, message])
+
+def dialogue(title, message):
+    CMD = '''
+    on run argv
+    display dialogue (item 2 of argv) with title (item 1 of argv)
+    end run
+    '''
+    subprocess.call(['osascript', '-e', CMD, title, message])
+
+
+class Notification(QDialog):
+    def __init__(self, message, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Notification")
+        self.setModal(True)
+        # Add your notification content here
+        layout = QVBoxLayout(self)
+        label = QLabel(message, self) 
+        layout.addWidget(label)
+        buttons = QDialogButtonBox(QDialogButtonBox.StandardButton.Ok, self)
+        buttons.accepted.connect(self.accept)
+        layout.addWidget(buttons)
+
 class AdvancedSettingsDialog(QDialog):
     def __init__(self, settings, parent=None):
         super().__init__(parent)
-        self.setWindowTitle("Advanced Settings")
+        self.setWindowTitle("Advanced Settings") #TODO: Preflight check pretrained MFA models and check which will need to be used, maybe quick pre-analysis? 
         self.setModal(True)
 
         form = QFormLayout(self)
@@ -366,6 +397,7 @@ class Window(QMainWindow):
         self.set_demucs_active(False)
         self.set_whisper_active(False)
         self.button.setEnabled(True)
+        notify("Processing Complete", f"Your file has been processed. Output directory: {self.audiobase}" if self.audiobase else "Your file has been processed.")
         if self.pipeline_process is not None:
             self.pipeline_process.deleteLater()
             self.pipeline_process = None
@@ -435,7 +467,7 @@ class Window(QMainWindow):
         return audiobase, (detectlang or lang_code)
 
     def notesanalysis(self, af, sr=48000, BEAT_STRENGTH_QUANTILE = 0.60, MIN_RELATIVE_BEAT_STRENGTH = 1.05, MIN_BEAT_GAP_MS = 120, BEAT_TOLERANCE_MS = 20, progress_cb=None):
-        progress = progress_cb if progress_cb else (lambda *_: None)
+        progress = progress_cb if progress_cb else (lambda *_: None) #TODO: If vocal and Instrumental notes are separated by demucs then independently analyze and display independent results.
         from essentia.standard import MonoLoader, FrameGenerator, Windowing, Spectrum, SpectralPeaks, HPCP, RhythmExtractor2013
         import numpy as np
         def _score_beats(beats, bpm, confidence, duration_sec):
@@ -517,7 +549,25 @@ class Window(QMainWindow):
 
             return np.array(filtered, dtype=np.float32), beat_strengths, strength_threshold
 
-        def save_novocs(af, fp, sr):
+        def detect_beats_from_energy_spikes(audio, sr, min_gap_ms=MIN_BEAT_GAP_MS):
+            """Drum-only beat detection: register a beat on every energy spike.
+            Skips HPSS and RhythmExtractor since the input is already an isolated drum stem."""
+            from scipy.signal import find_peaks
+            env_window = max(1, int(round(0.010 * sr)))  # 10ms smoothing
+            envelope = np.convolve(np.abs(audio), np.ones(env_window, dtype=np.float32) / env_window, mode='same')
+            strength_threshold = float(np.quantile(envelope, 0.50))
+            min_gap_samples = max(1, int(round(min_gap_ms / 1000.0 * sr)))
+            peak_indices, _ = find_peaks(envelope, height=strength_threshold, distance=min_gap_samples)
+            beat_times = peak_indices.astype(np.float32) / sr
+            beat_strengths = envelope[peak_indices].astype(np.float32)
+            if len(beat_times) >= 2:
+                median_interval = float(np.median(np.diff(beat_times)))
+                bpm = 60.0 / median_interval if median_interval > 0 else 0.0
+            else:
+                bpm = 0.0
+            return beat_times, beat_strengths, strength_threshold, float(bpm)
+
+        def save_novocs(af, fp, sr, is_drums_only=False):
             file_path = fp
             AUDIO = af
             audio = MonoLoader(filename=file_path, sampleRate=sr)().astype(np.float32)
@@ -570,12 +620,21 @@ class Window(QMainWindow):
             # --- Rhythm Extraction ---
             print("Extracting rhythm (BPM and Beats)...")
             # This returns timestamps in seconds
-            rhythm = extract_best_rhythm(audio, duration_sec, sr)
-            bpm = rhythm["bpm"]
-            beats = rhythm["beats"]
-            filtered_beats, beat_strengths, beat_strength_threshold = filter_beats_by_strength(audio, sr, beats)
-            confidence = rhythm["confidence"]
-            selected_method = rhythm["method"]
+            if is_drums_only:
+                # Drum stem: skip HPSS / RhythmExtractor and detect every energy spike directly
+                print("Drum stem detected — using energy-spike beat detection...")
+                filtered_beats, beat_strengths, beat_strength_threshold, bpm = \
+                    detect_beats_from_energy_spikes(audio, sr)
+                beats = filtered_beats
+                confidence = 1.0
+                selected_method = "energy_spike"
+            else:
+                rhythm = extract_best_rhythm(audio, duration_sec, sr)
+                bpm = rhythm["bpm"]
+                beats = rhythm["beats"]
+                filtered_beats, beat_strengths, beat_strength_threshold = filter_beats_by_strength(audio, sr, beats)
+                confidence = rhythm["confidence"]
+                selected_method = rhythm["method"]
 
             # Create a beat map aligned to HPCP frame indices with tolerance for perceptual timing
             beat_map = np.zeros(num_frames, dtype=bool)
@@ -706,12 +765,16 @@ class Window(QMainWindow):
             
 
         progress(78, "Analyzing instrumental notes/beats...")
-        file_path = f"{af}/htdemucs/{af}/no_vocals.mp3"
+        demucs_stems_setting = self.advanced_settings.get("demucs_stems", DEMUCS_STEMS)
+        using_drum_stem = demucs_stems_setting in ("both", "default")
+        drums_path = f"{af}/htdemucs/{af}/drums.mp3"
+        file_path = drums_path if (using_drum_stem and os.path.exists(drums_path)) else f"{af}/htdemucs/{af}/no_vocals.mp3"
         file_path1 = f"{af}/vocals.mp3"
-        save_novocs(af, file_path, sr)
+        save_novocs(af, file_path, sr, is_drums_only=(using_drum_stem and os.path.exists(drums_path)))
         progress(87, "Analyzing vocals notes/beats...")
         savevocs(af, file_path1, sr)
         progress(96, "Analysis files saved")
+        notify("Analysis Complete!", f"Note and beat analysis complete for {af}. You can find the results in {af}/{af}_novocs_analysis.npz and {af}/{af}_vocs_analysis.npz.")
 
 
 if __name__ == "__main__":

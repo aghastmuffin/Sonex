@@ -232,6 +232,31 @@ def notesanalysis(af, sr=48000, beat_strength_quantile=0.60, min_relative_beat_s
                 best = result
         return best
 
+    def detect_beats_from_energy_spikes(audio, sr_local, min_gap_ms_local):
+        """Drum-only beat detection: register a beat on every energy spike.
+        Skips HPSS and RhythmExtractor since the input is already an isolated drum stem."""
+        from scipy.signal import find_peaks
+        # Short smoothing window (10 ms) to preserve transient shape
+        env_window = max(1, int(round(0.010 * sr_local)))
+        envelope = np.convolve(np.abs(audio), np.ones(env_window, dtype=np.float32) / env_window, mode='same')
+
+        # Low threshold — anything above median amplitude counts
+        strength_threshold = float(np.quantile(envelope, 0.50))
+        min_gap_samples = max(1, int(round(min_gap_ms_local / 1000.0 * sr_local)))
+        peak_indices, _ = find_peaks(envelope, height=strength_threshold, distance=min_gap_samples)
+
+        beat_times = peak_indices.astype(np.float32) / sr_local
+        beat_strengths = envelope[peak_indices].astype(np.float32)
+
+        # Estimate BPM from median inter-onset interval
+        if len(beat_times) >= 2:
+            median_interval = float(np.median(np.diff(beat_times)))
+            bpm = 60.0 / median_interval if median_interval > 0 else 0.0
+        else:
+            bpm = 0.0
+
+        return beat_times, beat_strengths, strength_threshold, float(bpm)
+
     def filter_beats_by_strength(audio, sr_local, beats):
         if len(beats) == 0:
             return beats, np.array([], dtype=np.float32), 0.0
@@ -267,7 +292,7 @@ def notesanalysis(af, sr=48000, beat_strength_quantile=0.60, min_relative_beat_s
 
         return np.array(filtered, dtype=np.float32), beat_strengths, strength_threshold
 
-    def analyze_and_save(audio_name, file_path, out_name, rhythm_file_path=None):
+    def analyze_and_save(audio_name, file_path, out_name, rhythm_file_path=None, is_drums_only=False):
         audio = MonoLoader(filename=file_path, sampleRate=sr)().astype(np.float32)
         rhythm_audio = MonoLoader(filename=(rhythm_file_path or file_path), sampleRate=sr)().astype(np.float32)
 
@@ -320,12 +345,21 @@ def notesanalysis(af, sr=48000, beat_strength_quantile=0.60, min_relative_beat_s
         num_frames = len(frame_hpcps)
         duration_sec = len(rhythm_audio) / sr
 
-        rhythm = extract_best_rhythm(rhythm_audio, duration_sec, sr)
-        bpm = rhythm["bpm"]
-        beats = rhythm["beats"]
-        filtered_beats, beat_strengths, beat_strength_threshold = filter_beats_by_strength(rhythm_audio, sr, beats)
-        confidence = rhythm["confidence"]
-        selected_method = rhythm["method"]
+        if is_drums_only:
+            # Drum stem: skip HPSS / RhythmExtractor and detect every energy spike directly
+            print("Drum stem detected — using energy-spike beat detection...")
+            filtered_beats, beat_strengths, beat_strength_threshold, bpm = \
+                detect_beats_from_energy_spikes(rhythm_audio, sr, min_beat_gap_ms)
+            beats = filtered_beats  # raw == filtered for npz consistency
+            confidence = 1.0
+            selected_method = "energy_spike"
+        else:
+            rhythm = extract_best_rhythm(rhythm_audio, duration_sec, sr)
+            bpm = rhythm["bpm"]
+            beats = rhythm["beats"]
+            filtered_beats, beat_strengths, beat_strength_threshold = filter_beats_by_strength(rhythm_audio, sr, beats)
+            confidence = rhythm["confidence"]
+            selected_method = rhythm["method"]
 
         beat_map = np.zeros(num_frames, dtype=bool)
         beat_centers = np.zeros(num_frames, dtype=bool)
@@ -360,7 +394,8 @@ def notesanalysis(af, sr=48000, beat_strength_quantile=0.60, min_relative_beat_s
         )
 
     emit_progress(78, "Analyzing instrumental notes/beats...")
-    if demucs_stems in ("both", "default"):
+    using_drum_stem = demucs_stems in ("both", "default")
+    if using_drum_stem:
         novocal_path = f"{af}/htdemucs/{af}/drums.mp3"
         melodic_path = f"{af}/other.mp3"
         if not os.path.exists(melodic_path):
@@ -369,8 +404,8 @@ def notesanalysis(af, sr=48000, beat_strength_quantile=0.60, min_relative_beat_s
         novocal_path = f"{af}/htdemucs/{af}/no_vocals.mp3"
         # Keep old behavior for non-full-stem runs (e.g., vocals): one source for both rhythm and melodic.
         melodic_path = novocal_path
-    
-    analyze_and_save(af, melodic_path, "novocs_analysis", rhythm_file_path=novocal_path)
+
+    analyze_and_save(af, melodic_path, "novocs_analysis", rhythm_file_path=novocal_path, is_drums_only=using_drum_stem)
 
     emit_progress(87, "Analyzing vocals notes/beats...")
     vocal_path = f"{af}/vocals.mp3"
