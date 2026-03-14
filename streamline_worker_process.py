@@ -129,7 +129,7 @@ def splitter(file_path, lang_code=None, translation_mode="argos", settings=None)
             _mfa_aligner.generate_aligned_v2(
                 audiobase,
                 acoustic=f"{language_dict[mfa_lang]}",
-                dictionary=f"{language_dict[mfa_lang]}_mfa",
+                dictionary=f"{language_dict[mfa_lang]}",
                 allow_fuzzy=True,
                 fuzzy_max_lookahead=8,
             )

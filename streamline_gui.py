@@ -14,13 +14,12 @@ from PyQt6.QtWidgets import (
     QCheckBox,
     QLabel,
 )
-from PyQt6.QtCore import QObject, QThread, pyqtSignal, pyqtSlot, QProcess
+from PyQt6.QtCore import QProcess
 from PyQt6.QtGui import QIcon
 import sys, os, json, subprocess
 
-language_dict = {'en': 'english', 'es': 'spanish', 'fr': 'french', 'de': 'german', 'it': 'italian', 'pt': 'portuguese', 'ru': 'russian', 'zh': 'chinese', 'ja': 'japanese', 'ko': 'korean', 'ar': 'arabic', 'hi': 'hindi', 'bn': 'bengali', 'pa': 'punjabi', 'tr': 'turkish', 'vi': 'vietnamese', 'pl': 'polish', 'nl': 'dutch', 'sv': 'swedish', 'no': 'norwegian', 'da': 'danish', 'fi': 'finnish', 'he': 'hebrew', 'el': 'greek', 'th': 'thai', 'id': 'indonesian', 'uk': 'ukrainian', 'cs': 'czech', 'ro': 'romanian', 'hu': 'hungarian'}
+language_dict = {'en': 'english', 'es': 'spanish', 'fr': 'french', 'de': 'german', 'it': 'italian', 'pt': 'portuguese', 'ru': 'russian', 'zh': 'chinese', 'ja': 'japanese', 'ko': 'korean', 'ar': 'arabic', 'hi': 'hindi', 'bn': 'bengali', 'pa': 'punjabi', 'tr': 'turkish', 'vi': 'vietnamese', 'pl': 'polish', 'nl': 'dutch', 'sv': 'swedish', 'no': 'norwegian', 'da': 'danish', 'fi': 'finnish', 'he': 'hebrew', 'el': 'greek', 'th': 'thai', 'id': 'indonesian', 'uk': 'ukrainian', 'cs': 'czech', 'ro': 'romanian', 'hu': 'hungarian', None: "Find For Me"}
 #settings variables
-# TODO: Hook them up
 DEMUCS_MODEL = "htdemucs" #or "tasnet" or htdemucs 
 DEMUCS_STEMS = "vocals" #or "other" or "both" or vocals
 WHISPER_MODEL = "medium" #or "tiny", "base", "small", "large-v2"
@@ -60,6 +59,8 @@ class Notification(QDialog):
         buttons = QDialogButtonBox(QDialogButtonBox.StandardButton.Ok, self)
         buttons.accepted.connect(self.accept)
         layout.addWidget(buttons)
+
+
 
 class AdvancedSettingsDialog(QDialog):
     def __init__(self, settings, parent=None):
@@ -103,6 +104,16 @@ class AdvancedSettingsDialog(QDialog):
         self.whisper_task_input.addItems(["transcribe", "translate"])
         self.whisper_task_input.setCurrentText(settings["whisper_task"])
         form.addRow("Whisper task", self.whisper_task_input)
+
+        """self.MFA_target_in = QComboBox(self)
+        self.MFA_target_in.addItems(["default", "vocals", "other", "both"])
+        self.MFA_target_in.setCurrentText(settings["MFA_target"])
+        form.addRow("MFA - FromLang:", self.MFA_target_in)
+
+        self.MFA_target_in = QComboBox(self)
+        self.MFA_target_in.addItems(["default", "vocals", "other", "both"])
+        self.MFA_target_in.setCurrentText(settings["MFA_target"])
+        form.addRow("MFA - FromLang:", self.MFA_target_in)"""
 
         self.gpu_input = QCheckBox("Enable GPU")
         self.gpu_input.setChecked(bool(settings["gpu"]))
@@ -150,36 +161,6 @@ def resolve_app_icon_path():
     return None
 
 
-class PipelineWorker(QObject):
-    progress = pyqtSignal(int, str)
-    finished = pyqtSignal()
-    error = pyqtSignal(str)
-
-    def __init__(self, window, file_path, lang_code):
-        super().__init__()
-        self.window = window
-        self.file_path = file_path
-        self.lang_code = lang_code
-        self.audiobase = None
-        self.detected_lang = None
-        
-
-    @pyqtSlot()
-    def run(self):
-        try:
-            self.progress.emit(5, "Starting...")
-            self.audiobase, self.detected_lang = self.window.splitter(
-                self.file_path,
-                self.lang_code,
-                progress_cb=self.progress.emit,
-            )
-            self.progress.emit(70, "Audio prep complete")
-            self.window.notesanalysis(self.audiobase, progress_cb=self.progress.emit)
-            self.progress.emit(100, "Done")
-            self.finished.emit()
-        except Exception as e:
-            self.error.emit(str(e))
-
 class Window(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -195,16 +176,22 @@ class Window(QMainWindow):
             "gpu": GPU,
         }
 
-        self.setWindowTitle("Streamline GUI")
+        self.setWindowTitle("SONEX - Analyzer")
         self.setGeometry(100, 100, 400, 200)
 
         layout = QVBoxLayout()
 
         self.lang_input = QComboBox(self)
-        self.lang_input.setPlaceholderText("English")
+        self.lang_input.setPlaceholderText("From_Language")
         for code, name in language_dict.items():
             self.lang_input.addItem(f"{name.title()}", code)
         layout.addWidget(self.lang_input)
+
+        self.lang_to = QComboBox(self)
+        self.lang_to.setPlaceholderText("To_Language (Translation)")
+        for code, name in language_dict.items():
+            self.lang_to.addItem(f"{name.title()}", code)
+        layout.addWidget(self.lang_to)
 
         
 
@@ -247,8 +234,6 @@ class Window(QMainWindow):
         self.whisper_prog_bar.setFormat("Whisper idle")
         self.whisper_prog_bar.setVisible(False)
 
-        self.worker_thread = None
-        self.worker = None
         self.pipeline_process = None
 
         layout.addWidget(self.prog_bar)
@@ -411,371 +396,6 @@ class Window(QMainWindow):
         if self.pipeline_process is not None:
             self.pipeline_process.deleteLater()
             self.pipeline_process = None
-
-    def splitter(self, file_path, lang_code=None, progress_cb=None):
-        def normalize_lang_code(code):
-            if not code:
-                return None
-            code = code.lower()
-            if code in language_dict:
-                return code
-            for k, v in language_dict.items():
-                if v == code:
-                    return k
-            return None
-        
-
-        progress = progress_cb if progress_cb else (lambda *_: None)
-        from backbone.ltra.letra_toolkit import transcribe, align, separate
-        progress(10, "Separating stems...")
-        separate(file_path)
-        audiobase = os.path.basename(file_path).removesuffix(".mp3")
-        os.makedirs(audiobase, exist_ok=True)
-        progress(25, "Transcribing vocals...")
-        _, detectlang = transcribe(inp=f"{audiobase}/vocals.mp3", beam_size=WHISPER_BEAMSIZE, pat=WHISPER_PAT, best_of=WHISPER_BESTOF, outp=f"{audiobase}/vocals_whisper_segments.json", language=lang_code, model_size=WHISPER_MODEL, task=WHISPER_TASK) #TODO: allow advanced settings to set whisper custom settings, i.e model strength etc.
-        #whisperx align
-        progress(40, "Aligning words...")
-        align(f"{audiobase}/vocals.mp3", f"{audiobase}/vocals_whisper_segments.json", f"{audiobase}/lyrics.txt", language=lang_code)
-        if detectlang and not lang_code:
-            lang_code = detectlang
-        #mfa align
-        try:
-            progress(52, "Running MFA alignment...")
-            from backbone.ltra import _mfa_aligner
-            mfa_lang = detectlang or lang_code
-            if mfa_lang in language_dict:
-                _mfa_aligner.generate_aligned_v2(audiobase, acoustic=f"{language_dict[mfa_lang]}", dictionary=f"{language_dict[mfa_lang]}_mfa", allow_fuzzy=True, fuzzy_max_lookahead=8)
-        except Exception as e:
-            print("MFA Error:", e)
-            pass
-        from backbone.ltra.argos_translate import translate_file
-
-        source_lang = normalize_lang_code(detectlang or lang_code or "es")
-        target_lang = normalize_lang_code("en")
-
-        if source_lang == target_lang:
-            print(f"Skipping Argos translation: source and target are both '{target_lang}'.")
-        else:
-            progress(62, "Translating to English...")
-            out = translate_file(
-                f"{audiobase}/vocals_whisper_segments.json",
-                from_lang=source_lang,
-                to_lang=target_lang,
-                verbose=True,
-            )
-        progress(68, "Text pipeline complete")
-        return audiobase, (detectlang or lang_code)
-
-    def notesanalysis(self, af, sr=48000, BEAT_STRENGTH_QUANTILE = 0.60, MIN_RELATIVE_BEAT_STRENGTH = 1.05, MIN_BEAT_GAP_MS = 120, BEAT_TOLERANCE_MS = 20, progress_cb=None):
-        progress = progress_cb if progress_cb else (lambda *_: None) #TODO: If vocal and Instrumental notes are separated by demucs then independently analyze and display independent results.
-        from essentia.standard import MonoLoader, FrameGenerator, Windowing, Spectrum, SpectralPeaks, HPCP, RhythmExtractor2013
-        import numpy as np
-        def _score_beats(beats, bpm, confidence, duration_sec):
-            if len(beats) < 2 or bpm <= 0:
-                return -1e9
-            intervals = np.diff(beats)
-            mean_interval = float(np.mean(intervals))
-            if mean_interval <= 0:
-                return -1e9
-            cv = float(np.std(intervals) / (mean_interval + 1e-9))
-            stability = 1.0 / (1.0 + cv)
-            expected_beats = duration_sec * bpm / 60.0
-            coverage = 1.0 - abs(len(beats) - expected_beats) / (expected_beats + 1e-9)
-            coverage = float(np.clip(coverage, 0.0, 1.0))
-            conf = float(np.clip(confidence, 0.0, 1.0))
-            return 0.5 * stability + 0.3 * coverage + 0.2 * conf
-        def extract_best_rhythm(audio, duration_sec, sr):
-            # Use HPSS to isolate percussive component for better beat detection
-            import librosa
-            print("Isolating percussive component for beat detection...")
-            audio_np = audio.astype(np.float32)
-            _, y_percussive = librosa.effects.hpss(audio_np)
-            
-            best = None
-            for method in ("multifeature", "degara"):
-                extractor = RhythmExtractor2013(method=method)
-                # Run beat detection on percussive component only
-                bpm, beats, confidence, estimates, bpm_intervals = extractor(y_percussive)
-                score = _score_beats(beats, bpm, confidence, duration_sec)
-                result = {
-                    "method": method,
-                    "bpm": bpm,
-                    "beats": beats,
-                    "confidence": confidence,
-                    "estimates": estimates,
-                    "bpm_intervals": bpm_intervals,
-                    "score": score,
-                }
-                if best is None or result["score"] > best["score"]:
-                    best = result
-            return best
-
-        def filter_beats_by_strength(audio, sr, beats,
-                             strength_quantile=BEAT_STRENGTH_QUANTILE,
-                             min_relative_strength=MIN_RELATIVE_BEAT_STRENGTH,
-                             min_gap_ms=MIN_BEAT_GAP_MS):
-            if len(beats) == 0:
-                return beats, np.array([], dtype=np.float32), 0.0
-
-            # Smoothed amplitude envelope as a simple beat-energy proxy
-            env_window = max(1, int(round(0.050 * sr)))  # 50ms smoothing
-            envelope = np.convolve(np.abs(audio), np.ones(env_window, dtype=np.float32) / env_window, mode='same')
-
-            half_window = max(1, int(round(0.040 * sr)))  # +/-40ms around beat
-            beat_strengths = np.zeros(len(beats), dtype=np.float32)
-            for i, beat_time in enumerate(beats):
-                center = int(round(float(beat_time) * sr))
-                start = max(0, center - half_window)
-                end = min(len(envelope), center + half_window + 1)
-                if end > start:
-                    beat_strengths[i] = float(np.max(envelope[start:end]))
-
-            quantile_thr = float(np.quantile(beat_strengths, np.clip(strength_quantile, 0.0, 1.0)))
-            song_ref = float(np.quantile(envelope, 0.75))
-            relative_thr = song_ref * float(max(0.0, min_relative_strength))
-            strength_threshold = max(quantile_thr, relative_thr)
-
-            min_gap_sec = max(0.0, float(min_gap_ms) / 1000.0)
-            filtered = []
-            last_kept = -1e9
-            for beat_time, strength in zip(beats, beat_strengths):
-                bt = float(beat_time)
-                if strength < strength_threshold:
-                    continue
-                if bt - last_kept < min_gap_sec:
-                    continue
-                filtered.append(bt)
-                last_kept = bt
-
-            return np.array(filtered, dtype=np.float32), beat_strengths, strength_threshold
-
-        def detect_beats_from_energy_spikes(audio, sr, min_gap_ms=MIN_BEAT_GAP_MS):
-            """Drum-only beat detection: register a beat on every energy spike.
-            Skips HPSS and RhythmExtractor since the input is already an isolated drum stem."""
-            from scipy.signal import find_peaks
-            env_window = max(1, int(round(0.010 * sr)))  # 10ms smoothing
-            envelope = np.convolve(np.abs(audio), np.ones(env_window, dtype=np.float32) / env_window, mode='same')
-            strength_threshold = float(np.quantile(envelope, 0.50))
-            min_gap_samples = max(1, int(round(min_gap_ms / 1000.0 * sr)))
-            peak_indices, _ = find_peaks(envelope, height=strength_threshold, distance=min_gap_samples)
-            beat_times = peak_indices.astype(np.float32) / sr
-            beat_strengths = envelope[peak_indices].astype(np.float32)
-            if len(beat_times) >= 2:
-                median_interval = float(np.median(np.diff(beat_times)))
-                bpm = 60.0 / median_interval if median_interval > 0 else 0.0
-            else:
-                bpm = 0.0
-            return beat_times, beat_strengths, strength_threshold, float(bpm)
-
-        def save_novocs(af, fp, sr, is_drums_only=False):
-            file_path = fp
-            AUDIO = af
-            audio = MonoLoader(filename=file_path, sampleRate=sr)().astype(np.float32)
-
-            # Normalize
-            audio_max = np.max(np.abs(audio))
-            if audio_max > 0:
-                audio = audio / audio_max
-            audio *= 20.0
-
-            # Frame parameters
-            frame_size = 4096
-            hop_size = 48  # Exactly 1ms
-
-            # Initialize Algorithms
-            window = Windowing(type='hann')
-            spectrum = Spectrum()
-            spectral_peaks = SpectralPeaks(minFrequency=40, maxFrequency=5000, sampleRate=sr)
-            hpcp_algo = HPCP(size=12, referenceFrequency=440.0,
-                            minFrequency=40, maxFrequency=5000,
-                            harmonics=8, bandPreset=False)
-
-            print("Processing HPCP (Notes)...")
-            frame_hpcps = []
-            for frame in FrameGenerator(audio, frameSize=frame_size, hopSize=hop_size):
-                if np.all(frame == 0):
-                    frame_hpcps.append(np.zeros(12))
-                    continue
-                
-                win_frame = window(frame)
-                mag_spectrum = spectrum(win_frame)
-                freqs, mags = spectral_peaks(mag_spectrum)
-                
-                if len(freqs) == 0:
-                    frame_hpcps.append(np.zeros(12))
-                    continue
-
-                hpcp_frame = hpcp_algo(freqs, mags)
-                
-                # Normalize
-                m_val = np.max(hpcp_frame)
-                if m_val > 0:
-                    hpcp_frame /= m_val
-                frame_hpcps.append(hpcp_frame)
-
-            frame_hpcps = np.array(frame_hpcps)
-            num_frames = len(frame_hpcps)
-            duration_sec = num_frames * hop_size / sr
-
-            # --- Rhythm Extraction ---
-            print("Extracting rhythm (BPM and Beats)...")
-            # This returns timestamps in seconds
-            if is_drums_only:
-                # Drum stem: skip HPSS / RhythmExtractor and detect every energy spike directly
-                print("Drum stem detected — using energy-spike beat detection...")
-                filtered_beats, beat_strengths, beat_strength_threshold, bpm = \
-                    detect_beats_from_energy_spikes(audio, sr)
-                beats = filtered_beats
-                confidence = 1.0
-                selected_method = "energy_spike"
-            else:
-                rhythm = extract_best_rhythm(audio, duration_sec, sr)
-                bpm = rhythm["bpm"]
-                beats = rhythm["beats"]
-                filtered_beats, beat_strengths, beat_strength_threshold = filter_beats_by_strength(audio, sr, beats)
-                confidence = rhythm["confidence"]
-                selected_method = rhythm["method"]
-
-            # Create a beat map aligned to HPCP frame indices with tolerance for perceptual timing
-            beat_map = np.zeros(num_frames, dtype=bool)
-            beat_centers = np.zeros(num_frames, dtype=bool)
-            beat_tolerance_ms = BEAT_TOLERANCE_MS
-            beat_tolerance_frames = max(1, int(round((beat_tolerance_ms / 1000.0) * sr / hop_size)))
-            for beat_time in filtered_beats:
-                frame_index = int(round(beat_time * sr / hop_size))
-                if 0 <= frame_index < num_frames:
-                    beat_centers[frame_index] = True
-                    start = max(0, frame_index - beat_tolerance_frames)
-                    end = min(num_frames, frame_index + beat_tolerance_frames + 1)
-                    beat_map[start:end] = True
-
-            # --- Save Everything ---
-            np.savez_compressed(f"{AUDIO}/{AUDIO}_novocs_analysis.npz", 
-                                hpcp=frame_hpcps, 
-                                beats=beat_map, 
-                                beat_centers=beat_centers,
-                                bpm=np.array([bpm]),
-                                beat_times=filtered_beats,
-                                beat_times_raw=beats,
-                                beat_confidence=np.array([confidence]),
-                                rhythm_method=np.array([selected_method]),
-                                beat_strengths_raw=beat_strengths,
-                                beat_strength_threshold=np.array([beat_strength_threshold]),
-                                beat_strength_quantile=np.array([BEAT_STRENGTH_QUANTILE]),
-                                min_relative_beat_strength=np.array([MIN_RELATIVE_BEAT_STRENGTH]),
-                                min_beat_gap_ms=np.array([MIN_BEAT_GAP_MS]),
-                                beat_tolerance_ms=np.array([beat_tolerance_ms]),
-                                sample_rate=np.array([sr]),
-                                frame_size=np.array([frame_size]),
-                                hop_size=np.array([hop_size]))
-            
-        def savevocs(af, fp, sr):
-            AUDIO = af
-            file_path = fp
-
-            audio = MonoLoader(filename=file_path, sampleRate=sr)().astype(np.float32)
-
-            # Normalize
-            audio_max = np.max(np.abs(audio))
-            if audio_max > 0:
-                audio = audio / audio_max
-            audio *= 20.0
-
-            # Frame parameters
-            frame_size = 4096
-            hop_size = 48  # Exactly 1ms
-
-            # Initialize Algorithms
-            window = Windowing(type='hann')
-            spectrum = Spectrum()
-            spectral_peaks = SpectralPeaks(minFrequency=40, maxFrequency=5000, sampleRate=sr)
-            hpcp_algo = HPCP(size=12, referenceFrequency=440.0,
-                            minFrequency=40, maxFrequency=5000,
-                            harmonics=8, bandPreset=False)
-
-            print("Processing HPCP (Notes)...")
-            frame_hpcps = []
-            for frame in FrameGenerator(audio, frameSize=frame_size, hopSize=hop_size):
-                if np.all(frame == 0):
-                    frame_hpcps.append(np.zeros(12))
-                    continue
-                
-                win_frame = window(frame)
-                mag_spectrum = spectrum(win_frame)
-                freqs, mags = spectral_peaks(mag_spectrum)
-                
-                if len(freqs) == 0:
-                    frame_hpcps.append(np.zeros(12))
-                    continue
-
-                hpcp_frame = hpcp_algo(freqs, mags)
-                
-                # Normalize
-                m_val = np.max(hpcp_frame)
-                if m_val > 0:
-                    hpcp_frame /= m_val
-                frame_hpcps.append(hpcp_frame)
-
-            frame_hpcps = np.array(frame_hpcps)
-            num_frames = len(frame_hpcps)
-            duration_sec = num_frames * hop_size / sr
-
-            # --- Rhythm Extraction ---
-            print("Extracting rhythm (BPM and Beats)...")
-            # This returns timestamps in seconds
-            rhythm = extract_best_rhythm(audio, duration_sec, sr)
-            bpm = rhythm["bpm"]
-            beats = rhythm["beats"]
-            filtered_beats, beat_strengths, beat_strength_threshold = filter_beats_by_strength(audio, sr, beats)
-            confidence = rhythm["confidence"]
-            selected_method = rhythm["method"]
-
-            # Create a beat map aligned to HPCP frame indices with tolerance for perceptual timing
-            beat_map = np.zeros(num_frames, dtype=bool)
-            beat_centers = np.zeros(num_frames, dtype=bool)
-            beat_tolerance_ms = BEAT_TOLERANCE_MS
-            beat_tolerance_frames = max(1, int(round((beat_tolerance_ms / 1000.0) * sr / hop_size)))
-            for beat_time in filtered_beats:
-                frame_index = int(round(beat_time * sr / hop_size))
-                if 0 <= frame_index < num_frames:
-                    beat_centers[frame_index] = True
-                    start = max(0, frame_index - beat_tolerance_frames)
-                    end = min(num_frames, frame_index + beat_tolerance_frames + 1)
-                    beat_map[start:end] = True
-
-            # --- Save Everything ---
-            np.savez_compressed(f"{AUDIO}/{AUDIO}_vocs_analysis.npz", 
-                                hpcp=frame_hpcps, 
-                                beats=beat_map, 
-                                beat_centers=beat_centers,
-                                bpm=np.array([bpm]),
-                                beat_times=filtered_beats,
-                                beat_times_raw=beats,
-                                beat_confidence=np.array([confidence]),
-                                rhythm_method=np.array([selected_method]),
-                                beat_strengths_raw=beat_strengths,
-                                beat_strength_threshold=np.array([beat_strength_threshold]),
-                                beat_strength_quantile=np.array([BEAT_STRENGTH_QUANTILE]),
-                                min_relative_beat_strength=np.array([MIN_RELATIVE_BEAT_STRENGTH]),
-                                min_beat_gap_ms=np.array([MIN_BEAT_GAP_MS]),
-                                beat_tolerance_ms=np.array([beat_tolerance_ms]),
-                                sample_rate=np.array([sr]),
-                                frame_size=np.array([frame_size]),
-                                hop_size=np.array([hop_size]))
-            
-
-        progress(78, "Analyzing instrumental notes/beats...")
-        demucs_stems_setting = self.advanced_settings.get("demucs_stems", DEMUCS_STEMS)
-        using_drum_stem = demucs_stems_setting in ("both", "default")
-        drums_path = f"{af}/htdemucs/{af}/drums.mp3"
-        file_path = drums_path if (using_drum_stem and os.path.exists(drums_path)) else f"{af}/htdemucs/{af}/no_vocals.mp3"
-        file_path1 = f"{af}/vocals.mp3"
-        save_novocs(af, file_path, sr, is_drums_only=(using_drum_stem and os.path.exists(drums_path)))
-        progress(87, "Analyzing vocals notes/beats...")
-        savevocs(af, file_path1, sr)
-        progress(96, "Analysis files saved")
-        notify("Analysis Complete!", f"Note and beat analysis complete for {af}. You can find the results in {af}/{af}_novocs_analysis.npz and {af}/{af}_vocs_analysis.npz.")
-
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

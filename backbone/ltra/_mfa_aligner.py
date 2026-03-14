@@ -10,6 +10,81 @@ from pathlib import Path
 from praatio import tgio
 from typing import Optional
 
+
+ACOUSTIC_MODELS = {
+    "english": "english_mfa",
+    "english_us": "english_us_arpa",
+    "english_uk": "english_uk_mfa",
+    "english_india": "english_india_mfa",
+    "english_nigeria": "english_nigeria_mfa",
+
+    "spanish": "spanish_mfa",
+    "spanish_spain": "spanish_spain_mfa",
+    "spanish_latin_america": "spanish_latin_america_mfa",
+
+    "french": "french_mfa",
+    "german": "german_mfa",
+    "portuguese": "portuguese_mfa",
+    "italian": "italian_mfa",
+    "dutch": "dutch_mfa",
+    "catalan": "catalan_mfa",
+
+    "mandarin": "mandarin_mfa",
+    "japanese": "japanese_mfa",
+    "korean": "korean_mfa",
+
+    "russian": "russian_mfa",
+    "ukrainian": "ukrainian_mfa",
+    "polish": "polish_mfa",
+    "czech": "czech_mfa",
+    "slovak": "slovak_mfa",
+    "croatian": "croatian_mfa",
+    "serbocroatian": "serbocroatian_mfa",
+    "bulgarian": "bulgarian_mfa",
+    "belarusian": "belarusian_mfa",
+
+    "turkish": "turkish_mfa",
+    "vietnamese": "vietnamese_mfa",
+    "thai": "thai_mfa",
+}
+
+DICTIONARY_MODELS = {
+    "english": "english_mfa",
+    "english_us": "english_us_mfa",
+    "english_uk": "english_uk_mfa",
+    "english_india": "english_india_mfa",
+    "english_nigeria": "english_nigeria_mfa",
+    "english_us_arpa": "english_us_arpa",
+
+    "spanish": "spanish_mfa",
+    "spanish_spain": "spanish_spain_mfa",
+    "spanish_latin_america": "spanish_latin_america_mfa",
+
+    "french": "french_mfa",
+    "german": "german_mfa",
+    "portuguese": "portuguese_mfa",
+    "italian": "italian_mfa",
+    "dutch": "dutch_mfa",
+    "catalan": "catalan_mfa",
+
+    "mandarin": "mandarin_mfa",
+    "japanese": "japanese_mfa",
+    "korean": "korean_mfa",
+
+    "russian": "russian_mfa",
+    "ukrainian": "ukrainian_mfa",
+    "polish": "polish_mfa",
+    "czech": "czech_mfa",
+    "slovak": "slovak_mfa",
+    "croatian": "croatian_mfa",
+    "serbocroatian": "serbocroatian_mfa",
+    "bulgarian": "bulgarian_mfa",
+    "belarusian": "belarusian_mfa",
+
+    "turkish": "turkish_mfa",
+    "vietnamese": "vietnamese_mfa",
+    "thai": "thai_mfa",
+}
 #HERE = Path(__file__).resolve().parent
 def generate_aligned(head_folder, vocals="vocals.mp3", transcript="vocals_whisper_segments.json", acoustic="english_us_arpa", dictionary="english_us_arpa", allow_fuzzy=False, fuzzy_max_lookahead=6):
     # Ensure path arithmetic works even when head_folder is a string.
@@ -416,6 +491,10 @@ def generate_aligned_v2(
         corpus_pairs.append((wav_i, txt_i))
 
     # ---- 5) Run MFA align ----
+    if not dictionary in DICTIONARY_MODELS or not acoustic in ACOUSTIC_MODELS: #up until here acoustic and dictionary are just plain-text names
+        acoustic = ACOUSTIC_MODELS[acoustic] 
+        dictionary = DICTIONARY_MODELS[dictionary]
+
     cmd = [
         "conda", "run", "-n", "mfa",
         "mfa", "align",
@@ -429,8 +508,18 @@ def generate_aligned_v2(
     # determinism / stability
     if num_jobs is not None:
         cmd += ["--num_jobs", str(int(num_jobs))]
+    try:
+        run(cmd)
+    except:
+        acoustics = subprocess.run(["mfa", "model", "list", "acoustic"], capture_output=True, text=True)
+        acoustics.stdout = acoustics.stdout.replace("\n", "")
+        dictchk = subprocess.run(["mfa", "model", "list", "dictionary"], capture_output=True, text=True)
+        dictchk.stdout = dictchk.stdout.replace("\n", "") #TODO: Finish
 
-    run(cmd)
+        install_lang(acoustic, dictionary)
+        run(cmd)
+        
+        
 
     # ---- 6) Parse all TextGrids and concatenate word intervals (with offsets) ----
     # MFA outputs one TextGrid per wav in OUTDIR, usually matching filenames.
