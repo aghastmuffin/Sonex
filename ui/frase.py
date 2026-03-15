@@ -176,8 +176,8 @@ def _find_analysis_file(folder_path):
 
     base_name = os.path.basename(folder_path.rstrip("/"))
     preferred = [
-        f"{base_name}_vocs_analysis.npz",
         f"{base_name}_novocs_analysis.npz",
+        f"{base_name}_vocs_analysis.npz",
         f"{base_name}_analysis.npz",
     ]
 
