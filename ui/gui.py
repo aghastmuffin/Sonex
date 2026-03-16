@@ -150,10 +150,10 @@ class AdvancedSettingsDialog(QDialog):
 def resolve_app_icon_path():
     base_dir = os.path.dirname(__file__)
     candidate_paths = [
-        os.path.join(base_dir, "gui", "assets", "brand", "sonex0high-res"),
-        os.path.join(base_dir, "gui", "assets", "brand", "sonex0high-res.png"),
-        os.path.join(base_dir, "gui", "assets", "brand", "sonex-high-resolution-logo.png"),
-        os.path.join(base_dir, "gui", "assets", "brand", "sonex-high-resolution-logo-transparent.png"),
+        os.path.join(base_dir, "assets", "sonex0high-res"),
+        os.path.join(base_dir, "assets", "sonex0high-res.png"),
+        os.path.join(base_dir, "assets", "sonex-high-resolution-logo.png"),
+        os.path.join(base_dir, "assets", "sonex-high-resolution-logo-transparent.png"),
     ]
     for icon_path in candidate_paths:
         if os.path.exists(icon_path):

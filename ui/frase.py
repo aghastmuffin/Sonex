@@ -14,7 +14,7 @@ pygame.display.set_caption(
     "🗣️ SONEX SINGLELyricViewer_DBG LATIN-SPANISH Iniciado Sesión Como: Levi Brown ORC:0009-0007-5278-6761"
 )
 
-brand_dir = os.path.join(os.path.dirname(__file__), "gui", "assets", "brand")
+brand_dir = os.path.join(os.path.dirname(__file__),"assets")
 icon_candidates = [
     "resolution-logo.png",
     "sonex-high-resolution-logo.png",
@@ -33,7 +33,7 @@ for icon_name in icon_candidates:
 
 clock = pygame.time.Clock()
 font_path = os.path.join(
-    os.path.dirname(__file__), "gui", "assets", "brand", "Darker Grotesque.ttf"
+    os.path.dirname(__file__), "assets", "Darker Grotesque.ttf"
 )
 try:
     dbgfont = pygame.font.Font(font_path, 18)

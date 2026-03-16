@@ -152,7 +152,7 @@ def _find_transcript_files(folder_path):
             (os.path.join(path, name) for name in trans_candidates if os.path.exists(os.path.join(path, name))),
             None,
         )
-        if orig_path and trans_path:
+        if orig_path or trans_path:
             return orig_path, trans_path, path
         return None, None, None
 
@@ -160,12 +160,15 @@ def _find_transcript_files(folder_path):
     if direct_orig and direct_trans:
         return direct_orig, direct_trans, direct_folder
 
+    partial_match = (direct_orig, direct_trans, direct_folder) if (direct_orig or direct_trans) else (None, None, None)
     for root, _, _ in os.walk(folder_path):
         nested_orig, nested_trans, nested_folder = _resolve_in_dir(root)
         if nested_orig and nested_trans:
             return nested_orig, nested_trans, nested_folder
+        if (nested_orig or nested_trans) and not partial_match[2]:
+            partial_match = (nested_orig, nested_trans, nested_folder)
 
-    return None, None, None
+    return partial_match
 
 
 def _shorten_path(path, max_len=64):
@@ -197,7 +200,7 @@ def choose_generated_folder():
                     if selected:
                         folder_path = selected
                         file_1, file_2, resolved_folder = _find_transcript_files(folder_path)
-                elif start_btn.collidepoint(event.pos) and file_1 and file_2:
+                elif start_btn.collidepoint(event.pos) and (file_1 or file_2):
                     choosing = False
 
         screen.fill((24, 24, 24))
@@ -207,7 +210,7 @@ def choose_generated_folder():
         pygame.draw.rect(screen, (58, 58, 58), btn_folder, border_radius=10)
         pygame.draw.rect(
             screen,
-            (70, 130, 95) if file_1 and file_2 else (55, 55, 55),
+            (70, 130, 95) if (file_1 or file_2) else (55, 55, 55),
             start_btn,
             border_radius=10,
         )
@@ -227,9 +230,15 @@ def choose_generated_folder():
         screen.blit(file1_label, (70, 351))
         screen.blit(file2_label, (70, 384))
 
-        hint = dbgfont.render("Pick a folder, auto-find generated files, then click Start", True, (165, 165, 165))
-        if folder_path and (not file_1 or not file_2):
-            warn = dbgfont.render("Could not find both transcript files in that folder tree.", True, (230, 120, 120))
+        hint = dbgfont.render("Pick a folder, auto-find transcripts, then click Start", True, (165, 165, 165))
+        if file_1 and file_2:
+            mode_hint = dbgfont.render("Mode: Dual transcript", True, (170, 220, 170))
+            screen.blit(mode_hint, (WIDTH // 2 - mode_hint.get_width() // 2, 545))
+        elif file_1 or file_2:
+            mode_hint = dbgfont.render("Mode: Single transcript", True, (220, 210, 160))
+            screen.blit(mode_hint, (WIDTH // 2 - mode_hint.get_width() // 2, 545))
+        elif folder_path:
+            warn = dbgfont.render("Could not find a transcript file in that folder tree.", True, (230, 120, 120))
             screen.blit(warn, (WIDTH // 2 - warn.get_width() // 2, 545))
         screen.blit(hint, (WIDTH // 2 - hint.get_width() // 2, 515))
 
@@ -389,13 +398,14 @@ def generarfrase():
 buildfor = dbgfont.render("SPANISH(C1) TESTING-LEVITAISUNKIMBROWN", True, (255, 255, 255))
 
 selected_file_1, selected_file_2, resolved_folder = choose_generated_folder()
-if not selected_file_1 or not selected_file_2:
+primary_file = selected_file_1 or selected_file_2
+if not primary_file:
     pygame.quit()
     sys.exit()
 
-segments = _load_segments_from_file(selected_file_1)
-segments1 = _load_segments_from_file(selected_file_2)
-_start_audio_from_transcript_file(selected_file_1)
+segments = _load_segments_from_file(primary_file)
+segments1 = _load_segments_from_file(selected_file_2) if (selected_file_1 and selected_file_2) else []
+_start_audio_from_transcript_file(primary_file)
 
 seg_i = 0
 word_i = 0
@@ -426,10 +436,11 @@ while running:
     # --- NEW: update per segment, highlight current word inside it ---
     orig_bottom_y = update_segment_view(elapsed_ms, segments, y=50, state_name="orig")
 
-    base_trans_y = 140
-    min_vertical_gap = 18
-    trans_y = max(base_trans_y, orig_bottom_y + min_vertical_gap)
-    update_segment_view(elapsed_ms, segments1, y=trans_y, state_name="trans")
+    if segments1:
+        base_trans_y = 140
+        min_vertical_gap = 18
+        trans_y = max(base_trans_y, orig_bottom_y + min_vertical_gap)
+        update_segment_view(elapsed_ms, segments1, y=trans_y, state_name="trans")
 
     screen.blit(time_text, ((780 - time_text.get_width()), (600 - time_text.get_height())))
     screen.blit(buildfor, ((0 + buildfor.get_width()), (0 + buildfor.get_height())))
