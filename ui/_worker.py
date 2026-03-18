@@ -54,7 +54,7 @@ def _stage_progress_cb(stage_start, stage_end, default_label, whisper_label=None
     return _cb
 
 
-def splitter(file_path, lang_code=None, translation_mode="argos", settings=None):
+def splitter(file_path, lang_code=None, translation_mode="argos", settings=None, target_lang=None):
     from backbone.ltra import letra_toolkit as lt
     from backbone.ltra.letra_toolkit import transcribe, align, separate
     from backbone.ltra.argos_translate import translate_file
@@ -146,9 +146,15 @@ def splitter(file_path, lang_code=None, translation_mode="argos", settings=None)
                 if v == code:
                     return k
             return None
-    
-    source_lang = normalize_lang_code(detectlang or lang_code or "es")
-    target_lang = normalize_lang_code("en")
+    try:
+        import locale
+        syslang = locale.getlocale()[0][:2]
+        normalize_lang_code(syslang)  # Test if we can normalize the system language code
+    except:
+        syslang = "en"
+
+    source_lang = normalize_lang_code(detectlang or lang_code or syslang)
+    target_lang = normalize_lang_code(target_lang or syslang) #XXX
 
     if translation_mode in {"whisper", "both"}:
         emit_progress(58, "Whisper translation pass...")
@@ -421,6 +427,7 @@ def main():
 
     file_path = sys.argv[1]
     lang_code = sys.argv[2] if len(sys.argv) > 2 and sys.argv[2] else None
+    lang_code_to = sys.argv[5] if len(sys.argv) > 5 and sys.argv[5] else None
     translation_mode = sys.argv[3] if len(sys.argv) > 3 and sys.argv[3] else "argos"
     raw_settings = sys.argv[4] if len(sys.argv) > 4 and sys.argv[4] else "{}"
 
@@ -434,6 +441,7 @@ def main():
         audiobase, detected_lang = splitter(
             file_path,
             lang_code=lang_code,
+            lang_code_to=lang_code_to,
             translation_mode=translation_mode,
             settings=settings,
         )

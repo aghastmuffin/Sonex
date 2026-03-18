@@ -304,7 +304,7 @@ class Window(QMainWindow):
         self.pipeline_process = QProcess(self)
         self.pipeline_process.setWorkingDirectory(os.path.dirname(__file__))
         self.pipeline_process.setProgram(sys.executable)
-        self.pipeline_process.setArguments([worker_script, self.file_path, lang_arg, translation_mode_arg, settings_arg])
+        self.pipeline_process.setArguments([worker_script, self.file_path, lang_arg, translation_mode_arg, settings_arg, self.lang_to.currentData() or None])
         self.pipeline_process.setProcessChannelMode(QProcess.ProcessChannelMode.MergedChannels)
         self.pipeline_process.readyReadStandardOutput.connect(self.on_pipeline_stdout)
         self.pipeline_process.finished.connect(self.on_pipeline_finished)
