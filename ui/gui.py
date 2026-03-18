@@ -30,6 +30,7 @@ GPU = False
 WHISPER_TASK = "transcribe" #or "translate" !! Translate targets only English
 
 
+
 def notify(title, message):
     CMD = '''
     on run argv
@@ -179,43 +180,43 @@ class Window(QMainWindow):
         self.setWindowTitle("SONEX - Analyzer")
         self.setGeometry(100, 100, 400, 200)
 
-        layout = QVBoxLayout()
+        layout = QFormLayout()
 
         self.lang_input = QComboBox(self)
         self.lang_input.setPlaceholderText("From_Language")
         for code, name in language_dict.items():
             self.lang_input.addItem(f"{name.title()}", code)
-        layout.addWidget(self.lang_input)
+        layout.addRow("From:", self.lang_input)
 
         self.lang_to = QComboBox(self)
-        self.lang_to.setPlaceholderText("To_Language (Translation)")
+        import locale
+        syslang = locale.getlocale()[0][:2]
+        self.lang_to.setPlaceholderText(str(language_dict[syslang]))
         for code, name in language_dict.items():
             self.lang_to.addItem(f"{name.title()}", code)
-        layout.addWidget(self.lang_to)
+        layout.addRow("To:", self.lang_to)
 
         
 
         self.filebtn = QPushButton("Choose Media File (.MP3 Only)")
         self.filebtn.clicked.connect(self.on_want_file)
-        layout.addWidget(self.filebtn)
+        layout.addRow(self.filebtn)
 
-        config_holder = QFormLayout()
-        self.advanced_button = QPushButton("Advanced")
+        self.advanced_button = QPushButton("Advanced Settings")
         self.advanced_button.clicked.connect(self.open_advanced_settings)
 
         self.translation_mode_input = QComboBox(self)
         self.translation_mode_input.addItem("Argos (default)", "argos")
         self.translation_mode_input.addItem("Whisper", "whisper")
         self.translation_mode_input.addItem("Both", "both")
-        config_holder.addRow(self.advanced_button, self.translation_mode_input)
+        layout.addRow(self.advanced_button, self.translation_mode_input)
 
-        layout.addLayout(config_holder)
 
         
         self.button = QPushButton("Choose File First")
         self.button.setEnabled(False)
         self.button.clicked.connect(self.on_button_click)
-        layout.addWidget(self.button)
+        layout.addRow(self.button)
         
         self.prog_bar = QProgressBar(self)
         self.prog_bar.setGeometry(50, 100, 250, 30)
@@ -236,9 +237,9 @@ class Window(QMainWindow):
 
         self.pipeline_process = None
 
-        layout.addWidget(self.prog_bar)
-        layout.addWidget(self.demucs_prog_bar)
-        layout.addWidget(self.whisper_prog_bar)
+        layout.addRow(self.prog_bar)
+        layout.addRow(self.demucs_prog_bar)
+        layout.addRow(self.whisper_prog_bar)
 
         container = QWidget()
         container.setLayout(layout)
