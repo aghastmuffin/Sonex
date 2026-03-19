@@ -579,7 +579,7 @@ class Window(QMainWindow):
             self.pipeline_process.deleteLater()
             self.pipeline_process = None
 
-if __name__ == "__main__":
+def main():
     app = QApplication(sys.argv)
     icon_path = resolve_app_icon_path()
     if icon_path:
@@ -590,3 +590,7 @@ if __name__ == "__main__":
         window.setWindowIcon(app_icon)
     window.show()
     sys.exit(app.exec())
+
+
+if __name__ == "__main__":
+    main()

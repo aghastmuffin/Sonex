@@ -1,10 +1,25 @@
 import subprocess
-import os
-import pathlib as pl
-#Orchestrator
+import sys
 
-outp = subprocess.run(["python", "ui/gui.py"], check=True, text=True, capture_output=True)
-if "Done" in outp.stdout:
-    subprocess.run("python", "ui/frase.py", check=True, text=True, capture_output=True)
-else:
-    print("generator didn't run successfully :(")
+
+def main():
+    # Orchestrator
+    outp = subprocess.run(
+        [sys.executable, "-m", "ui.gui"],
+        check=True,
+        text=True,
+        capture_output=True,
+    )
+    if "Done" in outp.stdout:
+        subprocess.run(
+            [sys.executable, "-m", "ui.frase"],
+            check=True,
+            text=True,
+            capture_output=True,
+        )
+    else:
+        print("generator didn't run successfully :(")
+
+
+if __name__ == "__main__":
+    main()
