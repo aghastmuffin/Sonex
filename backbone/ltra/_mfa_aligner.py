@@ -49,8 +49,8 @@ ACOUSTIC_MODELS = {
 }
 
 DICTIONARY_MODELS = {
-    "english": "english_mfa",
-    "english_us": "english_us_mfa",
+    "english": "english_us_arpa",
+    "english_us": "english_us_arpa",
     "english_uk": "english_uk_mfa",
     "english_india": "english_india_mfa",
     "english_nigeria": "english_nigeria_mfa",
@@ -491,8 +491,10 @@ def generate_aligned_v2(
         corpus_pairs.append((wav_i, txt_i))
 
     # ---- 5) Run MFA align ----
-    if not dictionary in DICTIONARY_MODELS or not acoustic in ACOUSTIC_MODELS: #up until here acoustic and dictionary are just plain-text names
-        acoustic = ACOUSTIC_MODELS[acoustic] 
+    # Accept either friendly aliases (e.g. "english") or explicit MFA model IDs.
+    if acoustic in ACOUSTIC_MODELS:
+        acoustic = ACOUSTIC_MODELS[acoustic]
+    if dictionary in DICTIONARY_MODELS:
         dictionary = DICTIONARY_MODELS[dictionary]
 
     cmd = [

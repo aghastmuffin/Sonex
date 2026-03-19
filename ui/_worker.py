@@ -4,11 +4,6 @@ import traceback
 import faulthandler
 import json
 
-# Add parent directory to path so we can import backbone
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-import demucs
-
 faulthandler.enable()
 
 language_dict = {
@@ -18,6 +13,7 @@ language_dict = {
     'sv': 'swedish', 'no': 'norwegian', 'da': 'danish', 'fi': 'finnish', 'he': 'hebrew', 'el': 'greek',
     'th': 'thai', 'id': 'indonesian', 'uk': 'ukrainian', 'cs': 'czech', 'ro': 'romanian', 'hu': 'hungarian'
 }
+
 
 
 def emit_progress(value, label):
@@ -58,6 +54,11 @@ def _stage_progress_cb(stage_start, stage_end, default_label, whisper_label=None
 
 
 def splitter(file_path, lang_code=None, translation_mode="argos", settings=None, target_lang=None):
+    # Ensure repository root is on sys.path before importing backbone modules.
+    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    if repo_root not in sys.path:
+        sys.path.insert(0, repo_root) #return to root dir so that it can begin to place files in proper place
+
     from backbone.ltra import letra_toolkit as lt
     from backbone.ltra.letra_toolkit import transcribe, align, separate
     from backbone.ltra.argos_translate import translate_file
@@ -65,7 +66,7 @@ def splitter(file_path, lang_code=None, translation_mode="argos", settings=None,
 
     settings = settings or {}
     demucs_model = settings.get("demucs_model", "htdemucs")
-    demucs_stems = settings.get("demucs_stems", "vocals")
+    demucs_stems = settings.get("demucs_stems", "default")
     whisper_model = settings.get("whisper_model", "medium")
     whisper_beam_size = int(settings.get("whisper_beam_size", 5))
     whisper_patience = int(settings.get("whisper_patience", 2))

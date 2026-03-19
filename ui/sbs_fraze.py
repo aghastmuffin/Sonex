@@ -4,6 +4,7 @@ import json
 import sys
 import os
 import subprocess
+import numpy as np
 
 pygame.init()
 # Multi-Language GUI.
@@ -43,6 +44,15 @@ except OSError:
 start_ticks = pygame.time.get_ticks()
 
 running = True
+
+pitch_classes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
+NOTE_THRESHOLD = 0.3
+BEAT_VISUAL_MS = 100
+
+analysis_hpcp = None
+analysis_beats = None
+analysis_bpm = None
+last_beat_found_at = -1000
 
 # --- NEW: store broad segments instead of only flat words ---
 segments = []     # original segments: [{start,end,text,words:[{start,end,word}]}]
@@ -177,6 +187,56 @@ def _shorten_path(path, max_len=64):
     if len(path) <= max_len:
         return path
     return "..." + path[-(max_len - 3):]
+
+
+def _find_analysis_file(folder_path):
+    if not folder_path:
+        return None
+
+    base_name = os.path.basename(folder_path.rstrip("/"))
+    preferred = [
+        f"{base_name}_novocs_analysis.npz",
+        f"{base_name}_vocs_analysis.npz",
+        f"{base_name}_analysis.npz",
+    ]
+
+    for name in preferred:
+        candidate = os.path.join(folder_path, name)
+        if os.path.exists(candidate):
+            return candidate
+
+    try:
+        for name in os.listdir(folder_path):
+            if name.endswith("_analysis.npz"):
+                return os.path.join(folder_path, name)
+    except OSError:
+        return None
+
+    return None
+
+
+def _load_analysis_data(folder_path):
+    global analysis_hpcp, analysis_beats, analysis_bpm
+
+    analysis_hpcp = None
+    analysis_beats = None
+    analysis_bpm = None
+
+    analysis_path = _find_analysis_file(folder_path)
+    if not analysis_path:
+        return
+
+    try:
+        data = np.load(analysis_path)
+        analysis_hpcp = data["hpcp"] if "hpcp" in data else None
+        analysis_beats = data["beats"] if "beats" in data else None
+        bpm_arr = data["bpm"] if "bpm" in data else None
+        if bpm_arr is not None and len(bpm_arr) > 0:
+            analysis_bpm = float(bpm_arr[0])
+    except Exception:
+        analysis_hpcp = None
+        analysis_beats = None
+        analysis_bpm = None
 
 
 def choose_generated_folder():
@@ -391,6 +451,34 @@ def update_segment_view(ms, seg_list, y, state_name):
     return bottom_y
 
 
+def dispnotes(ms, x=50, y=520):
+    if analysis_hpcp is None or ms < 0 or ms >= len(analysis_hpcp):
+        label = dbgfont.render("Notes: [n/a]", True, (190, 190, 190))
+        screen.blit(label, (x, y))
+        return
+
+    frame = analysis_hpcp[ms]
+    active_notes = [pitch_classes[i] for i, value in enumerate(frame) if value >= NOTE_THRESHOLD]
+    note_text = ", ".join(active_notes) if active_notes else "-"
+    label = dbgfont.render(f"Notes: [{note_text}]", True, (220, 220, 255))
+    screen.blit(label, (x, y))
+
+
+def dispbeats(ms, x=50, y=545):
+    global last_beat_found_at
+
+    beat_visible = False
+    if analysis_beats is not None and 0 <= ms < len(analysis_beats):
+        if analysis_beats[ms]:
+            last_beat_found_at = ms
+        beat_visible = (ms - last_beat_found_at) < BEAT_VISUAL_MS
+
+    beat_label = "[  BEAT  ]" if beat_visible else "          "
+    bpm_text = f"{analysis_bpm:5.1f}" if analysis_bpm is not None else "  n/a"
+    label = dbgfont.render(f"BPM: {bpm_text} | {beat_label}", True, (255, 220, 80) if beat_visible else (200, 200, 200))
+    screen.blit(label, (x, y))
+
+
 def generarfrase():
     raise NotImplementedError
 
@@ -406,6 +494,7 @@ if not primary_file:
 segments = _load_segments_from_file(primary_file)
 segments1 = _load_segments_from_file(selected_file_2) if (selected_file_1 and selected_file_2) else []
 _start_audio_from_transcript_file(primary_file)
+_load_analysis_data(resolved_folder)
 
 seg_i = 0
 word_i = 0
@@ -416,6 +505,7 @@ _cached_tokens = None
 _cached_seg_id_1 = None
 _cached_tokens_1 = None
 start_ticks = pygame.time.get_ticks()
+last_beat_found_at = -1000
 
 print("job checking for MFA/fasterwhisper alignment accuracy")
 print("cleared for levi brown")
@@ -441,6 +531,8 @@ while running:
         min_vertical_gap = 18
         trans_y = max(base_trans_y, orig_bottom_y + min_vertical_gap)
         update_segment_view(elapsed_ms, segments1, y=trans_y, state_name="trans")
+    dispnotes(elapsed_ms)
+    dispbeats(elapsed_ms)
 
     screen.blit(time_text, ((780 - time_text.get_width()), (600 - time_text.get_height())))
     screen.blit(buildfor, ((0 + buildfor.get_width()), (0 + buildfor.get_height())))

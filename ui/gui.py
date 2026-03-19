@@ -21,7 +21,7 @@ import sys, os, json, subprocess
 language_dict = {'en': 'english', 'es': 'spanish', 'fr': 'french', 'de': 'german', 'it': 'italian', 'pt': 'portuguese', 'ru': 'russian', 'zh': 'chinese', 'ja': 'japanese', 'ko': 'korean', 'ar': 'arabic', 'hi': 'hindi', 'bn': 'bengali', 'pa': 'punjabi', 'tr': 'turkish', 'vi': 'vietnamese', 'pl': 'polish', 'nl': 'dutch', 'sv': 'swedish', 'no': 'norwegian', 'da': 'danish', 'fi': 'finnish', 'he': 'hebrew', 'el': 'greek', 'th': 'thai', 'id': 'indonesian', 'uk': 'ukrainian', 'cs': 'czech', 'ro': 'romanian', 'hu': 'hungarian', None: "Find For Me"}
 #settings variables
 DEMUCS_MODEL = "htdemucs" #or "tasnet" or htdemucs 
-DEMUCS_STEMS = "vocals" #or "other" or "both" or vocals
+DEMUCS_STEMS = "default" #or "other" or "both" or vocals
 WHISPER_MODEL = "medium" #or "tiny", "base", "small", "large-v2"
 WHISPER_BEAMSIZE = 5
 WHISPER_PAT = 2
@@ -37,7 +37,11 @@ def notify(title, message):
     display notification (item 2 of argv) with title (item 1 of argv)
     end run
     '''
-    subprocess.call(['osascript', '-e', CMD, title, message])
+    import platform
+    if platform.system() == "Darwin":
+        subprocess.call(['osascript', '-e', CMD, title, message])
+    else:
+        print("Notifications are currently not supported for this architecture. (Darwin-only)")
 
 def dialogue(title, message):
     CMD = '''
@@ -211,7 +215,7 @@ class SplashWindow(QWidget):
         layout.setSpacing(4)
         layout.setContentsMargins(10, 8, 10, 8)
 
-        title = QLabel("Processing Your Request")
+        title = QLabel(f"Sonex is busy processing your request")
         title.setStyleSheet("font-size: 13px; font-weight: 700; color: #ffffff;")
         layout.addWidget(title)
 
@@ -454,12 +458,13 @@ class Window(QMainWindow):
         self.set_whisper_active(False)
 
         worker_script = os.path.join(os.path.dirname(__file__), "_worker.py")
+        project_root = os.path.dirname(os.path.dirname(__file__))
         lang_arg = self.lang_code if self.lang_code else ""
         translation_mode_arg = self.translation_mode if self.translation_mode else "argos"
         settings_arg = json.dumps(self.advanced_settings)
 
         self.pipeline_process = QProcess(self)
-        self.pipeline_process.setWorkingDirectory(os.path.dirname(__file__))
+        self.pipeline_process.setWorkingDirectory(project_root)
         self.pipeline_process.setProgram(sys.executable)
         self.pipeline_process.setArguments([worker_script, self.file_path, lang_arg, translation_mode_arg, settings_arg, self.lang_to.currentData() or None])
         self.pipeline_process.setProcessChannelMode(QProcess.ProcessChannelMode.MergedChannels)
