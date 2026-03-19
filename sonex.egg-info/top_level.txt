@@ -1,5 +1,0 @@
-Sonex
-backbone
-lyrics_study
-onelove
-ui
