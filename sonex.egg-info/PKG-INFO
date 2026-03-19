@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: sonex
+Version: 0.0.0
+Summary: Audio analysis and transcription app
+Requires-Python: >=3.9
+Requires-Dist: argostranslate
+Requires-Dist: demucs
+Requires-Dist: essentia
+Requires-Dist: faster_whisper
+Requires-Dist: hnswlib
+Requires-Dist: librosa
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: praatio
+Requires-Dist: pygame
+Requires-Dist: PyQt6
+Requires-Dist: pyqt6_sip
+Requires-Dist: scikit_learn
+Requires-Dist: scipy
+Requires-Dist: torch
+Requires-Dist: tqdm
+Requires-Dist: transformers
+Requires-Dist: whisperx

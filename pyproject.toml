@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sonex"
+version = "0.0.0"
+description = "Audio analysis and transcription app"
+requires-python = ">=3.9"
+dependencies = [
+    "argostranslate",
+    "demucs",
+    "essentia",
+    "faster_whisper",
+    "hnswlib",
+    "librosa",
+    "matplotlib",
+    "numpy",
+    "praatio",
+    "pygame",
+    "PyQt6",
+    "pyqt6_sip",
+    "scikit_learn",
+    "scipy",
+    "torch",
+    "tqdm",
+    "transformers",
+    "whisperx",
+]
+
+[project.scripts]
+sonex = "Sonex:main"
+
+[tool.setuptools]
+py-modules = ["Sonex"]
+
+[tool.setuptools.packages.find]
+include = ["ui*", "backbone*", "lyrics_study*", "onelove*"]
