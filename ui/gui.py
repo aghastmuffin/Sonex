@@ -14,8 +14,8 @@ from PyQt6.QtWidgets import (
     QCheckBox,
     QLabel,
 )
-from PyQt6.QtCore import QProcess
-from PyQt6.QtGui import QIcon
+from PyQt6.QtCore import QProcess, Qt
+from PyQt6.QtGui import QIcon, QPixmap
 import sys, os, json, subprocess
 #TODO: Swap out the loading bar in the gui for a splash screen with a progress bar and status text.
 language_dict = {'en': 'english', 'es': 'spanish', 'fr': 'french', 'de': 'german', 'it': 'italian', 'pt': 'portuguese', 'ru': 'russian', 'zh': 'chinese', 'ja': 'japanese', 'ko': 'korean', 'ar': 'arabic', 'hi': 'hindi', 'bn': 'bengali', 'pa': 'punjabi', 'tr': 'turkish', 'vi': 'vietnamese', 'pl': 'polish', 'nl': 'dutch', 'sv': 'swedish', 'no': 'norwegian', 'da': 'danish', 'fi': 'finnish', 'he': 'hebrew', 'el': 'greek', 'th': 'thai', 'id': 'indonesian', 'uk': 'ukrainian', 'cs': 'czech', 'ro': 'romanian', 'hu': 'hungarian', None: "Find For Me"}
@@ -162,6 +162,153 @@ def resolve_app_icon_path():
     return None
 
 
+class SplashWindow(QWidget):
+    """Top-level splash screen with image backdrop and stage progress overlays."""
+
+    def __init__(self, parent=None):
+        super().__init__(None)
+        self._parent_window = parent
+        self.setWindowTitle("SONEX - Processing")
+        self.setWindowFlags(
+            Qt.WindowType.SplashScreen
+            | Qt.WindowType.FramelessWindowHint
+            | Qt.WindowType.WindowStaysOnTopHint
+        )
+        self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground, True)
+
+        base_dir = os.path.dirname(__file__)
+        splash_path = os.path.join(base_dir, "assets", "sonex_splash.png")
+        splash_pix = QPixmap(splash_path)
+        if splash_pix.isNull():
+            splash_pix = QPixmap(920, 520)
+            splash_pix.fill(Qt.GlobalColor.black)
+
+        # Scale to roughly 1/8 the original area for a compact splash.
+        scale_factor = 0.35
+        target_width = max(280, int(splash_pix.width() * scale_factor))
+        target_height = max(170, int(splash_pix.height() * scale_factor))
+        splash_pix = splash_pix.scaled(
+            target_width,
+            target_height,
+            Qt.AspectRatioMode.KeepAspectRatio,
+            Qt.TransformationMode.SmoothTransformation,
+        )
+
+        self.setFixedSize(splash_pix.size())
+
+        bg_label = QLabel(self)
+        bg_label.setPixmap(splash_pix)
+        bg_label.setScaledContents(True)
+        bg_label.setGeometry(0, 0, self.width(), self.height())
+
+        margin = max(10, int(self.width() * 0.03))
+        overlay_height = max(88, int(self.height() * 0.44))
+        overlay = QWidget(self)
+        overlay.setGeometry(margin, self.height() - overlay_height - margin, self.width() - (margin * 2), overlay_height)
+        overlay.setStyleSheet("background-color: rgba(0, 0, 0, 145); border-radius: 12px;")
+
+        layout = QVBoxLayout(overlay)
+        layout.setSpacing(4)
+        layout.setContentsMargins(10, 8, 10, 8)
+
+        title = QLabel("Processing Your Request")
+        title.setStyleSheet("font-size: 13px; font-weight: 700; color: #ffffff;")
+        layout.addWidget(title)
+
+        overall_label = QLabel("Overall")
+        overall_label.setStyleSheet("font-size: 10px; color: #d7d7d7;")
+        layout.addWidget(overall_label)
+        self.prog_bar = QProgressBar(overlay)
+        self.prog_bar.setValue(0)
+        self.prog_bar.setFormat("Idle")
+        layout.addWidget(self.prog_bar)
+
+        demucs_label = QLabel("Demucs")
+        demucs_label.setStyleSheet("font-size: 10px; color: #d7d7d7;")
+        layout.addWidget(demucs_label)
+        self.demucs_prog_bar = QProgressBar(overlay)
+        self.demucs_prog_bar.setValue(0)
+        self.demucs_prog_bar.setFormat("Demucs idle")
+        self.demucs_prog_bar.setVisible(False)
+        layout.addWidget(self.demucs_prog_bar)
+
+        whisper_label = QLabel("Whisper")
+        whisper_label.setStyleSheet("font-size: 10px; color: #d7d7d7;")
+        layout.addWidget(whisper_label)
+        self.whisper_prog_bar = QProgressBar(overlay)
+        self.whisper_prog_bar.setValue(0)
+        self.whisper_prog_bar.setFormat("Whisper idle")
+        self.whisper_prog_bar.setVisible(False)
+        layout.addWidget(self.whisper_prog_bar)
+
+        bar_style = (
+            "QProgressBar {"
+            "  background-color: rgba(255,255,255,0.10);"
+            "  color: #ffffff;"
+            "  border: 1px solid rgba(255,255,255,0.30);"
+            "  border-radius: 5px;"
+            "  text-align: center;"
+            "  height: 12px;"
+            "}"
+            "QProgressBar::chunk {"
+            "  background-color: #47a8ff;"
+            "  border-radius: 4px;"
+            "}"
+        )
+        self.prog_bar.setStyleSheet(bar_style)
+        self.demucs_prog_bar.setStyleSheet(bar_style)
+        self.whisper_prog_bar.setStyleSheet(bar_style)
+
+        self._center_on_screen()
+
+    def _center_on_screen(self):
+        target = self._parent_window if self._parent_window is not None else self
+        screen = target.screen() if target is not None else QApplication.primaryScreen()
+        if screen is None:
+            return
+        geo = screen.availableGeometry()
+        x = geo.x() + (geo.width() - self.width()) // 2
+        y = geo.y() + (geo.height() - self.height()) // 2
+        self.move(x, y)
+
+    def set_progress(self, value, label=None):
+        self.prog_bar.setValue(max(0, min(100, int(value))))
+        if label is not None:
+            self.prog_bar.setFormat(label)
+        QApplication.processEvents()
+
+    def set_demucs_active(self, active):
+        self.demucs_prog_bar.setVisible(bool(active))
+        if active:
+            self.demucs_prog_bar.setValue(0)
+            self.demucs_prog_bar.setFormat("Demucs separating stems...")
+        QApplication.processEvents()
+
+    def set_demucs_progress(self, value, label=None):
+        self.demucs_prog_bar.setValue(max(0, min(100, int(value))))
+        if label is not None:
+            self.demucs_prog_bar.setFormat(label)
+        QApplication.processEvents()
+
+    def set_whisper_active(self, active):
+        self.whisper_prog_bar.setVisible(bool(active))
+        if active:
+            self.whisper_prog_bar.setValue(0)
+            self.whisper_prog_bar.setFormat("Whisper transcribing...")
+        QApplication.processEvents()
+
+    def set_whisper_progress(self, value, label=None):
+        self.whisper_prog_bar.setValue(max(0, min(100, int(value))))
+        if label is not None:
+            self.whisper_prog_bar.setFormat(label)
+        QApplication.processEvents()
+
+    def finish(self):
+        """Called when processing is complete"""
+        self.set_demucs_active(False)
+        self.set_whisper_active(False)
+
+
 class Window(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -236,6 +383,8 @@ class Window(QMainWindow):
         self.whisper_prog_bar.setVisible(False)
 
         self.pipeline_process = None
+        self.splash_window = None
+        self.audiobase = None
 
         layout.addRow(self.prog_bar)
         layout.addRow(self.demucs_prog_bar)
@@ -292,6 +441,13 @@ class Window(QMainWindow):
         if self.pipeline_process is not None and self.pipeline_process.state() != QProcess.ProcessState.NotRunning:
             return
 
+        # Create and show splash window
+        self.splash_window = SplashWindow(self)
+        self.splash_window.show()
+        self.splash_window.raise_()
+        self.splash_window.activateWindow()
+        self.splash_window.set_progress(5, "Starting...")
+
         self.button.setEnabled(False)
         self.set_progress(5, "Starting...")
         self.set_demucs_active(False)
@@ -330,6 +486,8 @@ class Window(QMainWindow):
                 if len(parts) == 3:
                     try:
                         self.set_progress(int(parts[1]), parts[2])
+                        if self.splash_window:
+                            self.splash_window.set_progress(int(parts[1]), parts[2])
                     except ValueError:
                         pass
                 continue
@@ -342,6 +500,8 @@ class Window(QMainWindow):
                 parts = line.split("|", 1)
                 if len(parts) == 2:
                     self.set_demucs_active(parts[1] == "1")
+                    if self.splash_window:
+                        self.splash_window.set_demucs_active(parts[1] == "1")
                 continue
             if line.startswith("DEMUCS_PROGRESS|"):
                 parts = line.split("|", 2)
@@ -350,6 +510,8 @@ class Window(QMainWindow):
                         progress_value = int(parts[1])
                         label = parts[2] if len(parts) == 3 else None
                         self.set_demucs_progress(progress_value, label)
+                        if self.splash_window:
+                            self.splash_window.set_demucs_progress(progress_value, label)
                     except ValueError:
                         pass
                 continue
@@ -357,6 +519,8 @@ class Window(QMainWindow):
                 parts = line.split("|", 1)
                 if len(parts) == 2:
                     self.set_whisper_active(parts[1] == "1")
+                    if self.splash_window:
+                        self.splash_window.set_whisper_active(parts[1] == "1")
                 continue
             if line.startswith("WHISPER_PROGRESS|"):
                 parts = line.split("|", 2)
@@ -365,6 +529,8 @@ class Window(QMainWindow):
                         progress_value = int(parts[1])
                         label = parts[2] if len(parts) == 3 else None
                         self.set_whisper_progress(progress_value, label)
+                        if self.splash_window:
+                            self.splash_window.set_whisper_progress(progress_value, label)
                     except ValueError:
                         pass
                 continue
@@ -383,6 +549,13 @@ class Window(QMainWindow):
             self.set_progress(0, f"Error ({exit_code})")
         self.set_demucs_active(False)
         self.set_whisper_active(False)
+        
+        # Close splash window if it exists
+        if self.splash_window:
+            self.splash_window.finish()
+            self.splash_window.close()
+            self.splash_window = None
+        
         self.button.setEnabled(True)
         notify("Processing Complete", f"Your file has been processed. Output directory: {self.audiobase}" if self.audiobase else "Your file has been processed.")
         if self.pipeline_process is not None:
@@ -394,6 +567,13 @@ class Window(QMainWindow):
         self.set_progress(0, "Error")
         self.set_demucs_active(False)
         self.set_whisper_active(False)
+        
+        # Close splash window if it exists
+        if self.splash_window:
+            self.splash_window.finish()
+            self.splash_window.close()
+            self.splash_window = None
+        
         self.button.setEnabled(True)
         if self.pipeline_process is not None:
             self.pipeline_process.deleteLater()

@@ -4,6 +4,9 @@ import traceback
 import faulthandler
 import json
 
+# Add parent directory to path so we can import backbone
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import demucs
 
 faulthandler.enable()
@@ -441,7 +444,7 @@ def main():
         audiobase, detected_lang = splitter(
             file_path,
             lang_code=lang_code,
-            lang_code_to=lang_code_to,
+            target_lang=lang_code_to,
             translation_mode=translation_mode,
             settings=settings,
         )

@@ -7,7 +7,6 @@ import subprocess as sp
 from typing import Dict, Literal, Tuple, Optional, IO
 #FFMPEG, openai-whisper, demucs 
 from faster_whisper import WhisperModel
-from ltra.depricated._NLLB import translate
 """Lyrics timing"""
 MINIMUM = (3, 9, 0)
 if sys.version_info < MINIMUM:
@@ -377,17 +376,6 @@ def transcribeplain(inp, outp: Optional[str] = None, language: Optional[str] = N
     print(f"  Output: {native_path}")
 
     return segments_native
-
-
-
-def translate_advanced(text, targ_lang=detected, source_lang=None):
-    """
-    Docstring for translate_advanced
-    Analyses preexisting transcription and produces timestampped version 
-    Requires: Ollama, any model of your choice that supports text generation
-    """
-    
-    return translate(text)
 
 
 
