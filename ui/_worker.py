@@ -73,6 +73,8 @@ def splitter(file_path, lang_code=None, translation_mode="argos", settings=None,
     whisper_best_of = int(settings.get("whisper_best_of", 3))
     whisper_task = settings.get("whisper_task", "transcribe")
     use_gpu = bool(settings.get("gpu", False))
+    wav2vec2_phone_fallback = bool(settings.get("wav2vec2_phone_fallback", False))
+    wav2vec2_min_mfa_coverage = int(settings.get("wav2vec2_min_mfa_coverage", 85))
 
     if not use_gpu:
         # Force CPU path for demucs/whisper when GPU is disabled in advanced settings.
@@ -96,6 +98,7 @@ def splitter(file_path, lang_code=None, translation_mode="argos", settings=None,
 
     audiobase = os.path.basename(file_path).removesuffix(".mp3")
     os.makedirs(audiobase, exist_ok=True)
+    #TODO: Build ffmpeg noise normalization into separation step to avoid double disk I/O. For now, do it as a separate pass to avoid messing with the progress reporting callback in the critical separation step.
 
     emit_progress(25, "Transcribing vocals...")
     emit_whisper_active(True)
@@ -137,6 +140,37 @@ def splitter(file_path, lang_code=None, translation_mode="argos", settings=None,
                 allow_fuzzy=True,
                 fuzzy_max_lookahead=8,
             )
+
+            if wav2vec2_phone_fallback:
+                try:
+                    current_cov = _mfa_aligner.phone_word_coverage(f"{audiobase}/mfa_vocals_phone_segments.json")
+                    print(
+                        f"wav2vec2 fallback check: MFA phone coverage={current_cov:.2f}% (min={wav2vec2_min_mfa_coverage}%)",
+                        flush=True,
+                    )
+                    if current_cov < float(wav2vec2_min_mfa_coverage):
+                        emit_progress(55, "Running wav2vec2 phone fallback...")
+                        align(
+                            f"{audiobase}/vocals.mp3",
+                            f"{audiobase}/vocals_whisper_segments.json",
+                            f"{audiobase}/vocals_whisper_segments_wav2vec2.json",
+                            language=lang_code,
+                            reuse_existing=False,
+                            return_char_alignments=True,
+                        )
+                        stats = _mfa_aligner.fill_missing_phones_from_char_alignments(
+                            audiobase,
+                            aligned_chars_json="vocals_whisper_segments_wav2vec2.json",
+                            phone_json="mfa_vocals_phone_segments.json",
+                            base_json="mfa_vocals_whisper_segments.json",
+                            out_json="mfa_vocals_phone_segments.json",
+                        )
+                        print(
+                            f"wav2vec2 fallback filled {stats['filled_words']} words; coverage now {stats['coverage_after']:.2f}%",
+                            flush=True,
+                        )
+                except Exception as fallback_exc:
+                    print(f"wav2vec2 fallback error: {fallback_exc}", flush=True)
     except Exception as e:
         print(f"MFA Error: {e}", flush=True)
 
@@ -200,6 +234,8 @@ def notesanalysis(af, sr=48000, beat_strength_quantile=0.60, min_relative_beat_s
                   min_beat_gap_ms=120, beat_tolerance_ms=20):
     from essentia.standard import MonoLoader, FrameGenerator, Windowing, Spectrum, SpectralPeaks, HPCP, RhythmExtractor2013
     import numpy as np
+
+    NOTE_NAMES = np.array(["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"])
 
     def _score_beats(beats, bpm, confidence, duration_sec):
         if len(beats) < 2 or bpm <= 0:
@@ -352,6 +388,21 @@ def notesanalysis(af, sr=48000, beat_strength_quantile=0.60, min_relative_beat_s
             frame_hpcps.append(hpcp_frame)
 
         frame_hpcps = np.array(frame_hpcps)
+        # Keep explicit note-strength views in addition to raw HPCP frames.
+        # `frame_hpcps` already stores per-frame pitch-class strength (12 bins).
+        note_strengths_per_frame = frame_hpcps.astype(np.float32)
+        note_strengths_sum = np.sum(note_strengths_per_frame, axis=0).astype(np.float32)
+        note_strengths_mean = np.mean(note_strengths_per_frame, axis=0).astype(np.float32)
+        note_strengths_max = np.max(note_strengths_per_frame, axis=0).astype(np.float32)
+        total_strength = float(np.sum(note_strengths_sum))
+        if total_strength > 0.0:
+            note_strengths_distribution = (note_strengths_sum / total_strength).astype(np.float32)
+        else:
+            note_strengths_distribution = np.zeros(12, dtype=np.float32)
+
+        dominant_note_index_per_frame = np.argmax(note_strengths_per_frame, axis=1).astype(np.int16)
+        dominant_note_strength_per_frame = np.max(note_strengths_per_frame, axis=1).astype(np.float32)
+
         num_frames = len(frame_hpcps)
         duration_sec = len(rhythm_audio) / sr
 
@@ -385,6 +436,14 @@ def notesanalysis(af, sr=48000, beat_strength_quantile=0.60, min_relative_beat_s
         np.savez_compressed(
             f"{audio_name}/{audio_name}_{out_name}.npz",
             hpcp=frame_hpcps,
+            note_names=NOTE_NAMES,
+            note_strengths_per_frame=note_strengths_per_frame,
+            note_strengths_sum=note_strengths_sum,
+            note_strengths_mean=note_strengths_mean,
+            note_strengths_max=note_strengths_max,
+            note_strengths_distribution=note_strengths_distribution,
+            dominant_note_index_per_frame=dominant_note_index_per_frame,
+            dominant_note_strength_per_frame=dominant_note_strength_per_frame,
             beats=beat_map,
             beat_centers=beat_centers,
             bpm=np.array([bpm]),

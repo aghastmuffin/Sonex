@@ -1,0 +1,3358 @@
+[
+  {
+    "id": 0,
+    "text": "bebé, qué bellas te ves ¿cómo te llamas y de dónde eres?",
+    "start": 10.820000000000002,
+    "end": 14.92,
+    "words": [
+      {
+        "word": " Bebé,",
+        "start": 10.820000000000002,
+        "end": 11.38
+      },
+      {
+        "word": " qué",
+        "start": 11.56,
+        "end": 11.6
+      },
+      {
+        "word": " bellas",
+        "start": 11.6,
+        "end": 12.12
+      },
+      {
+        "word": " te",
+        "start": 12.12,
+        "end": 12.74
+      },
+      {
+        "word": " ves",
+        "start": 12.74,
+        "end": 12.74
+      },
+      {
+        "word": " ¿Cómo",
+        "start": 12.74,
+        "end": 13.18
+      },
+      {
+        "word": " te",
+        "start": 13.18,
+        "end": 13.56
+      },
+      {
+        "word": " llamas",
+        "start": 13.56,
+        "end": 14.04
+      },
+      {
+        "word": " y",
+        "start": 14.04,
+        "end": 14.24
+      },
+      {
+        "word": " de",
+        "start": 14.24,
+        "end": 14.38
+      },
+      {
+        "word": " dónde",
+        "start": 14.38,
+        "end": 14.66
+      },
+      {
+        "word": " eres?",
+        "start": 14.66,
+        "end": 14.92
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "text": "tienes un acento que no sé muy bien también quiero saber",
+    "start": 15.08,
+    "end": 19.84,
+    "words": [
+      {
+        "word": " Tienes",
+        "start": 15.08,
+        "end": 15.5
+      },
+      {
+        "word": " un",
+        "start": 15.5,
+        "end": 15.78
+      },
+      {
+        "word": " acento",
+        "start": 15.78,
+        "end": 16.24
+      },
+      {
+        "word": " que",
+        "start": 16.24,
+        "end": 16.5
+      },
+      {
+        "word": " no",
+        "start": 16.5,
+        "end": 16.72
+      },
+      {
+        "word": " sé",
+        "start": 16.72,
+        "end": 16.86
+      },
+      {
+        "word": " muy",
+        "start": 16.86,
+        "end": 17.24
+      },
+      {
+        "word": " bien",
+        "start": 17.24,
+        "end": 17.96
+      },
+      {
+        "word": " También",
+        "start": 17.96,
+        "end": 18.76
+      },
+      {
+        "word": " quiero",
+        "start": 18.76,
+        "end": 19.16
+      },
+      {
+        "word": " saber",
+        "start": 19.16,
+        "end": 19.84
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "si eres de lejos y te vuelvo a ver algo con ese flow por aquí no se ve",
+    "start": 19.84,
+    "end": 24.52,
+    "words": [
+      {
+        "word": " Si",
+        "start": 19.84,
+        "end": 20.16
+      },
+      {
+        "word": " eres",
+        "start": 20.16,
+        "end": 20.4
+      },
+      {
+        "word": " de",
+        "start": 20.4,
+        "end": 20.7
+      },
+      {
+        "word": " lejos",
+        "start": 20.7,
+        "end": 21.0
+      },
+      {
+        "word": " y",
+        "start": 21.0,
+        "end": 21.18
+      },
+      {
+        "word": " te",
+        "start": 21.18,
+        "end": 21.42
+      },
+      {
+        "word": " vuelvo",
+        "start": 21.42,
+        "end": 21.84
+      },
+      {
+        "word": " a",
+        "start": 21.84,
+        "end": 21.94
+      },
+      {
+        "word": " ver",
+        "start": 21.94,
+        "end": 22.06
+      },
+      {
+        "word": " Algo",
+        "start": 22.06,
+        "end": 22.42
+      },
+      {
+        "word": " con",
+        "start": 22.42,
+        "end": 22.7
+      },
+      {
+        "word": " ese",
+        "start": 22.7,
+        "end": 23.04
+      },
+      {
+        "word": " flow",
+        "start": 23.04,
+        "end": 23.2
+      },
+      {
+        "word": " por",
+        "start": 23.2,
+        "end": 23.54
+      },
+      {
+        "word": " aquí",
+        "start": 23.54,
+        "end": 23.76
+      },
+      {
+        "word": " no",
+        "start": 23.76,
+        "end": 24.02
+      },
+      {
+        "word": " se",
+        "start": 24.02,
+        "end": 24.32
+      },
+      {
+        "word": " ve",
+        "start": 24.32,
+        "end": 24.52
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "baby, yo le llevo a donde quiera que esté, eh, eh",
+    "start": 24.52,
+    "end": 28.68,
+    "words": [
+      {
+        "word": " Baby,",
+        "start": 24.52,
+        "end": 24.92
+      },
+      {
+        "word": " yo",
+        "start": 24.96,
+        "end": 25.22
+      },
+      {
+        "word": " le",
+        "start": 25.22,
+        "end": 25.42
+      },
+      {
+        "word": " llevo",
+        "start": 25.42,
+        "end": 25.8
+      },
+      {
+        "word": " a",
+        "start": 25.8,
+        "end": 25.94
+      },
+      {
+        "word": " donde",
+        "start": 25.94,
+        "end": 26.12
+      },
+      {
+        "word": " quiera",
+        "start": 26.12,
+        "end": 26.4
+      },
+      {
+        "word": " que",
+        "start": 26.4,
+        "end": 26.76
+      },
+      {
+        "word": " esté,",
+        "start": 26.76,
+        "end": 27.44
+      },
+      {
+        "word": " eh,",
+        "start": 28.08,
+        "end": 28.08
+      },
+      {
+        "word": " eh",
+        "start": 28.2,
+        "end": 28.68
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "oh, oh, diablo mami oh, eh, naciste pa' mí",
+    "start": 28.68,
+    "end": 33.92,
+    "words": [
+      {
+        "word": " Oh,",
+        "start": 28.68,
+        "end": 29.62
+      },
+      {
+        "word": " oh,",
+        "start": 29.72,
+        "end": 30.08
+      },
+      {
+        "word": " diablo",
+        "start": 30.24,
+        "end": 30.86
+      },
+      {
+        "word": " mami",
+        "start": 30.86,
+        "end": 31.48
+      },
+      {
+        "word": " Oh,",
+        "start": 31.48,
+        "end": 32.18
+      },
+      {
+        "word": " eh,",
+        "start": 32.22,
+        "end": 32.54
+      },
+      {
+        "word": " naciste",
+        "start": 32.74,
+        "end": 33.28
+      },
+      {
+        "word": " pa'",
+        "start": 33.28,
+        "end": 33.72
+      },
+      {
+        "word": " mí",
+        "start": 33.88,
+        "end": 33.92
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "oh, eh, bebé, te noté que no eres de aquí",
+    "start": 33.92,
+    "end": 37.96,
+    "words": [
+      {
+        "word": " Oh,",
+        "start": 33.92,
+        "end": 34.48
+      },
+      {
+        "word": " eh,",
+        "start": 34.48,
+        "end": 35.34
+      },
+      {
+        "word": " bebé,",
+        "start": 35.56,
+        "end": 35.84
+      },
+      {
+        "word": " te",
+        "start": 35.86,
+        "end": 36.02
+      },
+      {
+        "word": " noté",
+        "start": 36.02,
+        "end": 36.54
+      },
+      {
+        "word": " que",
+        "start": 36.54,
+        "end": 36.78
+      },
+      {
+        "word": " no",
+        "start": 36.78,
+        "end": 36.98
+      },
+      {
+        "word": " eres",
+        "start": 36.98,
+        "end": 37.18
+      },
+      {
+        "word": " de",
+        "start": 37.18,
+        "end": 37.5
+      },
+      {
+        "word": " aquí",
+        "start": 37.5,
+        "end": 37.96
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "oh, oh, oh, ah, diablo mami oh, eh, naciste pa' mí",
+    "start": 37.96,
+    "end": 43.6,
+    "words": [
+      {
+        "word": " Oh,",
+        "start": 37.96,
+        "end": 38.64
+      },
+      {
+        "word": " oh,",
+        "start": 38.7,
+        "end": 39.2
+      },
+      {
+        "word": " oh,",
+        "start": 39.4,
+        "end": 39.4
+      },
+      {
+        "word": " ah,",
+        "start": 39.4,
+        "end": 39.92
+      },
+      {
+        "word": " diablo",
+        "start": 40.1,
+        "end": 40.52
+      },
+      {
+        "word": " mami",
+        "start": 40.52,
+        "end": 41.2
+      },
+      {
+        "word": " Oh,",
+        "start": 41.2,
+        "end": 41.8
+      },
+      {
+        "word": " eh,",
+        "start": 41.8,
+        "end": 42.06
+      },
+      {
+        "word": " naciste",
+        "start": 42.26,
+        "end": 42.88
+      },
+      {
+        "word": " pa'",
+        "start": 42.88,
+        "end": 43.38
+      },
+      {
+        "word": " mí",
+        "start": 43.48,
+        "end": 43.6
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "oh, eh, si esto fuera un draft, tú fueras first pick",
+    "start": 43.6,
+    "end": 47.48,
+    "words": [
+      {
+        "word": " Oh,",
+        "start": 43.6,
+        "end": 44.22
+      },
+      {
+        "word": " eh,",
+        "start": 44.22,
+        "end": 44.88
+      },
+      {
+        "word": " si",
+        "start": 45.1,
+        "end": 45.16
+      },
+      {
+        "word": " esto",
+        "start": 45.16,
+        "end": 45.36
+      },
+      {
+        "word": " fuera",
+        "start": 45.36,
+        "end": 45.6
+      },
+      {
+        "word": " un",
+        "start": 45.6,
+        "end": 45.92
+      },
+      {
+        "word": " draft,",
+        "start": 45.92,
+        "end": 46.22
+      },
+      {
+        "word": " tú",
+        "start": 46.3,
+        "end": 46.48
+      },
+      {
+        "word": " fueras",
+        "start": 46.48,
+        "end": 46.74
+      },
+      {
+        "word": " first",
+        "start": 46.74,
+        "end": 47.08
+      },
+      {
+        "word": " pick",
+        "start": 47.08,
+        "end": 47.48
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "yo no sé si encontrarte fue cuestión de suerte",
+    "start": 47.48,
+    "end": 49.96,
+    "words": [
+      {
+        "word": " Yo",
+        "start": 47.48,
+        "end": 47.76
+      },
+      {
+        "word": " no",
+        "start": 47.76,
+        "end": 47.92
+      },
+      {
+        "word": " sé",
+        "start": 47.92,
+        "end": 48.02
+      },
+      {
+        "word": " si",
+        "start": 48.02,
+        "end": 48.2
+      },
+      {
+        "word": " encontrarte",
+        "start": 48.2,
+        "end": 48.72
+      },
+      {
+        "word": " fue",
+        "start": 48.72,
+        "end": 48.92
+      },
+      {
+        "word": " cuestión",
+        "start": 48.92,
+        "end": 49.2
+      },
+      {
+        "word": " de",
+        "start": 49.2,
+        "end": 49.5
+      },
+      {
+        "word": " suerte",
+        "start": 49.5,
+        "end": 49.96
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "adivina, tu acento viene en mi punto fuerte pero sáte de donde seas, mami, quiero tenerte",
+    "start": 49.96,
+    "end": 54.58,
+    "words": [
+      {
+        "word": " Adivina,",
+        "start": 49.96,
+        "end": 50.5
+      },
+      {
+        "word": " tu",
+        "start": 50.62,
+        "end": 50.7
+      },
+      {
+        "word": " acento",
+        "start": 50.7,
+        "end": 51.02
+      },
+      {
+        "word": " viene",
+        "start": 51.02,
+        "end": 51.22
+      },
+      {
+        "word": " en",
+        "start": 51.22,
+        "end": 51.36
+      },
+      {
+        "word": " mi",
+        "start": 51.36,
+        "end": 51.46
+      },
+      {
+        "word": " punto",
+        "start": 51.46,
+        "end": 51.8
+      },
+      {
+        "word": " fuerte",
+        "start": 51.8,
+        "end": 52.18
+      },
+      {
+        "word": " Pero",
+        "start": 52.18,
+        "end": 52.52
+      },
+      {
+        "word": " sáte",
+        "start": 52.52,
+        "end": 52.82
+      },
+      {
+        "word": " de",
+        "start": 52.82,
+        "end": 52.94
+      },
+      {
+        "word": " donde",
+        "start": 52.94,
+        "end": 53.12
+      },
+      {
+        "word": " seas,",
+        "start": 53.12,
+        "end": 53.44
+      },
+      {
+        "word": " mami,",
+        "start": 53.52,
+        "end": 53.7
+      },
+      {
+        "word": " quiero",
+        "start": 53.72,
+        "end": 54.02
+      },
+      {
+        "word": " tenerte",
+        "start": 54.02,
+        "end": 54.58
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "en la cama del hotel gritando real a tala real es que no es cuando bailas",
+    "start": 54.58,
+    "end": 58.66,
+    "words": [
+      {
+        "word": " En",
+        "start": 54.58,
+        "end": 54.72
+      },
+      {
+        "word": " la",
+        "start": 54.72,
+        "end": 54.86
+      },
+      {
+        "word": " cama",
+        "start": 54.86,
+        "end": 55.08
+      },
+      {
+        "word": " del",
+        "start": 55.08,
+        "end": 55.32
+      },
+      {
+        "word": " hotel",
+        "start": 55.32,
+        "end": 55.5
+      },
+      {
+        "word": " gritando",
+        "start": 55.5,
+        "end": 56.0
+      },
+      {
+        "word": " real",
+        "start": 56.0,
+        "end": 56.34
+      },
+      {
+        "word": " a",
+        "start": 56.34,
+        "end": 56.48
+      },
+      {
+        "word": " tala",
+        "start": 56.48,
+        "end": 56.84
+      },
+      {
+        "word": " Real",
+        "start": 56.84,
+        "end": 57.24
+      },
+      {
+        "word": " es",
+        "start": 57.24,
+        "end": 57.42
+      },
+      {
+        "word": " que",
+        "start": 57.42,
+        "end": 57.52
+      },
+      {
+        "word": " no",
+        "start": 57.52,
+        "end": 57.58
+      },
+      {
+        "word": " es",
+        "start": 57.58,
+        "end": 57.7
+      },
+      {
+        "word": " cuando",
+        "start": 57.7,
+        "end": 57.98
+      },
+      {
+        "word": " bailas",
+        "start": 57.98,
+        "end": 58.66
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "yo sé que de todo me distraiga baby, solo avisa cuando salga, mami, para hacer",
+    "start": 58.66,
+    "end": 63.12,
+    "words": [
+      {
+        "word": " Yo",
+        "start": 58.66,
+        "end": 58.66
+      },
+      {
+        "word": " sé",
+        "start": 58.66,
+        "end": 58.74
+      },
+      {
+        "word": " que",
+        "start": 58.74,
+        "end": 59.06
+      },
+      {
+        "word": " de",
+        "start": 59.06,
+        "end": 59.24
+      },
+      {
+        "word": " todo",
+        "start": 59.24,
+        "end": 59.42
+      },
+      {
+        "word": " me",
+        "start": 59.42,
+        "end": 59.68
+      },
+      {
+        "word": " distraiga",
+        "start": 59.68,
+        "end": 60.32
+      },
+      {
+        "word": " Baby,",
+        "start": 60.32,
+        "end": 60.64
+      },
+      {
+        "word": " solo",
+        "start": 60.82,
+        "end": 60.94
+      },
+      {
+        "word": " avisa",
+        "start": 60.94,
+        "end": 61.2
+      },
+      {
+        "word": " cuando",
+        "start": 61.2,
+        "end": 61.5
+      },
+      {
+        "word": " salga,",
+        "start": 61.5,
+        "end": 62.18
+      },
+      {
+        "word": " mami,",
+        "start": 62.36,
+        "end": 62.42
+      },
+      {
+        "word": " para",
+        "start": 62.44,
+        "end": 62.76
+      },
+      {
+        "word": " hacer",
+        "start": 62.76,
+        "end": 63.12
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "de cosas que yo sé que te gustan mientras esperamos que el sol caiga",
+    "start": 63.12,
+    "end": 66.62,
+    "words": [
+      {
+        "word": " De",
+        "start": 63.12,
+        "end": 63.42
+      },
+      {
+        "word": " cosas",
+        "start": 63.42,
+        "end": 63.6
+      },
+      {
+        "word": " que",
+        "start": 63.6,
+        "end": 63.84
+      },
+      {
+        "word": " yo",
+        "start": 63.84,
+        "end": 64.06
+      },
+      {
+        "word": " sé",
+        "start": 64.06,
+        "end": 64.22
+      },
+      {
+        "word": " que",
+        "start": 64.22,
+        "end": 64.5
+      },
+      {
+        "word": " te",
+        "start": 64.5,
+        "end": 64.76
+      },
+      {
+        "word": " gustan",
+        "start": 64.76,
+        "end": 65.02
+      },
+      {
+        "word": " mientras",
+        "start": 65.02,
+        "end": 65.22
+      },
+      {
+        "word": " esperamos",
+        "start": 65.22,
+        "end": 65.86
+      },
+      {
+        "word": " que",
+        "start": 65.86,
+        "end": 66.0
+      },
+      {
+        "word": " el",
+        "start": 66.0,
+        "end": 66.18
+      },
+      {
+        "word": " sol",
+        "start": 66.18,
+        "end": 66.18
+      },
+      {
+        "word": " caiga",
+        "start": 66.18,
+        "end": 66.62
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "ese corpito es el kini como tini y ella lo luce en bikini",
+    "start": 66.62,
+    "end": 69.62,
+    "words": [
+      {
+        "word": " Ese",
+        "start": 66.62,
+        "end": 66.94
+      },
+      {
+        "word": " corpito",
+        "start": 66.94,
+        "end": 67.36
+      },
+      {
+        "word": " es",
+        "start": 67.36,
+        "end": 67.5
+      },
+      {
+        "word": " el",
+        "start": 67.5,
+        "end": 67.64
+      },
+      {
+        "word": " Kini",
+        "start": 67.64,
+        "end": 67.82
+      },
+      {
+        "word": " como",
+        "start": 67.82,
+        "end": 68.12
+      },
+      {
+        "word": " Tini",
+        "start": 68.12,
+        "end": 68.44
+      },
+      {
+        "word": " Y",
+        "start": 68.44,
+        "end": 68.62
+      },
+      {
+        "word": " ella",
+        "start": 68.62,
+        "end": 68.76
+      },
+      {
+        "word": " lo",
+        "start": 68.76,
+        "end": 68.94
+      },
+      {
+        "word": " luce",
+        "start": 68.94,
+        "end": 69.1
+      },
+      {
+        "word": " en",
+        "start": 69.1,
+        "end": 69.24
+      },
+      {
+        "word": " bikini",
+        "start": 69.24,
+        "end": 69.62
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "en la playa es su corillo mientras pedro y martini",
+    "start": 69.62,
+    "end": 72.12,
+    "words": [
+      {
+        "word": " En",
+        "start": 69.62,
+        "end": 69.84
+      },
+      {
+        "word": " la",
+        "start": 69.84,
+        "end": 70.0
+      },
+      {
+        "word": " playa",
+        "start": 70.0,
+        "end": 70.24
+      },
+      {
+        "word": " es",
+        "start": 70.24,
+        "end": 70.3
+      },
+      {
+        "word": " su",
+        "start": 70.3,
+        "end": 70.42
+      },
+      {
+        "word": " corillo",
+        "start": 70.42,
+        "end": 70.82
+      },
+      {
+        "word": " mientras",
+        "start": 70.82,
+        "end": 71.08
+      },
+      {
+        "word": " Pedro",
+        "start": 71.08,
+        "end": 71.46
+      },
+      {
+        "word": " y",
+        "start": 71.46,
+        "end": 71.54
+      },
+      {
+        "word": " Martini",
+        "start": 71.54,
+        "end": 72.12
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "los pibes haciendo willy pero ella entra en la mini titerita",
+    "start": 72.12,
+    "end": 75.02,
+    "words": [
+      {
+        "word": " Los",
+        "start": 72.12,
+        "end": 72.38
+      },
+      {
+        "word": " pibes",
+        "start": 72.38,
+        "end": 72.56
+      },
+      {
+        "word": " haciendo",
+        "start": 72.56,
+        "end": 72.88
+      },
+      {
+        "word": " Willy",
+        "start": 72.88,
+        "end": 73.2
+      },
+      {
+        "word": " pero",
+        "start": 73.2,
+        "end": 73.46
+      },
+      {
+        "word": " ella",
+        "start": 73.46,
+        "end": 73.74
+      },
+      {
+        "word": " entra",
+        "start": 73.74,
+        "end": 73.92
+      },
+      {
+        "word": " en",
+        "start": 73.92,
+        "end": 74.06
+      },
+      {
+        "word": " la",
+        "start": 74.06,
+        "end": 74.22
+      },
+      {
+        "word": " mini",
+        "start": 74.22,
+        "end": 74.48
+      },
+      {
+        "word": " titerita",
+        "start": 74.48,
+        "end": 75.02
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "y a barrio escuchan en guanuel y yo en chimimami",
+    "start": 75.02,
+    "end": 77.36,
+    "words": [
+      {
+        "word": " Y",
+        "start": 75.02,
+        "end": 75.12
+      },
+      {
+        "word": " a",
+        "start": 75.12,
+        "end": 75.24
+      },
+      {
+        "word": " barrio",
+        "start": 75.24,
+        "end": 75.44
+      },
+      {
+        "word": " escuchan",
+        "start": 75.44,
+        "end": 75.82
+      },
+      {
+        "word": " en",
+        "start": 75.82,
+        "end": 75.98
+      },
+      {
+        "word": " guanuel",
+        "start": 75.98,
+        "end": 76.24
+      },
+      {
+        "word": " y",
+        "start": 76.24,
+        "end": 76.36
+      },
+      {
+        "word": " yo",
+        "start": 76.36,
+        "end": 76.52
+      },
+      {
+        "word": " en",
+        "start": 76.52,
+        "end": 76.62
+      },
+      {
+        "word": " chimimami",
+        "start": 76.62,
+        "end": 77.36
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "ojalá te quede a dormir acá quiero aprenderme tu nombre",
+    "start": 78.4,
+    "end": 83.64,
+    "words": [
+      {
+        "word": " Ojalá",
+        "start": 78.4,
+        "end": 78.92
+      },
+      {
+        "word": " te",
+        "start": 78.92,
+        "end": 79.3
+      },
+      {
+        "word": " quede",
+        "start": 79.3,
+        "end": 79.82
+      },
+      {
+        "word": " a",
+        "start": 79.82,
+        "end": 80.0
+      },
+      {
+        "word": " dormir",
+        "start": 80.0,
+        "end": 80.44
+      },
+      {
+        "word": " acá",
+        "start": 80.44,
+        "end": 81.2
+      },
+      {
+        "word": " Quiero",
+        "start": 81.2,
+        "end": 81.9
+      },
+      {
+        "word": " aprenderme",
+        "start": 81.9,
+        "end": 82.78
+      },
+      {
+        "word": " tu",
+        "start": 82.78,
+        "end": 83.2
+      },
+      {
+        "word": " nombre",
+        "start": 83.2,
+        "end": 83.64
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "pero no me dicen nada yo no sé cuándo viniste",
+    "start": 83.64,
+    "end": 88.46,
+    "words": [
+      {
+        "word": " Pero",
+        "start": 83.64,
+        "end": 84.2
+      },
+      {
+        "word": " no",
+        "start": 84.2,
+        "end": 84.62
+      },
+      {
+        "word": " me",
+        "start": 84.62,
+        "end": 85.06
+      },
+      {
+        "word": " dicen",
+        "start": 85.06,
+        "end": 85.54
+      },
+      {
+        "word": " nada",
+        "start": 85.54,
+        "end": 86.04
+      },
+      {
+        "word": " Yo",
+        "start": 86.04,
+        "end": 86.44
+      },
+      {
+        "word": " no",
+        "start": 86.44,
+        "end": 86.8
+      },
+      {
+        "word": " sé",
+        "start": 86.8,
+        "end": 87.0
+      },
+      {
+        "word": " cuándo",
+        "start": 87.0,
+        "end": 87.88
+      },
+      {
+        "word": " viniste",
+        "start": 87.88,
+        "end": 88.46
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "tampoco cuándo te vas yo siempre ando por la isla",
+    "start": 88.46,
+    "end": 93.34,
+    "words": [
+      {
+        "word": " Tampoco",
+        "start": 88.46,
+        "end": 89.44
+      },
+      {
+        "word": " cuándo",
+        "start": 89.44,
+        "end": 90.1
+      },
+      {
+        "word": " te",
+        "start": 90.1,
+        "end": 90.46
+      },
+      {
+        "word": " vas",
+        "start": 90.46,
+        "end": 90.8
+      },
+      {
+        "word": " Yo",
+        "start": 90.8,
+        "end": 91.28
+      },
+      {
+        "word": " siempre",
+        "start": 91.28,
+        "end": 91.72
+      },
+      {
+        "word": " ando",
+        "start": 91.72,
+        "end": 92.16
+      },
+      {
+        "word": " por",
+        "start": 92.16,
+        "end": 92.64
+      },
+      {
+        "word": " la",
+        "start": 92.64,
+        "end": 92.9
+      },
+      {
+        "word": " isla",
+        "start": 92.9,
+        "end": 93.34
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "por si me quieren contraer",
+    "start": 93.34,
+    "end": 96.28,
+    "words": [
+      {
+        "word": " Por",
+        "start": 93.34,
+        "end": 93.62
+      },
+      {
+        "word": " si",
+        "start": 93.62,
+        "end": 93.88
+      },
+      {
+        "word": " me",
+        "start": 93.88,
+        "end": 94.28
+      },
+      {
+        "word": " quieren",
+        "start": 94.28,
+        "end": 94.78
+      },
+      {
+        "word": " contraer",
+        "start": 94.78,
+        "end": 96.28
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "oh, eh, diablo, mami oh, eh, naciste pa' mi",
+    "start": 96.28,
+    "end": 101.14,
+    "words": [
+      {
+        "word": " Oh,",
+        "start": 96.28,
+        "end": 97.02
+      },
+      {
+        "word": " eh,",
+        "start": 97.14,
+        "end": 97.52
+      },
+      {
+        "word": " diablo,",
+        "start": 97.7,
+        "end": 98.12
+      },
+      {
+        "word": " mami",
+        "start": 98.12,
+        "end": 98.72
+      },
+      {
+        "word": " Oh,",
+        "start": 98.72,
+        "end": 99.38
+      },
+      {
+        "word": " eh,",
+        "start": 99.38,
+        "end": 99.74
+      },
+      {
+        "word": " naciste",
+        "start": 99.86,
+        "end": 100.5
+      },
+      {
+        "word": " pa'",
+        "start": 100.5,
+        "end": 100.94
+      },
+      {
+        "word": " mi",
+        "start": 101.1,
+        "end": 101.14
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "oh, eh, te mudaste pa' acá viniste de trip",
+    "start": 101.14,
+    "end": 105.1,
+    "words": [
+      {
+        "word": " Oh,",
+        "start": 101.14,
+        "end": 101.86
+      },
+      {
+        "word": " eh,",
+        "start": 101.92,
+        "end": 102.5
+      },
+      {
+        "word": " te",
+        "start": 102.78,
+        "end": 102.86
+      },
+      {
+        "word": " mudaste",
+        "start": 102.86,
+        "end": 103.18
+      },
+      {
+        "word": " pa'",
+        "start": 103.18,
+        "end": 103.48
+      },
+      {
+        "word": " acá",
+        "start": 103.66,
+        "end": 103.88
+      },
+      {
+        "word": " Viniste",
+        "start": 103.88,
+        "end": 104.4
+      },
+      {
+        "word": " de",
+        "start": 104.4,
+        "end": 104.78
+      },
+      {
+        "word": " trip",
+        "start": 104.78,
+        "end": 105.1
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "oh, oh, oh, oh, oh, oh, oh diablo, mami",
+    "start": 105.1,
+    "end": 108.34,
+    "words": [
+      {
+        "word": " Oh,",
+        "start": 105.1,
+        "end": 105.82
+      },
+      {
+        "word": " oh,",
+        "start": 105.98,
+        "end": 106.44
+      },
+      {
+        "word": " oh,",
+        "start": 106.44,
+        "end": 106.6
+      },
+      {
+        "word": " oh,",
+        "start": 106.6,
+        "end": 106.68
+      },
+      {
+        "word": " oh,",
+        "start": 106.68,
+        "end": 106.84
+      },
+      {
+        "word": " oh,",
+        "start": 106.84,
+        "end": 107.0
+      },
+      {
+        "word": " oh",
+        "start": 107.24,
+        "end": 107.24
+      },
+      {
+        "word": " Diablo,",
+        "start": 107.24,
+        "end": 107.72
+      },
+      {
+        "word": " mami",
+        "start": 107.8,
+        "end": 108.34
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "oh, eh, naciste pa' mi oh, eh, si esto fuera un draft, tú fueras first pick",
+    "start": 108.34,
+    "end": 115.08,
+    "words": [
+      {
+        "word": " Oh,",
+        "start": 108.34,
+        "end": 109.0
+      },
+      {
+        "word": " eh,",
+        "start": 109.0,
+        "end": 109.2
+      },
+      {
+        "word": " naciste",
+        "start": 109.44,
+        "end": 110.08
+      },
+      {
+        "word": " pa'",
+        "start": 110.08,
+        "end": 110.6
+      },
+      {
+        "word": " mi",
+        "start": 110.72,
+        "end": 110.76
+      },
+      {
+        "word": " Oh,",
+        "start": 110.76,
+        "end": 111.44
+      },
+      {
+        "word": " eh,",
+        "start": 111.44,
+        "end": 112.1
+      },
+      {
+        "word": " si",
+        "start": 112.34,
+        "end": 112.42
+      },
+      {
+        "word": " esto",
+        "start": 112.42,
+        "end": 112.6
+      },
+      {
+        "word": " fuera",
+        "start": 112.6,
+        "end": 112.82
+      },
+      {
+        "word": " un",
+        "start": 112.82,
+        "end": 113.16
+      },
+      {
+        "word": " draft,",
+        "start": 113.16,
+        "end": 113.4
+      },
+      {
+        "word": " tú",
+        "start": 113.6,
+        "end": 113.66
+      },
+      {
+        "word": " fueras",
+        "start": 113.66,
+        "end": 114.0
+      },
+      {
+        "word": " first",
+        "start": 114.0,
+        "end": 114.38
+      },
+      {
+        "word": " pick",
+        "start": 114.38,
+        "end": 115.08
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "tú me tienes maquinando imaginándote encima de mí brincándome",
+    "start": 115.08,
+    "end": 120.3,
+    "words": [
+      {
+        "word": " Tú",
+        "start": 115.08,
+        "end": 115.9
+      },
+      {
+        "word": " me",
+        "start": 115.9,
+        "end": 116.18
+      },
+      {
+        "word": " tienes",
+        "start": 116.18,
+        "end": 116.38
+      },
+      {
+        "word": " maquinando",
+        "start": 116.38,
+        "end": 117.6
+      },
+      {
+        "word": " Imaginándote",
+        "start": 117.6,
+        "end": 118.32
+      },
+      {
+        "word": " encima",
+        "start": 118.32,
+        "end": 118.7
+      },
+      {
+        "word": " de",
+        "start": 118.7,
+        "end": 118.86
+      },
+      {
+        "word": " mí",
+        "start": 118.86,
+        "end": 118.96
+      },
+      {
+        "word": " brincándome",
+        "start": 118.96,
+        "end": 120.3
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "el porrito y el water es lo que me tiene aquí pensándote",
+    "start": 120.3,
+    "end": 125.16,
+    "words": [
+      {
+        "word": " El",
+        "start": 120.3,
+        "end": 120.86
+      },
+      {
+        "word": " porrito",
+        "start": 120.86,
+        "end": 121.18
+      },
+      {
+        "word": " y",
+        "start": 121.18,
+        "end": 121.44
+      },
+      {
+        "word": " el",
+        "start": 121.44,
+        "end": 121.7
+      },
+      {
+        "word": " water",
+        "start": 121.7,
+        "end": 122.18
+      },
+      {
+        "word": " Es",
+        "start": 122.18,
+        "end": 122.86
+      },
+      {
+        "word": " lo",
+        "start": 122.86,
+        "end": 123.06
+      },
+      {
+        "word": " que",
+        "start": 123.06,
+        "end": 123.2
+      },
+      {
+        "word": " me",
+        "start": 123.2,
+        "end": 123.34
+      },
+      {
+        "word": " tiene",
+        "start": 123.34,
+        "end": 123.54
+      },
+      {
+        "word": " aquí",
+        "start": 123.54,
+        "end": 123.86
+      },
+      {
+        "word": " pensándote",
+        "start": 123.86,
+        "end": 125.16
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "ma, dime dónde vas detrás de ti yo voy a estar",
+    "start": 125.16,
+    "end": 129.92,
+    "words": [
+      {
+        "word": " Ma,",
+        "start": 125.16,
+        "end": 125.76
+      },
+      {
+        "word": " dime",
+        "start": 125.82,
+        "end": 126.0
+      },
+      {
+        "word": " dónde",
+        "start": 126.0,
+        "end": 126.48
+      },
+      {
+        "word": " vas",
+        "start": 126.48,
+        "end": 127.54
+      },
+      {
+        "word": " Detrás",
+        "start": 127.54,
+        "end": 128.02
+      },
+      {
+        "word": " de",
+        "start": 128.02,
+        "end": 128.16
+      },
+      {
+        "word": " ti",
+        "start": 128.16,
+        "end": 128.24
+      },
+      {
+        "word": " yo",
+        "start": 128.24,
+        "end": 128.44
+      },
+      {
+        "word": " voy",
+        "start": 128.44,
+        "end": 128.72
+      },
+      {
+        "word": " a",
+        "start": 128.72,
+        "end": 129.12
+      },
+      {
+        "word": " estar",
+        "start": 129.12,
+        "end": 129.92
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "te bajo pa' mirar yo si te quiero escapar una chimba como tú es que yo me quiero robar",
+    "start": 129.92,
+    "end": 135.12,
+    "words": [
+      {
+        "word": " Te",
+        "start": 129.92,
+        "end": 130.58
+      },
+      {
+        "word": " bajo",
+        "start": 130.58,
+        "end": 130.8
+      },
+      {
+        "word": " pa'",
+        "start": 130.8,
+        "end": 131.02
+      },
+      {
+        "word": " mirar",
+        "start": 131.02,
+        "end": 131.34
+      },
+      {
+        "word": " yo",
+        "start": 131.34,
+        "end": 131.48
+      },
+      {
+        "word": " si",
+        "start": 131.48,
+        "end": 131.6
+      },
+      {
+        "word": " te",
+        "start": 131.6,
+        "end": 131.8
+      },
+      {
+        "word": " quiero",
+        "start": 131.8,
+        "end": 131.98
+      },
+      {
+        "word": " escapar",
+        "start": 131.98,
+        "end": 132.62
+      },
+      {
+        "word": " Una",
+        "start": 132.62,
+        "end": 132.92
+      },
+      {
+        "word": " chimba",
+        "start": 132.92,
+        "end": 133.24
+      },
+      {
+        "word": " como",
+        "start": 133.24,
+        "end": 133.54
+      },
+      {
+        "word": " tú",
+        "start": 133.54,
+        "end": 133.64
+      },
+      {
+        "word": " es",
+        "start": 133.64,
+        "end": 133.76
+      },
+      {
+        "word": " que",
+        "start": 133.76,
+        "end": 133.84
+      },
+      {
+        "word": " yo",
+        "start": 133.84,
+        "end": 133.98
+      },
+      {
+        "word": " me",
+        "start": 133.98,
+        "end": 134.2
+      },
+      {
+        "word": " quiero",
+        "start": 134.2,
+        "end": 134.42
+      },
+      {
+        "word": " robar",
+        "start": 134.42,
+        "end": 135.12
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "ma, dime dónde vas detrás de ti yo voy a estar",
+    "start": 135.12,
+    "end": 139.74,
+    "words": [
+      {
+        "word": " Ma,",
+        "start": 135.12,
+        "end": 135.36
+      },
+      {
+        "word": " dime",
+        "start": 135.48,
+        "end": 135.64
+      },
+      {
+        "word": " dónde",
+        "start": 135.64,
+        "end": 136.12
+      },
+      {
+        "word": " vas",
+        "start": 136.12,
+        "end": 137.08
+      },
+      {
+        "word": " Detrás",
+        "start": 137.08,
+        "end": 137.6
+      },
+      {
+        "word": " de",
+        "start": 137.6,
+        "end": 137.78
+      },
+      {
+        "word": " ti",
+        "start": 137.78,
+        "end": 137.86
+      },
+      {
+        "word": " yo",
+        "start": 137.86,
+        "end": 138.08
+      },
+      {
+        "word": " voy",
+        "start": 138.08,
+        "end": 138.32
+      },
+      {
+        "word": " a",
+        "start": 138.32,
+        "end": 139.56
+      },
+      {
+        "word": " estar",
+        "start": 139.56,
+        "end": 139.74
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "viajamos en je privado normal sobre una foto para irnos viral",
+    "start": 139.74,
+    "end": 144.08,
+    "words": [
+      {
+        "word": " Viajamos",
+        "start": 139.74,
+        "end": 140.36
+      },
+      {
+        "word": " en",
+        "start": 140.36,
+        "end": 140.46
+      },
+      {
+        "word": " je",
+        "start": 140.46,
+        "end": 140.6
+      },
+      {
+        "word": " privado",
+        "start": 140.6,
+        "end": 141.08
+      },
+      {
+        "word": " normal",
+        "start": 141.08,
+        "end": 141.84
+      },
+      {
+        "word": " Sobre",
+        "start": 141.84,
+        "end": 142.3
+      },
+      {
+        "word": " una",
+        "start": 142.3,
+        "end": 142.48
+      },
+      {
+        "word": " foto",
+        "start": 142.48,
+        "end": 142.8
+      },
+      {
+        "word": " para",
+        "start": 142.8,
+        "end": 143.22
+      },
+      {
+        "word": " irnos",
+        "start": 143.22,
+        "end": 143.62
+      },
+      {
+        "word": " viral",
+        "start": 143.62,
+        "end": 144.08
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "diablo, mami, causo tú tienes el cuerpo perfecto y que el hijo huele",
+    "start": 144.08,
+    "end": 149.12,
+    "words": [
+      {
+        "word": " Diablo,",
+        "start": 144.08,
+        "end": 144.92
+      },
+      {
+        "word": " mami,",
+        "start": 145.1,
+        "end": 145.4
+      },
+      {
+        "word": " causo",
+        "start": 145.44,
+        "end": 145.9
+      },
+      {
+        "word": " tú",
+        "start": 145.9,
+        "end": 146.14
+      },
+      {
+        "word": " tienes",
+        "start": 146.14,
+        "end": 146.62
+      },
+      {
+        "word": " El",
+        "start": 146.62,
+        "end": 146.82
+      },
+      {
+        "word": " cuerpo",
+        "start": 146.82,
+        "end": 147.08
+      },
+      {
+        "word": " perfecto",
+        "start": 147.08,
+        "end": 147.78
+      },
+      {
+        "word": " y",
+        "start": 147.78,
+        "end": 147.94
+      },
+      {
+        "word": " que",
+        "start": 147.94,
+        "end": 148.12
+      },
+      {
+        "word": " el",
+        "start": 148.12,
+        "end": 148.2
+      },
+      {
+        "word": " hijo",
+        "start": 148.2,
+        "end": 148.46
+      },
+      {
+        "word": " huele",
+        "start": 148.46,
+        "end": 149.12
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "sabes que está buena de frente a por qué puede tiarte",
+    "start": 149.12,
+    "end": 151.84,
+    "words": [
+      {
+        "word": " Sabes",
+        "start": 149.12,
+        "end": 149.42
+      },
+      {
+        "word": " que",
+        "start": 149.42,
+        "end": 149.58
+      },
+      {
+        "word": " está",
+        "start": 149.58,
+        "end": 149.8
+      },
+      {
+        "word": " buena",
+        "start": 149.8,
+        "end": 150.06
+      },
+      {
+        "word": " de",
+        "start": 150.06,
+        "end": 150.26
+      },
+      {
+        "word": " frente",
+        "start": 150.26,
+        "end": 150.48
+      },
+      {
+        "word": " a",
+        "start": 150.48,
+        "end": 150.66
+      },
+      {
+        "word": " por",
+        "start": 150.66,
+        "end": 150.82
+      },
+      {
+        "word": " qué",
+        "start": 150.82,
+        "end": 150.98
+      },
+      {
+        "word": " puede",
+        "start": 150.98,
+        "end": 151.36
+      },
+      {
+        "word": " tiarte",
+        "start": 151.36,
+        "end": 151.84
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "a él le gustan las nenas y los nenes nena buena o esta mala",
+    "start": 151.84,
+    "end": 155.78,
+    "words": [
+      {
+        "word": " A",
+        "start": 151.84,
+        "end": 152.06
+      },
+      {
+        "word": " él",
+        "start": 152.06,
+        "end": 152.14
+      },
+      {
+        "word": " le",
+        "start": 152.14,
+        "end": 152.32
+      },
+      {
+        "word": " gustan",
+        "start": 152.32,
+        "end": 152.64
+      },
+      {
+        "word": " las",
+        "start": 152.64,
+        "end": 152.8
+      },
+      {
+        "word": " nenas",
+        "start": 152.8,
+        "end": 152.9
+      },
+      {
+        "word": " y",
+        "start": 152.9,
+        "end": 153.08
+      },
+      {
+        "word": " los",
+        "start": 153.08,
+        "end": 153.4
+      },
+      {
+        "word": " nenes",
+        "start": 153.4,
+        "end": 153.9
+      },
+      {
+        "word": " Nena",
+        "start": 153.9,
+        "end": 154.22
+      },
+      {
+        "word": " buena",
+        "start": 154.22,
+        "end": 154.64
+      },
+      {
+        "word": " o",
+        "start": 154.64,
+        "end": 154.88
+      },
+      {
+        "word": " esta",
+        "start": 154.88,
+        "end": 155.1
+      },
+      {
+        "word": " mala",
+        "start": 155.1,
+        "end": 155.78
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "las decepciones la transformaron en diabla y se empodero, a la hizo el supero",
+    "start": 155.78,
+    "end": 160.2,
+    "words": [
+      {
+        "word": " Las",
+        "start": 155.78,
+        "end": 156.12
+      },
+      {
+        "word": " decepciones",
+        "start": 156.12,
+        "end": 156.6
+      },
+      {
+        "word": " la",
+        "start": 156.6,
+        "end": 156.86
+      },
+      {
+        "word": " transformaron",
+        "start": 156.86,
+        "end": 157.42
+      },
+      {
+        "word": " en",
+        "start": 157.42,
+        "end": 157.62
+      },
+      {
+        "word": " diabla",
+        "start": 157.62,
+        "end": 158.12
+      },
+      {
+        "word": " Y",
+        "start": 158.12,
+        "end": 158.32
+      },
+      {
+        "word": " se",
+        "start": 158.32,
+        "end": 158.42
+      },
+      {
+        "word": " empodero,",
+        "start": 158.42,
+        "end": 159.1
+      },
+      {
+        "word": " a",
+        "start": 159.32,
+        "end": 159.42
+      },
+      {
+        "word": " la",
+        "start": 159.42,
+        "end": 159.48
+      },
+      {
+        "word": " hizo",
+        "start": 159.48,
+        "end": 159.6
+      },
+      {
+        "word": " el",
+        "start": 159.6,
+        "end": 159.78
+      },
+      {
+        "word": " supero",
+        "start": 159.78,
+        "end": 160.2
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "pa'l carao lo mando cuando se aprende o el vio",
+    "start": 160.2,
+    "end": 162.62,
+    "words": [
+      {
+        "word": " Pa",
+        "start": 160.2,
+        "end": 160.42
+      },
+      {
+        "word": "'l",
+        "start": 160.42,
+        "end": 160.5
+      },
+      {
+        "word": " carao",
+        "start": 160.5,
+        "end": 160.86
+      },
+      {
+        "word": " lo",
+        "start": 160.86,
+        "end": 161.0
+      },
+      {
+        "word": " mando",
+        "start": 161.0,
+        "end": 161.3
+      },
+      {
+        "word": " cuando",
+        "start": 161.3,
+        "end": 161.52
+      },
+      {
+        "word": " se",
+        "start": 161.52,
+        "end": 161.74
+      },
+      {
+        "word": " aprende",
+        "start": 161.74,
+        "end": 162.08
+      },
+      {
+        "word": " o",
+        "start": 162.08,
+        "end": 162.36
+      },
+      {
+        "word": " el",
+        "start": 162.36,
+        "end": 162.44
+      },
+      {
+        "word": " vio",
+        "start": 162.44,
+        "end": 162.62
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "ella no es como antes le cura el corazón que le rompe otro gante",
+    "start": 162.62,
+    "end": 166.42,
+    "words": [
+      {
+        "word": " Ella",
+        "start": 162.62,
+        "end": 162.88
+      },
+      {
+        "word": " no",
+        "start": 162.88,
+        "end": 163.06
+      },
+      {
+        "word": " es",
+        "start": 163.06,
+        "end": 163.26
+      },
+      {
+        "word": " como",
+        "start": 163.26,
+        "end": 163.46
+      },
+      {
+        "word": " antes",
+        "start": 163.46,
+        "end": 163.92
+      },
+      {
+        "word": " Le",
+        "start": 163.92,
+        "end": 164.14
+      },
+      {
+        "word": " cura",
+        "start": 164.14,
+        "end": 164.42
+      },
+      {
+        "word": " el",
+        "start": 164.42,
+        "end": 164.54
+      },
+      {
+        "word": " corazón",
+        "start": 164.54,
+        "end": 165.0
+      },
+      {
+        "word": " que",
+        "start": 165.0,
+        "end": 165.2
+      },
+      {
+        "word": " le",
+        "start": 165.2,
+        "end": 165.36
+      },
+      {
+        "word": " rompe",
+        "start": 165.36,
+        "end": 165.58
+      },
+      {
+        "word": " otro",
+        "start": 165.58,
+        "end": 165.82
+      },
+      {
+        "word": " gante",
+        "start": 165.82,
+        "end": 166.42
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "si todos los hombres son iguales que vamos a ser",
+    "start": 166.42,
+    "end": 169.1,
+    "words": [
+      {
+        "word": " Si",
+        "start": 166.42,
+        "end": 166.82
+      },
+      {
+        "word": " todos",
+        "start": 166.82,
+        "end": 167.08
+      },
+      {
+        "word": " los",
+        "start": 167.08,
+        "end": 167.24
+      },
+      {
+        "word": " hombres",
+        "start": 167.24,
+        "end": 167.4
+      },
+      {
+        "word": " son",
+        "start": 167.4,
+        "end": 167.68
+      },
+      {
+        "word": " iguales",
+        "start": 167.68,
+        "end": 168.08
+      },
+      {
+        "word": " que",
+        "start": 168.08,
+        "end": 168.26
+      },
+      {
+        "word": " vamos",
+        "start": 168.26,
+        "end": 168.66
+      },
+      {
+        "word": " a",
+        "start": 168.66,
+        "end": 168.96
+      },
+      {
+        "word": " ser",
+        "start": 168.96,
+        "end": 169.1
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "todo lo que vale la pena no es fácil, bebé",
+    "start": 169.1,
+    "end": 171.68,
+    "words": [
+      {
+        "word": " Todo",
+        "start": 169.1,
+        "end": 169.3
+      },
+      {
+        "word": " lo",
+        "start": 169.3,
+        "end": 169.48
+      },
+      {
+        "word": " que",
+        "start": 169.48,
+        "end": 169.58
+      },
+      {
+        "word": " vale",
+        "start": 169.58,
+        "end": 169.78
+      },
+      {
+        "word": " la",
+        "start": 169.78,
+        "end": 170.06
+      },
+      {
+        "word": " pena",
+        "start": 170.06,
+        "end": 170.34
+      },
+      {
+        "word": " no",
+        "start": 170.34,
+        "end": 170.56
+      },
+      {
+        "word": " es",
+        "start": 170.56,
+        "end": 170.74
+      },
+      {
+        "word": " fácil,",
+        "start": 170.74,
+        "end": 171.02
+      },
+      {
+        "word": " bebé",
+        "start": 171.02,
+        "end": 171.68
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "teoría se mantiene natural la virgen no se quiere operar",
+    "start": 172.52,
+    "end": 177.32,
+    "words": [
+      {
+        "word": " Teoría",
+        "start": 172.51999999999998,
+        "end": 172.88
+      },
+      {
+        "word": " se",
+        "start": 172.88,
+        "end": 172.96
+      },
+      {
+        "word": " mantiene",
+        "start": 172.96,
+        "end": 173.74
+      },
+      {
+        "word": " natural",
+        "start": 173.74,
+        "end": 174.74
+      },
+      {
+        "word": " La",
+        "start": 174.74,
+        "end": 175.14
+      },
+      {
+        "word": " Virgen",
+        "start": 175.14,
+        "end": 175.38
+      },
+      {
+        "word": " no",
+        "start": 175.38,
+        "end": 175.54
+      },
+      {
+        "word": " se",
+        "start": 175.54,
+        "end": 175.92
+      },
+      {
+        "word": " quiere",
+        "start": 175.92,
+        "end": 176.26
+      },
+      {
+        "word": " operar",
+        "start": 176.26,
+        "end": 177.32
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "dice que en el mundo hacen falla a personas que sean más real",
+    "start": 177.32,
+    "end": 181.88,
+    "words": [
+      {
+        "word": " Dice",
+        "start": 177.32,
+        "end": 177.58
+      },
+      {
+        "word": " que",
+        "start": 177.58,
+        "end": 177.78
+      },
+      {
+        "word": " en",
+        "start": 177.78,
+        "end": 177.9
+      },
+      {
+        "word": " el",
+        "start": 177.9,
+        "end": 178.08
+      },
+      {
+        "word": " mundo",
+        "start": 178.08,
+        "end": 178.4
+      },
+      {
+        "word": " hacen",
+        "start": 178.4,
+        "end": 179.08
+      },
+      {
+        "word": " falla",
+        "start": 179.08,
+        "end": 179.78
+      },
+      {
+        "word": " a",
+        "start": 179.78,
+        "end": 179.9
+      },
+      {
+        "word": " personas",
+        "start": 179.9,
+        "end": 180.28
+      },
+      {
+        "word": " que",
+        "start": 180.28,
+        "end": 180.66
+      },
+      {
+        "word": " sean",
+        "start": 180.66,
+        "end": 180.94
+      },
+      {
+        "word": " más",
+        "start": 180.94,
+        "end": 181.36
+      },
+      {
+        "word": " real",
+        "start": 181.36,
+        "end": 181.88
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "teoría se mantiene natural la virgen no se quiere operar",
+    "start": 181.88,
+    "end": 186.82,
+    "words": [
+      {
+        "word": " Teoría",
+        "start": 181.88,
+        "end": 182.48
+      },
+      {
+        "word": " se",
+        "start": 182.48,
+        "end": 182.56
+      },
+      {
+        "word": " mantiene",
+        "start": 182.56,
+        "end": 183.34
+      },
+      {
+        "word": " natural",
+        "start": 183.34,
+        "end": 184.32
+      },
+      {
+        "word": " La",
+        "start": 184.32,
+        "end": 184.74
+      },
+      {
+        "word": " Virgen",
+        "start": 184.74,
+        "end": 185.0
+      },
+      {
+        "word": " no",
+        "start": 185.0,
+        "end": 185.22
+      },
+      {
+        "word": " se",
+        "start": 185.22,
+        "end": 185.54
+      },
+      {
+        "word": " quiere",
+        "start": 185.54,
+        "end": 185.84
+      },
+      {
+        "word": " operar",
+        "start": 185.84,
+        "end": 186.82
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "dice que en el mundo hacen falla a personas que sean más real",
+    "start": 186.82,
+    "end": 191.9,
+    "words": [
+      {
+        "word": " Dice",
+        "start": 186.82,
+        "end": 187.2
+      },
+      {
+        "word": " que",
+        "start": 187.2,
+        "end": 187.36
+      },
+      {
+        "word": " en",
+        "start": 187.36,
+        "end": 187.52
+      },
+      {
+        "word": " el",
+        "start": 187.52,
+        "end": 187.68
+      },
+      {
+        "word": " mundo",
+        "start": 187.68,
+        "end": 188.06
+      },
+      {
+        "word": " hacen",
+        "start": 188.06,
+        "end": 188.66
+      },
+      {
+        "word": " falla",
+        "start": 188.66,
+        "end": 189.32
+      },
+      {
+        "word": " a",
+        "start": 189.32,
+        "end": 189.5
+      },
+      {
+        "word": " personas",
+        "start": 189.5,
+        "end": 189.92
+      },
+      {
+        "word": " que",
+        "start": 189.92,
+        "end": 190.28
+      },
+      {
+        "word": " sean",
+        "start": 190.28,
+        "end": 190.54
+      },
+      {
+        "word": " más",
+        "start": 190.54,
+        "end": 191.02
+      },
+      {
+        "word": " real",
+        "start": 191.02,
+        "end": 191.9
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "oh, oh, diablo, mami oh, eh, naciste pa' mí",
+    "start": 191.9,
+    "end": 197.12,
+    "words": [
+      {
+        "word": " Oh,",
+        "start": 191.9,
+        "end": 192.58
+      },
+      {
+        "word": " oh,",
+        "start": 192.94,
+        "end": 193.52
+      },
+      {
+        "word": " diablo,",
+        "start": 193.62,
+        "end": 194.1
+      },
+      {
+        "word": " mami",
+        "start": 194.32,
+        "end": 194.74
+      },
+      {
+        "word": " Oh,",
+        "start": 194.74,
+        "end": 195.42
+      },
+      {
+        "word": " eh,",
+        "start": 195.58,
+        "end": 195.78
+      },
+      {
+        "word": " naciste",
+        "start": 195.94,
+        "end": 196.46
+      },
+      {
+        "word": " pa'",
+        "start": 196.46,
+        "end": 196.94
+      },
+      {
+        "word": " mí",
+        "start": 197.12,
+        "end": 197.12
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "oh, eh, bebé te noté que no eres de aquí",
+    "start": 197.12,
+    "end": 201.06,
+    "words": [
+      {
+        "word": " Oh,",
+        "start": 197.12,
+        "end": 197.68
+      },
+      {
+        "word": " eh,",
+        "start": 197.68,
+        "end": 198.54
+      },
+      {
+        "word": " bebé",
+        "start": 198.78,
+        "end": 199.04
+      },
+      {
+        "word": " te",
+        "start": 199.04,
+        "end": 199.24
+      },
+      {
+        "word": " noté",
+        "start": 199.24,
+        "end": 199.78
+      },
+      {
+        "word": " que",
+        "start": 199.78,
+        "end": 200.02
+      },
+      {
+        "word": " no",
+        "start": 200.02,
+        "end": 200.22
+      },
+      {
+        "word": " eres",
+        "start": 200.22,
+        "end": 200.38
+      },
+      {
+        "word": " de",
+        "start": 200.38,
+        "end": 200.76
+      },
+      {
+        "word": " aquí",
+        "start": 200.76,
+        "end": 201.06
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "oh, oh, diablo, mami oh, eh, naciste pa' mí",
+    "start": 201.06,
+    "end": 206.82,
+    "words": [
+      {
+        "word": " Oh,",
+        "start": 201.06,
+        "end": 201.9
+      },
+      {
+        "word": " oh,",
+        "start": 202.52,
+        "end": 202.52
+      },
+      {
+        "word": " diablo,",
+        "start": 202.52,
+        "end": 203.74
+      },
+      {
+        "word": " mami",
+        "start": 203.86,
+        "end": 204.36
+      },
+      {
+        "word": " Oh,",
+        "start": 204.36,
+        "end": 204.96
+      },
+      {
+        "word": " eh,",
+        "start": 204.96,
+        "end": 205.24
+      },
+      {
+        "word": " naciste",
+        "start": 205.44,
+        "end": 206.1
+      },
+      {
+        "word": " pa'",
+        "start": 206.1,
+        "end": 206.56
+      },
+      {
+        "word": " mí",
+        "start": 206.8,
+        "end": 206.82
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "oh, eh, si esto fuera un draft, esto fuera perspec",
+    "start": 206.82,
+    "end": 211.22,
+    "words": [
+      {
+        "word": " Oh,",
+        "start": 206.82,
+        "end": 207.4
+      },
+      {
+        "word": " eh,",
+        "start": 207.4,
+        "end": 208.16
+      },
+      {
+        "word": " si",
+        "start": 208.3,
+        "end": 208.38
+      },
+      {
+        "word": " esto",
+        "start": 208.38,
+        "end": 208.58
+      },
+      {
+        "word": " fuera",
+        "start": 208.58,
+        "end": 208.82
+      },
+      {
+        "word": " un",
+        "start": 208.82,
+        "end": 209.16
+      },
+      {
+        "word": " draft,",
+        "start": 209.16,
+        "end": 209.42
+      },
+      {
+        "word": " esto",
+        "start": 209.54,
+        "end": 209.62
+      },
+      {
+        "word": " fuera",
+        "start": 209.62,
+        "end": 209.88
+      },
+      {
+        "word": " perspec",
+        "start": 209.88,
+        "end": 211.22
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "rastra muerto, oíste, bebé lo intocable, oíste, bebé",
+    "start": 211.8,
+    "end": 216.44,
+    "words": [
+      {
+        "word": " Rastra",
+        "start": 211.8,
+        "end": 212.62
+      },
+      {
+        "word": " muerto,",
+        "start": 212.62,
+        "end": 212.94
+      },
+      {
+        "word": " oíste,",
+        "start": 213.14,
+        "end": 213.22
+      },
+      {
+        "word": " bebé",
+        "start": 213.42,
+        "end": 214.22
+      },
+      {
+        "word": " Lo",
+        "start": 214.22,
+        "end": 214.58
+      },
+      {
+        "word": " intocable,",
+        "start": 214.58,
+        "end": 215.12
+      },
+      {
+        "word": " oíste,",
+        "start": 215.24,
+        "end": 215.56
+      },
+      {
+        "word": " bebé",
+        "start": 215.6,
+        "end": 216.44
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "text": "la doblea",
+    "start": 216.44,
+    "end": 217.08,
+    "words": [
+      {
+        "word": " La",
+        "start": 216.44,
+        "end": 216.74
+      },
+      {
+        "word": " doblea",
+        "start": 216.74,
+        "end": 217.08
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "text": "dj luvian mambo king",
+    "start": 217.08,
+    "end": 218.78,
+    "words": [
+      {
+        "word": " DJ",
+        "start": 217.08,
+        "end": 217.36
+      },
+      {
+        "word": " Luvian",
+        "start": 217.36,
+        "end": 217.86
+      },
+      {
+        "word": " Mambo",
+        "start": 217.86,
+        "end": 218.38
+      },
+      {
+        "word": " King",
+        "start": 218.38,
+        "end": 218.78
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "text": "mambo king, mambo king",
+    "start": 218.78,
+    "end": 221.4,
+    "words": [
+      {
+        "word": " Mambo",
+        "start": 218.78,
+        "end": 219.58
+      },
+      {
+        "word": " King,",
+        "start": 219.58,
+        "end": 220.0
+      },
+      {
+        "word": " Mambo",
+        "start": 220.12,
+        "end": 220.82
+      },
+      {
+        "word": " King",
+        "start": 220.82,
+        "end": 221.4
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "text": "marahima luvian",
+    "start": 221.4,
+    "end": 222.58,
+    "words": [
+      {
+        "word": " Marahima",
+        "start": 221.4,
+        "end": 221.94
+      },
+      {
+        "word": " Luvian",
+        "start": 221.94,
+        "end": 222.58
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "text": "marahima maruma",
+    "start": 224.03999999999996,
+    "end": 225.64,
+    "words": [
+      {
+        "word": " Marahima",
+        "start": 224.03999999999996,
+        "end": 224.83999999999997
+      },
+      {
+        "word": " Maruma",
+        "start": 224.83999999999997,
+        "end": 225.64
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "text": "marahima queveo",
+    "start": 226.5,
+    "end": 227.98,
+    "words": [
+      {
+        "word": " Marahima",
+        "start": 226.5,
+        "end": 226.96
+      },
+      {
+        "word": " Queveo",
+        "start": 226.96,
+        "end": 227.98
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "text": "manuel aa, queveo siempre flow maruma, siempre real g",
+    "start": 228.98,
+    "end": 233.26000000000002,
+    "words": [
+      {
+        "word": " Manuel",
+        "start": 228.98,
+        "end": 229.82
+      },
+      {
+        "word": " AA,",
+        "start": 229.82,
+        "end": 230.48
+      },
+      {
+        "word": " Queveo",
+        "start": 230.66,
+        "end": 231.24
+      },
+      {
+        "word": " Siempre",
+        "start": 231.24,
+        "end": 231.68
+      },
+      {
+        "word": " flow",
+        "start": 231.68,
+        "end": 231.86
+      },
+      {
+        "word": " Maruma,",
+        "start": 231.86,
+        "end": 232.32
+      },
+      {
+        "word": " siempre",
+        "start": 232.52,
+        "end": 232.66
+      },
+      {
+        "word": " real",
+        "start": 232.66,
+        "end": 232.98
+      },
+      {
+        "word": " G",
+        "start": 232.98,
+        "end": 233.39999999999998
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "text": "yeah, yeah dímelo bf",
+    "start": 233.92,
+    "end": 235.98000000000002,
+    "words": [
+      {
+        "word": " Yeah,",
+        "start": 233.92,
+        "end": 234.32
+      },
+      {
+        "word": " yeah",
+        "start": 235.06,
+        "end": 235.1
+      },
+      {
+        "word": " Dímelo",
+        "start": 235.1,
+        "end": 235.5
+      },
+      {
+        "word": " BF",
+        "start": 235.5,
+        "end": 235.98000000000002
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "text": "el dismusio, oíste, bebé",
+    "start": 236.6,
+    "end": 237.98000000000002,
+    "words": [
+      {
+        "word": " El",
+        "start": 236.6,
+        "end": 236.98
+      },
+      {
+        "word": " Dismusio,",
+        "start": 236.98,
+        "end": 237.58
+      },
+      {
+        "word": " oíste,",
+        "start": 237.58,
+        "end": 237.94
+      },
+      {
+        "word": " bebé",
+        "start": 237.94,
+        "end": 238.35999999999999
+      }
+    ]
+  }
+]

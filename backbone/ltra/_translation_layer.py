@@ -5,7 +5,7 @@ from typing import Any, Dict, List
 import re
 import torch
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
-
+#XXX: Store translation as a seperate field in the segment, and keep the original "text" as the original language. This way we can avoid any weirdness with tokenization differences between source and target languages, and also preserve the original text for reference if needed.
 # ----------------------------
 # Global singleton cache
 # ----------------------------

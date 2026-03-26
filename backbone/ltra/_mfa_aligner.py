@@ -4,7 +4,7 @@ from pathlib import Path
 from praatio import tgio
 from typing import Optional
 
-import json, re, subprocess, shutil, tempfile
+import json, re, subprocess, shutil, tempfile, copy
 import unicodedata
 from pathlib import Path
 from praatio import tgio
@@ -282,7 +282,9 @@ def generate_aligned_v2(
     - forces fresh runs by deleting corpus/outdir to remove nondeterministic “random fixes”
     - optionally runs with num_jobs=1 for determinism
 
-    Output file is the same as v1: mfa_vocals_whisper_segments.json
+    Output files:
+    - mfa_vocals_whisper_segments.json (word-level timings)
+    - mfa_vocals_phone_segments.json (word + nested phone timings)
     """
 
     HERE = Path(head_folder)
@@ -293,6 +295,7 @@ def generate_aligned_v2(
     OUTDIR = HERE / "_mfa_out"
     WAV = CORPUS / "vocals.wav"
     OUT_JSON = HERE / "mfa_vocals_whisper_segments.json"
+    OUT_PHONE_JSON = HERE / "mfa_vocals_phone_segments.json"
 
     def run(cmd):
         subprocess.run(cmd, check=True)
@@ -382,9 +385,12 @@ def generate_aligned_v2(
         for w in seg.get("words", []):
             whisper_words_raw.append(w.get("word", ""))
 
+    # Keep all original words for final mapping back to segment structure.
+    # Use a cleaned copy only for transcript generation sent to MFA.
+    transcript_words_raw = whisper_words_raw
     if drop_weird_tokens:
-        whisper_words_raw = [w for w in whisper_words_raw if is_good_token(w)]
-    whisper_norm_words = [norm(w) for w in whisper_words_raw if norm(w)]
+        transcript_words_raw = [w for w in transcript_words_raw if is_good_token(w)]
+    whisper_norm_words = [norm(w) for w in transcript_words_raw if norm(w)]
     if not whisper_norm_words:
         raise RuntimeError("No usable words found in whisper JSON after cleaning.")
 
@@ -523,10 +529,12 @@ def generate_aligned_v2(
         
         
 
-    # ---- 6) Parse all TextGrids and concatenate word intervals (with offsets) ----
-    # MFA outputs one TextGrid per wav in OUTDIR, usually matching filenames.
+    # ---- 6) Parse TextGrids and concatenate word/phone intervals (with offsets) ----
+    # MFA may occasionally export only a subset of chunk TextGrids; skip missing chunks.
     all_intervals = []
+    all_phone_intervals = []
     offset = 0.0
+    missing_chunks = []
     for i, (wav_i, _txt_i) in enumerate(corpus_pairs):
         tg_path = OUTDIR / f"{wav_i.stem}.TextGrid"
         if not tg_path.exists():
@@ -535,7 +543,14 @@ def generate_aligned_v2(
             if matches:
                 tg_path = matches[0]
             else:
-                raise RuntimeError(f"Missing TextGrid for chunk {i}: expected {wav_i.stem}.TextGrid")
+                # Last resort: find any TextGrid with same numeric suffix (e.g. vocals_003)
+                suffix = wav_i.stem.split("_")[-1]
+                suffix_matches = list(OUTDIR.glob(f"**/*_{suffix}.TextGrid"))
+                if suffix_matches:
+                    tg_path = suffix_matches[0]
+                else:
+                    missing_chunks.append((i, wav_i.stem))
+                    continue
 
         tg = tgio.openTextgrid(str(tg_path), False)
         tier_names = tg.tierNameList
@@ -544,13 +559,28 @@ def generate_aligned_v2(
             n = name.strip().lower()
             return n == "word" or n == "words" or n.endswith(" - words") or "words" in n or "word" in n
 
+        def looks_like_phone_tier(name: str) -> bool:
+            n = name.strip().lower()
+            return n == "phone" or n == "phones" or n.endswith(" - phones") or "phones" in n or "phone" in n
+
         word_tier_name = next((n for n in tier_names if looks_like_word_tier(n)), None)
         if not word_tier_name:
             raise RuntimeError(f"Could not find a word tier in {tg_path.name}. Tiers: {tier_names}")
 
+        phone_tier_name = next((n for n in tier_names if looks_like_phone_tier(n)), None)
+        if not phone_tier_name:
+            raise RuntimeError(f"Could not find a phone tier in {tg_path.name}. Tiers: {tier_names}")
+
         word_tier = tg.tierDict[word_tier_name]
         intervals = [(float(s), float(e), lab.strip()) for (s, e, lab) in word_tier.entryList]
         intervals = [(s, e, lab) for (s, e, lab) in intervals if lab and lab.lower() not in {"sp", "sil"}]
+
+        phone_tier = tg.tierDict[phone_tier_name]
+        phone_intervals = [(float(s), float(e), lab.strip()) for (s, e, lab) in phone_tier.entryList]
+        phone_intervals = [
+            (s, e, lab) for (s, e, lab) in phone_intervals
+            if lab and lab.lower() not in {"sp", "sil", "spn"}
+        ]
 
         # Offset by chunk start time (only meaningful when we sliced)
         if n_chunks > 1:
@@ -562,6 +592,16 @@ def generate_aligned_v2(
 
         for s, e, lab in intervals:
             all_intervals.append((s + offset, e + offset, lab))
+
+        for s, e, lab in phone_intervals:
+            all_phone_intervals.append((s + offset, e + offset, lab))
+
+    if missing_chunks:
+        missing_txt = ", ".join(f"{stem}(#{idx})" for idx, stem in missing_chunks)
+        print(f"Warning: skipped missing TextGrids: {missing_txt}")
+
+    if not all_intervals:
+        raise RuntimeError("No MFA word intervals were parsed from TextGrid output.")
 
     # ---- 7) map original whisper words to MFA words ----
     whisper_norm = [norm(w) for w in whisper_words_raw]
@@ -590,6 +630,20 @@ def generate_aligned_v2(
     else:
         mapping = list(range(len(whisper_norm)))
 
+    # Build phone groups aligned to each MFA word interval so UI can highlight sub-word parts.
+    phones_by_mfa_word_index = {}
+    for wi, (ws, we, _wlab) in enumerate(all_intervals):
+        grouped = []
+        for ps, pe, plab in all_phone_intervals:
+            if pe <= ws or ps >= we:
+                continue
+            grouped.append({
+                "phone": plab,
+                "start": max(ps, ws),
+                "end": min(pe, we),
+            })
+        phones_by_mfa_word_index[wi] = grouped
+
     # ---- 8) overwrite whisper timings with MFA timings ----
     k = 0
     for seg in segments:
@@ -597,8 +651,8 @@ def generate_aligned_v2(
         if not ws:
             continue
         for w in ws:
-            mfa_index = mapping[k]
-            if mfa_index is not None:
+            mfa_index = mapping[k] if k < len(mapping) else None
+            if mfa_index is not None and mfa_index < len(all_intervals):
                 s, e, _lab = all_intervals[mfa_index]
                 w["start"] = s
                 w["end"] = e
@@ -607,4 +661,135 @@ def generate_aligned_v2(
         seg["end"] = ws[-1].get("end", seg.get("end"))
 
     OUT_JSON.write_text(json.dumps(segments, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    phone_segments = copy.deepcopy(segments)
+    k = 0
+    for seg in phone_segments:
+        ws = seg.get("words", [])
+        if not ws:
+            continue
+        for w in ws:
+            mfa_index = mapping[k] if k < len(mapping) else None
+            if mfa_index is not None and mfa_index in phones_by_mfa_word_index:
+                w["phones"] = phones_by_mfa_word_index.get(mfa_index, [])
+            else:
+                w["phones"] = []
+            k += 1
+        seg["start"] = ws[0].get("start", seg.get("start"))
+        seg["end"] = ws[-1].get("end", seg.get("end"))
+
+    OUT_PHONE_JSON.write_text(json.dumps(phone_segments, ensure_ascii=False, indent=2), encoding="utf-8")
     print("Wrote", OUT_JSON)
+    print("Wrote", OUT_PHONE_JSON)
+
+
+def phone_word_coverage(phone_json_path) -> float:
+    p = Path(phone_json_path)
+    if not p.exists():
+        return 0.0
+
+    data = json.loads(p.read_text(encoding="utf-8"))
+    total = 0
+    with_phones = 0
+    for seg in data:
+        for w in seg.get("words", []):
+            total += 1
+            if w.get("phones"):
+                with_phones += 1
+    if total == 0:
+        return 0.0
+    return (with_phones / total) * 100.0
+
+
+def fill_missing_phones_from_char_alignments(
+    head_folder,
+    aligned_chars_json="vocals_whisper_segments_wav2vec2.json",
+    phone_json="mfa_vocals_phone_segments.json",
+    base_json="mfa_vocals_whisper_segments.json",
+    out_json="mfa_vocals_phone_segments.json",
+):
+    """
+    Fill missing `word.phones` entries using WhisperX character alignments.
+    This is a wav2vec2-family fallback path (WhisperX CTC align model).
+    """
+
+    here = Path(head_folder)
+    aligned_path = here / aligned_chars_json
+    phone_path = here / phone_json
+    base_path = here / base_json
+    out_path = here / out_json
+
+    if not aligned_path.exists():
+        raise RuntimeError(f"Missing char alignment file: {aligned_path}")
+
+    if phone_path.exists():
+        target = json.loads(phone_path.read_text(encoding="utf-8"))
+    elif base_path.exists():
+        target = json.loads(base_path.read_text(encoding="utf-8"))
+    else:
+        raise RuntimeError(f"Missing source transcript for phone fallback: {phone_path} / {base_path}")
+
+    aligned_data = json.loads(aligned_path.read_text(encoding="utf-8"))
+    aligned_segments = aligned_data.get("segments", []) if isinstance(aligned_data, dict) else aligned_data
+
+    def _chars_for_segment(seg_obj):
+        chars = []
+        for c in seg_obj.get("chars", []) or []:
+            ch = str(c.get("char", "")).strip()
+            if not ch:
+                continue
+            if "start" not in c or "end" not in c:
+                continue
+            chars.append({
+                "phone": ch,
+                "start": float(c["start"]),
+                "end": float(c["end"]),
+            })
+        return chars
+
+    aligned_by_id = {}
+    for i, seg in enumerate(aligned_segments):
+        seg_id = seg.get("id", i)
+        aligned_by_id[seg_id] = seg
+
+    filled_words = 0
+    missing_words = 0
+
+    for i, seg in enumerate(target):
+        seg_id = seg.get("id", i)
+        aligned_seg = aligned_by_id.get(seg_id, aligned_segments[i] if i < len(aligned_segments) else {})
+        seg_chars = _chars_for_segment(aligned_seg)
+
+        for w in seg.get("words", []):
+            if w.get("phones"):
+                continue
+            missing_words += 1
+
+            ws = float(w.get("start", 0.0))
+            we = float(w.get("end", ws))
+            overlap = []
+            for c in seg_chars:
+                if c["end"] <= ws or c["start"] >= we:
+                    continue
+                overlap.append({
+                    "phone": c["phone"],
+                    "start": max(ws, c["start"]),
+                    "end": min(we, c["end"]),
+                })
+
+            if not overlap:
+                word_txt = str(w.get("word", "")).strip().lower()
+                if word_txt and we > ws:
+                    overlap = [{"phone": word_txt, "start": ws, "end": we}]
+
+            if overlap:
+                w["phones"] = overlap
+                filled_words += 1
+
+    out_path.write_text(json.dumps(target, ensure_ascii=False, indent=2), encoding="utf-8")
+    return {
+        "filled_words": filled_words,
+        "missing_words_before": missing_words,
+        "coverage_after": phone_word_coverage(out_path),
+        "output": str(out_path),
+    }

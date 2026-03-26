@@ -5,6 +5,7 @@ import sys
 import os
 import subprocess
 import numpy as np
+from difflib import SequenceMatcher
 
 pygame.init()
 
@@ -52,7 +53,11 @@ BEAT_VISUAL_MS = 100
 analysis_hpcp = None
 analysis_beats = None
 analysis_bpm = None
+analysis_note_strengths = None
 last_beat_found_at = -1000
+analysis_note_runs = []
+last_pattern_text = ""
+note_bar_levels = np.zeros(12, dtype=np.float32)
 
 # --- NEW: store broad segments instead of only flat words ---
 segments = []     # original segments: [{start,end,text,words:[{start,end,word}]}]
@@ -86,6 +91,15 @@ def _build_segment_list(json_data):
                         "start": float(w["start"]),
                         "end": float(w["end"]),
                         "word": str(w.get("word", "")) + " ",
+                        "phones": [
+                            {
+                                "phone": str(p.get("phone", "")),
+                                "start": float(p["start"]),
+                                "end": float(p["end"]),
+                            }
+                            for p in w.get("phones", [])
+                            if "start" in p and "end" in p
+                        ],
                     }
                     for w in words
                 ],
@@ -137,6 +151,7 @@ def _pick_folder(dialog_title):
 
 def _find_transcript_file(folder_path):
     orig_candidates = [
+        "mfa_vocals_phone_segments.json",
         "vocals_whisper_segments.json",
         "vocals_whisper_segments_aligned.json",
         "mfa_vocals_whisper_segments.json",
@@ -197,11 +212,14 @@ def _find_analysis_file(folder_path):
 
 
 def _load_analysis_data(folder_path):
-    global analysis_hpcp, analysis_beats, analysis_bpm
+    global analysis_hpcp, analysis_beats, analysis_bpm, analysis_note_strengths, analysis_note_runs, note_bar_levels
 
     analysis_hpcp = None
     analysis_beats = None
     analysis_bpm = None
+    analysis_note_strengths = None
+    analysis_note_runs = []
+    note_bar_levels = np.zeros(12, dtype=np.float32)
 
     analysis_path = _find_analysis_file(folder_path)
     if not analysis_path:
@@ -210,14 +228,276 @@ def _load_analysis_data(folder_path):
     try:
         data = np.load(analysis_path)
         analysis_hpcp = data["hpcp"] if "hpcp" in data else None
+        analysis_note_strengths = data["note_strengths_per_frame"] if "note_strengths_per_frame" in data else None
+        if analysis_note_strengths is None:
+            analysis_note_strengths = analysis_hpcp
         analysis_beats = data["beats"] if "beats" in data else None
         bpm_arr = data["bpm"] if "bpm" in data else None
         if bpm_arr is not None and len(bpm_arr) > 0:
             analysis_bpm = float(bpm_arr[0])
+        if analysis_hpcp is None and analysis_note_strengths is not None:
+            analysis_hpcp = analysis_note_strengths
+        if analysis_hpcp is not None and len(analysis_hpcp) > 0:
+            analysis_note_runs = _extract_fuzzy_note_runs(analysis_hpcp)
     except Exception:
         analysis_hpcp = None
         analysis_beats = None
         analysis_bpm = None
+        analysis_note_strengths = None
+        analysis_note_runs = []
+        note_bar_levels = np.zeros(12, dtype=np.float32)
+
+
+def _draw_note_strength_bars(ms, dt_ms, x=50, y=420, width=700, height=120):
+    global note_bar_levels
+
+    source = analysis_note_strengths if analysis_note_strengths is not None else analysis_hpcp
+    if source is None or ms < 0 or ms >= len(source):
+        label = dbgfont.render("Note strength: [n/a]", True, (190, 190, 190))
+        screen.blit(label, (x, y + height - 20))
+        return
+
+    frame = np.asarray(source[ms], dtype=np.float32)
+    if frame.ndim == 0 or len(frame) < 12:
+        label = dbgfont.render("Note strength: [n/a]", True, (190, 190, 190))
+        screen.blit(label, (x, y + height - 20))
+        return
+
+    frame = np.clip(frame[:12], 0.0, None)
+    peak = float(np.max(frame))
+    if peak > 1e-6:
+        target = frame / peak
+    else:
+        target = np.zeros(12, dtype=np.float32)
+
+    if note_bar_levels is None or len(note_bar_levels) != 12:
+        note_bar_levels = np.zeros(12, dtype=np.float32)
+
+    dt_scale = max(0.35, min(3.0, float(dt_ms) / 16.67))
+    attack = min(1.0, 0.36 * dt_scale)
+    release = min(1.0, 0.14 * dt_scale)
+    for i in range(12):
+        delta = float(target[i]) - float(note_bar_levels[i])
+        note_bar_levels[i] += delta * (attack if delta >= 0 else release)
+
+    panel = pygame.Rect(x - 8, y - 8, width + 16, height + 16)
+    pygame.draw.rect(screen, (40, 40, 40), panel, border_radius=8)
+    pygame.draw.rect(screen, (62, 62, 62), panel, width=1, border_radius=8)
+
+    gap = 6
+    bar_w = max(8, int((width - gap * 11) / 12))
+    bars_total_w = bar_w * 12 + gap * 11
+    start_x = x + max(0, (width - bars_total_w) // 2)
+    max_h = height - 24
+    base_y = y + max_h
+
+    for i, note in enumerate(pitch_classes):
+        bx = start_x + i * (bar_w + gap)
+
+        bg_rect = pygame.Rect(bx, y, bar_w, max_h)
+        pygame.draw.rect(screen, (55, 55, 55), bg_rect, border_radius=4)
+
+        level = float(max(0.0, min(1.0, note_bar_levels[i])))
+        h = max(1, int(level * max_h))
+        fy = base_y - h
+
+        color = (
+            int(90 + 120 * level),
+            int(120 + 100 * level),
+            int(190 + 55 * level),
+        )
+        fg_rect = pygame.Rect(bx, fy, bar_w, h)
+        pygame.draw.rect(screen, color, fg_rect, border_radius=4)
+
+        note_surf = dbgfont.render(note, True, (220, 220, 220))
+        screen.blit(note_surf, (bx + (bar_w - note_surf.get_width()) // 2, y + max_h + 2))
+
+
+def _extract_fuzzy_note_runs(hpcp, top_k=3, decay=0.93, bridge_frames=90, min_run_frames=120):
+    """
+    Build stable note runs from noisy HPCP frames.
+    Fuzzy behavior:
+    - Uses top-k weighted votes (not only strongest note)
+    - Uses exponentially decayed state (temporal smoothing)
+    - Bridges short interruptions between same-note runs
+    """
+    n = len(hpcp)
+    if n == 0:
+        return []
+
+    state = np.zeros(12, dtype=np.float64)
+    dominant = np.zeros(n, dtype=np.int16)
+    rank_w = np.array([1.0, 0.72, 0.48], dtype=np.float64)
+
+    for i in range(n):
+        frame = np.asarray(hpcp[i], dtype=np.float64)
+        state *= decay
+
+        order = np.argsort(frame)[::-1]
+        k = min(top_k, len(order))
+        for r in range(k):
+            idx = int(order[r])
+            state[idx] += rank_w[r] * float(frame[idx])
+
+        # continuity bonus to avoid jitter when top ranks swap rapidly
+        if i > 0:
+            state[int(dominant[i - 1])] += 0.06
+
+        dominant[i] = int(np.argmax(state))
+
+    runs = []
+    cur_note = int(dominant[0])
+    start = 0
+    for i in range(1, n):
+        if int(dominant[i]) != cur_note:
+            runs.append([cur_note, start, i - 1])
+            cur_note = int(dominant[i])
+            start = i
+    runs.append([cur_note, start, n - 1])
+
+    # Bridge: A ... B(short) ... A -> merge into A
+    bridged = []
+    i = 0
+    while i < len(runs):
+        if i + 2 < len(runs):
+            a_note, a_s, a_e = runs[i]
+            b_note, b_s, b_e = runs[i + 1]
+            c_note, c_s, c_e = runs[i + 2]
+            b_len = b_e - b_s + 1
+            if a_note == c_note and b_len <= bridge_frames:
+                bridged.append([a_note, a_s, c_e])
+                i += 3
+                continue
+        bridged.append(runs[i])
+        i += 1
+
+    # Remove tiny runs by absorbing into neighbors when possible.
+    compact = []
+    for run in bridged:
+        note, s, e = run
+        run_len = e - s + 1
+        if run_len < min_run_frames and compact:
+            compact[-1][2] = e
+        else:
+            compact.append([note, s, e])
+
+    return compact
+
+
+def _pattern_text_for_ms(ms, runs, window_ms=5000, max_groups=8):
+    if not runs:
+        return ""
+
+    start_ms = max(0, ms - window_ms)
+    groups = []
+    for note_idx, s, e in runs:
+        if e < start_ms or s > ms:
+            continue
+        ov_s = max(s, start_ms)
+        ov_e = min(e, ms)
+        dur = ov_e - ov_s + 1
+        if dur <= 0:
+            continue
+
+        # Convert duration to repeated-note width for readable pattern strings.
+        reps = max(1, min(8, int(round(dur / 220.0))))
+        groups.append(pitch_classes[int(note_idx)] * reps)
+
+    if not groups:
+        return ""
+    return " ".join(groups[-max_groups:])
+
+
+def _find_repeating_cycle_for_ms(
+    ms,
+    runs,
+    min_cycle_notes=3,
+    max_cycle_notes=8,
+    lookback_runs=28,
+    min_similarity=0.84,
+):
+    """
+    Detect a repeating note-order cycle around current time.
+    Returns cycle metadata with progress only when a repeat is confirmed.
+    """
+    if not runs:
+        return None
+
+    cur_idx = None
+    for i, (_n, s, e) in enumerate(runs):
+        if s <= ms <= e:
+            cur_idx = i
+            break
+    if cur_idx is None:
+        return None
+
+    start_idx = max(0, cur_idx - lookback_runs + 1)
+    seq = [int(r[0]) for r in runs[start_idx:cur_idx + 1]]
+    rel_cur = len(seq) - 1
+
+    best = None
+    for cycle_len in range(min_cycle_notes, max_cycle_notes + 1):
+        if rel_cur + 1 < cycle_len * 2:
+            continue
+
+        a = seq[rel_cur - (2 * cycle_len) + 1: rel_cur - cycle_len + 1]
+        b = seq[rel_cur - cycle_len + 1: rel_cur + 1]
+        if len(set(b)) < 2:
+            continue
+
+        sim = SequenceMatcher(None, a, b).ratio()
+        if sim < min_similarity:
+            continue
+
+        if best is None or sim > best["sim"]:
+            best = {
+                "sim": sim,
+                "cycle_len": cycle_len,
+                "anchor_start": start_idx + (rel_cur - cycle_len + 1),
+            }
+
+    if best is None:
+        return None
+
+    cycle_len = best["cycle_len"]
+    anchor_start = best["anchor_start"]
+    cycle_start_idx = anchor_start + ((cur_idx - anchor_start) // cycle_len) * cycle_len
+    cycle_end_idx = min(cycle_start_idx + cycle_len - 1, len(runs) - 1)
+
+    cycle_start_ms = int(runs[cycle_start_idx][1])
+    cycle_end_ms = int(runs[cycle_end_idx][2])
+    cycle_dur = max(1, cycle_end_ms - cycle_start_ms + 1)
+    progress = (ms - cycle_start_ms) / float(cycle_dur)
+    progress = max(0.0, min(1.0, progress))
+
+    motif = [pitch_classes[int(runs[i][0])] for i in range(cycle_start_idx, cycle_end_idx + 1)]
+    motif_text = " ".join(motif)
+
+    return {
+        "motif_text": motif_text,
+        "progress": progress,
+        "similarity": best["sim"],
+    }
+
+
+def _draw_pattern_loader(progress, center_x, center_y):
+    """
+    Draw a hollow circular loader that fills clockwise from a 0..1 progress value.
+    """
+    if progress is None:
+        return
+    progress = max(0.0, min(1.0, float(progress)))
+    radius = 15
+    thickness = 5
+
+    # Base ring
+    pygame.draw.circle(screen, (90, 90, 90), (center_x, center_y), radius, thickness)
+
+    # Progress arc from top, clockwise
+    start_angle = -np.pi / 2
+    end_angle = start_angle + (2 * np.pi * progress)
+    rect = pygame.Rect(center_x - radius, center_y - radius, radius * 2, radius * 2)
+    pygame.draw.arc(screen, (120, 255, 170), rect, start_angle, end_angle, thickness)
 
 
 def choose_generated_folder():
@@ -306,7 +586,7 @@ def _tokenize_for_render(seg_words):
     return tokens
 
 
-def _render_highlighted_tokens(tokens, highlight_idx, x, y, max_width):
+def _render_highlighted_tokens(tokens, highlight_idx, x, y, max_width, partial_highlight=None):
     """
     Render tokens left-to-right. Highlight the token at highlight_idx.
     """
@@ -325,17 +605,36 @@ def _render_highlighted_tokens(tokens, highlight_idx, x, y, max_width):
         if not text:
             continue
 
-        color = (255, 220, 80) if idx == highlight_idx else (255, 255, 255)
-        surf = font.render(text, True, color)
-        current_line_h = max(current_line_h, surf.get_height())
+        base_surf = font.render(text, True, (255, 255, 255))
+        base_w = base_surf.get_width()
+        current_line_h = max(current_line_h, base_surf.get_height())
         # wrap (simple): if next word would exceed width, go to next line
-        if x + surf.get_width() > x0 + max_width:
+        if x + base_w > x0 + max_width:
             x = x0
             y += current_line_h + 6
-            current_line_h = surf.get_height()
+            current_line_h = base_surf.get_height()
 
-        screen.blit(surf, (x, y))
-        x += surf.get_width()
+        if partial_highlight and idx == partial_highlight.get("index"):
+            n_chars = len(text)
+            i0 = max(0, min(n_chars, int(n_chars * partial_highlight.get("start_frac", 0.0))))
+            i1 = max(i0, min(n_chars, int(n_chars * partial_highlight.get("end_frac", 1.0))))
+            pre = text[:i0]
+            mid = text[i0:i1]
+            post = text[i1:]
+
+            pre_s = font.render(pre, True, (255, 255, 255))
+            mid_s = font.render(mid, True, (255, 220, 80))
+            post_s = font.render(post, True, (255, 255, 255))
+
+            screen.blit(pre_s, (x, y))
+            screen.blit(mid_s, (x + pre_s.get_width(), y))
+            screen.blit(post_s, (x + pre_s.get_width() + mid_s.get_width(), y))
+            x += pre_s.get_width() + mid_s.get_width() + post_s.get_width()
+        else:
+            color = (255, 220, 80) if idx == highlight_idx else (255, 255, 255)
+            surf = font.render(text, True, color)
+            screen.blit(surf, (x, y))
+            x += surf.get_width()
 
     return y + current_line_h
 
@@ -387,12 +686,31 @@ def update_segment_view(ms, seg_list, y):
     # render: show segment text (built from word tokens) + highlight current word
     # If wi == len(words), highlight nothing (segment basically finished)
     highlight_idx = wi if wi < len(words) else -1
+    partial_highlight = None
+    if wi < len(words):
+        phones = words[wi].get("phones", [])
+        if phones:
+            phone_idx = None
+            for pi, p in enumerate(phones):
+                if p["start"] <= elapsed < p["end"]:
+                    phone_idx = pi
+                    break
+            if phone_idx is None and elapsed >= phones[-1]["end"]:
+                phone_idx = len(phones) - 1
+            if phone_idx is not None and len(phones) > 0:
+                partial_highlight = {
+                    "index": wi,
+                    "start_frac": phone_idx / len(phones),
+                    "end_frac": (phone_idx + 1) / len(phones),
+                }
+
     bottom_y = _render_highlighted_tokens(
         cache_tokens,
         highlight_idx=highlight_idx,
         x=50,
         y=y,
         max_width=700,
+        partial_highlight=partial_highlight,
     )
 
     seg_i, word_i = si, wi
@@ -401,7 +719,11 @@ def update_segment_view(ms, seg_list, y):
     return bottom_y
 
 
-def dispnotes(ms, x=50, y=520):
+def dispnotes(ms, dt_ms, x=50, y=520):
+    global last_pattern_text
+
+    _draw_note_strength_bars(ms, dt_ms, x=x, y=y - 102, width=700, height=102)
+
     if analysis_hpcp is None or ms < 0 or ms >= len(analysis_hpcp):
         label = dbgfont.render("Notes: [n/a]", True, (190, 190, 190))
         screen.blit(label, (x, y))
@@ -409,9 +731,25 @@ def dispnotes(ms, x=50, y=520):
 
     frame = analysis_hpcp[ms]
     active_notes = [pitch_classes[i] for i, value in enumerate(frame) if value >= NOTE_THRESHOLD]
-    note_text = ", ".join(active_notes) if active_notes else "-"
+    note_text = ", ".join(active_notes[:3]) if active_notes else "-"
     label = dbgfont.render(f"Notes: [{note_text}]", True, (220, 220, 255))
     screen.blit(label, (x, y))
+
+    cycle = _find_repeating_cycle_for_ms(ms, analysis_note_runs)
+    if cycle is None:
+        return
+
+    pattern_text = cycle["motif_text"]
+    if pattern_text and last_pattern_text:
+        ratio = SequenceMatcher(None, last_pattern_text, pattern_text).ratio()
+        if ratio >= 0.78:
+            pattern_text = last_pattern_text
+
+    if pattern_text:
+        last_pattern_text = pattern_text
+        pat_label = dbgfont.render(f"Repeat~ [{pattern_text}]", True, (190, 245, 190))
+        screen.blit(pat_label, (x, y - 22))
+        _draw_pattern_loader(cycle["progress"], x + 710, y - 8)
 
 
 def dispbeats(ms, x=50, y=545):
@@ -469,7 +807,7 @@ while running:
 
     # --- NEW: update per segment, highlight current word inside it ---
     update_segment_view(elapsed_ms, segments, y=50)
-    dispnotes(elapsed_ms)
+    dispnotes(elapsed_ms, dt)
     dispbeats(elapsed_ms)
 
     screen.blit(time_text, ((780 - time_text.get_width()), (600 - time_text.get_height())))

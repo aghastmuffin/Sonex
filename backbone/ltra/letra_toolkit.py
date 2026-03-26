@@ -124,6 +124,9 @@ def separate(inp, outp=None, force: bool = False, demucs_progress_cb=None):
             src.replace(dst)
     print(inp_path, inp_path.stem)
     shutil.copy2(inp_path, out_dir_path / inp_path.name)
+        
+    #ffmpeg -i vocals.mp3 -af loudnorm=I=-14:TP=-1.5:LRA=11:print_format=summary -f null -
+    os.system(f"ffmpeg -i {out_dir_path / 'vocals.mp3'} -af loudnorm=I=-14:TP=-1.5:LRA=11:print_format=summary -f null -")
 
 
 def _probe_audio_duration_seconds(inp) -> Optional[float]:
@@ -419,6 +422,7 @@ def align(
     output_path: Optional[str] = None,
     language: str = detected or "en",
     reuse_existing: bool = True,
+    return_char_alignments: bool = False,
 ):
     """
     Align transcript segments from JSON to audio using WhisperX CTC alignment.
@@ -510,7 +514,7 @@ def align(
             align_model_metadata,
             audio,
             device,
-            return_char_alignments=False
+            return_char_alignments=bool(return_char_alignments)
         )
         print(f"CTC alignment successful")
     except Exception as e:

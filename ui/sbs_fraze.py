@@ -92,6 +92,15 @@ def _build_segment_list(json_data):
                         "start": float(w["start"]),
                         "end": float(w["end"]),
                         "word": str(w.get("word", "")) + " ",
+                        "phones": [
+                            {
+                                "phone": str(p.get("phone", "")),
+                                "start": float(p["start"]),
+                                "end": float(p["end"]),
+                            }
+                            for p in w.get("phones", [])
+                            if "start" in p and "end" in p
+                        ],
                     }
                     for w in words
                 ],
@@ -143,6 +152,7 @@ def _pick_folder(dialog_title):
 
 def _find_transcript_files(folder_path):
     orig_candidates = [
+        "mfa_vocals_phone_segments.json",
         "vocals_whisper_segments.json",
         "vocals_whisper_segments_aligned.json",
         "mfa_vocals_whisper_segments.json",
@@ -341,7 +351,7 @@ def _tokenize_for_render(seg_words):
     return tokens
 
 
-def _render_highlighted_tokens(tokens, highlight_idx, x, y, max_width):
+def _render_highlighted_tokens(tokens, highlight_idx, x, y, max_width, partial_highlight=None):
     """
     Render tokens left-to-right. Highlight the token at highlight_idx.
     """
@@ -360,17 +370,36 @@ def _render_highlighted_tokens(tokens, highlight_idx, x, y, max_width):
         if not text:
             continue
 
-        color = (255, 220, 80) if idx == highlight_idx else (255, 255, 255)
-        surf = font.render(text, True, color)
-        current_line_h = max(current_line_h, surf.get_height())
+        base_surf = font.render(text, True, (255, 255, 255))
+        base_w = base_surf.get_width()
+        current_line_h = max(current_line_h, base_surf.get_height())
         # wrap (simple): if next word would exceed width, go to next line
-        if x + surf.get_width() > x0 + max_width:
+        if x + base_w > x0 + max_width:
             x = x0
             y += current_line_h + 6
-            current_line_h = surf.get_height()
+            current_line_h = base_surf.get_height()
 
-        screen.blit(surf, (x, y))
-        x += surf.get_width()
+        if partial_highlight and idx == partial_highlight.get("index"):
+            n_chars = len(text)
+            i0 = max(0, min(n_chars, int(n_chars * partial_highlight.get("start_frac", 0.0))))
+            i1 = max(i0, min(n_chars, int(n_chars * partial_highlight.get("end_frac", 1.0))))
+            pre = text[:i0]
+            mid = text[i0:i1]
+            post = text[i1:]
+
+            pre_s = font.render(pre, True, (255, 255, 255))
+            mid_s = font.render(mid, True, (255, 220, 80))
+            post_s = font.render(post, True, (255, 255, 255))
+
+            screen.blit(pre_s, (x, y))
+            screen.blit(mid_s, (x + pre_s.get_width(), y))
+            screen.blit(post_s, (x + pre_s.get_width() + mid_s.get_width(), y))
+            x += pre_s.get_width() + mid_s.get_width() + post_s.get_width()
+        else:
+            color = (255, 220, 80) if idx == highlight_idx else (255, 255, 255)
+            surf = font.render(text, True, color)
+            screen.blit(surf, (x, y))
+            x += surf.get_width()
 
     return y + current_line_h
 
@@ -432,12 +461,31 @@ def update_segment_view(ms, seg_list, y, state_name):
     # render: show segment text (built from word tokens) + highlight current word
     # If wi == len(words), highlight nothing (segment basically finished)
     highlight_idx = wi if wi < len(words) else -1
+    partial_highlight = None
+    if wi < len(words):
+        phones = words[wi].get("phones", [])
+        if phones:
+            phone_idx = None
+            for pi, p in enumerate(phones):
+                if p["start"] <= elapsed < p["end"]:
+                    phone_idx = pi
+                    break
+            if phone_idx is None and elapsed >= phones[-1]["end"]:
+                phone_idx = len(phones) - 1
+            if phone_idx is not None and len(phones) > 0:
+                partial_highlight = {
+                    "index": wi,
+                    "start_frac": phone_idx / len(phones),
+                    "end_frac": (phone_idx + 1) / len(phones),
+                }
+
     bottom_y = _render_highlighted_tokens(
         cache_tokens,
         highlight_idx=highlight_idx,
         x=50,
         y=y,
         max_width=700,
+        partial_highlight=partial_highlight,
     )
 
     # write back state

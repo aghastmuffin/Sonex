@@ -1,0 +1,2506 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "text": "thank you.",
+      "start": 30.620000000000005,
+      "end": 32.24,
+      "words": [
+        {
+          "word": " Thank",
+          "start": 30.620000000000005,
+          "end": 32.02
+        },
+        {
+          "word": " you.",
+          "start": 32.02,
+          "end": 32.24
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "text": "we have chemistry, don't make me doubt",
+      "start": 60.0,
+      "end": 63.44,
+      "words": [
+        {
+          "word": " We",
+          "start": 60.0,
+          "end": 60.0
+        },
+        {
+          "word": " have",
+          "start": 60.0,
+          "end": 60.22
+        },
+        {
+          "word": " chemistry,",
+          "start": 60.22,
+          "end": 61.02
+        },
+        {
+          "word": " don't",
+          "start": 61.72,
+          "end": 62.0
+        },
+        {
+          "word": " make",
+          "start": 62.0,
+          "end": 62.48
+        },
+        {
+          "word": " me",
+          "start": 62.48,
+          "end": 62.9
+        },
+        {
+          "word": " doubt",
+          "start": 62.9,
+          "end": 63.44
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "let's do it without any impediments",
+      "start": 63.44,
+      "end": 67.8,
+      "words": [
+        {
+          "word": " Let's",
+          "start": 63.44,
+          "end": 64.42
+        },
+        {
+          "word": " do",
+          "start": 64.42,
+          "end": 64.9
+        },
+        {
+          "word": " it",
+          "start": 64.9,
+          "end": 65.06
+        },
+        {
+          "word": " without",
+          "start": 65.06,
+          "end": 65.64
+        },
+        {
+          "word": " any",
+          "start": 65.64,
+          "end": 66.2
+        },
+        {
+          "word": " impediments",
+          "start": 66.2,
+          "end": 67.8
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "she chose the place, i let myself go",
+      "start": 67.8,
+      "end": 72.34,
+      "words": [
+        {
+          "word": " She",
+          "start": 67.8,
+          "end": 68.54
+        },
+        {
+          "word": " chose",
+          "start": 68.54,
+          "end": 69.14
+        },
+        {
+          "word": " the",
+          "start": 69.14,
+          "end": 69.58
+        },
+        {
+          "word": " place,",
+          "start": 69.58,
+          "end": 70.22
+        },
+        {
+          "word": " I",
+          "start": 70.26,
+          "end": 70.76
+        },
+        {
+          "word": " let",
+          "start": 70.76,
+          "end": 71.24
+        },
+        {
+          "word": " myself",
+          "start": 71.24,
+          "end": 71.8
+        },
+        {
+          "word": " go",
+          "start": 71.8,
+          "end": 72.34
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "she wanted to try an experiment with me",
+      "start": 72.34,
+      "end": 76.5,
+      "words": [
+        {
+          "word": " She",
+          "start": 72.34,
+          "end": 72.7
+        },
+        {
+          "word": " wanted",
+          "start": 72.7,
+          "end": 72.98
+        },
+        {
+          "word": " to",
+          "start": 72.98,
+          "end": 73.8
+        },
+        {
+          "word": " try",
+          "start": 73.8,
+          "end": 74.44
+        },
+        {
+          "word": " an",
+          "start": 74.44,
+          "end": 74.86
+        },
+        {
+          "word": " experiment",
+          "start": 74.86,
+          "end": 76.34
+        },
+        {
+          "word": " with",
+          "start": 76.34,
+          "end": 76.5
+        },
+        {
+          "word": " me",
+          "start": 76.5,
+          "end": 76.5
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "we have chemistry, don't make me doubt",
+      "start": 76.5,
+      "end": 80.96,
+      "words": [
+        {
+          "word": " We",
+          "start": 76.5,
+          "end": 77.5
+        },
+        {
+          "word": " have",
+          "start": 77.5,
+          "end": 77.66
+        },
+        {
+          "word": " chemistry,",
+          "start": 77.66,
+          "end": 78.68
+        },
+        {
+          "word": " don't",
+          "start": 79.52,
+          "end": 79.52
+        },
+        {
+          "word": " make",
+          "start": 79.52,
+          "end": 80.16
+        },
+        {
+          "word": " me",
+          "start": 80.16,
+          "end": 80.36
+        },
+        {
+          "word": " doubt",
+          "start": 80.36,
+          "end": 80.96
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "let's do it without any impediments",
+      "start": 80.96,
+      "end": 85.02,
+      "words": [
+        {
+          "word": " Let's",
+          "start": 80.96,
+          "end": 81.84
+        },
+        {
+          "word": " do",
+          "start": 81.84,
+          "end": 82.36
+        },
+        {
+          "word": " it",
+          "start": 82.36,
+          "end": 82.52
+        },
+        {
+          "word": " without",
+          "start": 82.52,
+          "end": 82.86
+        },
+        {
+          "word": " any",
+          "start": 82.86,
+          "end": 83.6
+        },
+        {
+          "word": " impediments",
+          "start": 83.6,
+          "end": 85.02
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "i would like to be the way you walk",
+      "start": 85.02,
+      "end": 88.44,
+      "words": [
+        {
+          "word": " I",
+          "start": 85.02,
+          "end": 85.38
+        },
+        {
+          "word": " would",
+          "start": 85.38,
+          "end": 85.68
+        },
+        {
+          "word": " like",
+          "start": 85.68,
+          "end": 85.74
+        },
+        {
+          "word": " to",
+          "start": 85.74,
+          "end": 86.1
+        },
+        {
+          "word": " be",
+          "start": 86.1,
+          "end": 86.12
+        },
+        {
+          "word": " the",
+          "start": 86.12,
+          "end": 86.38
+        },
+        {
+          "word": " way",
+          "start": 86.38,
+          "end": 86.84
+        },
+        {
+          "word": " you",
+          "start": 86.84,
+          "end": 87.62
+        },
+        {
+          "word": " walk",
+          "start": 87.62,
+          "end": 88.44
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "my body needs you, daily the accounts verify it",
+      "start": 88.44,
+      "end": 93.5,
+      "words": [
+        {
+          "word": " My",
+          "start": 88.44,
+          "end": 88.94
+        },
+        {
+          "word": " body",
+          "start": 88.94,
+          "end": 89.48
+        },
+        {
+          "word": " needs",
+          "start": 89.48,
+          "end": 90.04
+        },
+        {
+          "word": " you,",
+          "start": 90.04,
+          "end": 90.72
+        },
+        {
+          "word": " daily",
+          "start": 91.08,
+          "end": 91.08
+        },
+        {
+          "word": " the",
+          "start": 91.08,
+          "end": 91.34
+        },
+        {
+          "word": " accounts",
+          "start": 91.34,
+          "end": 91.62
+        },
+        {
+          "word": " verify",
+          "start": 91.62,
+          "end": 92.82
+        },
+        {
+          "word": " it",
+          "start": 92.82,
+          "end": 93.5
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "loves no longer recycle, you don't have anyone to resist",
+      "start": 93.5,
+      "end": 97.4,
+      "words": [
+        {
+          "word": " Loves",
+          "start": 93.5,
+          "end": 93.82
+        },
+        {
+          "word": " no",
+          "start": 93.82,
+          "end": 94.22
+        },
+        {
+          "word": " longer",
+          "start": 94.22,
+          "end": 94.52
+        },
+        {
+          "word": " recycle,",
+          "start": 94.52,
+          "end": 95.14
+        },
+        {
+          "word": " you",
+          "start": 95.66,
+          "end": 95.8
+        },
+        {
+          "word": " don't",
+          "start": 95.8,
+          "end": 96.02
+        },
+        {
+          "word": " have",
+          "start": 96.02,
+          "end": 96.06
+        },
+        {
+          "word": " anyone",
+          "start": 96.06,
+          "end": 96.36
+        },
+        {
+          "word": " to",
+          "start": 96.36,
+          "end": 97.12
+        },
+        {
+          "word": " resist",
+          "start": 97.12,
+          "end": 97.4
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "they call me if you need to be assisted",
+      "start": 97.4,
+      "end": 100.06,
+      "words": [
+        {
+          "word": " They",
+          "start": 97.4,
+          "end": 97.82
+        },
+        {
+          "word": " call",
+          "start": 97.82,
+          "end": 98.06
+        },
+        {
+          "word": " me",
+          "start": 98.06,
+          "end": 98.08
+        },
+        {
+          "word": " if",
+          "start": 98.08,
+          "end": 98.32
+        },
+        {
+          "word": " you",
+          "start": 98.32,
+          "end": 98.48
+        },
+        {
+          "word": " need",
+          "start": 98.48,
+          "end": 98.94
+        },
+        {
+          "word": " to",
+          "start": 98.94,
+          "end": 99.22
+        },
+        {
+          "word": " be",
+          "start": 99.22,
+          "end": 99.42
+        },
+        {
+          "word": " assisted",
+          "start": 99.42,
+          "end": 100.06
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "forgive me for being insistent, what we do, don't count it",
+      "start": 100.06,
+      "end": 104.56,
+      "words": [
+        {
+          "word": " Forgive",
+          "start": 100.06,
+          "end": 100.94
+        },
+        {
+          "word": " me",
+          "start": 100.94,
+          "end": 101.16
+        },
+        {
+          "word": " for",
+          "start": 101.16,
+          "end": 101.28
+        },
+        {
+          "word": " being",
+          "start": 101.28,
+          "end": 101.46
+        },
+        {
+          "word": " insistent,",
+          "start": 101.46,
+          "end": 102.38
+        },
+        {
+          "word": " what",
+          "start": 102.5,
+          "end": 102.62
+        },
+        {
+          "word": " we",
+          "start": 102.62,
+          "end": 103.1
+        },
+        {
+          "word": " do,",
+          "start": 103.1,
+          "end": 103.2
+        },
+        {
+          "word": " don't",
+          "start": 103.6,
+          "end": 103.78
+        },
+        {
+          "word": " count",
+          "start": 103.78,
+          "end": 104.18
+        },
+        {
+          "word": " it",
+          "start": 104.18,
+          "end": 104.56
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "you suddenly came into my life, don't go so fast, stop",
+      "start": 104.56,
+      "end": 108.58,
+      "words": [
+        {
+          "word": " You",
+          "start": 104.56,
+          "end": 104.78
+        },
+        {
+          "word": " suddenly",
+          "start": 104.78,
+          "end": 105.22
+        },
+        {
+          "word": " came",
+          "start": 105.22,
+          "end": 105.22
+        },
+        {
+          "word": " into",
+          "start": 105.22,
+          "end": 105.28
+        },
+        {
+          "word": " my",
+          "start": 105.28,
+          "end": 105.44
+        },
+        {
+          "word": " life,",
+          "start": 105.44,
+          "end": 106.3
+        },
+        {
+          "word": " don't",
+          "start": 106.9,
+          "end": 107.04
+        },
+        {
+          "word": " go",
+          "start": 107.04,
+          "end": 107.42
+        },
+        {
+          "word": " so",
+          "start": 107.42,
+          "end": 107.62
+        },
+        {
+          "word": " fast,",
+          "start": 107.62,
+          "end": 108.0
+        },
+        {
+          "word": " stop",
+          "start": 108.58,
+          "end": 108.58
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "text": "don't listen to what people say, if they don't know what to do",
+      "start": 108.58,
+      "end": 112.88,
+      "words": [
+        {
+          "word": " Don't",
+          "start": 108.58,
+          "end": 109.2
+        },
+        {
+          "word": " listen",
+          "start": 109.2,
+          "end": 109.5
+        },
+        {
+          "word": " to",
+          "start": 109.5,
+          "end": 109.72
+        },
+        {
+          "word": " what",
+          "start": 109.72,
+          "end": 110.0
+        },
+        {
+          "word": " people",
+          "start": 110.0,
+          "end": 110.5
+        },
+        {
+          "word": " say,",
+          "start": 110.5,
+          "end": 111.04
+        },
+        {
+          "word": " if",
+          "start": 111.18,
+          "end": 111.36
+        },
+        {
+          "word": " they",
+          "start": 111.36,
+          "end": 111.46
+        },
+        {
+          "word": " don't",
+          "start": 111.46,
+          "end": 111.52
+        },
+        {
+          "word": " know",
+          "start": 111.52,
+          "end": 112.18
+        },
+        {
+          "word": " what",
+          "start": 112.18,
+          "end": 112.44
+        },
+        {
+          "word": " to",
+          "start": 112.44,
+          "end": 112.44
+        },
+        {
+          "word": " do",
+          "start": 112.44,
+          "end": 112.88
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "text": "i want you to be mine permanently, you know i do whatever it takes to see you",
+      "start": 112.88,
+      "end": 117.78,
+      "words": [
+        {
+          "word": " I",
+          "start": 112.88,
+          "end": 113.44
+        },
+        {
+          "word": " want",
+          "start": 113.44,
+          "end": 113.7
+        },
+        {
+          "word": " you",
+          "start": 113.7,
+          "end": 113.98
+        },
+        {
+          "word": " to",
+          "start": 113.98,
+          "end": 114.16
+        },
+        {
+          "word": " be",
+          "start": 114.16,
+          "end": 114.16
+        },
+        {
+          "word": " mine",
+          "start": 114.16,
+          "end": 114.46
+        },
+        {
+          "word": " permanently,",
+          "start": 114.46,
+          "end": 115.32
+        },
+        {
+          "word": " you",
+          "start": 115.7,
+          "end": 115.7
+        },
+        {
+          "word": " know",
+          "start": 115.7,
+          "end": 115.78
+        },
+        {
+          "word": " I",
+          "start": 115.78,
+          "end": 116.1
+        },
+        {
+          "word": " do",
+          "start": 116.1,
+          "end": 116.2
+        },
+        {
+          "word": " whatever",
+          "start": 116.2,
+          "end": 116.48
+        },
+        {
+          "word": " it",
+          "start": 116.48,
+          "end": 116.48
+        },
+        {
+          "word": " takes",
+          "start": 116.48,
+          "end": 116.8
+        },
+        {
+          "word": " to",
+          "start": 116.8,
+          "end": 116.86
+        },
+        {
+          "word": " see",
+          "start": 116.86,
+          "end": 117.2
+        },
+        {
+          "word": " you",
+          "start": 117.2,
+          "end": 117.78
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "text": "she chose the place, i let myself go",
+      "start": 117.78,
+      "end": 124.6,
+      "words": [
+        {
+          "word": " She",
+          "start": 117.78,
+          "end": 117.96
+        },
+        {
+          "word": " chose",
+          "start": 117.96,
+          "end": 121.48
+        },
+        {
+          "word": " the",
+          "start": 121.48,
+          "end": 122.1
+        },
+        {
+          "word": " place,",
+          "start": 122.1,
+          "end": 122.6
+        },
+        {
+          "word": " I",
+          "start": 122.64,
+          "end": 123.22
+        },
+        {
+          "word": " let",
+          "start": 123.22,
+          "end": 123.6
+        },
+        {
+          "word": " myself",
+          "start": 123.6,
+          "end": 124.16
+        },
+        {
+          "word": " go",
+          "start": 124.16,
+          "end": 124.6
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "text": "she wanted to try an experiment with me",
+      "start": 124.6,
+      "end": 129.7,
+      "words": [
+        {
+          "word": " She",
+          "start": 124.6,
+          "end": 124.92
+        },
+        {
+          "word": " wanted",
+          "start": 124.92,
+          "end": 125.34
+        },
+        {
+          "word": " to",
+          "start": 125.34,
+          "end": 126.16
+        },
+        {
+          "word": " try",
+          "start": 126.16,
+          "end": 126.78
+        },
+        {
+          "word": " an",
+          "start": 126.78,
+          "end": 127.22
+        },
+        {
+          "word": " experiment",
+          "start": 127.22,
+          "end": 128.46
+        },
+        {
+          "word": " with",
+          "start": 128.46,
+          "end": 129.7
+        },
+        {
+          "word": " me",
+          "start": 129.7,
+          "end": 129.7
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "text": "we have chemistry, don't make me doubt",
+      "start": 129.7,
+      "end": 133.4,
+      "words": [
+        {
+          "word": " We",
+          "start": 129.7,
+          "end": 129.82
+        },
+        {
+          "word": " have",
+          "start": 129.82,
+          "end": 130.06
+        },
+        {
+          "word": " chemistry,",
+          "start": 130.06,
+          "end": 130.94
+        },
+        {
+          "word": " don't",
+          "start": 131.58,
+          "end": 131.88
+        },
+        {
+          "word": " make",
+          "start": 131.88,
+          "end": 132.42
+        },
+        {
+          "word": " me",
+          "start": 132.42,
+          "end": 132.74
+        },
+        {
+          "word": " doubt",
+          "start": 132.74,
+          "end": 133.4
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "text": "let's do it without any impediments",
+      "start": 133.4,
+      "end": 137.92,
+      "words": [
+        {
+          "word": " Let's",
+          "start": 133.4,
+          "end": 134.2
+        },
+        {
+          "word": " do",
+          "start": 134.2,
+          "end": 134.72
+        },
+        {
+          "word": " it",
+          "start": 134.72,
+          "end": 134.88
+        },
+        {
+          "word": " without",
+          "start": 134.88,
+          "end": 135.4
+        },
+        {
+          "word": " any",
+          "start": 135.4,
+          "end": 135.98
+        },
+        {
+          "word": " impediments",
+          "start": 135.98,
+          "end": 137.92
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "text": "where there is no interruption, seeing a volcano in eruption",
+      "start": 137.92,
+      "end": 142.18,
+      "words": [
+        {
+          "word": " Where",
+          "start": 137.92,
+          "end": 138.54
+        },
+        {
+          "word": " there",
+          "start": 138.54,
+          "end": 138.58
+        },
+        {
+          "word": " is",
+          "start": 138.58,
+          "end": 139.06
+        },
+        {
+          "word": " no",
+          "start": 139.06,
+          "end": 139.14
+        },
+        {
+          "word": " interruption,",
+          "start": 139.14,
+          "end": 139.94
+        },
+        {
+          "word": " seeing",
+          "start": 140.08,
+          "end": 140.28
+        },
+        {
+          "word": " a",
+          "start": 140.28,
+          "end": 140.7
+        },
+        {
+          "word": " volcano",
+          "start": 140.7,
+          "end": 141.06
+        },
+        {
+          "word": " in",
+          "start": 141.06,
+          "end": 141.44
+        },
+        {
+          "word": " eruption",
+          "start": 141.44,
+          "end": 142.18
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "text": "she gave up on love, i don't lie",
+      "start": 142.18,
+      "end": 146.02,
+      "words": [
+        {
+          "word": " She",
+          "start": 142.18,
+          "end": 142.8
+        },
+        {
+          "word": " gave",
+          "start": 142.8,
+          "end": 143.08
+        },
+        {
+          "word": " up",
+          "start": 143.08,
+          "end": 143.66
+        },
+        {
+          "word": " on",
+          "start": 143.66,
+          "end": 144.0
+        },
+        {
+          "word": " love,",
+          "start": 144.0,
+          "end": 144.0
+        },
+        {
+          "word": " I",
+          "start": 144.44,
+          "end": 144.88
+        },
+        {
+          "word": " don't",
+          "start": 144.88,
+          "end": 145.12
+        },
+        {
+          "word": " lie",
+          "start": 145.12,
+          "end": 146.02
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "text": "we lit indica because she asked to fly",
+      "start": 146.02,
+      "end": 150.88,
+      "words": [
+        {
+          "word": " We",
+          "start": 146.02,
+          "end": 146.56
+        },
+        {
+          "word": " lit",
+          "start": 146.56,
+          "end": 147.22
+        },
+        {
+          "word": " indica",
+          "start": 147.22,
+          "end": 148.8
+        },
+        {
+          "word": " because",
+          "start": 148.8,
+          "end": 149.16
+        },
+        {
+          "word": " she",
+          "start": 149.16,
+          "end": 149.4
+        },
+        {
+          "word": " asked",
+          "start": 149.4,
+          "end": 149.84
+        },
+        {
+          "word": " to",
+          "start": 149.84,
+          "end": 150.88
+        },
+        {
+          "word": " fly",
+          "start": 150.88,
+          "end": 150.88
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "text": "when she loses, she appears with the time",
+      "start": 150.88,
+      "end": 154.64,
+      "words": [
+        {
+          "word": " When",
+          "start": 150.88,
+          "end": 151.46
+        },
+        {
+          "word": " she",
+          "start": 151.46,
+          "end": 151.74
+        },
+        {
+          "word": " loses,",
+          "start": 151.74,
+          "end": 152.28
+        },
+        {
+          "word": " she",
+          "start": 152.36,
+          "end": 152.6
+        },
+        {
+          "word": " appears",
+          "start": 152.6,
+          "end": 153.34
+        },
+        {
+          "word": " with",
+          "start": 153.34,
+          "end": 153.86
+        },
+        {
+          "word": " the",
+          "start": 153.86,
+          "end": 154.12
+        },
+        {
+          "word": " time",
+          "start": 154.12,
+          "end": 154.64
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "text": "in the pockets behind the scientists",
+      "start": 154.64,
+      "end": 157.98,
+      "words": [
+        {
+          "word": " In",
+          "start": 154.64,
+          "end": 155.62
+        },
+        {
+          "word": " the",
+          "start": 155.62,
+          "end": 155.9
+        },
+        {
+          "word": " pockets",
+          "start": 155.9,
+          "end": 156.32
+        },
+        {
+          "word": " behind",
+          "start": 156.32,
+          "end": 156.78
+        },
+        {
+          "word": " the",
+          "start": 156.78,
+          "end": 157.08
+        },
+        {
+          "word": " scientists",
+          "start": 157.08,
+          "end": 157.98
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "text": "your body without clothes looks magnificent",
+      "start": 157.98,
+      "end": 160.56,
+      "words": [
+        {
+          "word": " Your",
+          "start": 157.98,
+          "end": 158.38
+        },
+        {
+          "word": " body",
+          "start": 158.38,
+          "end": 158.74
+        },
+        {
+          "word": " without",
+          "start": 158.74,
+          "end": 158.9
+        },
+        {
+          "word": " clothes",
+          "start": 158.9,
+          "end": 159.26
+        },
+        {
+          "word": " looks",
+          "start": 159.26,
+          "end": 159.66
+        },
+        {
+          "word": " magnificent",
+          "start": 159.66,
+          "end": 160.56
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "text": "it puts me in a critical state",
+      "start": 160.56,
+      "end": 162.14,
+      "words": [
+        {
+          "word": " It",
+          "start": 160.56,
+          "end": 160.98
+        },
+        {
+          "word": " puts",
+          "start": 160.98,
+          "end": 161.0
+        },
+        {
+          "word": " me",
+          "start": 161.0,
+          "end": 161.12
+        },
+        {
+          "word": " in",
+          "start": 161.12,
+          "end": 161.46
+        },
+        {
+          "word": " a",
+          "start": 161.46,
+          "end": 161.46
+        },
+        {
+          "word": " critical",
+          "start": 161.46,
+          "end": 162.14
+        },
+        {
+          "word": " state",
+          "start": 162.14,
+          "end": 162.14
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "text": "and i don't want to know about anyone when i'm with you",
+      "start": 162.14,
+      "end": 166.56,
+      "words": [
+        {
+          "word": " And",
+          "start": 162.14,
+          "end": 162.48
+        },
+        {
+          "word": " I",
+          "start": 162.48,
+          "end": 162.56
+        },
+        {
+          "word": " don't",
+          "start": 162.56,
+          "end": 162.62
+        },
+        {
+          "word": " want",
+          "start": 162.62,
+          "end": 163.04
+        },
+        {
+          "word": " to",
+          "start": 163.04,
+          "end": 163.04
+        },
+        {
+          "word": " know",
+          "start": 163.04,
+          "end": 163.52
+        },
+        {
+          "word": " about",
+          "start": 163.52,
+          "end": 163.82
+        },
+        {
+          "word": " anyone",
+          "start": 163.82,
+          "end": 164.28
+        },
+        {
+          "word": " when",
+          "start": 164.28,
+          "end": 164.74
+        },
+        {
+          "word": " I'm",
+          "start": 164.74,
+          "end": 165.4
+        },
+        {
+          "word": " with",
+          "start": 165.4,
+          "end": 165.74
+        },
+        {
+          "word": " you",
+          "start": 165.74,
+          "end": 166.56
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "text": "no one takes it off me when it's for me",
+      "start": 166.56,
+      "end": 170.76,
+      "words": [
+        {
+          "word": " No",
+          "start": 166.56,
+          "end": 166.86
+        },
+        {
+          "word": " one",
+          "start": 166.86,
+          "end": 167.06
+        },
+        {
+          "word": " takes",
+          "start": 167.06,
+          "end": 167.8
+        },
+        {
+          "word": " it",
+          "start": 167.8,
+          "end": 167.8
+        },
+        {
+          "word": " off",
+          "start": 167.8,
+          "end": 167.96
+        },
+        {
+          "word": " me",
+          "start": 167.96,
+          "end": 167.96
+        },
+        {
+          "word": " when",
+          "start": 167.96,
+          "end": 169.0
+        },
+        {
+          "word": " it's",
+          "start": 169.0,
+          "end": 169.58
+        },
+        {
+          "word": " for",
+          "start": 169.58,
+          "end": 170.04
+        },
+        {
+          "word": " me",
+          "start": 170.04,
+          "end": 170.76
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "text": "and if it were for me, you know that i move to your country",
+      "start": 170.76,
+      "end": 175.18,
+      "words": [
+        {
+          "word": " And",
+          "start": 170.76,
+          "end": 171.18
+        },
+        {
+          "word": " if",
+          "start": 171.18,
+          "end": 171.34
+        },
+        {
+          "word": " it",
+          "start": 171.34,
+          "end": 171.7
+        },
+        {
+          "word": " were",
+          "start": 171.7,
+          "end": 172.0
+        },
+        {
+          "word": " for",
+          "start": 172.0,
+          "end": 172.0
+        },
+        {
+          "word": " me,",
+          "start": 172.0,
+          "end": 172.18
+        },
+        {
+          "word": " you",
+          "start": 172.32,
+          "end": 172.6
+        },
+        {
+          "word": " know",
+          "start": 172.6,
+          "end": 173.08
+        },
+        {
+          "word": " that",
+          "start": 173.08,
+          "end": 173.42
+        },
+        {
+          "word": " I",
+          "start": 173.42,
+          "end": 173.52
+        },
+        {
+          "word": " move",
+          "start": 173.52,
+          "end": 173.94
+        },
+        {
+          "word": " to",
+          "start": 173.94,
+          "end": 174.12
+        },
+        {
+          "word": " your",
+          "start": 174.12,
+          "end": 174.46
+        },
+        {
+          "word": " country",
+          "start": 174.46,
+          "end": 175.18
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "text": "and i like you so much that i never think about it",
+      "start": 175.18,
+      "end": 178.78,
+      "words": [
+        {
+          "word": " And",
+          "start": 175.18,
+          "end": 175.48
+        },
+        {
+          "word": " I",
+          "start": 175.48,
+          "end": 175.8
+        },
+        {
+          "word": " like",
+          "start": 175.8,
+          "end": 176.18
+        },
+        {
+          "word": " you",
+          "start": 176.18,
+          "end": 176.28
+        },
+        {
+          "word": " so",
+          "start": 176.28,
+          "end": 176.8
+        },
+        {
+          "word": " much",
+          "start": 176.8,
+          "end": 176.84
+        },
+        {
+          "word": " that",
+          "start": 176.84,
+          "end": 177.34
+        },
+        {
+          "word": " I",
+          "start": 177.34,
+          "end": 177.52
+        },
+        {
+          "word": " never",
+          "start": 177.52,
+          "end": 177.96
+        },
+        {
+          "word": " think",
+          "start": 177.96,
+          "end": 178.6
+        },
+        {
+          "word": " about",
+          "start": 178.6,
+          "end": 178.78
+        },
+        {
+          "word": " it",
+          "start": 178.78,
+          "end": 178.78
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "text": "to reach my planet, i go on my way to la palma",
+      "start": 178.78,
+      "end": 183.04,
+      "words": [
+        {
+          "word": " To",
+          "start": 178.78,
+          "end": 179.36
+        },
+        {
+          "word": " reach",
+          "start": 179.36,
+          "end": 179.72
+        },
+        {
+          "word": " my",
+          "start": 179.72,
+          "end": 180.2
+        },
+        {
+          "word": " planet,",
+          "start": 180.2,
+          "end": 180.9
+        },
+        {
+          "word": " I",
+          "start": 181.08,
+          "end": 181.2
+        },
+        {
+          "word": " go",
+          "start": 181.2,
+          "end": 181.28
+        },
+        {
+          "word": " on",
+          "start": 181.28,
+          "end": 181.6
+        },
+        {
+          "word": " my",
+          "start": 181.6,
+          "end": 181.6
+        },
+        {
+          "word": " way",
+          "start": 181.6,
+          "end": 182.12
+        },
+        {
+          "word": " to",
+          "start": 182.12,
+          "end": 182.3
+        },
+        {
+          "word": " La",
+          "start": 182.3,
+          "end": 182.5
+        },
+        {
+          "word": " Palma",
+          "start": 182.5,
+          "end": 183.04
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "text": "when it's needed, don't be late, you're the one to blame",
+      "start": 183.04,
+      "end": 187.28,
+      "words": [
+        {
+          "word": " When",
+          "start": 183.04,
+          "end": 183.38
+        },
+        {
+          "word": " it's",
+          "start": 183.38,
+          "end": 183.86
+        },
+        {
+          "word": " needed,",
+          "start": 183.86,
+          "end": 184.1
+        },
+        {
+          "word": " don't",
+          "start": 184.32,
+          "end": 184.46
+        },
+        {
+          "word": " be",
+          "start": 184.46,
+          "end": 184.8
+        },
+        {
+          "word": " late,",
+          "start": 184.8,
+          "end": 185.28
+        },
+        {
+          "word": " you're",
+          "start": 185.3,
+          "end": 185.7
+        },
+        {
+          "word": " the",
+          "start": 185.7,
+          "end": 186.46
+        },
+        {
+          "word": " one",
+          "start": 186.46,
+          "end": 187.16
+        },
+        {
+          "word": " to",
+          "start": 187.16,
+          "end": 187.28
+        },
+        {
+          "word": " blame",
+          "start": 187.28,
+          "end": 187.28
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "text": "she has me involved",
+      "start": 187.28,
+      "end": 189.9,
+      "words": [
+        {
+          "word": " She",
+          "start": 187.28,
+          "end": 188.28
+        },
+        {
+          "word": " has",
+          "start": 188.28,
+          "end": 188.68
+        },
+        {
+          "word": " me",
+          "start": 188.68,
+          "end": 189.02
+        },
+        {
+          "word": " involved",
+          "start": 189.02,
+          "end": 189.9
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "text": "she chose the place, i let myself go",
+      "start": 189.9,
+      "end": 194.54,
+      "words": [
+        {
+          "word": " She",
+          "start": 189.9,
+          "end": 190.74
+        },
+        {
+          "word": " chose",
+          "start": 190.74,
+          "end": 191.28
+        },
+        {
+          "word": " the",
+          "start": 191.28,
+          "end": 191.88
+        },
+        {
+          "word": " place,",
+          "start": 191.88,
+          "end": 192.44
+        },
+        {
+          "word": " I",
+          "start": 192.44,
+          "end": 192.94
+        },
+        {
+          "word": " let",
+          "start": 192.94,
+          "end": 193.42
+        },
+        {
+          "word": " myself",
+          "start": 193.42,
+          "end": 193.98
+        },
+        {
+          "word": " go",
+          "start": 193.98,
+          "end": 194.54
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "text": "she wanted to try an experiment with me",
+      "start": 194.54,
+      "end": 198.94,
+      "words": [
+        {
+          "word": " She",
+          "start": 194.54,
+          "end": 194.94
+        },
+        {
+          "word": " wanted",
+          "start": 194.94,
+          "end": 195.16
+        },
+        {
+          "word": " to",
+          "start": 195.16,
+          "end": 195.96
+        },
+        {
+          "word": " try",
+          "start": 195.96,
+          "end": 196.6
+        },
+        {
+          "word": " an",
+          "start": 196.6,
+          "end": 196.98
+        },
+        {
+          "word": " experiment",
+          "start": 196.98,
+          "end": 198.54
+        },
+        {
+          "word": " with",
+          "start": 198.54,
+          "end": 198.94
+        },
+        {
+          "word": " me",
+          "start": 198.94,
+          "end": 198.94
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "text": "we have chemistry, don't make me doubt",
+      "start": 198.94,
+      "end": 203.1,
+      "words": [
+        {
+          "word": " We",
+          "start": 198.94,
+          "end": 199.66
+        },
+        {
+          "word": " have",
+          "start": 199.66,
+          "end": 199.86
+        },
+        {
+          "word": " chemistry,",
+          "start": 199.86,
+          "end": 200.7
+        },
+        {
+          "word": " don't",
+          "start": 201.4,
+          "end": 201.72
+        },
+        {
+          "word": " make",
+          "start": 201.72,
+          "end": 202.08
+        },
+        {
+          "word": " me",
+          "start": 202.08,
+          "end": 202.54
+        },
+        {
+          "word": " doubt",
+          "start": 202.54,
+          "end": 203.1
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "text": "let's do it without any impediments",
+      "start": 203.1,
+      "end": 207.32,
+      "words": [
+        {
+          "word": " Let's",
+          "start": 203.1,
+          "end": 204.06
+        },
+        {
+          "word": " do",
+          "start": 204.06,
+          "end": 204.52
+        },
+        {
+          "word": " it",
+          "start": 204.52,
+          "end": 204.68
+        },
+        {
+          "word": " without",
+          "start": 204.68,
+          "end": 205.36
+        },
+        {
+          "word": " any",
+          "start": 205.36,
+          "end": 205.82
+        },
+        {
+          "word": " impediments",
+          "start": 205.82,
+          "end": 207.32
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "text": "she chose the place, i let myself go",
+      "start": 207.32,
+      "end": 212.0,
+      "words": [
+        {
+          "word": " She",
+          "start": 207.32,
+          "end": 208.18
+        },
+        {
+          "word": " chose",
+          "start": 208.18,
+          "end": 208.74
+        },
+        {
+          "word": " the",
+          "start": 208.74,
+          "end": 209.34
+        },
+        {
+          "word": " place,",
+          "start": 209.34,
+          "end": 209.86
+        },
+        {
+          "word": " I",
+          "start": 209.9,
+          "end": 210.48
+        },
+        {
+          "word": " let",
+          "start": 210.48,
+          "end": 210.82
+        },
+        {
+          "word": " myself",
+          "start": 210.82,
+          "end": 211.42
+        },
+        {
+          "word": " go",
+          "start": 211.42,
+          "end": 212.0
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "text": "she wanted to try an experiment with me",
+      "start": 212.0,
+      "end": 216.44,
+      "words": [
+        {
+          "word": " She",
+          "start": 212.0,
+          "end": 212.38
+        },
+        {
+          "word": " wanted",
+          "start": 212.38,
+          "end": 212.62
+        },
+        {
+          "word": " to",
+          "start": 212.62,
+          "end": 213.46
+        },
+        {
+          "word": " try",
+          "start": 213.46,
+          "end": 214.02
+        },
+        {
+          "word": " an",
+          "start": 214.02,
+          "end": 214.46
+        },
+        {
+          "word": " experiment",
+          "start": 214.46,
+          "end": 215.9
+        },
+        {
+          "word": " with",
+          "start": 215.9,
+          "end": 216.44
+        },
+        {
+          "word": " me",
+          "start": 216.44,
+          "end": 216.44
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "text": "we lit indica because she asked to fly",
+      "start": 216.44,
+      "end": 220.74,
+      "words": [
+        {
+          "word": " We",
+          "start": 216.44,
+          "end": 217.1
+        },
+        {
+          "word": " lit",
+          "start": 217.1,
+          "end": 217.22
+        },
+        {
+          "word": " indica",
+          "start": 217.22,
+          "end": 218.58
+        },
+        {
+          "word": " because",
+          "start": 218.58,
+          "end": 219.02
+        },
+        {
+          "word": " she",
+          "start": 219.02,
+          "end": 219.88
+        },
+        {
+          "word": " asked",
+          "start": 219.88,
+          "end": 219.88
+        },
+        {
+          "word": " to",
+          "start": 219.88,
+          "end": 220.74
+        },
+        {
+          "word": " fly",
+          "start": 220.74,
+          "end": 220.74
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "text": "when she loses, she appears with the time",
+      "start": 220.74,
+      "end": 225.12,
+      "words": [
+        {
+          "word": " When",
+          "start": 220.74,
+          "end": 221.26
+        },
+        {
+          "word": " she",
+          "start": 221.26,
+          "end": 221.7
+        },
+        {
+          "word": " loses,",
+          "start": 221.7,
+          "end": 222.1
+        },
+        {
+          "word": " she",
+          "start": 222.2,
+          "end": 222.42
+        },
+        {
+          "word": " appears",
+          "start": 222.42,
+          "end": 223.2
+        },
+        {
+          "word": " with",
+          "start": 223.2,
+          "end": 223.68
+        },
+        {
+          "word": " the",
+          "start": 223.68,
+          "end": 223.92
+        },
+        {
+          "word": " time",
+          "start": 223.92,
+          "end": 225.12
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "text": "in the pockets behind the scientists",
+      "start": 233.1,
+      "end": 233.62,
+      "words": [
+        {
+          "word": " In",
+          "start": 233.1,
+          "end": 233.1
+        },
+        {
+          "word": " the",
+          "start": 233.1,
+          "end": 233.1
+        },
+        {
+          "word": " pockets",
+          "start": 233.1,
+          "end": 233.1
+        },
+        {
+          "word": " behind",
+          "start": 233.1,
+          "end": 233.62
+        },
+        {
+          "word": " the",
+          "start": 233.62,
+          "end": 233.62
+        },
+        {
+          "word": " scientists",
+          "start": 233.62,
+          "end": 233.62
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "text": "your body without clothes looks magnificent",
+      "start": 238.16,
+      "end": 245.06,
+      "words": [
+        {
+          "word": " Your",
+          "start": 238.16,
+          "end": 238.98
+        },
+        {
+          "word": " body",
+          "start": 238.98,
+          "end": 239.5
+        },
+        {
+          "word": " without",
+          "start": 239.5,
+          "end": 239.5
+        },
+        {
+          "word": " clothes",
+          "start": 239.5,
+          "end": 243.38
+        },
+        {
+          "word": " looks",
+          "start": 243.38,
+          "end": 245.04
+        },
+        {
+          "word": " magnificent",
+          "start": 245.04,
+          "end": 245.06
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "text": "it puts me in a critical state",
+      "start": 245.06,
+      "end": 247.66,
+      "words": [
+        {
+          "word": " It",
+          "start": 245.06,
+          "end": 245.16
+        },
+        {
+          "word": " puts",
+          "start": 245.16,
+          "end": 245.28
+        },
+        {
+          "word": " me",
+          "start": 245.28,
+          "end": 245.88
+        },
+        {
+          "word": " in",
+          "start": 245.88,
+          "end": 245.88
+        },
+        {
+          "word": " a",
+          "start": 245.88,
+          "end": 245.88
+        },
+        {
+          "word": " critical",
+          "start": 245.88,
+          "end": 245.88
+        },
+        {
+          "word": " state",
+          "start": 245.88,
+          "end": 247.66
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "text": "and i don't want to know about anyone when i'm with you",
+      "start": 247.66,
+      "end": 253.04,
+      "words": [
+        {
+          "word": " And",
+          "start": 247.66,
+          "end": 248.14
+        },
+        {
+          "word": " I",
+          "start": 248.14,
+          "end": 248.16
+        },
+        {
+          "word": " don't",
+          "start": 248.16,
+          "end": 250.04
+        },
+        {
+          "word": " want",
+          "start": 250.04,
+          "end": 250.04
+        },
+        {
+          "word": " to",
+          "start": 250.04,
+          "end": 252.92
+        },
+        {
+          "word": " know",
+          "start": 252.92,
+          "end": 252.92
+        },
+        {
+          "word": " about",
+          "start": 252.92,
+          "end": 252.92
+        },
+        {
+          "word": " anyone",
+          "start": 252.92,
+          "end": 252.92
+        },
+        {
+          "word": " when",
+          "start": 252.92,
+          "end": 252.92
+        },
+        {
+          "word": " I'm",
+          "start": 252.92,
+          "end": 252.96
+        },
+        {
+          "word": " with",
+          "start": 252.96,
+          "end": 253.02
+        },
+        {
+          "word": " you",
+          "start": 253.02,
+          "end": 253.04
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "text": "no one takes it off me when it's for me",
+      "start": 253.04,
+      "end": 255.36,
+      "words": [
+        {
+          "word": " No",
+          "start": 253.04,
+          "end": 253.06
+        },
+        {
+          "word": " one",
+          "start": 253.06,
+          "end": 253.08
+        },
+        {
+          "word": " takes",
+          "start": 253.08,
+          "end": 255.26
+        },
+        {
+          "word": " it",
+          "start": 255.26,
+          "end": 255.26
+        },
+        {
+          "word": " off",
+          "start": 255.26,
+          "end": 255.34
+        },
+        {
+          "word": " me",
+          "start": 255.34,
+          "end": 255.34
+        },
+        {
+          "word": " when",
+          "start": 255.34,
+          "end": 255.36
+        },
+        {
+          "word": " it's",
+          "start": 255.36,
+          "end": 255.36
+        },
+        {
+          "word": " for",
+          "start": 255.36,
+          "end": 255.36
+        },
+        {
+          "word": " me",
+          "start": 255.36,
+          "end": 255.36
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "text": "no one takes it off me when it's for me",
+      "start": 255.36,
+      "end": 256.24,
+      "words": [
+        {
+          "word": " No",
+          "start": 255.36,
+          "end": 255.36
+        },
+        {
+          "word": " one",
+          "start": 255.36,
+          "end": 255.36
+        },
+        {
+          "word": " takes",
+          "start": 255.36,
+          "end": 255.36
+        },
+        {
+          "word": " it",
+          "start": 255.36,
+          "end": 256.12
+        },
+        {
+          "word": " off",
+          "start": 256.12,
+          "end": 256.24
+        },
+        {
+          "word": " me",
+          "start": 256.24,
+          "end": 256.24
+        },
+        {
+          "word": " when",
+          "start": 256.24,
+          "end": 256.24
+        },
+        {
+          "word": " it's",
+          "start": 256.24,
+          "end": 256.24
+        },
+        {
+          "word": " for",
+          "start": 256.24,
+          "end": 256.24
+        },
+        {
+          "word": " me",
+          "start": 256.24,
+          "end": 256.24
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "text": "no one takes it off me when it's for me",
+      "start": 256.24,
+      "end": 256.28,
+      "words": [
+        {
+          "word": " No",
+          "start": 256.24,
+          "end": 256.24
+        },
+        {
+          "word": " one",
+          "start": 256.24,
+          "end": 256.24
+        },
+        {
+          "word": " takes",
+          "start": 256.24,
+          "end": 256.24
+        },
+        {
+          "word": " it",
+          "start": 256.24,
+          "end": 256.24
+        },
+        {
+          "word": " off",
+          "start": 256.24,
+          "end": 256.24
+        },
+        {
+          "word": " me",
+          "start": 256.24,
+          "end": 256.24
+        },
+        {
+          "word": " when",
+          "start": 256.24,
+          "end": 256.24
+        },
+        {
+          "word": " it's",
+          "start": 256.24,
+          "end": 256.28
+        },
+        {
+          "word": " for",
+          "start": 256.28,
+          "end": 256.28
+        },
+        {
+          "word": " me",
+          "start": 256.28,
+          "end": 256.28
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "text": "no one takes it off me when it's for me",
+      "start": 256.28,
+      "end": 262.96,
+      "words": [
+        {
+          "word": " No",
+          "start": 256.28,
+          "end": 256.28
+        },
+        {
+          "word": " one",
+          "start": 256.28,
+          "end": 256.28
+        },
+        {
+          "word": " takes",
+          "start": 256.28,
+          "end": 256.28
+        },
+        {
+          "word": " it",
+          "start": 256.28,
+          "end": 256.28
+        },
+        {
+          "word": " off",
+          "start": 256.28,
+          "end": 256.28
+        },
+        {
+          "word": " me",
+          "start": 256.28,
+          "end": 256.28
+        },
+        {
+          "word": " when",
+          "start": 256.28,
+          "end": 256.28
+        },
+        {
+          "word": " it's",
+          "start": 256.28,
+          "end": 256.94
+        },
+        {
+          "word": " for",
+          "start": 256.94,
+          "end": 262.62
+        },
+        {
+          "word": " me",
+          "start": 262.62,
+          "end": 262.96
+        }
+      ]
+    }
+  ]
+}
