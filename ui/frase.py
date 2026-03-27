@@ -151,8 +151,8 @@ def _pick_folder(dialog_title):
 
 def _find_transcript_file(folder_path):
     orig_candidates = [
-        "mfa_vocals_phone_segments.json",
         "vocals_whisper_segments.json",
+        "mfa_vocals_phone_segments.json",
         "vocals_whisper_segments_aligned.json",
         "mfa_vocals_whisper_segments.json",
     ]
@@ -723,17 +723,6 @@ def dispnotes(ms, dt_ms, x=50, y=520):
     global last_pattern_text
 
     _draw_note_strength_bars(ms, dt_ms, x=x, y=y - 102, width=700, height=102)
-
-    if analysis_hpcp is None or ms < 0 or ms >= len(analysis_hpcp):
-        label = dbgfont.render("Notes: [n/a]", True, (190, 190, 190))
-        screen.blit(label, (x, y))
-        return
-
-    frame = analysis_hpcp[ms]
-    active_notes = [pitch_classes[i] for i, value in enumerate(frame) if value >= NOTE_THRESHOLD]
-    note_text = ", ".join(active_notes[:3]) if active_notes else "-"
-    label = dbgfont.render(f"Notes: [{note_text}]", True, (220, 220, 255))
-    screen.blit(label, (x, y))
 
     cycle = _find_repeating_cycle_for_ms(ms, analysis_note_runs)
     if cycle is None:

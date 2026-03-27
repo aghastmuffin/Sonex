@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Load the audio file
-y, sr = librosa.load(librosa.ex('choice'))
+y, sr = librosa.load("ojitos_lindos/htdemucs/ojitos_lindos/drums.mp3")
 
 # Calculate RMS energy
 rms = librosa.feature.rms(y=y)

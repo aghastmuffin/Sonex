@@ -11,3 +11,5 @@ yt-dlp -x --audio-format mp3 --audio-quality 0 -o "code/sonex/test_audio/alt_han
 yt-dlp -x --audio-format mp3 --audio-quality 0 -o "code/sonex/test_audio/onelove.mp3" "https://www.youtube.com/watch?v=Zk17KhMuZHc"
 
 yt-dlp -x --audio-format mp3 --audio-quality 0 -o "code/sonex/test_audio/hace_mucho_tiempo" "https://www.youtube.com/watch?v=TImHWyOyok0"
+
+yt-dlp -x --audio-format mp3 --audio-quality 0 -o "code/sonex/testing/audio/ojitos_lindos" "https://www.youtube.com/watch?v=10EX-_h4pYc"

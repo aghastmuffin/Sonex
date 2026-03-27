@@ -98,7 +98,7 @@ def splitter(file_path, lang_code=None, translation_mode="argos", settings=None,
 
     audiobase = os.path.basename(file_path).removesuffix(".mp3")
     os.makedirs(audiobase, exist_ok=True)
-    #TODO: Build ffmpeg noise normalization into separation step to avoid double disk I/O. For now, do it as a separate pass to avoid messing with the progress reporting callback in the critical separation step.
+    
 
     emit_progress(25, "Transcribing vocals...")
     emit_whisper_active(True)
@@ -220,7 +220,9 @@ def splitter(file_path, lang_code=None, translation_mode="argos", settings=None,
             emit_progress(62, "Argos translation pass...")
             translate_file(
                 f"{audiobase}/vocals_whisper_segments.json",
-                output_path=f"{audiobase}/argos_translated.json",
+                # Keep a single transcript source-of-truth: overwrite the initial whisper transcript.
+                # `translate_file` preserves original content in `source_text` and `source_words`.
+                output_path=f"{audiobase}/vocals_whisper_segments.json",
                 from_lang=source_lang,
                 to_lang=target_lang,
                 verbose=True,

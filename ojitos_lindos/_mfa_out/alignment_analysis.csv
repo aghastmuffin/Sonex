@@ -1,0 +1,12 @@
+file,begin,end,speaker,overall_log_likelihood,speech_log_likelihood,phone_duration_deviation,snr
+vocals_009,0.0,25.511,_mfa_corpus,-56.11361965895727,-54.74736065334744,3.2914016458145885,2.1378429953570546
+vocals_008,0.0,25.161,_mfa_corpus,-53.8845886327504,-58.09390959502957,2.6719722611790653,-0.3663928759546131
+vocals_005,0.0,25.161,_mfa_corpus,,,,
+vocals_003,0.0,25.161,_mfa_corpus,,,,
+vocals,0.0,258.61225,_mfa_corpus,-54.174751556397666,,,4.721872114431805
+vocals_002,0.0,25.162,_mfa_corpus,,,,
+vocals_001,0.0,25.161,_mfa_corpus,,,,
+vocals_006,0.0,25.162,_mfa_corpus,,,,
+vocals_000,0.0,25.511,_mfa_corpus,,,,
+vocals_007,0.0,25.161,_mfa_corpus,,,,
+vocals_004,0.0,25.161,_mfa_corpus,,,,

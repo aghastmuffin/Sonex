@@ -124,9 +124,32 @@ def separate(inp, outp=None, force: bool = False, demucs_progress_cb=None):
             src.replace(dst)
     print(inp_path, inp_path.stem)
     shutil.copy2(inp_path, out_dir_path / inp_path.name)
-        
-    #ffmpeg -i vocals.mp3 -af loudnorm=I=-14:TP=-1.5:LRA=11:print_format=summary -f null -
-    os.system(f"ffmpeg -i {out_dir_path / 'vocals.mp3'} -af loudnorm=I=-14:TP=-1.5:LRA=11:print_format=summary -f null -")
+
+    vocals_path = out_dir_path / "vocals.mp3"
+    vocals_normalized_path = out_dir_path / "vocals_normalized.mp3"
+    if vocals_path.exists():
+        print("Applying loudness normalization to vocals stem...")
+        ffmpeg_cmd = [
+            "ffmpeg",
+            "-y",
+            "-i",
+            str(vocals_path),
+            "-af",
+            "loudnorm=I=-14:TP=-1.5:LRA=11",
+            "-codec:a",
+            "libmp3lame",
+            "-b:a",
+            f"{mp3_rate}k",
+            str(vocals_normalized_path),
+        ]
+        p = sp.Popen(ffmpeg_cmd, stdout=sp.PIPE, stderr=sp.PIPE)
+        copy_process_streams(p)
+        p.wait()
+        if p.returncode == 0 and vocals_normalized_path.exists():
+            vocals_normalized_path.replace(vocals_path)
+            print(f"Saved normalized vocals stem: {vocals_path}")
+        else:
+            print("WARNING: ffmpeg loudnorm failed; keeping original vocals.mp3")
 
 
 def _probe_audio_duration_seconds(inp) -> Optional[float]:

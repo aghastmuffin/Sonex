@@ -109,9 +109,62 @@ def _build_segment_list(json_data):
     return out
 
 
-def _load_segments_from_file(file_path):
+def _build_source_segment_list(json_data):
+    """Build source-language segments from embedded Argos source fields when present."""
+    out = []
+    for broad_chunk in json_data:
+        words = broad_chunk.get("source_words") or broad_chunk.get("words", [])
+        if not words:
+            continue
+
+        seg_start = broad_chunk.get("start", words[0].get("start", 0.0))
+        seg_end = broad_chunk.get("end", words[-1].get("end", seg_start))
+
+        out.append(
+            {
+                "start": float(seg_start),
+                "end": float(seg_end),
+                "text": broad_chunk.get("source_text", broad_chunk.get("text", "")),
+                "words": [
+                    {
+                        "start": float(w["start"]),
+                        "end": float(w["end"]),
+                        "word": str(w.get("word", "")) + " ",
+                        "phones": [
+                            {
+                                "phone": str(p.get("phone", "")),
+                                "start": float(p["start"]),
+                                "end": float(p["end"]),
+                            }
+                            for p in w.get("phones", [])
+                            if "start" in p and "end" in p
+                        ],
+                    }
+                    for w in words
+                    if "start" in w and "end" in w
+                ],
+            }
+        )
+    return out
+
+
+def _load_json_file(file_path):
     with open(file_path, "r") as f:
-        json_data = json.load(f)
+        return json.load(f)
+
+
+def _has_embedded_source_fields(json_data):
+    for seg in json_data:
+        if seg.get("source_text"):
+            return True
+        src_words = seg.get("source_words")
+        if isinstance(src_words, list) and len(src_words) > 0:
+            return True
+    return False
+
+
+def _load_segments_from_file(file_path):
+    json_data = _load_json_file(file_path)
     return _build_segment_list(json_data)
 
 
@@ -152,8 +205,8 @@ def _pick_folder(dialog_title):
 
 def _find_transcript_files(folder_path):
     orig_candidates = [
-        "mfa_vocals_phone_segments.json",
         "vocals_whisper_segments.json",
+        "mfa_vocals_phone_segments.json",
         "vocals_whisper_segments_aligned.json",
         "mfa_vocals_whisper_segments.json",
     ]
@@ -293,16 +346,16 @@ def choose_generated_folder():
 
         folder_label = dbgfont.render(f"Folder: {_shorten_path(folder_path)}", True, (210, 210, 210))
         resolved_label = dbgfont.render(f"Resolved: {_shorten_path(resolved_folder)}", True, (210, 210, 210))
-        file1_label = dbgfont.render(f"Original: {_shorten_path(file_1)}", True, (190, 220, 190) if file_1 else (210, 210, 210))
-        file2_label = dbgfont.render(f"Translated: {_shorten_path(file_2)}", True, (190, 220, 190) if file_2 else (210, 210, 210))
+        file1_label = dbgfont.render(f"Transcript: {_shorten_path(file_1)}", True, (190, 220, 190) if file_1 else (210, 210, 210))
+        file2_label = dbgfont.render(f"Legacy translated: {_shorten_path(file_2)}", True, (190, 220, 190) if file_2 else (210, 210, 210))
         screen.blit(folder_label, (70, 285))
         screen.blit(resolved_label, (70, 318))
         screen.blit(file1_label, (70, 351))
         screen.blit(file2_label, (70, 384))
 
-        hint = dbgfont.render("Pick a folder, auto-find transcripts, then click Start", True, (165, 165, 165))
+        hint = dbgfont.render("Pick a folder, auto-find transcript, then click Start", True, (165, 165, 165))
         if file_1 and file_2:
-            mode_hint = dbgfont.render("Mode: Dual transcript", True, (170, 220, 170))
+            mode_hint = dbgfont.render("Mode: Embedded or legacy dual transcript", True, (170, 220, 170))
             screen.blit(mode_hint, (WIDTH // 2 - mode_hint.get_width() // 2, 545))
         elif file_1 or file_2:
             mode_hint = dbgfont.render("Mode: Single transcript", True, (220, 210, 160))
@@ -539,8 +592,16 @@ if not primary_file:
     pygame.quit()
     sys.exit()
 
-segments = _load_segments_from_file(primary_file)
-segments1 = _load_segments_from_file(selected_file_2) if (selected_file_1 and selected_file_2) else []
+primary_json = _load_json_file(primary_file)
+segments = _build_source_segment_list(primary_json)
+if _has_embedded_source_fields(primary_json):
+    # Unified transcript file: translated words in `words`, original words in `source_words`.
+    segments1 = _build_segment_list(primary_json)
+elif selected_file_1 and selected_file_2 and selected_file_2 != primary_file:
+    # Legacy dual-file mode fallback.
+    segments1 = _load_segments_from_file(selected_file_2)
+else:
+    segments1 = []
 _start_audio_from_transcript_file(primary_file)
 _load_analysis_data(resolved_folder)
 

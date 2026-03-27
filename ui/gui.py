@@ -30,7 +30,6 @@ GPU = False
 WHISPER_TASK = "transcribe" #or "translate" !! Translate targets only English
 
 
-
 def notify(title, message):
     CMD = '''
     on run argv
