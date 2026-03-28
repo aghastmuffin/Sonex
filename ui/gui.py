@@ -27,7 +27,6 @@ WHISPER_BEAMSIZE = 5
 WHISPER_PAT = 2
 WHISPER_BESTOF = 3
 GPU = False
-WHISPER_TASK = "transcribe" #or "translate" !! Translate targets only English
 
 
 def notify(title, message):
@@ -104,11 +103,6 @@ class AdvancedSettingsDialog(QDialog):
         self.whisper_bestof_input.setValue(int(settings["whisper_best_of"]))
         form.addRow("Whisper best_of", self.whisper_bestof_input)
 
-        self.whisper_task_input = QComboBox(self)
-        self.whisper_task_input.addItems(["transcribe", "translate"])
-        self.whisper_task_input.setCurrentText(settings["whisper_task"])
-        form.addRow("Whisper task", self.whisper_task_input)
-
         """self.MFA_target_in = QComboBox(self)
         self.MFA_target_in.addItems(["default", "vocals", "other", "both"])
         self.MFA_target_in.setCurrentText(settings["MFA_target"])
@@ -147,7 +141,6 @@ class AdvancedSettingsDialog(QDialog):
             "whisper_beam_size": int(self.whisper_beam_input.value()),
             "whisper_patience": int(self.whisper_pat_input.value()),
             "whisper_best_of": int(self.whisper_bestof_input.value()),
-            "whisper_task": self.whisper_task_input.currentText(),
             "gpu": bool(self.gpu_input.isChecked()),
         }
 
@@ -323,7 +316,6 @@ class Window(QMainWindow):
             "whisper_beam_size": WHISPER_BEAMSIZE,
             "whisper_patience": WHISPER_PAT,
             "whisper_best_of": WHISPER_BESTOF,
-            "whisper_task": WHISPER_TASK,
             "gpu": GPU,
         }
 

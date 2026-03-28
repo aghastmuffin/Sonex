@@ -329,7 +329,9 @@ def _load_analysis_data(folder_path):
         if analysis_hpcp is None and analysis_note_strengths is not None:
             analysis_hpcp = analysis_note_strengths
         if analysis_hpcp is not None and len(analysis_hpcp) > 0:
-            analysis_note_runs = _extract_fuzzy_note_runs(analysis_hpcp)
+            analysis_note_runs = _extract_fuzzy_note_runs(
+                analysis_hpcp, frame_ms=analysis_frame_ms
+            )
     except Exception:
         analysis_hpcp = None
         analysis_beats = None
@@ -412,35 +414,59 @@ def _draw_note_strength_bars(ms, dt_ms, x=50, y=420, width=700, height=120):
         screen.blit(note_surf, (bx + (bar_w - note_surf.get_width()) // 2, y + max_h + 2))
 
 
-def _extract_fuzzy_note_runs(hpcp, top_k=3, decay=0.93, bridge_frames=90, min_run_frames=120):
+def _extract_fuzzy_note_runs(
+    hpcp,
+    top_k=4,
+    half_life_ms=500,
+    frame_ms=1.0,
+    bridge_ms=400,
+    min_run_ms=300,
+    min_relative_strength=0.35,
+):
     """
     Build stable note runs from noisy HPCP frames.
-    Fuzzy behavior:
-    - Uses top-k weighted votes (not only strongest note)
-    - Uses exponentially decayed state (temporal smoothing)
-    - Bridges short interruptions between same-note runs
+
+    Key changes vs original:
+    - decay is derived from half_life_ms so it works correctly
+      regardless of the hop size used during analysis.
+    - Weights are 1/(rank+1) so a note consistently in 2nd place
+      can beat one that only sporadically takes 1st.
+    - min_relative_strength gates out weak notes so noise/percussion
+      does not pollute the vote.
+    - bridge and min_run are in ms, converted to frames internally.
     """
     n = len(hpcp)
     if n == 0:
         return []
 
+    frame_ms = max(1e-6, float(frame_ms))
+    half_life_ms = max(1e-6, float(half_life_ms))
+    decay = 0.5 ** (frame_ms / half_life_ms)
+    bridge_frames = max(1, int(round(float(bridge_ms) / frame_ms)))
+    min_run_frames = max(1, int(round(float(min_run_ms) / frame_ms)))
+
     state = np.zeros(12, dtype=np.float64)
     dominant = np.zeros(n, dtype=np.int16)
-    rank_w = np.array([1.0, 0.72, 0.48], dtype=np.float64)
 
     for i in range(n):
         frame = np.asarray(hpcp[i], dtype=np.float64)
+        if frame.ndim > 1:
+            frame = frame.reshape(-1)
+        if len(frame) > len(pitch_classes):
+            frame = frame[: len(pitch_classes)]
+
         state *= decay
 
-        order = np.argsort(frame)[::-1]
-        k = min(top_k, len(order))
-        for r in range(k):
-            idx = int(order[r])
-            state[idx] += rank_w[r] * float(frame[idx])
+        peak = float(frame.max()) if len(frame) > 0 else 0.0
+        if peak < 1e-6:
+            dominant[i] = dominant[i - 1] if i > 0 else 0
+            continue
 
-        # continuity bonus to avoid jitter when top ranks swap rapidly
-        if i > 0:
-            state[int(dominant[i - 1])] += 0.06
+        ranks = np.argsort(frame)[::-1]
+        for r in range(min(top_k, len(ranks), len(pitch_classes))):
+            idx = int(ranks[r])
+            if float(frame[idx]) / peak >= min_relative_strength:
+                state[idx] += 1.0 / (r + 1.0)
 
         dominant[i] = int(np.argmax(state))
 
@@ -454,33 +480,43 @@ def _extract_fuzzy_note_runs(hpcp, top_k=3, decay=0.93, bridge_frames=90, min_ru
             start = i
     runs.append([cur_note, start, n - 1])
 
-    # Bridge: A ... B(short) ... A -> merge into A
     bridged = []
     i = 0
     while i < len(runs):
         if i + 2 < len(runs):
             a_note, a_s, a_e = runs[i]
-            b_note, b_s, b_e = runs[i + 1]
-            c_note, c_s, c_e = runs[i + 2]
-            b_len = b_e - b_s + 1
-            if a_note == c_note and b_len <= bridge_frames:
+            _b_note, b_s, b_e = runs[i + 1]
+            c_note, _c_s, c_e = runs[i + 2]
+            if a_note == c_note and (b_e - b_s + 1) <= bridge_frames:
                 bridged.append([a_note, a_s, c_e])
                 i += 3
                 continue
         bridged.append(runs[i])
         i += 1
 
-    # Remove tiny runs by absorbing into neighbors when possible.
     compact = []
     for run in bridged:
         note, s, e = run
-        run_len = e - s + 1
-        if run_len < min_run_frames and compact:
+        if (e - s + 1) < min_run_frames and compact:
             compact[-1][2] = e
         else:
             compact.append([note, s, e])
 
     return compact
+
+
+def _chord_sets_similar(a_sets, b_sets, min_overlap=0.7):
+    if len(a_sets) != len(b_sets):
+        return 0.0
+    scores = []
+    for a, b in zip(a_sets, b_sets):
+        if not a and not b:
+            scores.append(1.0)
+        elif not a or not b:
+            scores.append(0.0)
+        else:
+            scores.append(len(a & b) / len(a | b))
+    return float(np.mean(scores)) if scores else 0.0
 
 
 def _pattern_text_for_ms(ms, runs, window_ms=5000, max_groups=8):
@@ -508,30 +544,33 @@ def _pattern_text_for_ms(ms, runs, window_ms=5000, max_groups=8):
 
 
 def _find_repeating_cycle_for_ms(
-    ms,
+    frame_idx,
     runs,
-    min_cycle_notes=3,
-    max_cycle_notes=8,
-    lookback_runs=28,
-    min_similarity=0.84,
+    min_cycle_notes=6,
+    max_cycle_notes=32,
+    lookback_runs=80,
+    min_similarity=0.62,
 ):
     """
-    Detect a repeating note-order cycle around current time.
-    Returns cycle metadata with progress only when a repeat is confirmed.
+    Detect a repeating note-order cycle around the current frame.
+    Returns cycle metadata with progress, or None.
+
+    frame_idx is the integer frame index (equal to elapsed_ms when frame_ms==1).
+    The run list stores frame indices in start/end fields.
     """
     if not runs:
         return None
 
     cur_idx = None
     for i, (_n, s, e) in enumerate(runs):
-        if s <= ms <= e:
+        if s <= frame_idx <= e:
             cur_idx = i
             break
     if cur_idx is None:
         return None
 
     start_idx = max(0, cur_idx - lookback_runs + 1)
-    seq = [int(r[0]) for r in runs[start_idx:cur_idx + 1]]
+    seq = [int(r[0]) for r in runs[start_idx: cur_idx + 1]]
     rel_cur = len(seq) - 1
 
     best = None
@@ -566,14 +605,15 @@ def _find_repeating_cycle_for_ms(
     cycle_start_ms = int(runs[cycle_start_idx][1])
     cycle_end_ms = int(runs[cycle_end_idx][2])
     cycle_dur = max(1, cycle_end_ms - cycle_start_ms + 1)
-    progress = (ms - cycle_start_ms) / float(cycle_dur)
-    progress = max(0.0, min(1.0, progress))
+    progress = max(0.0, min(1.0, (frame_idx - cycle_start_ms) / float(cycle_dur)))
 
-    motif = [pitch_classes[int(runs[i][0])] for i in range(cycle_start_idx, cycle_end_idx + 1)]
-    motif_text = " ".join(motif)
+    motif = [
+        pitch_classes[int(runs[i][0])]
+        for i in range(cycle_start_idx, cycle_end_idx + 1)
+    ]
 
     return {
-        "motif_text": motif_text,
+        "motif_text": " ".join(motif),
         "progress": progress,
         "similarity": best["sim"],
     }
@@ -939,9 +979,11 @@ def dispnotes(ms, dt_ms, x=50, y=520):
         return
 
     pattern_text = cycle["motif_text"]
+
+    # Anti-jitter smoothing: only freeze near-identical text.
     if pattern_text and last_pattern_text:
         ratio = SequenceMatcher(None, last_pattern_text, pattern_text).ratio()
-        if ratio >= 0.78:
+        if ratio >= 0.90:
             pattern_text = last_pattern_text
 
     if pattern_text:
@@ -976,7 +1018,7 @@ def generarfrase():
     raise NotImplementedError
 
 
-buildfor = dbgfont.render("SPANISH(C1) TESTING-LEVITAISUNKIMBROWN", True, (255, 255, 255))
+buildfor = dbgfont.render("The SONEX Project, Tester Beta", True, (255, 255, 255))
 
 selected_file, resolved_folder = choose_generated_folder()
 if not selected_file:
@@ -1008,6 +1050,8 @@ while running:
 
     screen.fill((30, 30, 30))
     time_text = dbgfont.render(f"Elapsed: {elapsed_ms} ms", True, (255, 255, 255))
+    credits = dbgfont.render("With ❤️ from Berkeley, Calif.", True, (190, 190, 190))
+    screen.blit(credits, ((screen.get_width() - credits.get_width()), screen.get_height() - credits.get_height() - time_text.get_height() - 2))
 
     # --- NEW: update per segment, highlight current word inside it ---
     update_segment_view(elapsed_ms, segments, y=50)

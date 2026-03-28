@@ -71,7 +71,7 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
     whisper_beam_size = int(settings.get("whisper_beam_size", 5))
     whisper_patience = int(settings.get("whisper_patience", 2))
     whisper_best_of = int(settings.get("whisper_best_of", 3))
-    whisper_task = settings.get("whisper_task", "transcribe")
+    whisper_task = str(settings.get("whisper_task", "transcribe")).strip().lower()
     use_gpu = bool(settings.get("gpu", False))
     wav2vec2_phone_fallback = bool(settings.get("wav2vec2_phone_fallback", False))
     wav2vec2_min_mfa_coverage = int(settings.get("wav2vec2_min_mfa_coverage", 85))
@@ -100,6 +100,10 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
     os.makedirs(audiobase, exist_ok=True)
     
 
+    if whisper_task == "translate":
+        # Guard against legacy UI settings that would overwrite source transcripts with translated text.
+        print("INFO|Ignoring legacy whisper_task=translate for primary transcript; using transcribe.", flush=True)
+
     emit_progress(25, "Transcribing vocals...")
     emit_whisper_active(True)
     emit_whisper_progress(0, "Whisper transcribing...")
@@ -111,7 +115,7 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
         f"{audiobase}/vocals_whisper_segments.json",
         language=lang_code,
         model_size=whisper_model,
-        task=whisper_task,
+        task="transcribe",
         progress_cb=_stage_progress_cb(25, 39, "Transcribing vocals...", whisper_label="Whisper transcribing..."),
     )
     emit_whisper_progress(100, "Whisper transcribing complete")
@@ -198,18 +202,20 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
         emit_progress(58, "Whisper translation pass...")
         emit_whisper_active(True)
         emit_whisper_progress(0, "Whisper translating...")
+        whisper_out = f"{audiobase}/whisper_translated.json"
         transcribe(
             f"{audiobase}/vocals.mp3",
             whisper_beam_size,
             whisper_patience,
             whisper_best_of,
-            f"{audiobase}/whisper_translated.json",
+            whisper_out,
             language=(detectlang or lang_code),
             model_size=whisper_model,
             task="translate",
             reuse_existing=False,
             progress_cb=_stage_progress_cb(58, 61, "Whisper translation pass...", whisper_label="Whisper translating..."),
         )
+        print(f"INFO|Whisper translation saved to {whisper_out}", flush=True)
         emit_whisper_progress(100, "Whisper translation complete")
         emit_whisper_active(False)
 
@@ -218,14 +224,16 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
             print(f"Skipping Argos translation: source and target are both '{target_lang}'.", flush=True)
         else:
             emit_progress(62, "Argos translation pass...")
+            argos_out = f"{audiobase}/argos_translated.json"
             translate_file(
                 f"{audiobase}/vocals_whisper_segments.json",
                 # Keep source-language transcript unchanged and write Argos output separately.
-                output_path=f"{audiobase}/argos_translated.json",
+                output_path=argos_out,
                 from_lang=source_lang,
                 to_lang=target_lang,
                 verbose=True,
             )
+            print(f"INFO|Argos translation saved to {argos_out}", flush=True)
 
     emit_progress(68, "Text pipeline complete")
     return audiobase, (detectlang or lang_code)

@@ -1,70 +1,52 @@
 [
   {
     "id": 0,
-    "text": "ma'let you go, that's never hypnotized",
-    "start": 6.579999999999999,
+    "text": "va a dejarte ir, eso nunca me tiene hipnotizado",
+    "start": 6.78,
     "end": 12.18,
     "words": [
       {
-        "word": "ma'let",
-        "start": 6.579999999999999,
-        "end": 7.3
+        "word": " Va",
+        "start": 6.78,
+        "end": 7.46
       },
       {
-        "word": " you",
-        "start": 7.66,
-        "end": 8.2
+        "word": " a",
+        "start": 7.46,
+        "end": 7.74
       },
       {
-        "word": " go,",
-        "start": 8.2,
+        "word": " dejarte",
+        "start": 7.74,
+        "end": 8.34
+      },
+      {
+        "word": " ir,",
+        "start": 8.34,
         "end": 8.92
       },
       {
-        "word": " that's",
-        "start": 9.58,
-        "end": 10.6
+        "word": " eso",
+        "start": 9.48,
+        "end": 9.58
       },
       {
-        "word": " never",
-        "start": 10.6,
+        "word": " nunca",
+        "start": 9.58,
+        "end": 10.62
+      },
+      {
+        "word": " me",
+        "start": 10.62,
         "end": 11.06
       },
       {
-        "word": " hypnotized",
-        "start": 11.26,
-        "end": 12.18
-      }
-    ],
-    "source_text": "ma'let you go, that's never hypnotized",
-    "source_words": [
-      {
-        "word": "ma'let",
-        "start": 6.579999999999999,
-        "end": 7.3
+        "word": " tiene",
+        "start": 11.06,
+        "end": 11.26
       },
       {
-        "word": " you",
-        "start": 7.66,
-        "end": 8.2
-      },
-      {
-        "word": " go,",
-        "start": 8.2,
-        "end": 8.92
-      },
-      {
-        "word": " that's",
-        "start": 9.58,
-        "end": 10.6
-      },
-      {
-        "word": " never",
-        "start": 10.6,
-        "end": 11.06
-      },
-      {
-        "word": " hypnotized",
+        "word": " hipnotizado",
         "start": 11.26,
         "end": 12.18
       }
@@ -72,566 +54,325 @@
   },
   {
     "id": 1,
-    "text": "I can't stop looking at you",
+    "text": "no puedo dejar de mirarte",
     "start": 12.18,
     "end": 15.0,
     "words": [
       {
-        "word": "I",
+        "word": " No",
         "start": 12.18,
         "end": 12.62
       },
       {
-        "word": " can't",
+        "word": " puedo",
         "start": 12.62,
         "end": 12.9
       },
       {
-        "word": " stop",
+        "word": " dejar",
         "start": 12.9,
         "end": 13.44
       },
       {
-        "word": " looking",
+        "word": " de",
         "start": 13.44,
-        "end": 13.98
+        "end": 14.0
       },
       {
-        "word": " at",
-        "start": 13.98,
-        "end": 14.388
-      },
-      {
-        "word": " you",
-        "start": 14.388,
-        "end": 15.0
-      }
-    ],
-    "source_text": "I can't stop looking at you",
-    "source_words": [
-      {
-        "word": "I",
-        "start": 12.18,
-        "end": 12.62
-      },
-      {
-        "word": " can't",
-        "start": 12.62,
-        "end": 12.9
-      },
-      {
-        "word": " stop",
-        "start": 12.9,
-        "end": 13.44
-      },
-      {
-        "word": " looking",
-        "start": 13.44,
-        "end": 13.98
-      },
-      {
-        "word": " at",
-        "start": 13.98,
-        "end": 14.388
-      },
-      {
-        "word": " you",
-        "start": 14.388,
+        "word": " mirarte",
+        "start": 14.0,
         "end": 15.0
       }
     ]
   },
   {
     "id": 2,
-    "text": "you fight more than a star, Mummy, that you have to fight",
+    "text": "rías más que una estría, mami, tú te fugaste",
     "start": 15.0,
-    "end": 19.06,
+    "end": 19.1,
     "words": [
       {
-        "word": "you",
+        "word": " Rías",
         "start": 15.0,
         "end": 15.44
       },
       {
-        "word": " fight",
+        "word": " más",
         "start": 15.44,
         "end": 15.76
       },
       {
-        "word": " more",
+        "word": " que",
         "start": 15.76,
         "end": 15.94
       },
       {
-        "word": " than",
+        "word": " una",
         "start": 15.94,
-        "end": 16.26
+        "end": 16.28
       },
       {
-        "word": " a",
-        "start": 16.26,
-        "end": 16.364
+        "word": " estría,",
+        "start": 16.28,
+        "end": 16.76
       },
       {
-        "word": " star,",
-        "start": 16.364,
-        "end": 16.78
+        "word": " mami,",
+        "start": 16.94,
+        "end": 17.24
       },
       {
-        "word": " Mummy,",
-        "start": 16.78,
-        "end": 17.26
-      },
-      {
-        "word": " that",
+        "word": " tú",
         "start": 17.28,
-        "end": 17.52
+        "end": 17.62
       },
       {
-        "word": " you",
-        "start": 17.52,
-        "end": 17.78
+        "word": " te",
+        "start": 17.62,
+        "end": 17.88
       },
       {
-        "word": " have",
-        "start": 17.78,
-        "end": 18.245454545454546
-      },
-      {
-        "word": " to",
-        "start": 18.245454545454546,
-        "end": 18.478181818181817
-      },
-      {
-        "word": " fight",
-        "start": 18.478181818181817,
-        "end": 19.06
-      }
-    ],
-    "source_text": "you laugh more than a star, Mummy, that you have to fight",
-    "source_words": [
-      {
-        "word": "you",
-        "start": 15.0,
-        "end": 15.44
-      },
-      {
-        "word": " laugh",
-        "start": 15.44,
-        "end": 15.76
-      },
-      {
-        "word": " more",
-        "start": 15.76,
-        "end": 15.94
-      },
-      {
-        "word": " than",
-        "start": 15.94,
-        "end": 16.26
-      },
-      {
-        "word": " a",
-        "start": 16.26,
-        "end": 16.364
-      },
-      {
-        "word": " star,",
-        "start": 16.364,
-        "end": 16.78
-      },
-      {
-        "word": " Mummy,",
-        "start": 16.78,
-        "end": 17.26
-      },
-      {
-        "word": " that",
-        "start": 17.28,
-        "end": 17.52
-      },
-      {
-        "word": " you",
-        "start": 17.52,
-        "end": 17.78
-      },
-      {
-        "word": " have",
-        "start": 17.78,
-        "end": 18.245454545454546
-      },
-      {
-        "word": " to",
-        "start": 18.245454545454546,
-        "end": 18.478181818181817
-      },
-      {
-        "word": " fight",
-        "start": 18.478181818181817,
-        "end": 19.06
+        "word": " fugaste",
+        "start": 17.88,
+        "end": 19.1
       }
     ]
   },
   {
     "id": 3,
-    "text": "That's how I get you. That's how I can't get back at you.",
-    "start": 19.06,
+    "text": "de que te dejes nudate, no puedo olvidarte",
+    "start": 19.1,
     "end": 23.08,
     "words": [
       {
-        "word": "That's",
-        "start": 19.06,
-        "end": 19.335
+        "word": " De",
+        "start": 19.1,
+        "end": 19.44
       },
       {
-        "word": " how",
-        "start": 19.335,
-        "end": 19.5
+        "word": " que",
+        "start": 19.44,
+        "end": 19.76
       },
       {
-        "word": " I",
-        "start": 19.5,
-        "end": 19.605
+        "word": " te",
+        "start": 19.76,
+        "end": 20.1
       },
       {
-        "word": " get",
-        "start": 19.605,
-        "end": 19.92
+        "word": " dejes",
+        "start": 20.1,
+        "end": 20.36
       },
       {
-        "word": " you.",
-        "start": 19.92,
-        "end": 20.14
+        "word": " nudate,",
+        "start": 20.36,
+        "end": 21.06
       },
       {
-        "word": " That's",
-        "start": 20.14,
-        "end": 20.565
-      },
-      {
-        "word": " how",
-        "start": 20.565,
-        "end": 20.82
-      },
-      {
-        "word": " I",
-        "start": 20.86,
-        "end": 21.1
-      },
-      {
-        "word": " can't",
-        "start": 21.1,
+        "word": " no",
+        "start": 21.06,
         "end": 21.34
       },
       {
-        "word": " get",
+        "word": " puedo",
         "start": 21.34,
-        "end": 21.545714285714286
-      },
-      {
-        "word": " back",
-        "start": 21.545714285714286,
         "end": 21.82
       },
       {
-        "word": " at",
+        "word": " olvidarte",
         "start": 21.82,
-        "end": 22.323999999999998
-      },
-      {
-        "word": " you.",
-        "start": 22.323999999999998,
-        "end": 23.08
-      }
-    ],
-    "source_text": "That's how I get you. That's how I can't get back at you.",
-    "source_words": [
-      {
-        "word": "That's",
-        "start": 19.06,
-        "end": 19.335
-      },
-      {
-        "word": " how",
-        "start": 19.335,
-        "end": 19.5
-      },
-      {
-        "word": " I",
-        "start": 19.5,
-        "end": 19.605
-      },
-      {
-        "word": " get",
-        "start": 19.605,
-        "end": 19.92
-      },
-      {
-        "word": " you.",
-        "start": 19.92,
-        "end": 20.14
-      },
-      {
-        "word": " That's",
-        "start": 20.14,
-        "end": 20.565
-      },
-      {
-        "word": " how",
-        "start": 20.565,
-        "end": 20.82
-      },
-      {
-        "word": " I",
-        "start": 20.86,
-        "end": 21.1
-      },
-      {
-        "word": " can't",
-        "start": 21.1,
-        "end": 21.34
-      },
-      {
-        "word": " get",
-        "start": 21.34,
-        "end": 21.545714285714286
-      },
-      {
-        "word": " back",
-        "start": 21.545714285714286,
-        "end": 21.82
-      },
-      {
-        "word": " at",
-        "start": 21.82,
-        "end": 22.323999999999998
-      },
-      {
-        "word": " you.",
-        "start": 22.323999999999998,
         "end": 23.08
       }
     ]
   },
   {
     "id": 4,
-    "text": "I'll give you the boom.",
+    "text": "tú y yo pa' las bamas, te doy el tom",
     "start": 23.08,
     "end": 25.88,
     "words": [
       {
-        "word": "I'll",
+        "word": " Tú",
+        "start": 23.08,
+        "end": 23.34
+      },
+      {
+        "word": " y",
+        "start": 23.34,
+        "end": 23.44
+      },
+      {
+        "word": " yo",
+        "start": 23.44,
+        "end": 23.6
+      },
+      {
+        "word": " pa'",
         "start": 23.6,
         "end": 23.9
       },
       {
-        "word": " give",
+        "word": " las",
         "start": 23.9,
         "end": 24.36
       },
       {
-        "word": " you",
+        "word": " bamas,",
         "start": 24.36,
         "end": 24.84
       },
       {
-        "word": " the",
-        "start": 24.84,
-        "end": 25.16
+        "word": " te",
+        "start": 24.86,
+        "end": 25.14
       },
       {
-        "word": " boom.",
-        "start": 25.16,
+        "word": " doy",
+        "start": 25.14,
         "end": 25.42
-      }
-    ],
-    "source_text": "I'll give you the boom.",
-    "source_words": [
-      {
-        "word": "I'll",
-        "start": 23.6,
-        "end": 23.9
       },
       {
-        "word": " give",
-        "start": 23.9,
-        "end": 24.36
+        "word": " el",
+        "start": 25.42,
+        "end": 25.7
       },
       {
-        "word": " you",
-        "start": 24.36,
-        "end": 24.84
-      },
-      {
-        "word": " the",
-        "start": 24.84,
-        "end": 25.16
-      },
-      {
-        "word": " boom.",
-        "start": 25.16,
-        "end": 25.42
+        "word": " tom",
+        "start": 25.7,
+        "end": 25.88
       }
     ]
   },
   {
     "id": 5,
-    "text": "Stopping your pants",
+    "text": "quitándote el pantalón",
     "start": 25.88,
-    "end": 27.9,
+    "end": 27.88,
     "words": [
       {
-        "word": "Stopping",
+        "word": " Quitándote",
         "start": 25.88,
         "end": 26.78
       },
       {
-        "word": " your",
+        "word": " el",
         "start": 26.78,
-        "end": 27.04
+        "end": 27.02
       },
       {
-        "word": " pants",
-        "start": 27.04,
-        "end": 27.9
-      }
-    ],
-    "source_text": "Stopping your pants",
-    "source_words": [
-      {
-        "word": "Stopping",
-        "start": 25.88,
-        "end": 26.78
-      },
-      {
-        "word": " your",
-        "start": 26.78,
-        "end": 27.04
-      },
-      {
-        "word": " pants",
-        "start": 27.04,
-        "end": 27.9
+        "word": " pantalón",
+        "start": 27.02,
+        "end": 27.88
       }
     ]
   },
   {
     "id": 6,
-    "text": "That's right.",
-    "start": 27.9,
+    "text": "en frente al marto, encima mía, en los cientos del rubí",
+    "start": 27.88,
     "end": 31.5,
     "words": [
       {
-        "word": "That's",
+        "word": " En",
+        "start": 27.88,
+        "end": 28.02
+      },
+      {
+        "word": " frente",
+        "start": 28.02,
+        "end": 28.28
+      },
+      {
+        "word": " al",
+        "start": 28.28,
+        "end": 28.54
+      },
+      {
+        "word": " marto,",
+        "start": 28.54,
+        "end": 28.82
+      },
+      {
+        "word": " encima",
         "start": 28.82,
         "end": 29.34
       },
       {
-        "word": " right.",
+        "word": " mía,",
         "start": 29.34,
-        "end": 29.96
-      }
-    ],
-    "source_text": "That's right.",
-    "source_words": [
-      {
-        "word": "That's",
-        "start": 28.82,
-        "end": 29.34
+        "end": 29.94
       },
       {
-        "word": " right.",
-        "start": 29.34,
-        "end": 29.96
+        "word": " en",
+        "start": 30.04,
+        "end": 30.3
+      },
+      {
+        "word": " los",
+        "start": 30.3,
+        "end": 30.3
+      },
+      {
+        "word": " cientos",
+        "start": 30.3,
+        "end": 30.72
+      },
+      {
+        "word": " del",
+        "start": 30.72,
+        "end": 31.08
+      },
+      {
+        "word": " rubí",
+        "start": 31.08,
+        "end": 31.5
       }
     ]
   },
   {
     "id": 7,
-    "text": "with the blue sky and your broken eyes",
+    "text": "con el cielo azul y tus ojos marrón",
     "start": 31.5,
     "end": 34.3,
     "words": [
       {
-        "word": "with",
+        "word": " Con",
         "start": 31.5,
         "end": 31.8
       },
       {
-        "word": " the",
+        "word": " el",
         "start": 31.8,
         "end": 32.1
       },
       {
-        "word": " blue",
+        "word": " cielo",
         "start": 32.1,
-        "end": 32.42
+        "end": 32.4
       },
       {
-        "word": " sky",
-        "start": 32.42,
-        "end": 32.82
+        "word": " azul",
+        "start": 32.4,
+        "end": 32.84
       },
       {
-        "word": " and",
-        "start": 32.82,
+        "word": " y",
+        "start": 32.84,
         "end": 33.12
       },
       {
-        "word": " your",
+        "word": " tus",
         "start": 33.12,
         "end": 33.34
       },
       {
-        "word": " broken",
+        "word": " ojos",
         "start": 33.34,
         "end": 33.74
       },
       {
-        "word": " eyes",
-        "start": 33.74,
-        "end": 34.3
-      }
-    ],
-    "source_text": "with the blue sky and your brown eyes",
-    "source_words": [
-      {
-        "word": "with",
-        "start": 31.5,
-        "end": 31.8
-      },
-      {
-        "word": " the",
-        "start": 31.8,
-        "end": 32.1
-      },
-      {
-        "word": " blue",
-        "start": 32.1,
-        "end": 32.42
-      },
-      {
-        "word": " sky",
-        "start": 32.42,
-        "end": 32.82
-      },
-      {
-        "word": " and",
-        "start": 32.82,
-        "end": 33.12
-      },
-      {
-        "word": " your",
-        "start": 33.12,
-        "end": 33.34
-      },
-      {
-        "word": " brown",
-        "start": 33.34,
-        "end": 33.74
-      },
-      {
-        "word": " eyes",
+        "word": " marrón",
         "start": 33.74,
         "end": 34.3
       }
@@ -639,121 +380,65 @@
   },
   {
     "id": 8,
-    "text": "drinking water in the sun",
+    "text": "bebiendo bado el sol",
     "start": 34.3,
-    "end": 35.9,
+    "end": 35.96,
     "words": [
       {
-        "word": "drinking",
+        "word": " Bebiendo",
         "start": 34.3,
-        "end": 34.74307692307693
-      },
-      {
-        "word": " water",
-        "start": 34.74307692307693,
         "end": 35.02
       },
       {
-        "word": " in",
+        "word": " bado",
         "start": 35.02,
-        "end": 35.38
+        "end": 35.42
       },
       {
-        "word": " the",
-        "start": 35.38,
-        "end": 35.58
+        "word": " el",
+        "start": 35.42,
+        "end": 35.66
       },
       {
-        "word": " sun",
-        "start": 35.58,
-        "end": 35.9
-      }
-    ],
-    "source_text": "drinking water in the sun",
-    "source_words": [
-      {
-        "word": "drinking",
-        "start": 34.3,
-        "end": 34.74307692307693
-      },
-      {
-        "word": " water",
-        "start": 34.74307692307693,
-        "end": 35.02
-      },
-      {
-        "word": " in",
-        "start": 35.02,
-        "end": 35.38
-      },
-      {
-        "word": " the",
-        "start": 35.38,
-        "end": 35.58
-      },
-      {
-        "word": " sun",
-        "start": 35.58,
-        "end": 35.9
+        "word": " sol",
+        "start": 35.66,
+        "end": 35.96
       }
     ]
   },
   {
     "id": 9,
-    "text": "Your body's sniffing at mine",
-    "start": 35.9,
+    "text": "tu cuerpo sudando contra el mío",
+    "start": 35.96,
     "end": 39.44,
     "words": [
       {
-        "word": "Your",
-        "start": 35.9,
+        "word": " Tu",
+        "start": 35.96,
         "end": 36.34
       },
       {
-        "word": " body's",
+        "word": " cuerpo",
         "start": 36.34,
-        "end": 36.78
+        "end": 36.8
       },
       {
-        "word": " sniffing",
-        "start": 36.78,
+        "word": " sudando",
+        "start": 36.8,
         "end": 37.62
       },
       {
-        "word": " at",
+        "word": " contra",
         "start": 37.62,
         "end": 38.06
       },
       {
-        "word": " mine",
-        "start": 38.32,
-        "end": 39.44
-      }
-    ],
-    "source_text": "Your body's sweating at mine",
-    "source_words": [
-      {
-        "word": "Your",
-        "start": 35.9,
-        "end": 36.34
+        "word": " el",
+        "start": 38.06,
+        "end": 38.32
       },
       {
-        "word": " body's",
-        "start": 36.34,
-        "end": 36.78
-      },
-      {
-        "word": " sweating",
-        "start": 36.78,
-        "end": 37.62
-      },
-      {
-        "word": " at",
-        "start": 37.62,
-        "end": 38.06
-      },
-      {
-        "word": " mine",
+        "word": " mío",
         "start": 38.32,
         "end": 39.44
       }
@@ -761,718 +446,361 @@
   },
   {
     "id": 10,
-    "text": "If I don't see you",
+    "text": "si no te veo",
     "start": 39.44,
     "end": 41.62,
     "words": [
       {
-        "word": "If",
+        "word": " Si",
         "start": 39.44,
         "end": 39.9
       },
       {
-        "word": " I",
+        "word": " no",
         "start": 39.9,
         "end": 40.14
       },
       {
-        "word": " don't",
+        "word": " te",
         "start": 40.14,
-        "end": 40.64
+        "end": 40.58
       },
       {
-        "word": " see",
-        "start": 40.64,
-        "end": 41.129999999999995
-      },
-      {
-        "word": " you",
-        "start": 41.129999999999995,
-        "end": 41.62
-      }
-    ],
-    "source_text": "If I don't see you",
-    "source_words": [
-      {
-        "word": "If",
-        "start": 39.44,
-        "end": 39.9
-      },
-      {
-        "word": " I",
-        "start": 39.9,
-        "end": 40.14
-      },
-      {
-        "word": " don't",
-        "start": 40.14,
-        "end": 40.64
-      },
-      {
-        "word": " see",
-        "start": 40.64,
-        "end": 41.129999999999995
-      },
-      {
-        "word": " you",
-        "start": 41.129999999999995,
+        "word": " veo",
+        "start": 40.58,
         "end": 41.62
       }
     ]
   },
   {
     "id": 11,
-    "text": "I'll clear that moisture with calling you",
+    "text": "te lo juro, me da con llamarte",
     "start": 41.62,
-    "end": 45.44,
+    "end": 45.42,
     "words": [
       {
-        "word": "I'll",
+        "word": " Te",
         "start": 41.62,
-        "end": 42.34
+        "end": 42.38
       },
       {
-        "word": " clear",
-        "start": 42.34,
-        "end": 42.74
+        "word": " lo",
+        "start": 42.38,
+        "end": 42.68
       },
       {
-        "word": " that",
-        "start": 42.74,
+        "word": " juro,",
+        "start": 42.68,
         "end": 43.0
       },
       {
-        "word": " moisture",
+        "word": " me",
         "start": 43.0,
-        "end": 43.96
+        "end": 43.52
       },
       {
-        "word": " with",
-        "start": 43.96,
+        "word": " da",
+        "start": 43.52,
+        "end": 43.94
+      },
+      {
+        "word": " con",
+        "start": 43.94,
         "end": 44.26
       },
       {
-        "word": " calling",
+        "word": " llamarte",
         "start": 44.26,
-        "end": 45.086
-      },
-      {
-        "word": " you",
-        "start": 45.086,
-        "end": 45.44
-      }
-    ],
-    "source_text": "I'll clear that moisture with calling you",
-    "source_words": [
-      {
-        "word": "I'll",
-        "start": 41.62,
-        "end": 42.34
-      },
-      {
-        "word": " clear",
-        "start": 42.34,
-        "end": 42.74
-      },
-      {
-        "word": " that",
-        "start": 42.74,
-        "end": 43.0
-      },
-      {
-        "word": " moisture",
-        "start": 43.0,
-        "end": 43.96
-      },
-      {
-        "word": " with",
-        "start": 43.96,
-        "end": 44.26
-      },
-      {
-        "word": " calling",
-        "start": 44.26,
-        "end": 45.086
-      },
-      {
-        "word": " you",
-        "start": 45.086,
-        "end": 45.44
+        "end": 45.42
       }
     ]
   },
   {
     "id": 12,
-    "text": "send me ruby to come and get you",
-    "start": 45.44,
+    "text": "envíame la rubí pa' ir a buscarte",
+    "start": 45.42,
     "end": 49.48,
     "words": [
       {
-        "word": "send",
-        "start": 45.44,
-        "end": 46.4
+        "word": " Envíame",
+        "start": 45.42,
+        "end": 46.46
       },
       {
-        "word": " me",
-        "start": 46.4,
+        "word": " la",
+        "start": 46.46,
         "end": 46.96
       },
       {
-        "word": " ruby",
+        "word": " rubí",
         "start": 46.96,
         "end": 47.44
       },
       {
-        "word": " to",
+        "word": " pa'",
         "start": 47.44,
         "end": 47.84
       },
       {
-        "word": " come",
+        "word": " ir",
         "start": 47.84,
         "end": 48.16
       },
       {
-        "word": " and",
+        "word": " a",
         "start": 48.16,
-        "end": 48.42
+        "end": 48.4
       },
       {
-        "word": " get",
-        "start": 48.42,
-        "end": 48.95
-      },
-      {
-        "word": " you",
-        "start": 48.95,
-        "end": 49.48
-      }
-    ],
-    "source_text": "send me ruby to come and get you",
-    "source_words": [
-      {
-        "word": "send",
-        "start": 45.44,
-        "end": 46.4
-      },
-      {
-        "word": " me",
-        "start": 46.4,
-        "end": 46.96
-      },
-      {
-        "word": " ruby",
-        "start": 46.96,
-        "end": 47.44
-      },
-      {
-        "word": " to",
-        "start": 47.44,
-        "end": 47.84
-      },
-      {
-        "word": " come",
-        "start": 47.84,
-        "end": 48.16
-      },
-      {
-        "word": " and",
-        "start": 48.16,
-        "end": 48.42
-      },
-      {
-        "word": " get",
-        "start": 48.42,
-        "end": 48.95
-      },
-      {
-        "word": " you",
-        "start": 48.95,
+        "word": " buscarte",
+        "start": 48.4,
         "end": 49.48
       }
     ]
   },
   {
     "id": 13,
-    "text": "If it's not with you and I feel nothing",
-    "start": 50.02,
-    "end": 53.16,
+    "text": "si no es contigo y yo no siento nada",
+    "start": 50.0,
+    "end": 53.2,
     "words": [
       {
-        "word": "If",
-        "start": 50.02,
-        "end": 50.3
+        "word": " Si",
+        "start": 49.92,
+        "end": 50.32
       },
       {
-        "word": " it's",
-        "start": 50.3,
-        "end": 50.5
+        "word": " no",
+        "start": 50.32,
+        "end": 50.48
       },
       {
-        "word": " not",
-        "start": 50.5,
-        "end": 50.68
+        "word": " es",
+        "start": 50.48,
+        "end": 50.7
       },
       {
-        "word": " with",
-        "start": 50.68,
-        "end": 51.26
+        "word": " contigo",
+        "start": 50.7,
+        "end": 51.24
       },
       {
-        "word": " you",
-        "start": 51.26,
-        "end": 51.6
+        "word": " y",
+        "start": 51.24,
+        "end": 51.56
       },
       {
-        "word": " and",
-        "start": 51.6,
+        "word": " yo",
+        "start": 51.56,
         "end": 51.78
       },
       {
-        "word": " I",
+        "word": " no",
         "start": 51.78,
         "end": 52.12
       },
       {
-        "word": " feel",
+        "word": " siento",
         "start": 52.12,
         "end": 52.46
       },
       {
-        "word": " nothing",
+        "word": " nada",
         "start": 52.46,
-        "end": 53.16
-      }
-    ],
-    "source_text": "If it's not with you and I feel nothing",
-    "source_words": [
-      {
-        "word": "If",
-        "start": 50.02,
-        "end": 50.3
-      },
-      {
-        "word": " it's",
-        "start": 50.3,
-        "end": 50.5
-      },
-      {
-        "word": " not",
-        "start": 50.5,
-        "end": 50.68
-      },
-      {
-        "word": " with",
-        "start": 50.68,
-        "end": 51.26
-      },
-      {
-        "word": " you",
-        "start": 51.26,
-        "end": 51.6
-      },
-      {
-        "word": " and",
-        "start": 51.6,
-        "end": 51.78
-      },
-      {
-        "word": " I",
-        "start": 51.78,
-        "end": 52.12
-      },
-      {
-        "word": " feel",
-        "start": 52.12,
-        "end": 52.46
-      },
-      {
-        "word": " nothing",
-        "start": 52.46,
-        "end": 53.16
+        "end": 53.2
       }
     ]
   },
   {
     "id": 14,
-    "text": "I can't be you",
-    "start": 53.16,
-    "end": 55.56,
+    "text": "no te puedo borrar",
+    "start": 53.2,
+    "end": 55.54,
     "words": [
       {
-        "word": "I",
-        "start": 53.16,
-        "end": 53.68
+        "word": " No",
+        "start": 53.2,
+        "end": 53.7
       },
       {
-        "word": " can't",
-        "start": 53.68,
-        "end": 54.04
+        "word": " te",
+        "start": 53.7,
+        "end": 54.0
       },
       {
-        "word": " be",
-        "start": 54.04,
+        "word": " puedo",
+        "start": 54.0,
         "end": 54.4
       },
       {
-        "word": " you",
+        "word": " borrar",
         "start": 54.4,
-        "end": 55.56
-      }
-    ],
-    "source_text": "I can't erase you",
-    "source_words": [
-      {
-        "word": "I",
-        "start": 53.16,
-        "end": 53.68
-      },
-      {
-        "word": " can't",
-        "start": 53.68,
-        "end": 54.04
-      },
-      {
-        "word": " erase",
-        "start": 54.04,
-        "end": 54.4
-      },
-      {
-        "word": " you",
-        "start": 54.4,
-        "end": 55.56
+        "end": 55.54
       }
     ]
   },
   {
     "id": 15,
-    "text": "If I don't see you",
-    "start": 55.56,
+    "text": "si no te veo",
+    "start": 55.54,
     "end": 57.86,
     "words": [
       {
-        "word": "If",
-        "start": 55.56,
+        "word": " Si",
+        "start": 55.54,
         "end": 56.14
       },
       {
-        "word": " I",
+        "word": " no",
         "start": 56.14,
-        "end": 56.4
+        "end": 56.38
       },
       {
-        "word": " don't",
-        "start": 56.4,
+        "word": " te",
+        "start": 56.38,
         "end": 56.9
       },
       {
-        "word": " see",
+        "word": " veo",
         "start": 56.9,
-        "end": 57.379999999999995
-      },
-      {
-        "word": " you",
-        "start": 57.379999999999995,
-        "end": 57.86
-      }
-    ],
-    "source_text": "If I don't see you",
-    "source_words": [
-      {
-        "word": "If",
-        "start": 55.56,
-        "end": 56.14
-      },
-      {
-        "word": " I",
-        "start": 56.14,
-        "end": 56.4
-      },
-      {
-        "word": " don't",
-        "start": 56.4,
-        "end": 56.9
-      },
-      {
-        "word": " see",
-        "start": 56.9,
-        "end": 57.379999999999995
-      },
-      {
-        "word": " you",
-        "start": 57.379999999999995,
         "end": 57.86
       }
     ]
   },
   {
     "id": 16,
-    "text": "I'll clear that moisture with calling you",
+    "text": "te lo juro, me da con llamarte",
     "start": 57.86,
     "end": 61.68,
     "words": [
       {
-        "word": "I'll",
+        "word": " Te",
         "start": 57.86,
-        "end": 58.6
+        "end": 58.64
       },
       {
-        "word": " clear",
-        "start": 58.6,
+        "word": " lo",
+        "start": 58.64,
         "end": 58.88
       },
       {
-        "word": " that",
+        "word": " juro,",
         "start": 58.88,
-        "end": 59.46
+        "end": 59.44
       },
       {
-        "word": " moisture",
-        "start": 59.46,
-        "end": 60.24
+        "word": " me",
+        "start": 59.48,
+        "end": 59.86
       },
       {
-        "word": " with",
-        "start": 60.24,
+        "word": " da",
+        "start": 59.86,
+        "end": 60.26
+      },
+      {
+        "word": " con",
+        "start": 60.26,
         "end": 60.54
       },
       {
-        "word": " calling",
+        "word": " llamarte",
         "start": 60.54,
-        "end": 61.338
-      },
-      {
-        "word": " you",
-        "start": 61.338,
-        "end": 61.68
-      }
-    ],
-    "source_text": "I'll clear that moisture with calling you",
-    "source_words": [
-      {
-        "word": "I'll",
-        "start": 57.86,
-        "end": 58.6
-      },
-      {
-        "word": " clear",
-        "start": 58.6,
-        "end": 58.88
-      },
-      {
-        "word": " that",
-        "start": 58.88,
-        "end": 59.46
-      },
-      {
-        "word": " moisture",
-        "start": 59.46,
-        "end": 60.24
-      },
-      {
-        "word": " with",
-        "start": 60.24,
-        "end": 60.54
-      },
-      {
-        "word": " calling",
-        "start": 60.54,
-        "end": 61.338
-      },
-      {
-        "word": " you",
-        "start": 61.338,
         "end": 61.68
       }
     ]
   },
   {
     "id": 17,
-    "text": "send me ruby to come and get you",
+    "text": "envíame la rubí pa' ir a buscarte",
     "start": 61.68,
     "end": 65.86,
     "words": [
       {
-        "word": "send",
+        "word": " Envíame",
         "start": 61.68,
-        "end": 62.7
+        "end": 62.68
       },
       {
-        "word": " me",
-        "start": 62.7,
-        "end": 63.26
+        "word": " la",
+        "start": 62.68,
+        "end": 63.24
       },
       {
-        "word": " ruby",
-        "start": 63.26,
+        "word": " rubí",
+        "start": 63.24,
         "end": 63.78
       },
       {
-        "word": " to",
+        "word": " pa'",
         "start": 63.78,
-        "end": 64.16
+        "end": 64.12
       },
       {
-        "word": " come",
-        "start": 64.16,
+        "word": " ir",
+        "start": 64.12,
         "end": 64.46
       },
       {
-        "word": " and",
+        "word": " a",
         "start": 64.46,
         "end": 64.7
       },
       {
-        "word": " get",
+        "word": " buscarte",
         "start": 64.7,
-        "end": 65.28
-      },
-      {
-        "word": " you",
-        "start": 65.28,
-        "end": 65.86
-      }
-    ],
-    "source_text": "send me ruby to come and get you",
-    "source_words": [
-      {
-        "word": "send",
-        "start": 61.68,
-        "end": 62.7
-      },
-      {
-        "word": " me",
-        "start": 62.7,
-        "end": 63.26
-      },
-      {
-        "word": " ruby",
-        "start": 63.26,
-        "end": 63.78
-      },
-      {
-        "word": " to",
-        "start": 63.78,
-        "end": 64.16
-      },
-      {
-        "word": " come",
-        "start": 64.16,
-        "end": 64.46
-      },
-      {
-        "word": " and",
-        "start": 64.46,
-        "end": 64.7
-      },
-      {
-        "word": " get",
-        "start": 64.7,
-        "end": 65.28
-      },
-      {
-        "word": " you",
-        "start": 65.28,
         "end": 65.86
       }
     ]
   },
   {
     "id": 18,
-    "text": "If it's not with you and I feel nothing",
+    "text": "si no es contigo y yo no siento nada",
     "start": 65.86,
     "end": 69.62,
     "words": [
       {
-        "word": "If",
+        "word": " Si",
         "start": 65.86,
-        "end": 66.52
+        "end": 66.54
       },
       {
-        "word": " it's",
-        "start": 66.52,
+        "word": " no",
+        "start": 66.54,
         "end": 66.76
       },
       {
-        "word": " not",
+        "word": " es",
         "start": 66.76,
         "end": 66.96
       },
       {
-        "word": " with",
+        "word": " contigo",
         "start": 66.96,
         "end": 67.6
       },
       {
-        "word": " you",
+        "word": " y",
         "start": 67.6,
         "end": 67.8
       },
       {
-        "word": " and",
+        "word": " yo",
         "start": 67.8,
         "end": 67.94
       },
       {
-        "word": " I",
+        "word": " no",
         "start": 67.94,
-        "end": 68.3
+        "end": 68.32
       },
       {
-        "word": " feel",
-        "start": 68.3,
+        "word": " siento",
+        "start": 68.32,
         "end": 68.76
       },
       {
-        "word": " nothing",
-        "start": 68.76,
-        "end": 69.62
-      }
-    ],
-    "source_text": "If it's not with you and I feel nothing",
-    "source_words": [
-      {
-        "word": "If",
-        "start": 65.86,
-        "end": 66.52
-      },
-      {
-        "word": " it's",
-        "start": 66.52,
-        "end": 66.76
-      },
-      {
-        "word": " not",
-        "start": 66.76,
-        "end": 66.96
-      },
-      {
-        "word": " with",
-        "start": 66.96,
-        "end": 67.6
-      },
-      {
-        "word": " you",
-        "start": 67.6,
-        "end": 67.8
-      },
-      {
-        "word": " and",
-        "start": 67.8,
-        "end": 67.94
-      },
-      {
-        "word": " I",
-        "start": 67.94,
-        "end": 68.3
-      },
-      {
-        "word": " feel",
-        "start": 68.3,
-        "end": 68.76
-      },
-      {
-        "word": " nothing",
+        "word": " nada",
         "start": 68.76,
         "end": 69.62
       }
@@ -1480,121 +808,70 @@
   },
   {
     "id": 19,
-    "text": "I can't be you",
+    "text": "no te puedo borrar",
     "start": 69.62,
-    "end": 72.18,
+    "end": 72.2,
     "words": [
       {
-        "word": "I",
+        "word": " No",
         "start": 69.62,
         "end": 69.88
       },
       {
-        "word": " can't",
+        "word": " te",
         "start": 69.88,
         "end": 70.26
       },
       {
-        "word": " be",
+        "word": " puedo",
         "start": 70.26,
         "end": 70.6
       },
       {
-        "word": " you",
+        "word": " borrar",
         "start": 70.6,
-        "end": 72.18
-      }
-    ],
-    "source_text": "I can't erase you",
-    "source_words": [
-      {
-        "word": "I",
-        "start": 69.62,
-        "end": 69.88
-      },
-      {
-        "word": " can't",
-        "start": 69.88,
-        "end": 70.26
-      },
-      {
-        "word": " erase",
-        "start": 70.26,
-        "end": 70.6
-      },
-      {
-        "word": " you",
-        "start": 70.6,
-        "end": 72.18
+        "end": 72.2
       }
     ]
   },
   {
     "id": 20,
-    "text": "as a scar after the wound",
-    "start": 72.18,
+    "text": "como una cicatriz después de la herida",
+    "start": 72.2,
     "end": 74.34,
     "words": [
       {
-        "word": "as",
-        "start": 72.18,
+        "word": " Como",
+        "start": 72.2,
         "end": 72.58
       },
       {
-        "word": " a",
+        "word": " una",
         "start": 72.58,
         "end": 72.88
       },
       {
-        "word": " scar",
+        "word": " cicatriz",
         "start": 72.88,
         "end": 73.38
       },
       {
-        "word": " after",
+        "word": " después",
         "start": 73.38,
         "end": 73.68
       },
       {
-        "word": " the",
+        "word": " de",
         "start": 73.68,
         "end": 73.86
       },
       {
-        "word": " wound",
-        "start": 74.0,
-        "end": 74.34
-      }
-    ],
-    "source_text": "as a scar after the wound",
-    "source_words": [
-      {
-        "word": "as",
-        "start": 72.18,
-        "end": 72.58
+        "word": " la",
+        "start": 73.86,
+        "end": 74.0
       },
       {
-        "word": " a",
-        "start": 72.58,
-        "end": 72.88
-      },
-      {
-        "word": " scar",
-        "start": 72.88,
-        "end": 73.38
-      },
-      {
-        "word": " after",
-        "start": 73.38,
-        "end": 73.68
-      },
-      {
-        "word": " the",
-        "start": 73.68,
-        "end": 73.86
-      },
-      {
-        "word": " wound",
+        "word": " herida",
         "start": 74.0,
         "end": 74.34
       }
@@ -1602,90 +879,47 @@
   },
   {
     "id": 21,
-    "text": "I tagged your skin and you tagged mine.",
+    "text": "marqué tu piel y tú marcaste la mía",
     "start": 74.34,
     "end": 76.44,
     "words": [
       {
-        "word": "I",
+        "word": " Marqué",
         "start": 74.34,
         "end": 74.68
       },
       {
-        "word": " tagged",
+        "word": " tu",
         "start": 74.68,
         "end": 74.9
       },
       {
-        "word": " your",
+        "word": " piel",
         "start": 74.9,
         "end": 75.06
       },
       {
-        "word": " skin",
+        "word": " y",
         "start": 75.06,
-        "end": 75.24
+        "end": 75.22
       },
       {
-        "word": " and",
-        "start": 75.24,
+        "word": " tú",
+        "start": 75.22,
         "end": 75.38
       },
       {
-        "word": " you",
+        "word": " marcaste",
         "start": 75.38,
         "end": 75.86
       },
       {
-        "word": " tagged",
+        "word": " la",
         "start": 75.86,
         "end": 76.2
       },
       {
-        "word": " mine.",
-        "start": 76.2,
-        "end": 76.44
-      }
-    ],
-    "source_text": "I tagged your skin and you tagged mine.",
-    "source_words": [
-      {
-        "word": "I",
-        "start": 74.34,
-        "end": 74.68
-      },
-      {
-        "word": " tagged",
-        "start": 74.68,
-        "end": 74.9
-      },
-      {
-        "word": " your",
-        "start": 74.9,
-        "end": 75.06
-      },
-      {
-        "word": " skin",
-        "start": 75.06,
-        "end": 75.24
-      },
-      {
-        "word": " and",
-        "start": 75.24,
-        "end": 75.38
-      },
-      {
-        "word": " you",
-        "start": 75.38,
-        "end": 75.86
-      },
-      {
-        "word": " tagged",
-        "start": 75.86,
-        "end": 76.2
-      },
-      {
-        "word": " mine.",
+        "word": " mía",
         "start": 76.2,
         "end": 76.44
       }
@@ -1693,292 +927,148 @@
   },
   {
     "id": 22,
-    "text": "eat more than four times at once",
+    "text": "comerlo más de cuatro veces seguidas",
     "start": 76.44,
     "end": 78.44,
     "words": [
       {
-        "word": "eat",
+        "word": " Comerlo",
         "start": 76.44,
         "end": 76.92
       },
       {
-        "word": " more",
+        "word": " más",
         "start": 76.92,
         "end": 77.14
       },
       {
-        "word": " than",
+        "word": " de",
         "start": 77.14,
         "end": 77.3
       },
       {
-        "word": " four",
+        "word": " cuatro",
         "start": 77.3,
         "end": 77.6
       },
       {
-        "word": " times",
+        "word": " veces",
         "start": 77.6,
         "end": 77.94
       },
       {
-        "word": " at",
+        "word": " seguidas",
         "start": 77.94,
-        "end": 78.10666666666667
-      },
-      {
-        "word": " once",
-        "start": 78.10666666666667,
-        "end": 78.44
-      }
-    ],
-    "source_text": "eat more than four times at once",
-    "source_words": [
-      {
-        "word": "eat",
-        "start": 76.44,
-        "end": 76.92
-      },
-      {
-        "word": " more",
-        "start": 76.92,
-        "end": 77.14
-      },
-      {
-        "word": " than",
-        "start": 77.14,
-        "end": 77.3
-      },
-      {
-        "word": " four",
-        "start": 77.3,
-        "end": 77.6
-      },
-      {
-        "word": " times",
-        "start": 77.6,
-        "end": 77.94
-      },
-      {
-        "word": " at",
-        "start": 77.94,
-        "end": 78.10666666666667
-      },
-      {
-        "word": " once",
-        "start": 78.10666666666667,
         "end": 78.44
       }
     ]
   },
   {
     "id": 23,
-    "text": "every day of the month we felt that we became necessary",
+    "text": "todos los días del mes sentimos que se nos volvió necesidad",
     "start": 78.44,
-    "end": 81.72,
+    "end": 81.7,
     "words": [
       {
-        "word": "every",
+        "word": " Todos",
         "start": 78.44,
         "end": 78.72
       },
       {
-        "word": " day",
+        "word": " los",
         "start": 78.72,
         "end": 78.94
       },
       {
-        "word": " of",
+        "word": " días",
         "start": 78.94,
         "end": 79.14
       },
       {
-        "word": " the",
+        "word": " del",
         "start": 79.14,
         "end": 79.34
       },
       {
-        "word": " month",
+        "word": " mes",
         "start": 79.34,
         "end": 79.5
       },
       {
-        "word": " we",
+        "word": " sentimos",
         "start": 79.5,
         "end": 79.94
       },
       {
-        "word": " felt",
+        "word": " que",
         "start": 79.94,
         "end": 80.18
       },
       {
-        "word": " that",
+        "word": " se",
         "start": 80.18,
         "end": 80.34
       },
       {
-        "word": " we",
+        "word": " nos",
         "start": 80.34,
         "end": 80.48
       },
       {
-        "word": " became",
+        "word": " volvió",
         "start": 80.48,
         "end": 80.84
       },
       {
-        "word": " necessary",
+        "word": " necesidad",
         "start": 80.84,
-        "end": 81.72
-      }
-    ],
-    "source_text": "every day of the month we felt that we became necessary",
-    "source_words": [
-      {
-        "word": "every",
-        "start": 78.44,
-        "end": 78.72
-      },
-      {
-        "word": " day",
-        "start": 78.72,
-        "end": 78.94
-      },
-      {
-        "word": " of",
-        "start": 78.94,
-        "end": 79.14
-      },
-      {
-        "word": " the",
-        "start": 79.14,
-        "end": 79.34
-      },
-      {
-        "word": " month",
-        "start": 79.34,
-        "end": 79.5
-      },
-      {
-        "word": " we",
-        "start": 79.5,
-        "end": 79.94
-      },
-      {
-        "word": " felt",
-        "start": 79.94,
-        "end": 80.18
-      },
-      {
-        "word": " that",
-        "start": 80.18,
-        "end": 80.34
-      },
-      {
-        "word": " we",
-        "start": 80.34,
-        "end": 80.48
-      },
-      {
-        "word": " became",
-        "start": 80.48,
-        "end": 80.84
-      },
-      {
-        "word": " necessary",
-        "start": 80.84,
-        "end": 81.72
+        "end": 81.7
       }
     ]
   },
   {
     "id": 24,
-    "text": "At night we killed ourselves in the room",
-    "start": 82.38,
+    "text": "pero la noche nos matamos en el cuarto",
+    "start": 82.36,
     "end": 84.72,
     "words": [
       {
-        "word": "At",
-        "start": 82.38,
-        "end": 82.98
+        "word": " Pero",
+        "start": 82.36,
+        "end": 83.0
       },
       {
-        "word": " night",
-        "start": 82.98,
-        "end": 83.18
+        "word": " la",
+        "start": 83.0,
+        "end": 83.16
       },
       {
-        "word": " we",
-        "start": 83.18,
+        "word": " noche",
+        "start": 83.16,
         "end": 83.4
       },
       {
-        "word": " killed",
+        "word": " nos",
         "start": 83.4,
         "end": 83.66
       },
       {
-        "word": " ourselves",
+        "word": " matamos",
         "start": 83.66,
         "end": 84.08
       },
       {
-        "word": " in",
+        "word": " en",
         "start": 84.08,
         "end": 84.32
       },
       {
-        "word": " the",
+        "word": " el",
         "start": 84.32,
         "end": 84.5
       },
       {
-        "word": " room",
-        "start": 84.5,
-        "end": 84.72
-      }
-    ],
-    "source_text": "At night we killed ourselves in the room",
-    "source_words": [
-      {
-        "word": "At",
-        "start": 82.38,
-        "end": 82.98
-      },
-      {
-        "word": " night",
-        "start": 82.98,
-        "end": 83.18
-      },
-      {
-        "word": " we",
-        "start": 83.18,
-        "end": 83.4
-      },
-      {
-        "word": " killed",
-        "start": 83.4,
-        "end": 83.66
-      },
-      {
-        "word": " ourselves",
-        "start": 83.66,
-        "end": 84.08
-      },
-      {
-        "word": " in",
-        "start": 84.08,
-        "end": 84.32
-      },
-      {
-        "word": " the",
-        "start": 84.32,
-        "end": 84.5
-      },
-      {
-        "word": " room",
+        "word": " cuarto",
         "start": 84.5,
         "end": 84.72
       }
@@ -1986,80 +1076,47 @@
   },
   {
     "id": 25,
-    "text": "Mami, you're mine, I don't share you.",
+    "text": "mami, tú eres mía, yo no te comparto",
     "start": 84.72,
     "end": 86.86,
     "words": [
       {
-        "word": "Mami,",
+        "word": " Mami,",
         "start": 84.72,
         "end": 85.16
       },
       {
-        "word": " you're",
+        "word": " tú",
+        "start": 85.24,
+        "end": 85.3
+      },
+      {
+        "word": " eres",
         "start": 85.3,
-        "end": 85.5
+        "end": 85.52
       },
       {
-        "word": " mine,",
-        "start": 85.5,
-        "end": 85.68
+        "word": " mía,",
+        "start": 85.52,
+        "end": 85.7
       },
       {
-        "word": " I",
-        "start": 85.68,
-        "end": 85.86
+        "word": " yo",
+        "start": 85.7,
+        "end": 85.88
       },
       {
-        "word": " don't",
-        "start": 85.86,
+        "word": " no",
+        "start": 85.88,
         "end": 86.08
       },
       {
-        "word": " share",
+        "word": " te",
         "start": 86.08,
         "end": 86.32
       },
       {
-        "word": " you.",
-        "start": 86.32,
-        "end": 86.86
-      }
-    ],
-    "source_text": "Mami, you're mine, I don't share you.",
-    "source_words": [
-      {
-        "word": "Mami,",
-        "start": 84.72,
-        "end": 85.16
-      },
-      {
-        "word": " you're",
-        "start": 85.3,
-        "end": 85.5
-      },
-      {
-        "word": " mine,",
-        "start": 85.5,
-        "end": 85.68
-      },
-      {
-        "word": " I",
-        "start": 85.68,
-        "end": 85.86
-      },
-      {
-        "word": " don't",
-        "start": 85.86,
-        "end": 86.08
-      },
-      {
-        "word": " share",
-        "start": 86.08,
-        "end": 86.32
-      },
-      {
-        "word": " you.",
+        "word": " comparto",
         "start": 86.32,
         "end": 86.86
       }
@@ -2067,2908 +1124,1815 @@
   },
   {
     "id": 26,
-    "text": "A movie as tim barto 's",
+    "text": "una movie como la de tim burton",
     "start": 86.86,
-    "end": 88.84,
+    "end": 88.82,
     "words": [
       {
-        "word": "A",
+        "word": " Una",
         "start": 86.86,
         "end": 87.18
       },
       {
         "word": " movie",
-        "start": 87.44,
-        "end": 87.71142857142857
+        "start": 87.18,
+        "end": 87.46
       },
       {
-        "word": " as",
-        "start": 87.71142857142857,
-        "end": 87.82
+        "word": " como",
+        "start": 87.46,
+        "end": 87.84
       },
       {
-        "word": " tim",
-        "start": 87.82,
-        "end": 88.12
+        "word": " la",
+        "start": 87.84,
+        "end": 88.1
       },
       {
-        "word": " barto",
-        "start": 88.26,
+        "word": " de",
+        "start": 88.1,
+        "end": 88.24
+      },
+      {
+        "word": " Tim",
+        "start": 88.24,
         "end": 88.54
       },
       {
-        "word": " 's",
+        "word": " Burton",
         "start": 88.54,
-        "end": 88.84
-      }
-    ],
-    "source_text": "A movie as tim barto's",
-    "source_words": [
-      {
-        "word": "A",
-        "start": 86.86,
-        "end": 87.18
-      },
-      {
-        "word": " movie",
-        "start": 87.44,
-        "end": 87.82
-      },
-      {
-        "word": " as",
-        "start": 87.82,
-        "end": 88.12
-      },
-      {
-        "word": " tim",
-        "start": 88.26,
-        "end": 88.54
-      },
-      {
-        "word": " barto's",
-        "start": 88.54,
-        "end": 88.84
+        "end": 88.82
       }
     ]
   },
   {
     "id": 27,
-    "text": "If I'm not with you, I feel nothing.",
-    "start": 89.94,
-    "end": 92.92,
+    "text": "y pi-na-na-na-na",
+    "start": 88.82,
+    "end": 90.82,
     "words": [
       {
-        "word": "If",
-        "start": 89.94,
-        "end": 90.7
+        "word": " Y",
+        "start": 88.82,
+        "end": 89.24
       },
       {
-        "word": " I'm",
-        "start": 90.7,
-        "end": 91.14
+        "word": " pi",
+        "start": 89.24,
+        "end": 89.56
       },
       {
-        "word": " not",
-        "start": 91.14,
-        "end": 91.26
+        "word": "-na",
+        "start": 89.56,
+        "end": 89.96
       },
       {
-        "word": " with",
-        "start": 91.26,
-        "end": 91.82
+        "word": "-na",
+        "start": 89.96,
+        "end": 90.2
       },
       {
-        "word": " you,",
-        "start": 91.82,
-        "end": 92.02
+        "word": "-na",
+        "start": 90.2,
+        "end": 90.64
       },
       {
-        "word": " I",
-        "start": 92.02,
-        "end": 92.18
-      },
-      {
-        "word": " feel",
-        "start": 92.18,
-        "end": 92.44
-      },
-      {
-        "word": " nothing.",
-        "start": 92.44,
-        "end": 92.92
-      }
-    ],
-    "source_text": "If I'm not with you, I feel nothing.",
-    "source_words": [
-      {
-        "word": "If",
-        "start": 89.94,
-        "end": 90.7
-      },
-      {
-        "word": " I'm",
-        "start": 90.7,
-        "end": 91.14
-      },
-      {
-        "word": " not",
-        "start": 91.14,
-        "end": 91.26
-      },
-      {
-        "word": " with",
-        "start": 91.26,
-        "end": 91.82
-      },
-      {
-        "word": " you,",
-        "start": 91.82,
-        "end": 92.02
-      },
-      {
-        "word": " I",
-        "start": 92.02,
-        "end": 92.18
-      },
-      {
-        "word": " feel",
-        "start": 92.18,
-        "end": 92.44
-      },
-      {
-        "word": " nothing.",
-        "start": 92.44,
-        "end": 92.92
+        "word": "-na",
+        "start": 90.64,
+        "end": 90.82
       }
     ]
   },
   {
     "id": 28,
-    "text": "He tells me I'm your bad",
-    "start": 92.92,
-    "end": 95.46,
+    "text": "si no estoy contigo, ya no siento nada",
+    "start": 90.82,
+    "end": 92.94,
     "words": [
       {
-        "word": "He",
-        "start": 92.92,
-        "end": 93.16
+        "word": " Si",
+        "start": 90.82,
+        "end": 90.96
       },
       {
-        "word": " tells",
-        "start": 93.16,
-        "end": 93.34
+        "word": " no",
+        "start": 90.96,
+        "end": 91.14
       },
       {
-        "word": " me",
-        "start": 93.34,
-        "end": 93.6
+        "word": " estoy",
+        "start": 91.14,
+        "end": 91.3
       },
       {
-        "word": " I'm",
-        "start": 93.6,
-        "end": 93.76
+        "word": " contigo,",
+        "start": 91.3,
+        "end": 91.8
       },
       {
-        "word": " your",
-        "start": 93.9,
-        "end": 94.1
+        "word": " ya",
+        "start": 91.8,
+        "end": 92.0
       },
       {
-        "word": " bad",
-        "start": 94.1,
-        "end": 95.46
-      }
-    ],
-    "source_text": "He tells me I'm your weakness",
-    "source_words": [
-      {
-        "word": "He",
-        "start": 92.92,
-        "end": 93.16
+        "word": " no",
+        "start": 92.0,
+        "end": 92.18
       },
       {
-        "word": " tells",
-        "start": 93.16,
-        "end": 93.34
+        "word": " siento",
+        "start": 92.18,
+        "end": 92.44
       },
       {
-        "word": " me",
-        "start": 93.34,
-        "end": 93.6
-      },
-      {
-        "word": " I'm",
-        "start": 93.6,
-        "end": 93.76
-      },
-      {
-        "word": " your",
-        "start": 93.9,
-        "end": 94.1
-      },
-      {
-        "word": " weakness",
-        "start": 94.1,
-        "end": 95.46
+        "word": " nada",
+        "start": 92.44,
+        "end": 92.94
       }
     ]
   },
   {
     "id": 29,
-    "text": "That's why we always come back",
-    "start": 95.46,
-    "end": 98.16,
+    "text": "me dice que yo soy tu debilidad",
+    "start": 92.94,
+    "end": 95.42,
     "words": [
       {
-        "word": "That's",
-        "start": 95.46,
-        "end": 95.94749999999999
+        "word": " Me",
+        "start": 92.94,
+        "end": 93.18
       },
       {
-        "word": " why",
-        "start": 95.94749999999999,
-        "end": 96.24
+        "word": " dice",
+        "start": 93.18,
+        "end": 93.34
       },
       {
-        "word": " we",
-        "start": 96.24,
-        "end": 96.6
+        "word": " que",
+        "start": 93.34,
+        "end": 93.6
       },
       {
-        "word": " always",
-        "start": 96.6,
-        "end": 97.18
+        "word": " yo",
+        "start": 93.6,
+        "end": 93.76
       },
       {
-        "word": " come",
-        "start": 97.18,
-        "end": 97.67
+        "word": " soy",
+        "start": 93.76,
+        "end": 93.9
       },
       {
-        "word": " back",
-        "start": 97.67,
-        "end": 98.16
-      }
-    ],
-    "source_text": "That's why we always come back",
-    "source_words": [
-      {
-        "word": "That's",
-        "start": 95.46,
-        "end": 95.94749999999999
+        "word": " tu",
+        "start": 93.9,
+        "end": 94.08
       },
       {
-        "word": " why",
-        "start": 95.94749999999999,
-        "end": 96.24
-      },
-      {
-        "word": " we",
-        "start": 96.24,
-        "end": 96.6
-      },
-      {
-        "word": " always",
-        "start": 96.6,
-        "end": 97.18
-      },
-      {
-        "word": " come",
-        "start": 97.18,
-        "end": 97.67
-      },
-      {
-        "word": " back",
-        "start": 97.67,
-        "end": 98.16
+        "word": " debilidad",
+        "start": 94.08,
+        "end": 95.42
       }
     ]
   },
   {
     "id": 30,
-    "text": "but we fight",
-    "start": 98.16,
-    "end": 100.14,
+    "text": "por eso siempre volvemos",
+    "start": 95.42,
+    "end": 98.16,
     "words": [
       {
-        "word": "but",
-        "start": 98.16,
-        "end": 98.72
+        "word": " Por",
+        "start": 95.42,
+        "end": 96.2
       },
       {
-        "word": " we",
-        "start": 98.72,
-        "end": 99.24
+        "word": " eso",
+        "start": 96.2,
+        "end": 96.6
       },
       {
-        "word": " fight",
-        "start": 99.24,
-        "end": 100.14
-      }
-    ],
-    "source_text": "but we fight",
-    "source_words": [
-      {
-        "word": "but",
-        "start": 98.16,
-        "end": 98.72
+        "word": " siempre",
+        "start": 96.6,
+        "end": 97.18
       },
       {
-        "word": " we",
-        "start": 98.72,
-        "end": 99.24
-      },
-      {
-        "word": " fight",
-        "start": 99.24,
-        "end": 100.14
+        "word": " volvemos",
+        "start": 97.18,
+        "end": 98.16
       }
     ]
   },
   {
     "id": 31,
-    "text": "Just with looking we both read",
-    "start": 100.14,
-    "end": 104.52,
+    "text": "aunque nos peleemos",
+    "start": 98.16,
+    "end": 100.14,
     "words": [
       {
-        "word": "Just",
-        "start": 100.14,
-        "end": 100.86
+        "word": " Aunque",
+        "start": 98.16,
+        "end": 98.7
       },
       {
-        "word": " with",
-        "start": 100.86,
-        "end": 101.24
+        "word": " nos",
+        "start": 98.7,
+        "end": 99.24
       },
       {
-        "word": " looking",
-        "start": 101.24,
-        "end": 102.2
-      },
-      {
-        "word": " we",
-        "start": 102.52,
-        "end": 103.02
-      },
-      {
-        "word": " both",
-        "start": 103.02,
-        "end": 103.4
-      },
-      {
-        "word": " read",
-        "start": 103.4,
-        "end": 104.52
-      }
-    ],
-    "source_text": "Just with looking we both read",
-    "source_words": [
-      {
-        "word": "Just",
-        "start": 100.14,
-        "end": 100.86
-      },
-      {
-        "word": " with",
-        "start": 100.86,
-        "end": 101.24
-      },
-      {
-        "word": " looking",
-        "start": 101.24,
-        "end": 102.2
-      },
-      {
-        "word": " we",
-        "start": 102.52,
-        "end": 103.02
-      },
-      {
-        "word": " both",
-        "start": 103.02,
-        "end": 103.4
-      },
-      {
-        "word": " read",
-        "start": 103.4,
-        "end": 104.52
+        "word": " peleemos",
+        "start": 99.24,
+        "end": 100.14
       }
     ]
   },
   {
     "id": 32,
-    "text": "If I don't see you",
-    "start": 104.52,
-    "end": 106.7,
+    "text": "solo con mirar los dos nos leemos",
+    "start": 100.14,
+    "end": 104.52,
     "words": [
       {
-        "word": "If",
-        "start": 104.52,
-        "end": 105.06
+        "word": " Solo",
+        "start": 100.14,
+        "end": 100.84
       },
       {
-        "word": " I",
-        "start": 105.06,
-        "end": 105.28
+        "word": " con",
+        "start": 100.84,
+        "end": 101.24
       },
       {
-        "word": " don't",
-        "start": 105.28,
-        "end": 105.7
+        "word": " mirar",
+        "start": 101.24,
+        "end": 102.2
       },
       {
-        "word": " see",
-        "start": 105.7,
-        "end": 106.2
+        "word": " los",
+        "start": 102.2,
+        "end": 102.52
       },
       {
-        "word": " you",
-        "start": 106.2,
-        "end": 106.7
-      }
-    ],
-    "source_text": "If I don't see you",
-    "source_words": [
-      {
-        "word": "If",
-        "start": 104.52,
-        "end": 105.06
+        "word": " dos",
+        "start": 102.52,
+        "end": 103.0
       },
       {
-        "word": " I",
-        "start": 105.06,
-        "end": 105.28
+        "word": " nos",
+        "start": 103.0,
+        "end": 103.42
       },
       {
-        "word": " don't",
-        "start": 105.28,
-        "end": 105.7
-      },
-      {
-        "word": " see",
-        "start": 105.7,
-        "end": 106.2
-      },
-      {
-        "word": " you",
-        "start": 106.2,
-        "end": 106.7
+        "word": " leemos",
+        "start": 103.42,
+        "end": 104.52
       }
     ]
   },
   {
     "id": 33,
-    "text": "I drink moisture with calling you",
-    "start": 106.7,
-    "end": 110.48,
+    "text": "si no te veo",
+    "start": 104.52,
+    "end": 106.76,
     "words": [
       {
-        "word": "I",
-        "start": 106.7,
-        "end": 107.38
+        "word": " Si",
+        "start": 104.52,
+        "end": 105.06
       },
       {
-        "word": " drink",
-        "start": 107.38,
-        "end": 107.66
+        "word": " no",
+        "start": 105.06,
+        "end": 105.28
       },
       {
-        "word": " moisture",
-        "start": 107.66,
-        "end": 108.24
+        "word": " te",
+        "start": 105.28,
+        "end": 105.74
       },
       {
-        "word": " with",
-        "start": 108.24,
-        "end": 109.06
-      },
-      {
-        "word": " calling",
-        "start": 109.06,
-        "end": 109.38
-      },
-      {
-        "word": " you",
-        "start": 109.38,
-        "end": 110.48
-      }
-    ],
-    "source_text": "I swear moisture with calling you",
-    "source_words": [
-      {
-        "word": "I",
-        "start": 106.7,
-        "end": 107.38
-      },
-      {
-        "word": " swear",
-        "start": 107.38,
-        "end": 107.66
-      },
-      {
-        "word": " moisture",
-        "start": 107.66,
-        "end": 108.24
-      },
-      {
-        "word": " with",
-        "start": 108.24,
-        "end": 109.06
-      },
-      {
-        "word": " calling",
-        "start": 109.06,
-        "end": 109.38
-      },
-      {
-        "word": " you",
-        "start": 109.38,
-        "end": 110.48
+        "word": " veo",
+        "start": 105.74,
+        "end": 106.76
       }
     ]
   },
   {
     "id": 34,
-    "text": "send me ruby to come and get you",
-    "start": 110.48,
-    "end": 114.4,
+    "text": "te lo juro, me da con llamarte",
+    "start": 106.76,
+    "end": 110.42,
     "words": [
       {
-        "word": "send",
-        "start": 110.48,
-        "end": 111.18666666666667
+        "word": " Te",
+        "start": 106.76,
+        "end": 107.38
+      },
+      {
+        "word": " lo",
+        "start": 107.38,
+        "end": 107.68
+      },
+      {
+        "word": " juro,",
+        "start": 107.68,
+        "end": 108.26
       },
       {
         "word": " me",
-        "start": 111.18666666666667,
-        "end": 111.54
+        "start": 108.32,
+        "end": 108.74
       },
       {
-        "word": " ruby",
-        "start": 111.54,
-        "end": 112.0
+        "word": " da",
+        "start": 108.74,
+        "end": 109.06
       },
       {
-        "word": " to",
-        "start": 112.0,
-        "end": 112.58
+        "word": " con",
+        "start": 109.06,
+        "end": 109.36
       },
       {
-        "word": " come",
-        "start": 112.58,
-        "end": 112.96
-      },
-      {
-        "word": " and",
-        "start": 112.96,
-        "end": 113.28
-      },
-      {
-        "word": " get",
-        "start": 113.28,
-        "end": 113.52
-      },
-      {
-        "word": " you",
-        "start": 113.52,
-        "end": 114.4
-      }
-    ],
-    "source_text": "send me ruby to come and get you",
-    "source_words": [
-      {
-        "word": "send",
-        "start": 110.48,
-        "end": 111.18666666666667
-      },
-      {
-        "word": " me",
-        "start": 111.18666666666667,
-        "end": 111.54
-      },
-      {
-        "word": " ruby",
-        "start": 111.54,
-        "end": 112.0
-      },
-      {
-        "word": " to",
-        "start": 112.0,
-        "end": 112.58
-      },
-      {
-        "word": " come",
-        "start": 112.58,
-        "end": 112.96
-      },
-      {
-        "word": " and",
-        "start": 112.96,
-        "end": 113.28
-      },
-      {
-        "word": " get",
-        "start": 113.28,
-        "end": 113.52
-      },
-      {
-        "word": " you",
-        "start": 113.52,
-        "end": 114.4
+        "word": " llamarte",
+        "start": 109.36,
+        "end": 110.42
       }
     ]
   },
   {
     "id": 35,
-    "text": "If I'm not with you, I feel nothing.",
-    "start": 115.2,
-    "end": 118.42,
+    "text": "envíame la rubí pa' ir a buscarte",
+    "start": 110.42,
+    "end": 114.42,
     "words": [
       {
-        "word": "If",
-        "start": 115.2,
-        "end": 115.34
+        "word": " Envíame",
+        "start": 110.42,
+        "end": 111.5
       },
       {
-        "word": " I'm",
-        "start": 115.34,
-        "end": 115.52
+        "word": " la",
+        "start": 111.5,
+        "end": 112.0
       },
       {
-        "word": " not",
-        "start": 115.52,
-        "end": 116.06
+        "word": " rubí",
+        "start": 112.0,
+        "end": 112.58
       },
       {
-        "word": " with",
-        "start": 116.06,
-        "end": 116.38
+        "word": " pa'",
+        "start": 112.58,
+        "end": 112.94
       },
       {
-        "word": " you,",
-        "start": 116.7,
-        "end": 117.14
+        "word": " ir",
+        "start": 112.94,
+        "end": 113.28
       },
       {
-        "word": " I",
-        "start": 117.14,
-        "end": 117.54
+        "word": " a",
+        "start": 113.28,
+        "end": 113.54
       },
       {
-        "word": " feel",
-        "start": 117.54,
-        "end": 117.86
-      },
-      {
-        "word": " nothing.",
-        "start": 117.86,
-        "end": 118.42
-      }
-    ],
-    "source_text": "If I'm not with you, I feel nothing.",
-    "source_words": [
-      {
-        "word": "If",
-        "start": 115.2,
-        "end": 115.34
-      },
-      {
-        "word": " I'm",
-        "start": 115.34,
-        "end": 115.52
-      },
-      {
-        "word": " not",
-        "start": 115.52,
-        "end": 116.06
-      },
-      {
-        "word": " with",
-        "start": 116.06,
-        "end": 116.38
-      },
-      {
-        "word": " you,",
-        "start": 116.7,
-        "end": 117.14
-      },
-      {
-        "word": " I",
-        "start": 117.14,
-        "end": 117.54
-      },
-      {
-        "word": " feel",
-        "start": 117.54,
-        "end": 117.86
-      },
-      {
-        "word": " nothing.",
-        "start": 117.86,
-        "end": 118.42
+        "word": " buscarte",
+        "start": 113.54,
+        "end": 114.42
       }
     ]
   },
   {
     "id": 36,
-    "text": "I can't be you",
-    "start": 118.42,
-    "end": 120.94,
+    "text": "si no estoy contigo, ya no siento nada",
+    "start": 115.06,
+    "end": 118.4,
     "words": [
       {
-        "word": "I",
-        "start": 118.42,
-        "end": 118.7
+        "word": " Si",
+        "start": 114.91,
+        "end": 115.34
       },
       {
-        "word": " can't",
-        "start": 118.7,
-        "end": 119.08
+        "word": " no",
+        "start": 115.34,
+        "end": 115.54
       },
       {
-        "word": " be",
-        "start": 119.08,
-        "end": 119.46
+        "word": " estoy",
+        "start": 115.54,
+        "end": 116.06
       },
       {
-        "word": " you",
-        "start": 119.46,
-        "end": 120.94
-      }
-    ],
-    "source_text": "I can't erase you",
-    "source_words": [
-      {
-        "word": "I",
-        "start": 118.42,
-        "end": 118.7
+        "word": " contigo,",
+        "start": 116.06,
+        "end": 116.36
       },
       {
-        "word": " can't",
-        "start": 118.7,
-        "end": 119.08
+        "word": " ya",
+        "start": 116.76,
+        "end": 116.76
       },
       {
-        "word": " erase",
-        "start": 119.08,
-        "end": 119.46
+        "word": " no",
+        "start": 116.76,
+        "end": 117.12
       },
       {
-        "word": " you",
-        "start": 119.46,
-        "end": 120.94
+        "word": " siento",
+        "start": 117.12,
+        "end": 117.54
+      },
+      {
+        "word": " nada",
+        "start": 117.54,
+        "end": 118.4
       }
     ]
   },
   {
     "id": 37,
-    "text": "If I don't see you",
-    "start": 120.94,
-    "end": 123.2,
+    "text": "no te puedo borrar",
+    "start": 118.4,
+    "end": 120.9,
     "words": [
       {
-        "word": "If",
-        "start": 120.94,
-        "end": 121.32
+        "word": " No",
+        "start": 118.4,
+        "end": 118.7
       },
       {
-        "word": " I",
-        "start": 121.32,
-        "end": 121.68
+        "word": " te",
+        "start": 118.7,
+        "end": 119.08
       },
       {
-        "word": " don't",
-        "start": 121.68,
-        "end": 122.24
+        "word": " puedo",
+        "start": 119.08,
+        "end": 119.46
       },
       {
-        "word": " see",
-        "start": 122.24,
-        "end": 122.72
-      },
-      {
-        "word": " you",
-        "start": 122.72,
-        "end": 123.2
-      }
-    ],
-    "source_text": "If I don't see you",
-    "source_words": [
-      {
-        "word": "If",
-        "start": 120.94,
-        "end": 121.32
-      },
-      {
-        "word": " I",
-        "start": 121.32,
-        "end": 121.68
-      },
-      {
-        "word": " don't",
-        "start": 121.68,
-        "end": 122.24
-      },
-      {
-        "word": " see",
-        "start": 122.24,
-        "end": 122.72
-      },
-      {
-        "word": " you",
-        "start": 122.72,
-        "end": 123.2
+        "word": " borrar",
+        "start": 119.46,
+        "end": 120.9
       }
     ]
   },
   {
     "id": 38,
-    "text": "I drink moisture with calling you",
-    "start": 123.2,
-    "end": 126.8,
+    "text": "si no te veo",
+    "start": 120.9,
+    "end": 123.18,
     "words": [
       {
-        "word": "I",
-        "start": 123.2,
-        "end": 123.76
+        "word": " Si",
+        "start": 120.9,
+        "end": 121.32
       },
       {
-        "word": " drink",
-        "start": 123.76,
-        "end": 124.0
+        "word": " no",
+        "start": 121.32,
+        "end": 121.68
       },
       {
-        "word": " moisture",
-        "start": 124.0,
-        "end": 124.44
+        "word": " te",
+        "start": 121.68,
+        "end": 122.3
       },
       {
-        "word": " with",
-        "start": 124.44,
-        "end": 125.32
-      },
-      {
-        "word": " calling",
-        "start": 125.32,
-        "end": 125.64
-      },
-      {
-        "word": " you",
-        "start": 125.64,
-        "end": 126.8
-      }
-    ],
-    "source_text": "I swear moisture with calling you",
-    "source_words": [
-      {
-        "word": "I",
-        "start": 123.2,
-        "end": 123.76
-      },
-      {
-        "word": " swear",
-        "start": 123.76,
-        "end": 124.0
-      },
-      {
-        "word": " moisture",
-        "start": 124.0,
-        "end": 124.44
-      },
-      {
-        "word": " with",
-        "start": 124.44,
-        "end": 125.32
-      },
-      {
-        "word": " calling",
-        "start": 125.32,
-        "end": 125.64
-      },
-      {
-        "word": " you",
-        "start": 125.64,
-        "end": 126.8
+        "word": " veo",
+        "start": 122.3,
+        "end": 123.18
       }
     ]
   },
   {
     "id": 39,
-    "text": "send me ruby to come and get you",
-    "start": 126.8,
-    "end": 131.06,
+    "text": "te lo juro, me da con llamarte",
+    "start": 123.18,
+    "end": 126.8,
     "words": [
       {
-        "word": "send",
-        "start": 126.8,
-        "end": 127.88
+        "word": " Te",
+        "start": 123.18,
+        "end": 123.76
+      },
+      {
+        "word": " lo",
+        "start": 123.76,
+        "end": 124.02
+      },
+      {
+        "word": " juro,",
+        "start": 124.02,
+        "end": 124.44
       },
       {
         "word": " me",
-        "start": 127.88,
-        "end": 128.42
+        "start": 124.44,
+        "end": 124.92
       },
       {
-        "word": " ruby",
-        "start": 128.42,
-        "end": 128.84
+        "word": " da",
+        "start": 124.92,
+        "end": 125.3
       },
       {
-        "word": " to",
-        "start": 128.84,
-        "end": 129.2
+        "word": " con",
+        "start": 125.3,
+        "end": 125.64
       },
       {
-        "word": " come",
-        "start": 129.2,
-        "end": 129.56
-      },
-      {
-        "word": " and",
-        "start": 129.56,
-        "end": 129.82
-      },
-      {
-        "word": " get",
-        "start": 129.82,
-        "end": 130.44
-      },
-      {
-        "word": " you",
-        "start": 130.44,
-        "end": 131.06
-      }
-    ],
-    "source_text": "send me ruby to come and get you",
-    "source_words": [
-      {
-        "word": "send",
-        "start": 126.8,
-        "end": 127.88
-      },
-      {
-        "word": " me",
-        "start": 127.88,
-        "end": 128.42
-      },
-      {
-        "word": " ruby",
-        "start": 128.42,
-        "end": 128.84
-      },
-      {
-        "word": " to",
-        "start": 128.84,
-        "end": 129.2
-      },
-      {
-        "word": " come",
-        "start": 129.2,
-        "end": 129.56
-      },
-      {
-        "word": " and",
-        "start": 129.56,
-        "end": 129.82
-      },
-      {
-        "word": " get",
-        "start": 129.82,
-        "end": 130.44
-      },
-      {
-        "word": " you",
-        "start": 130.44,
-        "end": 131.06
+        "word": " llamarte",
+        "start": 125.64,
+        "end": 126.8
       }
     ]
   },
   {
     "id": 40,
-    "text": "If I'm not with you, you feel nothing.",
-    "start": 131.06,
-    "end": 134.66,
+    "text": "envíame la rubí pa' ir a buscarte",
+    "start": 126.8,
+    "end": 131.0,
     "words": [
       {
-        "word": "If",
-        "start": 131.06,
-        "end": 131.58
+        "word": " Envíame",
+        "start": 126.8,
+        "end": 127.88
       },
       {
-        "word": " I'm",
-        "start": 131.58,
-        "end": 131.84
+        "word": " la",
+        "start": 127.88,
+        "end": 128.42
       },
       {
-        "word": " not",
-        "start": 131.84,
-        "end": 131.92
+        "word": " rubí",
+        "start": 128.42,
+        "end": 128.84
       },
       {
-        "word": " with",
-        "start": 131.92,
-        "end": 132.64
+        "word": " pa'",
+        "start": 128.84,
+        "end": 129.2
       },
       {
-        "word": " you,",
-        "start": 132.94,
-        "end": 133.34
+        "word": " ir",
+        "start": 129.2,
+        "end": 129.54
       },
       {
-        "word": " you",
-        "start": 133.34,
-        "end": 133.52
+        "word": " a",
+        "start": 129.54,
+        "end": 129.8
       },
       {
-        "word": " feel",
-        "start": 133.52,
-        "end": 133.92
-      },
-      {
-        "word": " nothing.",
-        "start": 133.92,
-        "end": 134.66
-      }
-    ],
-    "source_text": "If I'm not with you, you feel nothing.",
-    "source_words": [
-      {
-        "word": "If",
-        "start": 131.06,
-        "end": 131.58
-      },
-      {
-        "word": " I'm",
-        "start": 131.58,
-        "end": 131.84
-      },
-      {
-        "word": " not",
-        "start": 131.84,
-        "end": 131.92
-      },
-      {
-        "word": " with",
-        "start": 131.92,
-        "end": 132.64
-      },
-      {
-        "word": " you,",
-        "start": 132.94,
-        "end": 133.34
-      },
-      {
-        "word": " you",
-        "start": 133.34,
-        "end": 133.52
-      },
-      {
-        "word": " feel",
-        "start": 133.52,
-        "end": 133.92
-      },
-      {
-        "word": " nothing.",
-        "start": 133.92,
-        "end": 134.66
+        "word": " buscarte",
+        "start": 129.8,
+        "end": 131.0
       }
     ]
   },
   {
     "id": 41,
-    "text": "while trying to be me",
-    "start": 134.66,
-    "end": 137.20000000000002,
+    "text": "si no estoy contigo, tú ya no sientes nada",
+    "start": 131.0,
+    "end": 134.06,
     "words": [
       {
-        "word": "while",
-        "start": 134.66,
-        "end": 135.1
+        "word": " Si",
+        "start": 131.0,
+        "end": 131.58
       },
       {
-        "word": " trying",
-        "start": 135.1,
-        "end": 135.625
+        "word": " no",
+        "start": 131.58,
+        "end": 131.84
       },
       {
-        "word": " to",
-        "start": 135.625,
-        "end": 135.8
+        "word": " estoy",
+        "start": 131.84,
+        "end": 131.92
       },
       {
-        "word": " be",
-        "start": 135.8,
-        "end": 136.8
+        "word": " contigo,",
+        "start": 131.92,
+        "end": 132.66
       },
       {
-        "word": " me",
-        "start": 136.8,
-        "end": 137.20000000000002
-      }
-    ],
-    "source_text": "while trying to erase me",
-    "source_words": [
-      {
-        "word": "while",
-        "start": 134.66,
-        "end": 135.1
+        "word": " tú",
+        "start": 132.9,
+        "end": 132.94
       },
       {
-        "word": " trying",
-        "start": 135.1,
-        "end": 135.625
+        "word": " ya",
+        "start": 132.94,
+        "end": 133.32
       },
       {
-        "word": " to",
-        "start": 135.625,
-        "end": 135.8
+        "word": " no",
+        "start": 133.32,
+        "end": 133.5
       },
       {
-        "word": " erase",
-        "start": 135.8,
-        "end": 136.8
+        "word": " sientes",
+        "start": 133.5,
+        "end": 133.94
       },
       {
-        "word": " me",
-        "start": 136.8,
-        "end": 137.20000000000002
+        "word": " nada",
+        "start": 133.94,
+        "end": 134.37
       }
     ]
   },
   {
     "id": 42,
-    "text": "Don't leave with our whole plan.",
-    "start": 138.84,
-    "end": 142.8,
+    "text": "aunque intentes borrarme",
+    "start": 134.6,
+    "end": 137.06,
     "words": [
       {
-        "word": "Don't",
-        "start": 138.84,
-        "end": 139.72
+        "word": " Aunque",
+        "start": 134.6,
+        "end": 135.1
       },
       {
-        "word": " leave",
-        "start": 139.72,
-        "end": 140.24
+        "word": " intentes",
+        "start": 135.1,
+        "end": 135.8
       },
       {
-        "word": " with",
-        "start": 140.24,
-        "end": 140.84
-      },
-      {
-        "word": " our",
-        "start": 140.84,
-        "end": 141.3
-      },
-      {
-        "word": " whole",
-        "start": 141.6,
-        "end": 142.06
-      },
-      {
-        "word": " plan.",
-        "start": 142.06,
-        "end": 142.8
-      }
-    ],
-    "source_text": "Don't leave with our whole plan.",
-    "source_words": [
-      {
-        "word": "Don't",
-        "start": 138.84,
-        "end": 139.72
-      },
-      {
-        "word": " leave",
-        "start": 139.72,
-        "end": 140.24
-      },
-      {
-        "word": " with",
-        "start": 140.24,
-        "end": 140.84
-      },
-      {
-        "word": " our",
-        "start": 140.84,
-        "end": 141.3
-      },
-      {
-        "word": " whole",
-        "start": 141.6,
-        "end": 142.06
-      },
-      {
-        "word": " plan.",
-        "start": 142.06,
-        "end": 142.8
+        "word": " borrarme",
+        "start": 135.8,
+        "end": 137.06
       }
     ]
   },
   {
     "id": 43,
-    "text": "by bawama going to the locations",
-    "start": 143.60000000000002,
-    "end": 146.82,
+    "text": "no te vayas con todos nuestros planes",
+    "start": 138.85999999999999,
+    "end": 142.94,
     "words": [
       {
-        "word": "by",
-        "start": 143.60000000000002,
-        "end": 143.92
+        "word": " No",
+        "start": 138.85999999999999,
+        "end": 139.72
       },
       {
-        "word": " bawama",
-        "start": 143.92,
-        "end": 144.86
+        "word": " te",
+        "start": 139.72,
+        "end": 140.18
       },
       {
-        "word": " going",
-        "start": 144.86,
-        "end": 145.5
+        "word": " vayas",
+        "start": 140.18,
+        "end": 140.82
       },
       {
-        "word": " to",
-        "start": 145.5,
-        "end": 145.76
+        "word": " con",
+        "start": 140.82,
+        "end": 141.32
       },
       {
-        "word": " the",
-        "start": 145.76,
-        "end": 146.0
+        "word": " todos",
+        "start": 141.32,
+        "end": 141.6
       },
       {
-        "word": " locations",
-        "start": 146.0,
-        "end": 146.82
-      }
-    ],
-    "source_text": "by bawama going to the locations",
-    "source_words": [
-      {
-        "word": "by",
-        "start": 143.60000000000002,
-        "end": 143.92
+        "word": " nuestros",
+        "start": 141.6,
+        "end": 142.14
       },
       {
-        "word": " bawama",
-        "start": 143.92,
-        "end": 144.86
-      },
-      {
-        "word": " going",
-        "start": 144.86,
-        "end": 145.5
-      },
-      {
-        "word": " to",
-        "start": 145.5,
-        "end": 145.76
-      },
-      {
-        "word": " the",
-        "start": 145.76,
-        "end": 146.0
-      },
-      {
-        "word": " locations",
-        "start": 146.0,
-        "end": 146.82
+        "word": " planes",
+        "start": 142.14,
+        "end": 142.94
       }
     ]
   },
   {
     "id": 44,
-    "text": "by whom you come out after signs",
-    "start": 146.82,
-    "end": 150.92,
+    "text": "por bahama yendo a los lugares",
+    "start": 143.57999999999998,
+    "end": 146.82,
     "words": [
       {
-        "word": "by",
-        "start": 146.82,
-        "end": 147.34
+        "word": " Por",
+        "start": 143.52,
+        "end": 143.94
       },
       {
-        "word": " whom",
-        "start": 147.34,
-        "end": 147.72
+        "word": " Bahama",
+        "start": 143.94,
+        "end": 144.86
       },
       {
-        "word": " you",
-        "start": 147.72,
-        "end": 148.0
+        "word": " yendo",
+        "start": 144.86,
+        "end": 145.48
       },
       {
-        "word": " come",
-        "start": 148.0,
-        "end": 148.38
+        "word": " a",
+        "start": 145.48,
+        "end": 145.76
       },
       {
-        "word": " out",
-        "start": 148.38,
-        "end": 148.9
+        "word": " los",
+        "start": 145.76,
+        "end": 146.0
       },
       {
-        "word": " after",
-        "start": 148.9,
-        "end": 149.78
-      },
-      {
-        "word": " signs",
-        "start": 149.78,
-        "end": 150.92
-      }
-    ],
-    "source_text": "by whom you come out after signs",
-    "source_words": [
-      {
-        "word": "by",
-        "start": 146.82,
-        "end": 147.34
-      },
-      {
-        "word": " whom",
-        "start": 147.34,
-        "end": 147.72
-      },
-      {
-        "word": " you",
-        "start": 147.72,
-        "end": 148.0
-      },
-      {
-        "word": " come",
-        "start": 148.0,
-        "end": 148.38
-      },
-      {
-        "word": " out",
-        "start": 148.38,
-        "end": 148.9
-      },
-      {
-        "word": " after",
-        "start": 148.9,
-        "end": 149.78
-      },
-      {
-        "word": " signs",
-        "start": 149.78,
-        "end": 150.92
+        "word": " lugares",
+        "start": 146.0,
+        "end": 146.82
       }
     ]
   },
   {
     "id": 45,
-    "text": "That they'll take me to you for another night",
-    "start": 150.92,
-    "end": 154.84,
+    "text": "pa' los que tú sales buscando señales",
+    "start": 146.82,
+    "end": 150.9,
     "words": [
       {
-        "word": "That",
-        "start": 150.92,
-        "end": 151.24
+        "word": " Pa'",
+        "start": 146.82,
+        "end": 147.32
       },
       {
-        "word": " they'll",
-        "start": 151.24,
-        "end": 151.82
+        "word": " los",
+        "start": 147.32,
+        "end": 147.7
       },
       {
-        "word": " take",
-        "start": 151.82,
-        "end": 152.38
+        "word": " que",
+        "start": 147.7,
+        "end": 148.0
       },
       {
-        "word": " me",
-        "start": 152.38,
-        "end": 152.8
+        "word": " tú",
+        "start": 148.0,
+        "end": 148.38
       },
       {
-        "word": " to",
-        "start": 152.8,
-        "end": 153.04
+        "word": " sales",
+        "start": 148.38,
+        "end": 148.9
       },
       {
-        "word": " you",
-        "start": 153.04,
-        "end": 153.28
+        "word": " buscando",
+        "start": 148.9,
+        "end": 149.96
       },
       {
-        "word": " for",
-        "start": 153.28,
-        "end": 153.7
-      },
-      {
-        "word": " another",
-        "start": 153.7,
-        "end": 154.3
-      },
-      {
-        "word": " night",
-        "start": 154.3,
-        "end": 154.84
-      }
-    ],
-    "source_text": "That they'll take me to you for another night",
-    "source_words": [
-      {
-        "word": "That",
-        "start": 150.92,
-        "end": 151.24
-      },
-      {
-        "word": " they'll",
-        "start": 151.24,
-        "end": 151.82
-      },
-      {
-        "word": " take",
-        "start": 151.82,
-        "end": 152.38
-      },
-      {
-        "word": " me",
-        "start": 152.38,
-        "end": 152.8
-      },
-      {
-        "word": " to",
-        "start": 152.8,
-        "end": 153.04
-      },
-      {
-        "word": " you",
-        "start": 153.04,
-        "end": 153.28
-      },
-      {
-        "word": " for",
-        "start": 153.28,
-        "end": 153.7
-      },
-      {
-        "word": " another",
-        "start": 153.7,
-        "end": 154.3
-      },
-      {
-        "word": " night",
-        "start": 154.3,
-        "end": 154.84
+        "word": " señales",
+        "start": 149.96,
+        "end": 150.9
       }
     ]
   },
   {
     "id": 46,
-    "text": "I'm a president.",
-    "start": 154.84,
-    "end": 156.96,
+    "text": "que me lleven a ti pa' una noche más",
+    "start": 150.9,
+    "end": 154.84,
     "words": [
       {
-        "word": "I'm",
-        "start": 154.84,
-        "end": 155.16
+        "word": " Que",
+        "start": 150.9,
+        "end": 151.24
+      },
+      {
+        "word": " me",
+        "start": 151.24,
+        "end": 151.82
+      },
+      {
+        "word": " lleven",
+        "start": 151.82,
+        "end": 152.4
       },
       {
         "word": " a",
-        "start": 155.16,
-        "end": 155.36
+        "start": 152.4,
+        "end": 152.78
       },
       {
-        "word": " president.",
-        "start": 155.36,
-        "end": 156.96
-      }
-    ],
-    "source_text": "I'm a president.",
-    "source_words": [
-      {
-        "word": "I'm",
-        "start": 154.84,
-        "end": 155.16
+        "word": " ti",
+        "start": 152.78,
+        "end": 153.0
       },
       {
-        "word": " a",
-        "start": 155.16,
-        "end": 155.36
+        "word": " pa'",
+        "start": 153.0,
+        "end": 153.28
       },
       {
-        "word": " president.",
-        "start": 155.36,
-        "end": 156.96
+        "word": " una",
+        "start": 153.7,
+        "end": 153.7
+      },
+      {
+        "word": " noche",
+        "start": 153.7,
+        "end": 154.3
+      },
+      {
+        "word": " más",
+        "start": 154.3,
+        "end": 154.84
       }
     ]
   },
   {
     "id": 47,
-    "text": "They'll be good without you",
-    "start": 156.96,
-    "end": 159.06,
+    "text": "la suite presidencial",
+    "start": 154.84,
+    "end": 156.92,
     "words": [
       {
-        "word": "They'll",
-        "start": 156.96,
-        "end": 157.36
+        "word": " La",
+        "start": 154.84,
+        "end": 155.14
       },
       {
-        "word": " be",
-        "start": 157.36,
-        "end": 157.96
+        "word": " suite",
+        "start": 155.14,
+        "end": 155.52
       },
       {
-        "word": " good",
-        "start": 157.96,
-        "end": 158.12
-      },
-      {
-        "word": " without",
-        "start": 158.12,
-        "end": 158.38
-      },
-      {
-        "word": " you",
-        "start": 158.38,
-        "end": 159.06
-      }
-    ],
-    "source_text": "They'll be good without you",
-    "source_words": [
-      {
-        "word": "They'll",
-        "start": 156.96,
-        "end": 157.36
-      },
-      {
-        "word": " be",
-        "start": 157.36,
-        "end": 157.96
-      },
-      {
-        "word": " good",
-        "start": 157.96,
-        "end": 158.12
-      },
-      {
-        "word": " without",
-        "start": 158.12,
-        "end": 158.38
-      },
-      {
-        "word": " you",
-        "start": 158.38,
-        "end": 159.06
+        "word": " presidencial",
+        "start": 155.52,
+        "end": 156.92
       }
     ]
   },
   {
     "id": 48,
-    "text": "I don't wanna dance anything",
-    "start": 159.06,
-    "end": 160.86,
+    "text": "se hace grande sin ti",
+    "start": 156.92,
+    "end": 159.06,
     "words": [
       {
-        "word": "I",
-        "start": 159.06,
-        "end": 159.42
+        "word": " Se",
+        "start": 156.92,
+        "end": 157.36
       },
       {
-        "word": " don't",
-        "start": 159.42,
-        "end": 159.64
+        "word": " hace",
+        "start": 157.36,
+        "end": 157.66
       },
       {
-        "word": " wanna",
-        "start": 159.64,
-        "end": 160.12
+        "word": " grande",
+        "start": 157.66,
+        "end": 158.0
       },
       {
-        "word": " dance",
-        "start": 160.12,
-        "end": 160.42833333333334
+        "word": " sin",
+        "start": 158.0,
+        "end": 158.38
       },
       {
-        "word": " anything",
-        "start": 160.42833333333334,
-        "end": 160.86
-      }
-    ],
-    "source_text": "I don't wanna dance anymore",
-    "source_words": [
-      {
-        "word": "I",
-        "start": 159.06,
-        "end": 159.42
-      },
-      {
-        "word": " don't",
-        "start": 159.42,
-        "end": 159.64
-      },
-      {
-        "word": " wanna",
-        "start": 159.64,
-        "end": 160.12
-      },
-      {
-        "word": " dance",
-        "start": 160.12,
-        "end": 160.42833333333334
-      },
-      {
-        "word": " anymore",
-        "start": 160.42833333333334,
-        "end": 160.86
+        "word": " ti",
+        "start": 158.38,
+        "end": 159.06
       }
     ]
   },
   {
     "id": 49,
-    "text": "drink on the balcony",
-    "start": 160.86,
-    "end": 162.88,
+    "text": "ya no quiero bailar",
+    "start": 159.06,
+    "end": 160.88,
     "words": [
       {
-        "word": "drink",
-        "start": 160.86,
-        "end": 161.62
+        "word": " Ya",
+        "start": 159.06,
+        "end": 159.4
       },
       {
-        "word": " on",
-        "start": 161.62,
-        "end": 162.1
+        "word": " no",
+        "start": 159.4,
+        "end": 159.66
       },
       {
-        "word": " the",
-        "start": 162.1,
-        "end": 162.3
+        "word": " quiero",
+        "start": 159.66,
+        "end": 160.14
       },
       {
-        "word": " balcony",
-        "start": 162.3,
-        "end": 162.88
-      }
-    ],
-    "source_text": "drunk on the balcony",
-    "source_words": [
-      {
-        "word": "drunk",
-        "start": 160.86,
-        "end": 161.62
-      },
-      {
-        "word": " on",
-        "start": 161.62,
-        "end": 162.1
-      },
-      {
-        "word": " the",
-        "start": 162.1,
-        "end": 162.3
-      },
-      {
-        "word": " balcony",
-        "start": 162.3,
-        "end": 162.88
+        "word": " bailar",
+        "start": 160.14,
+        "end": 160.88
       }
     ]
   },
   {
     "id": 50,
-    "text": "If you're not looking at",
-    "start": 162.88,
-    "end": 165.04,
+    "text": "borracho en el balcón",
+    "start": 160.88,
+    "end": 162.86,
     "words": [
       {
-        "word": "If",
-        "start": 162.88,
-        "end": 163.2
+        "word": " Borracho",
+        "start": 160.88,
+        "end": 161.64
       },
       {
-        "word": " you're",
-        "start": 163.2,
-        "end": 163.44
+        "word": " en",
+        "start": 161.64,
+        "end": 162.08
       },
       {
-        "word": " not",
-        "start": 163.44,
-        "end": 163.74
+        "word": " el",
+        "start": 162.08,
+        "end": 162.28
       },
       {
-        "word": " looking",
-        "start": 163.94,
-        "end": 164.28
-      },
-      {
-        "word": " at",
-        "start": 164.28,
-        "end": 165.04
-      }
-    ],
-    "source_text": "If you're not looking at",
-    "source_words": [
-      {
-        "word": "If",
-        "start": 162.88,
-        "end": 163.2
-      },
-      {
-        "word": " you're",
-        "start": 163.2,
-        "end": 163.44
-      },
-      {
-        "word": " not",
-        "start": 163.44,
-        "end": 163.74
-      },
-      {
-        "word": " looking",
-        "start": 163.94,
-        "end": 164.28
-      },
-      {
-        "word": " at",
-        "start": 164.28,
-        "end": 165.04
+        "word": " balcón",
+        "start": 162.28,
+        "end": 162.86
       }
     ]
   },
   {
     "id": 51,
-    "text": "I wish I could get back.",
-    "start": 165.04,
-    "end": 166.96,
+    "text": "si tú no estás pa' mirar",
+    "start": 162.86,
+    "end": 165.0,
     "words": [
       {
-        "word": "I",
-        "start": 165.04,
-        "end": 165.188
+        "word": " Si",
+        "start": 162.86,
+        "end": 163.2
       },
       {
-        "word": " wish",
-        "start": 165.188,
-        "end": 165.78
+        "word": " tú",
+        "start": 163.2,
+        "end": 163.44
       },
       {
-        "word": " I",
-        "start": 165.78,
-        "end": 165.87666666666667
+        "word": " no",
+        "start": 163.44,
+        "end": 163.72
       },
       {
-        "word": " could",
-        "start": 165.87666666666667,
-        "end": 166.36
+        "word": " estás",
+        "start": 163.72,
+        "end": 163.94
       },
       {
-        "word": " get",
-        "start": 166.36,
-        "end": 166.61714285714288
+        "word": " pa'",
+        "start": 163.94,
+        "end": 164.26
       },
       {
-        "word": " back.",
-        "start": 166.61714285714288,
-        "end": 166.96
-      }
-    ],
-    "source_text": "I wish I could get back.",
-    "source_words": [
-      {
-        "word": "I",
-        "start": 165.04,
-        "end": 165.188
-      },
-      {
-        "word": " wish",
-        "start": 165.188,
-        "end": 165.78
-      },
-      {
-        "word": " I",
-        "start": 165.78,
-        "end": 165.87666666666667
-      },
-      {
-        "word": " could",
-        "start": 165.87666666666667,
-        "end": 166.36
-      },
-      {
-        "word": " get",
-        "start": 166.36,
-        "end": 166.61714285714288
-      },
-      {
-        "word": " back.",
-        "start": 166.61714285714288,
-        "end": 166.96
+        "word": " mirar",
+        "start": 164.26,
+        "end": 165.0
       }
     ]
   },
   {
     "id": 52,
-    "text": "Also from the seawater",
-    "start": 166.96,
-    "end": 169.06,
+    "text": "ojalá volver atrás",
+    "start": 165.0,
+    "end": 166.94,
     "words": [
       {
-        "word": "Also",
-        "start": 166.96,
-        "end": 167.5
+        "word": " Ojalá",
+        "start": 165.0,
+        "end": 165.78
       },
       {
-        "word": " from",
-        "start": 167.5,
-        "end": 167.9
+        "word": " volver",
+        "start": 165.78,
+        "end": 166.36
       },
       {
-        "word": " the",
-        "start": 167.9,
-        "end": 168.08
-      },
-      {
-        "word": " seawater",
-        "start": 168.08,
-        "end": 169.06
-      }
-    ],
-    "source_text": "Also from the seawater",
-    "source_words": [
-      {
-        "word": "Also",
-        "start": 166.96,
-        "end": 167.5
-      },
-      {
-        "word": " from",
-        "start": 167.5,
-        "end": 167.9
-      },
-      {
-        "word": " the",
-        "start": 167.9,
-        "end": 168.08
-      },
-      {
-        "word": " seawater",
-        "start": 168.08,
-        "end": 169.06
+        "word": " atrás",
+        "start": 166.36,
+        "end": 166.94
       }
     ]
   },
   {
     "id": 53,
-    "text": "I haven't seen you for a while.",
-    "start": 169.06,
-    "end": 171.6,
+    "text": "rambiendo en la gavilar",
+    "start": 166.94,
+    "end": 168.57999999999998,
     "words": [
       {
-        "word": "I",
-        "start": 169.06,
-        "end": 169.5
+        "word": " Rambiendo",
+        "start": 166.94,
+        "end": 167.68
       },
       {
-        "word": " haven't",
-        "start": 169.5,
-        "end": 169.86
+        "word": " en",
+        "start": 167.68,
+        "end": 167.92
       },
       {
-        "word": " seen",
-        "start": 169.86,
-        "end": 170.28
+        "word": " la",
+        "start": 167.92,
+        "end": 168.12
       },
       {
-        "word": " you",
-        "start": 170.28,
-        "end": 170.66
-      },
-      {
-        "word": " for",
-        "start": 170.66,
-        "end": 171.1
-      },
-      {
-        "word": " a",
-        "start": 171.1,
-        "end": 171.18333333333334
-      },
-      {
-        "word": " while.",
-        "start": 171.18333333333334,
-        "end": 171.6
-      }
-    ],
-    "source_text": "I haven't seen you for a while.",
-    "source_words": [
-      {
-        "word": "I",
-        "start": 169.06,
-        "end": 169.5
-      },
-      {
-        "word": " haven't",
-        "start": 169.5,
-        "end": 169.86
-      },
-      {
-        "word": " seen",
-        "start": 169.86,
-        "end": 170.28
-      },
-      {
-        "word": " you",
-        "start": 170.28,
-        "end": 170.66
-      },
-      {
-        "word": " for",
-        "start": 170.66,
-        "end": 171.1
-      },
-      {
-        "word": " a",
-        "start": 171.1,
-        "end": 171.18333333333334
-      },
-      {
-        "word": " while.",
-        "start": 171.18333333333334,
-        "end": 171.6
+        "word": " gavilar",
+        "start": 168.12,
+        "end": 168.57999999999998
       }
     ]
   },
   {
     "id": 54,
-    "text": "That illegal body I'll clear him",
-    "start": 172.4,
-    "end": 175.4,
+    "text": "que hace tiempo no te veo",
+    "start": 169.08,
+    "end": 171.64,
     "words": [
       {
-        "word": "That",
-        "start": 172.4,
-        "end": 173.08
+        "word": " Que",
+        "start": 169.08,
+        "end": 169.5
       },
       {
-        "word": " illegal",
-        "start": 173.08,
-        "end": 173.5
+        "word": " hace",
+        "start": 169.5,
+        "end": 169.84
       },
       {
-        "word": " body",
-        "start": 173.5,
-        "end": 174.12
+        "word": " tiempo",
+        "start": 169.84,
+        "end": 170.28
       },
       {
-        "word": " I'll",
-        "start": 174.12,
-        "end": 174.52
+        "word": " no",
+        "start": 170.28,
+        "end": 170.64
       },
       {
-        "word": " clear",
-        "start": 174.52,
-        "end": 174.74
+        "word": " te",
+        "start": 170.64,
+        "end": 171.02
       },
       {
-        "word": " him",
-        "start": 174.74,
-        "end": 175.4
-      }
-    ],
-    "source_text": "That illegal body I'll clear him",
-    "source_words": [
-      {
-        "word": "That",
-        "start": 172.4,
-        "end": 173.08
-      },
-      {
-        "word": " illegal",
-        "start": 173.08,
-        "end": 173.5
-      },
-      {
-        "word": " body",
-        "start": 173.5,
-        "end": 174.12
-      },
-      {
-        "word": " I'll",
-        "start": 174.12,
-        "end": 174.52
-      },
-      {
-        "word": " clear",
-        "start": 174.52,
-        "end": 174.74
-      },
-      {
-        "word": " him",
-        "start": 174.74,
-        "end": 175.4
+        "word": " veo",
+        "start": 171.02,
+        "end": 171.64
       }
     ]
   },
   {
     "id": 55,
-    "text": "I'm drawing with your fingers",
-    "start": 176.95999999999998,
-    "end": 179.4,
+    "text": "ese cuerpo ilegal yo lo blanqueo",
+    "start": 172.28,
+    "end": 175.28,
     "words": [
       {
-        "word": "I'm",
-        "start": 176.95999999999998,
-        "end": 177.76
+        "word": " Ese",
+        "start": 172.28,
+        "end": 173.08
       },
       {
-        "word": " drawing",
-        "start": 177.76,
-        "end": 178.56
+        "word": " cuerpo",
+        "start": 173.08,
+        "end": 173.5
       },
       {
-        "word": " with",
-        "start": 178.56,
-        "end": 178.82
+        "word": " ilegal",
+        "start": 173.5,
+        "end": 174.12
       },
       {
-        "word": " your",
-        "start": 178.82,
-        "end": 179.18
+        "word": " yo",
+        "start": 174.12,
+        "end": 174.52
       },
       {
-        "word": " fingers",
-        "start": 179.18,
-        "end": 179.4
-      }
-    ],
-    "source_text": "I'm drawing with your fingers",
-    "source_words": [
-      {
-        "word": "I'm",
-        "start": 176.95999999999998,
-        "end": 177.76
+        "word": " lo",
+        "start": 174.52,
+        "end": 174.74
       },
       {
-        "word": " drawing",
-        "start": 177.76,
-        "end": 178.56
-      },
-      {
-        "word": " with",
-        "start": 178.56,
-        "end": 178.82
-      },
-      {
-        "word": " your",
-        "start": 178.82,
-        "end": 179.18
-      },
-      {
-        "word": " fingers",
-        "start": 179.18,
-        "end": 179.4
+        "word": " blanqueo",
+        "start": 174.74,
+        "end": 175.28
       }
     ]
   },
   {
     "id": 56,
-    "text": "in the sand",
-    "start": 179.96,
-    "end": 181.36,
+    "text": "te dibujo con los dedos",
+    "start": 176.85999999999999,
+    "end": 179.28000000000003,
     "words": [
       {
-        "word": "in",
-        "start": 179.96,
-        "end": 180.36
+        "word": " Te",
+        "start": 176.85999999999999,
+        "end": 177.7
       },
       {
-        "word": " the",
-        "start": 180.36,
-        "end": 180.62
+        "word": " dibujo",
+        "start": 177.7,
+        "end": 178.54
       },
       {
-        "word": " sand",
-        "start": 180.62,
-        "end": 181.36
-      }
-    ],
-    "source_text": "in the sand",
-    "source_words": [
-      {
-        "word": "in",
-        "start": 179.96,
-        "end": 180.36
+        "word": " con",
+        "start": 178.54,
+        "end": 178.82
       },
       {
-        "word": " the",
-        "start": 180.36,
-        "end": 180.62
+        "word": " los",
+        "start": 178.82,
+        "end": 179.18
       },
       {
-        "word": " sand",
-        "start": 180.62,
-        "end": 181.36
+        "word": " dedos",
+        "start": 179.18,
+        "end": 179.6
       }
     ]
   },
   {
     "id": 57,
-    "text": "See how you get more hit.",
-    "start": 181.36,
-    "end": 183.0,
+    "text": "en la arena",
+    "start": 179.9,
+    "end": 181.36,
     "words": [
       {
-        "word": "See",
-        "start": 181.36,
-        "end": 181.76
+        "word": " En",
+        "start": 179.9,
+        "end": 180.36
       },
       {
-        "word": " how",
-        "start": 181.76,
-        "end": 182.02
+        "word": " la",
+        "start": 180.36,
+        "end": 180.6
       },
       {
-        "word": " you",
-        "start": 182.02,
-        "end": 182.34
-      },
-      {
-        "word": " get",
-        "start": 182.34,
-        "end": 182.51142857142858
-      },
-      {
-        "word": " more",
-        "start": 182.51142857142858,
-        "end": 182.74
-      },
-      {
-        "word": " hit.",
-        "start": 182.74,
-        "end": 183.0
-      }
-    ],
-    "source_text": "See how you get more hit.",
-    "source_words": [
-      {
-        "word": "See",
-        "start": 181.36,
-        "end": 181.76
-      },
-      {
-        "word": " how",
-        "start": 181.76,
-        "end": 182.02
-      },
-      {
-        "word": " you",
-        "start": 182.02,
-        "end": 182.34
-      },
-      {
-        "word": " get",
-        "start": 182.34,
-        "end": 182.51142857142858
-      },
-      {
-        "word": " more",
-        "start": 182.51142857142858,
-        "end": 182.74
-      },
-      {
-        "word": " hit.",
-        "start": 182.74,
-        "end": 183.0
+        "word": " arena",
+        "start": 180.6,
+        "end": 181.36
       }
     ]
   },
   {
     "id": 58,
-    "text": "Because the sun's burning",
-    "start": 183.0,
+    "text": "ven que te choque más porque el sol está que quema",
+    "start": 181.36,
     "end": 185.78,
     "words": [
       {
-        "word": "Because",
-        "start": 183.0,
-        "end": 183.4
+        "word": " Ven",
+        "start": 181.36,
+        "end": 181.78
       },
       {
-        "word": " the",
+        "word": " que",
+        "start": 181.78,
+        "end": 182.0
+      },
+      {
+        "word": " te",
+        "start": 182.0,
+        "end": 182.32
+      },
+      {
+        "word": " choque",
+        "start": 182.32,
+        "end": 182.74
+      },
+      {
+        "word": " más",
+        "start": 182.74,
+        "end": 183.0
+      },
+      {
+        "word": " porque",
+        "start": 183.0,
+        "end": 183.42
+      },
+      {
+        "word": " el",
+        "start": 183.42,
+        "end": 183.64
+      },
+      {
+        "word": " sol",
+        "start": 183.64,
+        "end": 183.92
+      },
+      {
+        "word": " está",
         "start": 183.92,
         "end": 184.26
       },
       {
-        "word": " sun's",
+        "word": " que",
         "start": 184.26,
-        "end": 184.66
+        "end": 184.68
       },
       {
-        "word": " burning",
-        "start": 184.66,
-        "end": 185.78
-      }
-    ],
-    "source_text": "Because the sun's burning",
-    "source_words": [
-      {
-        "word": "Because",
-        "start": 183.0,
-        "end": 183.4
-      },
-      {
-        "word": " the",
-        "start": 183.92,
-        "end": 184.26
-      },
-      {
-        "word": " sun's",
-        "start": 184.26,
-        "end": 184.66
-      },
-      {
-        "word": " burning",
-        "start": 184.66,
+        "word": " quema",
+        "start": 184.68,
         "end": 185.78
       }
     ]
   },
   {
     "id": 59,
-    "text": "If I don't see you",
+    "text": "si no te veo",
     "start": 185.78,
-    "end": 187.4,
+    "end": 187.28000000000003,
     "words": [
       {
-        "word": "If",
+        "word": " Si",
         "start": 185.78,
-        "end": 186.19333333333333
-      },
-      {
-        "word": " I",
-        "start": 186.19333333333333,
         "end": 186.4
       },
       {
-        "word": " don't",
+        "word": " no",
         "start": 186.4,
         "end": 186.64
       },
       {
-        "word": " see",
+        "word": " te",
         "start": 186.64,
-        "end": 187.12
+        "end": 187.1
       },
       {
-        "word": " you",
-        "start": 187.12,
-        "end": 187.4
-      }
-    ],
-    "source_text": "If I don't see you",
-    "source_words": [
-      {
-        "word": "If",
-        "start": 185.78,
-        "end": 186.19333333333333
-      },
-      {
-        "word": " I",
-        "start": 186.19333333333333,
-        "end": 186.4
-      },
-      {
-        "word": " don't",
-        "start": 186.4,
-        "end": 186.64
-      },
-      {
-        "word": " see",
-        "start": 186.64,
-        "end": 187.12
-      },
-      {
-        "word": " you",
-        "start": 187.12,
-        "end": 187.4
+        "word": " veo",
+        "start": 187.1,
+        "end": 187.51999999999998
       }
     ]
   },
   {
     "id": 60,
-    "text": "I drink moisture with calling you",
-    "start": 188.12,
-    "end": 191.86,
+    "text": "te lo juro, me da con llamarte",
+    "start": 188.32,
+    "end": 191.28000000000003,
     "words": [
       {
-        "word": "I",
-        "start": 188.12,
-        "end": 188.82
+        "word": " Te",
+        "start": 188.32,
+        "end": 188.84
       },
       {
-        "word": " drink",
-        "start": 188.82,
+        "word": " lo",
+        "start": 188.84,
         "end": 189.16
       },
       {
-        "word": " moisture",
+        "word": " juro,",
         "start": 189.16,
-        "end": 189.46
+        "end": 189.5
       },
       {
-        "word": " with",
-        "start": 189.46,
+        "word": " me",
+        "start": 189.5,
+        "end": 189.98
+      },
+      {
+        "word": " da",
+        "start": 189.98,
         "end": 190.4
       },
       {
-        "word": " calling",
+        "word": " con",
         "start": 190.4,
-        "end": 190.72
+        "end": 190.7
       },
       {
-        "word": " you",
-        "start": 190.72,
-        "end": 191.86
-      }
-    ],
-    "source_text": "I swear moisture with calling you",
-    "source_words": [
-      {
-        "word": "I",
-        "start": 188.12,
-        "end": 188.82
-      },
-      {
-        "word": " swear",
-        "start": 188.82,
-        "end": 189.16
-      },
-      {
-        "word": " moisture",
-        "start": 189.16,
-        "end": 189.46
-      },
-      {
-        "word": " with",
-        "start": 189.46,
-        "end": 190.4
-      },
-      {
-        "word": " calling",
-        "start": 190.4,
-        "end": 190.72
-      },
-      {
-        "word": " you",
-        "start": 190.72,
-        "end": 191.86
+        "word": " llamarte",
+        "start": 190.7,
+        "end": 191.28000000000003
       }
     ]
   },
   {
     "id": 61,
-    "text": "send me ruby to come and get you",
+    "text": "envíame la rubí pa' ir a buscarte",
     "start": 191.86,
-    "end": 195.4,
+    "end": 195.28000000000003,
     "words": [
       {
-        "word": "send",
+        "word": " Envíame",
         "start": 191.86,
-        "end": 192.55333333333334
+        "end": 192.88
       },
       {
-        "word": " me",
-        "start": 192.55333333333334,
-        "end": 192.9
-      },
-      {
-        "word": " ruby",
-        "start": 192.9,
+        "word": " la",
+        "start": 192.88,
         "end": 193.38
       },
       {
-        "word": " to",
+        "word": " rubí",
         "start": 193.38,
         "end": 193.9
       },
       {
-        "word": " come",
+        "word": " pa'",
         "start": 193.9,
-        "end": 194.32
+        "end": 194.3
       },
       {
-        "word": " and",
+        "word": " ir",
         "start": 194.32,
-        "end": 194.64
+        "end": 194.66
       },
       {
-        "word": " get",
-        "start": 194.64,
+        "word": " a",
+        "start": 194.66,
         "end": 194.88
       },
       {
-        "word": " you",
+        "word": " buscarte",
         "start": 194.88,
-        "end": 195.4
-      }
-    ],
-    "source_text": "send me ruby to come and get you",
-    "source_words": [
-      {
-        "word": "send",
-        "start": 191.86,
-        "end": 192.55333333333334
-      },
-      {
-        "word": " me",
-        "start": 192.55333333333334,
-        "end": 192.9
-      },
-      {
-        "word": " ruby",
-        "start": 192.9,
-        "end": 193.38
-      },
-      {
-        "word": " to",
-        "start": 193.38,
-        "end": 193.9
-      },
-      {
-        "word": " come",
-        "start": 193.9,
-        "end": 194.32
-      },
-      {
-        "word": " and",
-        "start": 194.32,
-        "end": 194.64
-      },
-      {
-        "word": " get",
-        "start": 194.64,
-        "end": 194.88
-      },
-      {
-        "word": " you",
-        "start": 194.88,
-        "end": 195.4
+        "end": 195.29999999999998
       }
     ]
   },
   {
     "id": 62,
-    "text": "If I'm not with you, you feel nothing.",
-    "start": 196.0,
+    "text": "si no estoy contigo, tú ya no sientes nada",
+    "start": 196.04,
     "end": 199.6,
     "words": [
       {
-        "word": "If",
-        "start": 196.0,
-        "end": 196.7
+        "word": " Si",
+        "start": 196.04,
+        "end": 196.68
       },
       {
-        "word": " I'm",
-        "start": 196.7,
+        "word": " no",
+        "start": 196.68,
         "end": 196.9
       },
       {
-        "word": " not",
+        "word": " estoy",
         "start": 196.9,
         "end": 197.06
       },
       {
-        "word": " with",
+        "word": " contigo,",
         "start": 197.06,
         "end": 197.74
       },
       {
-        "word": " you,",
+        "word": " tú",
+        "start": 197.94,
+        "end": 198.04
+      },
+      {
+        "word": " ya",
         "start": 198.04,
         "end": 198.38
       },
       {
-        "word": " you",
+        "word": " no",
         "start": 198.38,
         "end": 198.58
       },
       {
-        "word": " feel",
+        "word": " sientes",
         "start": 198.58,
-        "end": 199.0
+        "end": 199.02
       },
       {
-        "word": " nothing.",
-        "start": 199.0,
-        "end": 199.6
-      }
-    ],
-    "source_text": "If I'm not with you, you feel nothing.",
-    "source_words": [
-      {
-        "word": "If",
-        "start": 196.0,
-        "end": 196.7
-      },
-      {
-        "word": " I'm",
-        "start": 196.7,
-        "end": 196.9
-      },
-      {
-        "word": " not",
-        "start": 196.9,
-        "end": 197.06
-      },
-      {
-        "word": " with",
-        "start": 197.06,
-        "end": 197.74
-      },
-      {
-        "word": " you,",
-        "start": 198.04,
-        "end": 198.38
-      },
-      {
-        "word": " you",
-        "start": 198.38,
-        "end": 198.58
-      },
-      {
-        "word": " feel",
-        "start": 198.58,
-        "end": 199.0
-      },
-      {
-        "word": " nothing.",
-        "start": 199.0,
+        "word": " nada",
+        "start": 199.02,
         "end": 199.6
       }
     ]
   },
   {
     "id": 63,
-    "text": "while trying to be me",
+    "text": "aunque intentes borrarme",
     "start": 199.6,
-    "end": 201.58,
+    "end": 201.62,
     "words": [
       {
-        "word": "while",
+        "word": " Aunque",
         "start": 199.6,
-        "end": 199.87272727272727
-      },
-      {
-        "word": " trying",
-        "start": 199.87272727272727,
         "end": 200.2
       },
       {
-        "word": " to",
+        "word": " intentes",
         "start": 200.2,
         "end": 200.9
       },
       {
-        "word": " be",
+        "word": " borrarme",
         "start": 200.9,
-        "end": 201.3857142857143
-      },
-      {
-        "word": " me",
-        "start": 201.3857142857143,
-        "end": 201.58
-      }
-    ],
-    "source_text": "while trying to erase me",
-    "source_words": [
-      {
-        "word": "while",
-        "start": 199.6,
-        "end": 199.87272727272727
-      },
-      {
-        "word": " trying",
-        "start": 199.87272727272727,
-        "end": 200.2
-      },
-      {
-        "word": " to",
-        "start": 200.2,
-        "end": 200.9
-      },
-      {
-        "word": " erase",
-        "start": 200.9,
-        "end": 201.3857142857143
-      },
-      {
-        "word": " me",
-        "start": 201.3857142857143,
-        "end": 201.58
+        "end": 201.62
       }
     ]
   },
   {
     "id": 64,
-    "text": "Don't leave with our whole plan.",
-    "start": 201.58,
-    "end": 205.02,
+    "text": "por bahama yendo a los lugares",
+    "start": 202.28,
+    "end": 208.96,
     "words": [
       {
-        "word": "Don't",
-        "start": 201.58,
-        "end": 201.82
+        "word": " Por",
+        "start": 202.18,
+        "end": 202.88
       },
       {
-        "word": " leave",
-        "start": 201.82,
-        "end": 202.6
+        "word": " Bahama",
+        "start": 202.88,
+        "end": 204.04
       },
       {
-        "word": " with",
-        "start": 202.6,
-        "end": 203.65142857142857
+        "word": " yendo",
+        "start": 204.04,
+        "end": 208.96
       },
       {
-        "word": " our",
-        "start": 203.65142857142857,
-        "end": 204.44
+        "word": " a",
+        "start": 208.96,
+        "end": 208.96
       },
       {
-        "word": " whole",
-        "start": 204.44,
-        "end": 204.92
+        "word": " los",
+        "start": 208.96,
+        "end": 208.96
       },
       {
-        "word": " plan.",
-        "start": 204.92,
-        "end": 205.02
-      }
-    ],
-    "source_text": "Don't leave with our whole plan.",
-    "source_words": [
-      {
-        "word": "Don't",
-        "start": 201.58,
-        "end": 201.82
-      },
-      {
-        "word": " leave",
-        "start": 201.82,
-        "end": 202.6
-      },
-      {
-        "word": " with",
-        "start": 202.6,
-        "end": 203.65142857142857
-      },
-      {
-        "word": " our",
-        "start": 203.65142857142857,
-        "end": 204.44
-      },
-      {
-        "word": " whole",
-        "start": 204.44,
-        "end": 204.92
-      },
-      {
-        "word": " plan.",
-        "start": 204.92,
-        "end": 205.02
+        "word": " lugares",
+        "start": 208.96,
+        "end": 208.96
       }
     ]
   },
   {
     "id": 65,
-    "text": "by bawama going to the locations",
-    "start": 205.02,
-    "end": 210.26,
+    "text": "pa' los que tú sales buscando señales",
+    "start": 208.96,
+    "end": 209.04,
     "words": [
       {
-        "word": "by",
-        "start": 205.02,
-        "end": 205.58
+        "word": " Pa'",
+        "start": 208.96,
+        "end": 208.96
       },
       {
-        "word": " bawama",
-        "start": 205.58,
-        "end": 207.26000000000002
+        "word": " los",
+        "start": 208.96,
+        "end": 208.96
       },
       {
-        "word": " going",
-        "start": 207.26000000000002,
-        "end": 208.66000000000003
+        "word": " que",
+        "start": 208.96,
+        "end": 208.96
       },
       {
-        "word": " to",
-        "start": 208.66000000000003,
-        "end": 209.22
+        "word": " tú",
+        "start": 208.96,
+        "end": 208.96
       },
       {
-        "word": " the",
-        "start": 209.22,
-        "end": 209.48
+        "word": " sales",
+        "start": 208.96,
+        "end": 208.96
       },
       {
-        "word": " locations",
-        "start": 209.48,
-        "end": 210.26
-      }
-    ],
-    "source_text": "by bawama going to the locations",
-    "source_words": [
-      {
-        "word": "by",
-        "start": 205.02,
-        "end": 205.58
+        "word": " buscando",
+        "start": 208.96,
+        "end": 208.96
       },
       {
-        "word": " bawama",
-        "start": 205.58,
-        "end": 207.26000000000002
-      },
-      {
-        "word": " going",
-        "start": 207.26000000000002,
-        "end": 208.66000000000003
-      },
-      {
-        "word": " to",
-        "start": 208.66000000000003,
-        "end": 209.22
-      },
-      {
-        "word": " the",
-        "start": 209.22,
-        "end": 209.48
-      },
-      {
-        "word": " locations",
-        "start": 209.48,
-        "end": 210.26
+        "word": " señales",
+        "start": 208.96,
+        "end": 209.04
       }
     ]
   },
   {
     "id": 66,
-    "text": "by bawama going to the locations",
-    "start": 210.26,
-    "end": 215.58,
+    "text": "que me lleven a ti pa' una noche más",
+    "start": 209.04,
+    "end": 218.72,
     "words": [
       {
-        "word": "by",
-        "start": 210.26,
-        "end": 210.828
+        "word": " Que",
+        "start": 209.04,
+        "end": 209.04
       },
       {
-        "word": " bawama",
-        "start": 210.828,
-        "end": 212.532
+        "word": " me",
+        "start": 209.04,
+        "end": 213.86
       },
       {
-        "word": " going",
-        "start": 212.532,
-        "end": 213.95200000000003
+        "word": " lleven",
+        "start": 213.86,
+        "end": 213.96
       },
       {
-        "word": " to",
-        "start": 213.95200000000003,
-        "end": 214.52
+        "word": " a",
+        "start": 213.96,
+        "end": 214.6
       },
       {
-        "word": " the",
-        "start": 214.52,
-        "end": 215.08
+        "word": " ti",
+        "start": 214.6,
+        "end": 214.78
       },
       {
-        "word": " locations",
-        "start": 215.08,
-        "end": 215.58
-      }
-    ],
-    "source_text": "by bawama going to the locations",
-    "source_words": [
-      {
-        "word": "by",
-        "start": 210.26,
-        "end": 210.828
+        "word": " pa'",
+        "start": 214.78,
+        "end": 217.9
       },
       {
-        "word": " bawama",
-        "start": 210.828,
-        "end": 212.532
+        "word": " una",
+        "start": 217.9,
+        "end": 217.96
       },
       {
-        "word": " going",
-        "start": 212.532,
-        "end": 213.95200000000003
+        "word": " noche",
+        "start": 217.96,
+        "end": 218.12
       },
       {
-        "word": " to",
-        "start": 213.95200000000003,
-        "end": 214.52
-      },
-      {
-        "word": " the",
-        "start": 214.52,
-        "end": 215.08
-      },
-      {
-        "word": " locations",
-        "start": 215.08,
-        "end": 215.58
+        "word": " más",
+        "start": 218.12,
+        "end": 218.72
       }
     ]
   },
   {
     "id": 67,
-    "text": "by bawama going to the locations",
-    "start": 215.58,
+    "text": "la suite presidencial",
+    "start": 218.72,
+    "end": 223.32,
+    "words": [
+      {
+        "word": " La",
+        "start": 218.72,
+        "end": 219.44
+      },
+      {
+        "word": " suite",
+        "start": 219.44,
+        "end": 220.22
+      },
+      {
+        "word": " presidencial",
+        "start": 220.22,
+        "end": 223.32
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "text": "borracho en el balcón",
+    "start": 223.32,
+    "end": 223.38,
+    "words": [
+      {
+        "word": " Borracho",
+        "start": 223.32,
+        "end": 223.34
+      },
+      {
+        "word": " en",
+        "start": 223.34,
+        "end": 223.34
+      },
+      {
+        "word": " el",
+        "start": 223.34,
+        "end": 223.34
+      },
+      {
+        "word": " balcón",
+        "start": 223.34,
+        "end": 223.38
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "text": "si tú no estás pa' mirar",
+    "start": 223.38,
     "end": 223.4,
     "words": [
       {
-        "word": "by",
-        "start": 215.58,
-        "end": 216.52
-      },
-      {
-        "word": " bawama",
-        "start": 216.52,
-        "end": 217.93818181818182
-      },
-      {
-        "word": " going",
-        "start": 217.93818181818182,
-        "end": 219.12
-      },
-      {
-        "word": " to",
-        "start": 219.12,
-        "end": 220.824
-      },
-      {
-        "word": " the",
-        "start": 220.824,
+        "word": " Si",
+        "start": 223.38,
         "end": 223.38
       },
       {
-        "word": " locations",
+        "word": " tú",
+        "start": 223.38,
+        "end": 223.38
+      },
+      {
+        "word": " no",
+        "start": 223.38,
+        "end": 223.38
+      },
+      {
+        "word": " estás",
+        "start": 223.38,
+        "end": 223.38
+      },
+      {
+        "word": " pa'",
+        "start": 223.38,
+        "end": 223.38
+      },
+      {
+        "word": " mirar",
         "start": 223.38,
         "end": 223.4
       }
-    ],
-    "source_text": "by bawama going to the locations",
-    "source_words": [
+    ]
+  },
+  {
+    "id": 70,
+    "text": "por bahama yendo a los lugares",
+    "start": 223.4,
+    "end": 223.44,
+    "words": [
       {
-        "word": "by",
-        "start": 215.58,
-        "end": 216.52
-      },
-      {
-        "word": " bawama",
-        "start": 216.52,
-        "end": 217.93818181818182
-      },
-      {
-        "word": " going",
-        "start": 217.93818181818182,
-        "end": 219.12
-      },
-      {
-        "word": " to",
-        "start": 219.12,
-        "end": 220.824
-      },
-      {
-        "word": " the",
-        "start": 220.824,
-        "end": 223.38
-      },
-      {
-        "word": " locations",
-        "start": 223.38,
+        "word": " Por",
+        "start": 223.4,
         "end": 223.4
+      },
+      {
+        "word": " Bahama",
+        "start": 223.4,
+        "end": 223.44
+      },
+      {
+        "word": " yendo",
+        "start": 223.44,
+        "end": 223.44
+      },
+      {
+        "word": " a",
+        "start": 223.44,
+        "end": 223.44
+      },
+      {
+        "word": " los",
+        "start": 223.44,
+        "end": 223.44
+      },
+      {
+        "word": " lugares",
+        "start": 223.44,
+        "end": 223.44
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "text": "pa' los que tú sales buscando señales",
+    "start": 223.44,
+    "end": 223.48,
+    "words": [
+      {
+        "word": " Pa'",
+        "start": 223.44,
+        "end": 223.44
+      },
+      {
+        "word": " los",
+        "start": 223.44,
+        "end": 223.44
+      },
+      {
+        "word": " que",
+        "start": 223.44,
+        "end": 223.46
+      },
+      {
+        "word": " tú",
+        "start": 223.46,
+        "end": 223.46
+      },
+      {
+        "word": " sales",
+        "start": 223.46,
+        "end": 223.48
+      },
+      {
+        "word": " buscando",
+        "start": 223.48,
+        "end": 223.48
+      },
+      {
+        "word": " señales",
+        "start": 223.48,
+        "end": 223.48
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "text": "que me lleven a ti pa' una noche más",
+    "start": 223.48,
+    "end": 223.6,
+    "words": [
+      {
+        "word": " Que",
+        "start": 223.48,
+        "end": 223.48
+      },
+      {
+        "word": " me",
+        "start": 223.48,
+        "end": 223.6
+      },
+      {
+        "word": " lleven",
+        "start": 223.6,
+        "end": 223.6
+      },
+      {
+        "word": " a",
+        "start": 223.6,
+        "end": 223.6
+      },
+      {
+        "word": " ti",
+        "start": 223.6,
+        "end": 223.6
+      },
+      {
+        "word": " pa'",
+        "start": 223.6,
+        "end": 223.6
+      },
+      {
+        "word": " una",
+        "start": 223.6,
+        "end": 223.6
+      },
+      {
+        "word": " noche",
+        "start": 223.6,
+        "end": 223.6
+      },
+      {
+        "word": " más",
+        "start": 223.6,
+        "end": 223.6
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "text": "subtítulos realizados por la comunidad de amara.org",
+    "start": 223.6,
+    "end": 223.64,
+    "words": [
+      {
+        "word": " Subtítulos",
+        "start": 223.6,
+        "end": 223.62
+      },
+      {
+        "word": " realizados",
+        "start": 223.62,
+        "end": 223.64
+      },
+      {
+        "word": " por",
+        "start": 223.64,
+        "end": 223.64
+      },
+      {
+        "word": " la",
+        "start": 223.64,
+        "end": 223.64
+      },
+      {
+        "word": " comunidad",
+        "start": 223.64,
+        "end": 223.64
+      },
+      {
+        "word": " de",
+        "start": 223.64,
+        "end": 223.64
+      },
+      {
+        "word": " Amara",
+        "start": 223.64,
+        "end": 223.64
+      },
+      {
+        "word": ".org",
+        "start": 223.64,
+        "end": 223.64
       }
     ]
   }
