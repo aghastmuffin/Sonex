@@ -989,7 +989,7 @@ def dispnotes(ms, dt_ms, x=50, y=520):
     if pattern_text:
         last_pattern_text = pattern_text
         pat_label = dbgfont.render(f"Repeat~ [{pattern_text}]", True, (190, 245, 190))
-        screen.blit(pat_label, (x, y - 22))
+        screen.blit(pat_label, (x, y - 22)) #TODO: Fix rendering here, move down to below the RPM/Beat counter
         _draw_pattern_loader(cycle["progress"], x + 710, y - 8)
 
 
@@ -1018,12 +1018,13 @@ def generarfrase():
     raise NotImplementedError
 
 
-buildfor = dbgfont.render("The SONEX Project, Tester Beta", True, (255, 255, 255))
 
 selected_file, resolved_folder = choose_generated_folder()
 if not selected_file:
     pygame.quit()
     sys.exit()
+
+buildfor = dbgfont.render(f"{selected_file.split('/')[-2]}, brought to you by taeson.co", True, (255, 255, 255))
 
 segments = _load_segments_from_file(selected_file)
 _start_audio_from_transcript_file(selected_file)
@@ -1050,7 +1051,7 @@ while running:
 
     screen.fill((30, 30, 30))
     time_text = dbgfont.render(f"Elapsed: {elapsed_ms} ms", True, (255, 255, 255))
-    credits = dbgfont.render("With ❤️ from Berkeley, Calif.", True, (190, 190, 190))
+    credits = dbgfont.render("With <3 from Berkeley, Calif.", True, (190, 190, 190))
     screen.blit(credits, ((screen.get_width() - credits.get_width()), screen.get_height() - credits.get_height() - time_text.get_height() - 2))
 
     # --- NEW: update per segment, highlight current word inside it ---
