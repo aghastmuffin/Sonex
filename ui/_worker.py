@@ -281,20 +281,37 @@ def notesanalysis(af, sr=48000, beat_strength_quantile=0.60, min_relative_beat_s
         return best
 
     def detect_beats_from_energy_spikes(audio, sr_local, min_gap_ms_local):
-        """Drum-only beat detection: register a beat on every energy spike.
-        Skips HPSS and RhythmExtractor since the input is already an isolated drum stem."""
+        """Drum-only beat detection using drummervisual-style normalized RMS thresholding."""
+        import librosa
         from scipy.signal import find_peaks
-        # Short smoothing window (10 ms) to preserve transient shape
-        env_window = max(1, int(round(0.010 * sr_local)))
-        envelope = np.convolve(np.abs(audio), np.ones(env_window, dtype=np.float32) / env_window, mode='same')
 
-        # Low threshold — anything above median amplitude counts
-        strength_threshold = float(np.quantile(envelope, 0.50))
-        min_gap_samples = max(1, int(round(min_gap_ms_local / 1000.0 * sr_local)))
-        peak_indices, _ = find_peaks(envelope, height=strength_threshold, distance=min_gap_samples)
+        hop_length = 512
+        frame_length = 2048
+        rms = librosa.feature.rms(
+            y=np.asarray(audio, dtype=np.float32),
+            frame_length=frame_length,
+            hop_length=hop_length,
+        )[0]
 
-        beat_times = peak_indices.astype(np.float32) / sr_local
-        beat_strengths = envelope[peak_indices].astype(np.float32)
+        if len(rms) == 0:
+            return np.array([], dtype=np.float32), np.array([], dtype=np.float32), 0.60, 0.0
+
+        rms_max = float(np.max(rms))
+        if rms_max <= 1e-9:
+            return np.array([], dtype=np.float32), np.array([], dtype=np.float32), 0.60, 0.0
+
+        rms_norm = rms / (rms_max + 1e-9)
+        # Same spirit as drummervisual: fixed normalized RMS threshold.
+        strength_threshold = 0.60
+        min_gap_frames = max(1, int(round((min_gap_ms_local / 1000.0) * sr_local / hop_length)))
+        peak_indices, _ = find_peaks(rms_norm, height=strength_threshold, distance=min_gap_frames)
+
+        beat_times = librosa.frames_to_time(
+            peak_indices,
+            sr=sr_local,
+            hop_length=hop_length,
+        ).astype(np.float32)
+        beat_strengths = rms_norm[peak_indices].astype(np.float32)
 
         # Estimate BPM from median inter-onset interval
         if len(beat_times) >= 2:
@@ -409,13 +426,13 @@ def notesanalysis(af, sr=48000, beat_strength_quantile=0.60, min_relative_beat_s
         duration_sec = len(rhythm_audio) / sr
 
         if is_drums_only:
-            # Drum stem: skip HPSS / RhythmExtractor and detect every energy spike directly
-            print("Drum stem detected — using energy-spike beat detection...")
+            # Drum stem: use drummervisual-like RMS threshold beat detection.
+            print("Drum stem detected — using RMS-threshold beat detection...")
             filtered_beats, beat_strengths, beat_strength_threshold, bpm = \
                 detect_beats_from_energy_spikes(rhythm_audio, sr, min_beat_gap_ms)
             beats = filtered_beats  # raw == filtered for npz consistency
             confidence = 1.0
-            selected_method = "energy_spike"
+            selected_method = "rms_visual"
         else:
             rhythm = extract_best_rhythm(rhythm_audio, duration_sec, sr)
             bpm = rhythm["bpm"]

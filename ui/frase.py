@@ -49,11 +49,28 @@ running = True
 pitch_classes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
 NOTE_THRESHOLD = 0.3
 BEAT_VISUAL_MS = 100
+TRANSCRIPT_FILE_CANDIDATES = [
+    "vocals_whisper_segments.json",
+    "mfa_vocals_phone_segments.json",
+    "vocals_whisper_segments_aligned.json",
+    "mfa_vocals_whisper_segments.json",
+]
+DISCOVERY_SKIP_DIR_NAMES = {
+    ".git",
+    ".venv",
+    "venv",
+    "__pycache__",
+    "node_modules",
+    "model_offload",
+    "htdemucs",
+}
 
 analysis_hpcp = None
 analysis_beats = None
 analysis_bpm = None
 analysis_note_strengths = None
+analysis_beat_times_ms = None
+analysis_frame_ms = 1.0
 last_beat_found_at = -1000
 analysis_note_runs = []
 last_pattern_text = ""
@@ -115,6 +132,8 @@ def _load_segments_from_file(file_path):
 
 
 def _start_audio_from_transcript_file(file_path):
+    global start_ticks
+
     parent = os.path.dirname(file_path)
     parent_name = os.path.basename(parent)
     audio_path = os.path.join(parent, f"{parent_name}.mp3")
@@ -124,9 +143,32 @@ def _start_audio_from_transcript_file(file_path):
     try:
         if not mixer.get_init():
             mixer.init()
-        mixer.Sound(audio_path).play()
+        mixer.music.stop()
+        mixer.music.load(audio_path)
+        mixer.music.play()
+        start_ticks = pygame.time.get_ticks()
     except pygame.error:
         pass
+
+
+def _analysis_index_from_ms(ms, series_len):
+    if series_len <= 0:
+        return -1
+    if ms < 0:
+        return -1
+    frame_ms = max(1e-6, float(analysis_frame_ms))
+    idx = int(round(float(ms) / frame_ms))
+    return max(0, min(series_len - 1, idx))
+
+
+def _get_elapsed_ms():
+    try:
+        pos = mixer.music.get_pos()
+    except pygame.error:
+        pos = -1
+    if pos is not None and pos >= 0:
+        return int(pos)
+    return max(0, pygame.time.get_ticks() - start_ticks)
 
 
 def _pick_folder(dialog_title):
@@ -149,28 +191,21 @@ def _pick_folder(dialog_title):
     return result.stdout.strip()
 
 
+def _resolve_transcript_in_dir(path):
+    for name in TRANSCRIPT_FILE_CANDIDATES:
+        candidate = os.path.join(path, name)
+        if os.path.exists(candidate):
+            return candidate, path
+    return None, None
+
+
 def _find_transcript_file(folder_path):
-    orig_candidates = [
-        "vocals_whisper_segments.json",
-        "mfa_vocals_phone_segments.json",
-        "vocals_whisper_segments_aligned.json",
-        "mfa_vocals_whisper_segments.json",
-    ]
-
-    def _resolve_in_dir(path):
-        orig_path = next((
-            os.path.join(path, name) for name in orig_candidates if os.path.exists(os.path.join(path, name))
-        ), None)
-        if orig_path:
-            return orig_path, path
-        return None, None
-
-    direct_orig, direct_folder = _resolve_in_dir(folder_path)
+    direct_orig, direct_folder = _resolve_transcript_in_dir(folder_path)
     if direct_orig:
         return direct_orig, direct_folder
 
     for root, _, _ in os.walk(folder_path):
-        nested_orig, nested_folder = _resolve_in_dir(root)
+        nested_orig, nested_folder = _resolve_transcript_in_dir(root)
         if nested_orig:
             return nested_orig, nested_folder
 
@@ -183,6 +218,47 @@ def _shorten_path(path, max_len=64):
     if len(path) <= max_len:
         return path
     return "..." + path[-(max_len - 3):]
+
+
+def _discover_eligible_generated_dirs(search_root, max_results=300):
+    if not search_root or not os.path.isdir(search_root):
+        return []
+
+    found = []
+    for root, dirs, files in os.walk(search_root):
+        dirs[:] = [
+            d
+            for d in dirs
+            if d not in DISCOVERY_SKIP_DIR_NAMES
+            and not d.startswith(".")
+            and not d.startswith("_")
+        ]
+
+        files_set = set(files)
+        match_name = next((name for name in TRANSCRIPT_FILE_CANDIDATES if name in files_set), None)
+        if match_name is None:
+            continue
+
+        transcript_path = os.path.join(root, match_name)
+        try:
+            rel = os.path.relpath(root, search_root)
+        except ValueError:
+            rel = root
+        if rel == ".":
+            rel = os.path.basename(root)
+
+        found.append(
+            {
+                "label": rel,
+                "folder": root,
+                "transcript": transcript_path,
+            }
+        )
+        if len(found) >= max_results:
+            break
+
+    found.sort(key=lambda item: item["label"].lower())
+    return found
 
 
 def _find_analysis_file(folder_path):
@@ -212,12 +288,15 @@ def _find_analysis_file(folder_path):
 
 
 def _load_analysis_data(folder_path):
-    global analysis_hpcp, analysis_beats, analysis_bpm, analysis_note_strengths, analysis_note_runs, note_bar_levels
+    global analysis_hpcp, analysis_beats, analysis_bpm, analysis_note_strengths, analysis_beat_times_ms
+    global analysis_frame_ms, analysis_note_runs, note_bar_levels
 
     analysis_hpcp = None
     analysis_beats = None
     analysis_bpm = None
     analysis_note_strengths = None
+    analysis_beat_times_ms = None
+    analysis_frame_ms = 1.0
     analysis_note_runs = []
     note_bar_levels = np.zeros(12, dtype=np.float32)
 
@@ -232,6 +311,18 @@ def _load_analysis_data(folder_path):
         if analysis_note_strengths is None:
             analysis_note_strengths = analysis_hpcp
         analysis_beats = data["beats"] if "beats" in data else None
+        beat_times = data["beat_times"] if "beat_times" in data else None
+        if beat_times is not None and len(beat_times) > 0:
+            analysis_beat_times_ms = np.rint(np.asarray(beat_times, dtype=np.float64) * 1000.0).astype(np.int64)
+
+        sample_rate_arr = data["sample_rate"] if "sample_rate" in data else None
+        hop_size_arr = data["hop_size"] if "hop_size" in data else None
+        if sample_rate_arr is not None and hop_size_arr is not None and len(sample_rate_arr) > 0 and len(hop_size_arr) > 0:
+            sample_rate = float(sample_rate_arr[0])
+            hop_size = float(hop_size_arr[0])
+            if sample_rate > 0:
+                analysis_frame_ms = (hop_size * 1000.0) / sample_rate
+
         bpm_arr = data["bpm"] if "bpm" in data else None
         if bpm_arr is not None and len(bpm_arr) > 0:
             analysis_bpm = float(bpm_arr[0])
@@ -244,6 +335,8 @@ def _load_analysis_data(folder_path):
         analysis_beats = None
         analysis_bpm = None
         analysis_note_strengths = None
+        analysis_beat_times_ms = None
+        analysis_frame_ms = 1.0
         analysis_note_runs = []
         note_bar_levels = np.zeros(12, dtype=np.float32)
 
@@ -252,12 +345,18 @@ def _draw_note_strength_bars(ms, dt_ms, x=50, y=420, width=700, height=120):
     global note_bar_levels
 
     source = analysis_note_strengths if analysis_note_strengths is not None else analysis_hpcp
-    if source is None or ms < 0 or ms >= len(source):
+    if source is None:
         label = dbgfont.render("Note strength: [n/a]", True, (190, 190, 190))
         screen.blit(label, (x, y + height - 20))
         return
 
-    frame = np.asarray(source[ms], dtype=np.float32)
+    frame_index = _analysis_index_from_ms(ms, len(source))
+    if frame_index < 0:
+        label = dbgfont.render("Note strength: [n/a]", True, (190, 190, 190))
+        screen.blit(label, (x, y + height - 20))
+        return
+
+    frame = np.asarray(source[frame_index], dtype=np.float32)
     if frame.ndim == 0 or len(frame) < 12:
         label = dbgfont.render("Note strength: [n/a]", True, (190, 190, 190))
         screen.blit(label, (x, y + height - 20))
@@ -505,8 +604,32 @@ def choose_generated_folder():
     transcript_file = None
     resolved_folder = None
 
-    btn_folder = pygame.Rect(270, 200, 260, 56)
+    scan_root = os.path.dirname(os.path.dirname(__file__))
+    eligible_dirs = _discover_eligible_generated_dirs(scan_root)
+
+    dropdown_open = False
+    dropdown_selected = -1
+    dropdown_scroll = 0
+    dropdown_item_h = 30
+    dropdown_visible = 6
+
+    dropdown_rect = pygame.Rect(70, 190, 520, 50)
+    refresh_btn = pygame.Rect(610, 190, 120, 50)
+    btn_folder = pygame.Rect(70, 260, 260, 52)
     start_btn = pygame.Rect(300, 420, 200, 64)
+
+    def _apply_dropdown_selection(index):
+        nonlocal folder_path, transcript_file, resolved_folder, dropdown_selected
+        if not (0 <= index < len(eligible_dirs)):
+            return
+        dropdown_selected = index
+        selection = eligible_dirs[index]
+        folder_path = selection["folder"]
+        transcript_file = selection["transcript"]
+        resolved_folder = selection["folder"]
+
+    if eligible_dirs:
+        _apply_dropdown_selection(0)
 
     choosing = True
     while choosing:
@@ -514,19 +637,50 @@ def choose_generated_folder():
             if event.type == pygame.QUIT:
                 return None, None, None
 
+            if event.type == pygame.MOUSEWHEEL and dropdown_open and eligible_dirs:
+                max_scroll = max(0, len(eligible_dirs) - dropdown_visible)
+                dropdown_scroll = max(0, min(max_scroll, dropdown_scroll - event.y))
+
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
-                if btn_folder.collidepoint(event.pos):
+                list_x = dropdown_rect.x
+                list_y = dropdown_rect.bottom + 6
+                list_h = min(dropdown_visible, len(eligible_dirs)) * dropdown_item_h + 8
+                list_rect = pygame.Rect(list_x, list_y, dropdown_rect.width, list_h)
+
+                if dropdown_rect.collidepoint(event.pos):
+                    dropdown_open = bool(eligible_dirs) and not dropdown_open
+                elif dropdown_open and eligible_dirs and list_rect.collidepoint(event.pos):
+                    rel_y = event.pos[1] - (list_y + 4)
+                    clicked = dropdown_scroll + (rel_y // dropdown_item_h)
+                    if 0 <= clicked < len(eligible_dirs):
+                        _apply_dropdown_selection(clicked)
+                    dropdown_open = False
+                elif refresh_btn.collidepoint(event.pos):
+                    eligible_dirs = _discover_eligible_generated_dirs(scan_root)
+                    dropdown_open = False
+                    dropdown_scroll = 0
+                    if eligible_dirs:
+                        _apply_dropdown_selection(0)
+                    else:
+                        dropdown_selected = -1
+                elif btn_folder.collidepoint(event.pos):
                     selected = _pick_folder("Choose generated folder (or parent folder)")
                     if selected:
                         folder_path = selected
                         transcript_file, resolved_folder = _find_transcript_file(folder_path)
+                    dropdown_open = False
                 elif start_btn.collidepoint(event.pos) and transcript_file:
                     choosing = False
+                else:
+                    dropdown_open = False
 
         screen.fill((24, 24, 24))
         title = font.render("Select generated folder", True, (245, 245, 245))
         screen.blit(title, ((WIDTH - title.get_width()) // 2, 70))
 
+        pygame.draw.rect(screen, (52, 52, 52), dropdown_rect, border_radius=8)
+        pygame.draw.rect(screen, (90, 90, 90), dropdown_rect, width=1, border_radius=8)
+        pygame.draw.rect(screen, (58, 58, 58), refresh_btn, border_radius=8)
         pygame.draw.rect(screen, (58, 58, 58), btn_folder, border_radius=10)
         pygame.draw.rect(
             screen,
@@ -535,23 +689,77 @@ def choose_generated_folder():
             border_radius=10,
         )
 
+        auto_label = dbgfont.render("Auto-scan eligible folders:", True, (220, 220, 220))
+        screen.blit(auto_label, (70, 164))
+
+        selected_label = "No eligible folders found"
+        if 0 <= dropdown_selected < len(eligible_dirs):
+            selected_label = eligible_dirs[dropdown_selected]["label"]
+        selected_txt = dbgfont.render(_shorten_path(selected_label, max_len=78), True, (245, 245, 245))
+        screen.blit(selected_txt, (84, dropdown_rect.centery - selected_txt.get_height() // 2))
+
+        tri_center_x = dropdown_rect.right - 20
+        tri_center_y = dropdown_rect.centery
+        if dropdown_open:
+            tri_points = [(tri_center_x - 6, tri_center_y + 3), (tri_center_x + 6, tri_center_y + 3), (tri_center_x, tri_center_y - 4)]
+        else:
+            tri_points = [(tri_center_x - 6, tri_center_y - 3), (tri_center_x + 6, tri_center_y - 3), (tri_center_x, tri_center_y + 4)]
+        pygame.draw.polygon(screen, (230, 230, 230), tri_points)
+
+        refresh_txt = dbgfont.render("Refresh", True, (255, 255, 255))
+        screen.blit(
+            refresh_txt,
+            (refresh_btn.centerx - refresh_txt.get_width() // 2, refresh_btn.centery - refresh_txt.get_height() // 2),
+        )
+
         folder_txt = dbgfont.render("Choose Folder", True, (255, 255, 255))
         start_txt = dbgfont.render("Start", True, (255, 255, 255))
 
         screen.blit(folder_txt, (btn_folder.centerx - folder_txt.get_width() // 2, btn_folder.centery - folder_txt.get_height() // 2))
         screen.blit(start_txt, (start_btn.centerx - start_txt.get_width() // 2, start_btn.centery - start_txt.get_height() // 2))
 
+        if dropdown_open and eligible_dirs:
+            list_x = dropdown_rect.x
+            list_y = dropdown_rect.bottom + 6
+            visible_count = min(dropdown_visible, len(eligible_dirs))
+            list_h = visible_count * dropdown_item_h + 8
+            panel = pygame.Rect(list_x, list_y, dropdown_rect.width, list_h)
+            pygame.draw.rect(screen, (44, 44, 44), panel, border_radius=8)
+            pygame.draw.rect(screen, (88, 88, 88), panel, width=1, border_radius=8)
+
+            for row in range(visible_count):
+                idx = dropdown_scroll + row
+                if idx >= len(eligible_dirs):
+                    break
+                item_rect = pygame.Rect(list_x + 4, list_y + 4 + row * dropdown_item_h, dropdown_rect.width - 8, dropdown_item_h)
+                if idx == dropdown_selected:
+                    pygame.draw.rect(screen, (72, 102, 82), item_rect, border_radius=5)
+                elif item_rect.collidepoint(pygame.mouse.get_pos()):
+                    pygame.draw.rect(screen, (62, 62, 62), item_rect, border_radius=5)
+
+                item_text = dbgfont.render(_shorten_path(eligible_dirs[idx]["label"], max_len=76), True, (240, 240, 240))
+                screen.blit(item_text, (item_rect.x + 8, item_rect.centery - item_text.get_height() // 2))
+
+            if len(eligible_dirs) > dropdown_visible:
+                scroll_hint = dbgfont.render("Use mouse wheel to scroll", True, (165, 165, 165))
+                screen.blit(scroll_hint, (list_x + 10, list_y + list_h + 6))
+
         folder_label = dbgfont.render(f"Folder: {_shorten_path(folder_path)}", True, (210, 210, 210))
         resolved_label = dbgfont.render(f"Resolved: {_shorten_path(resolved_folder)}", True, (210, 210, 210))
         file1_label = dbgfont.render(f"Transcript: {_shorten_path(transcript_file)}", True, (190, 220, 190) if transcript_file else (210, 210, 210))
-        screen.blit(folder_label, (70, 285))
-        screen.blit(resolved_label, (70, 318))
-        screen.blit(file1_label, (70, 351))
+        scan_label = dbgfont.render(f"Found: {len(eligible_dirs)} eligible folders", True, (190, 190, 190))
+        screen.blit(scan_label, (70, 330))
+        screen.blit(folder_label, (70, 360))
+        screen.blit(resolved_label, (70, 390))
+        screen.blit(file1_label, (70, 420))
 
-        hint = dbgfont.render("Pick a folder, auto-find transcript file, then click Start", True, (165, 165, 165))
+        hint = dbgfont.render("Use dropdown or manual choose, then click Start", True, (165, 165, 165))
         if folder_path and not transcript_file:
             warn = dbgfont.render("Could not find a transcript file in that folder tree.", True, (230, 120, 120))
             screen.blit(warn, (WIDTH // 2 - warn.get_width() // 2, 545))
+        if not eligible_dirs:
+            warn2 = dbgfont.render("Auto-scan found none. Use Choose Folder for manual selection.", True, (230, 170, 120))
+            screen.blit(warn2, (WIDTH // 2 - warn2.get_width() // 2, 520))
         screen.blit(hint, (WIDTH // 2 - hint.get_width() // 2, 515))
 
         pygame.display.flip()
@@ -724,7 +932,9 @@ def dispnotes(ms, dt_ms, x=50, y=520):
 
     _draw_note_strength_bars(ms, dt_ms, x=x, y=y - 102, width=700, height=102)
 
-    cycle = _find_repeating_cycle_for_ms(ms, analysis_note_runs)
+    source = analysis_note_strengths if analysis_note_strengths is not None else analysis_hpcp
+    frame_index = _analysis_index_from_ms(ms, len(source)) if source is not None else -1
+    cycle = _find_repeating_cycle_for_ms(frame_index, analysis_note_runs) if frame_index >= 0 else None
     if cycle is None:
         return
 
@@ -745,8 +955,14 @@ def dispbeats(ms, x=50, y=545):
     global last_beat_found_at
 
     beat_visible = False
-    if analysis_beats is not None and 0 <= ms < len(analysis_beats):
-        if analysis_beats[ms]:
+    if analysis_beat_times_ms is not None and len(analysis_beat_times_ms) > 0:
+        beat_idx = int(np.searchsorted(analysis_beat_times_ms, ms, side="right") - 1)
+        if beat_idx >= 0:
+            last_beat_found_at = int(analysis_beat_times_ms[beat_idx])
+            beat_visible = (ms - last_beat_found_at) < BEAT_VISUAL_MS
+    elif analysis_beats is not None:
+        beat_index = _analysis_index_from_ms(ms, len(analysis_beats))
+        if beat_index >= 0 and analysis_beats[beat_index]:
             last_beat_found_at = ms
         beat_visible = (ms - last_beat_found_at) < BEAT_VISUAL_MS
 
@@ -788,8 +1004,7 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-    current_ticks = pygame.time.get_ticks()
-    elapsed_ms = current_ticks - start_ticks
+    elapsed_ms = _get_elapsed_ms()
 
     screen.fill((30, 30, 30))
     time_text = dbgfont.render(f"Elapsed: {elapsed_ms} ms", True, (255, 255, 255))

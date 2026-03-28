@@ -4,6 +4,7 @@ import numpy as np
 
 # Load audio
 AUDIO_PATH = "ojitos_lindos/htdemucs/ojitos_lindos/drums.mp3"
+AUDIO_PATH = "ojitos_lindos/ojitos_lindos.mp3"
 y, sr = librosa.load(AUDIO_PATH)
 
 # Compute RMS energy

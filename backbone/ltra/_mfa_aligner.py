@@ -87,6 +87,8 @@ DICTIONARY_MODELS = {
 }
 #HERE = Path(__file__).resolve().parent
 def generate_aligned(head_folder, vocals="vocals.mp3", transcript="vocals_whisper_segments.json", acoustic="english_us_arpa", dictionary="english_us_arpa", allow_fuzzy=False, fuzzy_max_lookahead=6):
+    #DEPRECATED
+    print("Deprecation Notice. This function should not be used.")
     # Ensure path arithmetic works even when head_folder is a string.
     HERE = Path(head_folder)
     AUDIO_MP3 = HERE / vocals
@@ -250,13 +252,17 @@ def generate_aligned(head_folder, vocals="vocals.mp3", transcript="vocals_whispe
     OUT_JSON.write_text(json.dumps(segments, ensure_ascii=False, indent=2), encoding="utf-8")
     print("Wrote", OUT_JSON)
 def install_lang(model_general, dictionary: Optional[str] = None):
-    def run(cmd):
-        subprocess.run(cmd, check=True)
-    run(["mfa", "model", "download", "acoustic", model_general])
-    if dictionary:
-        run(["mfa", "model", "download", "dictionary", dictionary])
-    else:
-        run(["mfa", "model", "download", "dictionary", model_general])
+    acoustic_model = ACOUSTIC_MODELS.get(model_general, model_general)
+    dictionary_model = DICTIONARY_MODELS.get(dictionary, dictionary) if dictionary else DICTIONARY_MODELS.get(model_general, model_general)
+
+    def run_mfa(args):
+        subprocess.run(["conda", "run", "-n", "mfa", "mfa", *args], check=True)
+
+    if not Path(acoustic_model).exists():
+        run_mfa(["model", "download", "acoustic", acoustic_model])
+
+    if dictionary_model and not Path(dictionary_model).exists():
+        run_mfa(["model", "download", "dictionary", dictionary_model])
 
 def generate_aligned_v2(
     head_folder,
@@ -297,8 +303,8 @@ def generate_aligned_v2(
     OUT_JSON = HERE / "mfa_vocals_whisper_segments.json"
     OUT_PHONE_JSON = HERE / "mfa_vocals_phone_segments.json"
 
-    def run(cmd):
-        subprocess.run(cmd, check=True)
+    def run(cmd, capture=False):
+        return subprocess.run(cmd, check=True, text=True, capture_output=capture)
 
 
     # ---- deterministic clean slate ----
@@ -380,18 +386,34 @@ def generate_aligned_v2(
     # ---- 1) load whisper segments ----
     segments = json.loads(WHISPER_JSON.read_text(encoding="utf-8"))
 
-    whisper_words_raw = []
+    whisper_word_items = []
     for seg in segments:
         for w in seg.get("words", []):
-            whisper_words_raw.append(w.get("word", ""))
+            whisper_word_items.append({
+                "word": w.get("word", ""),
+                "start": w.get("start"),
+                "end": w.get("end"),
+            })
 
-    # Keep all original words for final mapping back to segment structure.
-    # Use a cleaned copy only for transcript generation sent to MFA.
-    transcript_words_raw = whisper_words_raw
-    if drop_weird_tokens:
-        transcript_words_raw = [w for w in transcript_words_raw if is_good_token(w)]
-    whisper_norm_words = [norm(w) for w in transcript_words_raw if norm(w)]
-    if not whisper_norm_words:
+    whisper_words_raw = [item["word"] for item in whisper_word_items]
+
+    # Build the exact token stream sent to MFA and keep a back-reference to original words.
+    transcript_entries = []
+    for idx, item in enumerate(whisper_word_items):
+        raw_word = item["word"]
+        if drop_weird_tokens and not is_good_token(raw_word):
+            continue
+        normalized = norm(raw_word)
+        if not normalized:
+            continue
+        transcript_entries.append({
+            "orig_index": idx,
+            "norm": normalized,
+            "start": item["start"],
+            "end": item["end"],
+        })
+
+    if not transcript_entries:
         raise RuntimeError("No usable words found in whisper JSON after cleaning.")
 
     # ---- 2) convert to wav (recommended by MFA docs) ----
@@ -416,13 +438,12 @@ def generate_aligned_v2(
                 vocab.add(line.split()[0].lower())
         oov_ok = (oov_token in vocab)
 
-    transcript_tokens = []
     if vocab is not None and oov_ok:
-        for w in whisper_norm_words:
-            transcript_tokens.append(w if w in vocab else oov_token)
+        for entry in transcript_entries:
+            entry["token"] = entry["norm"] if entry["norm"] in vocab else oov_token
     else:
-        # fall back to cleaned normalized tokens (still big improvement vs raw whisper tokens)
-        transcript_tokens = whisper_norm_words
+        for entry in transcript_entries:
+            entry["token"] = entry["norm"]
 
     # ---- 4) Chunk into multiple utterances to prevent catastrophic drift ----
     # MFA aligns per file; easiest chunking is to create multiple (wav,txt) pairs
@@ -433,58 +454,55 @@ def generate_aligned_v2(
     chunks = []
     cur = []
     cur_chars = 0
-    for tok in transcript_tokens:
+    for entry in transcript_entries:
+        tok = entry["token"]
         add = len(tok) + (1 if cur else 0)
         if cur and (cur_chars + add) > max_chars_per_chunk:
             chunks.append(cur)
-            cur = [tok]
+            cur = [entry]
             cur_chars = len(tok)
         else:
-            cur.append(tok)
+            cur.append(entry)
             cur_chars += add
     if cur:
         chunks.append(cur)
 
-    # If it's just one chunk, behave like v1 but with cleaned transcript
-    # Otherwise, create multi-utterance corpus and align each chunk audio slice.
-    # We slice audio evenly by duration; this is not perfect but prevents total failure.
-    # If you want, we can instead slice using Whisper segment times (even better).
-    # (No language correction is done here; you control models externally.)
-    #
-    # Get wav duration via ffprobe
-    def wav_duration_seconds(path: Path) -> float:
-        out = subprocess.check_output([
-            "ffprobe", "-v", "error",
-            "-show_entries", "format=duration",
-            "-of", "default=noprint_wrappers=1:nokey=1",
-            str(path)
-        ])
-        return float(out.decode("utf-8").strip())
+    def has_valid_time(entry):
+        try:
+            start = float(entry["start"])
+            end = float(entry["end"])
+            return end > start
+        except (TypeError, ValueError):
+            return False
 
-    total_dur = wav_duration_seconds(WAV)
+    can_time_slice = all(has_valid_time(entry) for entry in transcript_entries)
+    if not can_time_slice and len(chunks) > 1:
+        print("Warning: missing/invalid Whisper word timestamps; falling back to single-chunk MFA alignment.")
+        chunks = [transcript_entries]
+
     n_chunks = len(chunks)
 
     # Build corpus with numbered files
     # e.g. vocals_000.wav + vocals_000.txt ...
     corpus_pairs = []
-    for i, toks in enumerate(chunks):
+    for i, chunk_entries in enumerate(chunks):
         stem = f"vocals_{i:03d}"
         wav_i = CORPUS / f"{stem}.wav"
         txt_i = CORPUS / f"{stem}.txt"
-        txt_i.write_text(" ".join(toks) + "\n", encoding="utf-8")
+        txt_i.write_text(" ".join(entry["token"] for entry in chunk_entries) + "\n", encoding="utf-8")
 
         if n_chunks == 1:
             # reuse original wav (no slicing)
             if not wav_i.exists():
                 # hardlink/copy is fine; copy avoids FS edge cases
                 shutil.copy2(WAV, wav_i)
+            chunk_offset = 0.0
         else:
-            # slice evenly across duration
-            start = (total_dur * i) / n_chunks
-            end = (total_dur * (i + 1)) / n_chunks
-            # add a tiny gap trimming to reduce boundary bleed
-            start2 = max(0.0, start + (chunk_silence_gap_s if i > 0 else 0.0))
-            end2 = max(start2, end - (chunk_silence_gap_s if i < n_chunks - 1 else 0.0))
+            # Slice using the same word-time range this chunk text came from.
+            start = float(chunk_entries[0]["start"])
+            end = float(chunk_entries[-1]["end"])
+            start2 = max(0.0, start - (chunk_silence_gap_s if i > 0 else 0.0))
+            end2 = max(start2 + 0.01, end + (chunk_silence_gap_s if i < n_chunks - 1 else 0.0))
             run([
                 "ffmpeg", "-y",
                 "-i", str(WAV),
@@ -493,8 +511,9 @@ def generate_aligned_v2(
                 "-ac", "1", "-ar", "16000", "-sample_fmt", "s16",
                 str(wav_i)
             ])
+            chunk_offset = start2
 
-        corpus_pairs.append((wav_i, txt_i))
+        corpus_pairs.append((wav_i, txt_i, chunk_offset))
 
     # ---- 5) Run MFA align ----
     # Accept either friendly aliases (e.g. "english") or explicit MFA model IDs.
@@ -516,16 +535,45 @@ def generate_aligned_v2(
     # determinism / stability
     if num_jobs is not None:
         cmd += ["--num_jobs", str(int(num_jobs))]
+
+    def looks_like_missing_model(exc: subprocess.CalledProcessError) -> bool:
+        stderr = (exc.stderr or "").lower()
+        stdout = (exc.stdout or "").lower()
+        combined = f"{stderr}\n{stdout}"
+        markers = [
+            "could not find",
+            "not found",
+            "does not exist",
+            "missing model",
+            "acoustic model",
+            "dictionary model",
+        ]
+        return any(marker in combined for marker in markers)
+
+    def tail(text: str, n: int = 1200) -> str:
+        if not text:
+            return ""
+        return text[-n:]
+
     try:
-        run(cmd)
-    except:
-        acoustics = subprocess.run(["mfa", "model", "list", "acoustic"], capture_output=True, text=True)
-        acoustics.stdout = acoustics.stdout.replace("\n", "")
-        dictchk = subprocess.run(["mfa", "model", "list", "dictionary"], capture_output=True, text=True)
-        dictchk.stdout = dictchk.stdout.replace("\n", "") #TODO: Finish
+        run(cmd, capture=True)
+    except subprocess.CalledProcessError as exc:
+        if not looks_like_missing_model(exc):
+            raise RuntimeError(
+                "MFA align failed (not a missing-model error).\n"
+                f"Command: {' '.join(cmd)}\n"
+                f"stderr (tail):\n{tail(exc.stderr)}"
+            ) from exc
 
         install_lang(acoustic, dictionary)
-        run(cmd)
+        try:
+            run(cmd, capture=True)
+        except subprocess.CalledProcessError as exc2:
+            raise RuntimeError(
+                "MFA align failed after attempting model download.\n"
+                f"Command: {' '.join(cmd)}\n"
+                f"stderr (tail):\n{tail(exc2.stderr)}"
+            ) from exc2
         
         
 
@@ -533,9 +581,8 @@ def generate_aligned_v2(
     # MFA may occasionally export only a subset of chunk TextGrids; skip missing chunks.
     all_intervals = []
     all_phone_intervals = []
-    offset = 0.0
     missing_chunks = []
-    for i, (wav_i, _txt_i) in enumerate(corpus_pairs):
+    for i, (wav_i, _txt_i, chunk_offset) in enumerate(corpus_pairs):
         tg_path = OUTDIR / f"{wav_i.stem}.TextGrid"
         if not tg_path.exists():
             # Some MFA versions output in subdirs; try a glob fallback
@@ -579,16 +626,11 @@ def generate_aligned_v2(
         phone_intervals = [(float(s), float(e), lab.strip()) for (s, e, lab) in phone_tier.entryList]
         phone_intervals = [
             (s, e, lab) for (s, e, lab) in phone_intervals
-            if lab and lab.lower() not in {"sp", "sil", "spn"}
+            if lab and lab.lower() not in {"sp", "sil"}
         ]
 
-        # Offset by chunk start time (only meaningful when we sliced)
-        if n_chunks > 1:
-            start = (total_dur * i) / n_chunks
-            start2 = max(0.0, start + (chunk_silence_gap_s if i > 0 else 0.0))
-            offset = start2
-        else:
-            offset = 0.0
+        # Offset by the actual slice start time used for this chunk.
+        offset = chunk_offset
 
         for s, e, lab in intervals:
             all_intervals.append((s + offset, e + offset, lab))
@@ -604,31 +646,33 @@ def generate_aligned_v2(
         raise RuntimeError("No MFA word intervals were parsed from TextGrid output.")
 
     # ---- 7) map original whisper words to MFA words ----
-    whisper_norm = [norm(w) for w in whisper_words_raw]
+    expected_norm = [entry["token"] for entry in transcript_entries]
     mfa_norm = [norm(lab) for _, _, lab in all_intervals]
 
-    # If we replaced OOVs with oov_token, we should apply the same replacement in whisper_norm
-    if vocab is not None and oov_ok:
-        whisper_norm = [(w if w in vocab else oov_token) for w in whisper_norm]
-
-    if whisper_norm != mfa_norm:
+    if expected_norm != mfa_norm:
         if not allow_fuzzy:
-            n = min(len(whisper_norm), len(mfa_norm))
-            first_bad = next((i for i in range(n) if whisper_norm[i] != mfa_norm[i]), None)
+            n = min(len(expected_norm), len(mfa_norm))
+            first_bad = next((i for i in range(n) if expected_norm[i] != mfa_norm[i]), None)
             raise RuntimeError(
                 "MFA word sequence != Whisper word sequence.\n"
-                f"Whisper words: {len(whisper_norm)} | MFA words: {len(mfa_norm)}\n"
+                f"Whisper words sent to MFA: {len(expected_norm)} | MFA words: {len(mfa_norm)}\n"
                 f"First mismatch index: {first_bad}\n"
                 "Fix: re-run with allow_fuzzy=True (recommended for songs)."
             )
-        mapping = build_fuzzy_mapping(whisper_norm, mfa_norm, fuzzy_max_lookahead)
-        if all(m is None for m in mapping):
-            raise RuntimeError(
-                "Fuzzy alignment failed to match any words. "
-                "Try smaller max_chars_per_chunk, or provide a dictionary path so OOV replacement can work."
-            )
+        filtered_mapping = build_fuzzy_mapping(expected_norm, mfa_norm, fuzzy_max_lookahead)
     else:
-        mapping = list(range(len(whisper_norm)))
+        filtered_mapping = list(range(len(expected_norm)))
+
+    if all(m is None for m in filtered_mapping):
+        raise RuntimeError(
+            "Fuzzy alignment failed to match any words. "
+            "Try smaller max_chars_per_chunk, or provide a dictionary path so OOV replacement can work."
+        )
+
+    # Expand filtered-token mapping back to full Whisper word index space.
+    mapping = [None] * len(whisper_words_raw)
+    for i, entry in enumerate(transcript_entries):
+        mapping[entry["orig_index"]] = filtered_mapping[i]
 
     # Build phone groups aligned to each MFA word interval so UI can highlight sub-word parts.
     phones_by_mfa_word_index = {}

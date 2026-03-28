@@ -52,6 +52,8 @@ BEAT_VISUAL_MS = 100
 analysis_hpcp = None
 analysis_beats = None
 analysis_bpm = None
+analysis_beat_times_ms = None
+analysis_frame_ms = 1.0
 last_beat_found_at = -1000
 
 # --- NEW: store broad segments instead of only flat words ---
@@ -169,6 +171,8 @@ def _load_segments_from_file(file_path):
 
 
 def _start_audio_from_transcript_file(file_path):
+    global start_ticks
+
     parent = os.path.dirname(file_path)
     parent_name = os.path.basename(parent)
     audio_path = os.path.join(parent, f"{parent_name}.mp3")
@@ -178,9 +182,32 @@ def _start_audio_from_transcript_file(file_path):
     try:
         if not mixer.get_init():
             mixer.init()
-        mixer.Sound(audio_path).play()
+        mixer.music.stop()
+        mixer.music.load(audio_path)
+        mixer.music.play()
+        start_ticks = pygame.time.get_ticks()
     except pygame.error:
         pass
+
+
+def _analysis_index_from_ms(ms, series_len):
+    if series_len <= 0:
+        return -1
+    if ms < 0:
+        return -1
+    frame_ms = max(1e-6, float(analysis_frame_ms))
+    idx = int(round(float(ms) / frame_ms))
+    return max(0, min(series_len - 1, idx))
+
+
+def _get_elapsed_ms():
+    try:
+        pos = mixer.music.get_pos()
+    except pygame.error:
+        pos = -1
+    if pos is not None and pos >= 0:
+        return int(pos)
+    return max(0, pygame.time.get_ticks() - start_ticks)
 
 
 def _pick_folder(dialog_title):
@@ -279,11 +306,13 @@ def _find_analysis_file(folder_path):
 
 
 def _load_analysis_data(folder_path):
-    global analysis_hpcp, analysis_beats, analysis_bpm
+    global analysis_hpcp, analysis_beats, analysis_bpm, analysis_beat_times_ms, analysis_frame_ms
 
     analysis_hpcp = None
     analysis_beats = None
     analysis_bpm = None
+    analysis_beat_times_ms = None
+    analysis_frame_ms = 1.0
 
     analysis_path = _find_analysis_file(folder_path)
     if not analysis_path:
@@ -293,6 +322,18 @@ def _load_analysis_data(folder_path):
         data = np.load(analysis_path)
         analysis_hpcp = data["hpcp"] if "hpcp" in data else None
         analysis_beats = data["beats"] if "beats" in data else None
+        beat_times = data["beat_times"] if "beat_times" in data else None
+        if beat_times is not None and len(beat_times) > 0:
+            analysis_beat_times_ms = np.rint(np.asarray(beat_times, dtype=np.float64) * 1000.0).astype(np.int64)
+
+        sample_rate_arr = data["sample_rate"] if "sample_rate" in data else None
+        hop_size_arr = data["hop_size"] if "hop_size" in data else None
+        if sample_rate_arr is not None and hop_size_arr is not None and len(sample_rate_arr) > 0 and len(hop_size_arr) > 0:
+            sample_rate = float(sample_rate_arr[0])
+            hop_size = float(hop_size_arr[0])
+            if sample_rate > 0:
+                analysis_frame_ms = (hop_size * 1000.0) / sample_rate
+
         bpm_arr = data["bpm"] if "bpm" in data else None
         if bpm_arr is not None and len(bpm_arr) > 0:
             analysis_bpm = float(bpm_arr[0])
@@ -300,6 +341,8 @@ def _load_analysis_data(folder_path):
         analysis_hpcp = None
         analysis_beats = None
         analysis_bpm = None
+        analysis_beat_times_ms = None
+        analysis_frame_ms = 1.0
 
 
 def choose_generated_folder():
@@ -553,12 +596,18 @@ def update_segment_view(ms, seg_list, y, state_name):
 
 
 def dispnotes(ms, x=50, y=520):
-    if analysis_hpcp is None or ms < 0 or ms >= len(analysis_hpcp):
+    if analysis_hpcp is None:
         label = dbgfont.render("Notes: [n/a]", True, (190, 190, 190))
         screen.blit(label, (x, y))
         return
 
-    frame = analysis_hpcp[ms]
+    frame_index = _analysis_index_from_ms(ms, len(analysis_hpcp))
+    if frame_index < 0:
+        label = dbgfont.render("Notes: [n/a]", True, (190, 190, 190))
+        screen.blit(label, (x, y))
+        return
+
+    frame = analysis_hpcp[frame_index]
     active_notes = [pitch_classes[i] for i, value in enumerate(frame) if value >= NOTE_THRESHOLD]
     note_text = ", ".join(active_notes) if active_notes else "-"
     label = dbgfont.render(f"Notes: [{note_text}]", True, (220, 220, 255))
@@ -569,8 +618,14 @@ def dispbeats(ms, x=50, y=545):
     global last_beat_found_at
 
     beat_visible = False
-    if analysis_beats is not None and 0 <= ms < len(analysis_beats):
-        if analysis_beats[ms]:
+    if analysis_beat_times_ms is not None and len(analysis_beat_times_ms) > 0:
+        beat_idx = int(np.searchsorted(analysis_beat_times_ms, ms, side="right") - 1)
+        if beat_idx >= 0:
+            last_beat_found_at = int(analysis_beat_times_ms[beat_idx])
+            beat_visible = (ms - last_beat_found_at) < BEAT_VISUAL_MS
+    elif analysis_beats is not None:
+        beat_index = _analysis_index_from_ms(ms, len(analysis_beats))
+        if beat_index >= 0 and analysis_beats[beat_index]:
             last_beat_found_at = ms
         beat_visible = (ms - last_beat_found_at) < BEAT_VISUAL_MS
 
@@ -626,8 +681,7 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-    current_ticks = pygame.time.get_ticks()
-    elapsed_ms = current_ticks - start_ticks
+    elapsed_ms = _get_elapsed_ms()
 
     screen.fill((30, 30, 30))
     time_text = dbgfont.render(f"Elapsed: {elapsed_ms} ms", True, (255, 255, 255))

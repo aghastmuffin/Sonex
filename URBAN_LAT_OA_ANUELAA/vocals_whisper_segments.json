@@ -1,10 +1,53 @@
 [
   {
     "id": 0,
-    "text": "bebé, qué bellas te ves ¿cómo te llamas y de dónde eres?",
+    "text": "What's your name and where are you from?",
     "start": 10.820000000000002,
     "end": 14.92,
     "words": [
+      {
+        "word": "What's",
+        "start": 10.820000000000002,
+        "end": 11.38
+      },
+      {
+        "word": " your",
+        "start": 11.6,
+        "end": 12.12
+      },
+      {
+        "word": " name",
+        "start": 12.12,
+        "end": 12.74
+      },
+      {
+        "word": " and",
+        "start": 12.74,
+        "end": 13.18
+      },
+      {
+        "word": " where",
+        "start": 13.18,
+        "end": 13.56
+      },
+      {
+        "word": " are",
+        "start": 13.56,
+        "end": 14.04
+      },
+      {
+        "word": " you",
+        "start": 14.38,
+        "end": 14.66
+      },
+      {
+        "word": " from?",
+        "start": 14.66,
+        "end": 14.92
+      }
+    ],
+    "source_text": "bebé, qué bellas te ves ¿cómo te llamas y de dónde eres?",
+    "source_words": [
       {
         "word": " Bebé,",
         "start": 10.820000000000002,
@@ -69,10 +112,83 @@
   },
   {
     "id": 1,
-    "text": "tienes un acento que no sé muy bien también quiero saber",
+    "text": "have an accent that I don't know so well I also want to know",
     "start": 15.08,
     "end": 19.84,
     "words": [
+      {
+        "word": "have",
+        "start": 15.08,
+        "end": 15.5
+      },
+      {
+        "word": " an",
+        "start": 15.5,
+        "end": 15.78
+      },
+      {
+        "word": " accent",
+        "start": 15.78,
+        "end": 16.24
+      },
+      {
+        "word": " that",
+        "start": 16.24,
+        "end": 16.5
+      },
+      {
+        "word": " I",
+        "start": 16.5,
+        "end": 16.72
+      },
+      {
+        "word": " don't",
+        "start": 16.72,
+        "end": 16.86
+      },
+      {
+        "word": " know",
+        "start": 16.86,
+        "end": 17.24
+      },
+      {
+        "word": " so",
+        "start": 17.24,
+        "end": 17.48
+      },
+      {
+        "word": " well",
+        "start": 17.48,
+        "end": 17.96
+      },
+      {
+        "word": " I",
+        "start": 17.96,
+        "end": 18.04888888888889
+      },
+      {
+        "word": " also",
+        "start": 18.04888888888889,
+        "end": 18.404444444444444
+      },
+      {
+        "word": " want",
+        "start": 18.404444444444444,
+        "end": 18.76
+      },
+      {
+        "word": " to",
+        "start": 18.76,
+        "end": 19.16
+      },
+      {
+        "word": " know",
+        "start": 19.16,
+        "end": 19.84
+      }
+    ],
+    "source_text": "tienes un acento que no sé muy bien también quiero saber",
+    "source_words": [
       {
         "word": " Tienes",
         "start": 15.08,
@@ -132,10 +248,93 @@
   },
   {
     "id": 2,
-    "text": "si eres de lejos y te vuelvo a ver algo con ese flow por aquí no se ve",
+    "text": "If you're far and I'll see you again with that flow around here you can't see",
     "start": 19.84,
     "end": 24.52,
     "words": [
+      {
+        "word": "If",
+        "start": 19.84,
+        "end": 20.16
+      },
+      {
+        "word": " you're",
+        "start": 20.16,
+        "end": 20.4
+      },
+      {
+        "word": " far",
+        "start": 20.4,
+        "end": 20.7
+      },
+      {
+        "word": " and",
+        "start": 20.7,
+        "end": 21.0
+      },
+      {
+        "word": " I'll",
+        "start": 21.0,
+        "end": 21.18
+      },
+      {
+        "word": " see",
+        "start": 21.18,
+        "end": 21.42
+      },
+      {
+        "word": " you",
+        "start": 21.42,
+        "end": 21.84
+      },
+      {
+        "word": " again",
+        "start": 22.06,
+        "end": 22.42
+      },
+      {
+        "word": " with",
+        "start": 22.42,
+        "end": 22.7
+      },
+      {
+        "word": " that",
+        "start": 22.7,
+        "end": 23.04
+      },
+      {
+        "word": " flow",
+        "start": 23.04,
+        "end": 23.2
+      },
+      {
+        "word": " around",
+        "start": 23.2,
+        "end": 23.54
+      },
+      {
+        "word": " here",
+        "start": 23.54,
+        "end": 23.76
+      },
+      {
+        "word": " you",
+        "start": 23.76,
+        "end": 24.02
+      },
+      {
+        "word": " can't",
+        "start": 24.02,
+        "end": 24.32
+      },
+      {
+        "word": " see",
+        "start": 24.32,
+        "end": 24.52
+      }
+    ],
+    "source_text": "si eres de lejos y te vuelvo a ver algo con ese flow por aquí no se ve",
+    "source_words": [
       {
         "word": " Si",
         "start": 19.84,
@@ -230,10 +429,48 @@
   },
   {
     "id": 3,
-    "text": "baby, yo le llevo a donde quiera que esté, eh, eh",
+    "text": "Baby, I'll get him anywhere, uh, hey.",
     "start": 24.52,
     "end": 28.68,
     "words": [
+      {
+        "word": "Baby,",
+        "start": 24.52,
+        "end": 24.92
+      },
+      {
+        "word": " I'll",
+        "start": 24.96,
+        "end": 25.22
+      },
+      {
+        "word": " get",
+        "start": 25.42,
+        "end": 25.8
+      },
+      {
+        "word": " him",
+        "start": 26.12,
+        "end": 26.4
+      },
+      {
+        "word": " anywhere,",
+        "start": 26.4,
+        "end": 26.76
+      },
+      {
+        "word": " uh,",
+        "start": 26.76,
+        "end": 27.44
+      },
+      {
+        "word": " hey.",
+        "start": 28.2,
+        "end": 28.68
+      }
+    ],
+    "source_text": "baby, yo le llevo a donde quiera que esté, eh, eh",
+    "source_words": [
       {
         "word": " Baby,",
         "start": 24.52,
@@ -293,10 +530,33 @@
   },
   {
     "id": 4,
-    "text": "oh, oh, diablo mami oh, eh, naciste pa' mí",
+    "text": "Oh, oh, hell, Mommy.",
     "start": 28.68,
     "end": 33.92,
     "words": [
+      {
+        "word": "Oh,",
+        "start": 28.68,
+        "end": 29.62
+      },
+      {
+        "word": " oh,",
+        "start": 30.24,
+        "end": 30.86
+      },
+      {
+        "word": " hell,",
+        "start": 30.86,
+        "end": 31.48
+      },
+      {
+        "word": " Mommy.",
+        "start": 31.48,
+        "end": 32.18
+      }
+    ],
+    "source_text": "oh, oh, diablo mami oh, eh, naciste pa' mí",
+    "source_words": [
       {
         "word": " Oh,",
         "start": 28.68,
@@ -346,10 +606,58 @@
   },
   {
     "id": 5,
-    "text": "oh, eh, bebé, te noté que no eres de aquí",
+    "text": "Oh, hey, baby, I noticed you're not from here.",
     "start": 33.92,
     "end": 37.96,
     "words": [
+      {
+        "word": "Oh,",
+        "start": 33.92,
+        "end": 34.48
+      },
+      {
+        "word": " hey,",
+        "start": 34.48,
+        "end": 35.34
+      },
+      {
+        "word": " baby,",
+        "start": 35.56,
+        "end": 35.84
+      },
+      {
+        "word": " I",
+        "start": 36.02,
+        "end": 36.54
+      },
+      {
+        "word": " noticed",
+        "start": 36.54,
+        "end": 36.78
+      },
+      {
+        "word": " you're",
+        "start": 36.78,
+        "end": 36.98
+      },
+      {
+        "word": " not",
+        "start": 36.98,
+        "end": 37.18
+      },
+      {
+        "word": " from",
+        "start": 37.18,
+        "end": 37.5
+      },
+      {
+        "word": " here.",
+        "start": 37.5,
+        "end": 37.96
+      }
+    ],
+    "source_text": "oh, eh, bebé, te noté que no eres de aquí",
+    "source_words": [
       {
         "word": " Oh,",
         "start": 33.92,
@@ -404,10 +712,78 @@
   },
   {
     "id": 6,
-    "text": "oh, oh, oh, ah, diablo mami oh, eh, naciste pa' mí",
+    "text": "Oh, oh, oh, ah, devil Mummy. Oh, hey, you were born to me.",
     "start": 37.96,
     "end": 43.6,
     "words": [
+      {
+        "word": "Oh,",
+        "start": 37.96,
+        "end": 38.3
+      },
+      {
+        "word": " oh,",
+        "start": 38.3,
+        "end": 38.64
+      },
+      {
+        "word": " oh,",
+        "start": 38.7,
+        "end": 39.2
+      },
+      {
+        "word": " ah,",
+        "start": 39.4,
+        "end": 39.92
+      },
+      {
+        "word": " devil",
+        "start": 40.1,
+        "end": 40.52
+      },
+      {
+        "word": " Mummy.",
+        "start": 40.52,
+        "end": 41.00571428571429
+      },
+      {
+        "word": " Oh,",
+        "start": 41.00571428571429,
+        "end": 41.2
+      },
+      {
+        "word": " hey,",
+        "start": 41.2,
+        "end": 41.8
+      },
+      {
+        "word": " you",
+        "start": 41.8,
+        "end": 42.06
+      },
+      {
+        "word": " were",
+        "start": 42.26,
+        "end": 42.57
+      },
+      {
+        "word": " born",
+        "start": 42.57,
+        "end": 42.88
+      },
+      {
+        "word": " to",
+        "start": 42.88,
+        "end": 43.38
+      },
+      {
+        "word": " me.",
+        "start": 43.48,
+        "end": 43.6
+      }
+    ],
+    "source_text": "oh, oh, oh, ah, diablo mami oh, eh, naciste pa' mí",
+    "source_words": [
       {
         "word": " Oh,",
         "start": 37.96,
@@ -467,10 +843,68 @@
   },
   {
     "id": 7,
-    "text": "oh, eh, si esto fuera un draft, tú fueras first pick",
+    "text": "Oh, uh, if this was a draft, you were first pick.",
     "start": 43.6,
     "end": 47.48,
     "words": [
+      {
+        "word": "Oh,",
+        "start": 43.6,
+        "end": 44.22
+      },
+      {
+        "word": " uh,",
+        "start": 44.22,
+        "end": 44.88
+      },
+      {
+        "word": " if",
+        "start": 45.1,
+        "end": 45.16
+      },
+      {
+        "word": " this",
+        "start": 45.16,
+        "end": 45.36
+      },
+      {
+        "word": " was",
+        "start": 45.36,
+        "end": 45.6
+      },
+      {
+        "word": " a",
+        "start": 45.6,
+        "end": 45.92
+      },
+      {
+        "word": " draft,",
+        "start": 45.92,
+        "end": 46.22
+      },
+      {
+        "word": " you",
+        "start": 46.3,
+        "end": 46.48
+      },
+      {
+        "word": " were",
+        "start": 46.48,
+        "end": 46.74
+      },
+      {
+        "word": " first",
+        "start": 46.74,
+        "end": 47.08
+      },
+      {
+        "word": " pick.",
+        "start": 47.08,
+        "end": 47.48
+      }
+    ],
+    "source_text": "oh, eh, si esto fuera un draft, tú fueras first pick",
+    "source_words": [
       {
         "word": " Oh,",
         "start": 43.6,
@@ -530,10 +964,68 @@
   },
   {
     "id": 8,
-    "text": "yo no sé si encontrarte fue cuestión de suerte",
+    "text": "I don't know if finding you was a matter of luck.",
     "start": 47.48,
     "end": 49.96,
     "words": [
+      {
+        "word": "I",
+        "start": 47.48,
+        "end": 47.76
+      },
+      {
+        "word": " don't",
+        "start": 47.76,
+        "end": 47.92
+      },
+      {
+        "word": " know",
+        "start": 47.92,
+        "end": 48.02
+      },
+      {
+        "word": " if",
+        "start": 48.02,
+        "end": 48.2
+      },
+      {
+        "word": " finding",
+        "start": 48.2,
+        "end": 48.564
+      },
+      {
+        "word": " you",
+        "start": 48.564,
+        "end": 48.72
+      },
+      {
+        "word": " was",
+        "start": 48.72,
+        "end": 48.92
+      },
+      {
+        "word": " a",
+        "start": 48.92,
+        "end": 49.2
+      },
+      {
+        "word": " matter",
+        "start": 49.2,
+        "end": 49.5
+      },
+      {
+        "word": " of",
+        "start": 49.5,
+        "end": 49.653333333333336
+      },
+      {
+        "word": " luck.",
+        "start": 49.653333333333336,
+        "end": 49.96
+      }
+    ],
+    "source_text": "yo no sé si encontrarte fue cuestión de suerte",
+    "source_words": [
       {
         "word": " Yo",
         "start": 47.48,
@@ -583,10 +1075,123 @@
   },
   {
     "id": 9,
-    "text": "adivina, tu acento viene en mi punto fuerte pero sáte de donde seas, mami, quiero tenerte",
+    "text": "Guess what, your accent comes at my strong point but get out of wherever you are, Mommy, I want to have you.",
     "start": 49.96,
     "end": 54.58,
     "words": [
+      {
+        "word": "Guess",
+        "start": 49.96,
+        "end": 50.167692307692306
+      },
+      {
+        "word": " what,",
+        "start": 50.167692307692306,
+        "end": 50.33384615384615
+      },
+      {
+        "word": " your",
+        "start": 50.33384615384615,
+        "end": 50.5
+      },
+      {
+        "word": " accent",
+        "start": 50.62,
+        "end": 50.7
+      },
+      {
+        "word": " comes",
+        "start": 50.7,
+        "end": 51.02
+      },
+      {
+        "word": " at",
+        "start": 51.02,
+        "end": 51.22
+      },
+      {
+        "word": " my",
+        "start": 51.22,
+        "end": 51.36
+      },
+      {
+        "word": " strong",
+        "start": 51.36,
+        "end": 51.46
+      },
+      {
+        "word": " point",
+        "start": 51.46,
+        "end": 51.8
+      },
+      {
+        "word": " but",
+        "start": 51.8,
+        "end": 51.92666666666666
+      },
+      {
+        "word": " get",
+        "start": 51.92666666666666,
+        "end": 52.05333333333333
+      },
+      {
+        "word": " out",
+        "start": 52.05333333333333,
+        "end": 52.18
+      },
+      {
+        "word": " of",
+        "start": 52.18,
+        "end": 52.52
+      },
+      {
+        "word": " wherever",
+        "start": 52.52,
+        "end": 52.82
+      },
+      {
+        "word": " you",
+        "start": 52.82,
+        "end": 52.94
+      },
+      {
+        "word": " are,",
+        "start": 52.94,
+        "end": 53.12
+      },
+      {
+        "word": " Mommy,",
+        "start": 53.12,
+        "end": 53.44
+      },
+      {
+        "word": " I",
+        "start": 53.52,
+        "end": 53.7
+      },
+      {
+        "word": " want",
+        "start": 53.72,
+        "end": 54.02
+      },
+      {
+        "word": " to",
+        "start": 54.02,
+        "end": 54.144444444444446
+      },
+      {
+        "word": " have",
+        "start": 54.144444444444446,
+        "end": 54.39333333333333
+      },
+      {
+        "word": " you.",
+        "start": 54.39333333333333,
+        "end": 54.58
+      }
+    ],
+    "source_text": "adivina, tu acento viene en mi punto fuerte pero sáte de donde seas, mami, quiero tenerte",
+    "source_words": [
       {
         "word": " Adivina,",
         "start": 49.96,
@@ -671,10 +1276,33 @@
   },
   {
     "id": 10,
-    "text": "en la cama del hotel gritando real a tala real es que no es cuando bailas",
+    "text": "That's how you dance.",
     "start": 54.58,
     "end": 58.66,
     "words": [
+      {
+        "word": "That's",
+        "start": 55.5,
+        "end": 56.0
+      },
+      {
+        "word": " how",
+        "start": 56.48,
+        "end": 56.84
+      },
+      {
+        "word": " you",
+        "start": 56.84,
+        "end": 57.24
+      },
+      {
+        "word": " dance.",
+        "start": 57.98,
+        "end": 58.66
+      }
+    ],
+    "source_text": "en la cama del hotel gritando real a tala real es que no es cuando bailas",
+    "source_words": [
       {
         "word": " En",
         "start": 54.58,
@@ -759,10 +1387,108 @@
   },
   {
     "id": 11,
-    "text": "yo sé que de todo me distraiga baby, solo avisa cuando salga, mami, para hacer",
+    "text": "I know I get distracted from everything, baby, just let me know when I get out, Mommy, to do",
     "start": 58.66,
     "end": 63.12,
     "words": [
+      {
+        "word": "I",
+        "start": 58.66,
+        "end": 58.74
+      },
+      {
+        "word": " know",
+        "start": 58.74,
+        "end": 59.06
+      },
+      {
+        "word": " I",
+        "start": 59.06,
+        "end": 59.24
+      },
+      {
+        "word": " get",
+        "start": 59.24,
+        "end": 59.42
+      },
+      {
+        "word": " distracted",
+        "start": 59.42,
+        "end": 59.68
+      },
+      {
+        "word": " from",
+        "start": 59.68,
+        "end": 59.82222222222222
+      },
+      {
+        "word": " everything,",
+        "start": 59.82222222222222,
+        "end": 60.17777777777778
+      },
+      {
+        "word": " baby,",
+        "start": 60.17777777777778,
+        "end": 60.32
+      },
+      {
+        "word": " just",
+        "start": 60.32,
+        "end": 60.64
+      },
+      {
+        "word": " let",
+        "start": 60.82,
+        "end": 60.94
+      },
+      {
+        "word": " me",
+        "start": 60.94,
+        "end": 61.2
+      },
+      {
+        "word": " know",
+        "start": 61.2,
+        "end": 61.5
+      },
+      {
+        "word": " when",
+        "start": 61.5,
+        "end": 61.84
+      },
+      {
+        "word": " I",
+        "start": 61.84,
+        "end": 61.925000000000004
+      },
+      {
+        "word": " get",
+        "start": 61.925000000000004,
+        "end": 62.18
+      },
+      {
+        "word": " out,",
+        "start": 62.36,
+        "end": 62.42
+      },
+      {
+        "word": " Mommy,",
+        "start": 62.44,
+        "end": 62.76
+      },
+      {
+        "word": " to",
+        "start": 62.76,
+        "end": 62.94
+      },
+      {
+        "word": " do",
+        "start": 62.94,
+        "end": 63.12
+      }
+    ],
+    "source_text": "yo sé que de todo me distraiga baby, solo avisa cuando salga, mami, para hacer",
+    "source_words": [
       {
         "word": " Yo",
         "start": 58.66,
@@ -842,10 +1568,93 @@
   },
   {
     "id": 12,
-    "text": "de cosas que yo sé que te gustan mientras esperamos que el sol caiga",
+    "text": "of things that I know you care about while we wait for the sun to fall",
     "start": 63.12,
     "end": 66.62,
     "words": [
+      {
+        "word": "of",
+        "start": 63.12,
+        "end": 63.42
+      },
+      {
+        "word": " things",
+        "start": 63.42,
+        "end": 63.6
+      },
+      {
+        "word": " that",
+        "start": 63.6,
+        "end": 63.84
+      },
+      {
+        "word": " I",
+        "start": 63.84,
+        "end": 64.06
+      },
+      {
+        "word": " know",
+        "start": 64.06,
+        "end": 64.22
+      },
+      {
+        "word": " you",
+        "start": 64.22,
+        "end": 64.5
+      },
+      {
+        "word": " care",
+        "start": 64.5,
+        "end": 64.76
+      },
+      {
+        "word": " about",
+        "start": 64.76,
+        "end": 65.02
+      },
+      {
+        "word": " while",
+        "start": 65.02,
+        "end": 65.22
+      },
+      {
+        "word": " we",
+        "start": 65.22,
+        "end": 65.36222222222221
+      },
+      {
+        "word": " wait",
+        "start": 65.36222222222221,
+        "end": 65.64666666666666
+      },
+      {
+        "word": " for",
+        "start": 65.64666666666666,
+        "end": 65.86
+      },
+      {
+        "word": " the",
+        "start": 65.86,
+        "end": 66.0
+      },
+      {
+        "word": " sun",
+        "start": 66.0,
+        "end": 66.18
+      },
+      {
+        "word": " to",
+        "start": 66.18,
+        "end": 66.32666666666667
+      },
+      {
+        "word": " fall",
+        "start": 66.32666666666667,
+        "end": 66.62
+      }
+    ],
+    "source_text": "de cosas que yo sé que te gustan mientras esperamos que el sol caiga",
+    "source_words": [
       {
         "word": " De",
         "start": 63.12,
@@ -920,10 +1729,58 @@
   },
   {
     "id": 13,
-    "text": "ese corpito es el kini como tini y ella lo luce en bikini",
+    "text": "That's his little tit and she looks his bikini.",
     "start": 66.62,
     "end": 69.62,
     "words": [
+      {
+        "word": "That's",
+        "start": 66.62,
+        "end": 66.94
+      },
+      {
+        "word": " his",
+        "start": 66.94,
+        "end": 67.36
+      },
+      {
+        "word": " little",
+        "start": 67.64,
+        "end": 67.82
+      },
+      {
+        "word": " tit",
+        "start": 67.82,
+        "end": 68.12
+      },
+      {
+        "word": " and",
+        "start": 68.12,
+        "end": 68.44
+      },
+      {
+        "word": " she",
+        "start": 68.44,
+        "end": 68.62
+      },
+      {
+        "word": " looks",
+        "start": 68.76,
+        "end": 68.94
+      },
+      {
+        "word": " his",
+        "start": 68.94,
+        "end": 69.1
+      },
+      {
+        "word": " bikini.",
+        "start": 69.24,
+        "end": 69.62
+      }
+    ],
+    "source_text": "ese corpito es el kini como tini y ella lo luce en bikini",
+    "source_words": [
       {
         "word": " Ese",
         "start": 66.62,
@@ -993,10 +1850,63 @@
   },
   {
     "id": 14,
-    "text": "en la playa es su corillo mientras pedro y martini",
+    "text": "On the beach's his cork while I pawn and martini",
     "start": 69.62,
     "end": 72.12,
     "words": [
+      {
+        "word": "On",
+        "start": 69.62,
+        "end": 69.84
+      },
+      {
+        "word": " the",
+        "start": 69.84,
+        "end": 70.0
+      },
+      {
+        "word": " beach's",
+        "start": 70.0,
+        "end": 70.24
+      },
+      {
+        "word": " his",
+        "start": 70.24,
+        "end": 70.3
+      },
+      {
+        "word": " cork",
+        "start": 70.3,
+        "end": 70.42
+      },
+      {
+        "word": " while",
+        "start": 70.42,
+        "end": 70.82
+      },
+      {
+        "word": " I",
+        "start": 70.82,
+        "end": 71.08
+      },
+      {
+        "word": " pawn",
+        "start": 71.08,
+        "end": 71.46
+      },
+      {
+        "word": " and",
+        "start": 71.46,
+        "end": 71.54
+      },
+      {
+        "word": " martini",
+        "start": 71.54,
+        "end": 72.12
+      }
+    ],
+    "source_text": "en la playa es su corillo mientras pedro y martini",
+    "source_words": [
       {
         "word": " En",
         "start": 69.62,
@@ -1051,10 +1961,43 @@
   },
   {
     "id": 15,
-    "text": "los pibes haciendo willy pero ella entra en la mini titerita",
+    "text": "That's how she's been with them.",
     "start": 72.12,
     "end": 75.02,
     "words": [
+      {
+        "word": "That's",
+        "start": 72.12,
+        "end": 72.38
+      },
+      {
+        "word": " how",
+        "start": 72.56,
+        "end": 72.88
+      },
+      {
+        "word": " she's",
+        "start": 72.88,
+        "end": 73.2
+      },
+      {
+        "word": " been",
+        "start": 73.46,
+        "end": 73.74
+      },
+      {
+        "word": " with",
+        "start": 74.22,
+        "end": 74.48
+      },
+      {
+        "word": " them.",
+        "start": 74.48,
+        "end": 75.02
+      }
+    ],
+    "source_text": "los pibes haciendo willy pero ella entra en la mini titerita",
+    "source_words": [
       {
         "word": " Los",
         "start": 72.12,
@@ -1114,10 +2057,68 @@
   },
   {
     "id": 16,
-    "text": "y a barrio escuchan en guanuel y yo en chimimami",
+    "text": "and to the neighborhood listen with guanuel and me with chimimami",
     "start": 75.02,
     "end": 77.36,
     "words": [
+      {
+        "word": "and",
+        "start": 75.02,
+        "end": 75.12
+      },
+      {
+        "word": " to",
+        "start": 75.12,
+        "end": 75.24
+      },
+      {
+        "word": " the",
+        "start": 75.24,
+        "end": 75.44
+      },
+      {
+        "word": " neighborhood",
+        "start": 75.44,
+        "end": 75.82
+      },
+      {
+        "word": " listen",
+        "start": 75.82,
+        "end": 75.98
+      },
+      {
+        "word": " with",
+        "start": 75.98,
+        "end": 76.24
+      },
+      {
+        "word": " guanuel",
+        "start": 76.24,
+        "end": 76.36
+      },
+      {
+        "word": " and",
+        "start": 76.36,
+        "end": 76.52
+      },
+      {
+        "word": " me",
+        "start": 76.52,
+        "end": 76.62
+      },
+      {
+        "word": " with",
+        "start": 76.62,
+        "end": 76.84769230769231
+      },
+      {
+        "word": " chimimami",
+        "start": 76.84769230769231,
+        "end": 77.36
+      }
+    ],
+    "source_text": "y a barrio escuchan en guanuel y yo en chimimami",
+    "source_words": [
       {
         "word": " Y",
         "start": 75.02,
@@ -1172,10 +2173,83 @@
   },
   {
     "id": 17,
-    "text": "ojalá te quede a dormir acá quiero aprenderme tu nombre",
+    "text": "I wish I stayed and slept here and I wanted to learn your name",
     "start": 78.4,
     "end": 83.64,
     "words": [
+      {
+        "word": "I",
+        "start": 78.4,
+        "end": 78.92
+      },
+      {
+        "word": " wish",
+        "start": 78.92,
+        "end": 79.3
+      },
+      {
+        "word": " I",
+        "start": 79.3,
+        "end": 79.82
+      },
+      {
+        "word": " stayed",
+        "start": 79.82,
+        "end": 80.0
+      },
+      {
+        "word": " and",
+        "start": 80.0,
+        "end": 80.44
+      },
+      {
+        "word": " slept",
+        "start": 80.44,
+        "end": 80.86222222222223
+      },
+      {
+        "word": " here",
+        "start": 80.86222222222223,
+        "end": 81.2
+      },
+      {
+        "word": " and",
+        "start": 81.2,
+        "end": 81.72500000000001
+      },
+      {
+        "word": " I",
+        "start": 81.72500000000001,
+        "end": 81.9
+      },
+      {
+        "word": " wanted",
+        "start": 81.9,
+        "end": 82.30615384615385
+      },
+      {
+        "word": " to",
+        "start": 82.30615384615385,
+        "end": 82.44153846153846
+      },
+      {
+        "word": " learn",
+        "start": 82.44153846153846,
+        "end": 82.78
+      },
+      {
+        "word": " your",
+        "start": 82.78,
+        "end": 83.2
+      },
+      {
+        "word": " name",
+        "start": 83.2,
+        "end": 83.64
+      }
+    ],
+    "source_text": "ojalá te quede a dormir acá quiero aprenderme tu nombre",
+    "source_words": [
       {
         "word": " Ojalá",
         "start": 78.4,
@@ -1230,10 +2304,78 @@
   },
   {
     "id": 18,
-    "text": "pero no me dicen nada yo no sé cuándo viniste",
+    "text": "but they don't say anything to me I don't know when you came",
     "start": 83.64,
     "end": 88.46,
     "words": [
+      {
+        "word": "but",
+        "start": 83.64,
+        "end": 84.2
+      },
+      {
+        "word": " they",
+        "start": 84.2,
+        "end": 84.62
+      },
+      {
+        "word": " don't",
+        "start": 84.62,
+        "end": 85.06
+      },
+      {
+        "word": " say",
+        "start": 85.06,
+        "end": 85.54
+      },
+      {
+        "word": " anything",
+        "start": 85.54,
+        "end": 86.04
+      },
+      {
+        "word": " to",
+        "start": 86.04,
+        "end": 86.44
+      },
+      {
+        "word": " me",
+        "start": 86.44,
+        "end": 86.8
+      },
+      {
+        "word": " I",
+        "start": 86.8,
+        "end": 87.0
+      },
+      {
+        "word": " don't",
+        "start": 87.0,
+        "end": 87.29333333333334
+      },
+      {
+        "word": " know",
+        "start": 87.29333333333334,
+        "end": 87.58666666666667
+      },
+      {
+        "word": " when",
+        "start": 87.58666666666667,
+        "end": 87.88
+      },
+      {
+        "word": " you",
+        "start": 87.88,
+        "end": 88.12857142857142
+      },
+      {
+        "word": " came",
+        "start": 88.12857142857142,
+        "end": 88.46
+      }
+    ],
+    "source_text": "pero no me dicen nada yo no sé cuándo viniste",
+    "source_words": [
       {
         "word": " Pero",
         "start": 83.64,
@@ -1288,10 +2430,53 @@
   },
   {
     "id": 19,
-    "text": "tampoco cuándo te vas yo siempre ando por la isla",
+    "text": "Or how long have you been with me?",
     "start": 88.46,
     "end": 93.34,
     "words": [
+      {
+        "word": "Or",
+        "start": 88.46,
+        "end": 89.44
+      },
+      {
+        "word": " how",
+        "start": 89.44,
+        "end": 90.1
+      },
+      {
+        "word": " long",
+        "start": 90.1,
+        "end": 90.46
+      },
+      {
+        "word": " have",
+        "start": 90.8,
+        "end": 91.28
+      },
+      {
+        "word": " you",
+        "start": 91.28,
+        "end": 91.72
+      },
+      {
+        "word": " been",
+        "start": 91.72,
+        "end": 92.16
+      },
+      {
+        "word": " with",
+        "start": 92.16,
+        "end": 92.64
+      },
+      {
+        "word": " me?",
+        "start": 92.9,
+        "end": 93.34
+      }
+    ],
+    "source_text": "tampoco cuándo te vas yo siempre ando por la isla",
+    "source_words": [
       {
         "word": " Tampoco",
         "start": 88.46,
@@ -1346,10 +2531,33 @@
   },
   {
     "id": 20,
-    "text": "por si me quieren contraer",
+    "text": "If they'll get me",
     "start": 93.34,
     "end": 96.28,
     "words": [
+      {
+        "word": "If",
+        "start": 93.34,
+        "end": 93.62
+      },
+      {
+        "word": " they'll",
+        "start": 93.88,
+        "end": 94.28
+      },
+      {
+        "word": " get",
+        "start": 94.28,
+        "end": 94.78
+      },
+      {
+        "word": " me",
+        "start": 94.78,
+        "end": 96.28
+      }
+    ],
+    "source_text": "por si me quieren contraer",
+    "source_words": [
       {
         "word": " Por",
         "start": 93.34,
@@ -1379,10 +2587,63 @@
   },
   {
     "id": 21,
-    "text": "oh, eh, diablo, mami oh, eh, naciste pa' mi",
+    "text": "Oh, hey, devil, Mummy. Oh, hey, you were born pa'mi.",
     "start": 96.28,
     "end": 101.14,
     "words": [
+      {
+        "word": "Oh,",
+        "start": 96.28,
+        "end": 96.576
+      },
+      {
+        "word": " hey,",
+        "start": 96.576,
+        "end": 97.02
+      },
+      {
+        "word": " devil,",
+        "start": 97.14,
+        "end": 97.52
+      },
+      {
+        "word": " Mummy.",
+        "start": 97.7,
+        "end": 98.12
+      },
+      {
+        "word": " Oh,",
+        "start": 98.12,
+        "end": 98.72
+      },
+      {
+        "word": " hey,",
+        "start": 98.72,
+        "end": 99.38
+      },
+      {
+        "word": " you",
+        "start": 99.38,
+        "end": 99.74
+      },
+      {
+        "word": " were",
+        "start": 99.86,
+        "end": 100.5
+      },
+      {
+        "word": " born",
+        "start": 100.5,
+        "end": 100.94
+      },
+      {
+        "word": " pa'mi.",
+        "start": 101.1,
+        "end": 101.14
+      }
+    ],
+    "source_text": "oh, eh, diablo, mami oh, eh, naciste pa' mi",
+    "source_words": [
       {
         "word": " Oh,",
         "start": 96.28,
@@ -1432,10 +2693,63 @@
   },
   {
     "id": 22,
-    "text": "oh, eh, te mudaste pa' acá viniste de trip",
+    "text": "Oh, hey, you moved up here and came from trip.",
     "start": 101.14,
     "end": 105.1,
     "words": [
+      {
+        "word": "Oh,",
+        "start": 101.14,
+        "end": 101.428
+      },
+      {
+        "word": " hey,",
+        "start": 101.428,
+        "end": 101.86
+      },
+      {
+        "word": " you",
+        "start": 101.92,
+        "end": 102.5
+      },
+      {
+        "word": " moved",
+        "start": 102.78,
+        "end": 102.86
+      },
+      {
+        "word": " up",
+        "start": 102.86,
+        "end": 103.18
+      },
+      {
+        "word": " here",
+        "start": 103.18,
+        "end": 103.48
+      },
+      {
+        "word": " and",
+        "start": 103.66,
+        "end": 103.88
+      },
+      {
+        "word": " came",
+        "start": 103.88,
+        "end": 104.4
+      },
+      {
+        "word": " from",
+        "start": 104.4,
+        "end": 104.78
+      },
+      {
+        "word": " trip.",
+        "start": 104.78,
+        "end": 105.1
+      }
+    ],
+    "source_text": "oh, eh, te mudaste pa' acá viniste de trip",
+    "source_words": [
       {
         "word": " Oh,",
         "start": 101.14,
@@ -1485,10 +2799,58 @@
   },
   {
     "id": 23,
-    "text": "oh, oh, oh, oh, oh, oh, oh diablo, mami",
+    "text": "O, O, O, O, O, O, O devil, Mummy",
     "start": 105.1,
     "end": 108.34,
     "words": [
+      {
+        "word": "O,",
+        "start": 105.1,
+        "end": 105.46
+      },
+      {
+        "word": " O,",
+        "start": 105.46,
+        "end": 105.82
+      },
+      {
+        "word": " O,",
+        "start": 105.98,
+        "end": 106.44
+      },
+      {
+        "word": " O,",
+        "start": 106.44,
+        "end": 106.6
+      },
+      {
+        "word": " O,",
+        "start": 106.6,
+        "end": 106.68
+      },
+      {
+        "word": " O,",
+        "start": 106.68,
+        "end": 106.84
+      },
+      {
+        "word": " O",
+        "start": 106.84,
+        "end": 107.0
+      },
+      {
+        "word": " devil,",
+        "start": 107.24,
+        "end": 107.72
+      },
+      {
+        "word": " Mummy",
+        "start": 107.8,
+        "end": 108.34
+      }
+    ],
+    "source_text": "oh, oh, oh, oh, oh, oh, oh diablo, mami",
+    "source_words": [
       {
         "word": " Oh,",
         "start": 105.1,
@@ -1538,10 +2900,43 @@
   },
   {
     "id": 24,
-    "text": "oh, eh, naciste pa' mi oh, eh, si esto fuera un draft, tú fueras first pick",
+    "text": "Oh, hey, you were born ma'mi.",
     "start": 108.34,
     "end": 115.08,
     "words": [
+      {
+        "word": "Oh,",
+        "start": 108.34,
+        "end": 109.0
+      },
+      {
+        "word": " hey,",
+        "start": 109.44,
+        "end": 110.08
+      },
+      {
+        "word": " you",
+        "start": 110.08,
+        "end": 110.6
+      },
+      {
+        "word": " were",
+        "start": 110.76,
+        "end": 111.44
+      },
+      {
+        "word": " born",
+        "start": 111.44,
+        "end": 112.1
+      },
+      {
+        "word": " ma'mi.",
+        "start": 114.38,
+        "end": 115.08
+      }
+    ],
+    "source_text": "oh, eh, naciste pa' mi oh, eh, si esto fuera un draft, tú fueras first pick",
+    "source_words": [
       {
         "word": " Oh,",
         "start": 108.34,
@@ -1626,10 +3021,63 @@
   },
   {
     "id": 25,
-    "text": "tú me tienes maquinando imaginándote encima de mí brincándome",
+    "text": "you have me trying to figure something out about me.",
     "start": 115.08,
     "end": 120.3,
     "words": [
+      {
+        "word": "you",
+        "start": 115.08,
+        "end": 115.9
+      },
+      {
+        "word": " have",
+        "start": 115.9,
+        "end": 116.18
+      },
+      {
+        "word": " me",
+        "start": 116.18,
+        "end": 116.38
+      },
+      {
+        "word": " trying",
+        "start": 116.38,
+        "end": 117.6
+      },
+      {
+        "word": " to",
+        "start": 117.6,
+        "end": 118.32
+      },
+      {
+        "word": " figure",
+        "start": 118.32,
+        "end": 118.7
+      },
+      {
+        "word": " something",
+        "start": 118.7,
+        "end": 118.86
+      },
+      {
+        "word": " out",
+        "start": 118.86,
+        "end": 118.96
+      },
+      {
+        "word": " about",
+        "start": 118.96,
+        "end": 119.91714285714285
+      },
+      {
+        "word": " me.",
+        "start": 119.91714285714285,
+        "end": 120.3
+      }
+    ],
+    "source_text": "tú me tienes maquinando imaginándote encima de mí brincándome",
+    "source_words": [
       {
         "word": " Tú",
         "start": 115.08,
@@ -1679,10 +3127,48 @@
   },
   {
     "id": 26,
-    "text": "el porrito y el water es lo que me tiene aquí pensándote",
+    "text": "That's what's got me thinking about you.",
     "start": 120.3,
     "end": 125.16,
     "words": [
+      {
+        "word": "That's",
+        "start": 120.3,
+        "end": 120.86
+      },
+      {
+        "word": " what's",
+        "start": 120.86,
+        "end": 121.18
+      },
+      {
+        "word": " got",
+        "start": 121.44,
+        "end": 121.7
+      },
+      {
+        "word": " me",
+        "start": 121.7,
+        "end": 122.18
+      },
+      {
+        "word": " thinking",
+        "start": 122.18,
+        "end": 122.86
+      },
+      {
+        "word": " about",
+        "start": 123.54,
+        "end": 123.86
+      },
+      {
+        "word": " you.",
+        "start": 123.86,
+        "end": 125.16
+      }
+    ],
+    "source_text": "el porrito y el water es lo que me tiene aquí pensándote",
+    "source_words": [
       {
         "word": " El",
         "start": 120.3,
@@ -1747,10 +3233,58 @@
   },
   {
     "id": 27,
-    "text": "ma, dime dónde vas detrás de ti yo voy a estar",
+    "text": "ma, tell me where you're after you I'll be",
     "start": 125.16,
     "end": 129.92,
     "words": [
+      {
+        "word": "ma,",
+        "start": 125.16,
+        "end": 125.76
+      },
+      {
+        "word": " tell",
+        "start": 125.82,
+        "end": 126.0
+      },
+      {
+        "word": " me",
+        "start": 126.0,
+        "end": 126.48
+      },
+      {
+        "word": " where",
+        "start": 126.48,
+        "end": 127.54
+      },
+      {
+        "word": " you're",
+        "start": 127.54,
+        "end": 128.02
+      },
+      {
+        "word": " after",
+        "start": 128.24,
+        "end": 128.44
+      },
+      {
+        "word": " you",
+        "start": 128.44,
+        "end": 128.72
+      },
+      {
+        "word": " I'll",
+        "start": 128.72,
+        "end": 129.12
+      },
+      {
+        "word": " be",
+        "start": 129.12,
+        "end": 129.92
+      }
+    ],
+    "source_text": "ma, dime dónde vas detrás de ti yo voy a estar",
+    "source_words": [
       {
         "word": " Ma,",
         "start": 125.16,
@@ -1810,10 +3344,128 @@
   },
   {
     "id": 28,
-    "text": "te bajo pa' mirar yo si te quiero escapar una chimba como tú es que yo me quiero robar",
+    "text": "I'll have to look at you if I want to get away with a chimba like you. That's how I want to steal.",
     "start": 129.92,
     "end": 135.12,
     "words": [
+      {
+        "word": "I'll",
+        "start": 129.92,
+        "end": 130.14
+      },
+      {
+        "word": " have",
+        "start": 130.14,
+        "end": 130.43333333333334
+      },
+      {
+        "word": " to",
+        "start": 130.43333333333334,
+        "end": 130.58
+      },
+      {
+        "word": " look",
+        "start": 130.58,
+        "end": 130.8
+      },
+      {
+        "word": " at",
+        "start": 130.8,
+        "end": 131.02
+      },
+      {
+        "word": " you",
+        "start": 131.02,
+        "end": 131.34
+      },
+      {
+        "word": " if",
+        "start": 131.34,
+        "end": 131.48
+      },
+      {
+        "word": " I",
+        "start": 131.48,
+        "end": 131.6
+      },
+      {
+        "word": " want",
+        "start": 131.6,
+        "end": 131.8
+      },
+      {
+        "word": " to",
+        "start": 131.8,
+        "end": 131.98
+      },
+      {
+        "word": " get",
+        "start": 131.98,
+        "end": 132.62
+      },
+      {
+        "word": " away",
+        "start": 132.62,
+        "end": 132.92
+      },
+      {
+        "word": " with",
+        "start": 132.92,
+        "end": 133.24
+      },
+      {
+        "word": " a",
+        "start": 133.24,
+        "end": 133.54
+      },
+      {
+        "word": " chimba",
+        "start": 133.54,
+        "end": 133.64
+      },
+      {
+        "word": " like",
+        "start": 133.64,
+        "end": 133.76
+      },
+      {
+        "word": " you.",
+        "start": 133.76,
+        "end": 133.84
+      },
+      {
+        "word": " That's",
+        "start": 133.84,
+        "end": 133.98
+      },
+      {
+        "word": " how",
+        "start": 133.98,
+        "end": 134.2
+      },
+      {
+        "word": " I",
+        "start": 134.2,
+        "end": 134.42
+      },
+      {
+        "word": " want",
+        "start": 134.42,
+        "end": 134.67454545454544
+      },
+      {
+        "word": " to",
+        "start": 134.67454545454544,
+        "end": 134.80181818181816
+      },
+      {
+        "word": " steal.",
+        "start": 134.80181818181816,
+        "end": 135.12
+      }
+    ],
+    "source_text": "te bajo pa' mirar yo si te quiero escapar una chimba como tú es que yo me quiero robar",
+    "source_words": [
       {
         "word": " Te",
         "start": 129.92,
@@ -1913,10 +3565,58 @@
   },
   {
     "id": 29,
-    "text": "ma, dime dónde vas detrás de ti yo voy a estar",
+    "text": "ma, tell me where you're after you I'll be",
     "start": 135.12,
     "end": 139.74,
     "words": [
+      {
+        "word": "ma,",
+        "start": 135.12,
+        "end": 135.36
+      },
+      {
+        "word": " tell",
+        "start": 135.64,
+        "end": 136.12
+      },
+      {
+        "word": " me",
+        "start": 136.12,
+        "end": 137.08
+      },
+      {
+        "word": " where",
+        "start": 137.08,
+        "end": 137.6
+      },
+      {
+        "word": " you're",
+        "start": 137.6,
+        "end": 137.78
+      },
+      {
+        "word": " after",
+        "start": 137.86,
+        "end": 138.08
+      },
+      {
+        "word": " you",
+        "start": 138.08,
+        "end": 138.32
+      },
+      {
+        "word": " I'll",
+        "start": 138.32,
+        "end": 139.56
+      },
+      {
+        "word": " be",
+        "start": 139.56,
+        "end": 139.74
+      }
+    ],
+    "source_text": "ma, dime dónde vas detrás de ti yo voy a estar",
+    "source_words": [
       {
         "word": " Ma,",
         "start": 135.12,
@@ -1976,10 +3676,73 @@
   },
   {
     "id": 30,
-    "text": "viajamos en je privado normal sobre una foto para irnos viral",
+    "text": "We travel in regular private je about a photo to leave viral",
     "start": 139.74,
     "end": 144.08,
     "words": [
+      {
+        "word": "We",
+        "start": 139.74,
+        "end": 140.36
+      },
+      {
+        "word": " travel",
+        "start": 140.36,
+        "end": 140.46
+      },
+      {
+        "word": " in",
+        "start": 140.46,
+        "end": 140.6
+      },
+      {
+        "word": " regular",
+        "start": 140.6,
+        "end": 141.08
+      },
+      {
+        "word": " private",
+        "start": 141.08,
+        "end": 141.67111111111112
+      },
+      {
+        "word": " je",
+        "start": 141.67111111111112,
+        "end": 141.84
+      },
+      {
+        "word": " about",
+        "start": 141.84,
+        "end": 142.3
+      },
+      {
+        "word": " a",
+        "start": 142.3,
+        "end": 142.48
+      },
+      {
+        "word": " photo",
+        "start": 142.48,
+        "end": 142.8
+      },
+      {
+        "word": " to",
+        "start": 142.8,
+        "end": 143.22
+      },
+      {
+        "word": " leave",
+        "start": 143.22,
+        "end": 143.62
+      },
+      {
+        "word": " viral",
+        "start": 143.62,
+        "end": 144.08
+      }
+    ],
+    "source_text": "viajamos en je privado normal sobre una foto para irnos viral",
+    "source_words": [
       {
         "word": " Viajamos",
         "start": 139.74,
@@ -2039,10 +3802,78 @@
   },
   {
     "id": 31,
-    "text": "diablo, mami, causo tú tienes el cuerpo perfecto y que el hijo huele",
+    "text": "devil, Mommy, cause you have the perfect body and that the son smells",
     "start": 144.08,
     "end": 149.12,
     "words": [
+      {
+        "word": "devil,",
+        "start": 144.08,
+        "end": 144.92
+      },
+      {
+        "word": " Mommy,",
+        "start": 145.1,
+        "end": 145.4
+      },
+      {
+        "word": " cause",
+        "start": 145.44,
+        "end": 145.9
+      },
+      {
+        "word": " you",
+        "start": 145.9,
+        "end": 146.14
+      },
+      {
+        "word": " have",
+        "start": 146.14,
+        "end": 146.62
+      },
+      {
+        "word": " the",
+        "start": 146.62,
+        "end": 146.82
+      },
+      {
+        "word": " perfect",
+        "start": 146.82,
+        "end": 147.08
+      },
+      {
+        "word": " body",
+        "start": 147.08,
+        "end": 147.78
+      },
+      {
+        "word": " and",
+        "start": 147.78,
+        "end": 147.94
+      },
+      {
+        "word": " that",
+        "start": 147.94,
+        "end": 148.12
+      },
+      {
+        "word": " the",
+        "start": 148.12,
+        "end": 148.2
+      },
+      {
+        "word": " son",
+        "start": 148.2,
+        "end": 148.46
+      },
+      {
+        "word": " smells",
+        "start": 148.46,
+        "end": 149.12
+      }
+    ],
+    "source_text": "diablo, mami, causo tú tienes el cuerpo perfecto y que el hijo huele",
+    "source_words": [
       {
         "word": " Diablo,",
         "start": 144.08,
@@ -2112,10 +3943,78 @@
   },
   {
     "id": 32,
-    "text": "sabes que está buena de frente a por qué puede tiarte",
+    "text": "you know she's hot at face to face why she can tit you",
     "start": 149.12,
     "end": 151.84,
     "words": [
+      {
+        "word": "you",
+        "start": 149.12,
+        "end": 149.42
+      },
+      {
+        "word": " know",
+        "start": 149.42,
+        "end": 149.58
+      },
+      {
+        "word": " she's",
+        "start": 149.58,
+        "end": 149.8
+      },
+      {
+        "word": " hot",
+        "start": 149.8,
+        "end": 150.06
+      },
+      {
+        "word": " at",
+        "start": 150.06,
+        "end": 150.26
+      },
+      {
+        "word": " face",
+        "start": 150.26,
+        "end": 150.48
+      },
+      {
+        "word": " to",
+        "start": 150.48,
+        "end": 150.66
+      },
+      {
+        "word": " face",
+        "start": 150.66,
+        "end": 150.82
+      },
+      {
+        "word": " why",
+        "start": 150.82,
+        "end": 150.98
+      },
+      {
+        "word": " she",
+        "start": 150.98,
+        "end": 151.17000000000002
+      },
+      {
+        "word": " can",
+        "start": 151.17000000000002,
+        "end": 151.36
+      },
+      {
+        "word": " tit",
+        "start": 151.36,
+        "end": 151.60000000000002
+      },
+      {
+        "word": " you",
+        "start": 151.60000000000002,
+        "end": 151.84
+      }
+    ],
+    "source_text": "sabes que está buena de frente a por qué puede tiarte",
+    "source_words": [
       {
         "word": " Sabes",
         "start": 149.12,
@@ -2175,10 +4074,63 @@
   },
   {
     "id": 33,
-    "text": "a él le gustan las nenas y los nenes nena buena o esta mala",
+    "text": "He likes girls and girls good girl or bad girl",
     "start": 151.84,
     "end": 155.78,
     "words": [
+      {
+        "word": "He",
+        "start": 151.84,
+        "end": 152.06
+      },
+      {
+        "word": " likes",
+        "start": 152.14,
+        "end": 152.32
+      },
+      {
+        "word": " girls",
+        "start": 152.32,
+        "end": 152.64
+      },
+      {
+        "word": " and",
+        "start": 153.08,
+        "end": 153.4
+      },
+      {
+        "word": " girls",
+        "start": 153.4,
+        "end": 153.9
+      },
+      {
+        "word": " good",
+        "start": 153.9,
+        "end": 154.22
+      },
+      {
+        "word": " girl",
+        "start": 154.22,
+        "end": 154.64
+      },
+      {
+        "word": " or",
+        "start": 154.64,
+        "end": 154.88
+      },
+      {
+        "word": " bad",
+        "start": 154.88,
+        "end": 155.1
+      },
+      {
+        "word": " girl",
+        "start": 155.1,
+        "end": 155.78
+      }
+    ],
+    "source_text": "a él le gustan las nenas y los nenes nena buena o esta mala",
+    "source_words": [
       {
         "word": " A",
         "start": 151.84,
@@ -2253,10 +4205,83 @@
   },
   {
     "id": 34,
-    "text": "las decepciones la transformaron en diabla y se empodero, a la hizo el supero",
+    "text": "The disappointments transformed her into a devilish and became pitted, and became his grave.",
     "start": 155.78,
     "end": 160.2,
     "words": [
+      {
+        "word": "The",
+        "start": 155.78,
+        "end": 156.12
+      },
+      {
+        "word": " disappointments",
+        "start": 156.12,
+        "end": 156.6
+      },
+      {
+        "word": " transformed",
+        "start": 156.6,
+        "end": 156.86
+      },
+      {
+        "word": " her",
+        "start": 156.86,
+        "end": 157.42
+      },
+      {
+        "word": " into",
+        "start": 157.42,
+        "end": 157.62
+      },
+      {
+        "word": " a",
+        "start": 157.62,
+        "end": 158.12
+      },
+      {
+        "word": " devilish",
+        "start": 158.12,
+        "end": 158.32
+      },
+      {
+        "word": " and",
+        "start": 158.32,
+        "end": 158.42
+      },
+      {
+        "word": " became",
+        "start": 158.42,
+        "end": 159.1
+      },
+      {
+        "word": " pitted,",
+        "start": 159.32,
+        "end": 159.42
+      },
+      {
+        "word": " and",
+        "start": 159.42,
+        "end": 159.48
+      },
+      {
+        "word": " became",
+        "start": 159.48,
+        "end": 159.6
+      },
+      {
+        "word": " his",
+        "start": 159.6,
+        "end": 159.78
+      },
+      {
+        "word": " grave.",
+        "start": 159.78,
+        "end": 160.2
+      }
+    ],
+    "source_text": "las decepciones la transformaron en diabla y se empodero, a la hizo el supero",
+    "source_words": [
       {
         "word": " Las",
         "start": 155.78,
@@ -2331,10 +4356,48 @@
   },
   {
     "id": 35,
-    "text": "pa'l carao lo mando cuando se aprende o el vio",
+    "text": "I'm sending him while you're with him.",
     "start": 160.2,
     "end": 162.62,
     "words": [
+      {
+        "word": "I'm",
+        "start": 160.2,
+        "end": 160.42
+      },
+      {
+        "word": " sending",
+        "start": 160.5,
+        "end": 160.86
+      },
+      {
+        "word": " him",
+        "start": 161.0,
+        "end": 161.3
+      },
+      {
+        "word": " while",
+        "start": 161.3,
+        "end": 161.52
+      },
+      {
+        "word": " you're",
+        "start": 161.52,
+        "end": 161.74
+      },
+      {
+        "word": " with",
+        "start": 161.74,
+        "end": 162.08
+      },
+      {
+        "word": " him.",
+        "start": 162.08,
+        "end": 162.36
+      }
+    ],
+    "source_text": "pa'l carao lo mando cuando se aprende o el vio",
+    "source_words": [
       {
         "word": " Pa",
         "start": 160.2,
@@ -2394,10 +4457,73 @@
   },
   {
     "id": 36,
-    "text": "ella no es como antes le cura el corazón que le rompe otro gante",
+    "text": "she's not how she once cures his heart that breaks another pendant",
     "start": 162.62,
     "end": 166.42,
     "words": [
+      {
+        "word": "she's",
+        "start": 162.62,
+        "end": 162.88
+      },
+      {
+        "word": " not",
+        "start": 162.88,
+        "end": 163.06
+      },
+      {
+        "word": " how",
+        "start": 163.06,
+        "end": 163.26
+      },
+      {
+        "word": " she",
+        "start": 163.26,
+        "end": 163.46
+      },
+      {
+        "word": " once",
+        "start": 163.46,
+        "end": 163.92
+      },
+      {
+        "word": " cures",
+        "start": 163.92,
+        "end": 164.14
+      },
+      {
+        "word": " his",
+        "start": 164.14,
+        "end": 164.42
+      },
+      {
+        "word": " heart",
+        "start": 164.54,
+        "end": 165.0
+      },
+      {
+        "word": " that",
+        "start": 165.0,
+        "end": 165.2
+      },
+      {
+        "word": " breaks",
+        "start": 165.36,
+        "end": 165.58
+      },
+      {
+        "word": " another",
+        "start": 165.58,
+        "end": 165.82
+      },
+      {
+        "word": " pendant",
+        "start": 165.82,
+        "end": 166.42
+      }
+    ],
+    "source_text": "ella no es como antes le cura el corazón que le rompe otro gante",
+    "source_words": [
       {
         "word": " Ella",
         "start": 162.62,
@@ -2472,10 +4598,48 @@
   },
   {
     "id": 37,
-    "text": "si todos los hombres son iguales que vamos a ser",
+    "text": "If all men are equal we'll be",
     "start": 166.42,
     "end": 169.1,
     "words": [
+      {
+        "word": "If",
+        "start": 166.42,
+        "end": 166.82
+      },
+      {
+        "word": " all",
+        "start": 166.82,
+        "end": 167.08
+      },
+      {
+        "word": " men",
+        "start": 167.4,
+        "end": 167.68
+      },
+      {
+        "word": " are",
+        "start": 167.68,
+        "end": 168.08
+      },
+      {
+        "word": " equal",
+        "start": 168.08,
+        "end": 168.26
+      },
+      {
+        "word": " we'll",
+        "start": 168.26,
+        "end": 168.66
+      },
+      {
+        "word": " be",
+        "start": 168.66,
+        "end": 168.96
+      }
+    ],
+    "source_text": "si todos los hombres son iguales que vamos a ser",
+    "source_words": [
       {
         "word": " Si",
         "start": 166.42,
@@ -2530,10 +4694,43 @@
   },
   {
     "id": 38,
-    "text": "todo lo que vale la pena no es fácil, bebé",
+    "text": "anything worth anything isn't easy, baby",
     "start": 169.1,
     "end": 171.68,
     "words": [
+      {
+        "word": "anything",
+        "start": 169.1,
+        "end": 169.3
+      },
+      {
+        "word": " worth",
+        "start": 169.78,
+        "end": 170.06
+      },
+      {
+        "word": " anything",
+        "start": 170.06,
+        "end": 170.34
+      },
+      {
+        "word": " isn't",
+        "start": 170.34,
+        "end": 170.56
+      },
+      {
+        "word": " easy,",
+        "start": 170.74,
+        "end": 171.02
+      },
+      {
+        "word": " baby",
+        "start": 171.02,
+        "end": 171.68
+      }
+    ],
+    "source_text": "todo lo que vale la pena no es fácil, bebé",
+    "source_words": [
       {
         "word": " Todo",
         "start": 169.1,
@@ -2588,10 +4785,43 @@
   },
   {
     "id": 39,
-    "text": "teoría se mantiene natural la virgen no se quiere operar",
+    "text": "The virgin doesn't care to operate",
     "start": 172.52,
     "end": 177.32,
     "words": [
+      {
+        "word": "The",
+        "start": 172.52,
+        "end": 172.88
+      },
+      {
+        "word": " virgin",
+        "start": 172.96,
+        "end": 173.74
+      },
+      {
+        "word": " doesn't",
+        "start": 173.74,
+        "end": 174.74
+      },
+      {
+        "word": " care",
+        "start": 174.74,
+        "end": 175.14
+      },
+      {
+        "word": " to",
+        "start": 175.54,
+        "end": 175.92
+      },
+      {
+        "word": " operate",
+        "start": 176.26,
+        "end": 177.32
+      }
+    ],
+    "source_text": "teoría se mantiene natural la virgen no se quiere operar",
+    "source_words": [
       {
         "word": " Teoría",
         "start": 172.51999999999998,
@@ -2646,10 +4876,78 @@
   },
   {
     "id": 40,
-    "text": "dice que en el mundo hacen falla a personas que sean más real",
+    "text": "says that they do bad people in the world that are more real",
     "start": 177.32,
     "end": 181.88,
     "words": [
+      {
+        "word": "says",
+        "start": 177.32,
+        "end": 177.58
+      },
+      {
+        "word": " that",
+        "start": 177.58,
+        "end": 177.78
+      },
+      {
+        "word": " they",
+        "start": 177.78,
+        "end": 177.9
+      },
+      {
+        "word": " do",
+        "start": 177.9,
+        "end": 178.08
+      },
+      {
+        "word": " bad",
+        "start": 178.08,
+        "end": 178.4
+      },
+      {
+        "word": " people",
+        "start": 178.4,
+        "end": 179.08
+      },
+      {
+        "word": " in",
+        "start": 179.08,
+        "end": 179.78
+      },
+      {
+        "word": " the",
+        "start": 179.78,
+        "end": 179.9
+      },
+      {
+        "word": " world",
+        "start": 179.9,
+        "end": 180.28
+      },
+      {
+        "word": " that",
+        "start": 180.28,
+        "end": 180.66
+      },
+      {
+        "word": " are",
+        "start": 180.66,
+        "end": 180.94
+      },
+      {
+        "word": " more",
+        "start": 180.94,
+        "end": 181.36
+      },
+      {
+        "word": " real",
+        "start": 181.36,
+        "end": 181.88
+      }
+    ],
+    "source_text": "dice que en el mundo hacen falla a personas que sean más real",
+    "source_words": [
       {
         "word": " Dice",
         "start": 177.32,
@@ -2719,10 +5017,43 @@
   },
   {
     "id": 41,
-    "text": "teoría se mantiene natural la virgen no se quiere operar",
+    "text": "The virgin doesn't care to operate",
     "start": 181.88,
     "end": 186.82,
     "words": [
+      {
+        "word": "The",
+        "start": 181.88,
+        "end": 182.48
+      },
+      {
+        "word": " virgin",
+        "start": 182.56,
+        "end": 183.34
+      },
+      {
+        "word": " doesn't",
+        "start": 183.34,
+        "end": 184.32
+      },
+      {
+        "word": " care",
+        "start": 184.32,
+        "end": 184.74
+      },
+      {
+        "word": " to",
+        "start": 185.22,
+        "end": 185.54
+      },
+      {
+        "word": " operate",
+        "start": 185.84,
+        "end": 186.82
+      }
+    ],
+    "source_text": "teoría se mantiene natural la virgen no se quiere operar",
+    "source_words": [
       {
         "word": " Teoría",
         "start": 181.88,
@@ -2777,10 +5108,78 @@
   },
   {
     "id": 42,
-    "text": "dice que en el mundo hacen falla a personas que sean más real",
+    "text": "says that they do bad people in the world that are more real",
     "start": 186.82,
     "end": 191.9,
     "words": [
+      {
+        "word": "says",
+        "start": 186.82,
+        "end": 187.2
+      },
+      {
+        "word": " that",
+        "start": 187.2,
+        "end": 187.36
+      },
+      {
+        "word": " they",
+        "start": 187.36,
+        "end": 187.52
+      },
+      {
+        "word": " do",
+        "start": 187.52,
+        "end": 187.68
+      },
+      {
+        "word": " bad",
+        "start": 187.68,
+        "end": 188.06
+      },
+      {
+        "word": " people",
+        "start": 188.06,
+        "end": 188.66
+      },
+      {
+        "word": " in",
+        "start": 188.66,
+        "end": 189.32
+      },
+      {
+        "word": " the",
+        "start": 189.32,
+        "end": 189.5
+      },
+      {
+        "word": " world",
+        "start": 189.5,
+        "end": 189.92
+      },
+      {
+        "word": " that",
+        "start": 189.92,
+        "end": 190.28
+      },
+      {
+        "word": " are",
+        "start": 190.28,
+        "end": 190.54
+      },
+      {
+        "word": " more",
+        "start": 190.54,
+        "end": 191.02
+      },
+      {
+        "word": " real",
+        "start": 191.02,
+        "end": 191.9
+      }
+    ],
+    "source_text": "dice que en el mundo hacen falla a personas que sean más real",
+    "source_words": [
       {
         "word": " Dice",
         "start": 186.82,
@@ -2850,10 +5249,68 @@
   },
   {
     "id": 43,
-    "text": "oh, oh, diablo, mami oh, eh, naciste pa' mí",
+    "text": "Oh, oh, devil, Mummy. Oh, hey, you were born to me.",
     "start": 191.9,
     "end": 197.12,
     "words": [
+      {
+        "word": "Oh,",
+        "start": 191.9,
+        "end": 192.0511111111111
+      },
+      {
+        "word": " oh,",
+        "start": 192.0511111111111,
+        "end": 192.20222222222222
+      },
+      {
+        "word": " devil,",
+        "start": 192.20222222222222,
+        "end": 192.58
+      },
+      {
+        "word": " Mummy.",
+        "start": 192.94,
+        "end": 193.52
+      },
+      {
+        "word": " Oh,",
+        "start": 193.62,
+        "end": 194.1
+      },
+      {
+        "word": " hey,",
+        "start": 194.32,
+        "end": 194.74
+      },
+      {
+        "word": " you",
+        "start": 194.74,
+        "end": 195.03142857142856
+      },
+      {
+        "word": " were",
+        "start": 195.03142857142856,
+        "end": 195.42
+      },
+      {
+        "word": " born",
+        "start": 195.58,
+        "end": 195.78
+      },
+      {
+        "word": " to",
+        "start": 195.94,
+        "end": 196.46
+      },
+      {
+        "word": " me.",
+        "start": 196.46,
+        "end": 196.94
+      }
+    ],
+    "source_text": "oh, oh, diablo, mami oh, eh, naciste pa' mí",
+    "source_words": [
       {
         "word": " Oh,",
         "start": 191.9,
@@ -2903,10 +5360,58 @@
   },
   {
     "id": 44,
-    "text": "oh, eh, bebé te noté que no eres de aquí",
+    "text": "Oh, hey, baby, I noticed you're not from here.",
     "start": 197.12,
     "end": 201.06,
     "words": [
+      {
+        "word": "Oh,",
+        "start": 197.12,
+        "end": 197.68
+      },
+      {
+        "word": " hey,",
+        "start": 197.68,
+        "end": 198.54
+      },
+      {
+        "word": " baby,",
+        "start": 198.78,
+        "end": 199.04
+      },
+      {
+        "word": " I",
+        "start": 199.04,
+        "end": 199.24
+      },
+      {
+        "word": " noticed",
+        "start": 199.24,
+        "end": 199.78
+      },
+      {
+        "word": " you're",
+        "start": 199.78,
+        "end": 200.02
+      },
+      {
+        "word": " not",
+        "start": 200.02,
+        "end": 200.22
+      },
+      {
+        "word": " from",
+        "start": 200.38,
+        "end": 200.76
+      },
+      {
+        "word": " here.",
+        "start": 200.76,
+        "end": 201.06
+      }
+    ],
+    "source_text": "oh, eh, bebé te noté que no eres de aquí",
+    "source_words": [
       {
         "word": " Oh,",
         "start": 197.12,
@@ -2961,10 +5466,68 @@
   },
   {
     "id": 45,
-    "text": "oh, oh, diablo, mami oh, eh, naciste pa' mí",
+    "text": "Oh, oh, devil, Mummy. Oh, hey, you were born to me.",
     "start": 201.06,
     "end": 206.82,
     "words": [
+      {
+        "word": "Oh,",
+        "start": 201.06,
+        "end": 201.48000000000002
+      },
+      {
+        "word": " oh,",
+        "start": 201.48000000000002,
+        "end": 201.9
+      },
+      {
+        "word": " devil,",
+        "start": 202.52,
+        "end": 203.02833333333334
+      },
+      {
+        "word": " Mummy.",
+        "start": 203.02833333333334,
+        "end": 203.53666666666666
+      },
+      {
+        "word": " Oh,",
+        "start": 203.53666666666666,
+        "end": 203.74
+      },
+      {
+        "word": " hey,",
+        "start": 203.86,
+        "end": 204.36
+      },
+      {
+        "word": " you",
+        "start": 204.36,
+        "end": 204.96
+      },
+      {
+        "word": " were",
+        "start": 204.96,
+        "end": 205.24
+      },
+      {
+        "word": " born",
+        "start": 205.44,
+        "end": 206.1
+      },
+      {
+        "word": " to",
+        "start": 206.1,
+        "end": 206.56
+      },
+      {
+        "word": " me.",
+        "start": 206.8,
+        "end": 206.82
+      }
+    ],
+    "source_text": "oh, oh, diablo, mami oh, eh, naciste pa' mí",
+    "source_words": [
       {
         "word": " Oh,",
         "start": 201.06,
@@ -3014,10 +5577,63 @@
   },
   {
     "id": 46,
-    "text": "oh, eh, si esto fuera un draft, esto fuera perspec",
+    "text": "Oh, hey, if this was a draft, this was perspic.",
     "start": 206.82,
     "end": 211.22,
     "words": [
+      {
+        "word": "Oh,",
+        "start": 206.82,
+        "end": 207.4
+      },
+      {
+        "word": " hey,",
+        "start": 207.4,
+        "end": 208.16
+      },
+      {
+        "word": " if",
+        "start": 208.3,
+        "end": 208.38
+      },
+      {
+        "word": " this",
+        "start": 208.38,
+        "end": 208.58
+      },
+      {
+        "word": " was",
+        "start": 208.58,
+        "end": 208.82
+      },
+      {
+        "word": " a",
+        "start": 208.82,
+        "end": 209.16
+      },
+      {
+        "word": " draft,",
+        "start": 209.16,
+        "end": 209.42
+      },
+      {
+        "word": " this",
+        "start": 209.54,
+        "end": 209.62
+      },
+      {
+        "word": " was",
+        "start": 209.62,
+        "end": 209.88
+      },
+      {
+        "word": " perspic.",
+        "start": 209.88,
+        "end": 211.22
+      }
+    ],
+    "source_text": "oh, eh, si esto fuera un draft, esto fuera perspec",
+    "source_words": [
       {
         "word": " Oh,",
         "start": 206.82,
@@ -3072,10 +5688,43 @@
   },
   {
     "id": 47,
-    "text": "rastra muerto, oíste, bebé lo intocable, oíste, bebé",
+    "text": "He's been killed. He's been killed.",
     "start": 211.8,
     "end": 216.44,
     "words": [
+      {
+        "word": "He's",
+        "start": 211.8,
+        "end": 212.62
+      },
+      {
+        "word": " been",
+        "start": 212.62,
+        "end": 212.94
+      },
+      {
+        "word": " killed.",
+        "start": 213.42,
+        "end": 214.22
+      },
+      {
+        "word": " He's",
+        "start": 214.22,
+        "end": 214.58
+      },
+      {
+        "word": " been",
+        "start": 214.58,
+        "end": 215.12
+      },
+      {
+        "word": " killed.",
+        "start": 215.6,
+        "end": 216.44
+      }
+    ],
+    "source_text": "rastra muerto, oíste, bebé lo intocable, oíste, bebé",
+    "source_words": [
       {
         "word": " Rastra",
         "start": 211.8,
@@ -3120,10 +5769,23 @@
   },
   {
     "id": 48,
-    "text": "la doblea",
+    "text": "The double",
     "start": 216.44,
     "end": 217.08,
     "words": [
+      {
+        "word": "The",
+        "start": 216.44,
+        "end": 216.74
+      },
+      {
+        "word": " double",
+        "start": 216.74,
+        "end": 217.08
+      }
+    ],
+    "source_text": "la doblea",
+    "source_words": [
       {
         "word": " La",
         "start": 216.44,
@@ -3142,6 +5804,29 @@
     "start": 217.08,
     "end": 218.78,
     "words": [
+      {
+        "word": "dj",
+        "start": 217.08,
+        "end": 217.36
+      },
+      {
+        "word": " luvian",
+        "start": 217.36,
+        "end": 217.86
+      },
+      {
+        "word": " mambo",
+        "start": 217.86,
+        "end": 218.38
+      },
+      {
+        "word": " king",
+        "start": 218.38,
+        "end": 218.78
+      }
+    ],
+    "source_text": "dj luvian mambo king",
+    "source_words": [
       {
         "word": " DJ",
         "start": 217.08,
@@ -3166,10 +5851,33 @@
   },
   {
     "id": 50,
-    "text": "mambo king, mambo king",
+    "text": "Mambo king, Mambo king",
     "start": 218.78,
     "end": 221.4,
     "words": [
+      {
+        "word": "Mambo",
+        "start": 218.78,
+        "end": 219.58
+      },
+      {
+        "word": " king,",
+        "start": 219.58,
+        "end": 220.0
+      },
+      {
+        "word": " Mambo",
+        "start": 220.12,
+        "end": 220.82
+      },
+      {
+        "word": " king",
+        "start": 220.82,
+        "end": 221.4
+      }
+    ],
+    "source_text": "mambo king, mambo king",
+    "source_words": [
       {
         "word": " Mambo",
         "start": 218.78,
@@ -3194,10 +5902,23 @@
   },
   {
     "id": 51,
-    "text": "marahima luvian",
+    "text": "maraima luvian",
     "start": 221.4,
     "end": 222.58,
     "words": [
+      {
+        "word": "maraima",
+        "start": 221.4,
+        "end": 221.94
+      },
+      {
+        "word": " luvian",
+        "start": 221.94,
+        "end": 222.58
+      }
+    ],
+    "source_text": "marahima luvian",
+    "source_words": [
       {
         "word": " Marahima",
         "start": 221.4,
@@ -3212,10 +5933,23 @@
   },
   {
     "id": 52,
-    "text": "marahima maruma",
+    "text": "Maraima Maruma",
     "start": 224.03999999999996,
     "end": 225.64,
     "words": [
+      {
+        "word": "Maraima",
+        "start": 224.03999999999996,
+        "end": 224.83999999999997
+      },
+      {
+        "word": " Maruma",
+        "start": 224.83999999999997,
+        "end": 225.64
+      }
+    ],
+    "source_text": "marahima maruma",
+    "source_words": [
       {
         "word": " Marahima",
         "start": 224.03999999999996,
@@ -3230,10 +5964,23 @@
   },
   {
     "id": 53,
-    "text": "marahima queveo",
+    "text": "queveo marahima",
     "start": 226.5,
     "end": 227.98,
     "words": [
+      {
+        "word": "queveo",
+        "start": 226.5,
+        "end": 226.96
+      },
+      {
+        "word": " marahima",
+        "start": 226.96,
+        "end": 227.98
+      }
+    ],
+    "source_text": "marahima queveo",
+    "source_words": [
       {
         "word": " Marahima",
         "start": 226.5,
@@ -3248,10 +5995,58 @@
   },
   {
     "id": 54,
-    "text": "manuel aa, queveo siempre flow maruma, siempre real g",
+    "text": "manuel aa, queveo always flow maruma, always real g",
     "start": 228.98,
     "end": 233.26000000000002,
     "words": [
+      {
+        "word": "manuel",
+        "start": 228.98,
+        "end": 229.82
+      },
+      {
+        "word": " aa,",
+        "start": 229.82,
+        "end": 230.48
+      },
+      {
+        "word": " queveo",
+        "start": 230.66,
+        "end": 231.24
+      },
+      {
+        "word": " always",
+        "start": 231.24,
+        "end": 231.68
+      },
+      {
+        "word": " flow",
+        "start": 231.68,
+        "end": 231.86
+      },
+      {
+        "word": " maruma,",
+        "start": 231.86,
+        "end": 232.32
+      },
+      {
+        "word": " always",
+        "start": 232.52,
+        "end": 232.66
+      },
+      {
+        "word": " real",
+        "start": 232.66,
+        "end": 232.98
+      },
+      {
+        "word": " g",
+        "start": 232.98,
+        "end": 233.26000000000002
+      }
+    ],
+    "source_text": "manuel aa, queveo siempre flow maruma, siempre real g",
+    "source_words": [
       {
         "word": " Manuel",
         "start": 228.98,
@@ -3301,10 +6096,38 @@
   },
   {
     "id": 55,
-    "text": "yeah, yeah dímelo bf",
+    "text": "Yeah, yeah tell me bf",
     "start": 233.92,
     "end": 235.98000000000002,
     "words": [
+      {
+        "word": "Yeah,",
+        "start": 233.92,
+        "end": 234.32
+      },
+      {
+        "word": " yeah",
+        "start": 235.06,
+        "end": 235.1
+      },
+      {
+        "word": " tell",
+        "start": 235.1,
+        "end": 235.5
+      },
+      {
+        "word": " me",
+        "start": 235.5,
+        "end": 235.74
+      },
+      {
+        "word": " bf",
+        "start": 235.74,
+        "end": 235.98000000000002
+      }
+    ],
+    "source_text": "yeah, yeah dímelo bf",
+    "source_words": [
       {
         "word": " Yeah,",
         "start": 233.92,
@@ -3329,10 +6152,23 @@
   },
   {
     "id": 56,
-    "text": "el dismusio, oíste, bebé",
+    "text": "He's dysmusius.",
     "start": 236.6,
     "end": 237.98000000000002,
     "words": [
+      {
+        "word": "He's",
+        "start": 236.98,
+        "end": 237.58
+      },
+      {
+        "word": " dysmusius.",
+        "start": 237.94,
+        "end": 237.98000000000002
+      }
+    ],
+    "source_text": "el dismusio, oíste, bebé",
+    "source_words": [
       {
         "word": " El",
         "start": 236.6,
