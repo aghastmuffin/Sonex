@@ -356,7 +356,8 @@ class Window(QMainWindow):
         self.advanced_button.clicked.connect(self.open_advanced_settings)
 
         self.translation_mode_input = QComboBox(self)
-        self.translation_mode_input.addItem("Argos (default)", "argos")
+        self.translation_mode_input.addItem("None (keep source)", "none")
+        self.translation_mode_input.addItem("Argos", "argos")
         self.translation_mode_input.addItem("Whisper", "whisper")
         self.translation_mode_input.addItem("Both", "both")
         layout.addRow(self.advanced_button, self.translation_mode_input)
@@ -437,7 +438,7 @@ class Window(QMainWindow):
 
     def on_button_click(self):
         self.lang_code = self.lang_input.currentData()
-        self.translation_mode = self.translation_mode_input.currentData() or "argos"
+        self.translation_mode = self.translation_mode_input.currentData() or "none"
         if not getattr(self, "file_path", None):
             return
 
@@ -459,7 +460,7 @@ class Window(QMainWindow):
         worker_script = os.path.join(os.path.dirname(__file__), "_worker.py")
         project_root = os.path.dirname(os.path.dirname(__file__))
         lang_arg = self.lang_code if self.lang_code else ""
-        translation_mode_arg = self.translation_mode if self.translation_mode else "argos"
+        translation_mode_arg = self.translation_mode if self.translation_mode else "none"
         settings_arg = json.dumps(self.advanced_settings)
 
         self.pipeline_process = QProcess(self)

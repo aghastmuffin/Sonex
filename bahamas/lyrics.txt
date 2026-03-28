@@ -1,0 +1,5553 @@
+{
+  "segments": [
+    {
+      "start": 6.58,
+      "end": 12.2,
+      "text": "ma'let you go, that's never hypnotized",
+      "words": [
+        {
+          "word": "ma'let",
+          "start": 6.58,
+          "end": 8.514,
+          "score": 0.784
+        },
+        {
+          "word": "you",
+          "start": 9.44,
+          "end": 10.407,
+          "score": 0.819
+        },
+        {
+          "word": "go,",
+          "start": 10.427,
+          "end": 10.488,
+          "score": 0.647
+        },
+        {
+          "word": "that's",
+          "start": 10.871,
+          "end": 11.233,
+          "score": 0.231
+        },
+        {
+          "word": "never",
+          "start": 11.253,
+          "end": 11.394,
+          "score": 0.302
+        },
+        {
+          "word": "hypnotized",
+          "start": 11.455,
+          "end": 12.2,
+          "score": 0.662
+        }
+      ]
+    },
+    {
+      "start": 12.18,
+      "end": 15.02,
+      "text": "I can't stop looking at you",
+      "words": [
+        {
+          "word": "I",
+          "start": 12.18,
+          "end": 13.032,
+          "score": 0.7
+        },
+        {
+          "word": "can't",
+          "start": 13.357,
+          "end": 13.62,
+          "score": 0.519
+        },
+        {
+          "word": "stop",
+          "start": 13.641,
+          "end": 13.722,
+          "score": 0.004
+        },
+        {
+          "word": "looking",
+          "start": 13.742,
+          "end": 14.533,
+          "score": 0.304
+        },
+        {
+          "word": "at",
+          "start": 14.554,
+          "end": 14.939,
+          "score": 0.8
+        },
+        {
+          "word": "you",
+          "start": 14.959,
+          "end": 15.02,
+          "score": 0.332
+        }
+      ]
+    },
+    {
+      "start": 15.0,
+      "end": 19.08,
+      "text": "you laugh more than a star, Mummy, that you have to fight",
+      "words": [
+        {
+          "word": "you",
+          "start": 15.0,
+          "end": 15.485,
+          "score": 0.476
+        },
+        {
+          "word": "laugh",
+          "start": 15.566,
+          "end": 15.909,
+          "score": 0.356
+        },
+        {
+          "word": "more",
+          "start": 15.929,
+          "end": 16.252,
+          "score": 0.731
+        },
+        {
+          "word": "than",
+          "start": 16.273,
+          "end": 16.414,
+          "score": 0.451
+        },
+        {
+          "word": "a",
+          "start": 16.697,
+          "end": 16.778,
+          "score": 0.675
+        },
+        {
+          "word": "star,",
+          "start": 16.798,
+          "end": 17.06,
+          "score": 0.297
+        },
+        {
+          "word": "Mummy,",
+          "start": 17.08,
+          "end": 18.616,
+          "score": 0.302
+        },
+        {
+          "word": "that",
+          "start": 18.636,
+          "end": 18.717,
+          "score": 0.016
+        },
+        {
+          "word": "you",
+          "start": 18.737,
+          "end": 18.797,
+          "score": 0.01
+        },
+        {
+          "word": "have",
+          "start": 18.818,
+          "end": 18.898,
+          "score": 0.003
+        },
+        {
+          "word": "to",
+          "start": 18.919,
+          "end": 18.959,
+          "score": 0.01
+        },
+        {
+          "word": "fight",
+          "start": 18.979,
+          "end": 19.08,
+          "score": 0.173
+        }
+      ]
+    },
+    {
+      "start": 19.06,
+      "end": 19.686,
+      "text": "That's how I get you.",
+      "words": [
+        {
+          "word": "That's",
+          "start": 19.06,
+          "end": 19.343,
+          "score": 0.211
+        },
+        {
+          "word": "how",
+          "start": 19.363,
+          "end": 19.424,
+          "score": 0.004
+        },
+        {
+          "word": "I",
+          "start": 19.444,
+          "end": 19.464,
+          "score": 0.036
+        },
+        {
+          "word": "get",
+          "start": 19.484,
+          "end": 19.545,
+          "score": 0.346
+        },
+        {
+          "word": "you.",
+          "start": 19.585,
+          "end": 19.686,
+          "score": 0.572
+        }
+      ]
+    },
+    {
+      "start": 19.706,
+      "end": 23.1,
+      "text": "That's how I can't get back at you.",
+      "words": [
+        {
+          "word": "That's",
+          "start": 19.706,
+          "end": 20.333,
+          "score": 0.568
+        },
+        {
+          "word": "how",
+          "start": 20.413,
+          "end": 20.878,
+          "score": 0.312
+        },
+        {
+          "word": "I",
+          "start": 20.898,
+          "end": 20.918,
+          "score": 0.0
+        },
+        {
+          "word": "can't",
+          "start": 20.939,
+          "end": 22.353,
+          "score": 0.565
+        },
+        {
+          "word": "get",
+          "start": 22.373,
+          "end": 22.434,
+          "score": 0.216
+        },
+        {
+          "word": "back",
+          "start": 22.595,
+          "end": 22.676,
+          "score": 0.0
+        },
+        {
+          "word": "at",
+          "start": 22.696,
+          "end": 22.999,
+          "score": 0.754
+        },
+        {
+          "word": "you.",
+          "start": 23.019,
+          "end": 23.1,
+          "score": 0.25
+        }
+      ]
+    },
+    {
+      "start": 23.08,
+      "end": 25.9,
+      "text": "I'll give you the boom.",
+      "words": [
+        {
+          "word": "I'll",
+          "start": 23.08,
+          "end": 24.034,
+          "score": 0.636
+        },
+        {
+          "word": "give",
+          "start": 24.906,
+          "end": 24.987,
+          "score": 0.0
+        },
+        {
+          "word": "you",
+          "start": 25.008,
+          "end": 25.21,
+          "score": 0.56
+        },
+        {
+          "word": "the",
+          "start": 25.434,
+          "end": 25.494,
+          "score": 0.001
+        },
+        {
+          "word": "boom.",
+          "start": 25.515,
+          "end": 25.9,
+          "score": 0.5
+        }
+      ]
+    },
+    {
+      "start": 25.88,
+      "end": 27.92,
+      "text": "Stopping your pants",
+      "words": [
+        {
+          "word": "Stopping",
+          "start": 25.88,
+          "end": 26.533,
+          "score": 0.403
+        },
+        {
+          "word": "your",
+          "start": 26.778,
+          "end": 26.9,
+          "score": 0.431
+        },
+        {
+          "word": "pants",
+          "start": 26.982,
+          "end": 27.92,
+          "score": 0.938
+        }
+      ]
+    },
+    {
+      "start": 27.9,
+      "end": 31.52,
+      "text": "That's right.",
+      "words": [
+        {
+          "word": "That's",
+          "start": 27.9,
+          "end": 30.651,
+          "score": 0.738
+        },
+        {
+          "word": "right.",
+          "start": 31.075,
+          "end": 31.52,
+          "score": 0.374
+        }
+      ]
+    },
+    {
+      "start": 31.5,
+      "end": 34.32,
+      "text": "with the blue sky and your brown eyes",
+      "words": [
+        {
+          "word": "with",
+          "start": 31.5,
+          "end": 32.352,
+          "score": 0.333
+        },
+        {
+          "word": "the",
+          "start": 32.778,
+          "end": 32.839,
+          "score": 0.248
+        },
+        {
+          "word": "blue",
+          "start": 33.103,
+          "end": 33.549,
+          "score": 0.658
+        },
+        {
+          "word": "sky",
+          "start": 33.57,
+          "end": 33.63,
+          "score": 0.225
+        },
+        {
+          "word": "and",
+          "start": 33.854,
+          "end": 33.914,
+          "score": 0.0
+        },
+        {
+          "word": "your",
+          "start": 33.935,
+          "end": 34.097,
+          "score": 0.528
+        },
+        {
+          "word": "brown",
+          "start": 34.117,
+          "end": 34.219,
+          "score": 0.009
+        },
+        {
+          "word": "eyes",
+          "start": 34.239,
+          "end": 34.32,
+          "score": 0.255
+        }
+      ]
+    },
+    {
+      "start": 34.3,
+      "end": 35.921,
+      "text": "drinking water in the sun",
+      "words": [
+        {
+          "word": "drinking",
+          "start": 34.3,
+          "end": 35.387,
+          "score": 0.214
+        },
+        {
+          "word": "water",
+          "start": 35.449,
+          "end": 35.695,
+          "score": 0.299
+        },
+        {
+          "word": "in",
+          "start": 35.715,
+          "end": 35.756,
+          "score": 0.0
+        },
+        {
+          "word": "the",
+          "start": 35.777,
+          "end": 35.838,
+          "score": 0.0
+        },
+        {
+          "word": "sun",
+          "start": 35.859,
+          "end": 35.921,
+          "score": 0.331
+        }
+      ]
+    },
+    {
+      "start": 35.9,
+      "end": 39.46,
+      "text": "Your body's sweating at mine",
+      "words": [
+        {
+          "word": "Your",
+          "start": 35.9,
+          "end": 36.547,
+          "score": 0.528
+        },
+        {
+          "word": "body's",
+          "start": 36.689,
+          "end": 37.255,
+          "score": 0.663
+        },
+        {
+          "word": "sweating",
+          "start": 37.68,
+          "end": 37.923,
+          "score": 0.199
+        },
+        {
+          "word": "at",
+          "start": 37.943,
+          "end": 38.064,
+          "score": 0.716
+        },
+        {
+          "word": "mine",
+          "start": 38.206,
+          "end": 39.46,
+          "score": 0.686
+        }
+      ]
+    },
+    {
+      "start": 39.44,
+      "end": 41.64,
+      "text": "If I don't see you",
+      "words": [
+        {
+          "word": "If",
+          "start": 39.44,
+          "end": 40.031,
+          "score": 0.746
+        },
+        {
+          "word": "I",
+          "start": 40.459,
+          "end": 40.479,
+          "score": 0.688
+        },
+        {
+          "word": "don't",
+          "start": 40.52,
+          "end": 40.846,
+          "score": 0.561
+        },
+        {
+          "word": "see",
+          "start": 40.887,
+          "end": 40.988,
+          "score": 0.433
+        },
+        {
+          "word": "you",
+          "start": 41.009,
+          "end": 41.64,
+          "score": 0.834
+        }
+      ]
+    },
+    {
+      "start": 41.62,
+      "end": 45.46,
+      "text": "I'll clear that moisture with calling you",
+      "words": [
+        {
+          "word": "I'll",
+          "start": 41.62,
+          "end": 43.52,
+          "score": 0.799
+        },
+        {
+          "word": "clear",
+          "start": 44.005,
+          "end": 44.429,
+          "score": 0.132
+        },
+        {
+          "word": "that",
+          "start": 44.45,
+          "end": 44.53,
+          "score": 0.013
+        },
+        {
+          "word": "moisture",
+          "start": 44.551,
+          "end": 44.854,
+          "score": 0.372
+        },
+        {
+          "word": "with",
+          "start": 45.076,
+          "end": 45.218,
+          "score": 0.204
+        },
+        {
+          "word": "calling",
+          "start": 45.238,
+          "end": 45.379,
+          "score": 0.0
+        },
+        {
+          "word": "you",
+          "start": 45.4,
+          "end": 45.46,
+          "score": 0.32
+        }
+      ]
+    },
+    {
+      "start": 45.44,
+      "end": 49.5,
+      "text": "send me ruby to come and get you",
+      "words": [
+        {
+          "word": "send",
+          "start": 45.44,
+          "end": 46.268,
+          "score": 0.202
+        },
+        {
+          "word": "me",
+          "start": 46.288,
+          "end": 47.137,
+          "score": 0.88
+        },
+        {
+          "word": "ruby",
+          "start": 47.218,
+          "end": 48.066,
+          "score": 0.78
+        },
+        {
+          "word": "to",
+          "start": 48.611,
+          "end": 49.076,
+          "score": 0.421
+        },
+        {
+          "word": "come",
+          "start": 49.096,
+          "end": 49.258,
+          "score": 0.4
+        },
+        {
+          "word": "and",
+          "start": 49.278,
+          "end": 49.339,
+          "score": 0.002
+        },
+        {
+          "word": "get",
+          "start": 49.359,
+          "end": 49.419,
+          "score": 0.027
+        },
+        {
+          "word": "you",
+          "start": 49.44,
+          "end": 49.5,
+          "score": 0.332
+        }
+      ]
+    },
+    {
+      "start": 50.02,
+      "end": 53.18,
+      "text": "If it's not with you and I feel nothing",
+      "words": [
+        {
+          "word": "If",
+          "start": 50.02,
+          "end": 50.83,
+          "score": 0.39
+        },
+        {
+          "word": "it's",
+          "start": 50.851,
+          "end": 51.56,
+          "score": 0.63
+        },
+        {
+          "word": "not",
+          "start": 51.58,
+          "end": 51.641,
+          "score": 0.007
+        },
+        {
+          "word": "with",
+          "start": 51.661,
+          "end": 51.742,
+          "score": 0.008
+        },
+        {
+          "word": "you",
+          "start": 51.762,
+          "end": 51.843,
+          "score": 0.42
+        },
+        {
+          "word": "and",
+          "start": 51.863,
+          "end": 52.046,
+          "score": 0.708
+        },
+        {
+          "word": "I",
+          "start": 52.147,
+          "end": 52.188,
+          "score": 0.868
+        },
+        {
+          "word": "feel",
+          "start": 52.228,
+          "end": 52.512,
+          "score": 0.378
+        },
+        {
+          "word": "nothing",
+          "start": 52.532,
+          "end": 53.18,
+          "score": 0.348
+        }
+      ]
+    },
+    {
+      "start": 53.16,
+      "end": 55.58,
+      "text": "I can't erase you",
+      "words": [
+        {
+          "word": "I",
+          "start": 53.16,
+          "end": 53.526,
+          "score": 0.806
+        },
+        {
+          "word": "can't",
+          "start": 53.546,
+          "end": 53.872,
+          "score": 0.389
+        },
+        {
+          "word": "erase",
+          "start": 53.994,
+          "end": 55.499,
+          "score": 0.714
+        },
+        {
+          "word": "you",
+          "start": 55.519,
+          "end": 55.58,
+          "score": 0.332
+        }
+      ]
+    },
+    {
+      "start": 55.56,
+      "end": 57.88,
+      "text": "If I don't see you",
+      "words": [
+        {
+          "word": "If",
+          "start": 55.56,
+          "end": 55.967,
+          "score": 0.446
+        },
+        {
+          "word": "I",
+          "start": 55.987,
+          "end": 56.272,
+          "score": 0.853
+        },
+        {
+          "word": "don't",
+          "start": 56.456,
+          "end": 57.718,
+          "score": 0.464
+        },
+        {
+          "word": "see",
+          "start": 57.738,
+          "end": 57.799,
+          "score": 0.003
+        },
+        {
+          "word": "you",
+          "start": 57.819,
+          "end": 57.88,
+          "score": 0.328
+        }
+      ]
+    },
+    {
+      "start": 57.86,
+      "end": 61.7,
+      "text": "I'll clear that moisture with calling you",
+      "words": [
+        {
+          "word": "I'll",
+          "start": 57.86,
+          "end": 60.245,
+          "score": 0.436
+        },
+        {
+          "word": "clear",
+          "start": 60.265,
+          "end": 60.528,
+          "score": 0.369
+        },
+        {
+          "word": "that",
+          "start": 60.669,
+          "end": 60.77,
+          "score": 0.354
+        },
+        {
+          "word": "moisture",
+          "start": 60.791,
+          "end": 61.357,
+          "score": 0.307
+        },
+        {
+          "word": "with",
+          "start": 61.377,
+          "end": 61.458,
+          "score": 0.0
+        },
+        {
+          "word": "calling",
+          "start": 61.478,
+          "end": 61.619,
+          "score": 0.002
+        },
+        {
+          "word": "you",
+          "start": 61.64,
+          "end": 61.7,
+          "score": 0.331
+        }
+      ]
+    },
+    {
+      "start": 61.68,
+      "end": 65.88,
+      "text": "send me ruby to come and get you",
+      "words": [
+        {
+          "word": "send",
+          "start": 61.68,
+          "end": 62.245,
+          "score": 0.347
+        },
+        {
+          "word": "me",
+          "start": 62.569,
+          "end": 62.69,
+          "score": 0.827
+        },
+        {
+          "word": "ruby",
+          "start": 63.82,
+          "end": 64.386,
+          "score": 0.373
+        },
+        {
+          "word": "to",
+          "start": 64.689,
+          "end": 64.85,
+          "score": 0.674
+        },
+        {
+          "word": "come",
+          "start": 64.871,
+          "end": 65.355,
+          "score": 0.374
+        },
+        {
+          "word": "and",
+          "start": 65.375,
+          "end": 65.436,
+          "score": 0.003
+        },
+        {
+          "word": "get",
+          "start": 65.456,
+          "end": 65.799,
+          "score": 0.286
+        },
+        {
+          "word": "you",
+          "start": 65.82,
+          "end": 65.88,
+          "score": 0.242
+        }
+      ]
+    },
+    {
+      "start": 65.86,
+      "end": 69.64,
+      "text": "If it's not with you and I feel nothing",
+      "words": [
+        {
+          "word": "If",
+          "start": 65.86,
+          "end": 66.81,
+          "score": 0.76
+        },
+        {
+          "word": "it's",
+          "start": 67.113,
+          "end": 68.185,
+          "score": 0.675
+        },
+        {
+          "word": "not",
+          "start": 68.205,
+          "end": 68.326,
+          "score": 0.738
+        },
+        {
+          "word": "with",
+          "start": 68.427,
+          "end": 69.175,
+          "score": 0.524
+        },
+        {
+          "word": "you",
+          "start": 69.195,
+          "end": 69.256,
+          "score": 0.014
+        },
+        {
+          "word": "and",
+          "start": 69.276,
+          "end": 69.337,
+          "score": 0.008
+        },
+        {
+          "word": "I",
+          "start": 69.357,
+          "end": 69.377,
+          "score": 0.027
+        },
+        {
+          "word": "feel",
+          "start": 69.398,
+          "end": 69.478,
+          "score": 0.028
+        },
+        {
+          "word": "nothing",
+          "start": 69.499,
+          "end": 69.64,
+          "score": 0.144
+        }
+      ]
+    },
+    {
+      "start": 69.62,
+      "end": 72.2,
+      "text": "I can't erase you",
+      "words": [
+        {
+          "word": "I",
+          "start": 69.62,
+          "end": 70.189,
+          "score": 0.72
+        },
+        {
+          "word": "can't",
+          "start": 70.209,
+          "end": 70.981,
+          "score": 0.604
+        },
+        {
+          "word": "erase",
+          "start": 72.017,
+          "end": 72.119,
+          "score": 0.014
+        },
+        {
+          "word": "you",
+          "start": 72.139,
+          "end": 72.2,
+          "score": 0.267
+        }
+      ]
+    },
+    {
+      "start": 72.18,
+      "end": 74.36,
+      "text": "as a scar after the wound",
+      "words": [
+        {
+          "word": "as",
+          "start": 72.18,
+          "end": 72.608,
+          "score": 0.738
+        },
+        {
+          "word": "a",
+          "start": 72.771,
+          "end": 72.832,
+          "score": 0.55
+        },
+        {
+          "word": "scar",
+          "start": 72.852,
+          "end": 73.097,
+          "score": 0.485
+        },
+        {
+          "word": "after",
+          "start": 73.117,
+          "end": 73.505,
+          "score": 0.59
+        },
+        {
+          "word": "the",
+          "start": 73.708,
+          "end": 74.218,
+          "score": 0.576
+        },
+        {
+          "word": "wound",
+          "start": 74.238,
+          "end": 74.36,
+          "score": 0.301
+        }
+      ]
+    },
+    {
+      "start": 74.34,
+      "end": 76.46,
+      "text": "I tagged your skin and you tagged mine.",
+      "words": [
+        {
+          "word": "I",
+          "start": 74.34,
+          "end": 74.625,
+          "score": 0.184
+        },
+        {
+          "word": "tagged",
+          "start": 74.768,
+          "end": 74.992,
+          "score": 0.28
+        },
+        {
+          "word": "your",
+          "start": 75.033,
+          "end": 75.319,
+          "score": 0.099
+        },
+        {
+          "word": "skin",
+          "start": 75.339,
+          "end": 75.421,
+          "score": 0.001
+        },
+        {
+          "word": "and",
+          "start": 75.441,
+          "end": 75.543,
+          "score": 0.532
+        },
+        {
+          "word": "you",
+          "start": 75.563,
+          "end": 75.645,
+          "score": 0.44
+        },
+        {
+          "word": "tagged",
+          "start": 75.767,
+          "end": 76.053,
+          "score": 0.188
+        },
+        {
+          "word": "mine.",
+          "start": 76.175,
+          "end": 76.46,
+          "score": 0.337
+        }
+      ]
+    },
+    {
+      "start": 76.44,
+      "end": 78.46,
+      "text": "eat more than four times at once",
+      "words": [
+        {
+          "word": "eat",
+          "start": 76.44,
+          "end": 76.93,
+          "score": 0.304
+        },
+        {
+          "word": "more",
+          "start": 76.95,
+          "end": 77.195,
+          "score": 0.573
+        },
+        {
+          "word": "than",
+          "start": 77.318,
+          "end": 77.42,
+          "score": 0.235
+        },
+        {
+          "word": "four",
+          "start": 77.44,
+          "end": 77.562,
+          "score": 0.414
+        },
+        {
+          "word": "times",
+          "start": 77.644,
+          "end": 77.93,
+          "score": 0.41
+        },
+        {
+          "word": "at",
+          "start": 78.318,
+          "end": 78.358,
+          "score": 0.0
+        },
+        {
+          "word": "once",
+          "start": 78.379,
+          "end": 78.46,
+          "score": 0.25
+        }
+      ]
+    },
+    {
+      "start": 78.44,
+      "end": 81.74,
+      "text": "every day of the month we felt that we became necessary",
+      "words": [
+        {
+          "word": "every",
+          "start": 78.44,
+          "end": 79.108,
+          "score": 0.296
+        },
+        {
+          "word": "day",
+          "start": 79.189,
+          "end": 79.29,
+          "score": 0.113
+        },
+        {
+          "word": "of",
+          "start": 79.311,
+          "end": 79.351,
+          "score": 0.438
+        },
+        {
+          "word": "the",
+          "start": 79.392,
+          "end": 79.493,
+          "score": 0.557
+        },
+        {
+          "word": "month",
+          "start": 79.614,
+          "end": 79.918,
+          "score": 0.708
+        },
+        {
+          "word": "we",
+          "start": 80.04,
+          "end": 80.08,
+          "score": 0.847
+        },
+        {
+          "word": "felt",
+          "start": 80.181,
+          "end": 80.404,
+          "score": 0.504
+        },
+        {
+          "word": "that",
+          "start": 80.424,
+          "end": 80.505,
+          "score": 0.008
+        },
+        {
+          "word": "we",
+          "start": 80.525,
+          "end": 80.647,
+          "score": 0.495
+        },
+        {
+          "word": "became",
+          "start": 80.667,
+          "end": 80.829,
+          "score": 0.216
+        },
+        {
+          "word": "necessary",
+          "start": 80.89,
+          "end": 81.74,
+          "score": 0.827
+        }
+      ]
+    },
+    {
+      "start": 82.38,
+      "end": 84.74,
+      "text": "At night we killed ourselves in the room",
+      "words": [
+        {
+          "word": "At",
+          "start": 82.38,
+          "end": 83.153,
+          "score": 0.448
+        },
+        {
+          "word": "night",
+          "start": 83.174,
+          "end": 83.642,
+          "score": 0.226
+        },
+        {
+          "word": "we",
+          "start": 83.662,
+          "end": 83.703,
+          "score": 0.0
+        },
+        {
+          "word": "killed",
+          "start": 83.723,
+          "end": 84.028,
+          "score": 0.144
+        },
+        {
+          "word": "ourselves",
+          "start": 84.049,
+          "end": 84.293,
+          "score": 0.398
+        },
+        {
+          "word": "in",
+          "start": 84.415,
+          "end": 84.455,
+          "score": 0.001
+        },
+        {
+          "word": "the",
+          "start": 84.476,
+          "end": 84.639,
+          "score": 0.392
+        },
+        {
+          "word": "room",
+          "start": 84.659,
+          "end": 84.74,
+          "score": 0.326
+        }
+      ]
+    },
+    {
+      "start": 84.72,
+      "end": 86.88,
+      "text": "Mami, you're mine, I don't share you.",
+      "words": [
+        {
+          "word": "Mami,",
+          "start": 84.72,
+          "end": 85.209,
+          "score": 0.605
+        },
+        {
+          "word": "you're",
+          "start": 85.23,
+          "end": 85.474,
+          "score": 0.559
+        },
+        {
+          "word": "mine,",
+          "start": 85.494,
+          "end": 86.187,
+          "score": 0.431
+        },
+        {
+          "word": "I",
+          "start": 86.208,
+          "end": 86.228,
+          "score": 0.598
+        },
+        {
+          "word": "don't",
+          "start": 86.35,
+          "end": 86.493,
+          "score": 0.394
+        },
+        {
+          "word": "share",
+          "start": 86.514,
+          "end": 86.778,
+          "score": 0.542
+        },
+        {
+          "word": "you.",
+          "start": 86.799,
+          "end": 86.88,
+          "score": 0.25
+        }
+      ]
+    },
+    {
+      "start": 86.86,
+      "end": 88.86,
+      "text": "A movie as tim barto's",
+      "words": [
+        {
+          "word": "A",
+          "start": 86.86,
+          "end": 87.187,
+          "score": 0.477
+        },
+        {
+          "word": "movie",
+          "start": 87.227,
+          "end": 87.799,
+          "score": 0.504
+        },
+        {
+          "word": "as",
+          "start": 88.003,
+          "end": 88.064,
+          "score": 0.052
+        },
+        {
+          "word": "tim",
+          "start": 88.085,
+          "end": 88.513,
+          "score": 0.683
+        },
+        {
+          "word": "barto's",
+          "start": 88.534,
+          "end": 88.86,
+          "score": 0.554
+        }
+      ]
+    },
+    {
+      "start": 89.94,
+      "end": 92.94,
+      "text": "If I'm not with you, I feel nothing.",
+      "words": [
+        {
+          "word": "If",
+          "start": 89.94,
+          "end": 90.913,
+          "score": 0.418
+        },
+        {
+          "word": "I'm",
+          "start": 90.933,
+          "end": 91.035,
+          "score": 0.416
+        },
+        {
+          "word": "not",
+          "start": 91.055,
+          "end": 91.258,
+          "score": 0.545
+        },
+        {
+          "word": "with",
+          "start": 91.278,
+          "end": 91.359,
+          "score": 0.002
+        },
+        {
+          "word": "you,",
+          "start": 91.379,
+          "end": 91.785,
+          "score": 0.733
+        },
+        {
+          "word": "I",
+          "start": 91.805,
+          "end": 91.825,
+          "score": 0.986
+        },
+        {
+          "word": "feel",
+          "start": 91.886,
+          "end": 91.987,
+          "score": 0.602
+        },
+        {
+          "word": "nothing.",
+          "start": 92.048,
+          "end": 92.94,
+          "score": 0.681
+        }
+      ]
+    },
+    {
+      "start": 92.92,
+      "end": 95.48,
+      "text": "He tells me I'm your weakness",
+      "words": [
+        {
+          "word": "He",
+          "start": 92.92,
+          "end": 93.448,
+          "score": 0.351
+        },
+        {
+          "word": "tells",
+          "start": 93.469,
+          "end": 93.712,
+          "score": 0.768
+        },
+        {
+          "word": "me",
+          "start": 94.281,
+          "end": 94.383,
+          "score": 0.537
+        },
+        {
+          "word": "I'm",
+          "start": 94.403,
+          "end": 94.546,
+          "score": 0.385
+        },
+        {
+          "word": "your",
+          "start": 94.566,
+          "end": 94.647,
+          "score": 0.002
+        },
+        {
+          "word": "weakness",
+          "start": 94.668,
+          "end": 95.48,
+          "score": 0.323
+        }
+      ]
+    },
+    {
+      "start": 95.46,
+      "end": 98.18,
+      "text": "That's why we always come back",
+      "words": [
+        {
+          "word": "That's",
+          "start": 95.46,
+          "end": 96.475,
+          "score": 0.543
+        },
+        {
+          "word": "why",
+          "start": 96.495,
+          "end": 96.556,
+          "score": 0.327
+        },
+        {
+          "word": "we",
+          "start": 96.719,
+          "end": 97.043,
+          "score": 0.776
+        },
+        {
+          "word": "always",
+          "start": 97.815,
+          "end": 97.937,
+          "score": 0.0
+        },
+        {
+          "word": "come",
+          "start": 97.957,
+          "end": 98.079,
+          "score": 0.397
+        },
+        {
+          "word": "back",
+          "start": 98.099,
+          "end": 98.18,
+          "score": 0.249
+        }
+      ]
+    },
+    {
+      "start": 98.16,
+      "end": 100.16,
+      "text": "but we fight",
+      "words": [
+        {
+          "word": "but",
+          "start": 98.16,
+          "end": 99.201,
+          "score": 0.418
+        },
+        {
+          "word": "we",
+          "start": 99.221,
+          "end": 99.426,
+          "score": 0.614
+        },
+        {
+          "word": "fight",
+          "start": 99.446,
+          "end": 100.16,
+          "score": 0.487
+        }
+      ]
+    },
+    {
+      "start": 100.14,
+      "end": 104.54,
+      "text": "Just with looking we both read",
+      "words": [
+        {
+          "word": "Just",
+          "start": 100.14,
+          "end": 100.846,
+          "score": 0.434
+        },
+        {
+          "word": "with",
+          "start": 101.351,
+          "end": 102.239,
+          "score": 0.34
+        },
+        {
+          "word": "looking",
+          "start": 102.259,
+          "end": 103.168,
+          "score": 0.48
+        },
+        {
+          "word": "we",
+          "start": 103.289,
+          "end": 103.43,
+          "score": 0.762
+        },
+        {
+          "word": "both",
+          "start": 103.45,
+          "end": 103.531,
+          "score": 0.006
+        },
+        {
+          "word": "read",
+          "start": 103.551,
+          "end": 104.54,
+          "score": 0.723
+        }
+      ]
+    },
+    {
+      "start": 104.52,
+      "end": 106.72,
+      "text": "If I don't see you",
+      "words": [
+        {
+          "word": "If",
+          "start": 104.52,
+          "end": 104.805,
+          "score": 0.43
+        },
+        {
+          "word": "I",
+          "start": 104.826,
+          "end": 105.131,
+          "score": 0.853
+        },
+        {
+          "word": "don't",
+          "start": 105.274,
+          "end": 105.783,
+          "score": 0.615
+        },
+        {
+          "word": "see",
+          "start": 106.007,
+          "end": 106.598,
+          "score": 0.54
+        },
+        {
+          "word": "you",
+          "start": 106.619,
+          "end": 106.72,
+          "score": 0.664
+        }
+      ]
+    },
+    {
+      "start": 106.7,
+      "end": 110.5,
+      "text": "I swear moisture with calling you",
+      "words": [
+        {
+          "word": "I",
+          "start": 106.7,
+          "end": 108.317,
+          "score": 0.799
+        },
+        {
+          "word": "swear",
+          "start": 108.358,
+          "end": 109.611,
+          "score": 0.447
+        },
+        {
+          "word": "moisture",
+          "start": 109.631,
+          "end": 110.076,
+          "score": 0.183
+        },
+        {
+          "word": "with",
+          "start": 110.096,
+          "end": 110.258,
+          "score": 0.276
+        },
+        {
+          "word": "calling",
+          "start": 110.278,
+          "end": 110.419,
+          "score": 0.0
+        },
+        {
+          "word": "you",
+          "start": 110.44,
+          "end": 110.5,
+          "score": 0.332
+        }
+      ]
+    },
+    {
+      "start": 110.48,
+      "end": 114.42,
+      "text": "send me ruby to come and get you",
+      "words": [
+        {
+          "word": "send",
+          "start": 110.48,
+          "end": 111.349,
+          "score": 0.572
+        },
+        {
+          "word": "me",
+          "start": 111.369,
+          "end": 111.854,
+          "score": 0.786
+        },
+        {
+          "word": "ruby",
+          "start": 112.642,
+          "end": 113.43,
+          "score": 0.201
+        },
+        {
+          "word": "to",
+          "start": 113.45,
+          "end": 113.491,
+          "score": 0.0
+        },
+        {
+          "word": "come",
+          "start": 113.511,
+          "end": 113.652,
+          "score": 0.301
+        },
+        {
+          "word": "and",
+          "start": 113.673,
+          "end": 113.733,
+          "score": 0.001
+        },
+        {
+          "word": "get",
+          "start": 113.753,
+          "end": 114.218,
+          "score": 0.319
+        },
+        {
+          "word": "you",
+          "start": 114.238,
+          "end": 114.42,
+          "score": 0.617
+        }
+      ]
+    },
+    {
+      "start": 115.2,
+      "end": 118.44,
+      "text": "If I'm not with you, I feel nothing.",
+      "words": [
+        {
+          "word": "If",
+          "start": 115.2,
+          "end": 115.382,
+          "score": 0.479
+        },
+        {
+          "word": "I'm",
+          "start": 115.403,
+          "end": 115.828,
+          "score": 0.445
+        },
+        {
+          "word": "not",
+          "start": 115.848,
+          "end": 116.395,
+          "score": 0.785
+        },
+        {
+          "word": "with",
+          "start": 116.415,
+          "end": 117.002,
+          "score": 0.234
+        },
+        {
+          "word": "you,",
+          "start": 117.023,
+          "end": 117.225,
+          "score": 0.263
+        },
+        {
+          "word": "I",
+          "start": 117.245,
+          "end": 117.549,
+          "score": 0.582
+        },
+        {
+          "word": "feel",
+          "start": 118.177,
+          "end": 118.258,
+          "score": 0.005
+        },
+        {
+          "word": "nothing.",
+          "start": 118.278,
+          "end": 118.44,
+          "score": 0.125
+        }
+      ]
+    },
+    {
+      "start": 118.42,
+      "end": 120.96,
+      "text": "I can't erase you",
+      "words": [
+        {
+          "word": "I",
+          "start": 118.42,
+          "end": 119.009,
+          "score": 0.732
+        },
+        {
+          "word": "can't",
+          "start": 119.03,
+          "end": 119.599,
+          "score": 0.273
+        },
+        {
+          "word": "erase",
+          "start": 119.619,
+          "end": 119.802,
+          "score": 0.314
+        },
+        {
+          "word": "you",
+          "start": 120.899,
+          "end": 120.96,
+          "score": 0.304
+        }
+      ]
+    },
+    {
+      "start": 120.94,
+      "end": 123.22,
+      "text": "If I don't see you",
+      "words": [
+        {
+          "word": "If",
+          "start": 120.94,
+          "end": 121.368,
+          "score": 0.364
+        },
+        {
+          "word": "I",
+          "start": 121.388,
+          "end": 121.408,
+          "score": 0.549
+        },
+        {
+          "word": "don't",
+          "start": 121.469,
+          "end": 122.854,
+          "score": 0.526
+        },
+        {
+          "word": "see",
+          "start": 122.874,
+          "end": 122.935,
+          "score": 0.005
+        },
+        {
+          "word": "you",
+          "start": 122.956,
+          "end": 123.22,
+          "score": 0.758
+        }
+      ]
+    },
+    {
+      "start": 123.2,
+      "end": 126.82,
+      "text": "I swear moisture with calling you",
+      "words": [
+        {
+          "word": "I",
+          "start": 123.2,
+          "end": 124.231,
+          "score": 0.864
+        },
+        {
+          "word": "swear",
+          "start": 124.252,
+          "end": 124.555,
+          "score": 0.213
+        },
+        {
+          "word": "moisture",
+          "start": 124.575,
+          "end": 126.476,
+          "score": 0.473
+        },
+        {
+          "word": "with",
+          "start": 126.497,
+          "end": 126.578,
+          "score": 0.008
+        },
+        {
+          "word": "calling",
+          "start": 126.598,
+          "end": 126.739,
+          "score": 0.002
+        },
+        {
+          "word": "you",
+          "start": 126.76,
+          "end": 126.82,
+          "score": 0.333
+        }
+      ]
+    },
+    {
+      "start": 126.8,
+      "end": 131.08,
+      "text": "send me ruby to come and get you",
+      "words": [
+        {
+          "word": "send",
+          "start": 126.8,
+          "end": 127.789,
+          "score": 0.79
+        },
+        {
+          "word": "me",
+          "start": 128.415,
+          "end": 128.516,
+          "score": 0.444
+        },
+        {
+          "word": "ruby",
+          "start": 128.758,
+          "end": 128.839,
+          "score": 0.145
+        },
+        {
+          "word": "to",
+          "start": 129.041,
+          "end": 129.081,
+          "score": 0.358
+        },
+        {
+          "word": "come",
+          "start": 129.223,
+          "end": 129.445,
+          "score": 0.202
+        },
+        {
+          "word": "and",
+          "start": 129.606,
+          "end": 130.475,
+          "score": 0.461
+        },
+        {
+          "word": "get",
+          "start": 130.495,
+          "end": 130.939,
+          "score": 0.619
+        },
+        {
+          "word": "you",
+          "start": 130.959,
+          "end": 131.08,
+          "score": 0.841
+        }
+      ]
+    },
+    {
+      "start": 131.06,
+      "end": 134.68,
+      "text": "If I'm not with you, you feel nothing.",
+      "words": [
+        {
+          "word": "If",
+          "start": 131.06,
+          "end": 131.464,
+          "score": 0.471
+        },
+        {
+          "word": "I'm",
+          "start": 131.485,
+          "end": 131.626,
+          "score": 0.282
+        },
+        {
+          "word": "not",
+          "start": 131.647,
+          "end": 132.233,
+          "score": 0.435
+        },
+        {
+          "word": "with",
+          "start": 132.253,
+          "end": 132.577,
+          "score": 0.476
+        },
+        {
+          "word": "you,",
+          "start": 132.718,
+          "end": 133.224,
+          "score": 0.608
+        },
+        {
+          "word": "you",
+          "start": 133.285,
+          "end": 133.386,
+          "score": 0.324
+        },
+        {
+          "word": "feel",
+          "start": 133.406,
+          "end": 133.588,
+          "score": 0.551
+        },
+        {
+          "word": "nothing.",
+          "start": 133.689,
+          "end": 134.68,
+          "score": 0.384
+        }
+      ]
+    },
+    {
+      "start": 134.66,
+      "end": 137.22,
+      "text": "while trying to erase me",
+      "words": [
+        {
+          "word": "while",
+          "start": 134.66,
+          "end": 135.107,
+          "score": 0.513
+        },
+        {
+          "word": "trying",
+          "start": 135.31,
+          "end": 135.859,
+          "score": 0.184
+        },
+        {
+          "word": "to",
+          "start": 135.879,
+          "end": 136.082,
+          "score": 0.88
+        },
+        {
+          "word": "erase",
+          "start": 136.611,
+          "end": 137.159,
+          "score": 0.185
+        },
+        {
+          "word": "me",
+          "start": 137.18,
+          "end": 137.22,
+          "score": 0.448
+        }
+      ]
+    },
+    {
+      "start": 138.84,
+      "end": 142.82,
+      "text": "Don't leave with our whole plan.",
+      "words": [
+        {
+          "word": "Don't",
+          "start": 138.84,
+          "end": 140.901,
+          "score": 0.447
+        },
+        {
+          "word": "leave",
+          "start": 140.921,
+          "end": 141.022,
+          "score": 0.143
+        },
+        {
+          "word": "with",
+          "start": 141.426,
+          "end": 141.507,
+          "score": 0.241
+        },
+        {
+          "word": "our",
+          "start": 141.689,
+          "end": 142.032,
+          "score": 0.683
+        },
+        {
+          "word": "whole",
+          "start": 142.073,
+          "end": 142.174,
+          "score": 0.0
+        },
+        {
+          "word": "plan.",
+          "start": 142.194,
+          "end": 142.82,
+          "score": 0.871
+        }
+      ]
+    },
+    {
+      "start": 143.6,
+      "end": 146.84,
+      "text": "by bawama going to the locations",
+      "words": [
+        {
+          "word": "by",
+          "start": 143.6,
+          "end": 143.944,
+          "score": 0.372
+        },
+        {
+          "word": "bawama",
+          "start": 143.965,
+          "end": 145.301,
+          "score": 0.682
+        },
+        {
+          "word": "going",
+          "start": 145.645,
+          "end": 145.747,
+          "score": 0.02
+        },
+        {
+          "word": "to",
+          "start": 145.767,
+          "end": 145.807,
+          "score": 0.364
+        },
+        {
+          "word": "the",
+          "start": 145.828,
+          "end": 145.888,
+          "score": 0.184
+        },
+        {
+          "word": "locations",
+          "start": 145.969,
+          "end": 146.84,
+          "score": 0.469
+        }
+      ]
+    },
+    {
+      "start": 146.82,
+      "end": 150.94,
+      "text": "by whom you come out after signs",
+      "words": [
+        {
+          "word": "by",
+          "start": 146.82,
+          "end": 148.234,
+          "score": 0.424
+        },
+        {
+          "word": "whom",
+          "start": 148.254,
+          "end": 149.042,
+          "score": 0.234
+        },
+        {
+          "word": "you",
+          "start": 149.062,
+          "end": 149.244,
+          "score": 0.32
+        },
+        {
+          "word": "come",
+          "start": 149.264,
+          "end": 149.971,
+          "score": 0.596
+        },
+        {
+          "word": "out",
+          "start": 150.153,
+          "end": 150.314,
+          "score": 0.273
+        },
+        {
+          "word": "after",
+          "start": 150.334,
+          "end": 150.516,
+          "score": 0.326
+        },
+        {
+          "word": "signs",
+          "start": 150.839,
+          "end": 150.94,
+          "score": 0.22
+        }
+      ]
+    },
+    {
+      "start": 150.92,
+      "end": 154.86,
+      "text": "That they'll take me to you for another night",
+      "words": [
+        {
+          "word": "That",
+          "start": 150.92,
+          "end": 152.213,
+          "score": 0.198
+        },
+        {
+          "word": "they'll",
+          "start": 152.233,
+          "end": 152.638,
+          "score": 0.249
+        },
+        {
+          "word": "take",
+          "start": 152.678,
+          "end": 152.759,
+          "score": 0.158
+        },
+        {
+          "word": "me",
+          "start": 152.819,
+          "end": 153.042,
+          "score": 0.416
+        },
+        {
+          "word": "to",
+          "start": 153.122,
+          "end": 153.224,
+          "score": 0.434
+        },
+        {
+          "word": "you",
+          "start": 153.244,
+          "end": 153.628,
+          "score": 0.615
+        },
+        {
+          "word": "for",
+          "start": 154.072,
+          "end": 154.133,
+          "score": 0.011
+        },
+        {
+          "word": "another",
+          "start": 154.153,
+          "end": 154.739,
+          "score": 0.249
+        },
+        {
+          "word": "night",
+          "start": 154.759,
+          "end": 154.86,
+          "score": 0.197
+        }
+      ]
+    },
+    {
+      "start": 154.84,
+      "end": 156.98,
+      "text": "I'm a president.",
+      "words": [
+        {
+          "word": "I'm",
+          "start": 154.84,
+          "end": 155.288,
+          "score": 0.669
+        },
+        {
+          "word": "a",
+          "start": 155.39,
+          "end": 155.9,
+          "score": 0.704
+        },
+        {
+          "word": "president.",
+          "start": 155.92,
+          "end": 156.98,
+          "score": 0.227
+        }
+      ]
+    },
+    {
+      "start": 156.96,
+      "end": 159.08,
+      "text": "They'll be good without you",
+      "words": [
+        {
+          "word": "They'll",
+          "start": 156.96,
+          "end": 157.551,
+          "score": 0.28
+        },
+        {
+          "word": "be",
+          "start": 157.572,
+          "end": 157.735,
+          "score": 0.669
+        },
+        {
+          "word": "good",
+          "start": 157.755,
+          "end": 158.102,
+          "score": 0.568
+        },
+        {
+          "word": "without",
+          "start": 158.856,
+          "end": 158.999,
+          "score": 0.007
+        },
+        {
+          "word": "you",
+          "start": 159.019,
+          "end": 159.08,
+          "score": 0.301
+        }
+      ]
+    },
+    {
+      "start": 159.06,
+      "end": 160.88,
+      "text": "I don't wanna dance anymore",
+      "words": [
+        {
+          "word": "I",
+          "start": 159.06,
+          "end": 159.49,
+          "score": 0.74
+        },
+        {
+          "word": "don't",
+          "start": 159.51,
+          "end": 160.144,
+          "score": 0.609
+        },
+        {
+          "word": "wanna",
+          "start": 160.226,
+          "end": 160.328,
+          "score": 0.398
+        },
+        {
+          "word": "dance",
+          "start": 160.369,
+          "end": 160.533,
+          "score": 0.108
+        },
+        {
+          "word": "anymore",
+          "start": 160.553,
+          "end": 160.88,
+          "score": 0.397
+        }
+      ]
+    },
+    {
+      "start": 160.86,
+      "end": 162.9,
+      "text": "drunk on the balcony",
+      "words": [
+        {
+          "word": "drunk",
+          "start": 160.86,
+          "end": 162.166,
+          "score": 0.161
+        },
+        {
+          "word": "on",
+          "start": 162.186,
+          "end": 162.227,
+          "score": 0.0
+        },
+        {
+          "word": "the",
+          "start": 162.247,
+          "end": 162.309,
+          "score": 0.002
+        },
+        {
+          "word": "balcony",
+          "start": 162.329,
+          "end": 162.9,
+          "score": 0.803
+        }
+      ]
+    },
+    {
+      "start": 162.88,
+      "end": 165.06,
+      "text": "If you're not looking at",
+      "words": [
+        {
+          "word": "If",
+          "start": 162.88,
+          "end": 163.328,
+          "score": 0.4
+        },
+        {
+          "word": "you're",
+          "start": 163.349,
+          "end": 164.164,
+          "score": 0.588
+        },
+        {
+          "word": "not",
+          "start": 164.184,
+          "end": 164.245,
+          "score": 0.002
+        },
+        {
+          "word": "looking",
+          "start": 164.266,
+          "end": 164.612,
+          "score": 0.247
+        },
+        {
+          "word": "at",
+          "start": 164.632,
+          "end": 165.06,
+          "score": 0.902
+        }
+      ]
+    },
+    {
+      "start": 165.04,
+      "end": 166.98,
+      "text": "I wish I could get back.",
+      "words": [
+        {
+          "word": "I",
+          "start": 165.04,
+          "end": 165.653,
+          "score": 0.817
+        },
+        {
+          "word": "wish",
+          "start": 165.673,
+          "end": 165.755,
+          "score": 0.204
+        },
+        {
+          "word": "I",
+          "start": 165.837,
+          "end": 165.857,
+          "score": 0.0
+        },
+        {
+          "word": "could",
+          "start": 165.877,
+          "end": 166.49,
+          "score": 0.326
+        },
+        {
+          "word": "get",
+          "start": 166.511,
+          "end": 166.633,
+          "score": 0.239
+        },
+        {
+          "word": "back.",
+          "start": 166.654,
+          "end": 166.98,
+          "score": 0.551
+        }
+      ]
+    },
+    {
+      "start": 166.96,
+      "end": 169.08,
+      "text": "Also from the seawater",
+      "words": [
+        {
+          "word": "Also",
+          "start": 166.96,
+          "end": 167.47,
+          "score": 0.553
+        },
+        {
+          "word": "from",
+          "start": 167.49,
+          "end": 167.572,
+          "score": 0.0
+        },
+        {
+          "word": "the",
+          "start": 167.592,
+          "end": 167.837,
+          "score": 0.49
+        },
+        {
+          "word": "seawater",
+          "start": 167.857,
+          "end": 169.08,
+          "score": 0.514
+        }
+      ]
+    },
+    {
+      "start": 169.06,
+      "end": 171.62,
+      "text": "I haven't seen you for a while.",
+      "words": [
+        {
+          "word": "I",
+          "start": 169.06,
+          "end": 169.873,
+          "score": 0.746
+        },
+        {
+          "word": "haven't",
+          "start": 169.893,
+          "end": 170.421,
+          "score": 0.442
+        },
+        {
+          "word": "seen",
+          "start": 170.442,
+          "end": 170.564,
+          "score": 0.334
+        },
+        {
+          "word": "you",
+          "start": 170.584,
+          "end": 170.645,
+          "score": 0.005
+        },
+        {
+          "word": "for",
+          "start": 170.665,
+          "end": 170.848,
+          "score": 0.288
+        },
+        {
+          "word": "a",
+          "start": 170.868,
+          "end": 170.889,
+          "score": 0.095
+        },
+        {
+          "word": "while.",
+          "start": 170.909,
+          "end": 171.62,
+          "score": 0.433
+        }
+      ]
+    },
+    {
+      "start": 172.4,
+      "end": 175.42,
+      "text": "That illegal body I'll clear him",
+      "words": [
+        {
+          "word": "That",
+          "start": 172.4,
+          "end": 173.474,
+          "score": 0.59
+        },
+        {
+          "word": "illegal",
+          "start": 173.596,
+          "end": 174.224,
+          "score": 0.573
+        },
+        {
+          "word": "body",
+          "start": 174.245,
+          "end": 174.609,
+          "score": 0.42
+        },
+        {
+          "word": "I'll",
+          "start": 174.63,
+          "end": 174.954,
+          "score": 0.317
+        },
+        {
+          "word": "clear",
+          "start": 174.974,
+          "end": 175.339,
+          "score": 0.185
+        },
+        {
+          "word": "him",
+          "start": 175.359,
+          "end": 175.42,
+          "score": 0.333
+        }
+      ]
+    },
+    {
+      "start": 176.96,
+      "end": 179.42,
+      "text": "I'm drawing with your fingers",
+      "words": [
+        {
+          "word": "I'm",
+          "start": 176.96,
+          "end": 177.773,
+          "score": 0.563
+        },
+        {
+          "word": "drawing",
+          "start": 178.139,
+          "end": 178.282,
+          "score": 0.109
+        },
+        {
+          "word": "with",
+          "start": 178.465,
+          "end": 178.648,
+          "score": 0.554
+        },
+        {
+          "word": "your",
+          "start": 178.871,
+          "end": 179.258,
+          "score": 0.316
+        },
+        {
+          "word": "fingers",
+          "start": 179.278,
+          "end": 179.42,
+          "score": 0.15
+        }
+      ]
+    },
+    {
+      "start": 179.96,
+      "end": 181.381,
+      "text": "in the sand",
+      "words": [
+        {
+          "word": "in",
+          "start": 179.96,
+          "end": 180.434,
+          "score": 0.756
+        },
+        {
+          "word": "the",
+          "start": 180.619,
+          "end": 180.784,
+          "score": 0.366
+        },
+        {
+          "word": "sand",
+          "start": 181.298,
+          "end": 181.381,
+          "score": 0.27
+        }
+      ]
+    },
+    {
+      "start": 181.36,
+      "end": 183.02,
+      "text": "See how you get more hit.",
+      "words": [
+        {
+          "word": "See",
+          "start": 181.36,
+          "end": 182.098,
+          "score": 0.668
+        },
+        {
+          "word": "how",
+          "start": 182.221,
+          "end": 182.385,
+          "score": 0.476
+        },
+        {
+          "word": "you",
+          "start": 182.447,
+          "end": 182.508,
+          "score": 0.232
+        },
+        {
+          "word": "get",
+          "start": 182.57,
+          "end": 182.631,
+          "score": 0.001
+        },
+        {
+          "word": "more",
+          "start": 182.651,
+          "end": 182.918,
+          "score": 0.422
+        },
+        {
+          "word": "hit.",
+          "start": 182.939,
+          "end": 183.02,
+          "score": 0.25
+        }
+      ]
+    },
+    {
+      "start": 183.0,
+      "end": 185.8,
+      "text": "Because the sun's burning",
+      "words": [
+        {
+          "word": "Because",
+          "start": 183.0,
+          "end": 184.055,
+          "score": 0.484
+        },
+        {
+          "word": "the",
+          "start": 184.075,
+          "end": 185.516,
+          "score": 0.599
+        },
+        {
+          "word": "sun's",
+          "start": 185.536,
+          "end": 185.638,
+          "score": 0.017
+        },
+        {
+          "word": "burning",
+          "start": 185.658,
+          "end": 185.8,
+          "score": 0.126
+        }
+      ]
+    },
+    {
+      "start": 185.78,
+      "end": 187.421,
+      "text": "If I don't see you",
+      "words": [
+        {
+          "word": "If",
+          "start": 185.78,
+          "end": 186.457,
+          "score": 0.686
+        },
+        {
+          "word": "I",
+          "start": 186.559,
+          "end": 186.58,
+          "score": 0.763
+        },
+        {
+          "word": "don't",
+          "start": 186.703,
+          "end": 187.256,
+          "score": 0.368
+        },
+        {
+          "word": "see",
+          "start": 187.277,
+          "end": 187.338,
+          "score": 0.027
+        },
+        {
+          "word": "you",
+          "start": 187.359,
+          "end": 187.421,
+          "score": 0.331
+        }
+      ]
+    },
+    {
+      "start": 188.12,
+      "end": 191.88,
+      "text": "I swear moisture with calling you",
+      "words": [
+        {
+          "word": "I",
+          "start": 188.12,
+          "end": 188.605,
+          "score": 0.873
+        },
+        {
+          "word": "swear",
+          "start": 188.646,
+          "end": 189.495,
+          "score": 0.434
+        },
+        {
+          "word": "moisture",
+          "start": 190.485,
+          "end": 191.355,
+          "score": 0.312
+        },
+        {
+          "word": "with",
+          "start": 191.375,
+          "end": 191.456,
+          "score": 0.003
+        },
+        {
+          "word": "calling",
+          "start": 191.476,
+          "end": 191.799,
+          "score": 0.301
+        },
+        {
+          "word": "you",
+          "start": 191.82,
+          "end": 191.88,
+          "score": 0.331
+        }
+      ]
+    },
+    {
+      "start": 191.86,
+      "end": 195.42,
+      "text": "send me ruby to come and get you",
+      "words": [
+        {
+          "word": "send",
+          "start": 191.86,
+          "end": 192.467,
+          "score": 0.314
+        },
+        {
+          "word": "me",
+          "start": 192.73,
+          "end": 193.863,
+          "score": 0.878
+        },
+        {
+          "word": "ruby",
+          "start": 193.964,
+          "end": 194.469,
+          "score": 0.208
+        },
+        {
+          "word": "to",
+          "start": 194.49,
+          "end": 194.53,
+          "score": 0.272
+        },
+        {
+          "word": "come",
+          "start": 194.631,
+          "end": 194.712,
+          "score": 0.199
+        },
+        {
+          "word": "and",
+          "start": 194.732,
+          "end": 195.117,
+          "score": 0.403
+        },
+        {
+          "word": "get",
+          "start": 195.137,
+          "end": 195.339,
+          "score": 0.292
+        },
+        {
+          "word": "you",
+          "start": 195.36,
+          "end": 195.42,
+          "score": 0.333
+        }
+      ]
+    },
+    {
+      "start": 196.0,
+      "end": 199.62,
+      "text": "If I'm not with you, you feel nothing.",
+      "words": [
+        {
+          "word": "If",
+          "start": 196.0,
+          "end": 196.324,
+          "score": 0.158
+        },
+        {
+          "word": "I'm",
+          "start": 196.344,
+          "end": 196.708,
+          "score": 0.34
+        },
+        {
+          "word": "not",
+          "start": 196.728,
+          "end": 197.294,
+          "score": 0.498
+        },
+        {
+          "word": "with",
+          "start": 197.315,
+          "end": 197.82,
+          "score": 0.367
+        },
+        {
+          "word": "you,",
+          "start": 197.84,
+          "end": 198.245,
+          "score": 0.686
+        },
+        {
+          "word": "you",
+          "start": 198.488,
+          "end": 198.548,
+          "score": 0.225
+        },
+        {
+          "word": "feel",
+          "start": 198.609,
+          "end": 198.892,
+          "score": 0.395
+        },
+        {
+          "word": "nothing.",
+          "start": 198.912,
+          "end": 199.62,
+          "score": 0.353
+        }
+      ]
+    },
+    {
+      "start": 199.6,
+      "end": 201.6,
+      "text": "while trying to erase me",
+      "words": [
+        {
+          "word": "while",
+          "start": 199.6,
+          "end": 200.58,
+          "score": 0.796
+        },
+        {
+          "word": "trying",
+          "start": 200.927,
+          "end": 201.355,
+          "score": 0.249
+        },
+        {
+          "word": "to",
+          "start": 201.376,
+          "end": 201.417,
+          "score": 0.0
+        },
+        {
+          "word": "erase",
+          "start": 201.437,
+          "end": 201.539,
+          "score": 0.193
+        },
+        {
+          "word": "me",
+          "start": 201.56,
+          "end": 201.6,
+          "score": 0.497
+        }
+      ]
+    },
+    {
+      "start": 201.58,
+      "end": 205.04,
+      "text": "Don't leave with our whole plan.",
+      "words": [
+        {
+          "word": "Don't",
+          "start": 201.58,
+          "end": 202.066,
+          "score": 0.365
+        },
+        {
+          "word": "leave",
+          "start": 202.086,
+          "end": 203.988,
+          "score": 0.42
+        },
+        {
+          "word": "with",
+          "start": 204.008,
+          "end": 204.089,
+          "score": 0.004
+        },
+        {
+          "word": "our",
+          "start": 204.109,
+          "end": 204.17,
+          "score": 0.067
+        },
+        {
+          "word": "whole",
+          "start": 204.19,
+          "end": 204.818,
+          "score": 0.4
+        },
+        {
+          "word": "plan.",
+          "start": 204.838,
+          "end": 205.04,
+          "score": 0.442
+        }
+      ]
+    },
+    {
+      "start": 205.02,
+      "end": 210.28,
+      "text": "by bawama going to the locations",
+      "words": [
+        {
+          "word": "by",
+          "start": 205.02,
+          "end": 205.524,
+          "score": 0.271
+        },
+        {
+          "word": "bawama",
+          "start": 205.544,
+          "end": 207.398,
+          "score": 0.439
+        },
+        {
+          "word": "going",
+          "start": 207.418,
+          "end": 207.519,
+          "score": 0.116
+        },
+        {
+          "word": "to",
+          "start": 208.265,
+          "end": 208.466,
+          "score": 0.587
+        },
+        {
+          "word": "the",
+          "start": 208.97,
+          "end": 209.071,
+          "score": 0.408
+        },
+        {
+          "word": "locations",
+          "start": 209.091,
+          "end": 210.28,
+          "score": 0.398
+        }
+      ]
+    },
+    {
+      "start": 210.26,
+      "end": 215.6,
+      "text": "by bawama going to the locations",
+      "words": [
+        {
+          "word": "by",
+          "start": 210.26,
+          "end": 211.328,
+          "score": 0.368
+        },
+        {
+          "word": "bawama",
+          "start": 211.348,
+          "end": 212.094,
+          "score": 0.595
+        },
+        {
+          "word": "going",
+          "start": 213.101,
+          "end": 214.29,
+          "score": 0.226
+        },
+        {
+          "word": "to",
+          "start": 214.31,
+          "end": 214.351,
+          "score": 0.109
+        },
+        {
+          "word": "the",
+          "start": 214.371,
+          "end": 214.613,
+          "score": 0.281
+        },
+        {
+          "word": "locations",
+          "start": 214.633,
+          "end": 215.6,
+          "score": 0.211
+        }
+      ]
+    },
+    {
+      "start": 215.58,
+      "end": 223.42,
+      "text": "by bawama going to the locations",
+      "words": [
+        {
+          "word": "by",
+          "start": 215.58,
+          "end": 218.093,
+          "score": 0.45
+        },
+        {
+          "word": "bawama",
+          "start": 218.113,
+          "end": 222.958,
+          "score": 0.21
+        },
+        {
+          "word": "going",
+          "start": 222.978,
+          "end": 223.078,
+          "score": 0.0
+        },
+        {
+          "word": "to",
+          "start": 223.098,
+          "end": 223.139,
+          "score": 0.0
+        },
+        {
+          "word": "the",
+          "start": 223.159,
+          "end": 223.219,
+          "score": 0.0
+        },
+        {
+          "word": "locations",
+          "start": 223.239,
+          "end": 223.42,
+          "score": 0.111
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "ma'let",
+      "start": 6.58,
+      "end": 8.514,
+      "score": 0.784
+    },
+    {
+      "word": "you",
+      "start": 9.44,
+      "end": 10.407,
+      "score": 0.819
+    },
+    {
+      "word": "go,",
+      "start": 10.427,
+      "end": 10.488,
+      "score": 0.647
+    },
+    {
+      "word": "that's",
+      "start": 10.871,
+      "end": 11.233,
+      "score": 0.231
+    },
+    {
+      "word": "never",
+      "start": 11.253,
+      "end": 11.394,
+      "score": 0.302
+    },
+    {
+      "word": "hypnotized",
+      "start": 11.455,
+      "end": 12.2,
+      "score": 0.662
+    },
+    {
+      "word": "I",
+      "start": 12.18,
+      "end": 13.032,
+      "score": 0.7
+    },
+    {
+      "word": "can't",
+      "start": 13.357,
+      "end": 13.62,
+      "score": 0.519
+    },
+    {
+      "word": "stop",
+      "start": 13.641,
+      "end": 13.722,
+      "score": 0.004
+    },
+    {
+      "word": "looking",
+      "start": 13.742,
+      "end": 14.533,
+      "score": 0.304
+    },
+    {
+      "word": "at",
+      "start": 14.554,
+      "end": 14.939,
+      "score": 0.8
+    },
+    {
+      "word": "you",
+      "start": 14.959,
+      "end": 15.02,
+      "score": 0.332
+    },
+    {
+      "word": "you",
+      "start": 15.0,
+      "end": 15.485,
+      "score": 0.476
+    },
+    {
+      "word": "laugh",
+      "start": 15.566,
+      "end": 15.909,
+      "score": 0.356
+    },
+    {
+      "word": "more",
+      "start": 15.929,
+      "end": 16.252,
+      "score": 0.731
+    },
+    {
+      "word": "than",
+      "start": 16.273,
+      "end": 16.414,
+      "score": 0.451
+    },
+    {
+      "word": "a",
+      "start": 16.697,
+      "end": 16.778,
+      "score": 0.675
+    },
+    {
+      "word": "star,",
+      "start": 16.798,
+      "end": 17.06,
+      "score": 0.297
+    },
+    {
+      "word": "Mummy,",
+      "start": 17.08,
+      "end": 18.616,
+      "score": 0.302
+    },
+    {
+      "word": "that",
+      "start": 18.636,
+      "end": 18.717,
+      "score": 0.016
+    },
+    {
+      "word": "you",
+      "start": 18.737,
+      "end": 18.797,
+      "score": 0.01
+    },
+    {
+      "word": "have",
+      "start": 18.818,
+      "end": 18.898,
+      "score": 0.003
+    },
+    {
+      "word": "to",
+      "start": 18.919,
+      "end": 18.959,
+      "score": 0.01
+    },
+    {
+      "word": "fight",
+      "start": 18.979,
+      "end": 19.08,
+      "score": 0.173
+    },
+    {
+      "word": "That's",
+      "start": 19.06,
+      "end": 19.343,
+      "score": 0.211
+    },
+    {
+      "word": "how",
+      "start": 19.363,
+      "end": 19.424,
+      "score": 0.004
+    },
+    {
+      "word": "I",
+      "start": 19.444,
+      "end": 19.464,
+      "score": 0.036
+    },
+    {
+      "word": "get",
+      "start": 19.484,
+      "end": 19.545,
+      "score": 0.346
+    },
+    {
+      "word": "you.",
+      "start": 19.585,
+      "end": 19.686,
+      "score": 0.572
+    },
+    {
+      "word": "That's",
+      "start": 19.706,
+      "end": 20.333,
+      "score": 0.568
+    },
+    {
+      "word": "how",
+      "start": 20.413,
+      "end": 20.878,
+      "score": 0.312
+    },
+    {
+      "word": "I",
+      "start": 20.898,
+      "end": 20.918,
+      "score": 0.0
+    },
+    {
+      "word": "can't",
+      "start": 20.939,
+      "end": 22.353,
+      "score": 0.565
+    },
+    {
+      "word": "get",
+      "start": 22.373,
+      "end": 22.434,
+      "score": 0.216
+    },
+    {
+      "word": "back",
+      "start": 22.595,
+      "end": 22.676,
+      "score": 0.0
+    },
+    {
+      "word": "at",
+      "start": 22.696,
+      "end": 22.999,
+      "score": 0.754
+    },
+    {
+      "word": "you.",
+      "start": 23.019,
+      "end": 23.1,
+      "score": 0.25
+    },
+    {
+      "word": "I'll",
+      "start": 23.08,
+      "end": 24.034,
+      "score": 0.636
+    },
+    {
+      "word": "give",
+      "start": 24.906,
+      "end": 24.987,
+      "score": 0.0
+    },
+    {
+      "word": "you",
+      "start": 25.008,
+      "end": 25.21,
+      "score": 0.56
+    },
+    {
+      "word": "the",
+      "start": 25.434,
+      "end": 25.494,
+      "score": 0.001
+    },
+    {
+      "word": "boom.",
+      "start": 25.515,
+      "end": 25.9,
+      "score": 0.5
+    },
+    {
+      "word": "Stopping",
+      "start": 25.88,
+      "end": 26.533,
+      "score": 0.403
+    },
+    {
+      "word": "your",
+      "start": 26.778,
+      "end": 26.9,
+      "score": 0.431
+    },
+    {
+      "word": "pants",
+      "start": 26.982,
+      "end": 27.92,
+      "score": 0.938
+    },
+    {
+      "word": "That's",
+      "start": 27.9,
+      "end": 30.651,
+      "score": 0.738
+    },
+    {
+      "word": "right.",
+      "start": 31.075,
+      "end": 31.52,
+      "score": 0.374
+    },
+    {
+      "word": "with",
+      "start": 31.5,
+      "end": 32.352,
+      "score": 0.333
+    },
+    {
+      "word": "the",
+      "start": 32.778,
+      "end": 32.839,
+      "score": 0.248
+    },
+    {
+      "word": "blue",
+      "start": 33.103,
+      "end": 33.549,
+      "score": 0.658
+    },
+    {
+      "word": "sky",
+      "start": 33.57,
+      "end": 33.63,
+      "score": 0.225
+    },
+    {
+      "word": "and",
+      "start": 33.854,
+      "end": 33.914,
+      "score": 0.0
+    },
+    {
+      "word": "your",
+      "start": 33.935,
+      "end": 34.097,
+      "score": 0.528
+    },
+    {
+      "word": "brown",
+      "start": 34.117,
+      "end": 34.219,
+      "score": 0.009
+    },
+    {
+      "word": "eyes",
+      "start": 34.239,
+      "end": 34.32,
+      "score": 0.255
+    },
+    {
+      "word": "drinking",
+      "start": 34.3,
+      "end": 35.387,
+      "score": 0.214
+    },
+    {
+      "word": "water",
+      "start": 35.449,
+      "end": 35.695,
+      "score": 0.299
+    },
+    {
+      "word": "in",
+      "start": 35.715,
+      "end": 35.756,
+      "score": 0.0
+    },
+    {
+      "word": "the",
+      "start": 35.777,
+      "end": 35.838,
+      "score": 0.0
+    },
+    {
+      "word": "sun",
+      "start": 35.859,
+      "end": 35.921,
+      "score": 0.331
+    },
+    {
+      "word": "Your",
+      "start": 35.9,
+      "end": 36.547,
+      "score": 0.528
+    },
+    {
+      "word": "body's",
+      "start": 36.689,
+      "end": 37.255,
+      "score": 0.663
+    },
+    {
+      "word": "sweating",
+      "start": 37.68,
+      "end": 37.923,
+      "score": 0.199
+    },
+    {
+      "word": "at",
+      "start": 37.943,
+      "end": 38.064,
+      "score": 0.716
+    },
+    {
+      "word": "mine",
+      "start": 38.206,
+      "end": 39.46,
+      "score": 0.686
+    },
+    {
+      "word": "If",
+      "start": 39.44,
+      "end": 40.031,
+      "score": 0.746
+    },
+    {
+      "word": "I",
+      "start": 40.459,
+      "end": 40.479,
+      "score": 0.688
+    },
+    {
+      "word": "don't",
+      "start": 40.52,
+      "end": 40.846,
+      "score": 0.561
+    },
+    {
+      "word": "see",
+      "start": 40.887,
+      "end": 40.988,
+      "score": 0.433
+    },
+    {
+      "word": "you",
+      "start": 41.009,
+      "end": 41.64,
+      "score": 0.834
+    },
+    {
+      "word": "I'll",
+      "start": 41.62,
+      "end": 43.52,
+      "score": 0.799
+    },
+    {
+      "word": "clear",
+      "start": 44.005,
+      "end": 44.429,
+      "score": 0.132
+    },
+    {
+      "word": "that",
+      "start": 44.45,
+      "end": 44.53,
+      "score": 0.013
+    },
+    {
+      "word": "moisture",
+      "start": 44.551,
+      "end": 44.854,
+      "score": 0.372
+    },
+    {
+      "word": "with",
+      "start": 45.076,
+      "end": 45.218,
+      "score": 0.204
+    },
+    {
+      "word": "calling",
+      "start": 45.238,
+      "end": 45.379,
+      "score": 0.0
+    },
+    {
+      "word": "you",
+      "start": 45.4,
+      "end": 45.46,
+      "score": 0.32
+    },
+    {
+      "word": "send",
+      "start": 45.44,
+      "end": 46.268,
+      "score": 0.202
+    },
+    {
+      "word": "me",
+      "start": 46.288,
+      "end": 47.137,
+      "score": 0.88
+    },
+    {
+      "word": "ruby",
+      "start": 47.218,
+      "end": 48.066,
+      "score": 0.78
+    },
+    {
+      "word": "to",
+      "start": 48.611,
+      "end": 49.076,
+      "score": 0.421
+    },
+    {
+      "word": "come",
+      "start": 49.096,
+      "end": 49.258,
+      "score": 0.4
+    },
+    {
+      "word": "and",
+      "start": 49.278,
+      "end": 49.339,
+      "score": 0.002
+    },
+    {
+      "word": "get",
+      "start": 49.359,
+      "end": 49.419,
+      "score": 0.027
+    },
+    {
+      "word": "you",
+      "start": 49.44,
+      "end": 49.5,
+      "score": 0.332
+    },
+    {
+      "word": "If",
+      "start": 50.02,
+      "end": 50.83,
+      "score": 0.39
+    },
+    {
+      "word": "it's",
+      "start": 50.851,
+      "end": 51.56,
+      "score": 0.63
+    },
+    {
+      "word": "not",
+      "start": 51.58,
+      "end": 51.641,
+      "score": 0.007
+    },
+    {
+      "word": "with",
+      "start": 51.661,
+      "end": 51.742,
+      "score": 0.008
+    },
+    {
+      "word": "you",
+      "start": 51.762,
+      "end": 51.843,
+      "score": 0.42
+    },
+    {
+      "word": "and",
+      "start": 51.863,
+      "end": 52.046,
+      "score": 0.708
+    },
+    {
+      "word": "I",
+      "start": 52.147,
+      "end": 52.188,
+      "score": 0.868
+    },
+    {
+      "word": "feel",
+      "start": 52.228,
+      "end": 52.512,
+      "score": 0.378
+    },
+    {
+      "word": "nothing",
+      "start": 52.532,
+      "end": 53.18,
+      "score": 0.348
+    },
+    {
+      "word": "I",
+      "start": 53.16,
+      "end": 53.526,
+      "score": 0.806
+    },
+    {
+      "word": "can't",
+      "start": 53.546,
+      "end": 53.872,
+      "score": 0.389
+    },
+    {
+      "word": "erase",
+      "start": 53.994,
+      "end": 55.499,
+      "score": 0.714
+    },
+    {
+      "word": "you",
+      "start": 55.519,
+      "end": 55.58,
+      "score": 0.332
+    },
+    {
+      "word": "If",
+      "start": 55.56,
+      "end": 55.967,
+      "score": 0.446
+    },
+    {
+      "word": "I",
+      "start": 55.987,
+      "end": 56.272,
+      "score": 0.853
+    },
+    {
+      "word": "don't",
+      "start": 56.456,
+      "end": 57.718,
+      "score": 0.464
+    },
+    {
+      "word": "see",
+      "start": 57.738,
+      "end": 57.799,
+      "score": 0.003
+    },
+    {
+      "word": "you",
+      "start": 57.819,
+      "end": 57.88,
+      "score": 0.328
+    },
+    {
+      "word": "I'll",
+      "start": 57.86,
+      "end": 60.245,
+      "score": 0.436
+    },
+    {
+      "word": "clear",
+      "start": 60.265,
+      "end": 60.528,
+      "score": 0.369
+    },
+    {
+      "word": "that",
+      "start": 60.669,
+      "end": 60.77,
+      "score": 0.354
+    },
+    {
+      "word": "moisture",
+      "start": 60.791,
+      "end": 61.357,
+      "score": 0.307
+    },
+    {
+      "word": "with",
+      "start": 61.377,
+      "end": 61.458,
+      "score": 0.0
+    },
+    {
+      "word": "calling",
+      "start": 61.478,
+      "end": 61.619,
+      "score": 0.002
+    },
+    {
+      "word": "you",
+      "start": 61.64,
+      "end": 61.7,
+      "score": 0.331
+    },
+    {
+      "word": "send",
+      "start": 61.68,
+      "end": 62.245,
+      "score": 0.347
+    },
+    {
+      "word": "me",
+      "start": 62.569,
+      "end": 62.69,
+      "score": 0.827
+    },
+    {
+      "word": "ruby",
+      "start": 63.82,
+      "end": 64.386,
+      "score": 0.373
+    },
+    {
+      "word": "to",
+      "start": 64.689,
+      "end": 64.85,
+      "score": 0.674
+    },
+    {
+      "word": "come",
+      "start": 64.871,
+      "end": 65.355,
+      "score": 0.374
+    },
+    {
+      "word": "and",
+      "start": 65.375,
+      "end": 65.436,
+      "score": 0.003
+    },
+    {
+      "word": "get",
+      "start": 65.456,
+      "end": 65.799,
+      "score": 0.286
+    },
+    {
+      "word": "you",
+      "start": 65.82,
+      "end": 65.88,
+      "score": 0.242
+    },
+    {
+      "word": "If",
+      "start": 65.86,
+      "end": 66.81,
+      "score": 0.76
+    },
+    {
+      "word": "it's",
+      "start": 67.113,
+      "end": 68.185,
+      "score": 0.675
+    },
+    {
+      "word": "not",
+      "start": 68.205,
+      "end": 68.326,
+      "score": 0.738
+    },
+    {
+      "word": "with",
+      "start": 68.427,
+      "end": 69.175,
+      "score": 0.524
+    },
+    {
+      "word": "you",
+      "start": 69.195,
+      "end": 69.256,
+      "score": 0.014
+    },
+    {
+      "word": "and",
+      "start": 69.276,
+      "end": 69.337,
+      "score": 0.008
+    },
+    {
+      "word": "I",
+      "start": 69.357,
+      "end": 69.377,
+      "score": 0.027
+    },
+    {
+      "word": "feel",
+      "start": 69.398,
+      "end": 69.478,
+      "score": 0.028
+    },
+    {
+      "word": "nothing",
+      "start": 69.499,
+      "end": 69.64,
+      "score": 0.144
+    },
+    {
+      "word": "I",
+      "start": 69.62,
+      "end": 70.189,
+      "score": 0.72
+    },
+    {
+      "word": "can't",
+      "start": 70.209,
+      "end": 70.981,
+      "score": 0.604
+    },
+    {
+      "word": "erase",
+      "start": 72.017,
+      "end": 72.119,
+      "score": 0.014
+    },
+    {
+      "word": "you",
+      "start": 72.139,
+      "end": 72.2,
+      "score": 0.267
+    },
+    {
+      "word": "as",
+      "start": 72.18,
+      "end": 72.608,
+      "score": 0.738
+    },
+    {
+      "word": "a",
+      "start": 72.771,
+      "end": 72.832,
+      "score": 0.55
+    },
+    {
+      "word": "scar",
+      "start": 72.852,
+      "end": 73.097,
+      "score": 0.485
+    },
+    {
+      "word": "after",
+      "start": 73.117,
+      "end": 73.505,
+      "score": 0.59
+    },
+    {
+      "word": "the",
+      "start": 73.708,
+      "end": 74.218,
+      "score": 0.576
+    },
+    {
+      "word": "wound",
+      "start": 74.238,
+      "end": 74.36,
+      "score": 0.301
+    },
+    {
+      "word": "I",
+      "start": 74.34,
+      "end": 74.625,
+      "score": 0.184
+    },
+    {
+      "word": "tagged",
+      "start": 74.768,
+      "end": 74.992,
+      "score": 0.28
+    },
+    {
+      "word": "your",
+      "start": 75.033,
+      "end": 75.319,
+      "score": 0.099
+    },
+    {
+      "word": "skin",
+      "start": 75.339,
+      "end": 75.421,
+      "score": 0.001
+    },
+    {
+      "word": "and",
+      "start": 75.441,
+      "end": 75.543,
+      "score": 0.532
+    },
+    {
+      "word": "you",
+      "start": 75.563,
+      "end": 75.645,
+      "score": 0.44
+    },
+    {
+      "word": "tagged",
+      "start": 75.767,
+      "end": 76.053,
+      "score": 0.188
+    },
+    {
+      "word": "mine.",
+      "start": 76.175,
+      "end": 76.46,
+      "score": 0.337
+    },
+    {
+      "word": "eat",
+      "start": 76.44,
+      "end": 76.93,
+      "score": 0.304
+    },
+    {
+      "word": "more",
+      "start": 76.95,
+      "end": 77.195,
+      "score": 0.573
+    },
+    {
+      "word": "than",
+      "start": 77.318,
+      "end": 77.42,
+      "score": 0.235
+    },
+    {
+      "word": "four",
+      "start": 77.44,
+      "end": 77.562,
+      "score": 0.414
+    },
+    {
+      "word": "times",
+      "start": 77.644,
+      "end": 77.93,
+      "score": 0.41
+    },
+    {
+      "word": "at",
+      "start": 78.318,
+      "end": 78.358,
+      "score": 0.0
+    },
+    {
+      "word": "once",
+      "start": 78.379,
+      "end": 78.46,
+      "score": 0.25
+    },
+    {
+      "word": "every",
+      "start": 78.44,
+      "end": 79.108,
+      "score": 0.296
+    },
+    {
+      "word": "day",
+      "start": 79.189,
+      "end": 79.29,
+      "score": 0.113
+    },
+    {
+      "word": "of",
+      "start": 79.311,
+      "end": 79.351,
+      "score": 0.438
+    },
+    {
+      "word": "the",
+      "start": 79.392,
+      "end": 79.493,
+      "score": 0.557
+    },
+    {
+      "word": "month",
+      "start": 79.614,
+      "end": 79.918,
+      "score": 0.708
+    },
+    {
+      "word": "we",
+      "start": 80.04,
+      "end": 80.08,
+      "score": 0.847
+    },
+    {
+      "word": "felt",
+      "start": 80.181,
+      "end": 80.404,
+      "score": 0.504
+    },
+    {
+      "word": "that",
+      "start": 80.424,
+      "end": 80.505,
+      "score": 0.008
+    },
+    {
+      "word": "we",
+      "start": 80.525,
+      "end": 80.647,
+      "score": 0.495
+    },
+    {
+      "word": "became",
+      "start": 80.667,
+      "end": 80.829,
+      "score": 0.216
+    },
+    {
+      "word": "necessary",
+      "start": 80.89,
+      "end": 81.74,
+      "score": 0.827
+    },
+    {
+      "word": "At",
+      "start": 82.38,
+      "end": 83.153,
+      "score": 0.448
+    },
+    {
+      "word": "night",
+      "start": 83.174,
+      "end": 83.642,
+      "score": 0.226
+    },
+    {
+      "word": "we",
+      "start": 83.662,
+      "end": 83.703,
+      "score": 0.0
+    },
+    {
+      "word": "killed",
+      "start": 83.723,
+      "end": 84.028,
+      "score": 0.144
+    },
+    {
+      "word": "ourselves",
+      "start": 84.049,
+      "end": 84.293,
+      "score": 0.398
+    },
+    {
+      "word": "in",
+      "start": 84.415,
+      "end": 84.455,
+      "score": 0.001
+    },
+    {
+      "word": "the",
+      "start": 84.476,
+      "end": 84.639,
+      "score": 0.392
+    },
+    {
+      "word": "room",
+      "start": 84.659,
+      "end": 84.74,
+      "score": 0.326
+    },
+    {
+      "word": "Mami,",
+      "start": 84.72,
+      "end": 85.209,
+      "score": 0.605
+    },
+    {
+      "word": "you're",
+      "start": 85.23,
+      "end": 85.474,
+      "score": 0.559
+    },
+    {
+      "word": "mine,",
+      "start": 85.494,
+      "end": 86.187,
+      "score": 0.431
+    },
+    {
+      "word": "I",
+      "start": 86.208,
+      "end": 86.228,
+      "score": 0.598
+    },
+    {
+      "word": "don't",
+      "start": 86.35,
+      "end": 86.493,
+      "score": 0.394
+    },
+    {
+      "word": "share",
+      "start": 86.514,
+      "end": 86.778,
+      "score": 0.542
+    },
+    {
+      "word": "you.",
+      "start": 86.799,
+      "end": 86.88,
+      "score": 0.25
+    },
+    {
+      "word": "A",
+      "start": 86.86,
+      "end": 87.187,
+      "score": 0.477
+    },
+    {
+      "word": "movie",
+      "start": 87.227,
+      "end": 87.799,
+      "score": 0.504
+    },
+    {
+      "word": "as",
+      "start": 88.003,
+      "end": 88.064,
+      "score": 0.052
+    },
+    {
+      "word": "tim",
+      "start": 88.085,
+      "end": 88.513,
+      "score": 0.683
+    },
+    {
+      "word": "barto's",
+      "start": 88.534,
+      "end": 88.86,
+      "score": 0.554
+    },
+    {
+      "word": "If",
+      "start": 89.94,
+      "end": 90.913,
+      "score": 0.418
+    },
+    {
+      "word": "I'm",
+      "start": 90.933,
+      "end": 91.035,
+      "score": 0.416
+    },
+    {
+      "word": "not",
+      "start": 91.055,
+      "end": 91.258,
+      "score": 0.545
+    },
+    {
+      "word": "with",
+      "start": 91.278,
+      "end": 91.359,
+      "score": 0.002
+    },
+    {
+      "word": "you,",
+      "start": 91.379,
+      "end": 91.785,
+      "score": 0.733
+    },
+    {
+      "word": "I",
+      "start": 91.805,
+      "end": 91.825,
+      "score": 0.986
+    },
+    {
+      "word": "feel",
+      "start": 91.886,
+      "end": 91.987,
+      "score": 0.602
+    },
+    {
+      "word": "nothing.",
+      "start": 92.048,
+      "end": 92.94,
+      "score": 0.681
+    },
+    {
+      "word": "He",
+      "start": 92.92,
+      "end": 93.448,
+      "score": 0.351
+    },
+    {
+      "word": "tells",
+      "start": 93.469,
+      "end": 93.712,
+      "score": 0.768
+    },
+    {
+      "word": "me",
+      "start": 94.281,
+      "end": 94.383,
+      "score": 0.537
+    },
+    {
+      "word": "I'm",
+      "start": 94.403,
+      "end": 94.546,
+      "score": 0.385
+    },
+    {
+      "word": "your",
+      "start": 94.566,
+      "end": 94.647,
+      "score": 0.002
+    },
+    {
+      "word": "weakness",
+      "start": 94.668,
+      "end": 95.48,
+      "score": 0.323
+    },
+    {
+      "word": "That's",
+      "start": 95.46,
+      "end": 96.475,
+      "score": 0.543
+    },
+    {
+      "word": "why",
+      "start": 96.495,
+      "end": 96.556,
+      "score": 0.327
+    },
+    {
+      "word": "we",
+      "start": 96.719,
+      "end": 97.043,
+      "score": 0.776
+    },
+    {
+      "word": "always",
+      "start": 97.815,
+      "end": 97.937,
+      "score": 0.0
+    },
+    {
+      "word": "come",
+      "start": 97.957,
+      "end": 98.079,
+      "score": 0.397
+    },
+    {
+      "word": "back",
+      "start": 98.099,
+      "end": 98.18,
+      "score": 0.249
+    },
+    {
+      "word": "but",
+      "start": 98.16,
+      "end": 99.201,
+      "score": 0.418
+    },
+    {
+      "word": "we",
+      "start": 99.221,
+      "end": 99.426,
+      "score": 0.614
+    },
+    {
+      "word": "fight",
+      "start": 99.446,
+      "end": 100.16,
+      "score": 0.487
+    },
+    {
+      "word": "Just",
+      "start": 100.14,
+      "end": 100.846,
+      "score": 0.434
+    },
+    {
+      "word": "with",
+      "start": 101.351,
+      "end": 102.239,
+      "score": 0.34
+    },
+    {
+      "word": "looking",
+      "start": 102.259,
+      "end": 103.168,
+      "score": 0.48
+    },
+    {
+      "word": "we",
+      "start": 103.289,
+      "end": 103.43,
+      "score": 0.762
+    },
+    {
+      "word": "both",
+      "start": 103.45,
+      "end": 103.531,
+      "score": 0.006
+    },
+    {
+      "word": "read",
+      "start": 103.551,
+      "end": 104.54,
+      "score": 0.723
+    },
+    {
+      "word": "If",
+      "start": 104.52,
+      "end": 104.805,
+      "score": 0.43
+    },
+    {
+      "word": "I",
+      "start": 104.826,
+      "end": 105.131,
+      "score": 0.853
+    },
+    {
+      "word": "don't",
+      "start": 105.274,
+      "end": 105.783,
+      "score": 0.615
+    },
+    {
+      "word": "see",
+      "start": 106.007,
+      "end": 106.598,
+      "score": 0.54
+    },
+    {
+      "word": "you",
+      "start": 106.619,
+      "end": 106.72,
+      "score": 0.664
+    },
+    {
+      "word": "I",
+      "start": 106.7,
+      "end": 108.317,
+      "score": 0.799
+    },
+    {
+      "word": "swear",
+      "start": 108.358,
+      "end": 109.611,
+      "score": 0.447
+    },
+    {
+      "word": "moisture",
+      "start": 109.631,
+      "end": 110.076,
+      "score": 0.183
+    },
+    {
+      "word": "with",
+      "start": 110.096,
+      "end": 110.258,
+      "score": 0.276
+    },
+    {
+      "word": "calling",
+      "start": 110.278,
+      "end": 110.419,
+      "score": 0.0
+    },
+    {
+      "word": "you",
+      "start": 110.44,
+      "end": 110.5,
+      "score": 0.332
+    },
+    {
+      "word": "send",
+      "start": 110.48,
+      "end": 111.349,
+      "score": 0.572
+    },
+    {
+      "word": "me",
+      "start": 111.369,
+      "end": 111.854,
+      "score": 0.786
+    },
+    {
+      "word": "ruby",
+      "start": 112.642,
+      "end": 113.43,
+      "score": 0.201
+    },
+    {
+      "word": "to",
+      "start": 113.45,
+      "end": 113.491,
+      "score": 0.0
+    },
+    {
+      "word": "come",
+      "start": 113.511,
+      "end": 113.652,
+      "score": 0.301
+    },
+    {
+      "word": "and",
+      "start": 113.673,
+      "end": 113.733,
+      "score": 0.001
+    },
+    {
+      "word": "get",
+      "start": 113.753,
+      "end": 114.218,
+      "score": 0.319
+    },
+    {
+      "word": "you",
+      "start": 114.238,
+      "end": 114.42,
+      "score": 0.617
+    },
+    {
+      "word": "If",
+      "start": 115.2,
+      "end": 115.382,
+      "score": 0.479
+    },
+    {
+      "word": "I'm",
+      "start": 115.403,
+      "end": 115.828,
+      "score": 0.445
+    },
+    {
+      "word": "not",
+      "start": 115.848,
+      "end": 116.395,
+      "score": 0.785
+    },
+    {
+      "word": "with",
+      "start": 116.415,
+      "end": 117.002,
+      "score": 0.234
+    },
+    {
+      "word": "you,",
+      "start": 117.023,
+      "end": 117.225,
+      "score": 0.263
+    },
+    {
+      "word": "I",
+      "start": 117.245,
+      "end": 117.549,
+      "score": 0.582
+    },
+    {
+      "word": "feel",
+      "start": 118.177,
+      "end": 118.258,
+      "score": 0.005
+    },
+    {
+      "word": "nothing.",
+      "start": 118.278,
+      "end": 118.44,
+      "score": 0.125
+    },
+    {
+      "word": "I",
+      "start": 118.42,
+      "end": 119.009,
+      "score": 0.732
+    },
+    {
+      "word": "can't",
+      "start": 119.03,
+      "end": 119.599,
+      "score": 0.273
+    },
+    {
+      "word": "erase",
+      "start": 119.619,
+      "end": 119.802,
+      "score": 0.314
+    },
+    {
+      "word": "you",
+      "start": 120.899,
+      "end": 120.96,
+      "score": 0.304
+    },
+    {
+      "word": "If",
+      "start": 120.94,
+      "end": 121.368,
+      "score": 0.364
+    },
+    {
+      "word": "I",
+      "start": 121.388,
+      "end": 121.408,
+      "score": 0.549
+    },
+    {
+      "word": "don't",
+      "start": 121.469,
+      "end": 122.854,
+      "score": 0.526
+    },
+    {
+      "word": "see",
+      "start": 122.874,
+      "end": 122.935,
+      "score": 0.005
+    },
+    {
+      "word": "you",
+      "start": 122.956,
+      "end": 123.22,
+      "score": 0.758
+    },
+    {
+      "word": "I",
+      "start": 123.2,
+      "end": 124.231,
+      "score": 0.864
+    },
+    {
+      "word": "swear",
+      "start": 124.252,
+      "end": 124.555,
+      "score": 0.213
+    },
+    {
+      "word": "moisture",
+      "start": 124.575,
+      "end": 126.476,
+      "score": 0.473
+    },
+    {
+      "word": "with",
+      "start": 126.497,
+      "end": 126.578,
+      "score": 0.008
+    },
+    {
+      "word": "calling",
+      "start": 126.598,
+      "end": 126.739,
+      "score": 0.002
+    },
+    {
+      "word": "you",
+      "start": 126.76,
+      "end": 126.82,
+      "score": 0.333
+    },
+    {
+      "word": "send",
+      "start": 126.8,
+      "end": 127.789,
+      "score": 0.79
+    },
+    {
+      "word": "me",
+      "start": 128.415,
+      "end": 128.516,
+      "score": 0.444
+    },
+    {
+      "word": "ruby",
+      "start": 128.758,
+      "end": 128.839,
+      "score": 0.145
+    },
+    {
+      "word": "to",
+      "start": 129.041,
+      "end": 129.081,
+      "score": 0.358
+    },
+    {
+      "word": "come",
+      "start": 129.223,
+      "end": 129.445,
+      "score": 0.202
+    },
+    {
+      "word": "and",
+      "start": 129.606,
+      "end": 130.475,
+      "score": 0.461
+    },
+    {
+      "word": "get",
+      "start": 130.495,
+      "end": 130.939,
+      "score": 0.619
+    },
+    {
+      "word": "you",
+      "start": 130.959,
+      "end": 131.08,
+      "score": 0.841
+    },
+    {
+      "word": "If",
+      "start": 131.06,
+      "end": 131.464,
+      "score": 0.471
+    },
+    {
+      "word": "I'm",
+      "start": 131.485,
+      "end": 131.626,
+      "score": 0.282
+    },
+    {
+      "word": "not",
+      "start": 131.647,
+      "end": 132.233,
+      "score": 0.435
+    },
+    {
+      "word": "with",
+      "start": 132.253,
+      "end": 132.577,
+      "score": 0.476
+    },
+    {
+      "word": "you,",
+      "start": 132.718,
+      "end": 133.224,
+      "score": 0.608
+    },
+    {
+      "word": "you",
+      "start": 133.285,
+      "end": 133.386,
+      "score": 0.324
+    },
+    {
+      "word": "feel",
+      "start": 133.406,
+      "end": 133.588,
+      "score": 0.551
+    },
+    {
+      "word": "nothing.",
+      "start": 133.689,
+      "end": 134.68,
+      "score": 0.384
+    },
+    {
+      "word": "while",
+      "start": 134.66,
+      "end": 135.107,
+      "score": 0.513
+    },
+    {
+      "word": "trying",
+      "start": 135.31,
+      "end": 135.859,
+      "score": 0.184
+    },
+    {
+      "word": "to",
+      "start": 135.879,
+      "end": 136.082,
+      "score": 0.88
+    },
+    {
+      "word": "erase",
+      "start": 136.611,
+      "end": 137.159,
+      "score": 0.185
+    },
+    {
+      "word": "me",
+      "start": 137.18,
+      "end": 137.22,
+      "score": 0.448
+    },
+    {
+      "word": "Don't",
+      "start": 138.84,
+      "end": 140.901,
+      "score": 0.447
+    },
+    {
+      "word": "leave",
+      "start": 140.921,
+      "end": 141.022,
+      "score": 0.143
+    },
+    {
+      "word": "with",
+      "start": 141.426,
+      "end": 141.507,
+      "score": 0.241
+    },
+    {
+      "word": "our",
+      "start": 141.689,
+      "end": 142.032,
+      "score": 0.683
+    },
+    {
+      "word": "whole",
+      "start": 142.073,
+      "end": 142.174,
+      "score": 0.0
+    },
+    {
+      "word": "plan.",
+      "start": 142.194,
+      "end": 142.82,
+      "score": 0.871
+    },
+    {
+      "word": "by",
+      "start": 143.6,
+      "end": 143.944,
+      "score": 0.372
+    },
+    {
+      "word": "bawama",
+      "start": 143.965,
+      "end": 145.301,
+      "score": 0.682
+    },
+    {
+      "word": "going",
+      "start": 145.645,
+      "end": 145.747,
+      "score": 0.02
+    },
+    {
+      "word": "to",
+      "start": 145.767,
+      "end": 145.807,
+      "score": 0.364
+    },
+    {
+      "word": "the",
+      "start": 145.828,
+      "end": 145.888,
+      "score": 0.184
+    },
+    {
+      "word": "locations",
+      "start": 145.969,
+      "end": 146.84,
+      "score": 0.469
+    },
+    {
+      "word": "by",
+      "start": 146.82,
+      "end": 148.234,
+      "score": 0.424
+    },
+    {
+      "word": "whom",
+      "start": 148.254,
+      "end": 149.042,
+      "score": 0.234
+    },
+    {
+      "word": "you",
+      "start": 149.062,
+      "end": 149.244,
+      "score": 0.32
+    },
+    {
+      "word": "come",
+      "start": 149.264,
+      "end": 149.971,
+      "score": 0.596
+    },
+    {
+      "word": "out",
+      "start": 150.153,
+      "end": 150.314,
+      "score": 0.273
+    },
+    {
+      "word": "after",
+      "start": 150.334,
+      "end": 150.516,
+      "score": 0.326
+    },
+    {
+      "word": "signs",
+      "start": 150.839,
+      "end": 150.94,
+      "score": 0.22
+    },
+    {
+      "word": "That",
+      "start": 150.92,
+      "end": 152.213,
+      "score": 0.198
+    },
+    {
+      "word": "they'll",
+      "start": 152.233,
+      "end": 152.638,
+      "score": 0.249
+    },
+    {
+      "word": "take",
+      "start": 152.678,
+      "end": 152.759,
+      "score": 0.158
+    },
+    {
+      "word": "me",
+      "start": 152.819,
+      "end": 153.042,
+      "score": 0.416
+    },
+    {
+      "word": "to",
+      "start": 153.122,
+      "end": 153.224,
+      "score": 0.434
+    },
+    {
+      "word": "you",
+      "start": 153.244,
+      "end": 153.628,
+      "score": 0.615
+    },
+    {
+      "word": "for",
+      "start": 154.072,
+      "end": 154.133,
+      "score": 0.011
+    },
+    {
+      "word": "another",
+      "start": 154.153,
+      "end": 154.739,
+      "score": 0.249
+    },
+    {
+      "word": "night",
+      "start": 154.759,
+      "end": 154.86,
+      "score": 0.197
+    },
+    {
+      "word": "I'm",
+      "start": 154.84,
+      "end": 155.288,
+      "score": 0.669
+    },
+    {
+      "word": "a",
+      "start": 155.39,
+      "end": 155.9,
+      "score": 0.704
+    },
+    {
+      "word": "president.",
+      "start": 155.92,
+      "end": 156.98,
+      "score": 0.227
+    },
+    {
+      "word": "They'll",
+      "start": 156.96,
+      "end": 157.551,
+      "score": 0.28
+    },
+    {
+      "word": "be",
+      "start": 157.572,
+      "end": 157.735,
+      "score": 0.669
+    },
+    {
+      "word": "good",
+      "start": 157.755,
+      "end": 158.102,
+      "score": 0.568
+    },
+    {
+      "word": "without",
+      "start": 158.856,
+      "end": 158.999,
+      "score": 0.007
+    },
+    {
+      "word": "you",
+      "start": 159.019,
+      "end": 159.08,
+      "score": 0.301
+    },
+    {
+      "word": "I",
+      "start": 159.06,
+      "end": 159.49,
+      "score": 0.74
+    },
+    {
+      "word": "don't",
+      "start": 159.51,
+      "end": 160.144,
+      "score": 0.609
+    },
+    {
+      "word": "wanna",
+      "start": 160.226,
+      "end": 160.328,
+      "score": 0.398
+    },
+    {
+      "word": "dance",
+      "start": 160.369,
+      "end": 160.533,
+      "score": 0.108
+    },
+    {
+      "word": "anymore",
+      "start": 160.553,
+      "end": 160.88,
+      "score": 0.397
+    },
+    {
+      "word": "drunk",
+      "start": 160.86,
+      "end": 162.166,
+      "score": 0.161
+    },
+    {
+      "word": "on",
+      "start": 162.186,
+      "end": 162.227,
+      "score": 0.0
+    },
+    {
+      "word": "the",
+      "start": 162.247,
+      "end": 162.309,
+      "score": 0.002
+    },
+    {
+      "word": "balcony",
+      "start": 162.329,
+      "end": 162.9,
+      "score": 0.803
+    },
+    {
+      "word": "If",
+      "start": 162.88,
+      "end": 163.328,
+      "score": 0.4
+    },
+    {
+      "word": "you're",
+      "start": 163.349,
+      "end": 164.164,
+      "score": 0.588
+    },
+    {
+      "word": "not",
+      "start": 164.184,
+      "end": 164.245,
+      "score": 0.002
+    },
+    {
+      "word": "looking",
+      "start": 164.266,
+      "end": 164.612,
+      "score": 0.247
+    },
+    {
+      "word": "at",
+      "start": 164.632,
+      "end": 165.06,
+      "score": 0.902
+    },
+    {
+      "word": "I",
+      "start": 165.04,
+      "end": 165.653,
+      "score": 0.817
+    },
+    {
+      "word": "wish",
+      "start": 165.673,
+      "end": 165.755,
+      "score": 0.204
+    },
+    {
+      "word": "I",
+      "start": 165.837,
+      "end": 165.857,
+      "score": 0.0
+    },
+    {
+      "word": "could",
+      "start": 165.877,
+      "end": 166.49,
+      "score": 0.326
+    },
+    {
+      "word": "get",
+      "start": 166.511,
+      "end": 166.633,
+      "score": 0.239
+    },
+    {
+      "word": "back.",
+      "start": 166.654,
+      "end": 166.98,
+      "score": 0.551
+    },
+    {
+      "word": "Also",
+      "start": 166.96,
+      "end": 167.47,
+      "score": 0.553
+    },
+    {
+      "word": "from",
+      "start": 167.49,
+      "end": 167.572,
+      "score": 0.0
+    },
+    {
+      "word": "the",
+      "start": 167.592,
+      "end": 167.837,
+      "score": 0.49
+    },
+    {
+      "word": "seawater",
+      "start": 167.857,
+      "end": 169.08,
+      "score": 0.514
+    },
+    {
+      "word": "I",
+      "start": 169.06,
+      "end": 169.873,
+      "score": 0.746
+    },
+    {
+      "word": "haven't",
+      "start": 169.893,
+      "end": 170.421,
+      "score": 0.442
+    },
+    {
+      "word": "seen",
+      "start": 170.442,
+      "end": 170.564,
+      "score": 0.334
+    },
+    {
+      "word": "you",
+      "start": 170.584,
+      "end": 170.645,
+      "score": 0.005
+    },
+    {
+      "word": "for",
+      "start": 170.665,
+      "end": 170.848,
+      "score": 0.288
+    },
+    {
+      "word": "a",
+      "start": 170.868,
+      "end": 170.889,
+      "score": 0.095
+    },
+    {
+      "word": "while.",
+      "start": 170.909,
+      "end": 171.62,
+      "score": 0.433
+    },
+    {
+      "word": "That",
+      "start": 172.4,
+      "end": 173.474,
+      "score": 0.59
+    },
+    {
+      "word": "illegal",
+      "start": 173.596,
+      "end": 174.224,
+      "score": 0.573
+    },
+    {
+      "word": "body",
+      "start": 174.245,
+      "end": 174.609,
+      "score": 0.42
+    },
+    {
+      "word": "I'll",
+      "start": 174.63,
+      "end": 174.954,
+      "score": 0.317
+    },
+    {
+      "word": "clear",
+      "start": 174.974,
+      "end": 175.339,
+      "score": 0.185
+    },
+    {
+      "word": "him",
+      "start": 175.359,
+      "end": 175.42,
+      "score": 0.333
+    },
+    {
+      "word": "I'm",
+      "start": 176.96,
+      "end": 177.773,
+      "score": 0.563
+    },
+    {
+      "word": "drawing",
+      "start": 178.139,
+      "end": 178.282,
+      "score": 0.109
+    },
+    {
+      "word": "with",
+      "start": 178.465,
+      "end": 178.648,
+      "score": 0.554
+    },
+    {
+      "word": "your",
+      "start": 178.871,
+      "end": 179.258,
+      "score": 0.316
+    },
+    {
+      "word": "fingers",
+      "start": 179.278,
+      "end": 179.42,
+      "score": 0.15
+    },
+    {
+      "word": "in",
+      "start": 179.96,
+      "end": 180.434,
+      "score": 0.756
+    },
+    {
+      "word": "the",
+      "start": 180.619,
+      "end": 180.784,
+      "score": 0.366
+    },
+    {
+      "word": "sand",
+      "start": 181.298,
+      "end": 181.381,
+      "score": 0.27
+    },
+    {
+      "word": "See",
+      "start": 181.36,
+      "end": 182.098,
+      "score": 0.668
+    },
+    {
+      "word": "how",
+      "start": 182.221,
+      "end": 182.385,
+      "score": 0.476
+    },
+    {
+      "word": "you",
+      "start": 182.447,
+      "end": 182.508,
+      "score": 0.232
+    },
+    {
+      "word": "get",
+      "start": 182.57,
+      "end": 182.631,
+      "score": 0.001
+    },
+    {
+      "word": "more",
+      "start": 182.651,
+      "end": 182.918,
+      "score": 0.422
+    },
+    {
+      "word": "hit.",
+      "start": 182.939,
+      "end": 183.02,
+      "score": 0.25
+    },
+    {
+      "word": "Because",
+      "start": 183.0,
+      "end": 184.055,
+      "score": 0.484
+    },
+    {
+      "word": "the",
+      "start": 184.075,
+      "end": 185.516,
+      "score": 0.599
+    },
+    {
+      "word": "sun's",
+      "start": 185.536,
+      "end": 185.638,
+      "score": 0.017
+    },
+    {
+      "word": "burning",
+      "start": 185.658,
+      "end": 185.8,
+      "score": 0.126
+    },
+    {
+      "word": "If",
+      "start": 185.78,
+      "end": 186.457,
+      "score": 0.686
+    },
+    {
+      "word": "I",
+      "start": 186.559,
+      "end": 186.58,
+      "score": 0.763
+    },
+    {
+      "word": "don't",
+      "start": 186.703,
+      "end": 187.256,
+      "score": 0.368
+    },
+    {
+      "word": "see",
+      "start": 187.277,
+      "end": 187.338,
+      "score": 0.027
+    },
+    {
+      "word": "you",
+      "start": 187.359,
+      "end": 187.421,
+      "score": 0.331
+    },
+    {
+      "word": "I",
+      "start": 188.12,
+      "end": 188.605,
+      "score": 0.873
+    },
+    {
+      "word": "swear",
+      "start": 188.646,
+      "end": 189.495,
+      "score": 0.434
+    },
+    {
+      "word": "moisture",
+      "start": 190.485,
+      "end": 191.355,
+      "score": 0.312
+    },
+    {
+      "word": "with",
+      "start": 191.375,
+      "end": 191.456,
+      "score": 0.003
+    },
+    {
+      "word": "calling",
+      "start": 191.476,
+      "end": 191.799,
+      "score": 0.301
+    },
+    {
+      "word": "you",
+      "start": 191.82,
+      "end": 191.88,
+      "score": 0.331
+    },
+    {
+      "word": "send",
+      "start": 191.86,
+      "end": 192.467,
+      "score": 0.314
+    },
+    {
+      "word": "me",
+      "start": 192.73,
+      "end": 193.863,
+      "score": 0.878
+    },
+    {
+      "word": "ruby",
+      "start": 193.964,
+      "end": 194.469,
+      "score": 0.208
+    },
+    {
+      "word": "to",
+      "start": 194.49,
+      "end": 194.53,
+      "score": 0.272
+    },
+    {
+      "word": "come",
+      "start": 194.631,
+      "end": 194.712,
+      "score": 0.199
+    },
+    {
+      "word": "and",
+      "start": 194.732,
+      "end": 195.117,
+      "score": 0.403
+    },
+    {
+      "word": "get",
+      "start": 195.137,
+      "end": 195.339,
+      "score": 0.292
+    },
+    {
+      "word": "you",
+      "start": 195.36,
+      "end": 195.42,
+      "score": 0.333
+    },
+    {
+      "word": "If",
+      "start": 196.0,
+      "end": 196.324,
+      "score": 0.158
+    },
+    {
+      "word": "I'm",
+      "start": 196.344,
+      "end": 196.708,
+      "score": 0.34
+    },
+    {
+      "word": "not",
+      "start": 196.728,
+      "end": 197.294,
+      "score": 0.498
+    },
+    {
+      "word": "with",
+      "start": 197.315,
+      "end": 197.82,
+      "score": 0.367
+    },
+    {
+      "word": "you,",
+      "start": 197.84,
+      "end": 198.245,
+      "score": 0.686
+    },
+    {
+      "word": "you",
+      "start": 198.488,
+      "end": 198.548,
+      "score": 0.225
+    },
+    {
+      "word": "feel",
+      "start": 198.609,
+      "end": 198.892,
+      "score": 0.395
+    },
+    {
+      "word": "nothing.",
+      "start": 198.912,
+      "end": 199.62,
+      "score": 0.353
+    },
+    {
+      "word": "while",
+      "start": 199.6,
+      "end": 200.58,
+      "score": 0.796
+    },
+    {
+      "word": "trying",
+      "start": 200.927,
+      "end": 201.355,
+      "score": 0.249
+    },
+    {
+      "word": "to",
+      "start": 201.376,
+      "end": 201.417,
+      "score": 0.0
+    },
+    {
+      "word": "erase",
+      "start": 201.437,
+      "end": 201.539,
+      "score": 0.193
+    },
+    {
+      "word": "me",
+      "start": 201.56,
+      "end": 201.6,
+      "score": 0.497
+    },
+    {
+      "word": "Don't",
+      "start": 201.58,
+      "end": 202.066,
+      "score": 0.365
+    },
+    {
+      "word": "leave",
+      "start": 202.086,
+      "end": 203.988,
+      "score": 0.42
+    },
+    {
+      "word": "with",
+      "start": 204.008,
+      "end": 204.089,
+      "score": 0.004
+    },
+    {
+      "word": "our",
+      "start": 204.109,
+      "end": 204.17,
+      "score": 0.067
+    },
+    {
+      "word": "whole",
+      "start": 204.19,
+      "end": 204.818,
+      "score": 0.4
+    },
+    {
+      "word": "plan.",
+      "start": 204.838,
+      "end": 205.04,
+      "score": 0.442
+    },
+    {
+      "word": "by",
+      "start": 205.02,
+      "end": 205.524,
+      "score": 0.271
+    },
+    {
+      "word": "bawama",
+      "start": 205.544,
+      "end": 207.398,
+      "score": 0.439
+    },
+    {
+      "word": "going",
+      "start": 207.418,
+      "end": 207.519,
+      "score": 0.116
+    },
+    {
+      "word": "to",
+      "start": 208.265,
+      "end": 208.466,
+      "score": 0.587
+    },
+    {
+      "word": "the",
+      "start": 208.97,
+      "end": 209.071,
+      "score": 0.408
+    },
+    {
+      "word": "locations",
+      "start": 209.091,
+      "end": 210.28,
+      "score": 0.398
+    },
+    {
+      "word": "by",
+      "start": 210.26,
+      "end": 211.328,
+      "score": 0.368
+    },
+    {
+      "word": "bawama",
+      "start": 211.348,
+      "end": 212.094,
+      "score": 0.595
+    },
+    {
+      "word": "going",
+      "start": 213.101,
+      "end": 214.29,
+      "score": 0.226
+    },
+    {
+      "word": "to",
+      "start": 214.31,
+      "end": 214.351,
+      "score": 0.109
+    },
+    {
+      "word": "the",
+      "start": 214.371,
+      "end": 214.613,
+      "score": 0.281
+    },
+    {
+      "word": "locations",
+      "start": 214.633,
+      "end": 215.6,
+      "score": 0.211
+    },
+    {
+      "word": "by",
+      "start": 215.58,
+      "end": 218.093,
+      "score": 0.45
+    },
+    {
+      "word": "bawama",
+      "start": 218.113,
+      "end": 222.958,
+      "score": 0.21
+    },
+    {
+      "word": "going",
+      "start": 222.978,
+      "end": 223.078,
+      "score": 0.0
+    },
+    {
+      "word": "to",
+      "start": 223.098,
+      "end": 223.139,
+      "score": 0.0
+    },
+    {
+      "word": "the",
+      "start": 223.159,
+      "end": 223.219,
+      "score": 0.0
+    },
+    {
+      "word": "locations",
+      "start": 223.239,
+      "end": 223.42,
+      "score": 0.111
+    }
+  ]
+}

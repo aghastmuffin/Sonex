@@ -53,7 +53,7 @@ def _stage_progress_cb(stage_start, stage_end, default_label, whisper_label=None
     return _cb
 
 
-def splitter(file_path, lang_code=None, translation_mode="argos", settings=None, target_lang=None):
+def splitter(file_path, lang_code=None, translation_mode="none", settings=None, target_lang=None):
     # Ensure repository root is on sys.path before importing backbone modules.
     repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     if repo_root not in sys.path:
@@ -83,9 +83,9 @@ def splitter(file_path, lang_code=None, translation_mode="argos", settings=None,
     lt.model = demucs_model
     lt.two_stems = None if demucs_stems in ("both", "default") else demucs_stems
 
-    translation_mode = (translation_mode or "argos").strip().lower()
-    if translation_mode not in {"argos", "whisper", "both"}:
-        translation_mode = "argos"
+    translation_mode = (translation_mode or "none").strip().lower()
+    if translation_mode not in {"none", "argos", "whisper", "both"}:
+        translation_mode = "none"
 
     emit_progress(10, "Separating stems...")
     emit_demucs_active(True)
@@ -220,9 +220,8 @@ def splitter(file_path, lang_code=None, translation_mode="argos", settings=None,
             emit_progress(62, "Argos translation pass...")
             translate_file(
                 f"{audiobase}/vocals_whisper_segments.json",
-                # Keep a single transcript source-of-truth: overwrite the initial whisper transcript.
-                # `translate_file` preserves original content in `source_text` and `source_words`.
-                output_path=f"{audiobase}/vocals_whisper_segments.json",
+                # Keep source-language transcript unchanged and write Argos output separately.
+                output_path=f"{audiobase}/argos_translated.json",
                 from_lang=source_lang,
                 to_lang=target_lang,
                 verbose=True,
@@ -510,7 +509,7 @@ def main():
     file_path = sys.argv[1]
     lang_code = sys.argv[2] if len(sys.argv) > 2 and sys.argv[2] else None
     lang_code_to = sys.argv[5] if len(sys.argv) > 5 and sys.argv[5] else None
-    translation_mode = sys.argv[3] if len(sys.argv) > 3 and sys.argv[3] else "argos"
+    translation_mode = sys.argv[3] if len(sys.argv) > 3 and sys.argv[3] else "none"
     raw_settings = sys.argv[4] if len(sys.argv) > 4 and sys.argv[4] else "{}"
 
     try:
