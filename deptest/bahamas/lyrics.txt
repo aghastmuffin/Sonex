@@ -1,0 +1,5244 @@
+{
+  "segments": [
+    {
+      "start": 6.76,
+      "end": 12.18,
+      "text": "va a dejarte ir, eso nunca me tiene hipnotizado",
+      "words": [
+        {
+          "word": "va",
+          "start": 6.76,
+          "end": 7.626,
+          "score": 0.637
+        },
+        {
+          "word": "a",
+          "start": 7.647,
+          "end": 7.667,
+          "score": 0.003
+        },
+        {
+          "word": "dejarte",
+          "start": 7.687,
+          "end": 8.311,
+          "score": 0.644
+        },
+        {
+          "word": "ir,",
+          "start": 8.332,
+          "end": 8.533,
+          "score": 0.898
+        },
+        {
+          "word": "eso",
+          "start": 9.359,
+          "end": 9.581,
+          "score": 0.932
+        },
+        {
+          "word": "nunca",
+          "start": 9.682,
+          "end": 10.447,
+          "score": 0.856
+        },
+        {
+          "word": "me",
+          "start": 10.467,
+          "end": 10.508,
+          "score": 0.488
+        },
+        {
+          "word": "tiene",
+          "start": 10.931,
+          "end": 11.394,
+          "score": 0.751
+        },
+        {
+          "word": "hipnotizado",
+          "start": 11.495,
+          "end": 12.18,
+          "score": 0.59
+        }
+      ]
+    },
+    {
+      "start": 12.16,
+      "end": 15.02,
+      "text": "no puedo dejar de mirarte",
+      "words": [
+        {
+          "word": "no",
+          "start": 12.16,
+          "end": 12.444,
+          "score": 0.732
+        },
+        {
+          "word": "puedo",
+          "start": 12.545,
+          "end": 12.931,
+          "score": 0.853
+        },
+        {
+          "word": "dejar",
+          "start": 13.276,
+          "end": 13.56,
+          "score": 0.513
+        },
+        {
+          "word": "de",
+          "start": 13.58,
+          "end": 13.722,
+          "score": 0.454
+        },
+        {
+          "word": "mirarte",
+          "start": 13.742,
+          "end": 15.02,
+          "score": 0.885
+        }
+      ]
+    },
+    {
+      "start": 15.0,
+      "end": 19.12,
+      "text": "rías más que una estría, mami, tú te fugaste",
+      "words": [
+        {
+          "word": "rías",
+          "start": 15.0,
+          "end": 15.485,
+          "score": 0.633
+        },
+        {
+          "word": "más",
+          "start": 15.525,
+          "end": 15.707,
+          "score": 0.7
+        },
+        {
+          "word": "que",
+          "start": 15.727,
+          "end": 15.828,
+          "score": 0.68
+        },
+        {
+          "word": "una",
+          "start": 15.949,
+          "end": 16.091,
+          "score": 0.469
+        },
+        {
+          "word": "estría,",
+          "start": 16.111,
+          "end": 16.434,
+          "score": 0.539
+        },
+        {
+          "word": "mami,",
+          "start": 16.798,
+          "end": 18.777,
+          "score": 0.814
+        },
+        {
+          "word": "tú",
+          "start": 18.797,
+          "end": 18.837,
+          "score": 0.007
+        },
+        {
+          "word": "te",
+          "start": 18.858,
+          "end": 18.959,
+          "score": 0.618
+        },
+        {
+          "word": "fugaste",
+          "start": 18.979,
+          "end": 19.12,
+          "score": 0.131
+        }
+      ]
+    },
+    {
+      "start": 19.1,
+      "end": 23.1,
+      "text": "este que te endujaste, no puedo olvidarte",
+      "words": [
+        {
+          "word": "este",
+          "start": 19.1,
+          "end": 19.544,
+          "score": 0.608
+        },
+        {
+          "word": "que",
+          "start": 19.585,
+          "end": 19.848,
+          "score": 0.743
+        },
+        {
+          "word": "te",
+          "start": 19.868,
+          "end": 20.211,
+          "score": 0.719
+        },
+        {
+          "word": "endujaste,",
+          "start": 20.231,
+          "end": 21.221,
+          "score": 0.824
+        },
+        {
+          "word": "no",
+          "start": 21.484,
+          "end": 21.787,
+          "score": 0.707
+        },
+        {
+          "word": "puedo",
+          "start": 21.807,
+          "end": 21.908,
+          "score": 0.0
+        },
+        {
+          "word": "olvidarte",
+          "start": 21.928,
+          "end": 23.1,
+          "score": 0.693
+        }
+      ]
+    },
+    {
+      "start": 23.08,
+      "end": 25.9,
+      "text": "tú y yo pa' las bamas, te doy el tom",
+      "words": [
+        {
+          "word": "tú",
+          "start": 23.08,
+          "end": 23.425,
+          "score": 0.444
+        },
+        {
+          "word": "y",
+          "start": 23.445,
+          "end": 23.466,
+          "score": 0.001
+        },
+        {
+          "word": "yo",
+          "start": 23.486,
+          "end": 23.587,
+          "score": 0.824
+        },
+        {
+          "word": "pa'",
+          "start": 23.689,
+          "end": 23.892,
+          "score": 0.541
+        },
+        {
+          "word": "las",
+          "start": 23.912,
+          "end": 24.034,
+          "score": 0.687
+        },
+        {
+          "word": "bamas,",
+          "start": 24.176,
+          "end": 24.926,
+          "score": 0.601
+        },
+        {
+          "word": "te",
+          "start": 24.947,
+          "end": 25.129,
+          "score": 0.752
+        },
+        {
+          "word": "doy",
+          "start": 25.15,
+          "end": 25.231,
+          "score": 0.77
+        },
+        {
+          "word": "el",
+          "start": 25.292,
+          "end": 25.434,
+          "score": 0.814
+        },
+        {
+          "word": "tom",
+          "start": 25.454,
+          "end": 25.9,
+          "score": 0.916
+        }
+      ]
+    },
+    {
+      "start": 25.88,
+      "end": 27.9,
+      "text": "quitándote el pantalón",
+      "words": [
+        {
+          "word": "quitándote",
+          "start": 25.88,
+          "end": 26.778,
+          "score": 0.531
+        },
+        {
+          "word": "el",
+          "start": 26.798,
+          "end": 26.9,
+          "score": 0.625
+        },
+        {
+          "word": "pantalón",
+          "start": 26.982,
+          "end": 27.9,
+          "score": 0.885
+        }
+      ]
+    },
+    {
+      "start": 27.88,
+      "end": 31.52,
+      "text": "en frente al marto, encima mía en los asientos del rubí",
+      "words": [
+        {
+          "word": "en",
+          "start": 27.88,
+          "end": 28.082,
+          "score": 0.38
+        },
+        {
+          "word": "frente",
+          "start": 28.102,
+          "end": 28.365,
+          "score": 0.461
+        },
+        {
+          "word": "al",
+          "start": 28.386,
+          "end": 28.466,
+          "score": 0.545
+        },
+        {
+          "word": "marto,",
+          "start": 28.527,
+          "end": 28.972,
+          "score": 0.654
+        },
+        {
+          "word": "encima",
+          "start": 28.992,
+          "end": 29.377,
+          "score": 0.53
+        },
+        {
+          "word": "mía",
+          "start": 29.518,
+          "end": 29.781,
+          "score": 0.527
+        },
+        {
+          "word": "en",
+          "start": 29.923,
+          "end": 30.003,
+          "score": 0.625
+        },
+        {
+          "word": "los",
+          "start": 30.044,
+          "end": 30.125,
+          "score": 0.735
+        },
+        {
+          "word": "asientos",
+          "start": 30.185,
+          "end": 30.63,
+          "score": 0.872
+        },
+        {
+          "word": "del",
+          "start": 30.671,
+          "end": 31.055,
+          "score": 0.472
+        },
+        {
+          "word": "rubí",
+          "start": 31.075,
+          "end": 31.52,
+          "score": 0.825
+        }
+      ]
+    },
+    {
+      "start": 31.5,
+      "end": 34.32,
+      "text": "con el cielo azul y tus ojos marrón",
+      "words": [
+        {
+          "word": "con",
+          "start": 31.5,
+          "end": 31.906,
+          "score": 0.651
+        },
+        {
+          "word": "el",
+          "start": 31.926,
+          "end": 32.007,
+          "score": 0.95
+        },
+        {
+          "word": "cielo",
+          "start": 32.17,
+          "end": 32.352,
+          "score": 0.325
+        },
+        {
+          "word": "azul",
+          "start": 32.433,
+          "end": 32.819,
+          "score": 0.718
+        },
+        {
+          "word": "y",
+          "start": 32.941,
+          "end": 33.062,
+          "score": 0.668
+        },
+        {
+          "word": "tus",
+          "start": 33.083,
+          "end": 33.549,
+          "score": 0.905
+        },
+        {
+          "word": "ojos",
+          "start": 33.59,
+          "end": 33.833,
+          "score": 0.174
+        },
+        {
+          "word": "marrón",
+          "start": 33.854,
+          "end": 34.32,
+          "score": 0.902
+        }
+      ]
+    },
+    {
+      "start": 34.3,
+      "end": 39.46,
+      "text": "bebiendo bajo el sol, tu cuerpo sudando contra el mío",
+      "words": [
+        {
+          "word": "bebiendo",
+          "start": 34.3,
+          "end": 35.046,
+          "score": 0.323
+        },
+        {
+          "word": "bajo",
+          "start": 35.147,
+          "end": 35.409,
+          "score": 0.74
+        },
+        {
+          "word": "el",
+          "start": 35.489,
+          "end": 35.57,
+          "score": 0.644
+        },
+        {
+          "word": "sol,",
+          "start": 35.59,
+          "end": 36.336,
+          "score": 0.617
+        },
+        {
+          "word": "tu",
+          "start": 36.356,
+          "end": 36.396,
+          "score": 0.01
+        },
+        {
+          "word": "cuerpo",
+          "start": 36.416,
+          "end": 36.799,
+          "score": 0.669
+        },
+        {
+          "word": "sudando",
+          "start": 36.88,
+          "end": 37.545,
+          "score": 0.806
+        },
+        {
+          "word": "contra",
+          "start": 37.666,
+          "end": 39.319,
+          "score": 0.915
+        },
+        {
+          "word": "el",
+          "start": 39.339,
+          "end": 39.38,
+          "score": 0.004
+        },
+        {
+          "word": "mío",
+          "start": 39.4,
+          "end": 39.46,
+          "score": 0.319
+        }
+      ]
+    },
+    {
+      "start": 39.44,
+      "end": 45.46,
+      "text": "si no te veo, te lo borro me da con llamarte",
+      "words": [
+        {
+          "word": "si",
+          "start": 39.44,
+          "end": 39.923,
+          "score": 0.442
+        },
+        {
+          "word": "no",
+          "start": 39.943,
+          "end": 40.145,
+          "score": 0.735
+        },
+        {
+          "word": "te",
+          "start": 40.165,
+          "end": 40.487,
+          "score": 0.754
+        },
+        {
+          "word": "veo,",
+          "start": 40.507,
+          "end": 40.769,
+          "score": 0.401
+        },
+        {
+          "word": "te",
+          "start": 40.789,
+          "end": 41.453,
+          "score": 0.782
+        },
+        {
+          "word": "lo",
+          "start": 42.198,
+          "end": 42.279,
+          "score": 0.828
+        },
+        {
+          "word": "borro",
+          "start": 42.943,
+          "end": 43.205,
+          "score": 0.424
+        },
+        {
+          "word": "me",
+          "start": 43.225,
+          "end": 43.829,
+          "score": 0.914
+        },
+        {
+          "word": "da",
+          "start": 43.87,
+          "end": 43.91,
+          "score": 0.512
+        },
+        {
+          "word": "con",
+          "start": 44.01,
+          "end": 44.272,
+          "score": 0.787
+        },
+        {
+          "word": "llamarte",
+          "start": 44.292,
+          "end": 45.46,
+          "score": 0.727
+        }
+      ]
+    },
+    {
+      "start": 45.44,
+      "end": 49.56,
+      "text": "envíame la rubí pa' ir a buscarte",
+      "words": [
+        {
+          "word": "envíame",
+          "start": 45.44,
+          "end": 46.409,
+          "score": 0.703
+        },
+        {
+          "word": "la",
+          "start": 46.551,
+          "end": 47.419,
+          "score": 0.892
+        },
+        {
+          "word": "rubí",
+          "start": 47.44,
+          "end": 47.52,
+          "score": 0.001
+        },
+        {
+          "word": "pa'",
+          "start": 47.54,
+          "end": 47.904,
+          "score": 0.888
+        },
+        {
+          "word": "ir",
+          "start": 47.924,
+          "end": 48.066,
+          "score": 0.704
+        },
+        {
+          "word": "a",
+          "start": 48.167,
+          "end": 48.53,
+          "score": 0.759
+        },
+        {
+          "word": "buscarte",
+          "start": 48.55,
+          "end": 49.56,
+          "score": 0.683
+        }
+      ]
+    },
+    {
+      "start": 49.54,
+      "end": 55.56,
+      "text": "si no es contigo y yo no siento nada, no te puedo borrar",
+      "words": [
+        {
+          "word": "si",
+          "start": 49.54,
+          "end": 50.245,
+          "score": 0.384
+        },
+        {
+          "word": "no",
+          "start": 50.265,
+          "end": 50.406,
+          "score": 0.648
+        },
+        {
+          "word": "es",
+          "start": 50.587,
+          "end": 50.627,
+          "score": 0.017
+        },
+        {
+          "word": "contigo",
+          "start": 50.647,
+          "end": 51.654,
+          "score": 0.126
+        },
+        {
+          "word": "y",
+          "start": 51.674,
+          "end": 51.694,
+          "score": 0.003
+        },
+        {
+          "word": "yo",
+          "start": 51.714,
+          "end": 51.855,
+          "score": 0.756
+        },
+        {
+          "word": "no",
+          "start": 51.876,
+          "end": 52.037,
+          "score": 0.92
+        },
+        {
+          "word": "siento",
+          "start": 52.097,
+          "end": 52.58,
+          "score": 0.686
+        },
+        {
+          "word": "nada,",
+          "start": 52.6,
+          "end": 53.587,
+          "score": 0.404
+        },
+        {
+          "word": "no",
+          "start": 53.607,
+          "end": 53.647,
+          "score": 0.008
+        },
+        {
+          "word": "te",
+          "start": 53.668,
+          "end": 53.909,
+          "score": 0.795
+        },
+        {
+          "word": "puedo",
+          "start": 53.929,
+          "end": 55.419,
+          "score": 0.587
+        },
+        {
+          "word": "borrar",
+          "start": 55.439,
+          "end": 55.56,
+          "score": 0.176
+        }
+      ]
+    },
+    {
+      "start": 55.54,
+      "end": 61.68,
+      "text": "si no te veo, te lo borro me da con llamarte",
+      "words": [
+        {
+          "word": "si",
+          "start": 55.54,
+          "end": 56.144,
+          "score": 0.455
+        },
+        {
+          "word": "no",
+          "start": 56.164,
+          "end": 56.265,
+          "score": 0.902
+        },
+        {
+          "word": "te",
+          "start": 56.486,
+          "end": 56.748,
+          "score": 0.859
+        },
+        {
+          "word": "veo,",
+          "start": 56.768,
+          "end": 58.459,
+          "score": 0.412
+        },
+        {
+          "word": "te",
+          "start": 58.479,
+          "end": 58.519,
+          "score": 0.007
+        },
+        {
+          "word": "lo",
+          "start": 58.54,
+          "end": 59.023,
+          "score": 0.472
+        },
+        {
+          "word": "borro",
+          "start": 59.043,
+          "end": 59.546,
+          "score": 0.407
+        },
+        {
+          "word": "me",
+          "start": 59.566,
+          "end": 59.687,
+          "score": 0.678
+        },
+        {
+          "word": "da",
+          "start": 60.211,
+          "end": 60.251,
+          "score": 0.006
+        },
+        {
+          "word": "con",
+          "start": 60.271,
+          "end": 60.512,
+          "score": 0.765
+        },
+        {
+          "word": "llamarte",
+          "start": 60.553,
+          "end": 61.68,
+          "score": 0.854
+        }
+      ]
+    },
+    {
+      "start": 61.66,
+      "end": 65.88,
+      "text": "envíame la rubí pa' ir a buscarte",
+      "words": [
+        {
+          "word": "envíame",
+          "start": 61.66,
+          "end": 62.791,
+          "score": 0.457
+        },
+        {
+          "word": "la",
+          "start": 62.811,
+          "end": 63.639,
+          "score": 0.888
+        },
+        {
+          "word": "rubí",
+          "start": 63.659,
+          "end": 63.74,
+          "score": 0.186
+        },
+        {
+          "word": "pa'",
+          "start": 63.861,
+          "end": 64.103,
+          "score": 0.803
+        },
+        {
+          "word": "ir",
+          "start": 64.245,
+          "end": 64.386,
+          "score": 0.858
+        },
+        {
+          "word": "a",
+          "start": 64.406,
+          "end": 64.426,
+          "score": 0.828
+        },
+        {
+          "word": "buscarte",
+          "start": 64.648,
+          "end": 65.88,
+          "score": 0.808
+        }
+      ]
+    },
+    {
+      "start": 65.86,
+      "end": 72.2,
+      "text": "si no es contigo y yo no siento nada, no te puedo borrar",
+      "words": [
+        {
+          "word": "si",
+          "start": 65.86,
+          "end": 66.504,
+          "score": 0.781
+        },
+        {
+          "word": "no",
+          "start": 66.585,
+          "end": 66.665,
+          "score": 0.922
+        },
+        {
+          "word": "es",
+          "start": 66.746,
+          "end": 66.806,
+          "score": 0.52
+        },
+        {
+          "word": "contigo",
+          "start": 66.907,
+          "end": 68.074,
+          "score": 0.855
+        },
+        {
+          "word": "y",
+          "start": 68.094,
+          "end": 68.114,
+          "score": 0.089
+        },
+        {
+          "word": "yo",
+          "start": 68.134,
+          "end": 68.175,
+          "score": 0.001
+        },
+        {
+          "word": "no",
+          "start": 68.195,
+          "end": 68.316,
+          "score": 0.783
+        },
+        {
+          "word": "siento",
+          "start": 68.396,
+          "end": 70.288,
+          "score": 0.848
+        },
+        {
+          "word": "nada,",
+          "start": 70.308,
+          "end": 70.409,
+          "score": 0.028
+        },
+        {
+          "word": "no",
+          "start": 70.429,
+          "end": 70.469,
+          "score": 0.0
+        },
+        {
+          "word": "te",
+          "start": 70.489,
+          "end": 70.53,
+          "score": 0.107
+        },
+        {
+          "word": "puedo",
+          "start": 70.55,
+          "end": 70.771,
+          "score": 0.238
+        },
+        {
+          "word": "borrar",
+          "start": 70.791,
+          "end": 72.2,
+          "score": 0.465
+        }
+      ]
+    },
+    {
+      "start": 72.18,
+      "end": 74.36,
+      "text": "como una cicatriz después de la herida",
+      "words": [
+        {
+          "word": "como",
+          "start": 72.18,
+          "end": 72.608,
+          "score": 0.621
+        },
+        {
+          "word": "una",
+          "start": 72.669,
+          "end": 72.832,
+          "score": 0.516
+        },
+        {
+          "word": "cicatriz",
+          "start": 72.852,
+          "end": 73.403,
+          "score": 0.685
+        },
+        {
+          "word": "después",
+          "start": 73.423,
+          "end": 73.769,
+          "score": 0.63
+        },
+        {
+          "word": "de",
+          "start": 73.831,
+          "end": 73.892,
+          "score": 0.641
+        },
+        {
+          "word": "la",
+          "start": 73.912,
+          "end": 73.973,
+          "score": 0.204
+        },
+        {
+          "word": "herida",
+          "start": 73.994,
+          "end": 74.36,
+          "score": 0.716
+        }
+      ]
+    },
+    {
+      "start": 74.34,
+      "end": 76.46,
+      "text": "marqué tu piel y tú marcaste la mía",
+      "words": [
+        {
+          "word": "marqué",
+          "start": 74.34,
+          "end": 74.727,
+          "score": 0.589
+        },
+        {
+          "word": "tu",
+          "start": 74.748,
+          "end": 74.87,
+          "score": 0.706
+        },
+        {
+          "word": "piel",
+          "start": 74.89,
+          "end": 75.074,
+          "score": 0.478
+        },
+        {
+          "word": "y",
+          "start": 75.156,
+          "end": 75.217,
+          "score": 0.492
+        },
+        {
+          "word": "tú",
+          "start": 75.237,
+          "end": 75.38,
+          "score": 0.784
+        },
+        {
+          "word": "marcaste",
+          "start": 75.4,
+          "end": 75.951,
+          "score": 0.642
+        },
+        {
+          "word": "la",
+          "start": 75.991,
+          "end": 76.093,
+          "score": 0.777
+        },
+        {
+          "word": "mía",
+          "start": 76.175,
+          "end": 76.46,
+          "score": 0.862
+        }
+      ]
+    },
+    {
+      "start": 76.44,
+      "end": 78.46,
+      "text": "comerlo más de cuatro veces seguida",
+      "words": [
+        {
+          "word": "comerlo",
+          "start": 76.44,
+          "end": 76.93,
+          "score": 0.452
+        },
+        {
+          "word": "más",
+          "start": 76.95,
+          "end": 77.113,
+          "score": 0.177
+        },
+        {
+          "word": "de",
+          "start": 77.134,
+          "end": 77.195,
+          "score": 0.911
+        },
+        {
+          "word": "cuatro",
+          "start": 77.297,
+          "end": 77.562,
+          "score": 0.85
+        },
+        {
+          "word": "veces",
+          "start": 77.705,
+          "end": 77.93,
+          "score": 0.726
+        },
+        {
+          "word": "seguida",
+          "start": 77.991,
+          "end": 78.46,
+          "score": 0.506
+        }
+      ]
+    },
+    {
+      "start": 78.44,
+      "end": 81.72,
+      "text": "todos los días del mes sentimos que ese no volvió necesidad",
+      "words": [
+        {
+          "word": "todos",
+          "start": 78.44,
+          "end": 78.784,
+          "score": 0.167
+        },
+        {
+          "word": "los",
+          "start": 78.804,
+          "end": 78.865,
+          "score": 0.048
+        },
+        {
+          "word": "días",
+          "start": 78.885,
+          "end": 79.108,
+          "score": 0.802
+        },
+        {
+          "word": "del",
+          "start": 79.189,
+          "end": 79.351,
+          "score": 0.895
+        },
+        {
+          "word": "mes",
+          "start": 79.392,
+          "end": 79.493,
+          "score": 0.797
+        },
+        {
+          "word": "sentimos",
+          "start": 79.554,
+          "end": 79.918,
+          "score": 0.897
+        },
+        {
+          "word": "que",
+          "start": 79.999,
+          "end": 80.08,
+          "score": 0.671
+        },
+        {
+          "word": "ese",
+          "start": 80.141,
+          "end": 80.242,
+          "score": 0.929
+        },
+        {
+          "word": "no",
+          "start": 80.343,
+          "end": 80.404,
+          "score": 0.881
+        },
+        {
+          "word": "volvió",
+          "start": 80.505,
+          "end": 80.789,
+          "score": 0.205
+        },
+        {
+          "word": "necesidad",
+          "start": 80.809,
+          "end": 81.72,
+          "score": 0.918
+        }
+      ]
+    },
+    {
+      "start": 81.7,
+      "end": 84.82,
+      "text": "pa' la noche nos matamos en el cuarto",
+      "words": [
+        {
+          "word": "pa'",
+          "start": 81.7,
+          "end": 83.017,
+          "score": 0.811
+        },
+        {
+          "word": "la",
+          "start": 83.037,
+          "end": 83.179,
+          "score": 0.675
+        },
+        {
+          "word": "noche",
+          "start": 83.199,
+          "end": 83.442,
+          "score": 0.635
+        },
+        {
+          "word": "nos",
+          "start": 83.463,
+          "end": 83.625,
+          "score": 0.496
+        },
+        {
+          "word": "matamos",
+          "start": 83.645,
+          "end": 84.091,
+          "score": 0.618
+        },
+        {
+          "word": "en",
+          "start": 84.131,
+          "end": 84.192,
+          "score": 0.509
+        },
+        {
+          "word": "el",
+          "start": 84.253,
+          "end": 84.395,
+          "score": 0.69
+        },
+        {
+          "word": "cuarto",
+          "start": 84.456,
+          "end": 84.82,
+          "score": 0.946
+        }
+      ]
+    },
+    {
+      "start": 84.8,
+      "end": 86.88,
+      "text": "mami tú eres mía, yo no te comparto",
+      "words": [
+        {
+          "word": "mami",
+          "start": 84.8,
+          "end": 85.188,
+          "score": 0.647
+        },
+        {
+          "word": "tú",
+          "start": 85.208,
+          "end": 85.351,
+          "score": 0.351
+        },
+        {
+          "word": "eres",
+          "start": 85.371,
+          "end": 85.473,
+          "score": 0.4
+        },
+        {
+          "word": "mía,",
+          "start": 85.493,
+          "end": 85.738,
+          "score": 0.658
+        },
+        {
+          "word": "yo",
+          "start": 85.759,
+          "end": 85.84,
+          "score": 0.864
+        },
+        {
+          "word": "no",
+          "start": 85.901,
+          "end": 86.003,
+          "score": 0.808
+        },
+        {
+          "word": "te",
+          "start": 86.065,
+          "end": 86.228,
+          "score": 0.754
+        },
+        {
+          "word": "comparto",
+          "start": 86.309,
+          "end": 86.88,
+          "score": 0.976
+        }
+      ]
+    },
+    {
+      "start": 86.86,
+      "end": 88.9,
+      "text": "una movie como las de tim burton",
+      "words": [
+        {
+          "word": "una",
+          "start": 86.86,
+          "end": 87.166,
+          "score": 0.704
+        },
+        {
+          "word": "movie",
+          "start": 87.207,
+          "end": 87.493,
+          "score": 0.563
+        },
+        {
+          "word": "como",
+          "start": 87.513,
+          "end": 87.819,
+          "score": 0.883
+        },
+        {
+          "word": "las",
+          "start": 87.88,
+          "end": 88.064,
+          "score": 0.335
+        },
+        {
+          "word": "de",
+          "start": 88.084,
+          "end": 88.247,
+          "score": 0.775
+        },
+        {
+          "word": "tim",
+          "start": 88.268,
+          "end": 88.513,
+          "score": 0.716
+        },
+        {
+          "word": "burton",
+          "start": 88.533,
+          "end": 88.9,
+          "score": 0.674
+        }
+      ]
+    },
+    {
+      "start": 90.66,
+      "end": 92.94,
+      "text": "si no estoy contigo, ya no siento nada",
+      "words": [
+        {
+          "word": "si",
+          "start": 90.66,
+          "end": 90.965,
+          "score": 0.446
+        },
+        {
+          "word": "no",
+          "start": 90.986,
+          "end": 91.026,
+          "score": 0.371
+        },
+        {
+          "word": "estoy",
+          "start": 91.088,
+          "end": 91.332,
+          "score": 0.445
+        },
+        {
+          "word": "contigo,",
+          "start": 91.352,
+          "end": 91.8,
+          "score": 0.852
+        },
+        {
+          "word": "ya",
+          "start": 91.943,
+          "end": 91.983,
+          "score": 0.471
+        },
+        {
+          "word": "no",
+          "start": 92.045,
+          "end": 92.106,
+          "score": 0.966
+        },
+        {
+          "word": "siento",
+          "start": 92.146,
+          "end": 92.452,
+          "score": 0.672
+        },
+        {
+          "word": "nada",
+          "start": 92.513,
+          "end": 92.94,
+          "score": 0.822
+        }
+      ]
+    },
+    {
+      "start": 92.92,
+      "end": 94.68,
+      "text": "me dices que yo soy tu debilidad",
+      "words": [
+        {
+          "word": "me",
+          "start": 92.92,
+          "end": 93.166,
+          "score": 0.458
+        },
+        {
+          "word": "dices",
+          "start": 93.186,
+          "end": 93.411,
+          "score": 0.557
+        },
+        {
+          "word": "que",
+          "start": 93.432,
+          "end": 93.616,
+          "score": 0.713
+        },
+        {
+          "word": "yo",
+          "start": 93.636,
+          "end": 93.698,
+          "score": 0.752
+        },
+        {
+          "word": "soy",
+          "start": 93.821,
+          "end": 93.882,
+          "score": 0.242
+        },
+        {
+          "word": "tu",
+          "start": 93.944,
+          "end": 94.21,
+          "score": 0.642
+        },
+        {
+          "word": "debilidad",
+          "start": 94.23,
+          "end": 94.68,
+          "score": 0.646
+        }
+      ]
+    },
+    {
+      "start": 95.6,
+      "end": 98.18,
+      "text": "por eso siempre volvemos",
+      "words": [
+        {
+          "word": "por",
+          "start": 95.6,
+          "end": 96.189,
+          "score": 0.914
+        },
+        {
+          "word": "eso",
+          "start": 96.291,
+          "end": 96.494,
+          "score": 0.992
+        },
+        {
+          "word": "siempre",
+          "start": 96.514,
+          "end": 97.063,
+          "score": 0.726
+        },
+        {
+          "word": "volvemos",
+          "start": 97.266,
+          "end": 98.18,
+          "score": 0.637
+        }
+      ]
+    },
+    {
+      "start": 98.16,
+      "end": 102.18,
+      "text": "aunque nos peleemos solo con mirar",
+      "words": [
+        {
+          "word": "aunque",
+          "start": 98.16,
+          "end": 98.907,
+          "score": 0.567
+        },
+        {
+          "word": "nos",
+          "start": 98.928,
+          "end": 99.069,
+          "score": 0.775
+        },
+        {
+          "word": "peleemos",
+          "start": 99.17,
+          "end": 100.16,
+          "score": 0.692
+        },
+        {
+          "word": "solo",
+          "start": 100.18,
+          "end": 100.847,
+          "score": 0.86
+        },
+        {
+          "word": "con",
+          "start": 100.988,
+          "end": 101.19,
+          "score": 0.961
+        },
+        {
+          "word": "mirar",
+          "start": 101.251,
+          "end": 102.18,
+          "score": 0.913
+        }
+      ]
+    },
+    {
+      "start": 102.16,
+      "end": 104.52,
+      "text": "los dos nos leemos",
+      "words": [
+        {
+          "word": "los",
+          "start": 102.16,
+          "end": 102.872,
+          "score": 0.294
+        },
+        {
+          "word": "dos",
+          "start": 102.893,
+          "end": 102.954,
+          "score": 0.002
+        },
+        {
+          "word": "nos",
+          "start": 102.974,
+          "end": 103.157,
+          "score": 0.808
+        },
+        {
+          "word": "leemos",
+          "start": 103.279,
+          "end": 104.52,
+          "score": 0.875
+        }
+      ]
+    },
+    {
+      "start": 104.5,
+      "end": 110.5,
+      "text": "si no te veo, te lo borro me da con llamarte",
+      "words": [
+        {
+          "word": "si",
+          "start": 104.5,
+          "end": 104.983,
+          "score": 0.422
+        },
+        {
+          "word": "no",
+          "start": 105.003,
+          "end": 105.124,
+          "score": 0.905
+        },
+        {
+          "word": "te",
+          "start": 105.305,
+          "end": 105.466,
+          "score": 0.908
+        },
+        {
+          "word": "veo,",
+          "start": 105.567,
+          "end": 107.279,
+          "score": 0.449
+        },
+        {
+          "word": "te",
+          "start": 107.299,
+          "end": 107.339,
+          "score": 0.006
+        },
+        {
+          "word": "lo",
+          "start": 107.359,
+          "end": 107.641,
+          "score": 0.443
+        },
+        {
+          "word": "borro",
+          "start": 107.661,
+          "end": 108.366,
+          "score": 0.557
+        },
+        {
+          "word": "me",
+          "start": 108.386,
+          "end": 108.668,
+          "score": 0.77
+        },
+        {
+          "word": "da",
+          "start": 108.688,
+          "end": 108.99,
+          "score": 0.782
+        },
+        {
+          "word": "con",
+          "start": 109.091,
+          "end": 109.373,
+          "score": 0.479
+        },
+        {
+          "word": "llamarte",
+          "start": 109.393,
+          "end": 110.5,
+          "score": 0.752
+        }
+      ]
+    },
+    {
+      "start": 110.48,
+      "end": 114.72,
+      "text": "envíame la rubí pa' ir a buscarte",
+      "words": [
+        {
+          "word": "envíame",
+          "start": 110.48,
+          "end": 111.611,
+          "score": 0.58
+        },
+        {
+          "word": "la",
+          "start": 111.631,
+          "end": 111.873,
+          "score": 0.869
+        },
+        {
+          "word": "rubí",
+          "start": 112.459,
+          "end": 112.54,
+          "score": 0.168
+        },
+        {
+          "word": "pa'",
+          "start": 112.701,
+          "end": 113.024,
+          "score": 0.586
+        },
+        {
+          "word": "ir",
+          "start": 113.044,
+          "end": 113.246,
+          "score": 0.766
+        },
+        {
+          "word": "a",
+          "start": 113.266,
+          "end": 113.347,
+          "score": 0.807
+        },
+        {
+          "word": "buscarte",
+          "start": 113.468,
+          "end": 114.72,
+          "score": 0.788
+        }
+      ]
+    },
+    {
+      "start": 114.7,
+      "end": 120.9,
+      "text": "si no es contigo y yo ya no siento nada, no te puedo borrar",
+      "words": [
+        {
+          "word": "si",
+          "start": 114.7,
+          "end": 115.324,
+          "score": 0.862
+        },
+        {
+          "word": "no",
+          "start": 115.405,
+          "end": 115.465,
+          "score": 0.967
+        },
+        {
+          "word": "es",
+          "start": 115.566,
+          "end": 115.626,
+          "score": 0.616
+        },
+        {
+          "word": "contigo",
+          "start": 115.727,
+          "end": 116.411,
+          "score": 0.853
+        },
+        {
+          "word": "y",
+          "start": 116.431,
+          "end": 116.673,
+          "score": 0.582
+        },
+        {
+          "word": "yo",
+          "start": 116.693,
+          "end": 116.733,
+          "score": 0.016
+        },
+        {
+          "word": "ya",
+          "start": 116.753,
+          "end": 117.116,
+          "score": 0.664
+        },
+        {
+          "word": "no",
+          "start": 117.136,
+          "end": 117.176,
+          "score": 0.036
+        },
+        {
+          "word": "siento",
+          "start": 117.196,
+          "end": 119.29,
+          "score": 0.751
+        },
+        {
+          "word": "nada,",
+          "start": 119.31,
+          "end": 119.41,
+          "score": 0.065
+        },
+        {
+          "word": "no",
+          "start": 119.431,
+          "end": 119.491,
+          "score": 0.466
+        },
+        {
+          "word": "te",
+          "start": 119.511,
+          "end": 119.551,
+          "score": 0.014
+        },
+        {
+          "word": "puedo",
+          "start": 119.572,
+          "end": 119.672,
+          "score": 0.006
+        },
+        {
+          "word": "borrar",
+          "start": 119.692,
+          "end": 120.9,
+          "score": 0.511
+        }
+      ]
+    },
+    {
+      "start": 120.88,
+      "end": 126.74,
+      "text": "si no te veo, te lo borro me da con llamarte",
+      "words": [
+        {
+          "word": "si",
+          "start": 120.88,
+          "end": 122.672,
+          "score": 0.423
+        },
+        {
+          "word": "no",
+          "start": 122.692,
+          "end": 122.914,
+          "score": 0.658
+        },
+        {
+          "word": "te",
+          "start": 122.934,
+          "end": 122.974,
+          "score": 0.022
+        },
+        {
+          "word": "veo,",
+          "start": 122.994,
+          "end": 123.357,
+          "score": 0.43
+        },
+        {
+          "word": "te",
+          "start": 123.377,
+          "end": 123.498,
+          "score": 0.78
+        },
+        {
+          "word": "lo",
+          "start": 123.578,
+          "end": 123.901,
+          "score": 0.726
+        },
+        {
+          "word": "borro",
+          "start": 123.921,
+          "end": 124.585,
+          "score": 0.612
+        },
+        {
+          "word": "me",
+          "start": 124.606,
+          "end": 124.726,
+          "score": 0.792
+        },
+        {
+          "word": "da",
+          "start": 124.746,
+          "end": 125.169,
+          "score": 0.882
+        },
+        {
+          "word": "con",
+          "start": 125.391,
+          "end": 125.753,
+          "score": 0.715
+        },
+        {
+          "word": "llamarte",
+          "start": 125.874,
+          "end": 126.74,
+          "score": 0.594
+        }
+      ]
+    },
+    {
+      "start": 126.72,
+      "end": 130.5,
+      "text": "envíame la rubí pa' ir a buscarte",
+      "words": [
+        {
+          "word": "envíame",
+          "start": 126.72,
+          "end": 127.791,
+          "score": 0.349
+        },
+        {
+          "word": "la",
+          "start": 127.872,
+          "end": 128.62,
+          "score": 0.762
+        },
+        {
+          "word": "rubí",
+          "start": 128.762,
+          "end": 128.843,
+          "score": 0.199
+        },
+        {
+          "word": "pa'",
+          "start": 128.944,
+          "end": 129.085,
+          "score": 0.911
+        },
+        {
+          "word": "ir",
+          "start": 129.287,
+          "end": 129.429,
+          "score": 0.925
+        },
+        {
+          "word": "a",
+          "start": 129.469,
+          "end": 129.489,
+          "score": 0.317
+        },
+        {
+          "word": "buscarte",
+          "start": 129.752,
+          "end": 130.5,
+          "score": 0.82
+        }
+      ]
+    },
+    {
+      "start": 131.04,
+      "end": 134.6,
+      "text": "si no es conmigo tú ya no sientes nada",
+      "words": [
+        {
+          "word": "si",
+          "start": 131.04,
+          "end": 131.586,
+          "score": 0.739
+        },
+        {
+          "word": "no",
+          "start": 131.687,
+          "end": 131.849,
+          "score": 0.378
+        },
+        {
+          "word": "es",
+          "start": 131.869,
+          "end": 131.91,
+          "score": 0.02
+        },
+        {
+          "word": "conmigo",
+          "start": 131.93,
+          "end": 132.577,
+          "score": 0.823
+        },
+        {
+          "word": "tú",
+          "start": 132.719,
+          "end": 132.901,
+          "score": 0.506
+        },
+        {
+          "word": "ya",
+          "start": 132.941,
+          "end": 133.225,
+          "score": 0.7
+        },
+        {
+          "word": "no",
+          "start": 133.265,
+          "end": 133.467,
+          "score": 0.66
+        },
+        {
+          "word": "sientes",
+          "start": 133.488,
+          "end": 134.378,
+          "score": 0.689
+        },
+        {
+          "word": "nada",
+          "start": 134.398,
+          "end": 134.6,
+          "score": 0.642
+        }
+      ]
+    },
+    {
+      "start": 134.58,
+      "end": 136.5,
+      "text": "aunque intentes borrarme",
+      "words": [
+        {
+          "word": "aunque",
+          "start": 134.58,
+          "end": 135.111,
+          "score": 0.748
+        },
+        {
+          "word": "intentes",
+          "start": 135.172,
+          "end": 135.724,
+          "score": 0.834
+        },
+        {
+          "word": "borrarme",
+          "start": 135.826,
+          "end": 136.5,
+          "score": 0.635
+        }
+      ]
+    },
+    {
+      "start": 138.28,
+      "end": 142.5,
+      "text": "no te vayas con todos nuestros planes",
+      "words": [
+        {
+          "word": "no",
+          "start": 138.28,
+          "end": 139.855,
+          "score": 0.46
+        },
+        {
+          "word": "te",
+          "start": 139.875,
+          "end": 140.521,
+          "score": 0.622
+        },
+        {
+          "word": "vayas",
+          "start": 140.542,
+          "end": 140.764,
+          "score": 0.589
+        },
+        {
+          "word": "con",
+          "start": 140.885,
+          "end": 141.026,
+          "score": 0.93
+        },
+        {
+          "word": "todos",
+          "start": 141.127,
+          "end": 141.511,
+          "score": 0.822
+        },
+        {
+          "word": "nuestros",
+          "start": 141.692,
+          "end": 142.016,
+          "score": 0.736
+        },
+        {
+          "word": "planes",
+          "start": 142.177,
+          "end": 142.5,
+          "score": 0.579
+        }
+      ]
+    },
+    {
+      "start": 143.22,
+      "end": 146.86,
+      "text": "por bahama yendo a los lugares",
+      "words": [
+        {
+          "word": "por",
+          "start": 143.22,
+          "end": 143.867,
+          "score": 0.907
+        },
+        {
+          "word": "bahama",
+          "start": 143.948,
+          "end": 144.878,
+          "score": 0.759
+        },
+        {
+          "word": "yendo",
+          "start": 144.899,
+          "end": 145.343,
+          "score": 0.847
+        },
+        {
+          "word": "a",
+          "start": 145.748,
+          "end": 145.768,
+          "score": 0.001
+        },
+        {
+          "word": "los",
+          "start": 145.788,
+          "end": 145.91,
+          "score": 0.657
+        },
+        {
+          "word": "lugares",
+          "start": 145.97,
+          "end": 146.86,
+          "score": 0.82
+        }
+      ]
+    },
+    {
+      "start": 146.84,
+      "end": 150.96,
+      "text": "por los que tú sales buscando señales",
+      "words": [
+        {
+          "word": "por",
+          "start": 146.84,
+          "end": 147.688,
+          "score": 0.288
+        },
+        {
+          "word": "los",
+          "start": 147.708,
+          "end": 147.769,
+          "score": 0.002
+        },
+        {
+          "word": "que",
+          "start": 147.789,
+          "end": 147.991,
+          "score": 0.511
+        },
+        {
+          "word": "tú",
+          "start": 148.011,
+          "end": 148.193,
+          "score": 0.364
+        },
+        {
+          "word": "sales",
+          "start": 148.213,
+          "end": 148.9,
+          "score": 0.599
+        },
+        {
+          "word": "buscando",
+          "start": 149.062,
+          "end": 149.95,
+          "score": 0.843
+        },
+        {
+          "word": "señales",
+          "start": 150.072,
+          "end": 150.96,
+          "score": 0.821
+        }
+      ]
+    },
+    {
+      "start": 150.94,
+      "end": 154.86,
+      "text": "que me lleven a ti pa' una noche más",
+      "words": [
+        {
+          "word": "que",
+          "start": 150.94,
+          "end": 152.435,
+          "score": 0.683
+        },
+        {
+          "word": "me",
+          "start": 152.456,
+          "end": 152.496,
+          "score": 0.001
+        },
+        {
+          "word": "lleven",
+          "start": 152.516,
+          "end": 152.637,
+          "score": 0.104
+        },
+        {
+          "word": "a",
+          "start": 152.718,
+          "end": 152.779,
+          "score": 0.407
+        },
+        {
+          "word": "ti",
+          "start": 152.799,
+          "end": 153.062,
+          "score": 0.753
+        },
+        {
+          "word": "pa'",
+          "start": 153.082,
+          "end": 153.264,
+          "score": 0.669
+        },
+        {
+          "word": "una",
+          "start": 153.284,
+          "end": 153.628,
+          "score": 0.985
+        },
+        {
+          "word": "noche",
+          "start": 153.769,
+          "end": 154.355,
+          "score": 0.697
+        },
+        {
+          "word": "más",
+          "start": 154.375,
+          "end": 154.86,
+          "score": 0.596
+        }
+      ]
+    },
+    {
+      "start": 154.84,
+      "end": 156.98,
+      "text": "la suite presidencial",
+      "words": [
+        {
+          "word": "la",
+          "start": 154.84,
+          "end": 155.288,
+          "score": 0.688
+        },
+        {
+          "word": "suite",
+          "start": 155.594,
+          "end": 155.696,
+          "score": 0.019
+        },
+        {
+          "word": "presidencial",
+          "start": 155.717,
+          "end": 156.98,
+          "score": 0.409
+        }
+      ]
+    },
+    {
+      "start": 156.96,
+      "end": 159.02,
+      "text": "se hace grande sin ti",
+      "words": [
+        {
+          "word": "se",
+          "start": 156.96,
+          "end": 157.348,
+          "score": 0.653
+        },
+        {
+          "word": "hace",
+          "start": 157.409,
+          "end": 157.715,
+          "score": 0.64
+        },
+        {
+          "word": "grande",
+          "start": 157.735,
+          "end": 158.082,
+          "score": 0.448
+        },
+        {
+          "word": "sin",
+          "start": 158.143,
+          "end": 158.408,
+          "score": 0.772
+        },
+        {
+          "word": "ti",
+          "start": 158.429,
+          "end": 159.02,
+          "score": 0.784
+        }
+      ]
+    },
+    {
+      "start": 159.0,
+      "end": 160.9,
+      "text": "ya no quiero bailar",
+      "words": [
+        {
+          "word": "ya",
+          "start": 159.0,
+          "end": 159.327,
+          "score": 0.85
+        },
+        {
+          "word": "no",
+          "start": 159.47,
+          "end": 159.654,
+          "score": 0.694
+        },
+        {
+          "word": "quiero",
+          "start": 159.674,
+          "end": 160.144,
+          "score": 0.519
+        },
+        {
+          "word": "bailar",
+          "start": 160.226,
+          "end": 160.9,
+          "score": 0.813
+        }
+      ]
+    },
+    {
+      "start": 160.88,
+      "end": 162.9,
+      "text": "borracho en el balcón",
+      "words": [
+        {
+          "word": "borracho",
+          "start": 160.88,
+          "end": 161.819,
+          "score": 0.198
+        },
+        {
+          "word": "en",
+          "start": 161.9,
+          "end": 162.247,
+          "score": 0.389
+        },
+        {
+          "word": "el",
+          "start": 162.268,
+          "end": 162.309,
+          "score": 0.002
+        },
+        {
+          "word": "balcón",
+          "start": 162.329,
+          "end": 162.9,
+          "score": 0.649
+        }
+      ]
+    },
+    {
+      "start": 162.88,
+      "end": 164.501,
+      "text": "si tú no estás pa' mirar",
+      "words": [
+        {
+          "word": "si",
+          "start": 162.88,
+          "end": 163.618,
+          "score": 0.407
+        },
+        {
+          "word": "tú",
+          "start": 163.639,
+          "end": 163.68,
+          "score": 0.141
+        },
+        {
+          "word": "no",
+          "start": 163.701,
+          "end": 163.742,
+          "score": 0.008
+        },
+        {
+          "word": "estás",
+          "start": 163.762,
+          "end": 163.988,
+          "score": 0.176
+        },
+        {
+          "word": "pa'",
+          "start": 164.008,
+          "end": 164.275,
+          "score": 0.58
+        },
+        {
+          "word": "mirar",
+          "start": 164.295,
+          "end": 164.501,
+          "score": 0.487
+        }
+      ]
+    },
+    {
+      "start": 164.72,
+      "end": 166.96,
+      "text": "ojalá volver atrás",
+      "words": [
+        {
+          "word": "ojalá",
+          "start": 164.72,
+          "end": 165.759,
+          "score": 0.638
+        },
+        {
+          "word": "volver",
+          "start": 165.84,
+          "end": 166.329,
+          "score": 0.831
+        },
+        {
+          "word": "atrás",
+          "start": 166.492,
+          "end": 166.96,
+          "score": 0.665
+        }
+      ]
+    },
+    {
+      "start": 166.94,
+      "end": 169.12,
+      "text": "también de la cadila",
+      "words": [
+        {
+          "word": "también",
+          "start": 166.94,
+          "end": 167.755,
+          "score": 0.456
+        },
+        {
+          "word": "de",
+          "start": 167.775,
+          "end": 167.816,
+          "score": 0.069
+        },
+        {
+          "word": "la",
+          "start": 167.837,
+          "end": 167.979,
+          "score": 0.867
+        },
+        {
+          "word": "cadila",
+          "start": 168.081,
+          "end": 169.12,
+          "score": 0.943
+        }
+      ]
+    },
+    {
+      "start": 169.1,
+      "end": 172.14,
+      "text": "ya hace tiempo no te veo",
+      "words": [
+        {
+          "word": "ya",
+          "start": 169.1,
+          "end": 169.424,
+          "score": 0.741
+        },
+        {
+          "word": "hace",
+          "start": 169.485,
+          "end": 169.789,
+          "score": 0.686
+        },
+        {
+          "word": "tiempo",
+          "start": 169.87,
+          "end": 170.215,
+          "score": 0.809
+        },
+        {
+          "word": "no",
+          "start": 170.397,
+          "end": 170.58,
+          "score": 0.278
+        },
+        {
+          "word": "te",
+          "start": 170.6,
+          "end": 170.944,
+          "score": 0.726
+        },
+        {
+          "word": "veo",
+          "start": 170.965,
+          "end": 172.14,
+          "score": 0.86
+        }
+      ]
+    },
+    {
+      "start": 172.72,
+      "end": 176.8,
+      "text": "ese cuerpo ilegal yo lo blanqueo",
+      "words": [
+        {
+          "word": "ese",
+          "start": 172.72,
+          "end": 173.104,
+          "score": 0.751
+        },
+        {
+          "word": "cuerpo",
+          "start": 173.164,
+          "end": 173.488,
+          "score": 0.928
+        },
+        {
+          "word": "ilegal",
+          "start": 173.669,
+          "end": 174.134,
+          "score": 0.845
+        },
+        {
+          "word": "yo",
+          "start": 174.154,
+          "end": 174.477,
+          "score": 0.799
+        },
+        {
+          "word": "lo",
+          "start": 174.518,
+          "end": 174.639,
+          "score": 0.75
+        },
+        {
+          "word": "blanqueo",
+          "start": 174.76,
+          "end": 176.8,
+          "score": 0.654
+        }
+      ]
+    },
+    {
+      "start": 176.78,
+      "end": 180.74,
+      "text": "te dibujo con los dedos en la arena",
+      "words": [
+        {
+          "word": "te",
+          "start": 176.78,
+          "end": 177.649,
+          "score": 0.542
+        },
+        {
+          "word": "dibujo",
+          "start": 177.669,
+          "end": 178.639,
+          "score": 0.515
+        },
+        {
+          "word": "con",
+          "start": 178.699,
+          "end": 178.76,
+          "score": 0.145
+        },
+        {
+          "word": "los",
+          "start": 178.78,
+          "end": 178.902,
+          "score": 0.686
+        },
+        {
+          "word": "dedos",
+          "start": 179.043,
+          "end": 180.114,
+          "score": 0.609
+        },
+        {
+          "word": "en",
+          "start": 180.134,
+          "end": 180.255,
+          "score": 0.367
+        },
+        {
+          "word": "la",
+          "start": 180.275,
+          "end": 180.478,
+          "score": 0.326
+        },
+        {
+          "word": "arena",
+          "start": 180.498,
+          "end": 180.74,
+          "score": 0.34
+        }
+      ]
+    },
+    {
+      "start": 181.4,
+      "end": 184.74,
+      "text": "ven que te echo crema porque el sol está que quema",
+      "words": [
+        {
+          "word": "ven",
+          "start": 181.4,
+          "end": 181.764,
+          "score": 0.44
+        },
+        {
+          "word": "que",
+          "start": 181.785,
+          "end": 182.007,
+          "score": 0.345
+        },
+        {
+          "word": "te",
+          "start": 182.028,
+          "end": 182.149,
+          "score": 0.591
+        },
+        {
+          "word": "echo",
+          "start": 182.23,
+          "end": 182.453,
+          "score": 0.771
+        },
+        {
+          "word": "crema",
+          "start": 182.655,
+          "end": 182.979,
+          "score": 0.609
+        },
+        {
+          "word": "porque",
+          "start": 183.1,
+          "end": 183.424,
+          "score": 0.749
+        },
+        {
+          "word": "el",
+          "start": 183.445,
+          "end": 183.526,
+          "score": 0.82
+        },
+        {
+          "word": "sol",
+          "start": 183.566,
+          "end": 183.93,
+          "score": 0.621
+        },
+        {
+          "word": "está",
+          "start": 183.951,
+          "end": 184.335,
+          "score": 0.503
+        },
+        {
+          "word": "que",
+          "start": 184.356,
+          "end": 184.619,
+          "score": 0.359
+        },
+        {
+          "word": "quema",
+          "start": 184.639,
+          "end": 184.74,
+          "score": 0.179
+        }
+      ]
+    },
+    {
+      "start": 185.74,
+      "end": 191.82,
+      "text": "si no te veo, te lo borro me da con llamarte",
+      "words": [
+        {
+          "word": "si",
+          "start": 185.74,
+          "end": 186.505,
+          "score": 0.429
+        },
+        {
+          "word": "no",
+          "start": 186.525,
+          "end": 186.586,
+          "score": 0.277
+        },
+        {
+          "word": "te",
+          "start": 186.606,
+          "end": 187.049,
+          "score": 0.83
+        },
+        {
+          "word": "veo,",
+          "start": 187.069,
+          "end": 188.619,
+          "score": 0.744
+        },
+        {
+          "word": "te",
+          "start": 188.639,
+          "end": 188.921,
+          "score": 0.628
+        },
+        {
+          "word": "lo",
+          "start": 189.444,
+          "end": 189.485,
+          "score": 0.395
+        },
+        {
+          "word": "borro",
+          "start": 189.565,
+          "end": 189.666,
+          "score": 0.017
+        },
+        {
+          "word": "me",
+          "start": 189.686,
+          "end": 190.048,
+          "score": 0.876
+        },
+        {
+          "word": "da",
+          "start": 190.069,
+          "end": 190.31,
+          "score": 0.924
+        },
+        {
+          "word": "con",
+          "start": 190.451,
+          "end": 190.652,
+          "score": 0.834
+        },
+        {
+          "word": "llamarte",
+          "start": 190.693,
+          "end": 191.82,
+          "score": 0.768
+        }
+      ]
+    },
+    {
+      "start": 191.8,
+      "end": 196.16,
+      "text": "envíame la rubí pa' ir a buscarte",
+      "words": [
+        {
+          "word": "envíame",
+          "start": 191.8,
+          "end": 192.991,
+          "score": 0.648
+        },
+        {
+          "word": "la",
+          "start": 193.011,
+          "end": 193.758,
+          "score": 0.86
+        },
+        {
+          "word": "rubí",
+          "start": 193.778,
+          "end": 193.859,
+          "score": 0.163
+        },
+        {
+          "word": "pa'",
+          "start": 194.0,
+          "end": 194.323,
+          "score": 0.796
+        },
+        {
+          "word": "ir",
+          "start": 194.343,
+          "end": 194.545,
+          "score": 0.394
+        },
+        {
+          "word": "a",
+          "start": 194.565,
+          "end": 194.727,
+          "score": 0.933
+        },
+        {
+          "word": "buscarte",
+          "start": 194.828,
+          "end": 196.16,
+          "score": 0.811
+        }
+      ]
+    },
+    {
+      "start": 196.14,
+      "end": 199.78,
+      "text": "si no es conmigo tú ya no sientes nada",
+      "words": [
+        {
+          "word": "si",
+          "start": 196.14,
+          "end": 196.706,
+          "score": 0.424
+        },
+        {
+          "word": "no",
+          "start": 196.726,
+          "end": 196.848,
+          "score": 0.524
+        },
+        {
+          "word": "es",
+          "start": 196.868,
+          "end": 197.01,
+          "score": 0.356
+        },
+        {
+          "word": "conmigo",
+          "start": 197.03,
+          "end": 198.041,
+          "score": 0.764
+        },
+        {
+          "word": "tú",
+          "start": 198.061,
+          "end": 198.102,
+          "score": 0.002
+        },
+        {
+          "word": "ya",
+          "start": 198.122,
+          "end": 198.243,
+          "score": 0.741
+        },
+        {
+          "word": "no",
+          "start": 198.344,
+          "end": 198.425,
+          "score": 0.698
+        },
+        {
+          "word": "sientes",
+          "start": 198.607,
+          "end": 199.133,
+          "score": 0.738
+        },
+        {
+          "word": "nada",
+          "start": 199.153,
+          "end": 199.78,
+          "score": 0.648
+        }
+      ]
+    },
+    {
+      "start": 199.76,
+      "end": 201.82,
+      "text": "aunque intentes borrarme",
+      "words": [
+        {
+          "word": "aunque",
+          "start": 199.76,
+          "end": 200.209,
+          "score": 0.358
+        },
+        {
+          "word": "intentes",
+          "start": 200.229,
+          "end": 200.78,
+          "score": 0.857
+        },
+        {
+          "word": "borrarme",
+          "start": 200.923,
+          "end": 201.82,
+          "score": 0.814
+        }
+      ]
+    },
+    {
+      "start": 222.24,
+      "end": 223.661,
+      "text": "subtítulos por la comunidad de amara.org",
+      "words": [
+        {
+          "word": "subtítulos",
+          "start": 222.24,
+          "end": 223.043,
+          "score": 0.095
+        },
+        {
+          "word": "por",
+          "start": 223.064,
+          "end": 223.125,
+          "score": 0.001
+        },
+        {
+          "word": "la",
+          "start": 223.146,
+          "end": 223.187,
+          "score": 0.005
+        },
+        {
+          "word": "comunidad",
+          "start": 223.208,
+          "end": 223.393,
+          "score": 0.001
+        },
+        {
+          "word": "de",
+          "start": 223.414,
+          "end": 223.455,
+          "score": 0.002
+        },
+        {
+          "word": "amara.org",
+          "start": 223.475,
+          "end": 223.661,
+          "score": 0.112
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "va",
+      "start": 6.76,
+      "end": 7.626,
+      "score": 0.637
+    },
+    {
+      "word": "a",
+      "start": 7.647,
+      "end": 7.667,
+      "score": 0.003
+    },
+    {
+      "word": "dejarte",
+      "start": 7.687,
+      "end": 8.311,
+      "score": 0.644
+    },
+    {
+      "word": "ir,",
+      "start": 8.332,
+      "end": 8.533,
+      "score": 0.898
+    },
+    {
+      "word": "eso",
+      "start": 9.359,
+      "end": 9.581,
+      "score": 0.932
+    },
+    {
+      "word": "nunca",
+      "start": 9.682,
+      "end": 10.447,
+      "score": 0.856
+    },
+    {
+      "word": "me",
+      "start": 10.467,
+      "end": 10.508,
+      "score": 0.488
+    },
+    {
+      "word": "tiene",
+      "start": 10.931,
+      "end": 11.394,
+      "score": 0.751
+    },
+    {
+      "word": "hipnotizado",
+      "start": 11.495,
+      "end": 12.18,
+      "score": 0.59
+    },
+    {
+      "word": "no",
+      "start": 12.16,
+      "end": 12.444,
+      "score": 0.732
+    },
+    {
+      "word": "puedo",
+      "start": 12.545,
+      "end": 12.931,
+      "score": 0.853
+    },
+    {
+      "word": "dejar",
+      "start": 13.276,
+      "end": 13.56,
+      "score": 0.513
+    },
+    {
+      "word": "de",
+      "start": 13.58,
+      "end": 13.722,
+      "score": 0.454
+    },
+    {
+      "word": "mirarte",
+      "start": 13.742,
+      "end": 15.02,
+      "score": 0.885
+    },
+    {
+      "word": "rías",
+      "start": 15.0,
+      "end": 15.485,
+      "score": 0.633
+    },
+    {
+      "word": "más",
+      "start": 15.525,
+      "end": 15.707,
+      "score": 0.7
+    },
+    {
+      "word": "que",
+      "start": 15.727,
+      "end": 15.828,
+      "score": 0.68
+    },
+    {
+      "word": "una",
+      "start": 15.949,
+      "end": 16.091,
+      "score": 0.469
+    },
+    {
+      "word": "estría,",
+      "start": 16.111,
+      "end": 16.434,
+      "score": 0.539
+    },
+    {
+      "word": "mami,",
+      "start": 16.798,
+      "end": 18.777,
+      "score": 0.814
+    },
+    {
+      "word": "tú",
+      "start": 18.797,
+      "end": 18.837,
+      "score": 0.007
+    },
+    {
+      "word": "te",
+      "start": 18.858,
+      "end": 18.959,
+      "score": 0.618
+    },
+    {
+      "word": "fugaste",
+      "start": 18.979,
+      "end": 19.12,
+      "score": 0.131
+    },
+    {
+      "word": "este",
+      "start": 19.1,
+      "end": 19.544,
+      "score": 0.608
+    },
+    {
+      "word": "que",
+      "start": 19.585,
+      "end": 19.848,
+      "score": 0.743
+    },
+    {
+      "word": "te",
+      "start": 19.868,
+      "end": 20.211,
+      "score": 0.719
+    },
+    {
+      "word": "endujaste,",
+      "start": 20.231,
+      "end": 21.221,
+      "score": 0.824
+    },
+    {
+      "word": "no",
+      "start": 21.484,
+      "end": 21.787,
+      "score": 0.707
+    },
+    {
+      "word": "puedo",
+      "start": 21.807,
+      "end": 21.908,
+      "score": 0.0
+    },
+    {
+      "word": "olvidarte",
+      "start": 21.928,
+      "end": 23.1,
+      "score": 0.693
+    },
+    {
+      "word": "tú",
+      "start": 23.08,
+      "end": 23.425,
+      "score": 0.444
+    },
+    {
+      "word": "y",
+      "start": 23.445,
+      "end": 23.466,
+      "score": 0.001
+    },
+    {
+      "word": "yo",
+      "start": 23.486,
+      "end": 23.587,
+      "score": 0.824
+    },
+    {
+      "word": "pa'",
+      "start": 23.689,
+      "end": 23.892,
+      "score": 0.541
+    },
+    {
+      "word": "las",
+      "start": 23.912,
+      "end": 24.034,
+      "score": 0.687
+    },
+    {
+      "word": "bamas,",
+      "start": 24.176,
+      "end": 24.926,
+      "score": 0.601
+    },
+    {
+      "word": "te",
+      "start": 24.947,
+      "end": 25.129,
+      "score": 0.752
+    },
+    {
+      "word": "doy",
+      "start": 25.15,
+      "end": 25.231,
+      "score": 0.77
+    },
+    {
+      "word": "el",
+      "start": 25.292,
+      "end": 25.434,
+      "score": 0.814
+    },
+    {
+      "word": "tom",
+      "start": 25.454,
+      "end": 25.9,
+      "score": 0.916
+    },
+    {
+      "word": "quitándote",
+      "start": 25.88,
+      "end": 26.778,
+      "score": 0.531
+    },
+    {
+      "word": "el",
+      "start": 26.798,
+      "end": 26.9,
+      "score": 0.625
+    },
+    {
+      "word": "pantalón",
+      "start": 26.982,
+      "end": 27.9,
+      "score": 0.885
+    },
+    {
+      "word": "en",
+      "start": 27.88,
+      "end": 28.082,
+      "score": 0.38
+    },
+    {
+      "word": "frente",
+      "start": 28.102,
+      "end": 28.365,
+      "score": 0.461
+    },
+    {
+      "word": "al",
+      "start": 28.386,
+      "end": 28.466,
+      "score": 0.545
+    },
+    {
+      "word": "marto,",
+      "start": 28.527,
+      "end": 28.972,
+      "score": 0.654
+    },
+    {
+      "word": "encima",
+      "start": 28.992,
+      "end": 29.377,
+      "score": 0.53
+    },
+    {
+      "word": "mía",
+      "start": 29.518,
+      "end": 29.781,
+      "score": 0.527
+    },
+    {
+      "word": "en",
+      "start": 29.923,
+      "end": 30.003,
+      "score": 0.625
+    },
+    {
+      "word": "los",
+      "start": 30.044,
+      "end": 30.125,
+      "score": 0.735
+    },
+    {
+      "word": "asientos",
+      "start": 30.185,
+      "end": 30.63,
+      "score": 0.872
+    },
+    {
+      "word": "del",
+      "start": 30.671,
+      "end": 31.055,
+      "score": 0.472
+    },
+    {
+      "word": "rubí",
+      "start": 31.075,
+      "end": 31.52,
+      "score": 0.825
+    },
+    {
+      "word": "con",
+      "start": 31.5,
+      "end": 31.906,
+      "score": 0.651
+    },
+    {
+      "word": "el",
+      "start": 31.926,
+      "end": 32.007,
+      "score": 0.95
+    },
+    {
+      "word": "cielo",
+      "start": 32.17,
+      "end": 32.352,
+      "score": 0.325
+    },
+    {
+      "word": "azul",
+      "start": 32.433,
+      "end": 32.819,
+      "score": 0.718
+    },
+    {
+      "word": "y",
+      "start": 32.941,
+      "end": 33.062,
+      "score": 0.668
+    },
+    {
+      "word": "tus",
+      "start": 33.083,
+      "end": 33.549,
+      "score": 0.905
+    },
+    {
+      "word": "ojos",
+      "start": 33.59,
+      "end": 33.833,
+      "score": 0.174
+    },
+    {
+      "word": "marrón",
+      "start": 33.854,
+      "end": 34.32,
+      "score": 0.902
+    },
+    {
+      "word": "bebiendo",
+      "start": 34.3,
+      "end": 35.046,
+      "score": 0.323
+    },
+    {
+      "word": "bajo",
+      "start": 35.147,
+      "end": 35.409,
+      "score": 0.74
+    },
+    {
+      "word": "el",
+      "start": 35.489,
+      "end": 35.57,
+      "score": 0.644
+    },
+    {
+      "word": "sol,",
+      "start": 35.59,
+      "end": 36.336,
+      "score": 0.617
+    },
+    {
+      "word": "tu",
+      "start": 36.356,
+      "end": 36.396,
+      "score": 0.01
+    },
+    {
+      "word": "cuerpo",
+      "start": 36.416,
+      "end": 36.799,
+      "score": 0.669
+    },
+    {
+      "word": "sudando",
+      "start": 36.88,
+      "end": 37.545,
+      "score": 0.806
+    },
+    {
+      "word": "contra",
+      "start": 37.666,
+      "end": 39.319,
+      "score": 0.915
+    },
+    {
+      "word": "el",
+      "start": 39.339,
+      "end": 39.38,
+      "score": 0.004
+    },
+    {
+      "word": "mío",
+      "start": 39.4,
+      "end": 39.46,
+      "score": 0.319
+    },
+    {
+      "word": "si",
+      "start": 39.44,
+      "end": 39.923,
+      "score": 0.442
+    },
+    {
+      "word": "no",
+      "start": 39.943,
+      "end": 40.145,
+      "score": 0.735
+    },
+    {
+      "word": "te",
+      "start": 40.165,
+      "end": 40.487,
+      "score": 0.754
+    },
+    {
+      "word": "veo,",
+      "start": 40.507,
+      "end": 40.769,
+      "score": 0.401
+    },
+    {
+      "word": "te",
+      "start": 40.789,
+      "end": 41.453,
+      "score": 0.782
+    },
+    {
+      "word": "lo",
+      "start": 42.198,
+      "end": 42.279,
+      "score": 0.828
+    },
+    {
+      "word": "borro",
+      "start": 42.943,
+      "end": 43.205,
+      "score": 0.424
+    },
+    {
+      "word": "me",
+      "start": 43.225,
+      "end": 43.829,
+      "score": 0.914
+    },
+    {
+      "word": "da",
+      "start": 43.87,
+      "end": 43.91,
+      "score": 0.512
+    },
+    {
+      "word": "con",
+      "start": 44.01,
+      "end": 44.272,
+      "score": 0.787
+    },
+    {
+      "word": "llamarte",
+      "start": 44.292,
+      "end": 45.46,
+      "score": 0.727
+    },
+    {
+      "word": "envíame",
+      "start": 45.44,
+      "end": 46.409,
+      "score": 0.703
+    },
+    {
+      "word": "la",
+      "start": 46.551,
+      "end": 47.419,
+      "score": 0.892
+    },
+    {
+      "word": "rubí",
+      "start": 47.44,
+      "end": 47.52,
+      "score": 0.001
+    },
+    {
+      "word": "pa'",
+      "start": 47.54,
+      "end": 47.904,
+      "score": 0.888
+    },
+    {
+      "word": "ir",
+      "start": 47.924,
+      "end": 48.066,
+      "score": 0.704
+    },
+    {
+      "word": "a",
+      "start": 48.167,
+      "end": 48.53,
+      "score": 0.759
+    },
+    {
+      "word": "buscarte",
+      "start": 48.55,
+      "end": 49.56,
+      "score": 0.683
+    },
+    {
+      "word": "si",
+      "start": 49.54,
+      "end": 50.245,
+      "score": 0.384
+    },
+    {
+      "word": "no",
+      "start": 50.265,
+      "end": 50.406,
+      "score": 0.648
+    },
+    {
+      "word": "es",
+      "start": 50.587,
+      "end": 50.627,
+      "score": 0.017
+    },
+    {
+      "word": "contigo",
+      "start": 50.647,
+      "end": 51.654,
+      "score": 0.126
+    },
+    {
+      "word": "y",
+      "start": 51.674,
+      "end": 51.694,
+      "score": 0.003
+    },
+    {
+      "word": "yo",
+      "start": 51.714,
+      "end": 51.855,
+      "score": 0.756
+    },
+    {
+      "word": "no",
+      "start": 51.876,
+      "end": 52.037,
+      "score": 0.92
+    },
+    {
+      "word": "siento",
+      "start": 52.097,
+      "end": 52.58,
+      "score": 0.686
+    },
+    {
+      "word": "nada,",
+      "start": 52.6,
+      "end": 53.587,
+      "score": 0.404
+    },
+    {
+      "word": "no",
+      "start": 53.607,
+      "end": 53.647,
+      "score": 0.008
+    },
+    {
+      "word": "te",
+      "start": 53.668,
+      "end": 53.909,
+      "score": 0.795
+    },
+    {
+      "word": "puedo",
+      "start": 53.929,
+      "end": 55.419,
+      "score": 0.587
+    },
+    {
+      "word": "borrar",
+      "start": 55.439,
+      "end": 55.56,
+      "score": 0.176
+    },
+    {
+      "word": "si",
+      "start": 55.54,
+      "end": 56.144,
+      "score": 0.455
+    },
+    {
+      "word": "no",
+      "start": 56.164,
+      "end": 56.265,
+      "score": 0.902
+    },
+    {
+      "word": "te",
+      "start": 56.486,
+      "end": 56.748,
+      "score": 0.859
+    },
+    {
+      "word": "veo,",
+      "start": 56.768,
+      "end": 58.459,
+      "score": 0.412
+    },
+    {
+      "word": "te",
+      "start": 58.479,
+      "end": 58.519,
+      "score": 0.007
+    },
+    {
+      "word": "lo",
+      "start": 58.54,
+      "end": 59.023,
+      "score": 0.472
+    },
+    {
+      "word": "borro",
+      "start": 59.043,
+      "end": 59.546,
+      "score": 0.407
+    },
+    {
+      "word": "me",
+      "start": 59.566,
+      "end": 59.687,
+      "score": 0.678
+    },
+    {
+      "word": "da",
+      "start": 60.211,
+      "end": 60.251,
+      "score": 0.006
+    },
+    {
+      "word": "con",
+      "start": 60.271,
+      "end": 60.512,
+      "score": 0.765
+    },
+    {
+      "word": "llamarte",
+      "start": 60.553,
+      "end": 61.68,
+      "score": 0.854
+    },
+    {
+      "word": "envíame",
+      "start": 61.66,
+      "end": 62.791,
+      "score": 0.457
+    },
+    {
+      "word": "la",
+      "start": 62.811,
+      "end": 63.639,
+      "score": 0.888
+    },
+    {
+      "word": "rubí",
+      "start": 63.659,
+      "end": 63.74,
+      "score": 0.186
+    },
+    {
+      "word": "pa'",
+      "start": 63.861,
+      "end": 64.103,
+      "score": 0.803
+    },
+    {
+      "word": "ir",
+      "start": 64.245,
+      "end": 64.386,
+      "score": 0.858
+    },
+    {
+      "word": "a",
+      "start": 64.406,
+      "end": 64.426,
+      "score": 0.828
+    },
+    {
+      "word": "buscarte",
+      "start": 64.648,
+      "end": 65.88,
+      "score": 0.808
+    },
+    {
+      "word": "si",
+      "start": 65.86,
+      "end": 66.504,
+      "score": 0.781
+    },
+    {
+      "word": "no",
+      "start": 66.585,
+      "end": 66.665,
+      "score": 0.922
+    },
+    {
+      "word": "es",
+      "start": 66.746,
+      "end": 66.806,
+      "score": 0.52
+    },
+    {
+      "word": "contigo",
+      "start": 66.907,
+      "end": 68.074,
+      "score": 0.855
+    },
+    {
+      "word": "y",
+      "start": 68.094,
+      "end": 68.114,
+      "score": 0.089
+    },
+    {
+      "word": "yo",
+      "start": 68.134,
+      "end": 68.175,
+      "score": 0.001
+    },
+    {
+      "word": "no",
+      "start": 68.195,
+      "end": 68.316,
+      "score": 0.783
+    },
+    {
+      "word": "siento",
+      "start": 68.396,
+      "end": 70.288,
+      "score": 0.848
+    },
+    {
+      "word": "nada,",
+      "start": 70.308,
+      "end": 70.409,
+      "score": 0.028
+    },
+    {
+      "word": "no",
+      "start": 70.429,
+      "end": 70.469,
+      "score": 0.0
+    },
+    {
+      "word": "te",
+      "start": 70.489,
+      "end": 70.53,
+      "score": 0.107
+    },
+    {
+      "word": "puedo",
+      "start": 70.55,
+      "end": 70.771,
+      "score": 0.238
+    },
+    {
+      "word": "borrar",
+      "start": 70.791,
+      "end": 72.2,
+      "score": 0.465
+    },
+    {
+      "word": "como",
+      "start": 72.18,
+      "end": 72.608,
+      "score": 0.621
+    },
+    {
+      "word": "una",
+      "start": 72.669,
+      "end": 72.832,
+      "score": 0.516
+    },
+    {
+      "word": "cicatriz",
+      "start": 72.852,
+      "end": 73.403,
+      "score": 0.685
+    },
+    {
+      "word": "después",
+      "start": 73.423,
+      "end": 73.769,
+      "score": 0.63
+    },
+    {
+      "word": "de",
+      "start": 73.831,
+      "end": 73.892,
+      "score": 0.641
+    },
+    {
+      "word": "la",
+      "start": 73.912,
+      "end": 73.973,
+      "score": 0.204
+    },
+    {
+      "word": "herida",
+      "start": 73.994,
+      "end": 74.36,
+      "score": 0.716
+    },
+    {
+      "word": "marqué",
+      "start": 74.34,
+      "end": 74.727,
+      "score": 0.589
+    },
+    {
+      "word": "tu",
+      "start": 74.748,
+      "end": 74.87,
+      "score": 0.706
+    },
+    {
+      "word": "piel",
+      "start": 74.89,
+      "end": 75.074,
+      "score": 0.478
+    },
+    {
+      "word": "y",
+      "start": 75.156,
+      "end": 75.217,
+      "score": 0.492
+    },
+    {
+      "word": "tú",
+      "start": 75.237,
+      "end": 75.38,
+      "score": 0.784
+    },
+    {
+      "word": "marcaste",
+      "start": 75.4,
+      "end": 75.951,
+      "score": 0.642
+    },
+    {
+      "word": "la",
+      "start": 75.991,
+      "end": 76.093,
+      "score": 0.777
+    },
+    {
+      "word": "mía",
+      "start": 76.175,
+      "end": 76.46,
+      "score": 0.862
+    },
+    {
+      "word": "comerlo",
+      "start": 76.44,
+      "end": 76.93,
+      "score": 0.452
+    },
+    {
+      "word": "más",
+      "start": 76.95,
+      "end": 77.113,
+      "score": 0.177
+    },
+    {
+      "word": "de",
+      "start": 77.134,
+      "end": 77.195,
+      "score": 0.911
+    },
+    {
+      "word": "cuatro",
+      "start": 77.297,
+      "end": 77.562,
+      "score": 0.85
+    },
+    {
+      "word": "veces",
+      "start": 77.705,
+      "end": 77.93,
+      "score": 0.726
+    },
+    {
+      "word": "seguida",
+      "start": 77.991,
+      "end": 78.46,
+      "score": 0.506
+    },
+    {
+      "word": "todos",
+      "start": 78.44,
+      "end": 78.784,
+      "score": 0.167
+    },
+    {
+      "word": "los",
+      "start": 78.804,
+      "end": 78.865,
+      "score": 0.048
+    },
+    {
+      "word": "días",
+      "start": 78.885,
+      "end": 79.108,
+      "score": 0.802
+    },
+    {
+      "word": "del",
+      "start": 79.189,
+      "end": 79.351,
+      "score": 0.895
+    },
+    {
+      "word": "mes",
+      "start": 79.392,
+      "end": 79.493,
+      "score": 0.797
+    },
+    {
+      "word": "sentimos",
+      "start": 79.554,
+      "end": 79.918,
+      "score": 0.897
+    },
+    {
+      "word": "que",
+      "start": 79.999,
+      "end": 80.08,
+      "score": 0.671
+    },
+    {
+      "word": "ese",
+      "start": 80.141,
+      "end": 80.242,
+      "score": 0.929
+    },
+    {
+      "word": "no",
+      "start": 80.343,
+      "end": 80.404,
+      "score": 0.881
+    },
+    {
+      "word": "volvió",
+      "start": 80.505,
+      "end": 80.789,
+      "score": 0.205
+    },
+    {
+      "word": "necesidad",
+      "start": 80.809,
+      "end": 81.72,
+      "score": 0.918
+    },
+    {
+      "word": "pa'",
+      "start": 81.7,
+      "end": 83.017,
+      "score": 0.811
+    },
+    {
+      "word": "la",
+      "start": 83.037,
+      "end": 83.179,
+      "score": 0.675
+    },
+    {
+      "word": "noche",
+      "start": 83.199,
+      "end": 83.442,
+      "score": 0.635
+    },
+    {
+      "word": "nos",
+      "start": 83.463,
+      "end": 83.625,
+      "score": 0.496
+    },
+    {
+      "word": "matamos",
+      "start": 83.645,
+      "end": 84.091,
+      "score": 0.618
+    },
+    {
+      "word": "en",
+      "start": 84.131,
+      "end": 84.192,
+      "score": 0.509
+    },
+    {
+      "word": "el",
+      "start": 84.253,
+      "end": 84.395,
+      "score": 0.69
+    },
+    {
+      "word": "cuarto",
+      "start": 84.456,
+      "end": 84.82,
+      "score": 0.946
+    },
+    {
+      "word": "mami",
+      "start": 84.8,
+      "end": 85.188,
+      "score": 0.647
+    },
+    {
+      "word": "tú",
+      "start": 85.208,
+      "end": 85.351,
+      "score": 0.351
+    },
+    {
+      "word": "eres",
+      "start": 85.371,
+      "end": 85.473,
+      "score": 0.4
+    },
+    {
+      "word": "mía,",
+      "start": 85.493,
+      "end": 85.738,
+      "score": 0.658
+    },
+    {
+      "word": "yo",
+      "start": 85.759,
+      "end": 85.84,
+      "score": 0.864
+    },
+    {
+      "word": "no",
+      "start": 85.901,
+      "end": 86.003,
+      "score": 0.808
+    },
+    {
+      "word": "te",
+      "start": 86.065,
+      "end": 86.228,
+      "score": 0.754
+    },
+    {
+      "word": "comparto",
+      "start": 86.309,
+      "end": 86.88,
+      "score": 0.976
+    },
+    {
+      "word": "una",
+      "start": 86.86,
+      "end": 87.166,
+      "score": 0.704
+    },
+    {
+      "word": "movie",
+      "start": 87.207,
+      "end": 87.493,
+      "score": 0.563
+    },
+    {
+      "word": "como",
+      "start": 87.513,
+      "end": 87.819,
+      "score": 0.883
+    },
+    {
+      "word": "las",
+      "start": 87.88,
+      "end": 88.064,
+      "score": 0.335
+    },
+    {
+      "word": "de",
+      "start": 88.084,
+      "end": 88.247,
+      "score": 0.775
+    },
+    {
+      "word": "tim",
+      "start": 88.268,
+      "end": 88.513,
+      "score": 0.716
+    },
+    {
+      "word": "burton",
+      "start": 88.533,
+      "end": 88.9,
+      "score": 0.674
+    },
+    {
+      "word": "si",
+      "start": 90.66,
+      "end": 90.965,
+      "score": 0.446
+    },
+    {
+      "word": "no",
+      "start": 90.986,
+      "end": 91.026,
+      "score": 0.371
+    },
+    {
+      "word": "estoy",
+      "start": 91.088,
+      "end": 91.332,
+      "score": 0.445
+    },
+    {
+      "word": "contigo,",
+      "start": 91.352,
+      "end": 91.8,
+      "score": 0.852
+    },
+    {
+      "word": "ya",
+      "start": 91.943,
+      "end": 91.983,
+      "score": 0.471
+    },
+    {
+      "word": "no",
+      "start": 92.045,
+      "end": 92.106,
+      "score": 0.966
+    },
+    {
+      "word": "siento",
+      "start": 92.146,
+      "end": 92.452,
+      "score": 0.672
+    },
+    {
+      "word": "nada",
+      "start": 92.513,
+      "end": 92.94,
+      "score": 0.822
+    },
+    {
+      "word": "me",
+      "start": 92.92,
+      "end": 93.166,
+      "score": 0.458
+    },
+    {
+      "word": "dices",
+      "start": 93.186,
+      "end": 93.411,
+      "score": 0.557
+    },
+    {
+      "word": "que",
+      "start": 93.432,
+      "end": 93.616,
+      "score": 0.713
+    },
+    {
+      "word": "yo",
+      "start": 93.636,
+      "end": 93.698,
+      "score": 0.752
+    },
+    {
+      "word": "soy",
+      "start": 93.821,
+      "end": 93.882,
+      "score": 0.242
+    },
+    {
+      "word": "tu",
+      "start": 93.944,
+      "end": 94.21,
+      "score": 0.642
+    },
+    {
+      "word": "debilidad",
+      "start": 94.23,
+      "end": 94.68,
+      "score": 0.646
+    },
+    {
+      "word": "por",
+      "start": 95.6,
+      "end": 96.189,
+      "score": 0.914
+    },
+    {
+      "word": "eso",
+      "start": 96.291,
+      "end": 96.494,
+      "score": 0.992
+    },
+    {
+      "word": "siempre",
+      "start": 96.514,
+      "end": 97.063,
+      "score": 0.726
+    },
+    {
+      "word": "volvemos",
+      "start": 97.266,
+      "end": 98.18,
+      "score": 0.637
+    },
+    {
+      "word": "aunque",
+      "start": 98.16,
+      "end": 98.907,
+      "score": 0.567
+    },
+    {
+      "word": "nos",
+      "start": 98.928,
+      "end": 99.069,
+      "score": 0.775
+    },
+    {
+      "word": "peleemos",
+      "start": 99.17,
+      "end": 100.16,
+      "score": 0.692
+    },
+    {
+      "word": "solo",
+      "start": 100.18,
+      "end": 100.847,
+      "score": 0.86
+    },
+    {
+      "word": "con",
+      "start": 100.988,
+      "end": 101.19,
+      "score": 0.961
+    },
+    {
+      "word": "mirar",
+      "start": 101.251,
+      "end": 102.18,
+      "score": 0.913
+    },
+    {
+      "word": "los",
+      "start": 102.16,
+      "end": 102.872,
+      "score": 0.294
+    },
+    {
+      "word": "dos",
+      "start": 102.893,
+      "end": 102.954,
+      "score": 0.002
+    },
+    {
+      "word": "nos",
+      "start": 102.974,
+      "end": 103.157,
+      "score": 0.808
+    },
+    {
+      "word": "leemos",
+      "start": 103.279,
+      "end": 104.52,
+      "score": 0.875
+    },
+    {
+      "word": "si",
+      "start": 104.5,
+      "end": 104.983,
+      "score": 0.422
+    },
+    {
+      "word": "no",
+      "start": 105.003,
+      "end": 105.124,
+      "score": 0.905
+    },
+    {
+      "word": "te",
+      "start": 105.305,
+      "end": 105.466,
+      "score": 0.908
+    },
+    {
+      "word": "veo,",
+      "start": 105.567,
+      "end": 107.279,
+      "score": 0.449
+    },
+    {
+      "word": "te",
+      "start": 107.299,
+      "end": 107.339,
+      "score": 0.006
+    },
+    {
+      "word": "lo",
+      "start": 107.359,
+      "end": 107.641,
+      "score": 0.443
+    },
+    {
+      "word": "borro",
+      "start": 107.661,
+      "end": 108.366,
+      "score": 0.557
+    },
+    {
+      "word": "me",
+      "start": 108.386,
+      "end": 108.668,
+      "score": 0.77
+    },
+    {
+      "word": "da",
+      "start": 108.688,
+      "end": 108.99,
+      "score": 0.782
+    },
+    {
+      "word": "con",
+      "start": 109.091,
+      "end": 109.373,
+      "score": 0.479
+    },
+    {
+      "word": "llamarte",
+      "start": 109.393,
+      "end": 110.5,
+      "score": 0.752
+    },
+    {
+      "word": "envíame",
+      "start": 110.48,
+      "end": 111.611,
+      "score": 0.58
+    },
+    {
+      "word": "la",
+      "start": 111.631,
+      "end": 111.873,
+      "score": 0.869
+    },
+    {
+      "word": "rubí",
+      "start": 112.459,
+      "end": 112.54,
+      "score": 0.168
+    },
+    {
+      "word": "pa'",
+      "start": 112.701,
+      "end": 113.024,
+      "score": 0.586
+    },
+    {
+      "word": "ir",
+      "start": 113.044,
+      "end": 113.246,
+      "score": 0.766
+    },
+    {
+      "word": "a",
+      "start": 113.266,
+      "end": 113.347,
+      "score": 0.807
+    },
+    {
+      "word": "buscarte",
+      "start": 113.468,
+      "end": 114.72,
+      "score": 0.788
+    },
+    {
+      "word": "si",
+      "start": 114.7,
+      "end": 115.324,
+      "score": 0.862
+    },
+    {
+      "word": "no",
+      "start": 115.405,
+      "end": 115.465,
+      "score": 0.967
+    },
+    {
+      "word": "es",
+      "start": 115.566,
+      "end": 115.626,
+      "score": 0.616
+    },
+    {
+      "word": "contigo",
+      "start": 115.727,
+      "end": 116.411,
+      "score": 0.853
+    },
+    {
+      "word": "y",
+      "start": 116.431,
+      "end": 116.673,
+      "score": 0.582
+    },
+    {
+      "word": "yo",
+      "start": 116.693,
+      "end": 116.733,
+      "score": 0.016
+    },
+    {
+      "word": "ya",
+      "start": 116.753,
+      "end": 117.116,
+      "score": 0.664
+    },
+    {
+      "word": "no",
+      "start": 117.136,
+      "end": 117.176,
+      "score": 0.036
+    },
+    {
+      "word": "siento",
+      "start": 117.196,
+      "end": 119.29,
+      "score": 0.751
+    },
+    {
+      "word": "nada,",
+      "start": 119.31,
+      "end": 119.41,
+      "score": 0.065
+    },
+    {
+      "word": "no",
+      "start": 119.431,
+      "end": 119.491,
+      "score": 0.466
+    },
+    {
+      "word": "te",
+      "start": 119.511,
+      "end": 119.551,
+      "score": 0.014
+    },
+    {
+      "word": "puedo",
+      "start": 119.572,
+      "end": 119.672,
+      "score": 0.006
+    },
+    {
+      "word": "borrar",
+      "start": 119.692,
+      "end": 120.9,
+      "score": 0.511
+    },
+    {
+      "word": "si",
+      "start": 120.88,
+      "end": 122.672,
+      "score": 0.423
+    },
+    {
+      "word": "no",
+      "start": 122.692,
+      "end": 122.914,
+      "score": 0.658
+    },
+    {
+      "word": "te",
+      "start": 122.934,
+      "end": 122.974,
+      "score": 0.022
+    },
+    {
+      "word": "veo,",
+      "start": 122.994,
+      "end": 123.357,
+      "score": 0.43
+    },
+    {
+      "word": "te",
+      "start": 123.377,
+      "end": 123.498,
+      "score": 0.78
+    },
+    {
+      "word": "lo",
+      "start": 123.578,
+      "end": 123.901,
+      "score": 0.726
+    },
+    {
+      "word": "borro",
+      "start": 123.921,
+      "end": 124.585,
+      "score": 0.612
+    },
+    {
+      "word": "me",
+      "start": 124.606,
+      "end": 124.726,
+      "score": 0.792
+    },
+    {
+      "word": "da",
+      "start": 124.746,
+      "end": 125.169,
+      "score": 0.882
+    },
+    {
+      "word": "con",
+      "start": 125.391,
+      "end": 125.753,
+      "score": 0.715
+    },
+    {
+      "word": "llamarte",
+      "start": 125.874,
+      "end": 126.74,
+      "score": 0.594
+    },
+    {
+      "word": "envíame",
+      "start": 126.72,
+      "end": 127.791,
+      "score": 0.349
+    },
+    {
+      "word": "la",
+      "start": 127.872,
+      "end": 128.62,
+      "score": 0.762
+    },
+    {
+      "word": "rubí",
+      "start": 128.762,
+      "end": 128.843,
+      "score": 0.199
+    },
+    {
+      "word": "pa'",
+      "start": 128.944,
+      "end": 129.085,
+      "score": 0.911
+    },
+    {
+      "word": "ir",
+      "start": 129.287,
+      "end": 129.429,
+      "score": 0.925
+    },
+    {
+      "word": "a",
+      "start": 129.469,
+      "end": 129.489,
+      "score": 0.317
+    },
+    {
+      "word": "buscarte",
+      "start": 129.752,
+      "end": 130.5,
+      "score": 0.82
+    },
+    {
+      "word": "si",
+      "start": 131.04,
+      "end": 131.586,
+      "score": 0.739
+    },
+    {
+      "word": "no",
+      "start": 131.687,
+      "end": 131.849,
+      "score": 0.378
+    },
+    {
+      "word": "es",
+      "start": 131.869,
+      "end": 131.91,
+      "score": 0.02
+    },
+    {
+      "word": "conmigo",
+      "start": 131.93,
+      "end": 132.577,
+      "score": 0.823
+    },
+    {
+      "word": "tú",
+      "start": 132.719,
+      "end": 132.901,
+      "score": 0.506
+    },
+    {
+      "word": "ya",
+      "start": 132.941,
+      "end": 133.225,
+      "score": 0.7
+    },
+    {
+      "word": "no",
+      "start": 133.265,
+      "end": 133.467,
+      "score": 0.66
+    },
+    {
+      "word": "sientes",
+      "start": 133.488,
+      "end": 134.378,
+      "score": 0.689
+    },
+    {
+      "word": "nada",
+      "start": 134.398,
+      "end": 134.6,
+      "score": 0.642
+    },
+    {
+      "word": "aunque",
+      "start": 134.58,
+      "end": 135.111,
+      "score": 0.748
+    },
+    {
+      "word": "intentes",
+      "start": 135.172,
+      "end": 135.724,
+      "score": 0.834
+    },
+    {
+      "word": "borrarme",
+      "start": 135.826,
+      "end": 136.5,
+      "score": 0.635
+    },
+    {
+      "word": "no",
+      "start": 138.28,
+      "end": 139.855,
+      "score": 0.46
+    },
+    {
+      "word": "te",
+      "start": 139.875,
+      "end": 140.521,
+      "score": 0.622
+    },
+    {
+      "word": "vayas",
+      "start": 140.542,
+      "end": 140.764,
+      "score": 0.589
+    },
+    {
+      "word": "con",
+      "start": 140.885,
+      "end": 141.026,
+      "score": 0.93
+    },
+    {
+      "word": "todos",
+      "start": 141.127,
+      "end": 141.511,
+      "score": 0.822
+    },
+    {
+      "word": "nuestros",
+      "start": 141.692,
+      "end": 142.016,
+      "score": 0.736
+    },
+    {
+      "word": "planes",
+      "start": 142.177,
+      "end": 142.5,
+      "score": 0.579
+    },
+    {
+      "word": "por",
+      "start": 143.22,
+      "end": 143.867,
+      "score": 0.907
+    },
+    {
+      "word": "bahama",
+      "start": 143.948,
+      "end": 144.878,
+      "score": 0.759
+    },
+    {
+      "word": "yendo",
+      "start": 144.899,
+      "end": 145.343,
+      "score": 0.847
+    },
+    {
+      "word": "a",
+      "start": 145.748,
+      "end": 145.768,
+      "score": 0.001
+    },
+    {
+      "word": "los",
+      "start": 145.788,
+      "end": 145.91,
+      "score": 0.657
+    },
+    {
+      "word": "lugares",
+      "start": 145.97,
+      "end": 146.86,
+      "score": 0.82
+    },
+    {
+      "word": "por",
+      "start": 146.84,
+      "end": 147.688,
+      "score": 0.288
+    },
+    {
+      "word": "los",
+      "start": 147.708,
+      "end": 147.769,
+      "score": 0.002
+    },
+    {
+      "word": "que",
+      "start": 147.789,
+      "end": 147.991,
+      "score": 0.511
+    },
+    {
+      "word": "tú",
+      "start": 148.011,
+      "end": 148.193,
+      "score": 0.364
+    },
+    {
+      "word": "sales",
+      "start": 148.213,
+      "end": 148.9,
+      "score": 0.599
+    },
+    {
+      "word": "buscando",
+      "start": 149.062,
+      "end": 149.95,
+      "score": 0.843
+    },
+    {
+      "word": "señales",
+      "start": 150.072,
+      "end": 150.96,
+      "score": 0.821
+    },
+    {
+      "word": "que",
+      "start": 150.94,
+      "end": 152.435,
+      "score": 0.683
+    },
+    {
+      "word": "me",
+      "start": 152.456,
+      "end": 152.496,
+      "score": 0.001
+    },
+    {
+      "word": "lleven",
+      "start": 152.516,
+      "end": 152.637,
+      "score": 0.104
+    },
+    {
+      "word": "a",
+      "start": 152.718,
+      "end": 152.779,
+      "score": 0.407
+    },
+    {
+      "word": "ti",
+      "start": 152.799,
+      "end": 153.062,
+      "score": 0.753
+    },
+    {
+      "word": "pa'",
+      "start": 153.082,
+      "end": 153.264,
+      "score": 0.669
+    },
+    {
+      "word": "una",
+      "start": 153.284,
+      "end": 153.628,
+      "score": 0.985
+    },
+    {
+      "word": "noche",
+      "start": 153.769,
+      "end": 154.355,
+      "score": 0.697
+    },
+    {
+      "word": "más",
+      "start": 154.375,
+      "end": 154.86,
+      "score": 0.596
+    },
+    {
+      "word": "la",
+      "start": 154.84,
+      "end": 155.288,
+      "score": 0.688
+    },
+    {
+      "word": "suite",
+      "start": 155.594,
+      "end": 155.696,
+      "score": 0.019
+    },
+    {
+      "word": "presidencial",
+      "start": 155.717,
+      "end": 156.98,
+      "score": 0.409
+    },
+    {
+      "word": "se",
+      "start": 156.96,
+      "end": 157.348,
+      "score": 0.653
+    },
+    {
+      "word": "hace",
+      "start": 157.409,
+      "end": 157.715,
+      "score": 0.64
+    },
+    {
+      "word": "grande",
+      "start": 157.735,
+      "end": 158.082,
+      "score": 0.448
+    },
+    {
+      "word": "sin",
+      "start": 158.143,
+      "end": 158.408,
+      "score": 0.772
+    },
+    {
+      "word": "ti",
+      "start": 158.429,
+      "end": 159.02,
+      "score": 0.784
+    },
+    {
+      "word": "ya",
+      "start": 159.0,
+      "end": 159.327,
+      "score": 0.85
+    },
+    {
+      "word": "no",
+      "start": 159.47,
+      "end": 159.654,
+      "score": 0.694
+    },
+    {
+      "word": "quiero",
+      "start": 159.674,
+      "end": 160.144,
+      "score": 0.519
+    },
+    {
+      "word": "bailar",
+      "start": 160.226,
+      "end": 160.9,
+      "score": 0.813
+    },
+    {
+      "word": "borracho",
+      "start": 160.88,
+      "end": 161.819,
+      "score": 0.198
+    },
+    {
+      "word": "en",
+      "start": 161.9,
+      "end": 162.247,
+      "score": 0.389
+    },
+    {
+      "word": "el",
+      "start": 162.268,
+      "end": 162.309,
+      "score": 0.002
+    },
+    {
+      "word": "balcón",
+      "start": 162.329,
+      "end": 162.9,
+      "score": 0.649
+    },
+    {
+      "word": "si",
+      "start": 162.88,
+      "end": 163.618,
+      "score": 0.407
+    },
+    {
+      "word": "tú",
+      "start": 163.639,
+      "end": 163.68,
+      "score": 0.141
+    },
+    {
+      "word": "no",
+      "start": 163.701,
+      "end": 163.742,
+      "score": 0.008
+    },
+    {
+      "word": "estás",
+      "start": 163.762,
+      "end": 163.988,
+      "score": 0.176
+    },
+    {
+      "word": "pa'",
+      "start": 164.008,
+      "end": 164.275,
+      "score": 0.58
+    },
+    {
+      "word": "mirar",
+      "start": 164.295,
+      "end": 164.501,
+      "score": 0.487
+    },
+    {
+      "word": "ojalá",
+      "start": 164.72,
+      "end": 165.759,
+      "score": 0.638
+    },
+    {
+      "word": "volver",
+      "start": 165.84,
+      "end": 166.329,
+      "score": 0.831
+    },
+    {
+      "word": "atrás",
+      "start": 166.492,
+      "end": 166.96,
+      "score": 0.665
+    },
+    {
+      "word": "también",
+      "start": 166.94,
+      "end": 167.755,
+      "score": 0.456
+    },
+    {
+      "word": "de",
+      "start": 167.775,
+      "end": 167.816,
+      "score": 0.069
+    },
+    {
+      "word": "la",
+      "start": 167.837,
+      "end": 167.979,
+      "score": 0.867
+    },
+    {
+      "word": "cadila",
+      "start": 168.081,
+      "end": 169.12,
+      "score": 0.943
+    },
+    {
+      "word": "ya",
+      "start": 169.1,
+      "end": 169.424,
+      "score": 0.741
+    },
+    {
+      "word": "hace",
+      "start": 169.485,
+      "end": 169.789,
+      "score": 0.686
+    },
+    {
+      "word": "tiempo",
+      "start": 169.87,
+      "end": 170.215,
+      "score": 0.809
+    },
+    {
+      "word": "no",
+      "start": 170.397,
+      "end": 170.58,
+      "score": 0.278
+    },
+    {
+      "word": "te",
+      "start": 170.6,
+      "end": 170.944,
+      "score": 0.726
+    },
+    {
+      "word": "veo",
+      "start": 170.965,
+      "end": 172.14,
+      "score": 0.86
+    },
+    {
+      "word": "ese",
+      "start": 172.72,
+      "end": 173.104,
+      "score": 0.751
+    },
+    {
+      "word": "cuerpo",
+      "start": 173.164,
+      "end": 173.488,
+      "score": 0.928
+    },
+    {
+      "word": "ilegal",
+      "start": 173.669,
+      "end": 174.134,
+      "score": 0.845
+    },
+    {
+      "word": "yo",
+      "start": 174.154,
+      "end": 174.477,
+      "score": 0.799
+    },
+    {
+      "word": "lo",
+      "start": 174.518,
+      "end": 174.639,
+      "score": 0.75
+    },
+    {
+      "word": "blanqueo",
+      "start": 174.76,
+      "end": 176.8,
+      "score": 0.654
+    },
+    {
+      "word": "te",
+      "start": 176.78,
+      "end": 177.649,
+      "score": 0.542
+    },
+    {
+      "word": "dibujo",
+      "start": 177.669,
+      "end": 178.639,
+      "score": 0.515
+    },
+    {
+      "word": "con",
+      "start": 178.699,
+      "end": 178.76,
+      "score": 0.145
+    },
+    {
+      "word": "los",
+      "start": 178.78,
+      "end": 178.902,
+      "score": 0.686
+    },
+    {
+      "word": "dedos",
+      "start": 179.043,
+      "end": 180.114,
+      "score": 0.609
+    },
+    {
+      "word": "en",
+      "start": 180.134,
+      "end": 180.255,
+      "score": 0.367
+    },
+    {
+      "word": "la",
+      "start": 180.275,
+      "end": 180.478,
+      "score": 0.326
+    },
+    {
+      "word": "arena",
+      "start": 180.498,
+      "end": 180.74,
+      "score": 0.34
+    },
+    {
+      "word": "ven",
+      "start": 181.4,
+      "end": 181.764,
+      "score": 0.44
+    },
+    {
+      "word": "que",
+      "start": 181.785,
+      "end": 182.007,
+      "score": 0.345
+    },
+    {
+      "word": "te",
+      "start": 182.028,
+      "end": 182.149,
+      "score": 0.591
+    },
+    {
+      "word": "echo",
+      "start": 182.23,
+      "end": 182.453,
+      "score": 0.771
+    },
+    {
+      "word": "crema",
+      "start": 182.655,
+      "end": 182.979,
+      "score": 0.609
+    },
+    {
+      "word": "porque",
+      "start": 183.1,
+      "end": 183.424,
+      "score": 0.749
+    },
+    {
+      "word": "el",
+      "start": 183.445,
+      "end": 183.526,
+      "score": 0.82
+    },
+    {
+      "word": "sol",
+      "start": 183.566,
+      "end": 183.93,
+      "score": 0.621
+    },
+    {
+      "word": "está",
+      "start": 183.951,
+      "end": 184.335,
+      "score": 0.503
+    },
+    {
+      "word": "que",
+      "start": 184.356,
+      "end": 184.619,
+      "score": 0.359
+    },
+    {
+      "word": "quema",
+      "start": 184.639,
+      "end": 184.74,
+      "score": 0.179
+    },
+    {
+      "word": "si",
+      "start": 185.74,
+      "end": 186.505,
+      "score": 0.429
+    },
+    {
+      "word": "no",
+      "start": 186.525,
+      "end": 186.586,
+      "score": 0.277
+    },
+    {
+      "word": "te",
+      "start": 186.606,
+      "end": 187.049,
+      "score": 0.83
+    },
+    {
+      "word": "veo,",
+      "start": 187.069,
+      "end": 188.619,
+      "score": 0.744
+    },
+    {
+      "word": "te",
+      "start": 188.639,
+      "end": 188.921,
+      "score": 0.628
+    },
+    {
+      "word": "lo",
+      "start": 189.444,
+      "end": 189.485,
+      "score": 0.395
+    },
+    {
+      "word": "borro",
+      "start": 189.565,
+      "end": 189.666,
+      "score": 0.017
+    },
+    {
+      "word": "me",
+      "start": 189.686,
+      "end": 190.048,
+      "score": 0.876
+    },
+    {
+      "word": "da",
+      "start": 190.069,
+      "end": 190.31,
+      "score": 0.924
+    },
+    {
+      "word": "con",
+      "start": 190.451,
+      "end": 190.652,
+      "score": 0.834
+    },
+    {
+      "word": "llamarte",
+      "start": 190.693,
+      "end": 191.82,
+      "score": 0.768
+    },
+    {
+      "word": "envíame",
+      "start": 191.8,
+      "end": 192.991,
+      "score": 0.648
+    },
+    {
+      "word": "la",
+      "start": 193.011,
+      "end": 193.758,
+      "score": 0.86
+    },
+    {
+      "word": "rubí",
+      "start": 193.778,
+      "end": 193.859,
+      "score": 0.163
+    },
+    {
+      "word": "pa'",
+      "start": 194.0,
+      "end": 194.323,
+      "score": 0.796
+    },
+    {
+      "word": "ir",
+      "start": 194.343,
+      "end": 194.545,
+      "score": 0.394
+    },
+    {
+      "word": "a",
+      "start": 194.565,
+      "end": 194.727,
+      "score": 0.933
+    },
+    {
+      "word": "buscarte",
+      "start": 194.828,
+      "end": 196.16,
+      "score": 0.811
+    },
+    {
+      "word": "si",
+      "start": 196.14,
+      "end": 196.706,
+      "score": 0.424
+    },
+    {
+      "word": "no",
+      "start": 196.726,
+      "end": 196.848,
+      "score": 0.524
+    },
+    {
+      "word": "es",
+      "start": 196.868,
+      "end": 197.01,
+      "score": 0.356
+    },
+    {
+      "word": "conmigo",
+      "start": 197.03,
+      "end": 198.041,
+      "score": 0.764
+    },
+    {
+      "word": "tú",
+      "start": 198.061,
+      "end": 198.102,
+      "score": 0.002
+    },
+    {
+      "word": "ya",
+      "start": 198.122,
+      "end": 198.243,
+      "score": 0.741
+    },
+    {
+      "word": "no",
+      "start": 198.344,
+      "end": 198.425,
+      "score": 0.698
+    },
+    {
+      "word": "sientes",
+      "start": 198.607,
+      "end": 199.133,
+      "score": 0.738
+    },
+    {
+      "word": "nada",
+      "start": 199.153,
+      "end": 199.78,
+      "score": 0.648
+    },
+    {
+      "word": "aunque",
+      "start": 199.76,
+      "end": 200.209,
+      "score": 0.358
+    },
+    {
+      "word": "intentes",
+      "start": 200.229,
+      "end": 200.78,
+      "score": 0.857
+    },
+    {
+      "word": "borrarme",
+      "start": 200.923,
+      "end": 201.82,
+      "score": 0.814
+    },
+    {
+      "word": "subtítulos",
+      "start": 222.24,
+      "end": 223.043,
+      "score": 0.095
+    },
+    {
+      "word": "por",
+      "start": 223.064,
+      "end": 223.125,
+      "score": 0.001
+    },
+    {
+      "word": "la",
+      "start": 223.146,
+      "end": 223.187,
+      "score": 0.005
+    },
+    {
+      "word": "comunidad",
+      "start": 223.208,
+      "end": 223.393,
+      "score": 0.001
+    },
+    {
+      "word": "de",
+      "start": 223.414,
+      "end": 223.455,
+      "score": 0.002
+    },
+    {
+      "word": "amara.org",
+      "start": 223.475,
+      "end": 223.661,
+      "score": 0.112
+    }
+  ]
+}

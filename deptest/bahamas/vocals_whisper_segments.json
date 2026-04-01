@@ -1,0 +1,2464 @@
+[
+  {
+    "id": 0,
+    "text": "va a dejarte ir, eso nunca me tiene hipnotizado",
+    "start": 6.759999999999997,
+    "end": 12.16,
+    "words": [
+      {
+        "word": " Va",
+        "start": 6.759999999999997,
+        "end": 7.44
+      },
+      {
+        "word": " a",
+        "start": 7.44,
+        "end": 7.74
+      },
+      {
+        "word": " dejarte",
+        "start": 7.74,
+        "end": 8.22
+      },
+      {
+        "word": " ir,",
+        "start": 8.22,
+        "end": 8.94
+      },
+      {
+        "word": " eso",
+        "start": 9.32,
+        "end": 9.58
+      },
+      {
+        "word": " nunca",
+        "start": 9.58,
+        "end": 10.62
+      },
+      {
+        "word": " me",
+        "start": 10.62,
+        "end": 11.04
+      },
+      {
+        "word": " tiene",
+        "start": 11.04,
+        "end": 11.26
+      },
+      {
+        "word": " hipnotizado",
+        "start": 11.26,
+        "end": 12.16
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "text": "no puedo dejar de mirarte",
+    "start": 12.16,
+    "end": 15.0,
+    "words": [
+      {
+        "word": " No",
+        "start": 12.16,
+        "end": 12.62
+      },
+      {
+        "word": " puedo",
+        "start": 12.62,
+        "end": 12.9
+      },
+      {
+        "word": " dejar",
+        "start": 12.9,
+        "end": 13.44
+      },
+      {
+        "word": " de",
+        "start": 13.44,
+        "end": 14.0
+      },
+      {
+        "word": " mirarte",
+        "start": 14.0,
+        "end": 15.0
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "rías más que una estría, mami, tú te fugaste",
+    "start": 15.0,
+    "end": 19.1,
+    "words": [
+      {
+        "word": " Rías",
+        "start": 15.0,
+        "end": 15.44
+      },
+      {
+        "word": " más",
+        "start": 15.44,
+        "end": 15.76
+      },
+      {
+        "word": " que",
+        "start": 15.76,
+        "end": 15.94
+      },
+      {
+        "word": " una",
+        "start": 15.94,
+        "end": 16.28
+      },
+      {
+        "word": " estría,",
+        "start": 16.28,
+        "end": 16.76
+      },
+      {
+        "word": " mami,",
+        "start": 16.94,
+        "end": 17.26
+      },
+      {
+        "word": " tú",
+        "start": 17.32,
+        "end": 17.62
+      },
+      {
+        "word": " te",
+        "start": 17.62,
+        "end": 17.86
+      },
+      {
+        "word": " fugaste",
+        "start": 17.86,
+        "end": 19.1
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "este que te endujaste, no puedo olvidarte",
+    "start": 19.1,
+    "end": 23.08,
+    "words": [
+      {
+        "word": " Este",
+        "start": 19.1,
+        "end": 19.5
+      },
+      {
+        "word": " que",
+        "start": 19.5,
+        "end": 19.92
+      },
+      {
+        "word": " te",
+        "start": 19.92,
+        "end": 20.14
+      },
+      {
+        "word": " endujaste,",
+        "start": 20.14,
+        "end": 21.08
+      },
+      {
+        "word": " no",
+        "start": 21.18,
+        "end": 21.36
+      },
+      {
+        "word": " puedo",
+        "start": 21.36,
+        "end": 21.82
+      },
+      {
+        "word": " olvidarte",
+        "start": 21.82,
+        "end": 23.08
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "tú y yo pa' las bamas, te doy el tom",
+    "start": 23.08,
+    "end": 25.88,
+    "words": [
+      {
+        "word": " Tú",
+        "start": 23.08,
+        "end": 23.34
+      },
+      {
+        "word": " y",
+        "start": 23.34,
+        "end": 23.44
+      },
+      {
+        "word": " yo",
+        "start": 23.44,
+        "end": 23.6
+      },
+      {
+        "word": " pa'",
+        "start": 23.6,
+        "end": 23.9
+      },
+      {
+        "word": " las",
+        "start": 23.9,
+        "end": 24.38
+      },
+      {
+        "word": " bamas,",
+        "start": 24.38,
+        "end": 24.84
+      },
+      {
+        "word": " te",
+        "start": 24.84,
+        "end": 25.16
+      },
+      {
+        "word": " doy",
+        "start": 25.16,
+        "end": 25.44
+      },
+      {
+        "word": " el",
+        "start": 25.44,
+        "end": 25.7
+      },
+      {
+        "word": " tom",
+        "start": 25.7,
+        "end": 25.88
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "quitándote el pantalón",
+    "start": 25.88,
+    "end": 27.88,
+    "words": [
+      {
+        "word": " Quitándote",
+        "start": 25.88,
+        "end": 26.78
+      },
+      {
+        "word": " el",
+        "start": 26.78,
+        "end": 27.02
+      },
+      {
+        "word": " pantalón",
+        "start": 27.02,
+        "end": 27.88
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "en frente al marto, encima mía en los asientos del rubí",
+    "start": 27.88,
+    "end": 31.5,
+    "words": [
+      {
+        "word": " En",
+        "start": 27.88,
+        "end": 28.04
+      },
+      {
+        "word": " frente",
+        "start": 28.04,
+        "end": 28.28
+      },
+      {
+        "word": " al",
+        "start": 28.28,
+        "end": 28.54
+      },
+      {
+        "word": " marto,",
+        "start": 28.54,
+        "end": 28.82
+      },
+      {
+        "word": " encima",
+        "start": 28.82,
+        "end": 29.34
+      },
+      {
+        "word": " mía",
+        "start": 29.34,
+        "end": 29.96
+      },
+      {
+        "word": " en",
+        "start": 29.96,
+        "end": 30.1
+      },
+      {
+        "word": " los",
+        "start": 30.1,
+        "end": 30.28
+      },
+      {
+        "word": " asientos",
+        "start": 30.28,
+        "end": 30.72
+      },
+      {
+        "word": " del",
+        "start": 30.72,
+        "end": 31.1
+      },
+      {
+        "word": " rubí",
+        "start": 31.1,
+        "end": 31.5
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "con el cielo azul y tus ojos marrón",
+    "start": 31.5,
+    "end": 34.3,
+    "words": [
+      {
+        "word": " Con",
+        "start": 31.5,
+        "end": 31.8
+      },
+      {
+        "word": " el",
+        "start": 31.8,
+        "end": 32.1
+      },
+      {
+        "word": " cielo",
+        "start": 32.1,
+        "end": 32.42
+      },
+      {
+        "word": " azul",
+        "start": 32.42,
+        "end": 32.84
+      },
+      {
+        "word": " y",
+        "start": 32.84,
+        "end": 33.12
+      },
+      {
+        "word": " tus",
+        "start": 33.12,
+        "end": 33.34
+      },
+      {
+        "word": " ojos",
+        "start": 33.34,
+        "end": 33.76
+      },
+      {
+        "word": " marrón",
+        "start": 33.76,
+        "end": 34.3
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "bebiendo bajo el sol, tu cuerpo sudando contra el mío",
+    "start": 34.3,
+    "end": 39.44,
+    "words": [
+      {
+        "word": " Bebiendo",
+        "start": 34.3,
+        "end": 35.02
+      },
+      {
+        "word": " bajo",
+        "start": 35.02,
+        "end": 35.38
+      },
+      {
+        "word": " el",
+        "start": 35.38,
+        "end": 35.68
+      },
+      {
+        "word": " sol,",
+        "start": 35.68,
+        "end": 35.9
+      },
+      {
+        "word": " tu",
+        "start": 35.9,
+        "end": 36.34
+      },
+      {
+        "word": " cuerpo",
+        "start": 36.34,
+        "end": 36.8
+      },
+      {
+        "word": " sudando",
+        "start": 36.8,
+        "end": 37.62
+      },
+      {
+        "word": " contra",
+        "start": 37.62,
+        "end": 38.06
+      },
+      {
+        "word": " el",
+        "start": 38.06,
+        "end": 38.32
+      },
+      {
+        "word": " mío",
+        "start": 38.32,
+        "end": 39.44
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "si no te veo, te lo borro me da con llamarte",
+    "start": 39.44,
+    "end": 45.44,
+    "words": [
+      {
+        "word": " Si",
+        "start": 39.44,
+        "end": 39.92
+      },
+      {
+        "word": " no",
+        "start": 39.92,
+        "end": 40.14
+      },
+      {
+        "word": " te",
+        "start": 40.14,
+        "end": 40.6
+      },
+      {
+        "word": " veo,",
+        "start": 40.6,
+        "end": 41.62
+      },
+      {
+        "word": " te",
+        "start": 42.12,
+        "end": 42.38
+      },
+      {
+        "word": " lo",
+        "start": 42.38,
+        "end": 42.68
+      },
+      {
+        "word": " borro",
+        "start": 42.68,
+        "end": 43.0
+      },
+      {
+        "word": " me",
+        "start": 43.0,
+        "end": 43.54
+      },
+      {
+        "word": " da",
+        "start": 43.54,
+        "end": 43.94
+      },
+      {
+        "word": " con",
+        "start": 43.94,
+        "end": 44.26
+      },
+      {
+        "word": " llamarte",
+        "start": 44.26,
+        "end": 45.44
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "envíame la rubí pa' ir a buscarte",
+    "start": 45.44,
+    "end": 49.54,
+    "words": [
+      {
+        "word": " Envíame",
+        "start": 45.44,
+        "end": 46.44
+      },
+      {
+        "word": " la",
+        "start": 46.44,
+        "end": 46.96
+      },
+      {
+        "word": " rubí",
+        "start": 46.96,
+        "end": 47.44
+      },
+      {
+        "word": " pa'",
+        "start": 47.44,
+        "end": 47.84
+      },
+      {
+        "word": " ir",
+        "start": 47.84,
+        "end": 48.16
+      },
+      {
+        "word": " a",
+        "start": 48.16,
+        "end": 48.42
+      },
+      {
+        "word": " buscarte",
+        "start": 48.42,
+        "end": 49.54
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "si no es contigo y yo no siento nada, no te puedo borrar",
+    "start": 49.54,
+    "end": 55.54,
+    "words": [
+      {
+        "word": " Si",
+        "start": 49.54,
+        "end": 50.3
+      },
+      {
+        "word": " no",
+        "start": 50.3,
+        "end": 50.5
+      },
+      {
+        "word": " es",
+        "start": 50.5,
+        "end": 50.8
+      },
+      {
+        "word": " contigo",
+        "start": 50.8,
+        "end": 51.26
+      },
+      {
+        "word": " y",
+        "start": 51.26,
+        "end": 51.54
+      },
+      {
+        "word": " yo",
+        "start": 51.54,
+        "end": 51.78
+      },
+      {
+        "word": " no",
+        "start": 51.78,
+        "end": 52.12
+      },
+      {
+        "word": " siento",
+        "start": 52.12,
+        "end": 52.46
+      },
+      {
+        "word": " nada,",
+        "start": 52.46,
+        "end": 53.16
+      },
+      {
+        "word": " no",
+        "start": 53.56,
+        "end": 53.7
+      },
+      {
+        "word": " te",
+        "start": 53.7,
+        "end": 54.04
+      },
+      {
+        "word": " puedo",
+        "start": 54.04,
+        "end": 54.4
+      },
+      {
+        "word": " borrar",
+        "start": 54.4,
+        "end": 55.54
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "si no te veo, te lo borro me da con llamarte",
+    "start": 55.54,
+    "end": 61.66,
+    "words": [
+      {
+        "word": " Si",
+        "start": 55.54,
+        "end": 56.14
+      },
+      {
+        "word": " no",
+        "start": 56.14,
+        "end": 56.38
+      },
+      {
+        "word": " te",
+        "start": 56.38,
+        "end": 56.88
+      },
+      {
+        "word": " veo,",
+        "start": 56.88,
+        "end": 57.86
+      },
+      {
+        "word": " te",
+        "start": 58.44,
+        "end": 58.64
+      },
+      {
+        "word": " lo",
+        "start": 58.64,
+        "end": 58.9
+      },
+      {
+        "word": " borro",
+        "start": 58.9,
+        "end": 59.46
+      },
+      {
+        "word": " me",
+        "start": 59.46,
+        "end": 59.9
+      },
+      {
+        "word": " da",
+        "start": 59.9,
+        "end": 60.24
+      },
+      {
+        "word": " con",
+        "start": 60.24,
+        "end": 60.56
+      },
+      {
+        "word": " llamarte",
+        "start": 60.56,
+        "end": 61.66
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "envíame la rubí pa' ir a buscarte",
+    "start": 61.66,
+    "end": 65.86,
+    "words": [
+      {
+        "word": " Envíame",
+        "start": 61.66,
+        "end": 62.66
+      },
+      {
+        "word": " la",
+        "start": 62.66,
+        "end": 63.26
+      },
+      {
+        "word": " rubí",
+        "start": 63.26,
+        "end": 63.78
+      },
+      {
+        "word": " pa'",
+        "start": 63.78,
+        "end": 64.14
+      },
+      {
+        "word": " ir",
+        "start": 64.14,
+        "end": 64.46
+      },
+      {
+        "word": " a",
+        "start": 64.46,
+        "end": 64.7
+      },
+      {
+        "word": " buscarte",
+        "start": 64.7,
+        "end": 65.86
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "si no es contigo y yo no siento nada, no te puedo borrar",
+    "start": 65.86,
+    "end": 72.18,
+    "words": [
+      {
+        "word": " Si",
+        "start": 65.86,
+        "end": 66.54
+      },
+      {
+        "word": " no",
+        "start": 66.54,
+        "end": 66.76
+      },
+      {
+        "word": " es",
+        "start": 66.76,
+        "end": 66.96
+      },
+      {
+        "word": " contigo",
+        "start": 66.96,
+        "end": 67.58
+      },
+      {
+        "word": " y",
+        "start": 67.58,
+        "end": 67.8
+      },
+      {
+        "word": " yo",
+        "start": 67.8,
+        "end": 67.94
+      },
+      {
+        "word": " no",
+        "start": 67.94,
+        "end": 68.3
+      },
+      {
+        "word": " siento",
+        "start": 68.3,
+        "end": 68.76
+      },
+      {
+        "word": " nada,",
+        "start": 68.76,
+        "end": 69.62
+      },
+      {
+        "word": " no",
+        "start": 69.64,
+        "end": 69.88
+      },
+      {
+        "word": " te",
+        "start": 69.88,
+        "end": 70.28
+      },
+      {
+        "word": " puedo",
+        "start": 70.28,
+        "end": 70.6
+      },
+      {
+        "word": " borrar",
+        "start": 70.6,
+        "end": 72.18
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "como una cicatriz después de la herida",
+    "start": 72.18,
+    "end": 74.34,
+    "words": [
+      {
+        "word": " Como",
+        "start": 72.18,
+        "end": 72.58
+      },
+      {
+        "word": " una",
+        "start": 72.58,
+        "end": 72.88
+      },
+      {
+        "word": " cicatriz",
+        "start": 72.88,
+        "end": 73.38
+      },
+      {
+        "word": " después",
+        "start": 73.38,
+        "end": 73.68
+      },
+      {
+        "word": " de",
+        "start": 73.68,
+        "end": 73.86
+      },
+      {
+        "word": " la",
+        "start": 73.86,
+        "end": 74.0
+      },
+      {
+        "word": " herida",
+        "start": 74.0,
+        "end": 74.34
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "marqué tu piel y tú marcaste la mía",
+    "start": 74.34,
+    "end": 76.44,
+    "words": [
+      {
+        "word": " Marqué",
+        "start": 74.34,
+        "end": 74.68
+      },
+      {
+        "word": " tu",
+        "start": 74.68,
+        "end": 74.9
+      },
+      {
+        "word": " piel",
+        "start": 74.9,
+        "end": 75.06
+      },
+      {
+        "word": " y",
+        "start": 75.06,
+        "end": 75.22
+      },
+      {
+        "word": " tú",
+        "start": 75.22,
+        "end": 75.38
+      },
+      {
+        "word": " marcaste",
+        "start": 75.38,
+        "end": 75.86
+      },
+      {
+        "word": " la",
+        "start": 75.86,
+        "end": 76.2
+      },
+      {
+        "word": " mía",
+        "start": 76.2,
+        "end": 76.44
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "comerlo más de cuatro veces seguida",
+    "start": 76.44,
+    "end": 78.44,
+    "words": [
+      {
+        "word": " Comerlo",
+        "start": 76.44,
+        "end": 76.94
+      },
+      {
+        "word": " más",
+        "start": 76.94,
+        "end": 77.14
+      },
+      {
+        "word": " de",
+        "start": 77.14,
+        "end": 77.3
+      },
+      {
+        "word": " cuatro",
+        "start": 77.3,
+        "end": 77.6
+      },
+      {
+        "word": " veces",
+        "start": 77.6,
+        "end": 77.96
+      },
+      {
+        "word": " seguida",
+        "start": 77.96,
+        "end": 78.44
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "todos los días del mes sentimos que ese no volvió necesidad",
+    "start": 78.44,
+    "end": 81.7,
+    "words": [
+      {
+        "word": " Todos",
+        "start": 78.44,
+        "end": 78.72
+      },
+      {
+        "word": " los",
+        "start": 78.72,
+        "end": 78.94
+      },
+      {
+        "word": " días",
+        "start": 78.94,
+        "end": 79.14
+      },
+      {
+        "word": " del",
+        "start": 79.14,
+        "end": 79.34
+      },
+      {
+        "word": " mes",
+        "start": 79.34,
+        "end": 79.5
+      },
+      {
+        "word": " sentimos",
+        "start": 79.5,
+        "end": 79.94
+      },
+      {
+        "word": " que",
+        "start": 79.94,
+        "end": 80.18
+      },
+      {
+        "word": " ese",
+        "start": 80.18,
+        "end": 80.34
+      },
+      {
+        "word": " no",
+        "start": 80.34,
+        "end": 80.46
+      },
+      {
+        "word": " volvió",
+        "start": 80.46,
+        "end": 80.86
+      },
+      {
+        "word": " necesidad",
+        "start": 80.86,
+        "end": 81.7
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "pa' la noche nos matamos en el cuarto",
+    "start": 81.7,
+    "end": 84.8,
+    "words": [
+      {
+        "word": " Pa'",
+        "start": 81.7,
+        "end": 82.5
+      },
+      {
+        "word": " la",
+        "start": 82.98,
+        "end": 83.18
+      },
+      {
+        "word": " noche",
+        "start": 83.18,
+        "end": 83.4
+      },
+      {
+        "word": " nos",
+        "start": 83.4,
+        "end": 83.7
+      },
+      {
+        "word": " matamos",
+        "start": 83.7,
+        "end": 84.08
+      },
+      {
+        "word": " en",
+        "start": 84.08,
+        "end": 84.32
+      },
+      {
+        "word": " el",
+        "start": 84.32,
+        "end": 84.5
+      },
+      {
+        "word": " cuarto",
+        "start": 84.5,
+        "end": 84.8
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "mami tú eres mía, yo no te comparto",
+    "start": 84.8,
+    "end": 86.86,
+    "words": [
+      {
+        "word": " Mami",
+        "start": 84.8,
+        "end": 85.14
+      },
+      {
+        "word": " tú",
+        "start": 85.14,
+        "end": 85.3
+      },
+      {
+        "word": " eres",
+        "start": 85.3,
+        "end": 85.54
+      },
+      {
+        "word": " mía,",
+        "start": 85.54,
+        "end": 85.68
+      },
+      {
+        "word": " yo",
+        "start": 85.68,
+        "end": 85.84
+      },
+      {
+        "word": " no",
+        "start": 85.84,
+        "end": 86.08
+      },
+      {
+        "word": " te",
+        "start": 86.08,
+        "end": 86.3
+      },
+      {
+        "word": " comparto",
+        "start": 86.3,
+        "end": 86.86
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "una movie como las de tim burton",
+    "start": 86.86,
+    "end": 88.88,
+    "words": [
+      {
+        "word": " Una",
+        "start": 86.86,
+        "end": 87.2
+      },
+      {
+        "word": " movie",
+        "start": 87.2,
+        "end": 87.46
+      },
+      {
+        "word": " como",
+        "start": 87.46,
+        "end": 87.84
+      },
+      {
+        "word": " las",
+        "start": 87.84,
+        "end": 88.12
+      },
+      {
+        "word": " de",
+        "start": 88.12,
+        "end": 88.26
+      },
+      {
+        "word": " Tim",
+        "start": 88.26,
+        "end": 88.56
+      },
+      {
+        "word": " Burton",
+        "start": 88.56,
+        "end": 88.88
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "si no estoy contigo, ya no siento nada",
+    "start": 90.66,
+    "end": 92.92,
+    "words": [
+      {
+        "word": " Si",
+        "start": 90.39999999999999,
+        "end": 90.74
+      },
+      {
+        "word": " no",
+        "start": 90.74,
+        "end": 91.12
+      },
+      {
+        "word": " estoy",
+        "start": 91.12,
+        "end": 91.28
+      },
+      {
+        "word": " contigo,",
+        "start": 91.28,
+        "end": 91.82
+      },
+      {
+        "word": " ya",
+        "start": 91.82,
+        "end": 92.04
+      },
+      {
+        "word": " no",
+        "start": 92.04,
+        "end": 92.18
+      },
+      {
+        "word": " siento",
+        "start": 92.18,
+        "end": 92.44
+      },
+      {
+        "word": " nada",
+        "start": 92.44,
+        "end": 92.92
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "me dices que yo soy tu debilidad",
+    "start": 92.92,
+    "end": 94.66,
+    "words": [
+      {
+        "word": " Me",
+        "start": 92.92,
+        "end": 93.18
+      },
+      {
+        "word": " dices",
+        "start": 93.18,
+        "end": 93.34
+      },
+      {
+        "word": " que",
+        "start": 93.34,
+        "end": 93.62
+      },
+      {
+        "word": " yo",
+        "start": 93.62,
+        "end": 93.76
+      },
+      {
+        "word": " soy",
+        "start": 93.76,
+        "end": 93.9
+      },
+      {
+        "word": " tu",
+        "start": 93.9,
+        "end": 94.06
+      },
+      {
+        "word": " debilidad",
+        "start": 94.06,
+        "end": 94.66
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "por eso siempre volvemos",
+    "start": 95.6,
+    "end": 98.16,
+    "words": [
+      {
+        "word": " Por",
+        "start": 95.6,
+        "end": 96.28
+      },
+      {
+        "word": " eso",
+        "start": 96.28,
+        "end": 96.6
+      },
+      {
+        "word": " siempre",
+        "start": 96.6,
+        "end": 97.18
+      },
+      {
+        "word": " volvemos",
+        "start": 97.18,
+        "end": 98.16
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "aunque nos peleemos solo con mirar",
+    "start": 98.16,
+    "end": 102.16,
+    "words": [
+      {
+        "word": " Aunque",
+        "start": 98.16,
+        "end": 98.72
+      },
+      {
+        "word": " nos",
+        "start": 98.72,
+        "end": 99.24
+      },
+      {
+        "word": " peleemos",
+        "start": 99.24,
+        "end": 100.14
+      },
+      {
+        "word": " solo",
+        "start": 100.14,
+        "end": 100.86
+      },
+      {
+        "word": " con",
+        "start": 100.86,
+        "end": 101.28
+      },
+      {
+        "word": " mirar",
+        "start": 101.28,
+        "end": 102.16
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "los dos nos leemos",
+    "start": 102.16,
+    "end": 104.5,
+    "words": [
+      {
+        "word": " Los",
+        "start": 102.16,
+        "end": 102.58
+      },
+      {
+        "word": " dos",
+        "start": 102.58,
+        "end": 102.96
+      },
+      {
+        "word": " nos",
+        "start": 102.96,
+        "end": 103.4
+      },
+      {
+        "word": " leemos",
+        "start": 103.4,
+        "end": 104.5
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "si no te veo, te lo borro me da con llamarte",
+    "start": 104.5,
+    "end": 110.48,
+    "words": [
+      {
+        "word": " Si",
+        "start": 104.5,
+        "end": 105.02
+      },
+      {
+        "word": " no",
+        "start": 105.02,
+        "end": 105.26
+      },
+      {
+        "word": " te",
+        "start": 105.26,
+        "end": 105.72
+      },
+      {
+        "word": " veo,",
+        "start": 105.72,
+        "end": 106.62
+      },
+      {
+        "word": " te",
+        "start": 107.24,
+        "end": 107.42
+      },
+      {
+        "word": " lo",
+        "start": 107.42,
+        "end": 107.72
+      },
+      {
+        "word": " borro",
+        "start": 107.72,
+        "end": 108.28
+      },
+      {
+        "word": " me",
+        "start": 108.28,
+        "end": 108.64
+      },
+      {
+        "word": " da",
+        "start": 108.64,
+        "end": 109.08
+      },
+      {
+        "word": " con",
+        "start": 109.08,
+        "end": 109.36
+      },
+      {
+        "word": " llamarte",
+        "start": 109.36,
+        "end": 110.48
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "envíame la rubí pa' ir a buscarte",
+    "start": 110.48,
+    "end": 114.7,
+    "words": [
+      {
+        "word": " Envíame",
+        "start": 110.48,
+        "end": 111.5
+      },
+      {
+        "word": " la",
+        "start": 111.5,
+        "end": 112.06
+      },
+      {
+        "word": " rubí",
+        "start": 112.06,
+        "end": 112.56
+      },
+      {
+        "word": " pa'",
+        "start": 112.56,
+        "end": 112.92
+      },
+      {
+        "word": " ir",
+        "start": 112.92,
+        "end": 113.24
+      },
+      {
+        "word": " a",
+        "start": 113.24,
+        "end": 113.52
+      },
+      {
+        "word": " buscarte",
+        "start": 113.52,
+        "end": 114.7
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "si no es contigo y yo ya no siento nada, no te puedo borrar",
+    "start": 114.7,
+    "end": 120.88,
+    "words": [
+      {
+        "word": " Si",
+        "start": 114.7,
+        "end": 115.34
+      },
+      {
+        "word": " no",
+        "start": 115.34,
+        "end": 115.58
+      },
+      {
+        "word": " es",
+        "start": 115.58,
+        "end": 115.74
+      },
+      {
+        "word": " contigo",
+        "start": 115.74,
+        "end": 116.42
+      },
+      {
+        "word": " y",
+        "start": 116.42,
+        "end": 116.58
+      },
+      {
+        "word": " yo",
+        "start": 116.58,
+        "end": 116.76
+      },
+      {
+        "word": " ya",
+        "start": 116.76,
+        "end": 116.94
+      },
+      {
+        "word": " no",
+        "start": 116.94,
+        "end": 117.2
+      },
+      {
+        "word": " siento",
+        "start": 117.2,
+        "end": 117.58
+      },
+      {
+        "word": " nada,",
+        "start": 117.58,
+        "end": 118.4
+      },
+      {
+        "word": " no",
+        "start": 118.54,
+        "end": 118.68
+      },
+      {
+        "word": " te",
+        "start": 118.68,
+        "end": 119.08
+      },
+      {
+        "word": " puedo",
+        "start": 119.08,
+        "end": 119.46
+      },
+      {
+        "word": " borrar",
+        "start": 119.46,
+        "end": 120.88
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "si no te veo, te lo borro me da con llamarte",
+    "start": 120.88,
+    "end": 126.72,
+    "words": [
+      {
+        "word": " Si",
+        "start": 120.88,
+        "end": 121.36
+      },
+      {
+        "word": " no",
+        "start": 121.36,
+        "end": 121.66
+      },
+      {
+        "word": " te",
+        "start": 121.66,
+        "end": 122.3
+      },
+      {
+        "word": " veo,",
+        "start": 122.3,
+        "end": 123.18
+      },
+      {
+        "word": " te",
+        "start": 123.46,
+        "end": 123.76
+      },
+      {
+        "word": " lo",
+        "start": 123.76,
+        "end": 124.02
+      },
+      {
+        "word": " borro",
+        "start": 124.02,
+        "end": 124.54
+      },
+      {
+        "word": " me",
+        "start": 124.54,
+        "end": 124.94
+      },
+      {
+        "word": " da",
+        "start": 124.94,
+        "end": 125.34
+      },
+      {
+        "word": " con",
+        "start": 125.34,
+        "end": 125.62
+      },
+      {
+        "word": " llamarte",
+        "start": 125.62,
+        "end": 126.72
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "envíame la rubí pa' ir a buscarte",
+    "start": 126.72,
+    "end": 130.48000000000002,
+    "words": [
+      {
+        "word": " Envíame",
+        "start": 126.72,
+        "end": 127.82
+      },
+      {
+        "word": " la",
+        "start": 127.82,
+        "end": 128.36
+      },
+      {
+        "word": " rubí",
+        "start": 128.36,
+        "end": 128.84
+      },
+      {
+        "word": " pa'",
+        "start": 128.84,
+        "end": 129.2
+      },
+      {
+        "word": " ir",
+        "start": 129.2,
+        "end": 129.56
+      },
+      {
+        "word": " a",
+        "start": 129.56,
+        "end": 129.8
+      },
+      {
+        "word": " buscarte",
+        "start": 129.8,
+        "end": 130.48000000000002
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "si no es conmigo tú ya no sientes nada",
+    "start": 131.04,
+    "end": 134.58,
+    "words": [
+      {
+        "word": " Si",
+        "start": 131.04,
+        "end": 131.6
+      },
+      {
+        "word": " no",
+        "start": 131.6,
+        "end": 131.8
+      },
+      {
+        "word": " es",
+        "start": 131.8,
+        "end": 132.04
+      },
+      {
+        "word": " conmigo",
+        "start": 132.04,
+        "end": 132.7
+      },
+      {
+        "word": " tú",
+        "start": 132.7,
+        "end": 132.92
+      },
+      {
+        "word": " ya",
+        "start": 132.92,
+        "end": 133.24
+      },
+      {
+        "word": " no",
+        "start": 133.24,
+        "end": 133.5
+      },
+      {
+        "word": " sientes",
+        "start": 133.5,
+        "end": 133.92
+      },
+      {
+        "word": " nada",
+        "start": 133.92,
+        "end": 134.58
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "aunque intentes borrarme",
+    "start": 134.58,
+    "end": 136.48000000000002,
+    "words": [
+      {
+        "word": " Aunque",
+        "start": 134.58,
+        "end": 135.08
+      },
+      {
+        "word": " intentes",
+        "start": 135.08,
+        "end": 135.78
+      },
+      {
+        "word": " borrarme",
+        "start": 135.78,
+        "end": 136.48000000000002
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "no te vayas con todos nuestros planes",
+    "start": 138.27999999999997,
+    "end": 142.48,
+    "words": [
+      {
+        "word": " No",
+        "start": 138.27999999999997,
+        "end": 139.2
+      },
+      {
+        "word": " te",
+        "start": 139.2,
+        "end": 140.12
+      },
+      {
+        "word": " vayas",
+        "start": 140.12,
+        "end": 140.84
+      },
+      {
+        "word": " con",
+        "start": 140.84,
+        "end": 141.32
+      },
+      {
+        "word": " todos",
+        "start": 141.32,
+        "end": 141.6
+      },
+      {
+        "word": " nuestros",
+        "start": 141.6,
+        "end": 142.14
+      },
+      {
+        "word": " planes",
+        "start": 142.14,
+        "end": 142.6
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "por bahama yendo a los lugares",
+    "start": 143.22,
+    "end": 146.84,
+    "words": [
+      {
+        "word": " Por",
+        "start": 143.22,
+        "end": 143.98
+      },
+      {
+        "word": " Bahama",
+        "start": 143.98,
+        "end": 144.84
+      },
+      {
+        "word": " yendo",
+        "start": 144.84,
+        "end": 145.4
+      },
+      {
+        "word": " a",
+        "start": 145.4,
+        "end": 145.78
+      },
+      {
+        "word": " los",
+        "start": 145.78,
+        "end": 146.0
+      },
+      {
+        "word": " lugares",
+        "start": 146.0,
+        "end": 146.84
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "por los que tú sales buscando señales",
+    "start": 146.84,
+    "end": 150.94,
+    "words": [
+      {
+        "word": " Por",
+        "start": 146.84,
+        "end": 147.34
+      },
+      {
+        "word": " los",
+        "start": 147.34,
+        "end": 147.74
+      },
+      {
+        "word": " que",
+        "start": 147.74,
+        "end": 148.0
+      },
+      {
+        "word": " tú",
+        "start": 148.0,
+        "end": 148.4
+      },
+      {
+        "word": " sales",
+        "start": 148.4,
+        "end": 148.9
+      },
+      {
+        "word": " buscando",
+        "start": 148.9,
+        "end": 149.8
+      },
+      {
+        "word": " señales",
+        "start": 149.8,
+        "end": 150.94
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "que me lleven a ti pa' una noche más",
+    "start": 150.94,
+    "end": 154.84,
+    "words": [
+      {
+        "word": " Que",
+        "start": 150.94,
+        "end": 151.24
+      },
+      {
+        "word": " me",
+        "start": 151.24,
+        "end": 151.82
+      },
+      {
+        "word": " lleven",
+        "start": 151.82,
+        "end": 152.42
+      },
+      {
+        "word": " a",
+        "start": 152.42,
+        "end": 152.8
+      },
+      {
+        "word": " ti",
+        "start": 152.8,
+        "end": 153.04
+      },
+      {
+        "word": " pa'",
+        "start": 153.04,
+        "end": 153.28
+      },
+      {
+        "word": " una",
+        "start": 153.74,
+        "end": 153.74
+      },
+      {
+        "word": " noche",
+        "start": 153.74,
+        "end": 154.28
+      },
+      {
+        "word": " más",
+        "start": 154.28,
+        "end": 154.84
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "la suite presidencial",
+    "start": 154.84,
+    "end": 156.96,
+    "words": [
+      {
+        "word": " La",
+        "start": 154.84,
+        "end": 155.14
+      },
+      {
+        "word": " suite",
+        "start": 155.14,
+        "end": 155.52
+      },
+      {
+        "word": " presidencial",
+        "start": 155.52,
+        "end": 156.96
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "se hace grande sin ti",
+    "start": 156.96,
+    "end": 159.0,
+    "words": [
+      {
+        "word": " Se",
+        "start": 156.96,
+        "end": 157.36
+      },
+      {
+        "word": " hace",
+        "start": 157.36,
+        "end": 157.7
+      },
+      {
+        "word": " grande",
+        "start": 157.7,
+        "end": 158.02
+      },
+      {
+        "word": " sin",
+        "start": 158.02,
+        "end": 158.54
+      },
+      {
+        "word": " ti",
+        "start": 158.54,
+        "end": 159.0
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "ya no quiero bailar",
+    "start": 159.0,
+    "end": 160.88,
+    "words": [
+      {
+        "word": " Ya",
+        "start": 159.0,
+        "end": 159.42
+      },
+      {
+        "word": " no",
+        "start": 159.42,
+        "end": 159.66
+      },
+      {
+        "word": " quiero",
+        "start": 159.66,
+        "end": 160.14
+      },
+      {
+        "word": " bailar",
+        "start": 160.14,
+        "end": 160.88
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "borracho en el balcón",
+    "start": 160.88,
+    "end": 162.88,
+    "words": [
+      {
+        "word": " Borracho",
+        "start": 160.88,
+        "end": 161.62
+      },
+      {
+        "word": " en",
+        "start": 161.62,
+        "end": 162.08
+      },
+      {
+        "word": " el",
+        "start": 162.08,
+        "end": 162.3
+      },
+      {
+        "word": " balcón",
+        "start": 162.3,
+        "end": 162.88
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "si tú no estás pa' mirar",
+    "start": 162.88,
+    "end": 164.48,
+    "words": [
+      {
+        "word": " Si",
+        "start": 162.88,
+        "end": 163.2
+      },
+      {
+        "word": " tú",
+        "start": 163.2,
+        "end": 163.44
+      },
+      {
+        "word": " no",
+        "start": 163.44,
+        "end": 163.74
+      },
+      {
+        "word": " estás",
+        "start": 163.74,
+        "end": 163.94
+      },
+      {
+        "word": " pa'",
+        "start": 163.94,
+        "end": 164.26
+      },
+      {
+        "word": " mirar",
+        "start": 164.26,
+        "end": 164.72
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "ojalá volver atrás",
+    "start": 164.72,
+    "end": 166.94,
+    "words": [
+      {
+        "word": " Ojalá",
+        "start": 164.72,
+        "end": 165.78
+      },
+      {
+        "word": " volver",
+        "start": 165.78,
+        "end": 166.34
+      },
+      {
+        "word": " atrás",
+        "start": 166.34,
+        "end": 166.94
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "también de la cadila",
+    "start": 166.94,
+    "end": 169.1,
+    "words": [
+      {
+        "word": " También",
+        "start": 166.94,
+        "end": 167.52
+      },
+      {
+        "word": " de",
+        "start": 167.52,
+        "end": 167.88
+      },
+      {
+        "word": " la",
+        "start": 167.88,
+        "end": 168.12
+      },
+      {
+        "word": " cadila",
+        "start": 168.12,
+        "end": 169.1
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "ya hace tiempo no te veo",
+    "start": 169.1,
+    "end": 172.12,
+    "words": [
+      {
+        "word": " Ya",
+        "start": 169.1,
+        "end": 169.56
+      },
+      {
+        "word": " hace",
+        "start": 169.56,
+        "end": 169.84
+      },
+      {
+        "word": " tiempo",
+        "start": 169.84,
+        "end": 170.28
+      },
+      {
+        "word": " no",
+        "start": 170.28,
+        "end": 170.66
+      },
+      {
+        "word": " te",
+        "start": 170.66,
+        "end": 171.1
+      },
+      {
+        "word": " veo",
+        "start": 171.1,
+        "end": 172.12
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "ese cuerpo ilegal yo lo blanqueo",
+    "start": 172.72,
+    "end": 176.78,
+    "words": [
+      {
+        "word": " Ese",
+        "start": 172.68,
+        "end": 173.1
+      },
+      {
+        "word": " cuerpo",
+        "start": 173.1,
+        "end": 173.54
+      },
+      {
+        "word": " ilegal",
+        "start": 173.54,
+        "end": 174.1
+      },
+      {
+        "word": " yo",
+        "start": 174.1,
+        "end": 174.52
+      },
+      {
+        "word": " lo",
+        "start": 174.52,
+        "end": 174.76
+      },
+      {
+        "word": " blanqueo",
+        "start": 174.76,
+        "end": 176.78
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "te dibujo con los dedos en la arena",
+    "start": 176.78,
+    "end": 180.72,
+    "words": [
+      {
+        "word": " Te",
+        "start": 176.78,
+        "end": 177.68
+      },
+      {
+        "word": " dibujo",
+        "start": 177.68,
+        "end": 178.54
+      },
+      {
+        "word": " con",
+        "start": 178.54,
+        "end": 178.82
+      },
+      {
+        "word": " los",
+        "start": 178.82,
+        "end": 179.18
+      },
+      {
+        "word": " dedos",
+        "start": 179.18,
+        "end": 179.98
+      },
+      {
+        "word": " en",
+        "start": 179.98,
+        "end": 180.36
+      },
+      {
+        "word": " la",
+        "start": 180.36,
+        "end": 180.6
+      },
+      {
+        "word": " arena",
+        "start": 180.6,
+        "end": 181.01999999999998
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "text": "ven que te echo crema porque el sol está que quema",
+    "start": 181.4,
+    "end": 184.72,
+    "words": [
+      {
+        "word": " Ven",
+        "start": 181.4,
+        "end": 181.8
+      },
+      {
+        "word": " que",
+        "start": 181.8,
+        "end": 182.0
+      },
+      {
+        "word": " te",
+        "start": 182.0,
+        "end": 182.28
+      },
+      {
+        "word": " echo",
+        "start": 182.28,
+        "end": 182.54
+      },
+      {
+        "word": " crema",
+        "start": 182.54,
+        "end": 183.0
+      },
+      {
+        "word": " porque",
+        "start": 183.0,
+        "end": 183.4
+      },
+      {
+        "word": " el",
+        "start": 183.4,
+        "end": 183.66
+      },
+      {
+        "word": " sol",
+        "start": 183.66,
+        "end": 183.94
+      },
+      {
+        "word": " está",
+        "start": 183.94,
+        "end": 184.26
+      },
+      {
+        "word": " que",
+        "start": 184.26,
+        "end": 184.66
+      },
+      {
+        "word": " quema",
+        "start": 184.66,
+        "end": 185.07999999999998
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "text": "si no te veo, te lo borro me da con llamarte",
+    "start": 185.74,
+    "end": 191.8,
+    "words": [
+      {
+        "word": " Si",
+        "start": 185.74,
+        "end": 186.38
+      },
+      {
+        "word": " no",
+        "start": 186.38,
+        "end": 186.64
+      },
+      {
+        "word": " te",
+        "start": 186.64,
+        "end": 187.26
+      },
+      {
+        "word": " veo,",
+        "start": 187.26,
+        "end": 188.32
+      },
+      {
+        "word": " te",
+        "start": 188.52,
+        "end": 188.92
+      },
+      {
+        "word": " lo",
+        "start": 188.92,
+        "end": 189.16
+      },
+      {
+        "word": " borro",
+        "start": 189.16,
+        "end": 189.6
+      },
+      {
+        "word": " me",
+        "start": 189.6,
+        "end": 189.98
+      },
+      {
+        "word": " da",
+        "start": 189.98,
+        "end": 190.4
+      },
+      {
+        "word": " con",
+        "start": 190.4,
+        "end": 190.72
+      },
+      {
+        "word": " llamarte",
+        "start": 190.72,
+        "end": 191.8
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "text": "envíame la rubí pa' ir a buscarte",
+    "start": 191.8,
+    "end": 196.14,
+    "words": [
+      {
+        "word": " Envíame",
+        "start": 191.8,
+        "end": 192.84
+      },
+      {
+        "word": " la",
+        "start": 192.84,
+        "end": 193.44
+      },
+      {
+        "word": " rubí",
+        "start": 193.44,
+        "end": 193.86
+      },
+      {
+        "word": " pa'",
+        "start": 193.86,
+        "end": 194.3
+      },
+      {
+        "word": " ir",
+        "start": 194.3,
+        "end": 194.66
+      },
+      {
+        "word": " a",
+        "start": 194.66,
+        "end": 194.84
+      },
+      {
+        "word": " buscarte",
+        "start": 194.84,
+        "end": 196.14
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "text": "si no es conmigo tú ya no sientes nada",
+    "start": 196.14,
+    "end": 199.76,
+    "words": [
+      {
+        "word": " Si",
+        "start": 196.14,
+        "end": 196.66
+      },
+      {
+        "word": " no",
+        "start": 196.66,
+        "end": 196.9
+      },
+      {
+        "word": " es",
+        "start": 196.9,
+        "end": 197.1
+      },
+      {
+        "word": " conmigo",
+        "start": 197.1,
+        "end": 197.76
+      },
+      {
+        "word": " tú",
+        "start": 197.76,
+        "end": 198.0
+      },
+      {
+        "word": " ya",
+        "start": 198.0,
+        "end": 198.32
+      },
+      {
+        "word": " no",
+        "start": 198.32,
+        "end": 198.58
+      },
+      {
+        "word": " sientes",
+        "start": 198.58,
+        "end": 199.04
+      },
+      {
+        "word": " nada",
+        "start": 199.04,
+        "end": 199.76
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "text": "aunque intentes borrarme",
+    "start": 199.76,
+    "end": 201.8,
+    "words": [
+      {
+        "word": " Aunque",
+        "start": 199.76,
+        "end": 200.2
+      },
+      {
+        "word": " intentes",
+        "start": 200.2,
+        "end": 200.94
+      },
+      {
+        "word": " borrarme",
+        "start": 200.94,
+        "end": 201.8
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "text": "subtítulos por la comunidad de amara.org",
+    "start": 222.23999999999998,
+    "end": 223.64,
+    "words": [
+      {
+        "word": " Subtítulos",
+        "start": 222.23999999999998,
+        "end": 223.64
+      },
+      {
+        "word": " por",
+        "start": 223.64,
+        "end": 223.64
+      },
+      {
+        "word": " la",
+        "start": 223.64,
+        "end": 223.64
+      },
+      {
+        "word": " comunidad",
+        "start": 223.64,
+        "end": 223.64
+      },
+      {
+        "word": " de",
+        "start": 223.64,
+        "end": 223.64
+      },
+      {
+        "word": " Amara",
+        "start": 223.64,
+        "end": 223.64
+      },
+      {
+        "word": ".org",
+        "start": 223.64,
+        "end": 223.64
+      }
+    ]
+  }
+]
