@@ -41,6 +41,15 @@ def default_output_root():
     return os.path.join(base, app_name, "outputs")
 
 
+def resolve_output_root(output_root_arg=None):
+    if output_root_arg:
+        return output_root_arg
+    env_root = os.environ.get("SONEX_OUTPUT_ROOT")
+    if env_root:
+        return env_root
+    return default_output_root()
+
+
 def notify(title, message, parent=None):
     app = QApplication.instance()
     if app is None:
@@ -137,7 +146,7 @@ class AdvancedSettingsDialog(QDialog):
             self.gpu_input.setText("GPU Timed Out, Using CPU")
 
         form.addRow(self.gpu_input)
-
+        form.addRow(self.flatten_audio)
         buttons = QDialogButtonBox(QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel, self)
         buttons.accepted.connect(self.accept)
         buttons.rejected.connect(self.reject)
@@ -463,7 +472,7 @@ class Window(QMainWindow):
 
         worker_script = os.path.join(os.path.dirname(__file__), "_worker.py")
         project_root = os.path.dirname(os.path.dirname(__file__))
-        output_root = default_output_root()
+        output_root = resolve_output_root()
         os.makedirs(output_root, exist_ok=True)
         lang_arg = self.lang_code if self.lang_code else ""
         target_lang_arg = self.lang_to.currentData() or ""

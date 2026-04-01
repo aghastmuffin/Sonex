@@ -279,28 +279,32 @@ def _shorten_path(path, max_len=64):
     return "..." + path[-(max_len - 3):]
 
 
-def _find_analysis_file(folder_path):
+def _find_analysis_file(folder_path, output_root=None):
     if not folder_path:
         return None
 
-    base_name = os.path.basename(folder_path.rstrip("/"))
+    folder_path = folder_path.rstrip("/")
+    base_name = os.path.basename(folder_path)
+    output_root = output_root or os.path.dirname(folder_path)
+
     preferred = [
         f"{base_name}_novocs_analysis.npz",
         f"{base_name}_vocs_analysis.npz",
         f"{base_name}_analysis.npz",
     ]
 
-    for name in preferred:
-        candidate = os.path.join(folder_path, name)
-        if os.path.exists(candidate):
-            return candidate
+    for root in (output_root, folder_path):
+        for name in preferred:
+            candidate = os.path.join(root, name)
+            if os.path.exists(candidate):
+                return candidate
 
-    try:
-        for name in os.listdir(folder_path):
-            if name.endswith("_analysis.npz"):
-                return os.path.join(folder_path, name)
-    except OSError:
-        return None
+        try:
+            for name in os.listdir(root):
+                if name.startswith(base_name) and name.endswith("_analysis.npz"):
+                    return os.path.join(root, name)
+        except OSError:
+            continue
 
     return None
 

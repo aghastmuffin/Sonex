@@ -11,6 +11,7 @@ import librosa.display
 def save_mel_spectrogram(
     ctx: AudioContext,
     output_name=None,
+    output_root=None,
     n_mels=128,
     n_fft=2048,
     hop_length=512,
@@ -27,6 +28,8 @@ def save_mel_spectrogram(
     if output_name is None:
         base = os.path.splitext(os.path.basename(ctx.path))[0]
         output_name = f"{base}_mel.npz"
+        if output_root is not None:
+            output_name = os.path.join(str(output_root), output_name)
 
     np.savez_compressed(
         output_name,

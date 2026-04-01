@@ -254,12 +254,14 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
     return str((Path.cwd() / audiobase).resolve()), (detectlang or lang_code)
 
 
-def notesanalysis(af, sr=48000, beat_strength_quantile=0.60, min_relative_beat_strength=1.05,
+def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, min_relative_beat_strength=1.05,
                   min_beat_gap_ms=120, beat_tolerance_ms=20):
     from essentia.standard import MonoLoader, FrameGenerator, Windowing, Spectrum, SpectralPeaks, HPCP, RhythmExtractor2013
     import numpy as np
 
     NOTE_NAMES = np.array(["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"])
+    af_path = Path(af)
+    audio_base = af_path.name
 
     def _score_beats(beats, bpm, confidence, duration_sec):
         if len(beats) < 2 or bpm <= 0:
@@ -473,9 +475,9 @@ def notesanalysis(af, sr=48000, beat_strength_quantile=0.60, min_relative_beat_s
                 start = max(0, frame_index - beat_tolerance_frames)
                 end = min(num_frames, frame_index + beat_tolerance_frames + 1)
                 beat_map[start:end] = True
-
+        out_path = output_root / f"{audio_name}_{out_name}.npz"
         np.savez_compressed(
-            f"{audio_name}/{audio_name}_{out_name}.npz",
+            out_path,
             hpcp=frame_hpcps,
             note_names=NOTE_NAMES,
             note_strengths_per_frame=note_strengths_per_frame,
@@ -506,20 +508,20 @@ def notesanalysis(af, sr=48000, beat_strength_quantile=0.60, min_relative_beat_s
     emit_progress(78, "Analyzing instrumental notes/beats...")
     using_drum_stem = demucs_stems in ("both", "default")
     if using_drum_stem:
-        novocal_path = f"{af}/htdemucs/{af}/drums.mp3"
+        novocal_path = f"{af}/htdemucs/{audio_base}/drums.mp3"
         melodic_path = f"{af}/other.mp3"
         if not os.path.exists(melodic_path):
-            melodic_path = f"{af}/htdemucs/{af}/other.mp3"
+            melodic_path = f"{af}/htdemucs/{audio_base}/other.mp3"
     else:
-        novocal_path = f"{af}/htdemucs/{af}/no_vocals.mp3"
+        novocal_path = f"{af}/htdemucs/{audio_base}/no_vocals.mp3"
         # Keep old behavior for non-full-stem runs (e.g., vocals): one source for both rhythm and melodic.
         melodic_path = novocal_path
 
-    analyze_and_save(af, melodic_path, "novocs_analysis", rhythm_file_path=novocal_path, is_drums_only=using_drum_stem)
+    analyze_and_save(audio_base, melodic_path, "novocs_analysis", rhythm_file_path=novocal_path, is_drums_only=using_drum_stem)
 
     emit_progress(87, "Analyzing vocals notes/beats...")
     vocal_path = f"{af}/vocals.mp3"
-    analyze_and_save(af, vocal_path, "vocs_analysis")
+    analyze_and_save(audio_base, vocal_path, "vocs_analysis")
 
     emit_progress(96, "Analysis files saved")
 
@@ -558,7 +560,7 @@ def main():
         if detected_lang:
             print(f"LANG|{detected_lang}", flush=True)
         emit_progress(70, "Audio prep complete")
-        notesanalysis(audiobase)
+        notesanalysis(audiobase, output_root=output_root)
         emit_progress(100, "Done")
         return 0
     except Exception as exc:

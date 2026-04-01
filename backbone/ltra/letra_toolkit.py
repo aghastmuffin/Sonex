@@ -503,7 +503,6 @@ def align(
             audio, sr = flatten(audio_path, sr=16000, mono=True) #normalize frequencies for a more consistent alignment experience, especially on vocals. This is a lossy operation but can help with alignment quality. If you want to preserve original audio, set force=False and it will skip flattening if the file is not vocals.mp3
         except Exception as e:
             audio, sr = librosa.load(audio_path, sr=16000, mono=True)
-            raise
     else:
         audio, sr = librosa.load(audio_path, sr=16000, mono=True)
     print(f"Loaded audio: {len(audio)} samples at {sr}Hz")

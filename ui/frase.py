@@ -97,6 +97,28 @@ def default_output_root():
     return os.path.join(base, app_name, "outputs")
 
 
+def resolve_output_root(argv=None, output_root_arg=None):
+    if output_root_arg:
+        return output_root_arg
+
+    env_root = os.environ.get("SONEX_OUTPUT_ROOT")
+    if env_root:
+        return env_root
+
+    argv = list(argv) if argv is not None else list(sys.argv[1:])
+    for arg in argv:
+        if arg.startswith("--output-root="):
+            return arg.split("=", 1)[1]
+    for i, arg in enumerate(argv):
+        if arg == "--output-root" and i + 1 < len(argv):
+            return argv[i + 1]
+
+    return default_output_root()
+
+
+OUTPUT_ROOT = os.path.abspath(resolve_output_root())
+
+
 def _build_segment_list(json_data):
     out = []
     for broad_chunk in json_data:
@@ -265,7 +287,7 @@ def _discover_eligible_generated_dirs(search_root, max_results=300):
     return found
 
 
-def _find_analysis_file(folder_path):
+def _find_analysis_file(folder_path, output_root=None):
     if not folder_path:
         return None
 
@@ -276,17 +298,23 @@ def _find_analysis_file(folder_path):
         f"{base_name}_analysis.npz",
     ]
 
-    for name in preferred:
-        candidate = os.path.join(folder_path, name)
-        if os.path.exists(candidate):
-            return candidate
+    search_roots = []
+    if output_root:
+        search_roots.append(output_root)
+    search_roots.append(folder_path)
 
-    try:
-        for name in os.listdir(folder_path):
-            if name.endswith("_analysis.npz"):
-                return os.path.join(folder_path, name)
-    except OSError:
-        return None
+    for root in search_roots:
+        for name in preferred:
+            candidate = os.path.join(root, name)
+            if os.path.exists(candidate):
+                return candidate
+
+        try:
+            for name in os.listdir(root):
+                if name.startswith(base_name) and name.endswith("_analysis.npz"):
+                    return os.path.join(root, name)
+        except OSError:
+            continue
 
     return None
 
@@ -304,7 +332,7 @@ def _load_analysis_data(folder_path):
     analysis_note_runs = []
     note_bar_levels = np.zeros(12, dtype=np.float32)
 
-    analysis_path = _find_analysis_file(folder_path)
+    analysis_path = _find_analysis_file(folder_path, output_root=OUTPUT_ROOT)
     if not analysis_path:
         return
 
@@ -649,7 +677,7 @@ def choose_generated_folder():
     resolved_folder = None
 
     repo_root = os.path.dirname(os.path.dirname(__file__))
-    scan_roots = [default_output_root(), repo_root]
+    scan_roots = [OUTPUT_ROOT, repo_root]
 
     def _refresh_eligible_dirs():
         seen = set()
