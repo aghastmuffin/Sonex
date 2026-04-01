@@ -5,6 +5,8 @@ import json
 import pathlib
 import time
 import signal
+import threading
+from concurrent.futures import ThreadPoolExecutor, TimeoutError as FuturesTimeout
 from typing import Any, Dict, List, Tuple
 
 import argostranslate.package
@@ -25,14 +27,24 @@ def _alarm_handler(signum, frame):
 
 
 def run_with_alarm(seconds: int, fn, *args, **kwargs):
-    """Run fn with SIGALRM timeout (works on macOS/Linux main thread)."""
-    old = signal.signal(signal.SIGALRM, _alarm_handler)
-    try:
-        signal.alarm(max(1, int(seconds)))
-        return fn(*args, **kwargs)
-    finally:
-        signal.alarm(0)
-        signal.signal(signal.SIGALRM, old)
+    """Run fn with a hard timeout across platforms."""
+    timeout_s = max(1, int(seconds))
+
+    if hasattr(signal, "SIGALRM") and threading.current_thread() is threading.main_thread():
+        old = signal.signal(signal.SIGALRM, _alarm_handler)
+        try:
+            signal.alarm(timeout_s)
+            return fn(*args, **kwargs)
+        finally:
+            signal.alarm(0)
+            signal.signal(signal.SIGALRM, old)
+
+    with ThreadPoolExecutor(max_workers=1) as executor:
+        future = executor.submit(fn, *args, **kwargs)
+        try:
+            return future.result(timeout=timeout_s)
+        except FuturesTimeout as exc:
+            raise TimeoutError("Timed out") from exc
 
 
 # -----------------------------

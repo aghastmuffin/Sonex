@@ -1,0 +1,26 @@
+name: sonex
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.11
+  - pip
+  - ffmpeg
+  - montreal-forced-aligner
+  - numpy
+  - scipy
+  - scikit-learn
+  - librosa
+  - matplotlib
+  - tqdm
+  - pytorch
+  - pyqt6
+  - pygame
+  - essentia
+  - praatio
+  - pip:
+      - demucs
+      - faster-whisper
+      - whisperx
+      - argostranslate
+      - hnswlib

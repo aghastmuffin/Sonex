@@ -3,6 +3,9 @@ import sys
 import traceback
 import faulthandler
 import json
+from pathlib import Path
+
+from sympy import flatten
 
 faulthandler.enable()
 
@@ -13,6 +16,17 @@ language_dict = {
     'sv': 'swedish', 'no': 'norwegian', 'da': 'danish', 'fi': 'finnish', 'he': 'hebrew', 'el': 'greek',
     'th': 'thai', 'id': 'indonesian', 'uk': 'ukrainian', 'cs': 'czech', 'ro': 'romanian', 'hu': 'hungarian'
 }
+
+
+def default_output_root() -> Path:
+    app_name = "Sonex"
+    if sys.platform.startswith("darwin"):
+        base = Path.home() / "Library" / "Application Support"
+    elif sys.platform.startswith("win"):
+        base = Path(os.environ.get("APPDATA") or (Path.home() / "AppData" / "Roaming"))
+    else:
+        base = Path(os.environ.get("XDG_DATA_HOME") or (Path.home() / ".local" / "share"))
+    return base / app_name / "outputs"
 
 
 
@@ -73,6 +87,7 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
     whisper_best_of = int(settings.get("whisper_best_of", 3))
     whisper_task = str(settings.get("whisper_task", "transcribe")).strip().lower()
     use_gpu = bool(settings.get("gpu", False))
+    flattenaudio = bool(settings.get("flatten", False))
     wav2vec2_phone_fallback = bool(settings.get("wav2vec2_phone_fallback", False))
     wav2vec2_min_mfa_coverage = int(settings.get("wav2vec2_min_mfa_coverage", 85))
 
@@ -86,7 +101,6 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
     translation_mode = (translation_mode or "none").strip().lower()
     if translation_mode not in {"none", "argos", "whisper", "both"}:
         translation_mode = "none"
-
     emit_progress(10, "Separating stems...")
     emit_demucs_active(True)
     emit_demucs_progress(0, "Demucs separating stems...")
@@ -96,7 +110,7 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
     finally:
         emit_demucs_active(False)
 
-    audiobase = os.path.basename(file_path).removesuffix(".mp3")
+    audiobase = Path(file_path).stem
     os.makedirs(audiobase, exist_ok=True)
     
 
@@ -127,6 +141,7 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
         f"{audiobase}/vocals_whisper_segments.json",
         f"{audiobase}/lyrics.txt",
         language=lang_code,
+        flatten_audio=flattenaudio,
     )
 
     if detectlang and not lang_code:
@@ -236,7 +251,7 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
             print(f"INFO|Argos translation saved to {argos_out}", flush=True)
 
     emit_progress(68, "Text pipeline complete")
-    return audiobase, (detectlang or lang_code)
+    return str((Path.cwd() / audiobase).resolve()), (detectlang or lang_code)
 
 
 def notesanalysis(af, sr=48000, beat_strength_quantile=0.60, min_relative_beat_strength=1.05,
@@ -517,8 +532,13 @@ def main():
     file_path = sys.argv[1]
     lang_code = sys.argv[2] if len(sys.argv) > 2 and sys.argv[2] else None
     lang_code_to = sys.argv[5] if len(sys.argv) > 5 and sys.argv[5] else None
+    output_root_arg = sys.argv[6] if len(sys.argv) > 6 and sys.argv[6] else None
     translation_mode = sys.argv[3] if len(sys.argv) > 3 and sys.argv[3] else "none"
     raw_settings = sys.argv[4] if len(sys.argv) > 4 and sys.argv[4] else "{}"
+
+    output_root = Path(output_root_arg) if output_root_arg else default_output_root()
+    output_root.mkdir(parents=True, exist_ok=True)
+    os.chdir(output_root)
 
     try:
         settings = json.loads(raw_settings)

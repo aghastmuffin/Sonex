@@ -91,7 +91,7 @@ def separate(inp, outp=None, force: bool = False, demucs_progress_cb=None):
     out_dir_path.mkdir(parents=True, exist_ok=True)
 
     cmd = [
-        "python3", "-m", "demucs.separate",
+        sys.executable, "-m", "demucs.separate",
         "-o", str(out_dir_path),
         "-n", model
     ]
@@ -430,6 +430,31 @@ def translate_simple(source, target, segments):
         translated.append(argostranslate.translate.translate(segment, source, target))
     return translated
 
+def flatten(target_file: str, target_pitch_semitones: int = -12, band: tuple = (100, 4000), force: bool = False, sr=None, mono=True):
+    import librosa
+    from scipy.signal import butter, lfilter
+    import numpy as np
+    if target_file != "vocals.mp3" and not force:
+        print("Translation layer: (bad operation) Skipping flattening since target file is not vocals.mp3 (use force=True to override)")
+        raise ValueError("Translation layer: (bad operation) Skipping flattening since target file is not vocals.mp3 (use force=True to override)")
+    y, sr = librosa.load(target_file, sr=sr, mono=mono)
+    y_shifted = librosa.effects.pitch_shift(y, sr, n_steps=target_pitch_semitones)
+    
+
+    def bandpass_filter(data, sr, lowcut, highcut, order=6):
+        nyq = 0.5 * sr
+        low = lowcut / nyq
+        high = highcut / nyq
+        b, a = butter(order, [low, high], btype='band')
+        return lfilter(b, a, data)
+    
+    y_filtered = bandpass_filter(y_shifted, sr, band[0], band[1])
+
+    # === NORMALIZE AUDIO ===
+    y_filtered /= np.max(np.abs(y_filtered)) + 1e-6  # avoid clipping
+    return y_filtered, sr
+
+
 
 #def mfa_align():
     """
@@ -446,6 +471,7 @@ def align(
     language: str = detected or "en",
     reuse_existing: bool = True,
     return_char_alignments: bool = False,
+    flatten_audio: bool = True,
 ):
     """
     Align transcript segments from JSON to audio using WhisperX CTC alignment.
@@ -472,7 +498,14 @@ def align(
     # Load audio - proper preprocessing for whisperx
     # -------------------------
     import librosa
-    audio, sr = librosa.load(audio_path, sr=16000, mono=True)
+    if flatten_audio:
+        try:
+            audio, sr = flatten(audio_path, sr=16000, mono=True) #normalize frequencies for a more consistent alignment experience, especially on vocals. This is a lossy operation but can help with alignment quality. If you want to preserve original audio, set force=False and it will skip flattening if the file is not vocals.mp3
+        except Exception as e:
+            audio, sr = librosa.load(audio_path, sr=16000, mono=True)
+            raise
+    else:
+        audio, sr = librosa.load(audio_path, sr=16000, mono=True)
     print(f"Loaded audio: {len(audio)} samples at {sr}Hz")
 
     # -------------------------

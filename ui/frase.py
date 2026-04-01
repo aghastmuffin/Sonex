@@ -3,7 +3,6 @@ from pygame import mixer
 import json
 import sys
 import os
-import subprocess
 import numpy as np
 from difflib import SequenceMatcher
 
@@ -12,7 +11,7 @@ pygame.init()
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption(
-    "🗣️ SONEX SINGLELyricViewer_DBG LATIN-SPANISH Iniciado Sesión Como: Levi Brown ORC:0009-0007-5278-6761"
+    "🗣️ SONEX SingleViewer 0.3-b"
 )
 
 brand_dir = os.path.join(os.path.dirname(__file__),"assets")
@@ -85,6 +84,17 @@ word_i = 0
 # cache so we only recompute tokens when the segment changes
 _cached_seg_id = None
 _cached_tokens = None
+
+
+def default_output_root():
+    app_name = "Sonex"
+    if sys.platform.startswith("darwin"):
+        base = os.path.join(os.path.expanduser("~"), "Library", "Application Support")
+    elif sys.platform.startswith("win"):
+        base = os.environ.get("APPDATA") or os.path.join(os.path.expanduser("~"), "AppData", "Roaming")
+    else:
+        base = os.environ.get("XDG_DATA_HOME") or os.path.join(os.path.expanduser("~"), ".local", "share")
+    return os.path.join(base, app_name, "outputs")
 
 
 def _build_segment_list(json_data):
@@ -172,23 +182,17 @@ def _get_elapsed_ms():
 
 
 def _pick_folder(dialog_title):
-    script = (
-        f'set chosenFolder to choose folder with prompt "{dialog_title}"\n'
-        'POSIX path of chosenFolder'
-    )
     try:
-        result = subprocess.run(
-            ["osascript", "-e", script],
-            capture_output=True,
-            text=True,
-            check=False,
-        )
-    except OSError:
+        import tkinter as tk
+        from tkinter import filedialog
+        root = tk.Tk()
+        root.withdraw()
+        root.attributes("-topmost", True)
+        selected = filedialog.askdirectory(title=dialog_title, mustexist=True)
+        root.destroy()
+        return selected or ""
+    except Exception:
         return ""
-
-    if result.returncode != 0:
-        return ""
-    return result.stdout.strip()
 
 
 def _resolve_transcript_in_dir(path):
@@ -644,8 +648,23 @@ def choose_generated_folder():
     transcript_file = None
     resolved_folder = None
 
-    scan_root = os.path.dirname(os.path.dirname(__file__))
-    eligible_dirs = _discover_eligible_generated_dirs(scan_root)
+    repo_root = os.path.dirname(os.path.dirname(__file__))
+    scan_roots = [default_output_root(), repo_root]
+
+    def _refresh_eligible_dirs():
+        seen = set()
+        merged = []
+        for root in scan_roots:
+            for item in _discover_eligible_generated_dirs(root):
+                folder = item["folder"]
+                if folder in seen:
+                    continue
+                seen.add(folder)
+                merged.append(item)
+        merged.sort(key=lambda item: item["label"].lower())
+        return merged
+
+    eligible_dirs = _refresh_eligible_dirs()
 
     dropdown_open = False
     dropdown_selected = -1
@@ -696,7 +715,7 @@ def choose_generated_folder():
                         _apply_dropdown_selection(clicked)
                     dropdown_open = False
                 elif refresh_btn.collidepoint(event.pos):
-                    eligible_dirs = _discover_eligible_generated_dirs(scan_root)
+                    eligible_dirs = _refresh_eligible_dirs()
                     dropdown_open = False
                     dropdown_scroll = 0
                     if eligible_dirs:

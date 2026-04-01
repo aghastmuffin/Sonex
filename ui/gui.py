@@ -13,6 +13,7 @@ from PyQt6.QtWidgets import (
     QSpinBox,
     QCheckBox,
     QLabel,
+    QMessageBox,
 )
 from PyQt6.QtCore import QProcess, Qt
 from PyQt6.QtGui import QIcon, QPixmap
@@ -29,25 +30,31 @@ WHISPER_BESTOF = 3
 GPU = False
 
 
-def notify(title, message):
-    CMD = '''
-    on run argv
-    display notification (item 2 of argv) with title (item 1 of argv)
-    end run
-    '''
-    import platform
-    if platform.system() == "Darwin":
-        subprocess.call(['osascript', '-e', CMD, title, message])
+def default_output_root():
+    app_name = "Sonex"
+    if sys.platform.startswith("darwin"):
+        base = os.path.join(os.path.expanduser("~"), "Library", "Application Support")
+    elif sys.platform.startswith("win"):
+        base = os.environ.get("APPDATA") or os.path.join(os.path.expanduser("~"), "AppData", "Roaming")
     else:
-        print("Notifications are currently not supported for this architecture. (Darwin-only)")
+        base = os.environ.get("XDG_DATA_HOME") or os.path.join(os.path.expanduser("~"), ".local", "share")
+    return os.path.join(base, app_name, "outputs")
 
-def dialogue(title, message):
-    CMD = '''
-    on run argv
-    display dialogue (item 2 of argv) with title (item 1 of argv)
-    end run
-    '''
-    subprocess.call(['osascript', '-e', CMD, title, message])
+
+def notify(title, message, parent=None):
+    app = QApplication.instance()
+    if app is None:
+        print(f"{title}: {message}")
+        return
+    QMessageBox.information(parent, title, message)
+
+
+def dialogue(title, message, parent=None):
+    app = QApplication.instance()
+    if app is None:
+        print(f"{title}: {message}")
+        return
+    QMessageBox.warning(parent, title, message)
 
 
 class Notification(QDialog):
@@ -115,6 +122,9 @@ class AdvancedSettingsDialog(QDialog):
 
         self.gpu_input = QCheckBox("Enable GPU")
         self.gpu_input.setChecked(bool(settings["gpu"]))
+
+        self.flatten_audio = QCheckBox("Flatten audio (pitch shift and bandpass, can help with alignment quality but is a lossy operation)")
+        self.flatten_audio.setChecked(bool(settings.get("flatten_audio", False)))
         try: #Wisegpu
             subprocess.check_output(['nvidia-smi'], timeout=1)
             self.gpu_input.setEnabled(False)
@@ -142,6 +152,7 @@ class AdvancedSettingsDialog(QDialog):
             "whisper_patience": int(self.whisper_pat_input.value()),
             "whisper_best_of": int(self.whisper_bestof_input.value()),
             "gpu": bool(self.gpu_input.isChecked()),
+            "flatten": bool(self.flatten_audio.isChecked()),
         }
 
 def resolve_app_icon_path():
@@ -317,6 +328,7 @@ class Window(QMainWindow):
             "whisper_patience": WHISPER_PAT,
             "whisper_best_of": WHISPER_BESTOF,
             "gpu": GPU,
+            "flatten": True,
         }
 
         self.setWindowTitle("SONEX - Analyzer")
@@ -451,14 +463,25 @@ class Window(QMainWindow):
 
         worker_script = os.path.join(os.path.dirname(__file__), "_worker.py")
         project_root = os.path.dirname(os.path.dirname(__file__))
+        output_root = default_output_root()
+        os.makedirs(output_root, exist_ok=True)
         lang_arg = self.lang_code if self.lang_code else ""
+        target_lang_arg = self.lang_to.currentData() or ""
         translation_mode_arg = self.translation_mode if self.translation_mode else "none"
         settings_arg = json.dumps(self.advanced_settings)
 
         self.pipeline_process = QProcess(self)
         self.pipeline_process.setWorkingDirectory(project_root)
         self.pipeline_process.setProgram(sys.executable)
-        self.pipeline_process.setArguments([worker_script, self.file_path, lang_arg, translation_mode_arg, settings_arg, self.lang_to.currentData() or None])
+        self.pipeline_process.setArguments([
+            worker_script,
+            self.file_path,
+            lang_arg,
+            translation_mode_arg,
+            settings_arg,
+            target_lang_arg,
+            output_root,
+        ])
         self.pipeline_process.setProcessChannelMode(QProcess.ProcessChannelMode.MergedChannels)
         self.pipeline_process.readyReadStandardOutput.connect(self.on_pipeline_stdout)
         self.pipeline_process.finished.connect(self.on_pipeline_finished)
@@ -554,7 +577,11 @@ class Window(QMainWindow):
             self.splash_window = None
         
         self.button.setEnabled(True)
-        notify("Processing Complete", f"Your file has been processed. Output directory: {self.audiobase}" if self.audiobase else "Your file has been processed.")
+        notify(
+            "Processing Complete",
+            f"Your file has been processed. Output directory: {self.audiobase}" if self.audiobase else "Your file has been processed.",
+            parent=self,
+        )
         if self.pipeline_process is not None:
             self.pipeline_process.deleteLater()
             self.pipeline_process = None

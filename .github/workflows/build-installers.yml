@@ -1,0 +1,47 @@
+name: Build Installers
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            platform: linux-64
+          - os: macos-13
+            platform: osx-64
+          - os: macos-14
+            platform: osx-arm64
+          - os: windows-latest
+            platform: win-64
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Miniconda
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          auto-update-conda: true
+          channels: conda-forge,pytorch
+          channel-priority: strict
+          activate-environment: base
+
+      - name: Install packaging tools
+        run: conda install -y -c conda-forge constructor conda-lock
+
+      - name: Build installer
+        run: constructor installer/constructor --platform ${{ matrix.platform }} --output-dir dist
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sonex-${{ matrix.platform }}
+          path: dist/*

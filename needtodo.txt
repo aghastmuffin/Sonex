@@ -1,0 +1,67 @@
+Pipeline Analysis
+
+GUI orchestration is in gui.py:452, gui.py:459, and gui.py:461.
+The GUI starts _worker.py:512 in a child process using the current Python interpreter, then parses structured stdout tags (PROGRESS, AUDIOBASE, DEMUCS, WHISPER, LANG) in gui.py:474.
+Worker stages are explicit and sequential:
+Stem separation starts at _worker.py:90.
+Whisper transcription starts at _worker.py:107.
+MFA alignment starts at _worker.py:136.
+Translation branches run around _worker.py:206 and _worker.py:228.
+Text pipeline completes at _worker.py:238.
+Audio note/beat analysis runs from _worker.py:242, stage markers at _worker.py:491, _worker.py:505, _worker.py:509.
+Final completion and return happen at _worker.py:542.
+Frase is a separate viewer app, not directly spawned by the GUI pipeline. It discovers generated folders and transcript files via filesystem scan in frase.py:642, frase.py:647, frase.py:648, then loads transcript/audio/analysis in frase.py:1022, frase.py:1029, frase.py:1031.
+Packaging-Critical Risks
+
+Hardcoded interpreter for Demucs uses python3 in letra_toolkit.py:94, which can break in bundled runtimes.
+External binaries must exist on PATH:
+ffmpeg/ffprobe in letra_toolkit.py:133 and letra_toolkit.py:157.
+MFA via conda run -n mfa in _mfa_aligner.py:526 and _mfa_aligner.py:188.
+macOS-specific UI behavior:
+osascript calls in gui.py:40 and frase.py:181.
+Argos timeout uses SIGALRM in argos_translate.py:29, argos_translate.py:31, argos_translate.py:35, which is not Windows-safe.
+Output location is relative to working directory:
+GUI sets worker cwd to project root in gui.py:459.
+Worker creates output folder by basename in _worker.py:99 and _worker.py:100.
+This is likely to fail once installed under read-only app locations.
+Installer tooling is currently mac-only and incomplete in setup_mac.py:9, setup_mac.py:17, setup_mac.py:22.
+Dependencies are heavy and compiled (requirements.in:1, requirements.in:2, requirements.in:3, requirements.in:15, requirements.in:18), so pure pip one-click installers will be fragile across OSes.
+Best Packaging Strategy
+
+Use Conda-first distribution with platform-native installers.
+Build one environment spec, generate per-OS lockfiles, and package each OS artifact in CI.
+Recommended stack:
+conda-lock for reproducible envs on macOS/Windows/Linux.
+micromamba bootstrap in installer runtime.
+constructor (or equivalent native wrapper) to produce pkg/exe/sh installers.
+Keep one source, produce three installers. That is the practical meaning of system-agnostic for this app class.
+Why this is best for your project:
+
+You already require MFA through Conda.
+ffmpeg and many compiled libs are easier and more reliable through Conda-forge than mixed pip wheels.
+You avoid brittle path assumptions from user Python installs.
+You can still add a lightweight app launcher and desktop shortcuts.
+Required Refactors Before Packaging
+
+Replace python3 Demucs invocation with interpreter from current runtime in letra_toolkit.py:94.
+Remove direct osascript dependencies and use cross-platform dialogs/notifications for gui.py:40 and frase.py:181.
+Replace SIGALRM timeout with cross-platform timeout approach in argos_translate.py:29.
+Move outputs to user-writable app data directory instead of cwd behavior from gui.py:459 and _worker.py:100.
+Add explicit runtime checks and first-run setup for ffmpeg, MFA models, Argos models.
+Define formal entrypoints (GUI launcher + viewer launcher) and stop relying on ad-hoc launcher code in Sonex.py:5 and Sonex.py:7.
+Distribution Model I Recommend
+
+Sonex Installer:
+Installs pinned runtime + dependencies.
+Creates desktop shortcut for Analyzer (GUI).
+Optional menu action to open Viewer (Frase) on latest output.
+First run wizard:
+Verifies ffmpeg, MFA models, and Argos package availability.
+Downloads missing language/models with progress.
+Release pipeline:
+GitHub Actions matrix builds macOS, Windows, Linux installers from same lockfile source.
+Publish all artifacts under one release page with OS auto-detect download button.
+I did not execute the full audio pipeline end-to-end here; this is a static code and dependency analysis of your current implementation.
+
+If you want, I can implement the first packaging-hardening pass now: cross-platform path/output refactor plus removal of hardcoded python3 and osascript calls.
+I can also scaffold a full Conda packaging setup (environment file, lock generation, and CI build workflow) in this repo.

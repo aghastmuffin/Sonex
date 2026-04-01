@@ -1,0 +1,10 @@
+name: sonex
+version: 0.1.0
+company: sonex
+channels:
+  - conda-forge
+  - pytorch
+environment_file: ../environment.yml
+initialize_by_default: false
+register_python_default: false
+write_condarc: true
