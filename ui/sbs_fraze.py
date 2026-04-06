@@ -13,7 +13,7 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption(
     "🗣️ SONEX MULTILyricViewer_DBG LATIN-SPANISH Iniciado Sesión Como: Levi Brown ORC:0009-0007-5278-6761"
 )
-
+print("DEPRECATION WARNING: sbs_fraze was introduced in SONEX pre-0.2-Berkeley, and is staged to be phased out of new features in pre-0.3-Berkeley, it will still be a vestigial part of the GUI until 1-PROD-Berkeley and is set for removal in 2-PROD-Davis. If you see this warning without doing anything out of the ordinary please report it on github.")
 brand_dir = os.path.join(os.path.dirname(__file__), "gui", "assets", "brand")
 icon_candidates = [
     "resolution-logo.png",
