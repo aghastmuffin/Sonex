@@ -1,10 +1,9 @@
-import json, re, subprocess
-import unicodedata
-from pathlib import Path
-from praatio import tgio
-from typing import Optional
-
-import json, re, subprocess, shutil, tempfile, copy
+import argparse
+import copy
+import json
+import re
+import shutil
+import subprocess
 import unicodedata
 from pathlib import Path
 from praatio import tgio
@@ -85,6 +84,297 @@ DICTIONARY_MODELS = {
     "vietnamese": "vietnamese_mfa",
     "thai": "thai_mfa",
 }
+
+
+PHONEMIZER_LANGUAGE_MAP = {
+    "english_us": "en-us",
+    "english_uk": "en-gb",
+    "english_india": "en-in",
+    "english_nigeria": "en-us",
+    "english": "en-us",
+    "spanish_latin_america": "es",
+    "spanish_spain": "es",
+    "spanish": "es",
+    "french": "fr-fr",
+    "german": "de",
+    "portuguese": "pt",
+    "italian": "it",
+    "dutch": "nl",
+    "catalan": "ca",
+    "mandarin": "cmn",
+    "japanese": "ja",
+    "korean": "ko",
+    "russian": "ru",
+    "ukrainian": "uk",
+    "polish": "pl",
+    "czech": "cs",
+    "slovak": "sk",
+    "croatian": "hr",
+    "serbocroatian": "hr",
+    "bulgarian": "bg",
+    "belarusian": "be",
+    "turkish": "tr",
+    "vietnamese": "vi",
+    "thai": "th",
+}
+
+
+def _looks_like_word_tier(name: str) -> bool:
+    n = name.strip().lower()
+    return n == "word" or n == "words" or n.endswith(" - words") or "words" in n or "word" in n
+
+
+def _looks_like_phone_tier(name: str) -> bool:
+    n = name.strip().lower()
+    return n == "phone" or n == "phones" or n.endswith(" - phones") or "phones" in n or "phone" in n
+
+
+def _read_phone_intervals_from_textgrid(textgrid_path, include_silence: bool = False):
+    tg = tgio.openTextgrid(str(textgrid_path), False)
+    phone_tier_name = next((n for n in tg.tierNameList if _looks_like_phone_tier(n)), None)
+    if not phone_tier_name:
+        raise RuntimeError(f"Could not find a phone tier in {textgrid_path}. Tiers: {tg.tierNameList}")
+
+    phone_tier = tg.tierDict[phone_tier_name]
+    phone_intervals = [(float(s), float(e), str(lab).strip()) for (s, e, lab) in phone_tier.entryList]
+    if include_silence:
+        return phone_intervals
+
+    return [
+        (s, e, lab)
+        for (s, e, lab) in phone_intervals
+        if lab and lab.lower() not in {"sp", "sil"}
+    ]
+
+
+def export_phone_timestamps_from_textgrid(
+    textgrid_path,
+    out_json: Optional[str] = None,
+    include_silence: bool = False,
+):
+    """
+    Export a flat phone-level timestamp JSON from an MFA TextGrid.
+
+    Output schema:
+    [
+      {"phone": "AH0", "start": 0.31, "end": 0.39},
+      ...
+    ]
+    """
+    tg_path = Path(textgrid_path)
+    if not tg_path.exists():
+        raise RuntimeError(f"Missing TextGrid: {tg_path}")
+
+    intervals = _read_phone_intervals_from_textgrid(tg_path, include_silence=include_silence)
+    payload = [{"phone": lab, "start": s, "end": e} for s, e, lab in intervals]
+
+    out_path = Path(out_json) if out_json else tg_path.with_name(f"{tg_path.stem}_phones.json")
+    out_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    print("Wrote", out_path)
+    return payload
+
+
+def _infer_phonemizer_language(*candidates: Optional[str]) -> str:
+    lowered = [str(c or "").lower() for c in candidates]
+    for key in sorted(PHONEMIZER_LANGUAGE_MAP.keys(), key=len, reverse=True):
+        if any(key in c for c in lowered):
+            return PHONEMIZER_LANGUAGE_MAP[key]
+    return "en-us"
+
+
+def _normalize_word_for_phonemizer(word_text: str) -> str:
+    txt = str(word_text or "").strip().replace("’", "'")
+    txt = re.sub(r"[^\w']+", "", txt, flags=re.UNICODE)
+    txt = txt.replace("_", "")
+    if txt.isdigit():
+        return ""
+    return txt.lower()
+
+
+def _fallback_phone_labels(word_text: str):
+    txt = _normalize_word_for_phonemizer(word_text)
+    if not txt:
+        return ["spn"]
+    return [ch for ch in txt if ch.strip()]
+
+
+def _distribute_labels_over_word(labels, start: float, end: float):
+    labels = [str(lab).strip() for lab in labels if str(lab).strip()]
+    if not labels:
+        labels = ["spn"]
+
+    s = float(start)
+    e = float(end)
+    if e <= s:
+        e = s + 0.001
+
+    dur = e - s
+    n = len(labels)
+    out = []
+    for i, lab in enumerate(labels):
+        ps = s + (dur * i / n)
+        pe = s + (dur * (i + 1) / n)
+        out.append({
+            "phone": lab,
+            "start": ps,
+            "end": pe,
+        })
+    return out
+
+
+def _split_text_into_phone_segments(word_text: str, n_segments: int):
+    text = str(word_text or "").strip()
+    if n_segments <= 0:
+        return []
+    if not text:
+        return [{"text": "", "char_start": 0, "char_end": 0} for _ in range(n_segments)]
+
+    chars = list(text)
+    total = len(chars)
+    if total == 0:
+        return [{"text": "", "char_start": 0, "char_end": 0} for _ in range(n_segments)]
+
+    if n_segments <= total:
+        base = total // n_segments
+        rem = total % n_segments
+        lengths = [base + (1 if i < rem else 0) for i in range(n_segments)]
+    else:
+        lengths = [1] * total + [0] * (n_segments - total)
+
+    out = []
+    cursor = 0
+    for length in lengths:
+        if length > 0:
+            start = cursor
+            end = cursor + length
+            chunk = "".join(chars[start:end])
+            cursor = end
+        else:
+            start = total - 1
+            end = total
+            chunk = chars[-1]
+        out.append({
+            "text": chunk,
+            "char_start": start,
+            "char_end": end,
+        })
+
+    return out
+
+
+def _build_phonemizer_word_runner(language: str, enabled: bool = True):
+    if not enabled:
+        return None
+
+    try:
+        from phonemizer import phonemize
+        from phonemizer.separator import Separator
+    except Exception:
+        print("Info: phonemizer is not installed; falling back to character-based phone splits.")
+        return None
+
+    separator = Separator(phone=" ", syllable="", word=" | ")
+    state = {"enabled": True}
+    cache = {}
+
+    def run_for_word(word_text: str):
+        token = _normalize_word_for_phonemizer(word_text)
+        if not token:
+            return []
+        if token in cache:
+            return list(cache[token])
+        if not state["enabled"]:
+            return []
+
+        try:
+            raw = phonemize(
+                token,
+                language=language,
+                backend="espeak",
+                separator=separator,
+                strip=True,
+                preserve_punctuation=False,
+                njobs=1,
+            )
+        except Exception as exc:
+            state["enabled"] = False
+            print(f"Info: phonemizer disabled after backend error: {exc}")
+            cache[token] = []
+            return []
+
+        if isinstance(raw, list):
+            raw = raw[0] if raw else ""
+
+        phones = [p for p in re.split(r"\s+", str(raw).replace("|", " ").strip()) if p]
+        cache[token] = phones
+        return list(phones)
+
+    return run_for_word
+
+
+def _enrich_words_with_phone_segments(
+    segments,
+    phonemizer_language: Optional[str] = None,
+    use_phonemizer: bool = True,
+):
+    runner = _build_phonemizer_word_runner(
+        language=phonemizer_language or "en-us",
+        enabled=bool(use_phonemizer),
+    )
+
+    stats = {
+        "words_total": 0,
+        "words_filled_fallback": 0,
+        "words_segmented": 0,
+        "phonemizer_enabled": bool(runner),
+        "phonemizer_language": phonemizer_language or "en-us",
+    }
+
+    for seg in segments:
+        for w in seg.get("words", []):
+            stats["words_total"] += 1
+
+            ws = float(w.get("start", 0.0))
+            we = float(w.get("end", ws))
+            word_text = str(w.get("word", "")).strip()
+
+            clean_existing = []
+            for p in w.get("phones", []) or []:
+                if "start" not in p or "end" not in p:
+                    continue
+                ps = float(p["start"])
+                pe = float(p["end"])
+                if pe <= ps:
+                    continue
+                label = str(p.get("phone", "")).strip() or "spn"
+                clean_existing.append({"phone": label, "start": ps, "end": pe})
+
+            if not clean_existing:
+                labels = runner(word_text) if runner else []
+                if not labels:
+                    labels = _fallback_phone_labels(word_text)
+                clean_existing = _distribute_labels_over_word(labels, ws, we)
+                stats["words_filled_fallback"] += 1
+
+            w["phones"] = clean_existing
+
+            text_slices = _split_text_into_phone_segments(word_text, len(clean_existing))
+            phone_segments = []
+            for p, t in zip(clean_existing, text_slices):
+                phone_segments.append({
+                    "text": t["text"],
+                    "char_start": int(t["char_start"]),
+                    "char_end": int(t["char_end"]),
+                    "phone": str(p.get("phone", "")),
+                    "start": float(p["start"]),
+                    "end": float(p["end"]),
+                })
+
+            w["phone_segments"] = phone_segments
+            stats["words_segmented"] += 1
+
+    return stats
+
 #HERE = Path(__file__).resolve().parent
 def generate_aligned(head_folder, vocals="vocals.mp3", transcript="vocals_whisper_segments.json", acoustic="english_us_arpa", dictionary="english_us_arpa", allow_fuzzy=False, fuzzy_max_lookahead=6):
     #DEPRECATED
@@ -279,6 +569,9 @@ def generate_aligned_v2(
     drop_weird_tokens=True,        # filter junk from whisper words
     max_chars_per_chunk=220,       # if transcript is huge, chunking helps MFA stability
     chunk_silence_gap_s=0.35,      # small silence between chunks
+    export_flat_phone_json=True,
+    phonemizer_language: Optional[str] = None,
+    use_phonemizer=True,
 ):
     """
     More robust MFA aligner:
@@ -291,6 +584,7 @@ def generate_aligned_v2(
     Output files:
     - mfa_vocals_whisper_segments.json (word-level timings)
     - mfa_vocals_phone_segments.json (word + nested phone timings)
+    - each word gets `phone_segments` with text slices mapped to phone timestamps
     """
 
     HERE = Path(head_folder)
@@ -302,6 +596,7 @@ def generate_aligned_v2(
     WAV = CORPUS / "vocals.wav"
     OUT_JSON = HERE / "mfa_vocals_whisper_segments.json"
     OUT_PHONE_JSON = HERE / "mfa_vocals_phone_segments.json"
+    OUT_FLAT_PHONE_JSON = HERE / "mfa_vocals_phone_timestamps.json"
 
     def run(cmd, capture=False):
         return subprocess.run(cmd, check=True, text=True, capture_output=capture)
@@ -602,19 +897,11 @@ def generate_aligned_v2(
         tg = tgio.openTextgrid(str(tg_path), False)
         tier_names = tg.tierNameList
 
-        def looks_like_word_tier(name: str) -> bool:
-            n = name.strip().lower()
-            return n == "word" or n == "words" or n.endswith(" - words") or "words" in n or "word" in n
-
-        def looks_like_phone_tier(name: str) -> bool:
-            n = name.strip().lower()
-            return n == "phone" or n == "phones" or n.endswith(" - phones") or "phones" in n or "phone" in n
-
-        word_tier_name = next((n for n in tier_names if looks_like_word_tier(n)), None)
+        word_tier_name = next((n for n in tier_names if _looks_like_word_tier(n)), None)
         if not word_tier_name:
             raise RuntimeError(f"Could not find a word tier in {tg_path.name}. Tiers: {tier_names}")
 
-        phone_tier_name = next((n for n in tier_names if looks_like_phone_tier(n)), None)
+        phone_tier_name = next((n for n in tier_names if _looks_like_phone_tier(n)), None)
         if not phone_tier_name:
             raise RuntimeError(f"Could not find a phone tier in {tg_path.name}. Tiers: {tier_names}")
 
@@ -722,9 +1009,35 @@ def generate_aligned_v2(
         seg["start"] = ws[0].get("start", seg.get("start"))
         seg["end"] = ws[-1].get("end", seg.get("end"))
 
+    effective_phonemizer_language = phonemizer_language or _infer_phonemizer_language(dictionary, acoustic)
+    enrich_stats = _enrich_words_with_phone_segments(
+        phone_segments,
+        phonemizer_language=effective_phonemizer_language,
+        use_phonemizer=bool(use_phonemizer),
+    )
+
     OUT_PHONE_JSON.write_text(json.dumps(phone_segments, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    if export_flat_phone_json:
+        flat_phone_payload = [
+            {"phone": lab, "start": s, "end": e}
+            for (s, e, lab) in all_phone_intervals
+        ]
+        OUT_FLAT_PHONE_JSON.write_text(
+            json.dumps(flat_phone_payload, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+
     print("Wrote", OUT_JSON)
     print("Wrote", OUT_PHONE_JSON)
+    print(
+        "Phone enrichment:",
+        f"fallback_words={enrich_stats['words_filled_fallback']}/{enrich_stats['words_total']}",
+        f"phonemizer={enrich_stats['phonemizer_enabled']}",
+        f"lang={enrich_stats['phonemizer_language']}",
+    )
+    if export_flat_phone_json:
+        print("Wrote", OUT_FLAT_PHONE_JSON)
 
 
 def phone_word_coverage(phone_json_path) -> float:
@@ -751,6 +1064,8 @@ def fill_missing_phones_from_char_alignments(
     phone_json="mfa_vocals_phone_segments.json",
     base_json="mfa_vocals_whisper_segments.json",
     out_json="mfa_vocals_phone_segments.json",
+    phonemizer_language: Optional[str] = None,
+    use_phonemizer=True,
 ):
     """
     Fill missing `word.phones` entries using WhisperX character alignments.
@@ -822,13 +1137,17 @@ def fill_missing_phones_from_char_alignments(
                 })
 
             if not overlap:
-                word_txt = str(w.get("word", "")).strip().lower()
-                if word_txt and we > ws:
-                    overlap = [{"phone": word_txt, "start": ws, "end": we}]
+                overlap = []
 
             if overlap:
                 w["phones"] = overlap
                 filled_words += 1
+
+    enrich_stats = _enrich_words_with_phone_segments(
+        target,
+        phonemizer_language=phonemizer_language or "en-us",
+        use_phonemizer=bool(use_phonemizer),
+    )
 
     out_path.write_text(json.dumps(target, ensure_ascii=False, indent=2), encoding="utf-8")
     return {
@@ -836,4 +1155,127 @@ def fill_missing_phones_from_char_alignments(
         "missing_words_before": missing_words,
         "coverage_after": phone_word_coverage(out_path),
         "output": str(out_path),
+        "fallback_words": enrich_stats["words_filled_fallback"],
+        "phonemizer_enabled": enrich_stats["phonemizer_enabled"],
+        "phonemizer_language": enrich_stats["phonemizer_language"],
     }
+
+
+def enrich_phone_json_with_text_segments(
+    phone_json_path,
+    out_json: Optional[str] = None,
+    phonemizer_language: Optional[str] = None,
+    use_phonemizer=True,
+):
+    src = Path(phone_json_path)
+    if not src.exists():
+        raise RuntimeError(f"Missing phone JSON: {src}")
+
+    data = json.loads(src.read_text(encoding="utf-8"))
+    if not isinstance(data, list):
+        raise RuntimeError("Expected top-level list of segments in phone JSON")
+
+    stats = _enrich_words_with_phone_segments(
+        data,
+        phonemizer_language=phonemizer_language or "en-us",
+        use_phonemizer=bool(use_phonemizer),
+    )
+
+    out_path = Path(out_json) if out_json else src
+    out_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    print("Wrote", out_path)
+    print(
+        "Phone enrichment:",
+        f"fallback_words={stats['words_filled_fallback']}/{stats['words_total']}",
+        f"phonemizer={stats['phonemizer_enabled']}",
+        f"lang={stats['phonemizer_language']}",
+    )
+    return stats
+
+
+def _build_cli_parser():
+    parser = argparse.ArgumentParser(
+        description="Run MFA alignment and export phone-level timestamps.",
+    )
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    align_cmd = sub.add_parser(
+        "align",
+        help="Run MFA alignment and emit word + phone timestamp JSON files.",
+    )
+    align_cmd.add_argument("head_folder", help="Folder with vocals.mp3 and vocals_whisper_segments.json")
+    align_cmd.add_argument("--vocals", default="vocals.mp3")
+    align_cmd.add_argument("--transcript", default="vocals_whisper_segments.json")
+    align_cmd.add_argument("--acoustic", default="english_us_arpa")
+    align_cmd.add_argument("--dictionary", default="english_us_arpa")
+    align_cmd.add_argument("--allow-fuzzy", action="store_true")
+    align_cmd.add_argument("--fuzzy-max-lookahead", type=int, default=8)
+    align_cmd.add_argument("--max-chars-per-chunk", type=int, default=220)
+    align_cmd.add_argument("--num-jobs", type=int, default=1)
+    align_cmd.add_argument("--no-flat-phone-json", action="store_true")
+    align_cmd.add_argument("--phonemizer-lang", default=None)
+    align_cmd.add_argument("--no-phonemizer", action="store_true")
+
+    export_cmd = sub.add_parser(
+        "export-phones",
+        help="Export flat phone timestamps from an existing MFA TextGrid.",
+    )
+    export_cmd.add_argument("textgrid", help="Path to MFA TextGrid file")
+    export_cmd.add_argument("--out", default=None, help="Output JSON path (defaults next to TextGrid)")
+    export_cmd.add_argument("--include-silence", action="store_true")
+
+    segment_cmd = sub.add_parser(
+        "segment-phones",
+        help="Ensure every word has phones and add per-word phone_segments in an existing JSON.",
+    )
+    segment_cmd.add_argument("phone_json", help="Path to mfa_vocals_phone_segments.json (or compatible file)")
+    segment_cmd.add_argument("--out", default=None, help="Output JSON path (default: overwrite input)")
+    segment_cmd.add_argument("--phonemizer-lang", default=None)
+    segment_cmd.add_argument("--no-phonemizer", action="store_true")
+
+    return parser
+
+
+def _main():
+    parser = _build_cli_parser()
+    args = parser.parse_args()
+
+    if args.command == "align":
+        generate_aligned_v2(
+            args.head_folder,
+            vocals=args.vocals,
+            transcript=args.transcript,
+            acoustic=args.acoustic,
+            dictionary=args.dictionary,
+            allow_fuzzy=bool(args.allow_fuzzy),
+            fuzzy_max_lookahead=int(args.fuzzy_max_lookahead),
+            max_chars_per_chunk=int(args.max_chars_per_chunk),
+            num_jobs=int(args.num_jobs),
+            export_flat_phone_json=not bool(args.no_flat_phone_json),
+            phonemizer_language=args.phonemizer_lang,
+            use_phonemizer=not bool(args.no_phonemizer),
+        )
+        return
+
+    if args.command == "export-phones":
+        export_phone_timestamps_from_textgrid(
+            args.textgrid,
+            out_json=args.out,
+            include_silence=bool(args.include_silence),
+        )
+        return
+
+    if args.command == "segment-phones":
+        enrich_phone_json_with_text_segments(
+            args.phone_json,
+            out_json=args.out,
+            phonemizer_language=args.phonemizer_lang,
+            use_phonemizer=not bool(args.no_phonemizer),
+        )
+        return
+
+    parser.error(f"Unknown command: {args.command}")
+
+
+if __name__ == "__main__":
+    _main()

@@ -158,6 +158,7 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
                 dictionary=f"{language_dict[mfa_lang]}",
                 allow_fuzzy=True,
                 fuzzy_max_lookahead=8,
+                phonemizer_language=mfa_lang,
             )
 
             if wav2vec2_phone_fallback:
@@ -183,9 +184,10 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
                             phone_json="mfa_vocals_phone_segments.json",
                             base_json="mfa_vocals_whisper_segments.json",
                             out_json="mfa_vocals_phone_segments.json",
+                            phonemizer_language=mfa_lang,
                         )
                         print(
-                            f"wav2vec2 fallback filled {stats['filled_words']} words; coverage now {stats['coverage_after']:.2f}%",
+                            f"wav2vec2 fallback filled {stats['filled_words']} words; fallback words {stats['fallback_words']}; coverage now {stats['coverage_after']:.2f}%",
                             flush=True,
                         )
                 except Exception as fallback_exc:
