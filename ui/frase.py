@@ -49,10 +49,18 @@ pitch_classes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"
 NOTE_THRESHOLD = 0.3
 BEAT_VISUAL_MS = 100
 TRANSCRIPT_FILE_CANDIDATES = [
-    "vocals_whisper_segments.json",
+    "playback_segments.json",
     "mfa_vocals_phone_segments.json",
+    "vocals_whisper_segments.json",
     "vocals_whisper_segments_aligned.json",
     "mfa_vocals_whisper_segments.json",
+]
+PHONE_LEVEL_TRANSCRIPTS = {"mfa_vocals_phone_segments.json"}
+TRANSLATED_TRANSCRIPT_FILE_CANDIDATES = [
+    "argos_translated.json",
+    "translated.json",
+    "vocals_whisper_segments_translated.json",
+    "whisper_translated.json",
 ]
 DISCOVERY_SKIP_DIR_NAMES = {
     ".git",
@@ -77,13 +85,18 @@ note_bar_levels = np.zeros(12, dtype=np.float32)
 
 # --- NEW: store broad segments instead of only flat words ---
 segments = []     # original segments: [{start,end,text,words:[{start,end,word}]}]
+segments1 = []    # secondary transcript (translated/system language)
 
 seg_i = 0
 word_i = 0
+seg_i1 = 0
+word_i1 = 0
 
 # cache so we only recompute tokens when the segment changes
 _cached_seg_id = None
 _cached_tokens = None
+_cached_seg_id_1 = None
+_cached_tokens_1 = None
 
 
 def default_output_root():
@@ -149,6 +162,18 @@ def _build_segment_list(json_data):
                             for p in w.get("phones", [])
                             if "start" in p and "end" in p
                         ],
+                        "phone_segments": [
+                            {
+                                "text": str(ps.get("text", "")),
+                                "char_start": int(ps.get("char_start", 0)),
+                                "char_end": int(ps.get("char_end", 0)),
+                                "phone": str(ps.get("phone", "")),
+                                "start": float(ps["start"]),
+                                "end": float(ps["end"]),
+                            }
+                            for ps in w.get("phone_segments", [])
+                            if "start" in ps and "end" in ps
+                        ],
                     }
                     for w in words
                 ],
@@ -157,10 +182,76 @@ def _build_segment_list(json_data):
     return out
 
 
+def _build_source_segment_list(json_data):
+    """Build source-language segments from embedded source fields when present."""
+    out = []
+    for broad_chunk in json_data:
+        words = broad_chunk.get("source_words") or broad_chunk.get("words", [])
+        if not words:
+            continue
+
+        seg_start = broad_chunk.get("start", words[0].get("start", 0.0))
+        seg_end = broad_chunk.get("end", words[-1].get("end", seg_start))
+
+        out.append(
+            {
+                "start": float(seg_start),
+                "end": float(seg_end),
+                "text": broad_chunk.get("source_text", broad_chunk.get("text", "")),
+                "words": [
+                    {
+                        "start": float(w["start"]),
+                        "end": float(w["end"]),
+                        "word": str(w.get("word", "")) + " ",
+                        "phones": [
+                            {
+                                "phone": str(p.get("phone", "")),
+                                "start": float(p["start"]),
+                                "end": float(p["end"]),
+                            }
+                            for p in w.get("phones", [])
+                            if "start" in p and "end" in p
+                        ],
+                        "phone_segments": [
+                            {
+                                "text": str(ps.get("text", "")),
+                                "char_start": int(ps.get("char_start", 0)),
+                                "char_end": int(ps.get("char_end", 0)),
+                                "phone": str(ps.get("phone", "")),
+                                "start": float(ps["start"]),
+                                "end": float(ps["end"]),
+                            }
+                            for ps in w.get("phone_segments", [])
+                            if "start" in ps and "end" in ps
+                        ],
+                    }
+                    for w in words
+                    if "start" in w and "end" in w
+                ],
+            }
+        )
+    return out
+
+
+def _has_embedded_source_fields(json_data):
+    for seg in json_data:
+        if seg.get("source_text"):
+            return True
+        src_words = seg.get("source_words")
+        if isinstance(src_words, list) and len(src_words) > 0:
+            return True
+    return False
+
+
 def _load_segments_from_file(file_path):
     with open(file_path, "r") as f:
         json_data = json.load(f)
     return _build_segment_list(json_data)
+
+
+def _load_json_file(file_path):
+    with open(file_path, "r") as f:
+        return json.load(f)
 
 
 def _start_audio_from_transcript_file(file_path):
@@ -217,25 +308,113 @@ def _pick_folder(dialog_title):
         return ""
 
 
-def _resolve_transcript_in_dir(path):
+def _resolve_native_transcript_in_dir(path):
+    first_valid = None
+
     for name in TRANSCRIPT_FILE_CANDIDATES:
         candidate = os.path.join(path, name)
-        if os.path.exists(candidate):
-            return candidate, path
+        if not os.path.exists(candidate):
+            continue
+        if _looks_like_corrupt_json(candidate):
+            continue
+
+        if first_valid is None:
+            first_valid = (candidate, path)
+
+        if name in PHONE_LEVEL_TRANSCRIPTS and not _has_valid_phone_timing(candidate):
+            continue
+
+        return candidate, path
+
+    if first_valid:
+        return first_valid
     return None, None
 
 
-def _find_transcript_file(folder_path):
-    direct_orig, direct_folder = _resolve_transcript_in_dir(folder_path)
-    if direct_orig:
-        return direct_orig, direct_folder
+def _resolve_translated_transcript_in_dir(path):
+    for name in TRANSLATED_TRANSCRIPT_FILE_CANDIDATES:
+        candidate = os.path.join(path, name)
+        if not os.path.exists(candidate):
+            continue
+        if _looks_like_corrupt_json(candidate):
+            continue
+        return candidate, path
+    return None, None
+
+
+def _resolve_transcripts_in_dir(path):
+    native_path, native_folder = _resolve_native_transcript_in_dir(path)
+    translated_path, translated_folder = _resolve_translated_transcript_in_dir(path)
+
+    if native_path or translated_path:
+        return native_path, translated_path, (native_folder or translated_folder)
+    return None, None, None
+
+
+def _looks_like_corrupt_json(path):
+    try:
+        with open(path, "r") as f:
+            data = json.load(f)
+        return not isinstance(data, list)
+    except Exception:
+        return True
+
+
+def _has_valid_phone_timing(path, min_coverage=0.85):
+    try:
+        with open(path, "r") as f:
+            data = json.load(f)
+    except Exception:
+        return False
+
+    if not isinstance(data, list):
+        return False
+
+    total_words = 0
+    words_with_phones = 0
+    for seg in data:
+        for w in seg.get("words", []) or []:
+            total_words += 1
+            phones = w.get("phones", []) or []
+            valid = False
+            for p in phones:
+                try:
+                    ps = float(p.get("start"))
+                    pe = float(p.get("end"))
+                    if pe > ps:
+                        valid = True
+                        break
+                except (TypeError, ValueError):
+                    continue
+            if valid:
+                words_with_phones += 1
+
+    if total_words <= 0:
+        return False
+
+    coverage = float(words_with_phones) / float(total_words)
+    return coverage >= float(min_coverage)
+
+
+def _find_transcript_files(folder_path):
+    direct_native, direct_translated, direct_folder = _resolve_transcripts_in_dir(folder_path)
+    if direct_native and direct_translated:
+        return direct_native, direct_translated, direct_folder
+
+    partial_match = (
+        (direct_native, direct_translated, direct_folder)
+        if (direct_native or direct_translated)
+        else (None, None, None)
+    )
 
     for root, _, _ in os.walk(folder_path):
-        nested_orig, nested_folder = _resolve_transcript_in_dir(root)
-        if nested_orig:
-            return nested_orig, nested_folder
+        nested_native, nested_translated, nested_folder = _resolve_transcripts_in_dir(root)
+        if nested_native and nested_translated:
+            return nested_native, nested_translated, nested_folder
+        if (nested_native or nested_translated) and not partial_match[2]:
+            partial_match = (nested_native, nested_translated, nested_folder)
 
-    return None, None
+    return partial_match
 
 
 def _shorten_path(path, max_len=64):
@@ -251,7 +430,7 @@ def _discover_eligible_generated_dirs(search_root, max_results=300):
         return []
 
     found = []
-    for root, dirs, files in os.walk(search_root):
+    for root, dirs, _files in os.walk(search_root):
         dirs[:] = [
             d
             for d in dirs
@@ -260,12 +439,10 @@ def _discover_eligible_generated_dirs(search_root, max_results=300):
             and not d.startswith("_")
         ]
 
-        files_set = set(files)
-        match_name = next((name for name in TRANSCRIPT_FILE_CANDIDATES if name in files_set), None)
-        if match_name is None:
+        native_path, translated_path, resolved = _resolve_transcripts_in_dir(root)
+        if native_path is None and translated_path is None:
             continue
 
-        transcript_path = os.path.join(root, match_name)
         try:
             rel = os.path.relpath(root, search_root)
         except ValueError:
@@ -273,11 +450,13 @@ def _discover_eligible_generated_dirs(search_root, max_results=300):
         if rel == ".":
             rel = os.path.basename(root)
 
+        mode = "dual" if (native_path and translated_path) else ("native" if native_path else "translated")
         found.append(
             {
-                "label": rel,
-                "folder": root,
-                "transcript": transcript_path,
+                "label": f"{rel} [{mode}]",
+                "folder": resolved,
+                "native": native_path,
+                "translated": translated_path,
             }
         )
         if len(found) >= max_results:
@@ -673,8 +852,10 @@ def _draw_pattern_loader(progress, center_x, center_y):
 
 def choose_generated_folder():
     folder_path = None
-    transcript_file = None
+    native_file = None
+    translated_file = None
     resolved_folder = None
+    force_native = False
 
     repo_root = os.path.dirname(os.path.dirname(__file__))
     scan_roots = [OUTPUT_ROOT, repo_root]
@@ -703,16 +884,18 @@ def choose_generated_folder():
     dropdown_rect = pygame.Rect(70, 190, 520, 50)
     refresh_btn = pygame.Rect(610, 190, 120, 50)
     btn_folder = pygame.Rect(70, 260, 260, 52)
+    force_native_btn = pygame.Rect(350, 260, 220, 52)
     start_btn = pygame.Rect(300, 420, 200, 64)
 
     def _apply_dropdown_selection(index):
-        nonlocal folder_path, transcript_file, resolved_folder, dropdown_selected
+        nonlocal folder_path, native_file, translated_file, resolved_folder, dropdown_selected
         if not (0 <= index < len(eligible_dirs)):
             return
         dropdown_selected = index
         selection = eligible_dirs[index]
         folder_path = selection["folder"]
-        transcript_file = selection["transcript"]
+        native_file = selection.get("native")
+        translated_file = selection.get("translated")
         resolved_folder = selection["folder"]
 
     if eligible_dirs:
@@ -722,7 +905,7 @@ def choose_generated_folder():
     while choosing:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                return None, None, None
+                return None, None, None, False
 
             if event.type == pygame.MOUSEWHEEL and dropdown_open and eligible_dirs:
                 max_scroll = max(0, len(eligible_dirs) - dropdown_visible)
@@ -750,16 +933,24 @@ def choose_generated_folder():
                         _apply_dropdown_selection(0)
                     else:
                         dropdown_selected = -1
+                        native_file = None
+                        translated_file = None
                 elif btn_folder.collidepoint(event.pos):
                     selected = _pick_folder("Choose generated folder (or parent folder)")
                     if selected:
                         folder_path = selected
-                        transcript_file, resolved_folder = _find_transcript_file(folder_path)
+                        native_file, translated_file, resolved_folder = _find_transcript_files(folder_path)
                     dropdown_open = False
-                elif start_btn.collidepoint(event.pos) and transcript_file:
-                    choosing = False
+                elif force_native_btn.collidepoint(event.pos):
+                    force_native = not force_native
+                elif start_btn.collidepoint(event.pos):
+                    can_start = (native_file is not None) if force_native else ((native_file is not None) or (translated_file is not None))
+                    if can_start:
+                        choosing = False
                 else:
                     dropdown_open = False
+
+        can_start = (native_file is not None) if force_native else ((native_file is not None) or (translated_file is not None))
 
         screen.fill((24, 24, 24))
         title = font.render("Select generated folder", True, (245, 245, 245))
@@ -769,9 +960,10 @@ def choose_generated_folder():
         pygame.draw.rect(screen, (90, 90, 90), dropdown_rect, width=1, border_radius=8)
         pygame.draw.rect(screen, (58, 58, 58), refresh_btn, border_radius=8)
         pygame.draw.rect(screen, (58, 58, 58), btn_folder, border_radius=10)
+        pygame.draw.rect(screen, (90, 120, 100) if force_native else (58, 58, 58), force_native_btn, border_radius=10)
         pygame.draw.rect(
             screen,
-            (70, 130, 95) if transcript_file else (55, 55, 55),
+            (70, 130, 95) if can_start else (55, 55, 55),
             start_btn,
             border_radius=10,
         )
@@ -800,9 +992,11 @@ def choose_generated_folder():
         )
 
         folder_txt = dbgfont.render("Choose Folder", True, (255, 255, 255))
+        force_txt = dbgfont.render(f"Force Native: {'ON' if force_native else 'OFF'}", True, (255, 255, 255))
         start_txt = dbgfont.render("Start", True, (255, 255, 255))
 
         screen.blit(folder_txt, (btn_folder.centerx - folder_txt.get_width() // 2, btn_folder.centery - folder_txt.get_height() // 2))
+        screen.blit(force_txt, (force_native_btn.centerx - force_txt.get_width() // 2, force_native_btn.centery - force_txt.get_height() // 2))
         screen.blit(start_txt, (start_btn.centerx - start_txt.get_width() // 2, start_btn.centery - start_txt.get_height() // 2))
 
         if dropdown_open and eligible_dirs:
@@ -810,9 +1004,15 @@ def choose_generated_folder():
             list_y = dropdown_rect.bottom + 6
             visible_count = min(dropdown_visible, len(eligible_dirs))
             list_h = visible_count * dropdown_item_h + 8
+
+            # Opaque backdrop so dropdown content stays readable over all other UI text.
+            backdrop = pygame.Rect(40, dropdown_rect.bottom + 2, WIDTH - 80, HEIGHT - dropdown_rect.bottom - 20)
+            pygame.draw.rect(screen, (16, 16, 16), backdrop, border_radius=10)
+            pygame.draw.rect(screen, (58, 58, 58), backdrop, width=1, border_radius=10)
+
             panel = pygame.Rect(list_x, list_y, dropdown_rect.width, list_h)
-            pygame.draw.rect(screen, (44, 44, 44), panel, border_radius=8)
-            pygame.draw.rect(screen, (88, 88, 88), panel, width=1, border_radius=8)
+            pygame.draw.rect(screen, (22, 22, 22), panel, border_radius=8)
+            pygame.draw.rect(screen, (112, 112, 112), panel, width=1, border_radius=8)
 
             for row in range(visible_count):
                 idx = dropdown_scroll + row
@@ -831,28 +1031,44 @@ def choose_generated_folder():
                 scroll_hint = dbgfont.render("Use mouse wheel to scroll", True, (165, 165, 165))
                 screen.blit(scroll_hint, (list_x + 10, list_y + list_h + 6))
 
-        folder_label = dbgfont.render(f"Folder: {_shorten_path(folder_path)}", True, (210, 210, 210))
-        resolved_label = dbgfont.render(f"Resolved: {_shorten_path(resolved_folder)}", True, (210, 210, 210))
-        file1_label = dbgfont.render(f"Transcript: {_shorten_path(transcript_file)}", True, (190, 220, 190) if transcript_file else (210, 210, 210))
-        scan_label = dbgfont.render(f"Found: {len(eligible_dirs)} eligible folders", True, (190, 190, 190))
-        screen.blit(scan_label, (70, 330))
-        screen.blit(folder_label, (70, 360))
-        screen.blit(resolved_label, (70, 390))
-        screen.blit(file1_label, (70, 420))
+        if not dropdown_open:
+            folder_label = dbgfont.render(f"Folder: {_shorten_path(folder_path)}", True, (210, 210, 210))
+            resolved_label = dbgfont.render(f"Resolved: {_shorten_path(resolved_folder)}", True, (210, 210, 210))
+            file1_label = dbgfont.render(f"Native: {_shorten_path(native_file)}", True, (190, 220, 190) if native_file else (210, 210, 210))
+            file2_label = dbgfont.render(f"System/Translated: {_shorten_path(translated_file)}", True, (190, 220, 190) if translated_file else (210, 210, 210))
+            scan_label = dbgfont.render(f"Found: {len(eligible_dirs)} eligible folders", True, (190, 190, 190))
+            screen.blit(scan_label, (70, 330))
+            screen.blit(folder_label, (70, 360))
+            screen.blit(resolved_label, (70, 390))
+            screen.blit(file1_label, (70, 420))
+            screen.blit(file2_label, (70, 450))
 
-        hint = dbgfont.render("Use dropdown or manual choose, then click Start", True, (165, 165, 165))
-        if folder_path and not transcript_file:
-            warn = dbgfont.render("Could not find a transcript file in that folder tree.", True, (230, 120, 120))
-            screen.blit(warn, (WIDTH // 2 - warn.get_width() // 2, 545))
-        if not eligible_dirs:
-            warn2 = dbgfont.render("Auto-scan found none. Use Choose Folder for manual selection.", True, (230, 170, 120))
-            screen.blit(warn2, (WIDTH // 2 - warn2.get_width() // 2, 520))
-        screen.blit(hint, (WIDTH // 2 - hint.get_width() // 2, 515))
+            hint = dbgfont.render("Use dropdown or manual choose, then click Start", True, (165, 165, 165))
+            if native_file and translated_file and not force_native:
+                mode = dbgfont.render("Mode: Dual transcript (native + system language)", True, (170, 220, 170))
+                screen.blit(mode, (WIDTH // 2 - mode.get_width() // 2, 520))
+            elif force_native and native_file:
+                mode = dbgfont.render("Mode: Native only (forced)", True, (220, 210, 160))
+                screen.blit(mode, (WIDTH // 2 - mode.get_width() // 2, 520))
+            elif native_file or translated_file:
+                mode = dbgfont.render("Mode: Single transcript", True, (220, 210, 160))
+                screen.blit(mode, (WIDTH // 2 - mode.get_width() // 2, 520))
+
+            if folder_path and not (native_file or translated_file):
+                warn = dbgfont.render("Could not find a transcript file in that folder tree.", True, (230, 120, 120))
+                screen.blit(warn, (WIDTH // 2 - warn.get_width() // 2, 545))
+            if force_native and not native_file and (translated_file is not None):
+                warn3 = dbgfont.render("Force native is ON but no native transcript was found.", True, (230, 170, 120))
+                screen.blit(warn3, (WIDTH // 2 - warn3.get_width() // 2, 545))
+            if not eligible_dirs:
+                warn2 = dbgfont.render("Auto-scan found none. Use Choose Folder for manual selection.", True, (230, 170, 120))
+                screen.blit(warn2, (WIDTH // 2 - warn2.get_width() // 2, 520))
+            screen.blit(hint, (WIDTH // 2 - hint.get_width() // 2, 570))
 
         pygame.display.flip()
         clock.tick(60)
 
-    return transcript_file, resolved_folder
+    return native_file, translated_file, resolved_folder, force_native
 
 
 def unpack_lyrics(parent):
@@ -911,8 +1127,12 @@ def _render_highlighted_tokens(tokens, highlight_idx, x, y, max_width, partial_h
 
         if partial_highlight and idx == partial_highlight.get("index"):
             n_chars = len(text)
-            i0 = max(0, min(n_chars, int(n_chars * partial_highlight.get("start_frac", 0.0))))
-            i1 = max(i0, min(n_chars, int(n_chars * partial_highlight.get("end_frac", 1.0))))
+            if "char_start" in partial_highlight and "char_end" in partial_highlight:
+                i0 = max(0, min(n_chars, int(partial_highlight.get("char_start", 0))))
+                i1 = max(i0, min(n_chars, int(partial_highlight.get("char_end", n_chars))))
+            else:
+                i0 = max(0, min(n_chars, int(n_chars * partial_highlight.get("start_frac", 0.0))))
+                i1 = max(i0, min(n_chars, int(n_chars * partial_highlight.get("end_frac", 1.0))))
             pre = text[:i0]
             mid = text[i0:i1]
             post = text[i1:]
@@ -934,20 +1154,24 @@ def _render_highlighted_tokens(tokens, highlight_idx, x, y, max_width, partial_h
     return y + current_line_h
 
 
-def update_segment_view(ms, seg_list, y):
+def update_segment_view(ms, seg_list, y, state_name="orig"):
     """
     Generic updater for either original or translated track.
     Keeps indices advancing (no full rescans) and only retokenizes on segment change.
     """
-    global seg_i, word_i
-    global _cached_seg_id, _cached_tokens
+    global seg_i, word_i, seg_i1, word_i1
+    global _cached_seg_id, _cached_tokens, _cached_seg_id_1, _cached_tokens_1
 
     elapsed = ms / 1000.0
     if elapsed <= 1 or not seg_list:
         return y
 
-    si, wi = seg_i, word_i
-    cache_id, cache_tokens = _cached_seg_id, _cached_tokens
+    if state_name == "orig":
+        si, wi = seg_i, word_i
+        cache_id, cache_tokens = _cached_seg_id, _cached_tokens
+    else:
+        si, wi = seg_i1, word_i1
+        cache_id, cache_tokens = _cached_seg_id_1, _cached_tokens_1
 
     # advance segment index if we're past its end
     while si < len(seg_list) and elapsed >= seg_list[si]["end"]:
@@ -957,8 +1181,12 @@ def update_segment_view(ms, seg_list, y):
         cache_tokens = None
 
     if si >= len(seg_list):
-        seg_i, word_i = si, wi
-        _cached_seg_id, _cached_tokens = cache_id, cache_tokens
+        if state_name == "orig":
+            seg_i, word_i = si, wi
+            _cached_seg_id, _cached_tokens = cache_id, cache_tokens
+        else:
+            seg_i1, word_i1 = si, wi
+            _cached_seg_id_1, _cached_tokens_1 = cache_id, cache_tokens
         return y
 
     seg = seg_list[si]
@@ -983,21 +1211,38 @@ def update_segment_view(ms, seg_list, y):
     highlight_idx = wi if wi < len(words) else -1
     partial_highlight = None
     if wi < len(words):
-        phones = words[wi].get("phones", [])
-        if phones:
+        phone_segments = words[wi].get("phone_segments", [])
+        if phone_segments:
             phone_idx = None
-            for pi, p in enumerate(phones):
+            for pi, p in enumerate(phone_segments):
                 if p["start"] <= elapsed < p["end"]:
                     phone_idx = pi
                     break
-            if phone_idx is None and elapsed >= phones[-1]["end"]:
-                phone_idx = len(phones) - 1
-            if phone_idx is not None and len(phones) > 0:
+            if phone_idx is None and elapsed >= phone_segments[-1]["end"]:
+                phone_idx = len(phone_segments) - 1
+            if phone_idx is not None and len(phone_segments) > 0:
+                cur = phone_segments[phone_idx]
                 partial_highlight = {
                     "index": wi,
-                    "start_frac": phone_idx / len(phones),
-                    "end_frac": (phone_idx + 1) / len(phones),
+                    "char_start": int(cur.get("char_start", 0)),
+                    "char_end": int(cur.get("char_end", 0)),
                 }
+        else:
+            phones = words[wi].get("phones", [])
+            if phones:
+                phone_idx = None
+                for pi, p in enumerate(phones):
+                    if p["start"] <= elapsed < p["end"]:
+                        phone_idx = pi
+                        break
+                if phone_idx is None and elapsed >= phones[-1]["end"]:
+                    phone_idx = len(phones) - 1
+                if phone_idx is not None and len(phones) > 0:
+                    partial_highlight = {
+                        "index": wi,
+                        "start_frac": phone_idx / len(phones),
+                        "end_frac": (phone_idx + 1) / len(phones),
+                    }
 
     bottom_y = _render_highlighted_tokens(
         cache_tokens,
@@ -1008,8 +1253,12 @@ def update_segment_view(ms, seg_list, y):
         partial_highlight=partial_highlight,
     )
 
-    seg_i, word_i = si, wi
-    _cached_seg_id, _cached_tokens = cache_id, cache_tokens
+    if state_name == "orig":
+        seg_i, word_i = si, wi
+        _cached_seg_id, _cached_tokens = cache_id, cache_tokens
+    else:
+        seg_i1, word_i1 = si, wi
+        _cached_seg_id_1, _cached_tokens_1 = cache_id, cache_tokens
 
     return bottom_y
 
@@ -1066,21 +1315,54 @@ def generarfrase():
 
 
 
-selected_file, resolved_folder = choose_generated_folder()
-if not selected_file:
+selected_native_file, selected_translated_file, resolved_folder, force_native = choose_generated_folder()
+if not (selected_native_file or selected_translated_file):
     pygame.quit()
     sys.exit()
 
-buildfor = dbgfont.render(f"{selected_file.split('/')[-2]}, brought to you by taeson.co", True, (255, 255, 255))
+audio_anchor_file = selected_native_file or selected_translated_file
 
-segments = _load_segments_from_file(selected_file)
-_start_audio_from_transcript_file(selected_file)
+if force_native and selected_native_file:
+    segments = _load_segments_from_file(selected_native_file)
+    segments1 = []
+    mode_name = "Native only"
+elif selected_native_file and selected_translated_file:
+    segments = _load_segments_from_file(selected_native_file)
+    translated_json = _load_json_file(selected_translated_file)
+    segments1 = _build_segment_list(translated_json)
+    mode_name = "Dual transcript"
+elif selected_native_file:
+    segments = _load_segments_from_file(selected_native_file)
+    segments1 = []
+    mode_name = "Single native"
+else:
+    translated_json = _load_json_file(selected_translated_file)
+    if _has_embedded_source_fields(translated_json):
+        segments = _build_source_segment_list(translated_json)
+        segments1 = _build_segment_list(translated_json)
+        mode_name = "Dual transcript (embedded source)"
+    else:
+        segments = _build_segment_list(translated_json)
+        segments1 = []
+        mode_name = "Single translated"
+
+buildfor = dbgfont.render(
+    f"{audio_anchor_file.split('/')[-2]} | {mode_name} | taeson.co",
+    True,
+    (255, 255, 255),
+)
+
+_start_audio_from_transcript_file(audio_anchor_file)
 _load_analysis_data(resolved_folder)
 
 seg_i = 0
 word_i = 0
+seg_i1 = 0
+word_i1 = 0
 _cached_seg_id = None
 _cached_tokens = None
+_cached_seg_id_1 = None
+_cached_tokens_1 = None
 start_ticks = pygame.time.get_ticks()
 last_beat_found_at = -1000
 
@@ -1101,8 +1383,15 @@ while running:
     credits = dbgfont.render("With <3 from Berkeley, Calif.", True, (190, 190, 190))
     screen.blit(credits, ((screen.get_width() - credits.get_width()), screen.get_height() - credits.get_height() - time_text.get_height() - 2))
 
-    # --- NEW: update per segment, highlight current word inside it ---
-    update_segment_view(elapsed_ms, segments, y=50)
+    # --- merged single/dual mode rendering ---
+    orig_bottom_y = update_segment_view(elapsed_ms, segments, y=50, state_name="orig")
+
+    if segments1:
+        base_trans_y = 140
+        min_vertical_gap = 18
+        trans_y = max(base_trans_y, orig_bottom_y + min_vertical_gap)
+        update_segment_view(elapsed_ms, segments1, y=trans_y, state_name="trans")
+
     dispnotes(elapsed_ms, dt)
     dispbeats(elapsed_ms)
 

@@ -1,4 +1,5 @@
 import os
+import shutil
 import sys
 import traceback
 import faulthandler
@@ -48,6 +49,61 @@ def emit_whisper_active(is_active):
 
 def emit_whisper_progress(value, label="Whisper transcribing..."):
     print(f"WHISPER_PROGRESS|{int(value)}|{label}", flush=True)
+
+
+def _has_phone_level_data(json_path: Path, min_coverage: float = 0.85) -> bool:
+    try:
+        if not json_path.exists():
+            return False
+        data = json.loads(json_path.read_text(encoding="utf-8"))
+    except Exception:
+        return False
+
+    if not isinstance(data, list):
+        return False
+
+    total_words = 0
+    words_with_phones = 0
+    for seg in data:
+        for w in seg.get("words", []) or []:
+            total_words += 1
+            phones = w.get("phones", []) or []
+            valid = False
+            for p in phones:
+                try:
+                    ps = float(p.get("start"))
+                    pe = float(p.get("end"))
+                    if pe > ps:
+                        valid = True
+                        break
+                except (TypeError, ValueError):
+                    continue
+            if valid:
+                words_with_phones += 1
+
+    if total_words <= 0:
+        return False
+
+    coverage = float(words_with_phones) / float(total_words)
+    return coverage >= float(min_coverage)
+
+
+def _write_playback_transcript(audiobase: str):
+    base = Path(audiobase)
+    phone_json = base / "mfa_vocals_phone_segments.json"
+    word_json = base / "vocals_whisper_segments.json"
+    playback_json = base / "playback_segments.json"
+
+    source = phone_json if _has_phone_level_data(phone_json) else word_json
+    if not source.exists():
+        return
+
+    try:
+        shutil.copy2(source, playback_json)
+        print(f"INFO|Playback transcript: {source.name}", flush=True)
+    except Exception as exc:
+        # Silent fallback behavior: don't fail pipeline on playback copy issues.
+        print(f"INFO|Playback transcript preflight skipped: {exc}", flush=True)
 
 
 def _stage_progress_cb(stage_start, stage_end, default_label, whisper_label=None):
@@ -193,7 +249,9 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
                 except Exception as fallback_exc:
                     print(f"wav2vec2 fallback error: {fallback_exc}", flush=True)
     except Exception as e:
-        print(f"MFA Error: {e}", flush=True)
+        print(f"INFO|Phone-level alignment unavailable; defaulting to word-level: {e}", flush=True)
+
+    _write_playback_transcript(audiobase)
 
     def normalize_lang_code(code):
             if not code:

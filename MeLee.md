@@ -41,3 +41,7 @@ python -m backbone.ltra._mfa_aligner export-phones deptest/ojitos_lindos/_mfa_ou
 ### Comando 3: Completar phones y crear phone_segments en JSON existente
 
 python -m backbone.ltra._mfa_aligner segment-phones deptest/ojitos_lindos/mfa_vocals_phone_segments.json --phonemizer-lang es
+
+
+# Sobre DataStore
+Operado por Taeson.co, se usa las transcriptiones que generarás y otra informacion sobre la cancion a determinar la exactitud de su audio al proveedores como Genius, LyricsMatch, LyricsTranslate, etc.
