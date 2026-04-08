@@ -313,10 +313,265 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
     emit_progress(68, "Text pipeline complete")
     return str((Path.cwd() / audiobase).resolve()), (detectlang or lang_code)
 
+def notesanalysisWIN(
+    af,
+    output_root,
+    sr=48000,
+    beat_strength_quantile=0.60,
+    min_relative_beat_strength=1.05,
+    min_beat_gap_ms=120,
+    beat_tolerance_ms=20,
+):
+    import os
+    import numpy as np
+    import librosa
+    from pathlib import Path
+    from scipy.signal import find_peaks
+
+    NOTE_NAMES = np.array(["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"])
+    af_path = Path(af)
+    audio_base = af_path.name
+
+    # ---------------------------
+    # Beat scoring (unchanged)
+    # ---------------------------
+    def _score_beats(beats, bpm, confidence, duration_sec):
+        if len(beats) < 2 or bpm <= 0:
+            return -1e9
+        intervals = np.diff(beats)
+        mean_interval = float(np.mean(intervals))
+        if mean_interval <= 0:
+            return -1e9
+        cv = float(np.std(intervals) / (mean_interval + 1e-9))
+        stability = 1.0 / (1.0 + cv)
+        expected_beats = duration_sec * bpm / 60.0
+        coverage = 1.0 - abs(len(beats) - expected_beats) / (expected_beats + 1e-9)
+        coverage = float(np.clip(coverage, 0.0, 1.0))
+        conf = float(np.clip(confidence, 0.0, 1.0))
+        return 0.5 * stability + 0.3 * coverage + 0.2 * conf
+
+    # ---------------------------
+    # Librosa "multi-method" rhythm
+    # ---------------------------
+    def extract_best_rhythm(audio, duration_sec):
+        methods = []
+
+        # Method 1: harmonic-percussive separated beats
+        y_h, y_p = librosa.effects.hpss(audio)
+        onset_env = librosa.onset.onset_strength(y=y_p, sr=sr)
+        tempo, frames = librosa.beat.beat_track(onset_envelope=onset_env, sr=sr)
+        beats = librosa.frames_to_time(frames, sr=sr)
+        conf = float(np.mean(onset_env[frames])) if len(frames) else 0.0
+
+        methods.append({
+            "method": "librosa_hpss",
+            "bpm": tempo,
+            "beats": beats,
+            "confidence": conf,
+        })
+
+        # Method 2: full signal
+        onset_env = librosa.onset.onset_strength(y=audio, sr=sr)
+        tempo, frames = librosa.beat.beat_track(onset_envelope=onset_env, sr=sr)
+        beats = librosa.frames_to_time(frames, sr=sr)
+        conf = float(np.mean(onset_env[frames])) if len(frames) else 0.0
+
+        methods.append({
+            "method": "librosa_full",
+            "bpm": tempo,
+            "beats": beats,
+            "confidence": conf,
+        })
+
+        best = None
+        for m in methods:
+            score = _score_beats(m["beats"], m["bpm"], m["confidence"], duration_sec)
+            m["score"] = score
+            if best is None or score > best["score"]:
+                best = m
+
+        return best
+
+    # ---------------------------
+    # RMS spike detector (UNCHANGED)
+    # ---------------------------
+    def detect_beats_from_energy_spikes(audio):
+        hop_length = 512
+        frame_length = 2048
+
+        rms = librosa.feature.rms(
+            y=audio,
+            frame_length=frame_length,
+            hop_length=hop_length,
+        )[0]
+
+        if len(rms) == 0:
+            return np.array([]), np.array([]), 0.6, 0.0
+
+        rms_norm = rms / (np.max(rms) + 1e-9)
+
+        threshold = 0.60
+        min_gap_frames = int((min_beat_gap_ms / 1000) * sr / hop_length)
+
+        peaks, _ = find_peaks(rms_norm, height=threshold, distance=min_gap_frames)
+
+        beat_times = librosa.frames_to_time(peaks, sr=sr, hop_length=hop_length)
+        strengths = rms_norm[peaks]
+
+        bpm = 0.0
+        if len(beat_times) >= 2:
+            bpm = 60.0 / np.median(np.diff(beat_times))
+
+        return beat_times.astype(np.float32), strengths.astype(np.float32), threshold, float(bpm)
+
+    # ---------------------------
+    # Beat strength filter (UNCHANGED)
+    # ---------------------------
+    def filter_beats_by_strength(audio, beats):
+        if len(beats) == 0:
+            return beats, np.array([]), 0.0
+
+        env = np.abs(audio)
+        strengths = np.array([
+            np.max(env[int(b*sr):int(b*sr+0.04*sr)]) if int(b*sr) < len(env) else 0
+            for b in beats
+        ])
+
+        q = np.quantile(strengths, beat_strength_quantile)
+        rel = np.quantile(env, 0.75) * min_relative_beat_strength
+        thr = max(q, rel)
+
+        filtered = []
+        last = -1e9
+        min_gap = min_beat_gap_ms / 1000
+
+        for b, s in zip(beats, strengths):
+            if s < thr: continue
+            if b - last < min_gap: continue
+            filtered.append(b)
+            last = b
+
+        return np.array(filtered), strengths, thr
+
+    # ---------------------------
+    # HPCP replacement (high-quality chroma)
+    # ---------------------------
+    def extract_hpcp_like(audio):
+        chroma = librosa.feature.chroma_cqt(
+            y=audio,
+            sr=sr,
+            n_chroma=12,
+            bins_per_octave=36  # improves resolution (important!)
+        )
+        chroma /= (np.max(chroma, axis=0, keepdims=True) + 1e-9)
+        return chroma.T.astype(np.float32)
+
+    # ---------------------------
+    # MAIN ANALYSIS
+    # ---------------------------
+    def analyze_and_save(file_path, out_name, rhythm_file_path=None, is_drums_only=False):
+        audio, _ = librosa.load(file_path, sr=sr, mono=True)
+        rhythm_audio, _ = librosa.load(rhythm_file_path or file_path, sr=sr, mono=True)
+
+        audio /= (np.max(np.abs(audio)) + 1e-9)
+        rhythm_audio /= (np.max(np.abs(rhythm_audio)) + 1e-9)
+
+        audio *= 20
+        rhythm_audio *= 20
+
+        frame_hpcps = extract_hpcp_like(audio)
+
+        note_strengths_sum = np.sum(frame_hpcps, axis=0)
+        note_strengths_mean = np.mean(frame_hpcps, axis=0)
+        note_strengths_max = np.max(frame_hpcps, axis=0)
+
+        total = np.sum(note_strengths_sum)
+        dist = note_strengths_sum / total if total > 0 else np.zeros(12)
+
+        dom_idx = np.argmax(frame_hpcps, axis=1)
+        dom_val = np.max(frame_hpcps, axis=1)
+
+        duration = len(rhythm_audio) / sr
+
+        if is_drums_only:
+            beats, strengths, thr, bpm = detect_beats_from_energy_spikes(rhythm_audio)
+            raw_beats = beats
+            conf = 1.0
+            method = "rms_visual"
+        else:
+            r = extract_best_rhythm(rhythm_audio, duration)
+            bpm = r["bpm"]
+            raw_beats = r["beats"]
+            conf = r["confidence"]
+            method = r["method"]
+
+            beats, strengths, thr = filter_beats_by_strength(rhythm_audio, raw_beats)
+
+        num_frames = len(frame_hpcps)
+        hop_size = 512
+
+        beat_map = np.zeros(num_frames, dtype=bool)
+        beat_centers = np.zeros(num_frames, dtype=bool)
+
+        tol_frames = int((beat_tolerance_ms / 1000) * sr / hop_size)
+
+        for bt in beats:
+            idx = int(bt * sr / hop_size)
+            if 0 <= idx < num_frames:
+                beat_centers[idx] = True
+                beat_map[max(0, idx - tol_frames):idx + tol_frames + 1] = True
+
+        out_path = output_root / f"{audio_base}_{out_name}.npz"
+        np.savez_compressed(
+            out_path,
+            hpcp=frame_hpcps,
+            note_names=NOTE_NAMES,
+            note_strengths_per_frame=frame_hpcps,
+            note_strengths_sum=note_strengths_sum,
+            note_strengths_mean=note_strengths_mean,
+            note_strengths_max=note_strengths_max,
+            note_strengths_distribution=dist,
+            dominant_note_index_per_frame=dom_idx,
+            dominant_note_strength_per_frame=dom_val,
+            beats=beat_map,
+            beat_centers=beat_centers,
+            bpm=np.array([bpm]),
+            beat_times=beats,
+            beat_times_raw=raw_beats,
+            beat_confidence=np.array([conf]),
+            rhythm_method=np.array([method]),
+            beat_strengths_raw=strengths,
+            beat_strength_threshold=np.array([thr]),
+            sample_rate=np.array([sr]),
+        )
+
+    # ---------------------------
+    # PATH LOGIC (unchanged)
+    # ---------------------------
+    using_drum_stem = demucs_stems in ("both", "default")
+
+    if using_drum_stem:
+        novocal_path = f"{af}/htdemucs/{audio_base}/drums.mp3"
+        melodic_path = f"{af}/other.mp3"
+        if not os.path.exists(melodic_path):
+            melodic_path = f"{af}/htdemucs/{audio_base}/other.mp3"
+    else:
+        novocal_path = f"{af}/htdemucs/{audio_base}/no_vocals.mp3"
+        melodic_path = novocal_path
+
+    analyze_and_save(melodic_path, "novocs_analysis", rhythm_file_path=novocal_path, is_drums_only=using_drum_stem)
+
+    vocal_path = f"{af}/vocals.mp3"
+    analyze_and_save(vocal_path, "vocs_analysis")
+
 
 def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, min_relative_beat_strength=1.05,
                   min_beat_gap_ms=120, beat_tolerance_ms=20):
-    from essentia.standard import MonoLoader, FrameGenerator, Windowing, Spectrum, SpectralPeaks, HPCP, RhythmExtractor2013
+    try:
+        from essentia.standard import MonoLoader, FrameGenerator, Windowing, Spectrum, SpectralPeaks, HPCP, RhythmExtractor2013
+    except:
+        notesanalysisWIN(af, output_root, sr, beat_strength_quantile, min_relative_beat_strength,
+                  min_beat_gap_ms, beat_tolerance_ms)
     import numpy as np
 
     NOTE_NAMES = np.array(["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"])
