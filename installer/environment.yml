@@ -16,7 +16,6 @@ dependencies:
   - pytorch
   - pyqt6
   - pygame
-  - essentia
   - praatio
   - pip:
       - demucs
@@ -24,3 +23,4 @@ dependencies:
       - whisperx
       - argostranslate
       - hnswlib
+      - madmom

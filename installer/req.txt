@@ -36,7 +36,6 @@ docopt==0.6.2
 dora_search==0.1.12
 einops==0.8.1
 emoji==2.15.0
-essentia==2.1b6.dev1389
 exceptiongroup==1.3.1
 faster-whisper==1.2.1
 filelock==3.19.1

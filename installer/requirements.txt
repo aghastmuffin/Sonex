@@ -95,8 +95,6 @@ einops==0.8.2
     #   pyannote-audio
 emoji==2.15.0
     # via stanza
-essentia==2.1b6.dev1389
-    # via -r requirements.in
 faster-whisper==1.2.1
     # via
     #   -r requirements.in
@@ -222,7 +220,6 @@ numpy==2.0.2
     #   blis
     #   contourpy
     #   ctranslate2
-    #   essentia
     #   hnswlib
     #   librosa
     #   matplotlib
@@ -365,7 +362,6 @@ pyyaml==6.0.3
     # via
     #   ctranslate2
     #   demucs
-    #   essentia
     #   huggingface-hub
     #   hyperpyyaml
     #   lightning
@@ -427,7 +423,6 @@ shellingham==1.5.4
     # via typer
 six==1.17.0
     # via
-    #   essentia
     #   python-dateutil
 smart-open==7.5.0
     # via weasel

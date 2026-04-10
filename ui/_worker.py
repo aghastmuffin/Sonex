@@ -567,12 +567,8 @@ def notesanalysisWIN(
 
 def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, min_relative_beat_strength=1.05,
                   min_beat_gap_ms=120, beat_tolerance_ms=20):
-    try:
-        from essentia.standard import MonoLoader, FrameGenerator, Windowing, Spectrum, SpectralPeaks, HPCP, RhythmExtractor2013
-    except:
-        notesanalysisWIN(af, output_root, sr, beat_strength_quantile, min_relative_beat_strength,
-                  min_beat_gap_ms, beat_tolerance_ms)
     import numpy as np
+    import librosa
 
     NOTE_NAMES = np.array(["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"])
     af_path = Path(af)
@@ -593,35 +589,69 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
         conf = float(np.clip(confidence, 0.0, 1.0))
         return 0.5 * stability + 0.3 * coverage + 0.2 * conf
 
-    def extract_best_rhythm(audio, duration_sec, sr_local):
-        # Use HPSS to isolate percussive component for better beat detection
-        import librosa
-        print("Isolating percussive component for beat detection...")
-        audio_np = audio.astype(np.float32)
-        _, y_percussive = librosa.effects.hpss(audio_np)
-        
-        best = None
-        for method in ("multifeature", "degara"):
-            extractor = RhythmExtractor2013(method=method)
-            # Run beat detection on percussive component only
-            bpm, beats, confidence, estimates, bpm_intervals = extractor(y_percussive)
+    def extract_best_rhythm(rhythm_file_path, rhythm_audio, duration_sec, sr_local):
+        try:
+            from madmom.features.beats import RNNBeatProcessor, DBNBeatTrackingProcessor
+
+            fps = 100
+            activations = np.asarray(
+                RNNBeatProcessor(fps=fps)(str(rhythm_file_path)),
+                dtype=np.float32,
+            )
+            beats = np.asarray(
+                DBNBeatTrackingProcessor(fps=fps, min_bpm=55, max_bpm=215)(activations),
+                dtype=np.float32,
+            )
+
+            if len(beats) >= 2:
+                median_interval = float(np.median(np.diff(beats)))
+                bpm = 60.0 / median_interval if median_interval > 0 else 0.0
+            else:
+                bpm = 0.0
+
+            if len(beats) > 0 and len(activations) > 0:
+                beat_indices = np.clip((beats * fps).astype(np.int64), 0, len(activations) - 1)
+                confidence = float(np.mean(activations[beat_indices]))
+            else:
+                confidence = 0.0
+
             score = _score_beats(beats, bpm, confidence, duration_sec)
-            result = {
-                "method": method,
-                "bpm": bpm,
-                "beats": beats,
-                "confidence": confidence,
-                "estimates": estimates,
-                "bpm_intervals": bpm_intervals,
-                "score": score,
-            }
-            if best is None or result["score"] > best["score"]:
-                best = result
-        return best
+            if np.isfinite(score) and len(beats) >= 2 and bpm > 0:
+                return {
+                    "method": "madmom_dbn_rnn",
+                    "bpm": float(bpm),
+                    "beats": beats,
+                    "confidence": float(np.clip(confidence, 0.0, 1.0)),
+                    "score": float(score),
+                }
+
+            print("INFO|madmom beat tracker produced weak output; falling back to librosa.", flush=True)
+        except Exception as exc:
+            print(f"INFO|madmom beat tracker unavailable; falling back to librosa ({exc})", flush=True)
+
+        audio_np = np.asarray(rhythm_audio, dtype=np.float32)
+        _, y_percussive = librosa.effects.hpss(audio_np)
+        tempo, beat_frames = librosa.beat.beat_track(y=y_percussive, sr=sr_local)
+        beats = librosa.frames_to_time(beat_frames, sr=sr_local).astype(np.float32)
+
+        tempo_arr = np.atleast_1d(tempo)
+        bpm = float(tempo_arr[0]) if tempo_arr.size > 0 else 0.0
+        if len(beats) > 0:
+            beat_density = len(beats) / max(duration_sec, 1e-6)
+            confidence = float(np.clip(beat_density / 4.0, 0.0, 1.0))
+        else:
+            confidence = 0.0
+
+        return {
+            "method": "librosa_beat_track",
+            "bpm": bpm,
+            "beats": beats,
+            "confidence": confidence,
+            "score": _score_beats(beats, bpm, confidence, duration_sec),
+        }
 
     def detect_beats_from_energy_spikes(audio, sr_local, min_gap_ms_local):
         """Drum-only beat detection using drummervisual-style normalized RMS thresholding."""
-        import librosa
         from scipy.signal import find_peaks
 
         hop_length = 512
@@ -661,6 +691,52 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
 
         return beat_times, beat_strengths, strength_threshold, float(bpm)
 
+    def _ensure_12_bin_matrix(values):
+        arr = np.asarray(values, dtype=np.float32)
+        if arr.ndim == 1:
+            arr = arr.reshape(1, -1)
+        if arr.ndim != 2:
+            return np.zeros((1, 12), dtype=np.float32)
+        if arr.shape[1] == 12:
+            return arr
+        if arr.shape[0] == 12:
+            return arr.T
+        fixed = np.zeros((arr.shape[0], 12), dtype=np.float32)
+        width = min(arr.shape[1], 12)
+        fixed[:, :width] = arr[:, :width]
+        return fixed
+
+    def extract_note_strengths(audio_path, audio, sr_local):
+        try:
+            from madmom.audio.chroma import DeepChromaProcessor
+
+            fps = 100.0
+            chroma = _ensure_12_bin_matrix(DeepChromaProcessor(fps=fps)(str(audio_path)))
+            if chroma.shape[0] > 0:
+                frame_times = np.arange(chroma.shape[0], dtype=np.float32) / np.float32(fps)
+                hop_length = max(1, int(round(sr_local / fps)))
+                return chroma, frame_times, hop_length, "madmom_deepchroma"
+
+            print("INFO|madmom deep chroma returned no frames; falling back to librosa.", flush=True)
+        except Exception as exc:
+            print(f"INFO|madmom deep chroma unavailable; falling back to librosa ({exc})", flush=True)
+
+        hop_length = 512
+        chroma = librosa.feature.chroma_cqt(
+            y=np.asarray(audio, dtype=np.float32),
+            sr=sr_local,
+            hop_length=hop_length,
+        )
+        chroma = _ensure_12_bin_matrix(chroma.T)
+        if chroma.shape[0] == 0:
+            chroma = np.zeros((1, 12), dtype=np.float32)
+        frame_times = librosa.frames_to_time(
+            np.arange(chroma.shape[0]),
+            sr=sr_local,
+            hop_length=hop_length,
+        ).astype(np.float32)
+        return chroma, frame_times, hop_length, "librosa_chroma_cqt"
+
     def filter_beats_by_strength(audio, sr_local, beats):
         if len(beats) == 0:
             return beats, np.array([], dtype=np.float32), 0.0
@@ -697,8 +773,11 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
         return np.array(filtered, dtype=np.float32), beat_strengths, strength_threshold
 
     def analyze_and_save(audio_name, file_path, out_name, rhythm_file_path=None, is_drums_only=False):
-        audio = MonoLoader(filename=file_path, sampleRate=sr)().astype(np.float32)
-        rhythm_audio = MonoLoader(filename=(rhythm_file_path or file_path), sampleRate=sr)().astype(np.float32)
+        audio, _ = librosa.load(file_path, sr=sr, mono=True)
+        rhythm_source = rhythm_file_path or file_path
+        rhythm_audio, _ = librosa.load(rhythm_source, sr=sr, mono=True)
+        audio = np.asarray(audio, dtype=np.float32)
+        rhythm_audio = np.asarray(rhythm_audio, dtype=np.float32)
 
         audio_max = np.max(np.abs(audio))
         if audio_max > 0:
@@ -710,42 +789,12 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
             rhythm_audio = rhythm_audio / rhythm_max
         rhythm_audio *= 20.0
 
-        frame_size = 4096
-        hop_size = 48
-
-        window = Windowing(type='hann')
-        spectrum = Spectrum()
-        spectral_peaks = SpectralPeaks(minFrequency=40, maxFrequency=5000, sampleRate=sr)
-        hpcp_algo = HPCP(
-            size=12,
-            referenceFrequency=440.0,
-            minFrequency=40,
-            maxFrequency=5000,
-            harmonics=8,
-            bandPreset=False,
-        )
-
-        frame_hpcps = []
-        for frame in FrameGenerator(audio, frameSize=frame_size, hopSize=hop_size):
-            if np.all(frame == 0):
-                frame_hpcps.append(np.zeros(12))
-                continue
-
-            win_frame = window(frame)
-            mag_spectrum = spectrum(win_frame)
-            freqs, mags = spectral_peaks(mag_spectrum)
-
-            if len(freqs) == 0:
-                frame_hpcps.append(np.zeros(12))
-                continue
-
-            hpcp_frame = hpcp_algo(freqs, mags)
-            m_val = np.max(hpcp_frame)
-            if m_val > 0:
-                hpcp_frame /= m_val
-            frame_hpcps.append(hpcp_frame)
-
-        frame_hpcps = np.array(frame_hpcps)
+        frame_size = 2048
+        frame_hpcps, frame_times, hop_size, note_feature_method = extract_note_strengths(file_path, audio, sr)
+        frame_hpcps = np.asarray(frame_hpcps, dtype=np.float32)
+        if frame_hpcps.ndim != 2 or frame_hpcps.shape[0] == 0:
+            frame_hpcps = np.zeros((1, 12), dtype=np.float32)
+            frame_times = np.zeros(1, dtype=np.float32)
         # Keep explicit note-strength views in addition to raw HPCP frames.
         # `frame_hpcps` already stores per-frame pitch-class strength (12 bins).
         note_strengths_per_frame = frame_hpcps.astype(np.float32)
@@ -766,30 +815,39 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
 
         if is_drums_only:
             # Drum stem: use drummervisual-like RMS threshold beat detection.
-            print("Drum stem detected — using RMS-threshold beat detection...")
+            print("Drum stem detected - using RMS-threshold beat detection...", flush=True)
             filtered_beats, beat_strengths, beat_strength_threshold, bpm = \
                 detect_beats_from_energy_spikes(rhythm_audio, sr, min_beat_gap_ms)
             beats = filtered_beats  # raw == filtered for npz consistency
             confidence = 1.0
             selected_method = "rms_visual"
         else:
-            rhythm = extract_best_rhythm(rhythm_audio, duration_sec, sr)
+            rhythm = extract_best_rhythm(rhythm_source, rhythm_audio, duration_sec, sr)
             bpm = rhythm["bpm"]
             beats = rhythm["beats"]
             filtered_beats, beat_strengths, beat_strength_threshold = filter_beats_by_strength(rhythm_audio, sr, beats)
             confidence = rhythm["confidence"]
             selected_method = rhythm["method"]
 
+        print(
+            f"INFO|Analysis backends notes={note_feature_method} rhythm={selected_method}",
+            flush=True,
+        )
+
         beat_map = np.zeros(num_frames, dtype=bool)
         beat_centers = np.zeros(num_frames, dtype=bool)
-        beat_tolerance_frames = max(1, int(round((beat_tolerance_ms / 1000.0) * sr / hop_size)))
+        beat_tolerance_sec = max(0.0, float(beat_tolerance_ms) / 1000.0)
         for beat_time in filtered_beats:
-            frame_index = int(round(beat_time * sr / hop_size))
-            if 0 <= frame_index < num_frames:
-                beat_centers[frame_index] = True
-                start = max(0, frame_index - beat_tolerance_frames)
-                end = min(num_frames, frame_index + beat_tolerance_frames + 1)
-                beat_map[start:end] = True
+            if num_frames <= 0:
+                break
+            deltas = np.abs(frame_times - float(beat_time))
+            frame_index = int(np.argmin(deltas))
+            beat_centers[frame_index] = True
+            within = np.where(deltas <= beat_tolerance_sec)[0]
+            if len(within) == 0:
+                beat_map[frame_index] = True
+            else:
+                beat_map[within] = True
         out_path = output_root / f"{audio_name}_{out_name}.npz"
         np.savez_compressed(
             out_path,
@@ -809,6 +867,7 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
             beat_times_raw=beats,
             beat_confidence=np.array([confidence]),
             rhythm_method=np.array([selected_method]),
+            note_feature_method=np.array([note_feature_method]),
             beat_strengths_raw=beat_strengths,
             beat_strength_threshold=np.array([beat_strength_threshold]),
             beat_strength_quantile=np.array([beat_strength_quantile]),
