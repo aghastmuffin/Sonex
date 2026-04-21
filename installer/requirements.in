@@ -2,6 +2,7 @@ argostranslate
 demucs
 faster_whisper
 hnswlib
+cython
 madmom
 librosa
 matplotlib
