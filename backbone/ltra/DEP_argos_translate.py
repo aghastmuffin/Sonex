@@ -9,6 +9,9 @@ import threading
 from concurrent.futures import ThreadPoolExecutor, TimeoutError as FuturesTimeout
 from typing import Any, Dict, List, Tuple
 
+import argostranslate.package
+import argostranslate.translate
+
 from backbone.ltra._translation_layer import translate_segment_words_time_synced
 
 

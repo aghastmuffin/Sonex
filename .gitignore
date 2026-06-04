@@ -4,3 +4,5 @@ __pycache__/
 model_offload/
 **/.DS_Store
 **/vocals_whisper_segments.json/
+
+BUILD/**

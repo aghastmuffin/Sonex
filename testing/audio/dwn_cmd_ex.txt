@@ -13,3 +13,12 @@ yt-dlp -x --audio-format mp3 --audio-quality 0 -o "code/sonex/test_audio/onelove
 yt-dlp -x --audio-format mp3 --audio-quality 0 -o "code/sonex/test_audio/hace_mucho_tiempo" "https://www.youtube.com/watch?v=TImHWyOyok0"
 
 yt-dlp -x --audio-format mp3 --audio-quality 0 -o "code/sonex/testing/audio/ojitos_lindos" "https://www.youtube.com/watch?v=10EX-_h4pYc"
+
+yt-dlp -x --audio-format mp3 --audio-quality 0 -o "code/sonex/testing/audio/loosemymind" "https://www.youtube.com/watch?v=WWEs82u37Mw"
+yt-dlp -x --audio-format mp3 --audio-quality 0 -o "code/sonex/testing/audio/love_sosa" "https://www.youtube.com/watch?v=YWyHZNBz6FE"
+yt-dlp -x --audio-format mp3 --audio-quality 0 -o "code/sonex/testing/audio/hatebeingsober" "https://www.youtube.com/watch?v=ISj_j2h9UjA"
+yt-dlp -x --audio-format mp3 --audio-quality 0 -o "code/sonex/testing/audio/efecto" "https://www.youtube.com/watch?v=Nk8C9FdCdJQ"
+yt-dlp -x --audio-format mp3 --audio-quality 0 -o "code/sonex/testing/audio/overseas" "https://www.youtube.com/watch?v=80M6sAU9DY4"
+
+
+yt-dlp -x --audio-format mp3 --audio-quality 0 -o "code/sonex/testing/audio/whereyouare" "https://www.youtube.com/watch?v=5BqjhUmldDc"

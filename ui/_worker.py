@@ -191,17 +191,18 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
     emit_whisper_progress(100, "Whisper transcribing complete")
     emit_whisper_active(False)
 
+    # Prefer detected language from Whisper when caller did not provide one.
+    if detectlang and not lang_code:
+        lang_code = detectlang
+
     emit_progress(40, "Aligning words...")
     align(
         f"{audiobase}/vocals.mp3",
         f"{audiobase}/vocals_whisper_segments.json",
         f"{audiobase}/lyrics.txt",
-        language=lang_code,
+        language=(lang_code or detectlang or "en"),
         flatten_audio=flattenaudio,
     )
-
-    if detectlang and not lang_code:
-        lang_code = detectlang
 
     try:
         emit_progress(52, "Running MFA alignment...")
@@ -570,6 +571,15 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
     import numpy as np
     import librosa
 
+    def _prepare_madmom_numpy_aliases():
+        # Older madmom versions use removed NumPy aliases (e.g., np.float).
+        if not hasattr(np, "float"):
+            np.float = float
+        if not hasattr(np, "int"):
+            np.int = int
+        if not hasattr(np, "complex"):
+            np.complex = np.complex128
+
     NOTE_NAMES = np.array(["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"])
     af_path = Path(af)
     audio_base = af_path.name
@@ -591,6 +601,7 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
 
     def extract_best_rhythm(rhythm_file_path, rhythm_audio, duration_sec, sr_local):
         try:
+            _prepare_madmom_numpy_aliases()
             from madmom.features.beats import RNNBeatProcessor, DBNBeatTrackingProcessor
 
             fps = 100
@@ -708,6 +719,7 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
 
     def extract_note_strengths(audio_path, audio, sr_local):
         try:
+            _prepare_madmom_numpy_aliases()
             from madmom.audio.chroma import DeepChromaProcessor
 
             fps = 100.0

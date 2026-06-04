@@ -11,7 +11,7 @@ pygame.init()
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption(
-    "🗣️ SONEX SingleViewer 0.3-b"
+    "🗣️ SONEX Lyrics, a TAESON.CO project."
 )
 
 brand_dir = os.path.join(os.path.dirname(__file__),"assets")

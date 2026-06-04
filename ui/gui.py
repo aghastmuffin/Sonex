@@ -50,6 +50,36 @@ def resolve_output_root(output_root_arg=None):
     return default_output_root()
 
 
+def _is_frozen():
+    return bool(getattr(sys, "frozen", False))
+
+
+def resolve_worker_command(worker_script):
+    if not _is_frozen():
+        return sys.executable, [worker_script]
+
+    override = os.environ.get("SONEX_WORKER_BIN")
+    candidates = []
+    if override:
+        candidates.append(override)
+
+    exe_dir = os.path.dirname(sys.executable)
+    exe_suffix = ".exe" if sys.platform.startswith("win") else ""
+    candidates.append(os.path.join(exe_dir, f"sonex-worker{exe_suffix}"))
+
+    for candidate in candidates:
+        if candidate and os.path.isfile(candidate):
+            return candidate, []
+
+    return None, []
+
+
+def resolve_worker_cwd():
+    if _is_frozen():
+        return os.path.dirname(sys.executable)
+    return os.path.dirname(os.path.dirname(__file__))
+
+
 def notify(title, message, parent=None):
     app = QApplication.instance()
     if app is None:
@@ -184,7 +214,7 @@ class SplashWindow(QWidget):
     def __init__(self, parent=None):
         super().__init__(None)
         self._parent_window = parent
-        self.setWindowTitle("SONEX - Processing")
+        self.setWindowTitle("SONEX (taeson.co) - Processing")
         self.setWindowFlags(
             Qt.WindowType.SplashScreen
             | Qt.WindowType.FramelessWindowHint
@@ -471,7 +501,21 @@ class Window(QMainWindow):
         self.set_whisper_active(False)
 
         worker_script = os.path.join(os.path.dirname(__file__), "_worker.py")
-        project_root = os.path.dirname(os.path.dirname(__file__))
+        program, base_args = resolve_worker_command(worker_script)
+        if not program:
+            if self.splash_window:
+                self.splash_window.finish()
+                self.splash_window.close()
+                self.splash_window = None
+            self.button.setEnabled(True)
+            dialogue(
+                "Missing worker binary",
+                "Unable to locate the Sonex worker binary. Set SONEX_WORKER_BIN or place 'sonex-worker' next to the app executable.",
+                parent=self,
+            )
+            return
+
+        project_root = resolve_worker_cwd()
         output_root = resolve_output_root()
         os.makedirs(output_root, exist_ok=True)
         lang_arg = self.lang_code if self.lang_code else ""
@@ -481,9 +525,8 @@ class Window(QMainWindow):
 
         self.pipeline_process = QProcess(self)
         self.pipeline_process.setWorkingDirectory(project_root)
-        self.pipeline_process.setProgram(sys.executable)
-        self.pipeline_process.setArguments([
-            worker_script,
+        self.pipeline_process.setProgram(program)
+        self.pipeline_process.setArguments(base_args + [
             self.file_path,
             lang_arg,
             translation_mode_arg,

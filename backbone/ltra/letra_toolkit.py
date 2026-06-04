@@ -434,7 +434,7 @@ def flatten(target_file: str, target_pitch_semitones: int = -12, band: tuple = (
     import librosa
     from scipy.signal import butter, lfilter
     import numpy as np
-    if target_file != "vocals.mp3" and not force:
+    if Path(target_file).name != "vocals.mp3" and not force:
         print("Translation layer: (bad operation) Skipping flattening since target file is not vocals.mp3 (use force=True to override)")
         raise ValueError("Translation layer: (bad operation) Skipping flattening since target file is not vocals.mp3 (use force=True to override)")
     y, sr = librosa.load(target_file, sr=sr, mono=mono)
@@ -484,6 +484,12 @@ def align(
     from pathlib import Path
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
+
+    resolved_language = (language or "en")
+    if isinstance(resolved_language, str):
+        resolved_language = resolved_language.strip().lower() or "en"
+    else:
+        resolved_language = "en"
 
     if output_path is None:
         output_path = Path(transcript_path).with_stem(f"{Path(transcript_path).stem}.aligned").with_suffix(".json")
@@ -540,10 +546,10 @@ def align(
     # -------------------------
     try:
         align_model, align_model_metadata = whisperx.load_align_model(
-            language_code=language,
+            language_code=resolved_language,
             device=device
         )
-        print(f"Loaded alignment model for language: {language}")
+        print(f"Loaded alignment model for language: {resolved_language}")
     except Exception as e:
         print(f"Failed to load alignment model: {e}")
         print("Falling back to original Whisper timestamps...")
