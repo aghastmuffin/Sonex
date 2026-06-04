@@ -80,8 +80,41 @@ analysis_beat_times_ms = None
 analysis_frame_ms = 1.0
 last_beat_found_at = -1000
 analysis_note_runs = []
-last_pattern_text = ""
 note_bar_levels = np.zeros(12, dtype=np.float32)
+
+# --- Melodic loop tracker state ---
+# Once a repeating phrase is locked we keep tracking it across frames instead of
+# re-detecting from scratch every frame. This keeps the circular progress smooth
+# and gives the loop a tolerance for transient transcription glitches.
+LOOP_ACQUIRE_SIM = 0.70   # similarity required to *start* tracking a loop
+LOOP_KEEP_SIM = 0.50      # weaker similarity still accepted to *stay* locked
+LOOP_MAX_MISSES = 2       # bad repetitions tolerated before dropping the lock
+LOOP_MIN_PERIOD_MS = 1000     # a melodic loop is at least ~1s long
+LOOP_MAX_PERIOD_MS = 9000     # ...and at most ~9s (a phrase, not a whole section)
+LOOP_ACQUIRE_COOLDOWN_MS = 120  # throttle detection while no loop is locked
+loop_state = {
+    "active": False,
+    "motif": [],           # list of pitch-class indices in one repetition
+    "motif_text": "",
+    "anchor_frame": 0,     # frame index where the current repetition started
+    "period_frames": 1,    # duration of one repetition, in analysis frames
+    "cycle_len": 0,        # number of runs in one repetition
+    "misses": 0,           # consecutive failed re-validations
+    "last_attempt_frame": -10 ** 9,  # last frame we ran acquisition detection
+}
+
+
+def _reset_loop_state():
+    loop_state.update(
+        active=False,
+        motif=[],
+        motif_text="",
+        anchor_frame=0,
+        period_frames=1,
+        cycle_len=0,
+        misses=0,
+        last_attempt_frame=-10 ** 9,
+    )
 
 # --- NEW: store broad segments instead of only flat words ---
 segments = []     # original segments: [{start,end,text,words:[{start,end,word}]}]
@@ -510,6 +543,7 @@ def _load_analysis_data(folder_path):
     analysis_frame_ms = 1.0
     analysis_note_runs = []
     note_bar_levels = np.zeros(12, dtype=np.float32)
+    _reset_loop_state()
 
     analysis_path = _find_analysis_file(folder_path, output_root=OUTPUT_ROOT)
     if not analysis_path:
@@ -627,17 +661,17 @@ def _draw_note_strength_bars(ms, dt_ms, x=50, y=420, width=700, height=120):
 
 def _extract_fuzzy_note_runs(
     hpcp,
-    top_k=4,
-    half_life_ms=500,
+    top_k=3,
+    half_life_ms=160,
     frame_ms=1.0,
-    bridge_ms=400,
-    min_run_ms=300,
-    min_relative_strength=0.35,
+    bridge_ms=130,
+    min_run_ms=120,
+    min_relative_strength=0.45,
 ):
     """
     Build stable note runs from noisy HPCP frames.
 
-    Key changes vs original:
+    Key behaviour:
     - decay is derived from half_life_ms so it works correctly
       regardless of the hop size used during analysis.
     - Weights are 1/(rank+1) so a note consistently in 2nd place
@@ -645,6 +679,11 @@ def _extract_fuzzy_note_runs(
     - min_relative_strength gates out weak notes so noise/percussion
       does not pollute the vote.
     - bridge and min_run are in ms, converted to frames internally.
+
+    The defaults are tuned for *melodic* granularity (notes typically change
+    every ~150-400ms). A short half-life keeps note transitions crisp while the
+    rank-weighted decay vote still rejects single-frame transcription flukes
+    (e.g. a stray 1ms note can never outvote the accumulated current note).
     """
     n = len(hpcp)
     if n == 0:
@@ -730,55 +769,48 @@ def _chord_sets_similar(a_sets, b_sets, min_overlap=0.7):
     return float(np.mean(scores)) if scores else 0.0
 
 
-def _pattern_text_for_ms(ms, runs, window_ms=5000, max_groups=8):
-    if not runs:
-        return ""
+def _run_index_for_frame(runs, frame_idx):
+    """Index of the run whose [start, end] frame span contains frame_idx.
 
-    start_ms = max(0, ms - window_ms)
-    groups = []
-    for note_idx, s, e in runs:
-        if e < start_ms or s > ms:
-            continue
-        ov_s = max(s, start_ms)
-        ov_e = min(e, ms)
-        dur = ov_e - ov_s + 1
-        if dur <= 0:
-            continue
-
-        # Convert duration to repeated-note width for readable pattern strings.
-        reps = max(1, min(8, int(round(dur / 220.0))))
-        groups.append(pitch_classes[int(note_idx)] * reps)
-
-    if not groups:
-        return ""
-    return " ".join(groups[-max_groups:])
+    Runs are contiguous and sorted by start frame, so we binary-search the
+    start values. Returns None only when frame_idx is before the first run.
+    """
+    n = len(runs)
+    if n == 0 or frame_idx < runs[0][1]:
+        return None
+    lo, hi = 0, n - 1
+    while lo < hi:
+        mid = (lo + hi + 1) // 2
+        if runs[mid][1] <= frame_idx:
+            lo = mid
+        else:
+            hi = mid - 1
+    return lo
 
 
-def _find_repeating_cycle_for_ms(
-    frame_idx,
+def _detect_repeating_cycle(
     runs,
-    min_cycle_notes=6,
-    max_cycle_notes=32,
-    lookback_runs=80,
-    min_similarity=0.62,
+    cur_idx,
+    min_cycle_notes=3,
+    max_cycle_notes=40,
+    lookback_runs=220,
+    min_similarity=LOOP_ACQUIRE_SIM,
 ):
-    """
-    Detect a repeating note-order cycle around the current frame.
-    Returns cycle metadata with progress, or None.
+    """Find the most plausible repeating note-order cycle ending at cur_idx.
 
-    frame_idx is the integer frame index (equal to elapsed_ms when frame_ms==1).
-    The run list stores frame indices in start/end fields.
-    """
-    if not runs:
-        return None
+    For each candidate ``cycle_len`` we compare the most recent window against
+    the one or two windows that precede it. Requiring the phrase to match across
+    *two* prior repetitions (when enough history exists) is what separates a real
+    riff from a coincidental one-off match -- it is the persistence test that the
+    old single-comparison logic lacked.
 
-    cur_idx = None
-    for i, (_n, s, e) in enumerate(runs):
-        if s <= frame_idx <= e:
-            cur_idx = i
-            break
-    if cur_idx is None:
-        return None
+    The period is measured in real analysis frames (robust to repetitions that
+    contain a different *number* of runs because of transcription noise) and is
+    constrained to a musically plausible length window.
+    """
+    frame_ms = max(1e-6, float(analysis_frame_ms))
+    min_period_frames = LOOP_MIN_PERIOD_MS / frame_ms
+    max_period_frames = LOOP_MAX_PERIOD_MS / frame_ms
 
     start_idx = max(0, cur_idx - lookback_runs + 1)
     seq = [int(r[0]) for r in runs[start_idx: cur_idx + 1]]
@@ -787,46 +819,140 @@ def _find_repeating_cycle_for_ms(
     best = None
     for cycle_len in range(min_cycle_notes, max_cycle_notes + 1):
         if rel_cur + 1 < cycle_len * 2:
-            continue
+            break  # not enough history for even two repetitions of this length
 
-        a = seq[rel_cur - (2 * cycle_len) + 1: rel_cur - cycle_len + 1]
         b = seq[rel_cur - cycle_len + 1: rel_cur + 1]
-        if len(set(b)) < 2:
+        if len(set(b)) < 3:
+            continue  # need at least a little melodic movement to call it a loop
+
+        anchor_start = start_idx + (rel_cur - cycle_len + 1)
+        period_frames = max(1, int(runs[cur_idx][2]) - int(runs[anchor_start][1]) + 1)
+        if period_frames < min_period_frames or period_frames > max_period_frames:
             continue
 
-        sim = SequenceMatcher(None, a, b).ratio()
-        if sim < min_similarity:
+        a1 = seq[rel_cur - (2 * cycle_len) + 1: rel_cur - cycle_len + 1]
+        sim1 = SequenceMatcher(None, a1, b).ratio()
+        if sim1 < min_similarity:
             continue
 
-        if best is None or sim > best["sim"]:
+        # Persistence test: when a third window is available the phrase must also
+        # resemble the repetition before last, otherwise it is likely a fluke.
+        if rel_cur + 1 >= cycle_len * 3:
+            a2 = seq[rel_cur - (3 * cycle_len) + 1: rel_cur - (2 * cycle_len) + 1]
+            sim2 = SequenceMatcher(None, a2, b).ratio()
+            if sim2 < min_similarity - 0.12:
+                continue
+            sim = 0.5 * (sim1 + sim2)
+        else:
+            sim = sim1
+
+        # Prefer strong matches; on near-ties prefer the *shorter* (fundamental)
+        # period so we lock the riff rather than an integer multiple of it.
+        score = (round(sim, 2), -cycle_len)
+        if best is None or score > best["score"]:
             best = {
+                "score": score,
                 "sim": sim,
                 "cycle_len": cycle_len,
-                "anchor_start": start_idx + (rel_cur - cycle_len + 1),
+                "anchor_start": anchor_start,
+                "anchor_frame": int(runs[anchor_start][1]),
+                "period_frames": period_frames,
+                "motif": [int(runs[k][0]) for k in range(anchor_start, cur_idx + 1)],
             }
 
-    if best is None:
+    return best
+
+
+def _lock_loop(cand):
+    loop_state.update(
+        active=True,
+        misses=0,
+        anchor_frame=cand["anchor_frame"],
+        period_frames=cand["period_frames"],
+        cycle_len=cand["cycle_len"],
+        motif=cand["motif"],
+        motif_text=" ".join(pitch_classes[n] for n in cand["motif"]),
+    )
+
+
+def _update_loop_tracker(frame_idx, runs):
+    """Stateful loop tracking.
+
+    Acquires a loop with a strong similarity threshold, then keeps it locked and
+    drives progress from elapsed frames (so the circle is smooth and monotonic).
+    Re-validates once per repetition with a weaker threshold and tolerates a few
+    bad cycles before letting go -- this is the margin for error against single
+    spurious notes from librosa.
+    """
+    st = loop_state
+    if not runs or frame_idx < 0:
+        _reset_loop_state()
         return None
 
-    cycle_len = best["cycle_len"]
-    anchor_start = best["anchor_start"]
-    cycle_start_idx = anchor_start + ((cur_idx - anchor_start) // cycle_len) * cycle_len
-    cycle_end_idx = min(cycle_start_idx + cycle_len - 1, len(runs) - 1)
+    cur_idx = _run_index_for_frame(runs, frame_idx)
+    if cur_idx is None:
+        _reset_loop_state()
+        return None
 
-    cycle_start_ms = int(runs[cycle_start_idx][1])
-    cycle_end_ms = int(runs[cycle_end_idx][2])
-    cycle_dur = max(1, cycle_end_ms - cycle_start_ms + 1)
-    progress = max(0.0, min(1.0, (frame_idx - cycle_start_ms) / float(cycle_dur)))
+    if st["active"]:
+        elapsed = frame_idx - st["anchor_frame"]
+        if elapsed < 0:
+            # Playhead jumped backwards (seek/restart) -> drop and re-acquire.
+            _reset_loop_state()
+        else:
+            period = max(1, int(st["period_frames"]))
+            if elapsed >= period:
+                # A repetition boundary passed: re-validate with tolerance.
+                cand = _detect_repeating_cycle(
+                    runs, cur_idx, min_similarity=LOOP_KEEP_SIM
+                )
+                # Always keep the ring phase-continuous by advancing the anchor
+                # whole periods at a time -- never snap it, or the circle jumps.
+                st["anchor_frame"] += (elapsed // period) * period
+                if cand is not None and cand["sim"] >= LOOP_KEEP_SIM:
+                    st["misses"] = 0
+                    # Gently track tempo drift instead of snapping the period.
+                    st["period_frames"] = max(
+                        1, int(round(0.7 * period + 0.3 * cand["period_frames"]))
+                    )
+                    # Only refresh the displayed motif when it really changed,
+                    # so near-identical repetitions don't make the label flicker.
+                    new_text = " ".join(pitch_classes[n] for n in cand["motif"])
+                    if SequenceMatcher(None, st["motif_text"], new_text).ratio() < 0.6:
+                        st["motif"] = cand["motif"]
+                        st["motif_text"] = new_text
+                else:
+                    st["misses"] += 1
+                    if st["misses"] > LOOP_MAX_MISSES:
+                        _reset_loop_state()
 
-    motif = [
-        pitch_classes[int(runs[i][0])]
-        for i in range(cycle_start_idx, cycle_end_idx + 1)
-    ]
+            if st["active"]:
+                period = max(1, int(st["period_frames"]))
+                phase = (frame_idx - st["anchor_frame"]) % period
+                return {
+                    "motif_text": st["motif_text"],
+                    "progress": phase / float(period),
+                    "locked": True,
+                }
 
+    # Throttle acquisition: detection is the expensive path, and there is no
+    # point re-scanning every render frame while nothing is looping.
+    cooldown = LOOP_ACQUIRE_COOLDOWN_MS / max(1e-6, float(analysis_frame_ms))
+    if frame_idx - st["last_attempt_frame"] < cooldown:
+        return None
+    st["last_attempt_frame"] = frame_idx
+
+    cand = _detect_repeating_cycle(runs, cur_idx, min_similarity=LOOP_ACQUIRE_SIM)
+    if cand is None:
+        return None
+
+    _lock_loop(cand)
+    period = max(1, int(st["period_frames"]))
+    phase = (frame_idx - st["anchor_frame"]) % period
     return {
-        "motif_text": " ".join(motif),
-        "progress": progress,
-        "similarity": best["sim"],
+        "motif_text": st["motif_text"],
+        "progress": phase / float(period),
+        "locked": True,
     }
 
 
@@ -1264,26 +1390,16 @@ def update_segment_view(ms, seg_list, y, state_name="orig"):
 
 
 def dispnotes(ms, dt_ms, x=50, y=520):
-    global last_pattern_text
-
     _draw_note_strength_bars(ms, dt_ms, x=x, y=y - 102, width=700, height=102)
 
     source = analysis_note_strengths if analysis_note_strengths is not None else analysis_hpcp
     frame_index = _analysis_index_from_ms(ms, len(source)) if source is not None else -1
-    cycle = _find_repeating_cycle_for_ms(frame_index, analysis_note_runs) if frame_index >= 0 else None
+    cycle = _update_loop_tracker(frame_index, analysis_note_runs) if frame_index >= 0 else None
     if cycle is None:
         return
 
     pattern_text = cycle["motif_text"]
-
-    # Anti-jitter smoothing: only freeze near-identical text.
-    if pattern_text and last_pattern_text:
-        ratio = SequenceMatcher(None, last_pattern_text, pattern_text).ratio()
-        if ratio >= 0.90:
-            pattern_text = last_pattern_text
-
     if pattern_text:
-        last_pattern_text = pattern_text
         pat_label = dbgfont.render(f"Repeat~ [{pattern_text}]", True, (190, 245, 190))
         screen.blit(pat_label, (x, y - 22)) #TODO: Fix rendering here, move down to below the RPM/Beat counter
         _draw_pattern_loader(cycle["progress"], x + 710, y - 8)
