@@ -956,15 +956,13 @@ def _update_loop_tracker(frame_idx, runs):
     }
 
 
-def _draw_pattern_loader(progress, center_x, center_y):
+def _draw_pattern_loader(progress, center_x, center_y, radius=11, thickness=4):
     """
     Draw a hollow circular loader that fills clockwise from a 0..1 progress value.
     """
     if progress is None:
         return
     progress = max(0.0, min(1.0, float(progress)))
-    radius = 15
-    thickness = 5
 
     # Base ring
     pygame.draw.circle(screen, (90, 90, 90), (center_x, center_y), radius, thickness)
@@ -1011,7 +1009,7 @@ def choose_generated_folder():
     refresh_btn = pygame.Rect(610, 190, 120, 50)
     btn_folder = pygame.Rect(70, 260, 260, 52)
     force_native_btn = pygame.Rect(350, 260, 220, 52)
-    start_btn = pygame.Rect(300, 420, 200, 64)
+    start_btn = pygame.Rect(300, 500, 200, 56)
 
     def _apply_dropdown_selection(index):
         nonlocal folder_path, native_file, translated_file, resolved_folder, dropdown_selected
@@ -1043,14 +1041,23 @@ def choose_generated_folder():
                 list_h = min(dropdown_visible, len(eligible_dirs)) * dropdown_item_h + 8
                 list_rect = pygame.Rect(list_x, list_y, dropdown_rect.width, list_h)
 
-                if dropdown_rect.collidepoint(event.pos):
-                    dropdown_open = bool(eligible_dirs) and not dropdown_open
-                elif dropdown_open and eligible_dirs and list_rect.collidepoint(event.pos):
-                    rel_y = event.pos[1] - (list_y + 4)
-                    clicked = dropdown_scroll + (rel_y // dropdown_item_h)
-                    if 0 <= clicked < len(eligible_dirs):
-                        _apply_dropdown_selection(clicked)
-                    dropdown_open = False
+                if dropdown_open:
+                    # While the list overlay is up it owns the clicks: only the
+                    # header (toggle) and the list items are live. Anything else
+                    # just closes the dropdown so it can't trigger the buttons
+                    # hidden behind the overlay.
+                    if dropdown_rect.collidepoint(event.pos):
+                        dropdown_open = False
+                    elif eligible_dirs and list_rect.collidepoint(event.pos):
+                        rel_y = event.pos[1] - (list_y + 4)
+                        clicked = dropdown_scroll + (rel_y // dropdown_item_h)
+                        if 0 <= clicked < len(eligible_dirs):
+                            _apply_dropdown_selection(clicked)
+                        dropdown_open = False
+                    else:
+                        dropdown_open = False
+                elif dropdown_rect.collidepoint(event.pos):
+                    dropdown_open = bool(eligible_dirs)
                 elif refresh_btn.collidepoint(event.pos):
                     eligible_dirs = _refresh_eligible_dirs()
                     dropdown_open = False
@@ -1066,15 +1073,12 @@ def choose_generated_folder():
                     if selected:
                         folder_path = selected
                         native_file, translated_file, resolved_folder = _find_transcript_files(folder_path)
-                    dropdown_open = False
                 elif force_native_btn.collidepoint(event.pos):
                     force_native = not force_native
                 elif start_btn.collidepoint(event.pos):
                     can_start = (native_file is not None) if force_native else ((native_file is not None) or (translated_file is not None))
                     if can_start:
                         choosing = False
-                else:
-                    dropdown_open = False
 
         can_start = (native_file is not None) if force_native else ((native_file is not None) or (translated_file is not None))
 
@@ -1164,32 +1168,32 @@ def choose_generated_folder():
             file2_label = dbgfont.render(f"System/Translated: {_shorten_path(translated_file)}", True, (190, 220, 190) if translated_file else (210, 210, 210))
             scan_label = dbgfont.render(f"Found: {len(eligible_dirs)} eligible folders", True, (190, 190, 190))
             screen.blit(scan_label, (70, 330))
-            screen.blit(folder_label, (70, 360))
-            screen.blit(resolved_label, (70, 390))
-            screen.blit(file1_label, (70, 420))
-            screen.blit(file2_label, (70, 450))
+            screen.blit(folder_label, (70, 358))
+            screen.blit(resolved_label, (70, 386))
+            screen.blit(file1_label, (70, 414))
+            screen.blit(file2_label, (70, 442))
 
             hint = dbgfont.render("Use dropdown or manual choose, then click Start", True, (165, 165, 165))
             if native_file and translated_file and not force_native:
                 mode = dbgfont.render("Mode: Dual transcript (native + system language)", True, (170, 220, 170))
-                screen.blit(mode, (WIDTH // 2 - mode.get_width() // 2, 520))
+                screen.blit(mode, (WIDTH // 2 - mode.get_width() // 2, 470))
             elif force_native and native_file:
                 mode = dbgfont.render("Mode: Native only (forced)", True, (220, 210, 160))
-                screen.blit(mode, (WIDTH // 2 - mode.get_width() // 2, 520))
+                screen.blit(mode, (WIDTH // 2 - mode.get_width() // 2, 470))
             elif native_file or translated_file:
                 mode = dbgfont.render("Mode: Single transcript", True, (220, 210, 160))
-                screen.blit(mode, (WIDTH // 2 - mode.get_width() // 2, 520))
+                screen.blit(mode, (WIDTH // 2 - mode.get_width() // 2, 470))
 
             if folder_path and not (native_file or translated_file):
                 warn = dbgfont.render("Could not find a transcript file in that folder tree.", True, (230, 120, 120))
-                screen.blit(warn, (WIDTH // 2 - warn.get_width() // 2, 545))
+                screen.blit(warn, (WIDTH // 2 - warn.get_width() // 2, 470))
             if force_native and not native_file and (translated_file is not None):
                 warn3 = dbgfont.render("Force native is ON but no native transcript was found.", True, (230, 170, 120))
-                screen.blit(warn3, (WIDTH // 2 - warn3.get_width() // 2, 545))
+                screen.blit(warn3, (WIDTH // 2 - warn3.get_width() // 2, 470))
             if not eligible_dirs:
                 warn2 = dbgfont.render("Auto-scan found none. Use Choose Folder for manual selection.", True, (230, 170, 120))
-                screen.blit(warn2, (WIDTH // 2 - warn2.get_width() // 2, 520))
-            screen.blit(hint, (WIDTH // 2 - hint.get_width() // 2, 570))
+                screen.blit(warn2, (WIDTH // 2 - warn2.get_width() // 2, 470))
+            screen.blit(hint, (WIDTH // 2 - hint.get_width() // 2, 568))
 
         pygame.display.flip()
         clock.tick(60)
@@ -1389,8 +1393,8 @@ def update_segment_view(ms, seg_list, y, state_name="orig"):
     return bottom_y
 
 
-def dispnotes(ms, dt_ms, x=50, y=520):
-    _draw_note_strength_bars(ms, dt_ms, x=x, y=y - 102, width=700, height=102)
+def dispnotes(ms, dt_ms, x=50, bars_y=418, loop_row_y=556):
+    _draw_note_strength_bars(ms, dt_ms, x=x, y=bars_y, width=700, height=102)
 
     source = analysis_note_strengths if analysis_note_strengths is not None else analysis_hpcp
     frame_index = _analysis_index_from_ms(ms, len(source)) if source is not None else -1
@@ -1398,14 +1402,17 @@ def dispnotes(ms, dt_ms, x=50, y=520):
     if cycle is None:
         return
 
+    # Loop readout lives on its own row below the bars + BPM line so it never
+    # overlaps the note-strength panel. The progress ring sits at the left edge
+    # (ahead of the label) to keep clear of the bottom-right credits/time text.
     pattern_text = cycle["motif_text"]
     if pattern_text:
+        _draw_pattern_loader(cycle["progress"], x + 13, loop_row_y + 8)
         pat_label = dbgfont.render(f"Repeat~ [{pattern_text}]", True, (190, 245, 190))
-        screen.blit(pat_label, (x, y - 22)) #TODO: Fix rendering here, move down to below the RPM/Beat counter
-        _draw_pattern_loader(cycle["progress"], x + 710, y - 8)
+        screen.blit(pat_label, (x + 34, loop_row_y))
 
 
-def dispbeats(ms, x=50, y=545):
+def dispbeats(ms, x=50, y=530):
     global last_beat_found_at
 
     beat_visible = False
@@ -1512,7 +1519,7 @@ while running:
     dispbeats(elapsed_ms)
 
     screen.blit(time_text, ((780 - time_text.get_width()), (600 - time_text.get_height())))
-    screen.blit(buildfor, ((0 + buildfor.get_width()), (0 + buildfor.get_height())))
+    screen.blit(buildfor, (10, 8))
     pygame.display.flip()
 
 pygame.quit()
