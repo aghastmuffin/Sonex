@@ -238,8 +238,8 @@ def _find_transcript_files(folder_path):
         "mfa_vocals_whisper_segments.json",
     ]
     trans_candidates = [
-        "argos_translated.json",
         "translated.json",
+        "argos_translated.json",
         "vocals_whisper_segments_translated.json",
     ]
 

@@ -57,8 +57,8 @@ TRANSCRIPT_FILE_CANDIDATES = [
 ]
 PHONE_LEVEL_TRANSCRIPTS = {"mfa_vocals_phone_segments.json"}
 TRANSLATED_TRANSCRIPT_FILE_CANDIDATES = [
-    "argos_translated.json",
     "translated.json",
+    "argos_translated.json",
     "vocals_whisper_segments_translated.json",
     "whisper_translated.json",
 ]

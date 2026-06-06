@@ -297,19 +297,19 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
 
     if translation_mode in {"argos", "both"}:
         if source_lang == target_lang:
-            print(f"Skipping Argos translation: source and target are both '{target_lang}'.", flush=True)
+            print(f"Skipping translation: source and target are both '{target_lang}'.", flush=True)
         else:
-            emit_progress(62, "Argos translation pass...")
-            argos_out = f"{audiobase}/argos_translated.json"
+            emit_progress(62, "Translation pass (OpusMT/NLLB)...")
+            trans_out = f"{audiobase}/translated.json"
             translate_file(
                 f"{audiobase}/vocals_whisper_segments.json",
-                # Keep source-language transcript unchanged and write Argos output separately.
-                output_path=argos_out,
+                output_path=trans_out,
                 from_lang=source_lang,
                 to_lang=target_lang,
                 verbose=True,
+                use_opus=True,
             )
-            print(f"INFO|Argos translation saved to {argos_out}", flush=True)
+            print(f"INFO|Translation saved to {trans_out}", flush=True)
 
     emit_progress(68, "Text pipeline complete")
     return str((Path.cwd() / audiobase).resolve()), (detectlang or lang_code)
