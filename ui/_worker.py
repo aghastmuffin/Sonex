@@ -19,6 +19,24 @@ language_dict = {
 }
 
 
+def _load_language_helpers():
+    from backbone.ltra.languages import (
+        MFA_LANGUAGE_NAMES,
+        get_system_language_code,
+        normalize_lang_code,
+        resolve_source_language,
+        resolve_target_language,
+    )
+
+    return (
+        MFA_LANGUAGE_NAMES,
+        get_system_language_code,
+        normalize_lang_code,
+        resolve_source_language,
+        resolve_target_language,
+    )
+
+
 def default_output_root() -> Path:
     app_name = "Sonex"
     if sys.platform.startswith("darwin"):
@@ -132,12 +150,21 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
     from backbone.ltra import letra_toolkit as lt
     from backbone.ltra.letra_toolkit import transcribe, align, separate
     from backbone.ltra.argos_translate import translate_file
+    (
+        mfa_language_names,
+        get_system_language_code,
+        normalize_lang_code,
+        resolve_source_language,
+        resolve_target_language,
+    ) = _load_language_helpers()
     global demucs_stems
 
     settings = settings or {}
     demucs_model = settings.get("demucs_model", "htdemucs")
     demucs_stems = settings.get("demucs_stems", "default")
-    whisper_model = settings.get("whisper_model", "medium")
+    from backbone.ltra.whisper_models import normalize_whisper_model_name
+
+    whisper_model = normalize_whisper_model_name(settings.get("whisper_model", "medium"))
     whisper_beam_size = int(settings.get("whisper_beam_size", 5))
     whisper_patience = int(settings.get("whisper_patience", 2))
     whisper_best_of = int(settings.get("whisper_best_of", 3))
@@ -157,6 +184,9 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
     translation_mode = (translation_mode or "none").strip().lower()
     if translation_mode not in {"none", "argos", "whisper", "both"}:
         translation_mode = "none"
+
+    lang_code = resolve_source_language(lang_code)
+    target_lang = resolve_target_language(target_lang)
     emit_progress(10, "Separating stems...")
     emit_demucs_active(True)
     emit_demucs_progress(0, "Demucs separating stems...")
@@ -208,11 +238,11 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
         emit_progress(52, "Running MFA alignment...")
         from backbone.ltra import _mfa_aligner
         mfa_lang = detectlang or lang_code
-        if mfa_lang in language_dict:
+        if mfa_lang in mfa_language_names:
             _mfa_aligner.generate_aligned_v2(
                 audiobase,
-                acoustic=f"{language_dict[mfa_lang]}",
-                dictionary=f"{language_dict[mfa_lang]}",
+                acoustic=f"{mfa_language_names[mfa_lang]}",
+                dictionary=f"{mfa_language_names[mfa_lang]}",
                 allow_fuzzy=True,
                 fuzzy_max_lookahead=8,
                 phonemizer_language=mfa_lang,
@@ -254,25 +284,8 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
 
     _write_playback_transcript(audiobase)
 
-    def normalize_lang_code(code):
-            if not code:
-                return None
-            code = code.lower()
-            if code in language_dict:
-                return code
-            for k, v in language_dict.items():
-                if v == code:
-                    return k
-            return None
-    try:
-        import locale
-        syslang = locale.getlocale()[0][:2]
-        normalize_lang_code(syslang)  # Test if we can normalize the system language code
-    except:
-        syslang = "en"
-
-    source_lang = normalize_lang_code(detectlang or lang_code or syslang)
-    target_lang = normalize_lang_code(target_lang or syslang) #XXX
+    source_lang = normalize_lang_code(detectlang or lang_code) or get_system_language_code()
+    target_lang = resolve_target_language(target_lang)
 
     if translation_mode in {"whisper", "both"}:
         emit_progress(58, "Whisper translation pass...")
@@ -299,7 +312,7 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
         if source_lang == target_lang:
             print(f"Skipping translation: source and target are both '{target_lang}'.", flush=True)
         else:
-            emit_progress(62, "Translation pass (OpusMT/NLLB)...")
+            emit_progress(62, f"Translation pass (OpusMT/NLLB -> {target_lang})...")
             trans_out = f"{audiobase}/translated.json"
             translate_file(
                 f"{audiobase}/vocals_whisper_segments.json",
@@ -718,6 +731,19 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
         return fixed
 
     def extract_note_strengths(audio_path, audio, sr_local):
+        duration_sec = float(len(np.asarray(audio, dtype=np.float32))) / float(sr_local)
+
+        def _frame_timing(num_frames):
+            if num_frames <= 0 or duration_sec <= 0:
+                return np.zeros(0, dtype=np.float32), 512, (512 * 1000.0) / float(sr_local)
+            frame_ms = (duration_sec * 1000.0) / float(num_frames)
+            hop_length = max(1, int(round(sr_local * frame_ms / 1000.0)))
+            frame_times = (
+                np.arange(num_frames, dtype=np.float32)
+                * np.float32(duration_sec / float(num_frames))
+            )
+            return frame_times, hop_length, frame_ms
+
         try:
             _prepare_madmom_numpy_aliases()
             from madmom.audio.chroma import DeepChromaProcessor
@@ -725,9 +751,13 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
             fps = 100.0
             chroma = _ensure_12_bin_matrix(DeepChromaProcessor(fps=fps)(str(audio_path)))
             if chroma.shape[0] > 0:
-                frame_times = np.arange(chroma.shape[0], dtype=np.float32) / np.float32(fps)
-                hop_length = max(1, int(round(sr_local / fps)))
-                return chroma, frame_times, hop_length, "madmom_deepchroma"
+                frame_times, hop_length, frame_ms = _frame_timing(chroma.shape[0])
+                print(
+                    f"INFO|madmom deep chroma frames={chroma.shape[0]} "
+                    f"frame_ms={frame_ms:.2f} duration={duration_sec:.1f}s",
+                    flush=True,
+                )
+                return chroma, frame_times, hop_length, "madmom_deepchroma", frame_ms
 
             print("INFO|madmom deep chroma returned no frames; falling back to librosa.", flush=True)
         except Exception as exc:
@@ -747,7 +777,8 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
             sr=sr_local,
             hop_length=hop_length,
         ).astype(np.float32)
-        return chroma, frame_times, hop_length, "librosa_chroma_cqt"
+        frame_ms = (hop_length * 1000.0) / float(sr_local)
+        return chroma, frame_times, hop_length, "librosa_chroma_cqt", frame_ms
 
     def filter_beats_by_strength(audio, sr_local, beats):
         if len(beats) == 0:
@@ -802,11 +833,15 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
         rhythm_audio *= 20.0
 
         frame_size = 2048
-        frame_hpcps, frame_times, hop_size, note_feature_method = extract_note_strengths(file_path, audio, sr)
+        analysis_duration_sec = float(len(audio)) / float(sr)
+        frame_hpcps, frame_times, hop_size, note_feature_method, frame_ms = extract_note_strengths(
+            file_path, audio, sr
+        )
         frame_hpcps = np.asarray(frame_hpcps, dtype=np.float32)
         if frame_hpcps.ndim != 2 or frame_hpcps.shape[0] == 0:
             frame_hpcps = np.zeros((1, 12), dtype=np.float32)
             frame_times = np.zeros(1, dtype=np.float32)
+            frame_ms = analysis_duration_sec * 1000.0
         # Keep explicit note-strength views in addition to raw HPCP frames.
         # `frame_hpcps` already stores per-frame pitch-class strength (12 bins).
         note_strengths_per_frame = frame_hpcps.astype(np.float32)
@@ -889,6 +924,8 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
             sample_rate=np.array([sr]),
             frame_size=np.array([frame_size]),
             hop_size=np.array([hop_size]),
+            frame_ms=np.array([frame_ms], dtype=np.float32),
+            analysis_duration_sec=np.array([analysis_duration_sec], dtype=np.float32),
         )
 
     emit_progress(78, "Analyzing instrumental notes/beats...")
@@ -919,7 +956,7 @@ def main():
 
     file_path = sys.argv[1]
     lang_code = sys.argv[2] if len(sys.argv) > 2 and sys.argv[2] else None
-    lang_code_to = sys.argv[5] if len(sys.argv) > 5 and sys.argv[5] else None
+    target_lang = sys.argv[5] if len(sys.argv) > 5 and sys.argv[5] else None
     output_root_arg = sys.argv[6] if len(sys.argv) > 6 and sys.argv[6] else None
     translation_mode = sys.argv[3] if len(sys.argv) > 3 and sys.argv[3] else "none"
     raw_settings = sys.argv[4] if len(sys.argv) > 4 and sys.argv[4] else "{}"
@@ -938,7 +975,7 @@ def main():
         audiobase, detected_lang = splitter(
             file_path,
             lang_code=lang_code,
-            target_lang=lang_code_to,
+            target_lang=target_lang,
             translation_mode=translation_mode,
             settings=settings,
         )

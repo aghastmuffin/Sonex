@@ -190,6 +190,44 @@ def _start_audio_from_transcript_file(file_path):
         pass
 
 
+def _resolve_analysis_frame_ms(data, num_frames):
+    if num_frames <= 0:
+        return 1.0
+
+    if "frame_ms" in data:
+        arr = np.asarray(data["frame_ms"], dtype=np.float64)
+        if arr.size > 0 and float(arr.flat[0]) > 0:
+            return float(arr.flat[0])
+
+    if "analysis_duration_sec" in data:
+        dur = np.asarray(data["analysis_duration_sec"], dtype=np.float64)
+        if dur.size > 0 and float(dur.flat[0]) > 0:
+            return (float(dur.flat[0]) * 1000.0) / float(num_frames)
+
+    sample_rate = hop_size = None
+    if "sample_rate" in data and len(data["sample_rate"]) > 0:
+        sample_rate = float(data["sample_rate"][0])
+    if "hop_size" in data and len(data["hop_size"]) > 0:
+        hop_size = float(data["hop_size"][0])
+    nominal_ms = (
+        (hop_size * 1000.0) / sample_rate
+        if sample_rate and hop_size and sample_rate > 0
+        else 1.0
+    )
+
+    inferred_duration = None
+    if "beat_times" in data:
+        beat_times = np.asarray(data["beat_times"], dtype=np.float64)
+        if beat_times.size > 0:
+            inferred_duration = float(np.max(beat_times)) * 1.02
+    if inferred_duration and inferred_duration > 0:
+        corrected_ms = (inferred_duration * 1000.0) / float(num_frames)
+        if corrected_ms > nominal_ms * 1.25:
+            return corrected_ms
+
+    return max(nominal_ms, 1e-6)
+
+
 def _analysis_index_from_ms(ms, series_len):
     if series_len <= 0:
         return -1
@@ -330,13 +368,8 @@ def _load_analysis_data(folder_path):
         if beat_times is not None and len(beat_times) > 0:
             analysis_beat_times_ms = np.rint(np.asarray(beat_times, dtype=np.float64) * 1000.0).astype(np.int64)
 
-        sample_rate_arr = data["sample_rate"] if "sample_rate" in data else None
-        hop_size_arr = data["hop_size"] if "hop_size" in data else None
-        if sample_rate_arr is not None and hop_size_arr is not None and len(sample_rate_arr) > 0 and len(hop_size_arr) > 0:
-            sample_rate = float(sample_rate_arr[0])
-            hop_size = float(hop_size_arr[0])
-            if sample_rate > 0:
-                analysis_frame_ms = (hop_size * 1000.0) / sample_rate
+        num_frames = len(analysis_hpcp) if analysis_hpcp is not None else 0
+        analysis_frame_ms = _resolve_analysis_frame_ms(data, num_frames)
 
         bpm_arr = data["bpm"] if "bpm" in data else None
         if bpm_arr is not None and len(bpm_arr) > 0:
@@ -524,25 +557,43 @@ def update_segment_view(ms, seg_list, y, state_name):
         si, wi = seg_i1, word_i1
         cache_id, cache_tokens = _cached_seg_id_1, _cached_tokens_1
 
-    # advance segment index if we're past its end
-    while si < len(seg_list) and elapsed >= seg_list[si]["end"]:
-        si += 1
-        wi = 0
-        cache_id = None
-        cache_tokens = None
-
-    if si >= len(seg_list):
-        # write back state
+    def _persist_state():
+        nonlocal si, wi, cache_id, cache_tokens
         if state_name == "orig":
             seg_i, word_i = si, wi
             _cached_seg_id, _cached_tokens = cache_id, cache_tokens
         else:
             seg_i1, word_i1 = si, wi
             _cached_seg_id_1, _cached_tokens_1 = cache_id, cache_tokens
+
+    while si < len(seg_list) - 1:
+        cur_words = seg_list[si].get("words") or []
+        next_words = seg_list[si + 1].get("words") or []
+        if not cur_words or not next_words:
+            break
+        if elapsed >= float(next_words[0]["start"]):
+            si += 1
+            wi = 0
+            cache_id = None
+            cache_tokens = None
+            continue
+        break
+
+    if si >= len(seg_list):
+        _persist_state()
         return y
 
     seg = seg_list[si]
-    words = seg["words"]
+    words = seg.get("words") or []
+    if not words:
+        _persist_state()
+        return y
+
+    first_start = float(words[0]["start"])
+    last_end = float(words[-1]["end"])
+    if elapsed < first_start or elapsed > last_end:
+        _persist_state()
+        return y
 
     # advance word index inside the segment
     while wi < len(words) and elapsed >= words[wi]["end"]:

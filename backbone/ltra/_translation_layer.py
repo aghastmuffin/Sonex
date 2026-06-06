@@ -293,6 +293,7 @@ _NLLB_CODES = {
     "cs": "ces_Latn", "ro": "ron_Latn", "hu": "hun_Latn", "el": "ell_Grek",
     "he": "heb_Hebr", "th": "tha_Thai", "vi": "vie_Latn", "id": "ind_Latn",
     "ms": "zsm_Latn", "tl": "tgl_Latn", "ca": "cat_Latn", "hr": "hrv_Latn",
+    "bn": "ben_Beng", "pa": "pan_Guru",
 }
 
 

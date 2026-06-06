@@ -171,6 +171,57 @@ def _probe_audio_duration_seconds(inp) -> Optional[float]:
         return None
 
 
+WHISPER_CHUNK_SEC = 55.0
+
+
+def _collect_whisper_segments(model, inp, *, transcribe_kwargs, audio_duration, progress_cb=None, task_label="Whisper"):
+    """
+    Transcribe long vocals in fixed windows so Whisper cannot skip whole sections
+    after extended musical passages between speech segments.
+    """
+    duration = audio_duration or _probe_audio_duration_seconds(inp)
+    base_kwargs = dict(transcribe_kwargs)
+    base_kwargs.setdefault("condition_on_previous_text", False)
+
+    def _emit_progress(end_sec, label_suffix=""):
+        if progress_cb is None or duration is None or duration <= 0:
+            return
+        try:
+            pct = max(0, min(100, int((float(end_sec) / float(duration)) * 100)))
+            progress_cb(pct, f"{task_label} {pct}%{label_suffix}")
+        except (TypeError, ValueError, ZeroDivisionError):
+            return
+
+    if duration is None or duration <= WHISPER_CHUNK_SEC:
+        segments, _info = model.transcribe(inp, **base_kwargs)
+        collected = list(segments)
+        _emit_progress(duration or 0, " complete")
+        return collected
+
+    collected = []
+    chunk_start = 0.0
+    while chunk_start < duration - 0.01:
+        chunk_end = min(duration, chunk_start + WHISPER_CHUNK_SEC)
+        chunk_kwargs = dict(base_kwargs)
+        chunk_kwargs["clip_timestamps"] = [chunk_start, chunk_end]
+        segments, _info = model.transcribe(inp, **chunk_kwargs)
+        for seg in segments:
+            seg_start = float(getattr(seg, "start", 0.0) or 0.0)
+            seg_end = float(getattr(seg, "end", 0.0) or 0.0)
+            if seg_end <= chunk_start + 0.01:
+                continue
+            if seg_start >= chunk_end - 0.01:
+                continue
+            collected.append(seg)
+        _emit_progress(chunk_end, f" ({int(chunk_start)}-{int(chunk_end)}s)")
+        if chunk_end >= duration - 0.01:
+            break
+        chunk_start = chunk_end
+
+    collected.sort(key=lambda seg: (float(getattr(seg, "start", 0.0) or 0.0), float(getattr(seg, "end", 0.0) or 0.0)))
+    return collected
+
+
 def transcribe(
     inp,
     beam_size=5,
@@ -202,12 +253,19 @@ def transcribe(
         task = "transcribe"
 
     if outp and reuse_existing and language is not None and _is_fresh(outp, inp):
-        with open(outp, "r", encoding="utf-8") as f:
-            transcript = json.load(f)
-        print(f"Using cached transcript: {outp}")
-        if progress_cb is not None:
-            progress_cb(100, f"Whisper {task} complete (cached)")
-        return transcript, None
+        audio_duration_for_cache = _probe_audio_duration_seconds(inp)
+        if audio_duration_for_cache and audio_duration_for_cache > WHISPER_CHUNK_SEC:
+            print(
+                f"INFO|Refreshing long-audio transcript (> {int(WHISPER_CHUNK_SEC)}s) with chunked Whisper: {outp}",
+                flush=True,
+            )
+        else:
+            with open(outp, "r", encoding="utf-8") as f:
+                transcript = json.load(f)
+            print(f"Using cached transcript: {outp}")
+            if progress_cb is not None:
+                progress_cb(100, f"Whisper {task} complete (cached)")
+            return transcript, None
 
     # -------------------------
     # Load model
@@ -236,41 +294,38 @@ def transcribe(
 
     print(f"Whisper task={task} in: {chosen_lang}")
 
-    # -------------------------
-    # Transcribe WITH timestamps
-    # -------------------------
-    segments, info = model.transcribe(
-        inp,
-        beam_size=beam_size, #1 is weak, fast, 5 is good med, and then 10+ is for noisy
+    audio_duration = _probe_audio_duration_seconds(inp)
+
+    transcribe_kwargs = dict(
+        beam_size=beam_size,
         patience=pat,
         vad_filter=False,
         task=task,
         best_of=best_of,
         language=chosen_lang,
-        word_timestamps=True
+        word_timestamps=True,
+        condition_on_previous_text=False,
     )
 
-    audio_duration = (
-        getattr(info, "duration_after_vad", None)
-        or getattr(info, "duration", None)
-        or _probe_audio_duration_seconds(inp)
+    # -------------------------
+    # Transcribe WITH timestamps
+    # -------------------------
+    segments = _collect_whisper_segments(
+        model,
+        inp,
+        transcribe_kwargs=transcribe_kwargs,
+        audio_duration=audio_duration,
+        progress_cb=progress_cb,
+        task_label=f"Whisper {task}",
     )
 
-    collected_segments = []
-    last_progress = -1
-    for seg in segments:
-        collected_segments.append(seg)
-        if progress_cb is None or audio_duration is None:
-            continue
-        try:
-            pct = max(0, min(100, int((float(seg.end) / float(audio_duration)) * 100)))
-        except (TypeError, ValueError, ZeroDivisionError):
-            continue
-        if pct != last_progress:
-            progress_cb(pct, f"Whisper {task} {pct}%")
-            last_progress = pct
+    if audio_duration is None:
+        audio_duration = (
+            float(segments[-1].end)
+            if segments and getattr(segments[-1], "end", None) is not None
+            else None
+        )
 
-    segments = collected_segments
     if progress_cb is not None:
         progress_cb(100, f"Whisper {task} complete")
 

@@ -14,12 +14,30 @@ from PyQt6.QtWidgets import (
     QCheckBox,
     QLabel,
     QMessageBox,
+    QGroupBox,
 )
-from PyQt6.QtCore import QProcess, Qt
+from PyQt6.QtCore import QProcess, Qt, QThread, pyqtSignal
 from PyQt6.QtGui import QIcon, QPixmap
 import sys, os, json, subprocess
+
+_repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _repo_root not in sys.path:
+    sys.path.insert(0, _repo_root)
+
+from backbone.ltra.languages import (
+    DETECT_LANGUAGE,
+    TRANSLATION_MODES,
+    get_system_language_code,
+    sorted_language_items,
+)
+from backbone.ltra.whisper_models import (
+    WHISPER_MODEL_OPTIONS,
+    download_whisper_model,
+    is_whisper_model_installed,
+    normalize_whisper_model_name,
+    whisper_model_display_name,
+)
 #TODO: Swap out the loading bar in the gui for a splash screen with a progress bar and status text.
-language_dict = {'en': 'english', 'es': 'spanish', 'fr': 'french', 'de': 'german', 'it': 'italian', 'pt': 'portuguese', 'ru': 'russian', 'zh': 'chinese', 'ja': 'japanese', 'ko': 'korean', 'ar': 'arabic', 'hi': 'hindi', 'bn': 'bengali', 'pa': 'punjabi', 'tr': 'turkish', 'vi': 'vietnamese', 'pl': 'polish', 'nl': 'dutch', 'sv': 'swedish', 'no': 'norwegian', 'da': 'danish', 'fi': 'finnish', 'he': 'hebrew', 'el': 'greek', 'th': 'thai', 'id': 'indonesian', 'uk': 'ukrainian', 'cs': 'czech', 'ro': 'romanian', 'hu': 'hungarian', None: "Find For Me"}
 #settings variables
 DEMUCS_MODEL = "htdemucs" #or "tasnet" or htdemucs 
 DEMUCS_STEMS = "default" #or "other" or "both" or vocals
@@ -96,6 +114,129 @@ def dialogue(title, message, parent=None):
     QMessageBox.warning(parent, title, message)
 
 
+def ask_yes_no(title, message, parent=None) -> bool:
+    app = QApplication.instance()
+    if app is None:
+        print(f"{title}: {message}")
+        return False
+    reply = QMessageBox.question(
+        parent,
+        title,
+        message,
+        QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
+        QMessageBox.StandardButton.No,
+    )
+    return reply == QMessageBox.StandardButton.Yes
+
+
+class WhisperDownloadWorker(QThread):
+    progress = pyqtSignal(int, str)
+    finished_ok = pyqtSignal()
+    failed = pyqtSignal(str)
+
+    def __init__(self, model_id, parent=None):
+        super().__init__(parent)
+        self.model_id = model_id
+
+    def run(self):
+        try:
+            download_whisper_model(
+                self.model_id,
+                progress_cb=lambda value, label: self.progress.emit(int(value), label),
+            )
+            self.finished_ok.emit()
+        except Exception as exc:
+            self.failed.emit(str(exc))
+
+
+class WhisperInstallDialog(QDialog):
+    def __init__(self, model_id, parent=None):
+        super().__init__(parent)
+        self.model_id = model_id
+        self._success = False
+
+        self.setWindowTitle("Install Whisper")
+        self.setModal(True)
+        self.setMinimumWidth(360)
+
+        layout = QVBoxLayout(self)
+        self.status_label = QLabel(f"Downloading Whisper model: {model_id}")
+        layout.addWidget(self.status_label)
+
+        self.prog_bar = QProgressBar(self)
+        self.prog_bar.setRange(0, 100)
+        self.prog_bar.setValue(0)
+        self.prog_bar.setFormat("Starting download...")
+        layout.addWidget(self.prog_bar)
+
+        self.worker = WhisperDownloadWorker(model_id, self)
+        self.worker.progress.connect(self._on_progress)
+        self.worker.finished_ok.connect(self._on_success)
+        self.worker.failed.connect(self._on_failed)
+        self.worker.start()
+
+    def _on_progress(self, value, label):
+        self.prog_bar.setValue(max(0, min(100, int(value))))
+        if label:
+            self.prog_bar.setFormat(label)
+            self.status_label.setText(label)
+        QApplication.processEvents()
+
+    def _on_success(self):
+        self._success = True
+        self.prog_bar.setValue(100)
+        self.prog_bar.setFormat(f"Downloaded {self.model_id}")
+        self.accept()
+
+    def _on_failed(self, message):
+        self.prog_bar.setFormat("Download failed")
+        dialogue("Install Whisper", f"Failed to download {self.model_id}:\n{message}", parent=self)
+        self.reject()
+
+    @property
+    def success(self):
+        return self._success
+
+
+def ensure_whisper_model_installed(model_id, parent=None) -> bool:
+    if is_whisper_model_installed(model_id):
+        return True
+    if not ask_yes_no(
+        "Install Whisper",
+        f"The Whisper model '{model_id}' is not installed.\n\nDownload it now?",
+        parent=parent,
+    ):
+        return False
+    dialog = WhisperInstallDialog(model_id, parent=parent)
+    dialog.exec()
+    return dialog.success
+
+
+def populate_whisper_model_combo(combo, selected_model_id):
+    combo.clear()
+    for model_id, tooltip in WHISPER_MODEL_OPTIONS:
+        combo.addItem(whisper_model_display_name(model_id), model_id)
+        idx = combo.count() - 1
+        combo.setItemData(idx, tooltip, Qt.ItemDataRole.ToolTipRole)
+
+    for idx in range(combo.count()):
+        if combo.itemData(idx) == selected_model_id:
+            combo.setCurrentIndex(idx)
+            return
+    combo.setCurrentIndex(0)
+
+
+def refresh_whisper_model_combo_labels(combo):
+    current_model_id = combo.currentData()
+    for idx in range(combo.count()):
+        model_id = combo.itemData(idx)
+        combo.setItemText(idx, whisper_model_display_name(model_id))
+    for idx in range(combo.count()):
+        if combo.itemData(idx) == current_model_id:
+            combo.setCurrentIndex(idx)
+            return
+
+
 class Notification(QDialog):
     def __init__(self, message, parent=None):
         super().__init__(parent)
@@ -130,8 +271,10 @@ class AdvancedSettingsDialog(QDialog):
         form.addRow("Demucs stems", self.demucs_stems_input)
 
         self.whisper_model_input = QComboBox(self)
-        self.whisper_model_input.addItems(["tiny", "base", "small", "medium", "large-v2", "large-v3"])
-        self.whisper_model_input.setCurrentText(settings["whisper_model"])
+        populate_whisper_model_combo(
+            self.whisper_model_input,
+            normalize_whisper_model_name(settings.get("whisper_model")),
+        )
         form.addRow("Whisper model", self.whisper_model_input)
 
         self.whisper_beam_input = QSpinBox(self)
@@ -164,29 +307,35 @@ class AdvancedSettingsDialog(QDialog):
 
         self.flatten_audio = QCheckBox("Flatten audio (pitch shift and bandpass, can help with alignment quality but is a lossy operation)")
         self.flatten_audio.setChecked(bool(settings.get("flatten_audio", False)))
-        try: #Wisegpu
-            subprocess.check_output(['nvidia-smi'], timeout=1)
-            self.gpu_input.setEnabled(False)
-            return True
+        try:
+            subprocess.check_output(["nvidia-smi"], timeout=1)
+            self.gpu_input.setEnabled(True)
         except (subprocess.CalledProcessError, FileNotFoundError):
             self.gpu_input.setEnabled(False)
-            self.gpu_input.setText("No Compatiable GPU Detected, Using CPU")
+            self.gpu_input.setText("No compatible GPU detected (CPU only)")
         except subprocess.TimeoutExpired:
             self.gpu_input.setEnabled(False)
-            self.gpu_input.setText("GPU Timed Out, Using CPU")
+            self.gpu_input.setText("GPU check timed out (CPU only)")
 
         form.addRow(self.gpu_input)
         form.addRow(self.flatten_audio)
         buttons = QDialogButtonBox(QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel, self)
-        buttons.accepted.connect(self.accept)
+        buttons.accepted.connect(self._on_accept)
         buttons.rejected.connect(self.reject)
         form.addRow(buttons)
+
+    def _on_accept(self):
+        model_id = self.whisper_model_input.currentData()
+        if not ensure_whisper_model_installed(model_id, parent=self):
+            return
+        refresh_whisper_model_combo_labels(self.whisper_model_input)
+        self.accept()
 
     def get_settings(self):
         return {
             "demucs_model": self.demucs_model_input.currentText(),
             "demucs_stems": self.demucs_stems_input.currentText(),
-            "whisper_model": self.whisper_model_input.currentText(),
+            "whisper_model": self.whisper_model_input.currentData(),
             "whisper_beam_size": int(self.whisper_beam_input.value()),
             "whisper_patience": int(self.whisper_pat_input.value()),
             "whisper_best_of": int(self.whisper_bestof_input.value()),
@@ -371,25 +520,40 @@ class Window(QMainWindow):
         }
 
         self.setWindowTitle("SONEX - Analyzer")
-        self.setGeometry(100, 100, 400, 200)
+        self.setGeometry(100, 100, 460, 420)
 
         layout = QFormLayout()
+        self.system_language = get_system_language_code()
+
+        translation_group = QGroupBox("Transcription & Translation")
+        translation_layout = QFormLayout(translation_group)
 
         self.lang_input = QComboBox(self)
-        self.lang_input.setPlaceholderText("From_Language")
-        for code, name in language_dict.items():
-            self.lang_input.addItem(f"{name.title()}", code)
-        layout.addRow("From:", self.lang_input)
+        for name, code in sorted_language_items(include_detect=True):
+            self.lang_input.addItem(name, code)
+        self.lang_input.setCurrentIndex(0)
+        translation_layout.addRow("From:", self.lang_input)
 
         self.lang_to = QComboBox(self)
-        import locale
-        syslang = locale.getlocale()[0][:2]
-        self.lang_to.setPlaceholderText(str(language_dict[syslang]))
-        for code, name in language_dict.items():
-            self.lang_to.addItem(f"{name.title()}", code)
-        layout.addRow("To:", self.lang_to)
+        for name, code in sorted_language_items(include_detect=False):
+            self.lang_to.addItem(name, code)
+        self._set_combo_by_data(self.lang_to, self.system_language)
+        translation_layout.addRow("To:", self.lang_to)
 
-        
+        self.translation_mode_input = QComboBox(self)
+        for label, mode in TRANSLATION_MODES:
+            self.translation_mode_input.addItem(label, mode)
+        self.translation_mode_input.currentIndexChanged.connect(self._sync_translation_controls)
+        translation_layout.addRow("Translation:", self.translation_mode_input)
+
+        self.translation_hint = QLabel(
+            "Leave From on Detect language for Whisper auto-detect. "
+            "To defaults to your system language. Whisper translation always outputs English."
+        )
+        self.translation_hint.setWordWrap(True)
+        self.translation_hint.setStyleSheet("color: #666666; font-size: 11px;")
+        translation_layout.addRow(self.translation_hint)
+        layout.addRow(translation_group)
 
         self.filebtn = QPushButton("Choose Media File (.MP3 Only)")
         self.filebtn.clicked.connect(self.on_want_file)
@@ -397,13 +561,7 @@ class Window(QMainWindow):
 
         self.advanced_button = QPushButton("Advanced Settings")
         self.advanced_button.clicked.connect(self.open_advanced_settings)
-
-        self.translation_mode_input = QComboBox(self)
-        self.translation_mode_input.addItem("None (keep source)", "none")
-        self.translation_mode_input.addItem("Argos", "argos")
-        self.translation_mode_input.addItem("Whisper", "whisper")
-        self.translation_mode_input.addItem("Both", "both")
-        layout.addRow(self.advanced_button, self.translation_mode_input)
+        layout.addRow(self.advanced_button)
 
 
         
@@ -440,6 +598,32 @@ class Window(QMainWindow):
         container = QWidget()
         container.setLayout(layout)
         self.setCentralWidget(container)
+        self._sync_translation_controls()
+
+    @staticmethod
+    def _set_combo_by_data(combo, data):
+        for idx in range(combo.count()):
+            if combo.itemData(idx) == data:
+                combo.setCurrentIndex(idx)
+                return
+
+    def _sync_translation_controls(self):
+        mode = self.translation_mode_input.currentData() or "none"
+        translating = mode != "none"
+        #self.lang_to.setEnabled(translating)
+        if translating:
+            if self.lang_to.currentData() is None:
+                self._set_combo_by_data(self.lang_to, self.system_language)
+            self.translation_hint.setText(
+                "From defaults to Detect language (Whisper auto-detect). "
+                f"To defaults to your system language ({self.system_language.upper()}). "
+                "Whisper mode translates to English only; OpusMT/NLLB uses the To language."
+            )
+        else:
+            self.translation_hint.setText(
+                "Leave From on Detect language for Whisper auto-detect. "
+                "Enable a translation mode to translate into your system language by default."
+            )
 
     def on_want_file(self):
         self.file_path, _ = QFileDialog.getOpenFileName(self, "Select an audio file", "", "Audio Files (*.mp3)")
@@ -480,12 +664,17 @@ class Window(QMainWindow):
         QApplication.processEvents()
 
     def on_button_click(self):
-        self.lang_code = self.lang_input.currentData()
+        from_lang = self.lang_input.currentData()
+        self.lang_code = from_lang if from_lang not in (None, DETECT_LANGUAGE) else None
         self.translation_mode = self.translation_mode_input.currentData() or "none"
         if not getattr(self, "file_path", None):
             return
 
         if self.pipeline_process is not None and self.pipeline_process.state() != QProcess.ProcessState.NotRunning:
+            return
+
+        whisper_model_id = normalize_whisper_model_name(self.advanced_settings.get("whisper_model"))
+        if not ensure_whisper_model_installed(whisper_model_id, parent=self):
             return
 
         # Create and show splash window
@@ -518,8 +707,8 @@ class Window(QMainWindow):
         project_root = resolve_worker_cwd()
         output_root = resolve_output_root()
         os.makedirs(output_root, exist_ok=True)
-        lang_arg = self.lang_code if self.lang_code else ""
-        target_lang_arg = self.lang_to.currentData() or ""
+        lang_arg = DETECT_LANGUAGE if self.lang_code is None else self.lang_code
+        target_lang_arg = self.lang_to.currentData() or self.system_language
         translation_mode_arg = self.translation_mode if self.translation_mode else "none"
         settings_arg = json.dumps(self.advanced_settings)
 
