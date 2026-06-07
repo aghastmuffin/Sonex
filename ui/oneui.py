@@ -715,14 +715,15 @@ class Window(QMainWindow):
         self.filebtn = QPushButton("Choose Media File (.MP3 Only)")
         self.filebtn.clicked.connect(self.on_want_file)
         layout.addRow(self.filebtn)
+        
+        self.viewer_launch = QPushButton("Open Lyrics Viewer")
+        self.viewer_launch.clicked.connect(self.open_viewer)
+        layout.addRow(self.viewer_launch)
 
         self.advanced_button = QPushButton("Advanced Settings")
         self.advanced_button.clicked.connect(self.open_advanced_settings)
         layout.addRow(self.advanced_button)
 
-        self.viewer_launch = QPushButton("Open Lyrics Viewer")
-        self.viewer_launch.clicked.connect(self.open_viewer)
-        layout.addRow(self.viewer_launch)
 
         self.button = QPushButton("Choose File First")
         self.button.setEnabled(False)

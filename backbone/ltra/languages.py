@@ -88,7 +88,7 @@ MFA_LANGUAGE_NAMES: Dict[str, str] = {
 
 TRANSLATION_MODES: List[Tuple[str, str]] = [
     ("None (keep source)", "none"),
-    ("OpusMT / NLLB (to selected language)", "argos"),
+    ("OpusMT / NLLB (to selected language) (recommended)", "argos"),
     ("Whisper (to English only)", "whisper"),
     ("Both (Whisper + OpusMT/NLLB)", "both"),
 ]
