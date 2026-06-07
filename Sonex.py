@@ -50,7 +50,13 @@ import ui._updates as upd
 
 
 import ui.frase_core as core
-_repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def _app_root() -> str:
+    return os.path.dirname(os.path.abspath(__file__))
+
+
+_repo_root = _app_root()
 if _repo_root not in sys.path:
     sys.path.insert(0, _repo_root)
 
@@ -225,7 +231,13 @@ def _is_frozen():
     return bool(getattr(sys, "frozen", False))
 
 
-def resolve_worker_command(worker_script):
+def resolve_worker_script() -> str:
+    return os.path.join(_app_root(), "ui", "_worker.py")
+
+
+def resolve_worker_command(worker_script=None):
+    if worker_script is None:
+        worker_script = resolve_worker_script()
     if not _is_frozen():
         return sys.executable, [worker_script]
 
@@ -248,7 +260,7 @@ def resolve_worker_command(worker_script):
 def resolve_worker_cwd():
     if _is_frozen():
         return os.path.dirname(sys.executable)
-    return os.path.dirname(os.path.dirname(__file__))
+    return _app_root()
 
 
 def notify(title, message, parent=None):
@@ -853,8 +865,7 @@ class Window(QMainWindow):
         self.set_demucs_active(False)
         self.set_whisper_active(False)
 
-        worker_script = os.path.join(os.path.dirname(__file__), "_worker.py")
-        program, base_args = resolve_worker_command(worker_script)
+        program, base_args = resolve_worker_command()
         if not program:
             if self.splash_window:
                 self.splash_window.finish()
@@ -896,7 +907,7 @@ class Window(QMainWindow):
     def open_advanced_settings(self):
         self.advanced_button.setText("Loading Advanced Settings...")
         import time
-        time.sleep(0.04)
+        time.sleep(0.04) #XXX: So janky
         self.advanced_button.repaint()              
         QApplication.processEvents()    
         def private_open():
