@@ -851,7 +851,7 @@ class Window(QMainWindow):
             self.pipeline_process.deleteLater()
             self.pipeline_process = None
 
-def boostrap():
+def bootstrap():
     try:
         if upd.check_and_update():
             import os, sys

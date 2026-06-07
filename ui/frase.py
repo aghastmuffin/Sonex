@@ -1,4 +1,4 @@
-"""SONEX Lyrics viewer — PyQt6 native UI."""
+
 
 from __future__ import annotations
 

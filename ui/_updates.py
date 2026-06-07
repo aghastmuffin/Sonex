@@ -20,6 +20,8 @@ def get_local_version():
         with open(LOCAL_VERSION_FILE, "r") as f:
             return f.read().strip()
     except FileNotFoundError:
+        with open(LOCAL_VERSION_FILE, "w+") as f:
+            f.write("0.0.0")
         return "0.0.0"
 
 
