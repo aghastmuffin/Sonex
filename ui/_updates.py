@@ -9,7 +9,7 @@ from packaging import version
 OWNER = "aghastmuffin"
 REPO = "Sonex"
 
-LOCAL_VERSION_FILE = "version.txt"
+LOCAL_VERSION_FILE = "ui/version.txt"
 CORE_DIR = "core"
 
 # If you attach a zip named "app.zip" in GitHub Releases, this works automatically
