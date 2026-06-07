@@ -1,0 +1,49 @@
+name: Build and Attach Release Asset
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Install zip
+        run: sudo apt-get update && sudo apt-get install -y zip
+
+      - name: Build project
+        run: |
+          mkdir dist
+          cp -r src dist/
+          cp README.md dist/
+
+      - name: Create zip artifact
+        run: |
+          cd dist
+          zip -r ../release.zip .
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          files: release.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
