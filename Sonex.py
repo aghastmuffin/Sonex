@@ -1,4 +1,5 @@
 from __future__ import annotations
+from tkinter import dialog
 """Primary Entry Point for Sonex. Does not contain logic. NOT STANDALONE"""
 import os
 import sys
@@ -78,7 +79,7 @@ GPU = False
 UPDATES = True
 
 # Set to a .ttf path for a custom app font, or None for system default.
-UI_FONT_PATH = None
+UI_FONT_PATH = "ui/assets/Darker Grotesque.ttf" #TODO: Make OS agnostic
 
 APP_STYLE = """
 QWidget {
@@ -175,6 +176,7 @@ def _resolve_ui_font_family() -> str | None:
             families = QFontDatabase.applicationFontFamilies(fid)
             if families:
                 _ui_font_family = families[0]
+    print("font loaded successfully")
     return _ui_font_family
 
 
@@ -502,10 +504,10 @@ class AdvancedSettingsDialog(QDialog):
 def resolve_app_icon_path():
     base_dir = os.path.dirname(__file__)
     candidate_paths = [
-        os.path.join(base_dir, "assets", "sonex0high-res"),
-        os.path.join(base_dir, "assets", "sonex0high-res.png"),
-        os.path.join(base_dir, "assets", "sonex-high-resolution-logo.png"),
-        os.path.join(base_dir, "assets", "sonex-high-resolution-logo-transparent.png"),
+        os.path.join(base_dir, "ui", "assets", "sonex0high-res"),
+        os.path.join(base_dir, "ui", "assets", "sonex0high-res.png"),
+        os.path.join(base_dir, "ui", "assets", "sonex-high-resolution-logo.png"),
+        os.path.join(base_dir, "ui", "assets", "sonex-high-resolution-logo-transparent.png"),
     ]
     for icon_path in candidate_paths:
         if os.path.exists(icon_path):
@@ -528,7 +530,7 @@ class SplashWindow(QWidget):
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground, True)
 
         base_dir = os.path.dirname(__file__)
-        splash_path = os.path.join(base_dir, "assets", "sonex_splash.png")
+        splash_path = os.path.join(base_dir, "ui", "assets", "sonex_splash.png")
         splash_pix = QPixmap(splash_path)
         if splash_pix.isNull():
             splash_pix = QPixmap(920, 520)
@@ -715,15 +717,17 @@ class Window(QMainWindow):
         self.filebtn = QPushButton("Choose Media File (.MP3 Only)")
         self.filebtn.clicked.connect(self.on_want_file)
         layout.addRow(self.filebtn)
+        
+        self.button_condenser = QHBoxLayout()
 
         self.viewer_launch = QPushButton("Open Lyrics Viewer")
         self.viewer_launch.clicked.connect(self.open_viewer)
-        layout.addRow(self.viewer_launch)
+        self.button_condenser.addWidget(self.viewer_launch)
 
         self.advanced_button = QPushButton("Advanced Settings")
         self.advanced_button.clicked.connect(self.open_advanced_settings)
-        layout.addRow(self.advanced_button)
-
+        self.button_condenser.addWidget(self.advanced_button)
+        layout.addRow(self.button_condenser)
 
         self.button = QPushButton("Choose File First")
         self.button.setEnabled(False)
@@ -890,9 +894,19 @@ class Window(QMainWindow):
         self.pipeline_process.start()
 
     def open_advanced_settings(self):
-        dialog = AdvancedSettingsDialog(self.advanced_settings, self)
-        if dialog.exec():
-            self.advanced_settings = dialog.get_settings()
+        self.advanced_button.setText("Loading Advanced Settings...")
+        import time
+        time.sleep(0.04)
+        self.advanced_button.repaint()              
+        QApplication.processEvents()    
+        def private_open():
+            dialog = AdvancedSettingsDialog(self.advanced_settings, self)
+            if dialog.exec():
+                self.advanced_settings = dialog.get_settings()
+            self.advanced_button.setText("Advanced Settings")
+        QTimer.singleShot(0, lambda: private_open())      
+
+        
 
     def open_viewer(self):
         generarfrase(parent=self)
