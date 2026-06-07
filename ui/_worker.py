@@ -85,17 +85,26 @@ def _has_phone_level_data(json_path: Path, min_coverage: float = 0.85) -> bool:
     for seg in data:
         for w in seg.get("words", []) or []:
             total_words += 1
-            phones = w.get("phones", []) or []
             valid = False
-            for p in phones:
+            for p in w.get("phones", []) or []:
                 try:
                     ps = float(p.get("start"))
                     pe = float(p.get("end"))
                     if pe > ps:
                         valid = True
                         break
-                except (TypeError, ValueError):
+                except (TypeError, ValueError, KeyError):
                     continue
+            if not valid:
+                for ps in w.get("phone_segments", []) or []:
+                    try:
+                        pstart = float(ps.get("start"))
+                        pend = float(ps.get("end"))
+                        if pend > pstart:
+                            valid = True
+                            break
+                    except (TypeError, ValueError, KeyError):
+                        continue
             if valid:
                 words_with_phones += 1
 
@@ -106,14 +115,86 @@ def _has_phone_level_data(json_path: Path, min_coverage: float = 0.85) -> bool:
     return coverage >= float(min_coverage)
 
 
-def _write_playback_transcript(audiobase: str):
+def _has_dual_transcript_data(json_path: Path) -> bool:
+    try:
+        data = json.loads(json_path.read_text(encoding="utf-8"))
+    except Exception:
+        return False
+
+    if not isinstance(data, list):
+        return False
+
+    for seg in data:
+        has_source = bool(seg.get("source_words")) or bool((seg.get("source_text") or "").strip())
+        has_target = bool(seg.get("words")) or bool((seg.get("text") or "").strip())
+        if has_source and has_target:
+            return True
+    return False
+
+
+def _enrich_translated_source_phones(audiobase: str):
+    """Copy MFA phoneme timings onto translated.json source_words for dual+phoneme playback."""
+    base = Path(audiobase)
+    phone_json = base / "mfa_vocals_phone_segments.json"
+    trans_json = base / "translated.json"
+    if not phone_json.exists() or not trans_json.exists():
+        return
+
+    try:
+        phone_segs = json.loads(phone_json.read_text(encoding="utf-8"))
+        trans_segs = json.loads(trans_json.read_text(encoding="utf-8"))
+    except Exception as exc:
+        print(f"INFO|Phoneme enrich skipped: {exc}", flush=True)
+        return
+
+    if not isinstance(phone_segs, list) or not isinstance(trans_segs, list):
+        return
+
+    enriched_words = 0
+    for seg_idx, tseg in enumerate(trans_segs):
+        if seg_idx >= len(phone_segs):
+            break
+        phone_words = phone_segs[seg_idx].get("words") or []
+        source_words = tseg.get("source_words")
+        if not isinstance(source_words, list) or not source_words:
+            continue
+
+        updated = []
+        for word_idx, word in enumerate(source_words):
+            merged = dict(word)
+            if word_idx < len(phone_words):
+                for key in ("phones", "phone_segments"):
+                    if phone_words[word_idx].get(key):
+                        merged[key] = phone_words[word_idx][key]
+                        enriched_words += 1
+            updated.append(merged)
+        tseg["source_words"] = updated
+
+    try:
+        trans_json.write_text(json.dumps(trans_segs, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"INFO|Attached MFA phoneme timings to translated source_words ({enriched_words} fields)", flush=True)
+    except Exception as exc:
+        print(f"INFO|Phoneme enrich write skipped: {exc}", flush=True)
+
+
+def _write_playback_transcript(audiobase: str, settings=None, translation_mode: str = "none"):
     base = Path(audiobase)
     phone_json = base / "mfa_vocals_phone_segments.json"
     word_json = base / "vocals_whisper_segments.json"
     playback_json = base / "playback_segments.json"
 
-    source = phone_json if _has_phone_level_data(phone_json) else word_json
-    if not source.exists():
+    settings = settings or {}
+    phoneme_timestamps = bool(settings.get("phoneme_timestamps", True))
+
+    source = None
+    if phoneme_timestamps and _has_phone_level_data(phone_json):
+        source = phone_json
+    elif word_json.exists():
+        source = word_json
+    elif phone_json.exists():
+        source = phone_json
+
+    if source is None or not source.exists():
         return
 
     try:
@@ -171,6 +252,7 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
     whisper_task = str(settings.get("whisper_task", "transcribe")).strip().lower()
     use_gpu = bool(settings.get("gpu", False))
     flattenaudio = bool(settings.get("flatten", False))
+    phoneme_timestamps = bool(settings.get("phoneme_timestamps", True))
     wav2vec2_phone_fallback = bool(settings.get("wav2vec2_phone_fallback", False))
     wav2vec2_min_mfa_coverage = int(settings.get("wav2vec2_min_mfa_coverage", 85))
 
@@ -234,55 +316,56 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
         flatten_audio=flattenaudio,
     )
 
-    try:
-        emit_progress(52, "Running MFA alignment...")
-        from backbone.ltra import _mfa_aligner
-        mfa_lang = detectlang or lang_code
-        if mfa_lang in mfa_language_names:
-            _mfa_aligner.generate_aligned_v2(
-                audiobase,
-                acoustic=f"{mfa_language_names[mfa_lang]}",
-                dictionary=f"{mfa_language_names[mfa_lang]}",
-                allow_fuzzy=True,
-                fuzzy_max_lookahead=8,
-                phonemizer_language=mfa_lang,
-            )
+    if phoneme_timestamps:
+        try:
+            emit_progress(52, "Running MFA alignment...")
+            from backbone.ltra import _mfa_aligner
+            mfa_lang = detectlang or lang_code
+            if mfa_lang in mfa_language_names:
+                _mfa_aligner.generate_aligned_v2(
+                    audiobase,
+                    acoustic=f"{mfa_language_names[mfa_lang]}",
+                    dictionary=f"{mfa_language_names[mfa_lang]}",
+                    allow_fuzzy=True,
+                    fuzzy_max_lookahead=8,
+                    phonemizer_language=mfa_lang,
+                )
 
-            if wav2vec2_phone_fallback:
-                try:
-                    current_cov = _mfa_aligner.phone_word_coverage(f"{audiobase}/mfa_vocals_phone_segments.json")
-                    print(
-                        f"wav2vec2 fallback check: MFA phone coverage={current_cov:.2f}% (min={wav2vec2_min_mfa_coverage}%)",
-                        flush=True,
-                    )
-                    if current_cov < float(wav2vec2_min_mfa_coverage):
-                        emit_progress(55, "Running wav2vec2 phone fallback...")
-                        align(
-                            f"{audiobase}/vocals.mp3",
-                            f"{audiobase}/vocals_whisper_segments.json",
-                            f"{audiobase}/vocals_whisper_segments_wav2vec2.json",
-                            language=lang_code,
-                            reuse_existing=False,
-                            return_char_alignments=True,
-                        )
-                        stats = _mfa_aligner.fill_missing_phones_from_char_alignments(
-                            audiobase,
-                            aligned_chars_json="vocals_whisper_segments_wav2vec2.json",
-                            phone_json="mfa_vocals_phone_segments.json",
-                            base_json="mfa_vocals_whisper_segments.json",
-                            out_json="mfa_vocals_phone_segments.json",
-                            phonemizer_language=mfa_lang,
-                        )
+                if wav2vec2_phone_fallback:
+                    try:
+                        current_cov = _mfa_aligner.phone_word_coverage(f"{audiobase}/mfa_vocals_phone_segments.json")
                         print(
-                            f"wav2vec2 fallback filled {stats['filled_words']} words; fallback words {stats['fallback_words']}; coverage now {stats['coverage_after']:.2f}%",
+                            f"wav2vec2 fallback check: MFA phone coverage={current_cov:.2f}% (min={wav2vec2_min_mfa_coverage}%)",
                             flush=True,
                         )
-                except Exception as fallback_exc:
-                    print(f"wav2vec2 fallback error: {fallback_exc}", flush=True)
-    except Exception as e:
-        print(f"INFO|Phone-level alignment unavailable; defaulting to word-level: {e}", flush=True)
-
-    _write_playback_transcript(audiobase)
+                        if current_cov < float(wav2vec2_min_mfa_coverage):
+                            emit_progress(55, "Running wav2vec2 phone fallback...")
+                            align(
+                                f"{audiobase}/vocals.mp3",
+                                f"{audiobase}/vocals_whisper_segments.json",
+                                f"{audiobase}/vocals_whisper_segments_wav2vec2.json",
+                                language=lang_code,
+                                reuse_existing=False,
+                                return_char_alignments=True,
+                            )
+                            stats = _mfa_aligner.fill_missing_phones_from_char_alignments(
+                                audiobase,
+                                aligned_chars_json="vocals_whisper_segments_wav2vec2.json",
+                                phone_json="mfa_vocals_phone_segments.json",
+                                base_json="mfa_vocals_whisper_segments.json",
+                                out_json="mfa_vocals_phone_segments.json",
+                                phonemizer_language=mfa_lang,
+                            )
+                            print(
+                                f"wav2vec2 fallback filled {stats['filled_words']} words; fallback words {stats['fallback_words']}; coverage now {stats['coverage_after']:.2f}%",
+                                flush=True,
+                            )
+                    except Exception as fallback_exc:
+                        print(f"wav2vec2 fallback error: {fallback_exc}", flush=True)
+        except Exception as e:
+            print(f"INFO|Phone-level alignment unavailable; defaulting to word-level: {e}", flush=True)
+    else:
+        print("INFO|Phoneme timestamps disabled; skipping MFA phone alignment.", flush=True)
 
     source_lang = normalize_lang_code(detectlang or lang_code) or get_system_language_code()
     target_lang = resolve_target_language(target_lang)
@@ -323,6 +406,10 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
                 use_opus=True,
             )
             print(f"INFO|Translation saved to {trans_out}", flush=True)
+            if phoneme_timestamps:
+                _enrich_translated_source_phones(audiobase)
+
+    _write_playback_transcript(audiobase, settings=settings, translation_mode=translation_mode)
 
     emit_progress(68, "Text pipeline complete")
     return str((Path.cwd() / audiobase).resolve()), (detectlang or lang_code)

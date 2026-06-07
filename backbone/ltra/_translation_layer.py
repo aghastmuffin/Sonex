@@ -49,7 +49,7 @@ def _load_opus(src_lang: str, tgt_lang: str):
 
     tok = MarianTokenizer.from_pretrained(model_name)
     dtype = torch.float16 if device.type == "cuda" else torch.float32
-    model = MarianMTModel.from_pretrained(model_name, torch_dtype=dtype)
+    model = MarianMTModel.from_pretrained(model_name, torch_dtype=dtype, attn_implementation="eager")
     model.to(device)
     model.eval()
 
@@ -69,7 +69,7 @@ def _load_nllb(model_name: str = "facebook/nllb-200-distilled-600M"):
     device = _get_device()
     tok = AutoTokenizer.from_pretrained(model_name, use_fast=False)
     dtype = torch.float16 if device.type == "cuda" else torch.float32
-    model = AutoModelForSeq2SeqLM.from_pretrained(model_name, torch_dtype=dtype)
+    model = AutoModelForSeq2SeqLM.from_pretrained(model_name, torch_dtype=dtype, attn_implementation="eager")
     model.to(device)
     model.eval()
 
@@ -178,9 +178,14 @@ def _extract_word_alignment(
         # Average across layers and heads for this step
         layer_attns = []
         for layer_attn in step_attns:
+            if layer_attn is None:
+                continue
             # (1, heads, cur_tgt_len, src_len) -> take last tgt position
             attn = layer_attn[0, :, -1, :].float().cpu().numpy()
             layer_attns.append(attn.mean(axis=0))
+
+        if not layer_attns:
+            continue
 
         avg_attn = np.mean(layer_attns, axis=0)
 
@@ -267,16 +272,19 @@ def translate_with_alignment(
 
     alignment = None
     if hasattr(out, "cross_attentions") and out.cross_attentions:
-        gen_no_special = [t for t in generated_ids if t not in tok.all_special_ids]
-        tgt_word_map = _map_generated_to_words(tok, gen_no_special, translated_text)
+        try:
+            gen_no_special = [t for t in generated_ids if t not in tok.all_special_ids]
+            tgt_word_map = _map_generated_to_words(tok, gen_no_special, translated_text)
 
-        alignment = _extract_word_alignment(
-            out.cross_attentions,
-            src_word_map,
-            tgt_word_map,
-            num_src_words,
-            num_tgt_words,
-        )
+            alignment = _extract_word_alignment(
+                out.cross_attentions,
+                src_word_map,
+                tgt_word_map,
+                num_src_words,
+                num_tgt_words,
+            )
+        except Exception:
+            alignment = None
 
     return translated_text, alignment
 

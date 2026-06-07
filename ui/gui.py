@@ -18,7 +18,8 @@ from PyQt6.QtWidgets import (
 )
 from PyQt6.QtCore import QProcess, Qt, QThread, pyqtSignal
 from PyQt6.QtGui import QIcon, QPixmap
-import sys, os, json, subprocess
+import sys, os, json, subprocess, threading
+import _updates as upd
 
 _repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if _repo_root not in sys.path:
@@ -46,7 +47,7 @@ WHISPER_BEAMSIZE = 5
 WHISPER_PAT = 2
 WHISPER_BESTOF = 3
 GPU = False
-
+UPDATES = True
 
 def default_output_root():
     app_name = "Sonex"
@@ -306,7 +307,10 @@ class AdvancedSettingsDialog(QDialog):
         self.gpu_input.setChecked(bool(settings["gpu"]))
 
         self.flatten_audio = QCheckBox("Flatten audio (pitch shift and bandpass, can help with alignment quality but is a lossy operation)")
-        self.flatten_audio.setChecked(bool(settings.get("flatten_audio", False)))
+        self.flatten_audio.setChecked(bool(settings.get("flatten", settings.get("flatten_audio", False))))
+
+        self.phoneme_timestamps = QCheckBox("Phoneme-level timestamps (MFA alignment; richer karaoke highlighting)")
+        self.phoneme_timestamps.setChecked(bool(settings.get("phoneme_timestamps", True)))
         try:
             subprocess.check_output(["nvidia-smi"], timeout=1)
             self.gpu_input.setEnabled(True)
@@ -319,6 +323,7 @@ class AdvancedSettingsDialog(QDialog):
 
         form.addRow(self.gpu_input)
         form.addRow(self.flatten_audio)
+        form.addRow(self.phoneme_timestamps)
         buttons = QDialogButtonBox(QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel, self)
         buttons.accepted.connect(self._on_accept)
         buttons.rejected.connect(self.reject)
@@ -341,6 +346,7 @@ class AdvancedSettingsDialog(QDialog):
             "whisper_best_of": int(self.whisper_bestof_input.value()),
             "gpu": bool(self.gpu_input.isChecked()),
             "flatten": bool(self.flatten_audio.isChecked()),
+            "phoneme_timestamps": bool(self.phoneme_timestamps.isChecked()),
         }
 
 def resolve_app_icon_path():
@@ -517,6 +523,7 @@ class Window(QMainWindow):
             "whisper_best_of": WHISPER_BESTOF,
             "gpu": GPU,
             "flatten": True,
+            "phoneme_timestamps": True,
         }
 
         self.setWindowTitle("SONEX - Analyzer")
@@ -844,7 +851,18 @@ class Window(QMainWindow):
             self.pipeline_process.deleteLater()
             self.pipeline_process = None
 
+def boostrap():
+    try:
+        if upd.check_and_update():
+            import os, sys
+            os.execv(sys.executable, [sys.executable] + sys.argv)
+    except:
+        pass
+    return
+
 if __name__ == "__main__":
+    if UPDATES:
+        threading.Thread(target=bootstrap).start()
     app = QApplication(sys.argv)
     icon_path = resolve_app_icon_path()
     if icon_path:

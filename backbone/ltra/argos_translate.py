@@ -91,6 +91,8 @@ def translate_segments(
 
         # Translate + extract word alignment in one pass
         t0 = time.perf_counter()
+        translated_text = ""
+        alignment = None
 
         def _do_translate():
             return translate_with_alignment(
