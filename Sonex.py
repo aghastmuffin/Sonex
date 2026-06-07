@@ -435,6 +435,7 @@ class AdvancedSettingsDialog(QDialog):
         self.demucs_stems_input.setCurrentText(settings["demucs_stems"])
         form.addRow("Demucs stems", self.demucs_stems_input)
 
+
         self.whisper_model_input = QComboBox(self)
         populate_whisper_model_combo(
             self.whisper_model_input,
