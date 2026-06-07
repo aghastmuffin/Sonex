@@ -6,3 +6,5 @@ model_offload/
 **/vocals_whisper_segments.json/
 
 BUILD/**
+
+version.txt

@@ -18,8 +18,12 @@ ASSET_NAME_PREFERRED = None  # e.g. "app.zip" (optional)
 def get_local_version():
     try:
         with open(LOCAL_VERSION_FILE, "r") as f:
-            return f.read().strip()
+            local_version = f.read().strip()
+            print("VERSION:", local_version)
+            return local_version
+            
     except FileNotFoundError:
+        print("ERROR FINDING VERSION FILE")
         with open(LOCAL_VERSION_FILE, "w+") as f:
             f.write("0.0.0")
         return "0.0.0"
