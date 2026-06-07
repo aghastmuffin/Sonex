@@ -4,6 +4,7 @@ from tkinter import dialog
 import os
 import sys
 
+from PyQt6.QtCore import QObject, pyqtSignal, QThread
 from PyQt6.QtCore import Qt, QElapsedTimer, QTimer, QUrl
 from PyQt6.QtGui import QColor, QFont, QFontDatabase, QIcon, QPainter, QPen
 from PyQt6.QtMultimedia import QAudioOutput, QMediaPlayer
@@ -77,7 +78,7 @@ from backbone.ltra.whisper_models import (
 #settings variables
 DEMUCS_MODEL = "htdemucs" #or "tasnet" or htdemucs 
 DEMUCS_STEMS = "default" #or "other" or "both" or vocals
-WHISPER_MODEL = "medium" #or "tiny", "base", "small", "large-v2"
+WHISPER_MODEL = "large-v3-turbo" #or "tiny", "base", "small", "large-v2" DEFAULT
 WHISPER_BEAMSIZE = 5
 WHISPER_PAT = 2
 WHISPER_BESTOF = 3
@@ -416,6 +417,33 @@ class Notification(QDialog):
         layout.addWidget(buttons)
 
 
+def detect_gpu_acceleration() -> tuple[bool, str]:
+    """Return whether an accelerator is available and a user-facing status label."""
+    try:
+        import torch
+
+        if torch.cuda.is_available():
+            try:
+                name = torch.cuda.get_device_name(0)
+            except Exception:
+                name = "CUDA device"
+            return True, f"NVIDIA GPU available ({name})"
+
+        mps = getattr(torch.backends, "mps", None)
+        if mps is not None and mps.is_available():
+            return True, "Apple Metal (MPS) GPU available"
+    except Exception as exc:
+        return False, f"GPU check failed: {exc}"
+
+    return False, "No compatible GPU detected (CPU only)"
+
+
+class GPUCheckWorker(QObject):
+    finished = pyqtSignal(bool, str)
+
+    def run(self):
+        available, message = detect_gpu_acceleration()
+        self.finished.emit(available, message)
 
 class AdvancedSettingsDialog(QDialog):
     def __init__(self, settings, parent=None):
@@ -468,25 +496,31 @@ class AdvancedSettingsDialog(QDialog):
         self.MFA_target_in.setCurrentText(settings["MFA_target"])
         form.addRow("MFA - FromLang:", self.MFA_target_in)"""
 
-        self.gpu_input = QCheckBox("Enable GPU")
-        self.gpu_input.setChecked(bool(settings["gpu"]))
+        self._saved_gpu = bool(settings["gpu"])
+        self.gpu_input = QCheckBox("Enable GPU acceleration")
+        self.gpu_input.setChecked(self._saved_gpu)
+        self.gpu_input.setEnabled(False)
+
+        self.gpu_status = QLabel("Checking GPU...")
+        self.gpu_status.setObjectName("statusWarn")
+        form.addRow(self.gpu_input, self.gpu_status)
+
+        self._gpu_thread = QThread()
+        self._gpu_worker = GPUCheckWorker()
+        self._gpu_worker.moveToThread(self._gpu_thread)
+        self._gpu_thread.started.connect(self._gpu_worker.run)
+        self._gpu_worker.finished.connect(self._on_gpu_result)
+        self._gpu_worker.finished.connect(self._gpu_worker.deleteLater)
+        self._gpu_worker.finished.connect(self._gpu_thread.quit)
+        self._gpu_thread.finished.connect(self._gpu_thread.deleteLater)
+        self._gpu_thread.start()
 
         self.flatten_audio = QCheckBox("Flatten audio (pitch shift and bandpass, can help with alignment quality but is a lossy operation)")
         self.flatten_audio.setChecked(bool(settings.get("flatten", settings.get("flatten_audio", False))))
 
         self.phoneme_timestamps = QCheckBox("Phoneme-level timestamps (MFA alignment; richer karaoke highlighting)")
         self.phoneme_timestamps.setChecked(bool(settings.get("phoneme_timestamps", True)))
-        try:
-            subprocess.check_output(["nvidia-smi"], timeout=1)
-            self.gpu_input.setEnabled(True)
-        except (subprocess.CalledProcessError, FileNotFoundError):
-            self.gpu_input.setEnabled(False)
-            self.gpu_input.setText("No compatible GPU detected (CPU only)")
-        except subprocess.TimeoutExpired:
-            self.gpu_input.setEnabled(False)
-            self.gpu_input.setText("GPU check timed out (CPU only)")
 
-        form.addRow(self.gpu_input)
         form.addRow(self.flatten_audio)
         form.addRow(self.phoneme_timestamps)
         buttons = QDialogButtonBox(QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel, self)
@@ -500,6 +534,22 @@ class AdvancedSettingsDialog(QDialog):
             return
         refresh_whisper_model_combo_labels(self.whisper_model_input)
         self.accept()
+
+    def _set_gpu_status(self, message: str, *, ok: bool):
+        self.gpu_status.setText(message)
+        self.gpu_status.setObjectName("statusOk" if ok else "statusWarn")
+        self.gpu_status.style().unpolish(self.gpu_status)
+        self.gpu_status.style().polish(self.gpu_status)
+
+    def _on_gpu_result(self, available: bool, message: str):
+        if available:
+            self.gpu_input.setEnabled(True)
+            self.gpu_input.setChecked(self._saved_gpu)
+            self._set_gpu_status(message, ok=True)
+        else:
+            self.gpu_input.setEnabled(False)
+            self.gpu_input.setChecked(False)
+            self._set_gpu_status(message, ok=False)
 
     def get_settings(self):
         return {
