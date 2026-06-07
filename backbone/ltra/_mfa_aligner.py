@@ -11,7 +11,8 @@ from typing import Optional
 
 
 ACOUSTIC_MODELS = {
-    "english": "english_mfa",
+    # Must match DICTIONARY_MODELS["english"]; english_mfa + english_us_arpa yields no TextGrid.
+    "english": "english_us_arpa",
     "english_us": "english_us_arpa",
     "english_uk": "english_uk_mfa",
     "english_india": "english_india_mfa",
@@ -84,6 +85,34 @@ DICTIONARY_MODELS = {
     "vietnamese": "vietnamese_mfa",
     "thai": "thai_mfa",
 }
+
+
+def resolve_mfa_model_pair(acoustic: str, dictionary: str) -> tuple[str, str]:
+    """Map friendly aliases to MFA model IDs and keep acoustic/dictionary paired."""
+    resolved_acoustic = ACOUSTIC_MODELS.get(acoustic, acoustic)
+    resolved_dictionary = DICTIONARY_MODELS.get(dictionary, dictionary)
+
+    if resolved_acoustic != resolved_dictionary:
+        print(
+            f"Warning: MFA acoustic ({resolved_acoustic}) != dictionary ({resolved_dictionary}); "
+            f"using {resolved_dictionary} for both.",
+            flush=True,
+        )
+        resolved_acoustic = resolved_dictionary
+
+    return resolved_acoustic, resolved_dictionary
+
+
+def write_playback_transcript(head_folder, phone_json_name: str = "mfa_vocals_phone_segments.json") -> None:
+    """Copy phone-level MFA JSON to playback_segments.json for the UI."""
+    base = Path(head_folder)
+    phone_json = base / phone_json_name
+    playback_json = base / "playback_segments.json"
+    if not phone_json.exists():
+        print(f"Warning: no phone transcript to publish: {phone_json}", flush=True)
+        return
+    shutil.copy2(phone_json, playback_json)
+    print(f"Wrote playback transcript: {playback_json}", flush=True)
 
 
 PHONEMIZER_LANGUAGE_MAP = {
@@ -542,8 +571,8 @@ def generate_aligned(head_folder, vocals="vocals.mp3", transcript="vocals_whispe
     OUT_JSON.write_text(json.dumps(segments, ensure_ascii=False, indent=2), encoding="utf-8")
     print("Wrote", OUT_JSON)
 def install_lang(model_general, dictionary: Optional[str] = None):
-    acoustic_model = ACOUSTIC_MODELS.get(model_general, model_general)
-    dictionary_model = DICTIONARY_MODELS.get(dictionary, dictionary) if dictionary else DICTIONARY_MODELS.get(model_general, model_general)
+    dict_alias = dictionary if dictionary is not None else model_general
+    acoustic_model, dictionary_model = resolve_mfa_model_pair(model_general, dict_alias)
 
     def run_mfa(args):
         subprocess.run(["conda", "run", "-n", "mfa", "mfa", *args], check=True)
@@ -812,10 +841,7 @@ def generate_aligned_v2(
 
     # ---- 5) Run MFA align ----
     # Accept either friendly aliases (e.g. "english") or explicit MFA model IDs.
-    if acoustic in ACOUSTIC_MODELS:
-        acoustic = ACOUSTIC_MODELS[acoustic]
-    if dictionary in DICTIONARY_MODELS:
-        dictionary = DICTIONARY_MODELS[dictionary]
+    acoustic, dictionary = resolve_mfa_model_pair(acoustic, dictionary)
 
     cmd = [
         "conda", "run", "-n", "mfa",
@@ -1204,10 +1230,15 @@ def _build_cli_parser():
         help="Run MFA alignment and emit word + phone timestamp JSON files.",
     )
     align_cmd.add_argument("head_folder", help="Folder with vocals.mp3 and vocals_whisper_segments.json")
+    align_cmd.add_argument(
+        "--lang",
+        default=None,
+        help="ISO 639-1 code (e.g. en, es); sets --acoustic and --dictionary from Sonex language map",
+    )
     align_cmd.add_argument("--vocals", default="vocals.mp3")
     align_cmd.add_argument("--transcript", default="vocals_whisper_segments.json")
-    align_cmd.add_argument("--acoustic", default="english_us_arpa")
-    align_cmd.add_argument("--dictionary", default="english_us_arpa")
+    align_cmd.add_argument("--acoustic", default="english")
+    align_cmd.add_argument("--dictionary", default="english")
     align_cmd.add_argument("--allow-fuzzy", action="store_true")
     align_cmd.add_argument("--fuzzy-max-lookahead", type=int, default=8)
     align_cmd.add_argument("--max-chars-per-chunk", type=int, default=220)
@@ -1215,6 +1246,11 @@ def _build_cli_parser():
     align_cmd.add_argument("--no-flat-phone-json", action="store_true")
     align_cmd.add_argument("--phonemizer-lang", default=None)
     align_cmd.add_argument("--no-phonemizer", action="store_true")
+    align_cmd.add_argument(
+        "--write-playback",
+        action="store_true",
+        help="Copy mfa_vocals_phone_segments.json to playback_segments.json when alignment succeeds",
+    )
 
     export_cmd = sub.add_parser(
         "export-phones",
@@ -1241,20 +1277,38 @@ def _main():
     args = parser.parse_args()
 
     if args.command == "align":
+        acoustic = args.acoustic
+        dictionary = args.dictionary
+        phonemizer_language = args.phonemizer_lang
+
+        if args.lang:
+            from backbone.ltra.languages import MFA_LANGUAGE_NAMES, normalize_lang_code
+
+            lang_code = normalize_lang_code(args.lang) or str(args.lang).strip().lower()
+            alias = MFA_LANGUAGE_NAMES.get(lang_code)
+            if not alias:
+                parser.error(f"No MFA model mapping for language: {args.lang}")
+            acoustic = alias
+            dictionary = alias
+            if phonemizer_language is None:
+                phonemizer_language = lang_code
+
         generate_aligned_v2(
             args.head_folder,
             vocals=args.vocals,
             transcript=args.transcript,
-            acoustic=args.acoustic,
-            dictionary=args.dictionary,
+            acoustic=acoustic,
+            dictionary=dictionary,
             allow_fuzzy=bool(args.allow_fuzzy),
             fuzzy_max_lookahead=int(args.fuzzy_max_lookahead),
             max_chars_per_chunk=int(args.max_chars_per_chunk),
             num_jobs=int(args.num_jobs),
             export_flat_phone_json=not bool(args.no_flat_phone_json),
-            phonemizer_language=args.phonemizer_lang,
+            phonemizer_language=phonemizer_language,
             use_phonemizer=not bool(args.no_phonemizer),
         )
+        if args.write_playback:
+            write_playback_transcript(args.head_folder)
         return
 
     if args.command == "export-phones":
