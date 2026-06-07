@@ -1,0 +1,1 @@
+conda config --set prefix_data_interoperability True   
