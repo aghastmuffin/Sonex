@@ -3,6 +3,7 @@ from tkinter import dialog
 """Primary Entry Point for Sonex. Does not contain logic. NOT STANDALONE"""
 import os
 import sys
+import json 
 
 from PyQt6.QtCore import QObject, pyqtSignal, QThread
 from PyQt6.QtCore import Qt, QElapsedTimer, QTimer, QUrl
@@ -417,6 +418,16 @@ class Notification(QDialog):
         layout.addWidget(buttons)
 
 
+def _whisper_cuda_available() -> bool:
+    try:
+        import ctranslate2
+
+        ctranslate2.get_supported_compute_types("cuda")
+        return True
+    except Exception:
+        return False
+
+
 def detect_gpu_acceleration() -> tuple[bool, str]:
     """Return whether an accelerator is available and a user-facing status label."""
     try:
@@ -427,15 +438,26 @@ def detect_gpu_acceleration() -> tuple[bool, str]:
                 name = torch.cuda.get_device_name(0)
             except Exception:
                 name = "CUDA device"
-            return True, f"NVIDIA GPU available ({name})"
+            if _whisper_cuda_available():
+                return True, (
+                    f"NVIDIA GPU available ({name}). "
+                    "Demucs, Whisper, and translation can use CUDA."
+                )
+            return True, (
+                f"NVIDIA GPU available ({name}). "
+                "Demucs and translation use CUDA; Whisper runs on CPU."
+            )
 
         mps = getattr(torch.backends, "mps", None)
         if mps is not None and mps.is_available():
-            return True, "Apple Metal (MPS) GPU available"
+            return True, (
+                "Apple Metal (MPS) GPU available. "
+                "Demucs and translation use Metal; Whisper runs on CPU."
+            )
     except Exception as exc:
         return False, f"GPU check failed: {exc}"
 
-    return False, "No compatible GPU detected (CPU only)"
+    return False, "No compatible GPU detected. All processing uses CPU."
 
 
 class GPUCheckWorker(QObject):
@@ -503,6 +525,7 @@ class AdvancedSettingsDialog(QDialog):
 
         self.gpu_status = QLabel("Checking GPU...")
         self.gpu_status.setObjectName("statusWarn")
+        self.gpu_status.setWordWrap(True)
         form.addRow(self.gpu_input, self.gpu_status)
 
         self._gpu_thread = QThread()

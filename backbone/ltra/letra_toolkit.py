@@ -1,4 +1,5 @@
 import io, os, select, sys
+import json
 import shutil
 import re
 from pathlib import Path
@@ -7,6 +8,7 @@ import subprocess as sp
 from typing import Dict, Literal, Tuple, Optional, IO
 #FFMPEG, openai-whisper, demucs 
 from faster_whisper import WhisperModel
+import json 
 """Lyrics timing"""
 MINIMUM = (3, 9, 0)
 if sys.version_info < MINIMUM:
@@ -172,6 +174,88 @@ def _probe_audio_duration_seconds(inp) -> Optional[float]:
 
 
 WHISPER_CHUNK_SEC = 55.0
+MIN_WORD_DUR = 0.05
+
+
+def _coerce_float(value, default=None):
+    try:
+        out = float(value)
+        if out != out:  # NaN
+            return default
+        return out
+    except (TypeError, ValueError):
+        return default
+
+
+def _words_have_valid_times(words) -> bool:
+    if not words:
+        return False
+    prev_end = None
+    for word in words:
+        start = _coerce_float(word.get("start"))
+        end = _coerce_float(word.get("end"))
+        if start is None or end is None or end <= start:
+            return False
+        if prev_end is not None and start + 1e-3 < prev_end:
+            return False
+        prev_end = end
+    return True
+
+
+def sanitize_whisper_segments(segments):
+    """Ensure segment and word timestamps are usable for MFA chunking."""
+    if not segments:
+        return segments
+
+    sanitized = []
+    prev_end = 0.0
+    for seg in segments:
+        seg = dict(seg)
+        seg_start = _coerce_float(seg.get("start"), prev_end)
+        seg_end = _coerce_float(seg.get("end"), (seg_start or prev_end) + MIN_WORD_DUR)
+        if seg_start is None:
+            seg_start = prev_end
+        if seg_end is None or seg_end <= seg_start:
+            seg_end = seg_start + MIN_WORD_DUR
+
+        words = []
+        raw_words = seg.get("words") or []
+        if raw_words:
+            cursor = max(seg_start, prev_end)
+            for raw in raw_words:
+                word = dict(raw)
+                text = word.get("word", "")
+                wstart = _coerce_float(word.get("start"), cursor)
+                wend = _coerce_float(word.get("end"))
+                if wstart is None:
+                    wstart = cursor
+                wstart = max(wstart, cursor)
+                if wend is None or wend <= wstart:
+                    wend = wstart + MIN_WORD_DUR
+                word["word"] = text
+                word["start"] = wstart
+                word["end"] = wend
+                words.append(word)
+                cursor = wend
+            seg_start = words[0]["start"]
+            seg_end = words[-1]["end"]
+        else:
+            tokens = (seg.get("text") or "").split()
+            if tokens:
+                duration = max(seg_end - seg_start, MIN_WORD_DUR * len(tokens))
+                step = duration / len(tokens)
+                cursor = seg_start
+                for token in tokens:
+                    words.append({"word": token, "start": cursor, "end": cursor + step})
+                    cursor += step
+                seg_end = words[-1]["end"]
+
+        seg["start"] = seg_start
+        seg["end"] = seg_end
+        seg["words"] = words
+        sanitized.append(seg)
+        prev_end = max(prev_end, seg_end)
+    return sanitized
 
 
 def _collect_whisper_segments(model, inp, *, transcribe_kwargs, audio_duration, progress_cb=None, task_label="Whisper"):
@@ -262,6 +346,9 @@ def transcribe(
         else:
             with open(outp, "r", encoding="utf-8") as f:
                 transcript = json.load(f)
+            transcript = sanitize_whisper_segments(transcript)
+            with open(outp, "w", encoding="utf-8") as f:
+                json.dump(transcript, f, indent=2, ensure_ascii=False)
             print(f"Using cached transcript: {outp}")
             if progress_cb is not None:
                 progress_cb(100, f"Whisper {task} complete (cached)")
@@ -360,6 +447,8 @@ def transcribe(
                 if w.start is not None and w.end is not None
             ]
         })
+
+    transcript = sanitize_whisper_segments(transcript)
 
     # -------------------------
     # Write output
@@ -519,6 +608,61 @@ def flatten(target_file: str, target_pitch_semitones: int = -12, band: tuple = (
     """
 #    return
 
+def _write_whisper_segments_list(path, segments):
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(sanitize_whisper_segments(segments), f, indent=2, ensure_ascii=False)
+
+
+def _merge_segment_words(original_words, aligned_words):
+    if _words_have_valid_times(original_words):
+        return original_words
+    if _words_have_valid_times(aligned_words):
+        return aligned_words
+    merged = original_words or aligned_words or []
+    return sanitize_whisper_segments([{"id": 0, "text": " ", "start": 0.0, "end": MIN_WORD_DUR, "words": merged}])[0]["words"]
+
+
+def _build_alignment_metadata(segments):
+    transcript = []
+    metadata = {}
+    for seg in segments:
+        seg_id = seg.get("id", len(transcript))
+        transcript.append({
+            "id": seg_id,
+            "text": seg.get("text", ""),
+            "start": seg.get("start"),
+            "end": seg.get("end"),
+        })
+        metadata[seg_id] = {
+            "start": seg.get("start"),
+            "end": seg.get("end"),
+            "words": seg.get("words", []),
+        }
+    return transcript, metadata
+
+
+def _finalize_alignment_output(aligned, metadata):
+    segments_out = []
+    if isinstance(aligned, dict) and "segments" in aligned:
+        source_segments = aligned["segments"]
+    elif isinstance(aligned, list):
+        source_segments = aligned
+    else:
+        source_segments = []
+
+    for seg in source_segments:
+        seg = dict(seg)
+        seg_id = seg.get("id")
+        meta = metadata.get(seg_id, {}) if seg_id is not None else {}
+        seg["words"] = _merge_segment_words(meta.get("words") or [], seg.get("words") or [])
+        if meta.get("start") is not None and seg.get("start") is None:
+            seg["start"] = meta["start"]
+        if meta.get("end") is not None and seg.get("end") is None:
+            seg["end"] = meta["end"]
+        segments_out.append(seg)
+    return sanitize_whisper_segments(segments_out)
+
+
 def align(
     audio_path: str,
     transcript_path: str,
@@ -527,6 +671,7 @@ def align(
     reuse_existing: bool = True,
     return_char_alignments: bool = False,
     flatten_audio: bool = True,
+    writeback_transcript: bool = True,
 ):
     """
     Align transcript segments from JSON to audio using WhisperX CTC alignment.
@@ -552,8 +697,14 @@ def align(
     if reuse_existing and _is_fresh(output_path, [audio_path, transcript_path]):
         with open(output_path, "r", encoding="utf-8") as f:
             aligned = json.load(f)
+        with open(transcript_path, "r", encoding="utf-8") as f:
+            source_segments = json.load(f)
+        _, metadata = _build_alignment_metadata(source_segments)
+        final_segments = _finalize_alignment_output(aligned, metadata)
+        if writeback_transcript:
+            _write_whisper_segments_list(transcript_path, final_segments)
         print(f"Using cached alignment: {output_path}")
-        return aligned
+        return {"segments": final_segments}
 
     # -------------------------
     # Load audio - proper preprocessing for whisperx
@@ -577,22 +728,7 @@ def align(
     if not segments:
         raise RuntimeError("Transcript file is empty — nothing to align.")
 
-    # Build transcript list for alignment, preserving metadata
-    transcript = []
-    metadata = {}
-    for seg in segments:
-        seg_id = seg.get("id", len(transcript))
-        transcript.append({
-            "id": seg_id,
-            "text": seg.get("text", ""),
-            "start": seg.get("start"),
-            "end": seg.get("end")
-        })
-        metadata[seg_id] = {
-            "start": seg.get("start"),
-            "end": seg.get("end"),
-            "words": seg.get("words", [])
-        }
+    transcript, metadata = _build_alignment_metadata(segments)
 
     print(f"Aligning {len(transcript)} segments...")
 
@@ -608,59 +744,48 @@ def align(
     except Exception as e:
         print(f"Failed to load alignment model: {e}")
         print("Falling back to original Whisper timestamps...")
-        # Skip CTC alignment, use original timestamps
         aligned = {"segments": transcript}
-        for seg in aligned["segments"]:
-            seg_id = seg.get("id")
-            if seg_id in metadata and metadata[seg_id]["words"]:
-                seg["words"] = metadata[seg_id]["words"]
-        # Save and return early
-        with open(output_path, "w", encoding="utf-8") as f:
-            json.dump(aligned, f, indent=2, ensure_ascii=False)
-        print(f"✓ Alignment (fallback) written to {output_path}")
-        return aligned
 
-    # -------------------------
-    # Run forced alignment
-    # -------------------------
-    try:
-        aligned = whisperx.align(
-            transcript,
-            align_model,
-            align_model_metadata,
-            audio,
-            device,
-            return_char_alignments=bool(return_char_alignments)
-        )
-        print(f"CTC alignment successful")
-    except Exception as e:
-        print(f"CTC alignment failed: {e}")
-        print("Using original Whisper timestamps instead...")
-        aligned = {"segments": transcript}
-        for seg in aligned["segments"]:
-            seg_id = seg.get("id")
-            if seg_id in metadata and metadata[seg_id]["words"]:
-                seg["words"] = metadata[seg_id]["words"]
+    else:
+        # -------------------------
+        # Run forced alignment
+        # -------------------------
+        try:
+            aligned = whisperx.align(
+                transcript,
+                align_model,
+                align_model_metadata,
+                audio,
+                device,
+                return_char_alignments=bool(return_char_alignments),
+            )
+            print("CTC alignment successful")
+        except Exception as e:
+            print(f"CTC alignment failed: {e}")
+            print("Using original Whisper timestamps instead...")
+            aligned = {"segments": transcript}
 
-    # -------------------------
-    # Merge original metadata with alignment results
-    # -------------------------
-    if isinstance(aligned, dict) and "segments" in aligned:
-        for seg in aligned["segments"]:
-            seg_id = seg.get("id")
-            if seg_id in metadata:
-                # Preserve original timing metadata
-                seg["original_start"] = metadata[seg_id]["start"]
-                seg["original_end"] = metadata[seg_id]["end"]
-                
-                # IMPORTANT: Use original Whisper word timings if available
-                # CTC alignment often produces worse word boundaries than Whisper's own
-                if metadata[seg_id]["words"]:
-                    seg["words"] = metadata[seg_id]["words"]
-                    print(f"  Segment {seg_id}: Using original Whisper word timings ({len(seg['words'])} words)")
-                else:
-                    # Fall back to CTC-aligned words if no original words
-                    print(f"  Segment {seg_id}: Using CTC-aligned words")
+    final_segments = _finalize_alignment_output(aligned, metadata)
+    for seg in final_segments:
+        seg_id = seg.get("id")
+        if seg_id in metadata:
+            orig_words = metadata[seg_id].get("words") or []
+            aligned_words = []
+            if isinstance(aligned, dict):
+                for src in aligned.get("segments") or []:
+                    if src.get("id") == seg_id:
+                        aligned_words = src.get("words") or []
+                        break
+            if _words_have_valid_times(orig_words):
+                print(f"  Segment {seg_id}: Using original Whisper word timings ({len(seg['words'])} words)")
+            elif _words_have_valid_times(aligned_words):
+                print(f"  Segment {seg_id}: Using CTC-aligned word timings ({len(seg['words'])} words)")
+            elif seg.get("words"):
+                print(f"  Segment {seg_id}: Repaired word timings ({len(seg['words'])} words)")
+
+    aligned = {"segments": final_segments}
+    if writeback_transcript:
+        _write_whisper_segments_list(transcript_path, final_segments)
 
     # -------------------------
     # Save output

@@ -799,10 +799,39 @@ def generate_aligned_v2(
         except (TypeError, ValueError):
             return False
 
+    def repair_entry_time(entry, *, fallback_start=0.0, min_dur=0.05):
+        try:
+            start = float(entry["start"])
+        except (TypeError, ValueError):
+            start = fallback_start
+        try:
+            end = float(entry["end"])
+        except (TypeError, ValueError):
+            end = start + min_dur
+        if end <= start:
+            end = start + min_dur
+        entry["start"] = start
+        entry["end"] = end
+        return entry
+
+    repaired = 0
+    cursor = 0.0
+    for entry in transcript_entries:
+        if not has_valid_time(entry):
+            repair_entry_time(entry, fallback_start=cursor)
+            repaired += 1
+        cursor = float(entry["end"])
+
     can_time_slice = all(has_valid_time(entry) for entry in transcript_entries)
     if not can_time_slice and len(chunks) > 1:
-        print("Warning: missing/invalid Whisper word timestamps; falling back to single-chunk MFA alignment.")
+        bad = sum(1 for entry in transcript_entries if not has_valid_time(entry))
+        print(
+            "Warning: missing/invalid Whisper word timestamps "
+            f"({bad}/{len(transcript_entries)} words); falling back to single-chunk MFA alignment."
+        )
         chunks = [transcript_entries]
+    elif repaired:
+        print(f"INFO|Repaired {repaired} Whisper word timestamp(s) for MFA chunking.")
 
     n_chunks = len(chunks)
 
