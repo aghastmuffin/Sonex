@@ -2,11 +2,36 @@ name: Build Installers
 
 on:
   workflow_dispatch:
-  release:  
+  release:
     types: [created]
 
 jobs:
-  build:
+  bootstrap-bundle:
+    name: Bootstrap bundle
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create standalone bootstrap archive
+        run: |
+          mkdir -p dist
+          zip -j dist/sonex-bootstrap.zip \
+            installer/bootstrap.py \
+            installer/install.sh \
+            installer/install.ps1 \
+            installer/verify.py \
+            installer/requirements.txt \
+            installer/requirements.in \
+            installer/environment-mfa.yml
+
+      - name: Upload bootstrap artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sonex-bootstrap
+          path: dist/sonex-bootstrap.zip
+
+  constructor:
+    name: Native installer (${{ matrix.platform }})
     strategy:
       fail-fast: false
       matrix:
@@ -20,6 +45,7 @@ jobs:
           - os: windows-latest
             platform: win-64
     runs-on: ${{ matrix.os }}
+    continue-on-error: true
 
     steps:
       - name: Checkout
@@ -36,7 +62,16 @@ jobs:
       - name: Install packaging tools
         run: conda install -y -c conda-forge constructor conda-lock
 
+      - name: Stage app sources for constructor
+        shell: bash
+        run: |
+          mkdir -p installer/constructor/sonex-app
+          rsync -a --exclude='.git' --exclude='.venv' --exclude='__pycache__' \
+            --exclude='model_offload' --exclude='dist' \
+            ./ installer/constructor/sonex-app/
+
       - name: Build installer
+        shell: bash
         run: constructor installer/constructor --platform ${{ matrix.platform }} --output-dir dist
 
       - name: Upload artifact

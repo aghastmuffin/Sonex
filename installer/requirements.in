@@ -1,0 +1,25 @@
+# Core Sonex runtime dependencies.
+# Regenerate requirements.txt with: pip-compile requirements.in
+# Or copy from a working venv: pip freeze > requirements.txt
+
+PyQt6
+demucs
+faster-whisper
+argostranslate
+praatio
+essentia
+librosa
+madmom
+numpy
+scipy
+scikit-learn
+matplotlib
+sympy
+torch
+torchaudio
+transformers
+hnswlib
+requests
+packaging
+tqdm
+phonemizer

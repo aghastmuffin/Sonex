@@ -1,0 +1,13 @@
+# Full Sonex conda environment (used by constructor native installers).
+# For local dev, prefer: python installer/bootstrap.py
+
+name: sonex
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.9
+  - ffmpeg
+  - pip
+  - pip:
+      - -r requirements.txt

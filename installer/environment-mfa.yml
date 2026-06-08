@@ -1,0 +1,10 @@
+# Conda environment for Montreal Forced Aligner (optional but recommended).
+# Create with: conda env create -f installer/environment-mfa.yml
+# Or let the installer handle it: python installer/bootstrap.py --with-mfa
+
+name: mfa
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - montreal-forced-aligner

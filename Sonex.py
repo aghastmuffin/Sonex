@@ -544,8 +544,14 @@ class AdvancedSettingsDialog(QDialog):
         self.phoneme_timestamps = QCheckBox("Phoneme-level timestamps (MFA alignment; richer karaoke highlighting)")
         self.phoneme_timestamps.setChecked(bool(settings.get("phoneme_timestamps", True)))
 
+        self.speaker_diarization = QCheckBox(
+            "Speaker diarization (label vocals by speaker; requires Hugging Face token in HF_TOKEN)"
+        )
+        self.speaker_diarization.setChecked(bool(settings.get("speaker_diarization", False)))
+
         form.addRow(self.flatten_audio)
         form.addRow(self.phoneme_timestamps)
+        form.addRow(self.speaker_diarization)
         buttons = QDialogButtonBox(QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel, self)
         buttons.accepted.connect(self._on_accept)
         buttons.rejected.connect(self.reject)
@@ -585,6 +591,7 @@ class AdvancedSettingsDialog(QDialog):
             "gpu": bool(self.gpu_input.isChecked()),
             "flatten": bool(self.flatten_audio.isChecked()),
             "phoneme_timestamps": bool(self.phoneme_timestamps.isChecked()),
+            "speaker_diarization": bool(self.speaker_diarization.isChecked()),
         }
 
 def resolve_app_icon_path():
@@ -762,6 +769,7 @@ class Window(QMainWindow):
             "gpu": GPU,
             "flatten": True,
             "phoneme_timestamps": True,
+            "speaker_diarization": False,
         }
 
         self.setWindowTitle("SONEX - Analyzer")
@@ -1395,6 +1403,15 @@ class Viewer(QMainWindow):
 
         self.header_label = QLabel(session.header_text)
         self.header_label.setStyleSheet("background-color: transparent; color: #ffffff; font-size: 13px;")
+        if session.has_speaker_diarization:
+            self.header_label.setToolTip(
+                "Speaker diarization detected in this transcript."
+                + (
+                    f" Speakers: {', '.join(session.speaker_ids)}"
+                    if session.speaker_ids
+                    else ""
+                )
+            )
 
         self.orig_lyrics = QLabel()
         self.orig_lyrics.setObjectName("lyricsLabel")

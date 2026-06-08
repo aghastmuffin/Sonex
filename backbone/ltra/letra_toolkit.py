@@ -617,7 +617,15 @@ def _merge_segment_words(original_words, aligned_words):
     if _words_have_valid_times(original_words):
         return original_words
     if _words_have_valid_times(aligned_words):
-        return aligned_words
+        merged = []
+        for idx, aligned in enumerate(aligned_words):
+            word = dict(aligned)
+            if idx < len(original_words or []):
+                speaker = (original_words[idx] or {}).get("speaker")
+                if speaker:
+                    word["speaker"] = speaker
+            merged.append(word)
+        return merged
     merged = original_words or aligned_words or []
     return sanitize_whisper_segments([{"id": 0, "text": " ", "start": 0.0, "end": MIN_WORD_DUR, "words": merged}])[0]["words"]
 
@@ -637,6 +645,7 @@ def _build_alignment_metadata(segments):
             "start": seg.get("start"),
             "end": seg.get("end"),
             "words": seg.get("words", []),
+            "speaker": seg.get("speaker"),
         }
     return transcript, metadata
 
@@ -659,6 +668,8 @@ def _finalize_alignment_output(aligned, metadata):
             seg["start"] = meta["start"]
         if meta.get("end") is not None and seg.get("end") is None:
             seg["end"] = meta["end"]
+        if meta.get("speaker") and not seg.get("speaker"):
+            seg["speaker"] = meta["speaker"]
         segments_out.append(seg)
     return sanitize_whisper_segments(segments_out)
 
@@ -798,6 +809,109 @@ def align(
     return aligned
 
 
+def _resolve_hf_token() -> Optional[str]:
+    for key in ("HF_TOKEN", "HUGGING_FACE_HUB_TOKEN", "HUGGINGFACE_TOKEN"):
+        value = (os.environ.get(key) or "").strip()
+        if value:
+            return value
+    return None
+
+
+def segments_have_speaker_diarization(segments) -> bool:
+    """True when transcript JSON includes speaker labels from diarization."""
+    if not segments:
+        return False
+    for seg in segments:
+        if (seg.get("speaker") or "").strip():
+            return True
+        for word in seg.get("words") or []:
+            if (word.get("speaker") or "").strip():
+                return True
+    return False
+
+
+def diarize(
+    audio_path: str,
+    transcript_path: str,
+    output_path: Optional[str] = None,
+    *,
+    reuse_existing: bool = True,
+    min_speakers: Optional[int] = None,
+    max_speakers: Optional[int] = None,
+    num_speakers: Optional[int] = None,
+    fill_nearest: bool = True,
+    writeback_transcript: bool = True,
+    progress_cb=None,
+):
+    """
+    Assign speaker labels to an aligned Whisper transcript using WhisperX/pyannote.
+    Requires a Hugging Face token in HF_TOKEN (or HUGGING_FACE_HUB_TOKEN).
+    """
+    import json
+    import torch
+    from whisperx.diarize import DiarizationPipeline, assign_word_speakers
+
+    transcript_path = Path(transcript_path)
+    audio_path = str(audio_path)
+    output_path = Path(output_path) if output_path else transcript_path
+
+    with open(transcript_path, "r", encoding="utf-8") as f:
+        segments = json.load(f)
+
+    if not segments:
+        raise RuntimeError("Transcript file is empty — nothing to diarize.")
+
+    if reuse_existing and segments_have_speaker_diarization(segments) and _is_fresh(transcript_path, audio_path):
+        print(f"Using cached diarization: {transcript_path}")
+        if progress_cb is not None:
+            progress_cb(100, "Diarization complete (cached)")
+        return segments
+
+    token = _resolve_hf_token()
+    if not token:
+        raise RuntimeError(
+            "Speaker diarization requires a Hugging Face token. "
+            "Set HF_TOKEN or HUGGING_FACE_HUB_TOKEN in your environment."
+        )
+
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    print(f"Running speaker diarization on {device}...")
+
+    diarize_model = DiarizationPipeline(token=token, device=device)
+
+    def _report_progress(pct):
+        if progress_cb is None:
+            return
+        try:
+            clamped = max(0, min(100, int(float(pct))))
+        except (TypeError, ValueError):
+            return
+        progress_cb(clamped, f"Diarizing {clamped}%")
+
+    diarize_df = diarize_model(
+        audio_path,
+        num_speakers=num_speakers,
+        min_speakers=min_speakers,
+        max_speakers=max_speakers,
+        progress_callback=_report_progress,
+    )
+    result = assign_word_speakers(
+        diarize_df,
+        {"segments": segments},
+        fill_nearest=bool(fill_nearest),
+    )
+    final_segments = sanitize_whisper_segments(result.get("segments") or segments)
+
+    if writeback_transcript:
+        _write_whisper_segments_list(transcript_path, final_segments)
+    if output_path.resolve() != transcript_path.resolve():
+        _write_whisper_segments_list(output_path, final_segments)
+
+    if progress_cb is not None:
+        progress_cb(100, "Diarization complete")
+
+    print(f"✓ Diarization written to {transcript_path}")
+    return final_segments
 
 
 def select_best_transcript():

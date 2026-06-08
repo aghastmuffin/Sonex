@@ -163,7 +163,7 @@ def _enrich_translated_source_phones(audiobase: str):
         for word_idx, word in enumerate(source_words):
             merged = dict(word)
             if word_idx < len(phone_words):
-                for key in ("phones", "phone_segments"):
+                for key in ("phones", "phone_segments", "speaker"):
                     if phone_words[word_idx].get(key):
                         merged[key] = phone_words[word_idx][key]
                         enriched_words += 1
@@ -229,7 +229,7 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
         sys.path.insert(0, repo_root) #return to root dir so that it can begin to place files in proper place
 
     from backbone.ltra import letra_toolkit as lt
-    from backbone.ltra.letra_toolkit import transcribe, align, separate
+    from backbone.ltra.letra_toolkit import transcribe, align, diarize, separate
     from backbone.ltra.argos_translate import translate_file
     (
         mfa_language_names,
@@ -253,6 +253,7 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
     use_gpu = bool(settings.get("gpu", False))
     flattenaudio = bool(settings.get("flatten", False))
     phoneme_timestamps = bool(settings.get("phoneme_timestamps", True))
+    speaker_diarization = bool(settings.get("speaker_diarization", False))
     wav2vec2_phone_fallback = bool(settings.get("wav2vec2_phone_fallback", False))
     wav2vec2_min_mfa_coverage = int(settings.get("wav2vec2_min_mfa_coverage", 85))
 
@@ -315,6 +316,19 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
         language=(lang_code or detectlang or "en"),
         flatten_audio=flattenaudio,
     )
+
+    if speaker_diarization:
+        emit_progress(48, "Diarizing speakers...")
+        try:
+            diarize(
+                f"{audiobase}/vocals.mp3",
+                f"{audiobase}/vocals_whisper_segments.json",
+                progress_cb=_stage_progress_cb(48, 51, "Diarizing speakers..."),
+            )
+        except Exception as exc:
+            print(f"INFO|Speaker diarization skipped: {exc}", flush=True)
+    else:
+        print("INFO|Speaker diarization disabled; skipping.", flush=True)
 
     if phoneme_timestamps:
         try:

@@ -1,1 +1,2 @@
 - add working diarization (and use the authors in the song to get their songs to match voices)
+- add VAD + padding / OR atempo (with downpitch) chunk it into 10 seconds and get speech rate

@@ -1,0 +1,23 @@
+# Constructor spec for native Sonex installers.
+# Build: constructor installer/constructor --platform <platform> --output-dir dist
+# Platforms: osx-64, osx-arm64, linux-64, win-64
+
+name: Sonex
+version: 0.4.0
+company: Sonex
+license: LICENSE
+default_prefix: $HOME/sonex
+default_prefix_domain_user: true
+default_prefix_domain_user_env: SONEX_PREFIX
+channels:
+  - conda-forge
+  - pytorch
+specs:
+  - ../environment.yml
+extra:
+  copy_menus:
+    - src: scripts/run-sonex.sh
+      dst: bin/sonex
+    - src: scripts/run-sonex-view.sh
+      dst: bin/sonex-view
+  post_install: scripts/post_install.sh

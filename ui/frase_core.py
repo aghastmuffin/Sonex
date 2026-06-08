@@ -45,6 +45,8 @@ LOOP_MIN_PERIOD_MS = 1000
 LOOP_MAX_PERIOD_MS = 9000
 LOOP_ACQUIRE_COOLDOWN_MS = 120
 
+SPEAKER_COLORS = ("#7eb8ff", "#ffb86c", "#b4f0a7", "#f5a3d8", "#c8a8ff", "#ffe08a")
+
 OUTPUT_ROOT = ""
 
 
@@ -115,6 +117,98 @@ def _build_translated_segment_list(json_data):
     return out
 
 
+def segments_have_speaker_diarization(segments) -> bool:
+    """True when loaded transcript data includes speaker labels."""
+    if not segments:
+        return False
+    for seg in segments:
+        if (seg.get("speaker") or "").strip():
+            return True
+        for word in seg.get("words") or []:
+            if (word.get("speaker") or "").strip():
+                return True
+    return False
+
+
+def collect_speaker_ids(segments) -> list[str]:
+    speaker_ids = []
+    seen = set()
+    for seg in segments or []:
+        candidates = [seg.get("speaker")]
+        candidates.extend((w.get("speaker") for w in seg.get("words") or []))
+        for speaker in candidates:
+            speaker = (speaker or "").strip()
+            if speaker and speaker not in seen:
+                seen.add(speaker)
+                speaker_ids.append(speaker)
+    return speaker_ids
+
+
+def speaker_color(speaker_id: str | None) -> str:
+    if not speaker_id:
+        return "#ffffff"
+    text = str(speaker_id)
+    digits = "".join(ch for ch in text if ch.isdigit())
+    if digits:
+        idx = int(digits)
+    else:
+        idx = sum(ord(ch) for ch in text)
+    return SPEAKER_COLORS[idx % len(SPEAKER_COLORS)]
+
+
+def propagate_speaker_labels(source_segments, target_segments):
+    if not source_segments or not target_segments:
+        return target_segments
+    for seg_idx, target_seg in enumerate(target_segments):
+        if seg_idx >= len(source_segments):
+            break
+        source_seg = source_segments[seg_idx]
+        if source_seg.get("speaker") and not target_seg.get("speaker"):
+            target_seg["speaker"] = source_seg["speaker"]
+        source_words = source_seg.get("words") or []
+        target_words = target_seg.get("words") or []
+        for word_idx, target_word in enumerate(target_words):
+            if word_idx >= len(source_words):
+                break
+            speaker = source_words[word_idx].get("speaker")
+            if speaker and not target_word.get("speaker"):
+                target_word["speaker"] = speaker
+    return target_segments
+
+
+def _word_dict_for_render(word):
+    item = {
+        "start": float(word["start"]),
+        "end": float(word["end"]),
+        "word": str(word.get("word", "")) + " ",
+        "phones": [
+            {
+                "phone": str(p.get("phone", "")),
+                "start": float(p["start"]),
+                "end": float(p["end"]),
+            }
+            for p in word.get("phones", [])
+            if "start" in p and "end" in p
+        ],
+        "phone_segments": [
+            {
+                "text": str(ps.get("text", "")),
+                "char_start": int(ps.get("char_start", 0)),
+                "char_end": int(ps.get("char_end", 0)),
+                "phone": str(ps.get("phone", "")),
+                "start": float(ps["start"]),
+                "end": float(ps["end"]),
+            }
+            for ps in word.get("phone_segments", [])
+            if "start" in ps and "end" in ps
+        ],
+    }
+    speaker = (word.get("speaker") or "").strip()
+    if speaker:
+        item["speaker"] = speaker
+    return item
+
+
 def _build_segment_list(json_data):
     out = []
     for broad_chunk in json_data:
@@ -125,42 +219,16 @@ def _build_segment_list(json_data):
         seg_start = broad_chunk.get("start", words[0].get("start", 0.0))
         seg_end = broad_chunk.get("end", words[-1].get("end", seg_start))
 
-        out.append(
-            {
-                "start": float(seg_start),
-                "end": float(seg_end),
-                "text": broad_chunk.get("text", ""),
-                "words": [
-                    {
-                        "start": float(w["start"]),
-                        "end": float(w["end"]),
-                        "word": str(w.get("word", "")) + " ",
-                        "phones": [
-                            {
-                                "phone": str(p.get("phone", "")),
-                                "start": float(p["start"]),
-                                "end": float(p["end"]),
-                            }
-                            for p in w.get("phones", [])
-                            if "start" in p and "end" in p
-                        ],
-                        "phone_segments": [
-                            {
-                                "text": str(ps.get("text", "")),
-                                "char_start": int(ps.get("char_start", 0)),
-                                "char_end": int(ps.get("char_end", 0)),
-                                "phone": str(ps.get("phone", "")),
-                                "start": float(ps["start"]),
-                                "end": float(ps["end"]),
-                            }
-                            for ps in w.get("phone_segments", [])
-                            if "start" in ps and "end" in ps
-                        ],
-                    }
-                    for w in words
-                ],
-            }
-        )
+        segment = {
+            "start": float(seg_start),
+            "end": float(seg_end),
+            "text": broad_chunk.get("text", ""),
+            "words": [_word_dict_for_render(w) for w in words],
+        }
+        speaker = (broad_chunk.get("speaker") or "").strip()
+        if speaker:
+            segment["speaker"] = speaker
+        out.append(segment)
     return out
 
 
@@ -174,43 +242,16 @@ def _build_source_segment_list(json_data):
         seg_start = broad_chunk.get("start", words[0].get("start", 0.0))
         seg_end = broad_chunk.get("end", words[-1].get("end", seg_start))
 
-        out.append(
-            {
-                "start": float(seg_start),
-                "end": float(seg_end),
-                "text": broad_chunk.get("source_text", broad_chunk.get("text", "")),
-                "words": [
-                    {
-                        "start": float(w["start"]),
-                        "end": float(w["end"]),
-                        "word": str(w.get("word", "")) + " ",
-                        "phones": [
-                            {
-                                "phone": str(p.get("phone", "")),
-                                "start": float(p["start"]),
-                                "end": float(p["end"]),
-                            }
-                            for p in w.get("phones", [])
-                            if "start" in p and "end" in p
-                        ],
-                        "phone_segments": [
-                            {
-                                "text": str(ps.get("text", "")),
-                                "char_start": int(ps.get("char_start", 0)),
-                                "char_end": int(ps.get("char_end", 0)),
-                                "phone": str(ps.get("phone", "")),
-                                "start": float(ps["start"]),
-                                "end": float(ps["end"]),
-                            }
-                            for ps in w.get("phone_segments", [])
-                            if "start" in ps and "end" in ps
-                        ],
-                    }
-                    for w in words
-                    if "start" in w and "end" in w
-                ],
-            }
-        )
+        segment = {
+            "start": float(seg_start),
+            "end": float(seg_end),
+            "text": broad_chunk.get("source_text", broad_chunk.get("text", "")),
+            "words": [_word_dict_for_render(w) for w in words if "start" in w and "end" in w],
+        }
+        speaker = (broad_chunk.get("speaker") or "").strip()
+        if speaker:
+            segment["speaker"] = speaker
+        out.append(segment)
     return out
 
 
@@ -665,7 +706,7 @@ def tokenize_for_render(seg_words):
         lead = 0
         while lead < len(s) and s[lead] == " ":
             lead += 1
-        tokens.append((lead, s[lead:]))
+        tokens.append((lead, s[lead:], w.get("speaker")))
     return tokens
 
 
@@ -704,9 +745,11 @@ def compute_partial_highlight(word, elapsed):
     return None
 
 
-def tokens_to_html(tokens, highlight_idx, partial_highlight=None):
+def tokens_to_html(tokens, highlight_idx, partial_highlight=None, *, use_speaker_colors=False):
     parts = []
-    for idx, (lead_spaces, text) in enumerate(tokens):
+    for idx, token in enumerate(tokens):
+        lead_spaces, text = token[0], token[1]
+        speaker = token[2] if len(token) > 2 else None
         if lead_spaces:
             parts.append("&nbsp;" * lead_spaces)
         if not text:
@@ -727,6 +770,8 @@ def tokens_to_html(tokens, highlight_idx, partial_highlight=None):
             parts.append(f'{pre}<span style="color:#ffdc50">{mid}</span>{post}')
         elif idx == highlight_idx:
             parts.append(f'<span style="color:#ffdc50">{escaped}</span>')
+        elif use_speaker_colors and speaker:
+            parts.append(f'<span style="color:{speaker_color(speaker)}">{escaped}</span>')
         else:
             parts.append(escaped)
     return "".join(parts)
@@ -750,6 +795,8 @@ class LyricsSession:
     native_file: str | None = None
     translated_file: str | None = None
     resolved_folder: str | None = None
+    has_speaker_diarization: bool = False
+    speaker_ids: list = field(default_factory=list)
 
     analysis_hpcp: Any = None
     analysis_beats: Any = None
@@ -905,13 +952,33 @@ class LyricsSession:
                 session.segments1 = []
                 session.mode_name = "Single translated"
 
+        session._apply_diarization_metadata()
         session.header_text = (
-            f"{audio_anchor_file.split('/')[-2]} | {session.mode_name} | taeson.co"
+            f"{audio_anchor_file.split('/')[-2]} | {session.mode_name}{session._diarization_header_suffix()} | taeson.co"
         )
         session.audio_path = resolve_audio_path(audio_anchor_file)
         session.load_analysis_data(resolved_folder)
         session.reset_playback_indices()
         return session
+
+    def _diarization_header_suffix(self) -> str:
+        if not self.has_speaker_diarization:
+            return ""
+        count = len(self.speaker_ids)
+        if count > 0:
+            label = "speaker" if count == 1 else "speakers"
+            return f" | {count} {label}"
+        return " | Diarized"
+
+    def _apply_diarization_metadata(self):
+        self.has_speaker_diarization = segments_have_speaker_diarization(self.segments)
+        self.speaker_ids = collect_speaker_ids(self.segments) if self.has_speaker_diarization else []
+        if self.segments1:
+            if self.has_speaker_diarization:
+                propagate_speaker_labels(self.segments, self.segments1)
+            elif segments_have_speaker_diarization(self.segments1):
+                self.has_speaker_diarization = True
+                self.speaker_ids = collect_speaker_ids(self.segments1)
 
     def _analysis_index_from_ms(self, ms, series_len):
         if series_len <= 0:
@@ -991,7 +1058,12 @@ class LyricsSession:
         if cache_tokens is None:
             return ""
 
-        return tokens_to_html(cache_tokens, highlight_idx, partial_highlight)
+        return tokens_to_html(
+            cache_tokens,
+            highlight_idx,
+            partial_highlight,
+            use_speaker_colors=self.has_speaker_diarization,
+        )
 
     def update_note_bars(self, ms, dt_ms):
         source = self.analysis_note_strengths if self.analysis_note_strengths is not None else self.analysis_hpcp
