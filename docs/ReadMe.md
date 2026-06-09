@@ -1,4 +1,5 @@
-![https://hackatime.hackclub.com/api/v1/badge/U0825RTJC8K/aghastmuffin/Sonex](https://hackatime.hackclub.com/api/v1/badge/U0825RTJC8K/aghastmuffin/Sonex)
+
+![https://hackatime.hackclub.com/@levitkbr/project/Sonex](https://hackatime.hackclub.com/api/v1/badge/U0825RTJC8K/aghastmuffin/Sonex)
 # SONEX
 Sonex is currently in private beta, it is not expected to work on systems not expressly configured to use it.
 # Sonex - Berkeley Roadmap
