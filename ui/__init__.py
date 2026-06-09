@@ -1,3 +1,3 @@
-from ._updates import *
-from ._worker import *
-from .frase_core import *
+from . import _updates
+from . import _worker
+from . import frase_core

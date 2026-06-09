@@ -1,4 +1,4 @@
-import io, os, select, sys
+import io, os, sys
 import json
 import shutil
 import re
@@ -15,7 +15,6 @@ if sys.version_info < MINIMUM:
     sys.stderr.write(f"Python {MINIMUM[0]}.{MINIMUM[1]}.{MINIMUM[2]} or later is required.\n")
     sys.exit(1)
 
-detected = None #define detected in global scope for translate_advanced
 #Config
 model = "htdemucs"
 mp3 = True
@@ -39,29 +38,18 @@ _DEMUCS_PROGRESS_RE = re.compile(r"(\d{1,3})%\|")
 
 
 def copy_process_streams(process: sp.Popen, progress_cb=None):
-    def raw(stream: Optional[IO[bytes]]) -> IO[bytes]:
-        assert stream is not None
+    import threading
+
+    def _reader(stream, std):
+        if stream is None:
+            return
         if isinstance(stream, io.BufferedIOBase):
             stream = stream.raw
-        return stream
-
-    p_stdout, p_stderr = raw(process.stdout), raw(process.stderr)
-    stream_by_fd: Dict[int, Tuple[IO[bytes], io.StringIO, IO[str]]] = {
-        p_stdout.fileno(): (p_stdout, sys.stdout),
-        p_stderr.fileno(): (p_stderr, sys.stderr),
-    }
-    fds = list(stream_by_fd.keys())
-
-    while fds:
-        # `select` syscall will wait until one of the file descriptors has content.
-        ready, _, _ = select.select(fds, [], [])
-        for fd in ready:
-            p_stream, std = stream_by_fd[fd]
-            raw_buf = p_stream.read(2 ** 16)
+        while True:
+            raw_buf = stream.read(2 ** 16)
             if not raw_buf:
-                fds.remove(fd)
-                continue
-            buf = raw_buf.decode()
+                break
+            buf = raw_buf.decode(errors="replace")
             std.write(buf)
             std.flush()
             if progress_cb is not None:
@@ -71,6 +59,14 @@ def copy_process_streams(process: sp.Popen, progress_cb=None):
                     except ValueError:
                         continue
                     progress_cb(progress_value)
+
+    threads = []
+    for stream, std in [(process.stdout, sys.stdout), (process.stderr, sys.stderr)]:
+        t = threading.Thread(target=_reader, args=(stream, std), daemon=True)
+        t.start()
+        threads.append(t)
+    for t in threads:
+        t.join()
 
 
 def separate(inp, outp=None, force: bool = False, demucs_progress_cb=None):
@@ -567,7 +563,7 @@ def translate_simple(source, target, segments):
             )
         )
         argostranslate.package.install_from_path(package_to_install.download())
-    except:
+    except Exception:
         print("Translation package already installed or installation failed. Still attempt translation.")
     translated = []
     for segment in segments:
@@ -678,7 +674,7 @@ def align(
     audio_path: str,
     transcript_path: str,
     output_path: Optional[str] = None,
-    language: str = detected or "en",
+    language: Optional[str] = None,
     reuse_existing: bool = True,
     return_char_alignments: bool = False,
     flatten_audio: bool = True,
@@ -696,11 +692,7 @@ def align(
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
-    resolved_language = (language or "en")
-    if isinstance(resolved_language, str):
-        resolved_language = resolved_language.strip().lower() or "en"
-    else:
-        resolved_language = "en"
+    resolved_language = str(language or "en").strip().lower() or "en"
 
     if output_path is None:
         output_path = Path(transcript_path).with_stem(f"{Path(transcript_path).stem}.aligned").with_suffix(".json")

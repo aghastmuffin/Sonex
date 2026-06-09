@@ -1,52 +1,37 @@
 from __future__ import annotations
-from tkinter import dialog
 """Primary Entry Point for Sonex. Does not contain logic. NOT STANDALONE"""
 import os
 import sys
-import json 
+import json
+import threading
 
-from PyQt6.QtCore import QObject, pyqtSignal, QThread
-from PyQt6.QtCore import Qt, QElapsedTimer, QTimer, QUrl
-from PyQt6.QtGui import QColor, QFont, QFontDatabase, QIcon, QPainter, QPen
+from PyQt6.QtCore import (
+    QElapsedTimer, QObject, QProcess, Qt, QThread, QTimer, QUrl, pyqtSignal,
+)
+from PyQt6.QtGui import QColor, QFont, QFontDatabase, QIcon, QPainter, QPen, QPixmap
 from PyQt6.QtMultimedia import QAudioOutput, QMediaPlayer
 from PyQt6.QtWidgets import (
     QApplication,
+    QCheckBox,
     QComboBox,
     QDialog,
     QDialogButtonBox,
     QFileDialog,
+    QFormLayout,
     QFrame,
     QGridLayout,
+    QGroupBox,
     QHBoxLayout,
     QLabel,
     QMainWindow,
     QMessageBox,
     QProgressBar,
     QPushButton,
-    QVBoxLayout,
-    QWidget,
-)
-from PyQt6.QtWidgets import (
-    QApplication,
-    QMainWindow,
-    QPushButton,
-    QVBoxLayout,
-    QWidget,
-    QProgressBar,
-    QFileDialog,
-    QComboBox,
-    QDialog,
-    QDialogButtonBox,
-    QFormLayout,
     QSpinBox,
-    QCheckBox,
-    QLabel,
-    QMessageBox,
-    QGroupBox,
+    QVBoxLayout,
+    QWidget,
 )
-from PyQt6.QtCore import QProcess, Qt, QThread, pyqtSignal
-from PyQt6.QtGui import QIcon, QPixmap
-import sys, os, json, subprocess, threading
+
 import ui._updates as upd
 
 
@@ -87,7 +72,7 @@ GPU = False
 UPDATES = True
 
 # Set to a .ttf path for a custom app font, or None for system default.
-UI_FONT_PATH = "ui/assets/Darker Grotesque.ttf" #TODO: Make OS agnostic
+UI_FONT_PATH = os.path.join("ui", "assets", "Darker Grotesque.ttf")
 
 APP_STYLE = """
 QWidget {
@@ -184,7 +169,6 @@ def _resolve_ui_font_family() -> str | None:
             families = QFontDatabase.applicationFontFamilies(fid)
             if families:
                 _ui_font_family = families[0]
-    print("font loaded successfully")
     return _ui_font_family
 
 
@@ -210,23 +194,11 @@ def apply_app_styles(app: QApplication | None = None):
 
 
 def default_output_root():
-    app_name = "Sonex"
-    if sys.platform.startswith("darwin"):
-        base = os.path.join(os.path.expanduser("~"), "Library", "Application Support")
-    elif sys.platform.startswith("win"):
-        base = os.environ.get("APPDATA") or os.path.join(os.path.expanduser("~"), "AppData", "Roaming")
-    else:
-        base = os.environ.get("XDG_DATA_HOME") or os.path.join(os.path.expanduser("~"), ".local", "share")
-    return os.path.join(base, app_name, "outputs")
+    return core.default_output_root()
 
 
 def resolve_output_root(output_root_arg=None):
-    if output_root_arg:
-        return output_root_arg
-    env_root = os.environ.get("SONEX_OUTPUT_ROOT")
-    if env_root:
-        return env_root
-    return default_output_root()
+    return core.resolve_output_root(output_root_arg=output_root_arg)
 
 
 def _is_frozen():
@@ -409,10 +381,8 @@ class Notification(QDialog):
         super().__init__(parent)
         self.setWindowTitle("Notification")
         self.setModal(True)
-        # Add your notification content here
         layout = QVBoxLayout(self)
-        label = QLabel(message, self) 
-        layout.addWidget(label)
+        layout.addWidget(QLabel(message, self))
         buttons = QDialogButtonBox(QDialogButtonBox.StandardButton.Ok, self)
         buttons.accepted.connect(self.accept)
         layout.addWidget(buttons)
@@ -508,16 +478,6 @@ class AdvancedSettingsDialog(QDialog):
         self.whisper_bestof_input.setValue(int(settings["whisper_best_of"]))
         form.addRow("Whisper best_of", self.whisper_bestof_input)
 
-        """self.MFA_target_in = QComboBox(self)
-        self.MFA_target_in.addItems(["default", "vocals", "other", "both"])
-        self.MFA_target_in.setCurrentText(settings["MFA_target"])
-        form.addRow("MFA - FromLang:", self.MFA_target_in)
-
-        self.MFA_target_in = QComboBox(self)
-        self.MFA_target_in.addItems(["default", "vocals", "other", "both"])
-        self.MFA_target_in.setCurrentText(settings["MFA_target"])
-        form.addRow("MFA - FromLang:", self.MFA_target_in)"""
-
         self._saved_gpu = bool(settings["gpu"])
         self.gpu_input = QCheckBox("Enable GPU acceleration")
         self.gpu_input.setChecked(self._saved_gpu)
@@ -608,7 +568,7 @@ def resolve_app_icon_path():
     return None
 
 
-class SplashWindow(QWidget):
+class SplashWindow(_ProgressMixin, QWidget):
     """Top-level splash screen with image backdrop and stage progress overlays."""
 
     def __init__(self, parent=None):
@@ -717,45 +677,13 @@ class SplashWindow(QWidget):
         y = geo.y() + (geo.height() - self.height()) // 2
         self.move(x, y)
 
-    def set_progress(self, value, label=None):
-        self.prog_bar.setValue(max(0, min(100, int(value))))
-        if label is not None:
-            self.prog_bar.setFormat(label)
-        QApplication.processEvents()
-
-    def set_demucs_active(self, active):
-        self.demucs_prog_bar.setVisible(bool(active))
-        if active:
-            self.demucs_prog_bar.setValue(0)
-            self.demucs_prog_bar.setFormat("Demucs separating stems...")
-        QApplication.processEvents()
-
-    def set_demucs_progress(self, value, label=None):
-        self.demucs_prog_bar.setValue(max(0, min(100, int(value))))
-        if label is not None:
-            self.demucs_prog_bar.setFormat(label)
-        QApplication.processEvents()
-
-    def set_whisper_active(self, active):
-        self.whisper_prog_bar.setVisible(bool(active))
-        if active:
-            self.whisper_prog_bar.setValue(0)
-            self.whisper_prog_bar.setFormat("Whisper transcribing...")
-        QApplication.processEvents()
-
-    def set_whisper_progress(self, value, label=None):
-        self.whisper_prog_bar.setValue(max(0, min(100, int(value))))
-        if label is not None:
-            self.whisper_prog_bar.setFormat(label)
-        QApplication.processEvents()
-
     def finish(self):
         """Called when processing is complete"""
         self.set_demucs_active(False)
         self.set_whisper_active(False)
 
 
-class Window(QMainWindow):
+class Window(_ProgressMixin, QMainWindow):
     def __init__(self):
         super().__init__()
 
@@ -889,38 +817,6 @@ class Window(QMainWindow):
         self.button.setText("Listo" if self.file_path else "Choose File First")
         self.button.setEnabled(bool(self.file_path))
 
-    def set_progress(self, value, label=None):
-        self.prog_bar.setValue(max(0, min(100, int(value))))
-        if label is not None:
-            self.prog_bar.setFormat(label)
-        QApplication.processEvents()
-
-    def set_demucs_active(self, active):
-        self.demucs_prog_bar.setVisible(bool(active))
-        if active:
-            self.demucs_prog_bar.setValue(0)
-            self.demucs_prog_bar.setFormat("Demucs separating stems...")
-        QApplication.processEvents()
-
-    def set_demucs_progress(self, value, label=None):
-        self.demucs_prog_bar.setValue(max(0, min(100, int(value))))
-        if label is not None:
-            self.demucs_prog_bar.setFormat(label)
-        QApplication.processEvents()
-
-    def set_whisper_active(self, active):
-        self.whisper_prog_bar.setVisible(bool(active))
-        if active:
-            self.whisper_prog_bar.setValue(0)
-            self.whisper_prog_bar.setFormat("Whisper transcribing...")
-        QApplication.processEvents()
-
-    def set_whisper_progress(self, value, label=None):
-        self.whisper_prog_bar.setValue(max(0, min(100, int(value))))
-        if label is not None:
-            self.whisper_prog_bar.setFormat(label)
-        QApplication.processEvents()
-
     def on_button_click(self):
         from_lang = self.lang_input.currentData()
         self.lang_code = from_lang if from_lang not in (None, DETECT_LANGUAGE) else None
@@ -988,18 +884,17 @@ class Window(QMainWindow):
 
     def open_advanced_settings(self):
         self.advanced_button.setText("Loading Advanced Settings...")
-        import time
-        time.sleep(0.04) #XXX: So janky
-        self.advanced_button.repaint()              
-        QApplication.processEvents()    
-        def private_open():
+        self.advanced_button.repaint()
+        QApplication.processEvents()
+
+        def _open():
             dialog = AdvancedSettingsDialog(self.advanced_settings, self)
             if dialog.exec():
                 self.advanced_settings = dialog.get_settings()
             self.advanced_button.setText("Advanced Settings")
-        QTimer.singleShot(0, lambda: private_open())      
 
-        
+        QTimer.singleShot(0, _open)
+
 
     def open_viewer(self):
         generarfrase(parent=self)
@@ -1075,7 +970,6 @@ class Window(QMainWindow):
     def on_pipeline_finished(self, exit_code, exit_status):
         if exit_code == 0 and exit_status == QProcess.ExitStatus.NormalExit:
             self.set_progress(100, "Done")
-            print("Done")
         else:
             self.set_progress(0, f"Error ({exit_code})")
         self.set_demucs_active(False)
@@ -1098,7 +992,6 @@ class Window(QMainWindow):
             self.pipeline_process = None
 
     def on_pipeline_process_error(self, _error):
-        print("Processing Error: worker process failed")
         self.set_progress(0, "Error")
         self.set_demucs_active(False)
         self.set_whisper_active(False)
@@ -1114,7 +1007,46 @@ class Window(QMainWindow):
             self.pipeline_process.deleteLater()
             self.pipeline_process = None
 
-"""lyrics viewer UI"""
+class _ProgressMixin:
+    """Shared progress-bar update logic for Window and SplashWindow."""
+
+    prog_bar: QProgressBar
+    demucs_prog_bar: QProgressBar
+    whisper_prog_bar: QProgressBar
+
+    def set_progress(self, value, label=None):
+        self.prog_bar.setValue(max(0, min(100, int(value))))
+        if label is not None:
+            self.prog_bar.setFormat(label)
+        QApplication.processEvents()
+
+    def set_demucs_active(self, active):
+        self.demucs_prog_bar.setVisible(bool(active))
+        if active:
+            self.demucs_prog_bar.setValue(0)
+            self.demucs_prog_bar.setFormat("Demucs separating stems...")
+        QApplication.processEvents()
+
+    def set_demucs_progress(self, value, label=None):
+        self.demucs_prog_bar.setValue(max(0, min(100, int(value))))
+        if label is not None:
+            self.demucs_prog_bar.setFormat(label)
+        QApplication.processEvents()
+
+    def set_whisper_active(self, active):
+        self.whisper_prog_bar.setVisible(bool(active))
+        if active:
+            self.whisper_prog_bar.setValue(0)
+            self.whisper_prog_bar.setFormat("Whisper transcribing...")
+        QApplication.processEvents()
+
+    def set_whisper_progress(self, value, label=None):
+        self.whisper_prog_bar.setValue(max(0, min(100, int(value))))
+        if label is not None:
+            self.whisper_prog_bar.setFormat(label)
+        QApplication.processEvents()
+
+
 class LoopProgressWidget(QWidget):
     """Minimal arc widget — no native circular progress in Qt widgets."""
 
@@ -1386,7 +1318,7 @@ class FolderSelectDialog(QDialog):
 
 class Viewer(QMainWindow):
     WINDOW_TITLE = "🗣️ SONEX Lyrics, a TAESON.CO project."
-    BRAND_DIR = os.path.join(os.path.dirname(__file__), "assets")
+    BRAND_DIR = os.path.join(os.path.dirname(__file__), "ui", "assets")
 
     def __init__(self, session: core.LyricsSession, parent=None):
         super().__init__(parent)
@@ -1530,9 +1462,6 @@ class Viewer(QMainWindow):
         window.show()
         window.raise_()
         window.activateWindow()
-
-        print("job checking for MFA/fasterwhisper alignment accuracy")
-        print("cleared for levi brown")
         return window
 
     def _elapsed_ms(self) -> int:
@@ -1602,11 +1531,9 @@ def create_viewer():
 def bootstrap():
     try:
         if upd.check_and_update():
-            import os, sys
             os.execv(sys.executable, [sys.executable] + sys.argv)
-    except:
+    except Exception:
         pass
-    return
 
 
 if __name__ == "__main__":

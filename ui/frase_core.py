@@ -953,8 +953,9 @@ class LyricsSession:
                 session.mode_name = "Single translated"
 
         session._apply_diarization_metadata()
+        folder_name = os.path.basename(os.path.dirname(audio_anchor_file))
         session.header_text = (
-            f"{audio_anchor_file.split('/')[-2]} | {session.mode_name}{session._diarization_header_suffix()} | taeson.co"
+            f"{folder_name} | {session.mode_name}{session._diarization_header_suffix()} | taeson.co"
         )
         session.audio_path = resolve_audio_path(audio_anchor_file)
         session.load_analysis_data(resolved_folder)
