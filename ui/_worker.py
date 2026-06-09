@@ -1,3 +1,28 @@
+"""Sonex worker process — runs the audio pipeline outside the GUI.
+
+Spawned by Sonex.py via QProcess (or as a frozen sonex-worker binary). Communicates
+back to the parent through tagged stdout lines that the GUI parses for progress bars
+and status updates.
+
+Stdout protocol (parent reads these prefixes):
+    PROGRESS|<0-100>|<label>
+    DEMUCS_ACTIVE|0|1
+    DEMUCS_PROGRESS|<0-100>|<label>
+    WHISPER_ACTIVE|0|1
+    WHISPER_PROGRESS|<0-100>|<label>
+    AUDIOBASE|<resolved output folder>
+    LANG|<detected iso code>
+    INFO|<message>
+    ERROR|<message>
+
+CLI arguments (see main()):
+    argv[1]  input file path
+    argv[2]  source language (or detect sentinel)
+    argv[3]  translation mode: none | argos | whisper | both
+    argv[4]  advanced settings JSON
+    argv[5]  target language
+    argv[6]  output root directory
+"""
 import os
 import shutil
 import sys
@@ -6,10 +31,12 @@ import faulthandler
 import json
 from pathlib import Path
 
+# Dump Python tracebacks on crash (useful when the worker is a separate process).
 faulthandler.enable()
 
 
 def _load_language_helpers():
+    """Lazy-import language helpers so the worker starts fast before heavy imports."""
     from backbone.ltra.languages import (
         MFA_LANGUAGE_NAMES,
         get_system_language_code,
@@ -28,32 +55,43 @@ def _load_language_helpers():
 
 
 def default_output_root() -> Path:
+    """Platform-specific default for processed output (delegates to frase_core)."""
     from ui.frase_core import default_output_root as _default_root
     return Path(_default_root())
 
 
 
+# ---------------------------------------------------------------------------
+# Progress emitters — stdout lines consumed by Sonex.py::Window::on_pipeline_stdout
+# ---------------------------------------------------------------------------
+
 def emit_progress(value, label):
+    """Emit overall pipeline progress (0–100) to the parent GUI."""
     print(f"PROGRESS|{int(value)}|{label}", flush=True)
 
 
 def emit_demucs_active(is_active):
+    """Toggle visibility of the Demucs sub-progress bar in the GUI."""
     print(f"DEMUCS_ACTIVE|{1 if is_active else 0}", flush=True)
 
 
 def emit_demucs_progress(value, label="Demucs separating stems..."):
+    """Emit Demucs stem-separation progress (0–100)."""
     print(f"DEMUCS_PROGRESS|{int(value)}|{label}", flush=True)
 
 
 def emit_whisper_active(is_active):
+    """Toggle visibility of the Whisper sub-progress bar in the GUI."""
     print(f"WHISPER_ACTIVE|{1 if is_active else 0}", flush=True)
 
 
 def emit_whisper_progress(value, label="Whisper transcribing..."):
+    """Emit Whisper transcription/translation progress (0–100)."""
     print(f"WHISPER_PROGRESS|{int(value)}|{label}", flush=True)
 
 
 def _has_phone_level_data(json_path: Path, min_coverage: float = 0.85) -> bool:
+    """Return True when enough words in a transcript JSON have valid phone timings."""
     try:
         if not json_path.exists():
             return False
@@ -100,6 +138,7 @@ def _has_phone_level_data(json_path: Path, min_coverage: float = 0.85) -> bool:
 
 
 def _has_dual_transcript_data(json_path: Path) -> bool:
+    """Return True when a transcript JSON contains both source and target text."""
     try:
         data = json.loads(json_path.read_text(encoding="utf-8"))
     except Exception:
@@ -162,6 +201,7 @@ def _enrich_translated_source_phones(audiobase: str):
 
 
 def _write_playback_transcript(audiobase: str, settings=None, translation_mode: str = "none"):
+    """Pick the best transcript for the lyrics viewer and copy it to playback_segments.json."""
     base = Path(audiobase)
     phone_json = base / "mfa_vocals_phone_segments.json"
     word_json = base / "vocals_whisper_segments.json"
@@ -190,6 +230,7 @@ def _write_playback_transcript(audiobase: str, settings=None, translation_mode: 
 
 
 def _stage_progress_cb(stage_start, stage_end, default_label, whisper_label=None):
+    """Map a sub-stage's 0–100 progress into the overall pipeline percentage range."""
     stage_start = int(stage_start)
     stage_end = int(stage_end)
     span = max(0, stage_end - stage_start)
@@ -207,6 +248,21 @@ def _stage_progress_cb(stage_start, stage_end, default_label, whisper_label=None
 
 
 def splitter(file_path, lang_code=None, translation_mode="none", settings=None, target_lang=None):
+    """Run the full lyrics pipeline: separate → transcribe → align → translate.
+
+    Stages (approximate overall progress):
+        10%  Demucs stem separation
+        25%  Whisper transcription
+        40%  WhisperX word alignment
+        48%  Speaker diarization (optional)
+        52%  MFA phoneme alignment (optional)
+        58%  Whisper translation pass (optional)
+        62%  OpusMT/NLLB translation (optional)
+        68%  Playback transcript preflight
+
+    Returns:
+        (audiobase_path, detected_language_code)
+    """
     # Ensure repository root is on sys.path before importing backbone modules.
     repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     if repo_root not in sys.path:
@@ -222,7 +278,7 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
         resolve_source_language,
         resolve_target_language,
     ) = _load_language_helpers()
-    global demucs_stems
+    global demucs_stems  # read later by notesanalysis() for stem path resolution
 
     settings = settings or {}
     demucs_model = settings.get("demucs_model", "htdemucs")
@@ -245,6 +301,7 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
         # Force CPU path for demucs/whisper when GPU is disabled in advanced settings.
         os.environ["CUDA_VISIBLE_DEVICES"] = ""
 
+    # Configure letra_toolkit globals before calling separate/transcribe.
     lt.model = demucs_model
     lt.two_stems = None if demucs_stems in ("both", "default") else demucs_stems
 
@@ -254,6 +311,8 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
 
     lang_code = resolve_source_language(lang_code)
     target_lang = resolve_target_language(target_lang)
+
+    # --- Stage 1: Demucs stem separation ---
     emit_progress(10, "Separating stems...")
     emit_demucs_active(True)
     emit_demucs_progress(0, "Demucs separating stems...")
@@ -263,14 +322,15 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
     finally:
         emit_demucs_active(False)
 
+    # Output folder named after the input file stem (e.g. "mysong/" for "mysong.mp3").
     audiobase = Path(file_path).stem
     os.makedirs(audiobase, exist_ok=True)
-    
 
     if whisper_task == "translate":
         # Guard against legacy UI settings that would overwrite source transcripts with translated text.
         print("INFO|Ignoring legacy whisper_task=translate for primary transcript; using transcribe.", flush=True)
 
+    # --- Stage 2: Whisper transcription (native language) ---
     emit_progress(25, "Transcribing vocals...")
     emit_whisper_active(True)
     emit_whisper_progress(0, "Whisper transcribing...")
@@ -292,6 +352,7 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
     if detectlang and not lang_code:
         lang_code = detectlang
 
+    # --- Stage 3: WhisperX CTC word-level alignment ---
     emit_progress(40, "Aligning words...")
     align(
         f"{audiobase}/vocals.mp3",
@@ -301,6 +362,7 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
         flatten_audio=flattenaudio,
     )
 
+    # --- Stage 4: Speaker diarization (optional, requires HF_TOKEN) ---
     if speaker_diarization:
         emit_progress(48, "Diarizing speakers...")
         try:
@@ -314,6 +376,7 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
     else:
         print("INFO|Speaker diarization disabled; skipping.", flush=True)
 
+    # --- Stage 5: MFA phoneme alignment (optional) ---
     if phoneme_timestamps:
         try:
             emit_progress(52, "Running MFA alignment...")
@@ -365,6 +428,7 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
     else:
         print("INFO|Phoneme timestamps disabled; skipping MFA phone alignment.", flush=True)
 
+    # --- Stage 6: Translation passes (optional) ---
     source_lang = normalize_lang_code(detectlang or lang_code) or get_system_language_code()
     target_lang = resolve_target_language(target_lang)
 
@@ -407,6 +471,7 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
             if phoneme_timestamps:
                 _enrich_translated_source_phones(audiobase)
 
+    # --- Stage 7: Publish best transcript for lyrics viewer playback ---
     _write_playback_transcript(audiobase, settings=settings, translation_mode=translation_mode)
 
     emit_progress(68, "Text pipeline complete")
@@ -414,6 +479,15 @@ def splitter(file_path, lang_code=None, translation_mode="none", settings=None, 
 
 def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, min_relative_beat_strength=1.05,
                   min_beat_gap_ms=120, beat_tolerance_ms=20):
+    """Analyze pitch-class strength and beat timing; write .npz files for the lyrics viewer.
+
+    Produces two compressed arrays per run:
+        {audio_base}_novocs_analysis.npz  — instrumental / drum rhythm source
+        {audio_base}_vocs_analysis.npz    — vocal stem
+
+    Each .npz contains per-frame HPCP (12-bin chroma), beat maps, BPM, and metadata
+    consumed by frase_core.LyricsSession.load_analysis_data().
+    """
     import numpy as np
     import librosa
 
@@ -431,6 +505,7 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
     audio_base = af_path.name
 
     def _score_beats(beats, bpm, confidence, duration_sec):
+        """Heuristic quality score for a beat track (higher = more plausible)."""
         if len(beats) < 2 or bpm <= 0:
             return -1e9
         intervals = np.diff(beats)
@@ -446,6 +521,7 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
         return 0.5 * stability + 0.3 * coverage + 0.2 * conf
 
     def extract_best_rhythm(rhythm_file_path, rhythm_audio, duration_sec, sr_local):
+        """Beat tracking via madmom RNN+DBN, falling back to librosa HPSS beat_track."""
         try:
             _prepare_madmom_numpy_aliases()
             from madmom.features.beats import RNNBeatProcessor, DBNBeatTrackingProcessor
@@ -549,6 +625,7 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
         return beat_times, beat_strengths, strength_threshold, float(bpm)
 
     def _ensure_12_bin_matrix(values):
+        """Normalize chroma/HPCP output to shape (num_frames, 12)."""
         arr = np.asarray(values, dtype=np.float32)
         if arr.ndim == 1:
             arr = arr.reshape(1, -1)
@@ -564,6 +641,7 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
         return fixed
 
     def extract_note_strengths(audio_path, audio, sr_local):
+        """Per-frame pitch-class strength via madmom DeepChroma, else librosa chroma_cqt."""
         duration_sec = float(len(np.asarray(audio, dtype=np.float32))) / float(sr_local)
 
         def _frame_timing(num_frames):
@@ -614,6 +692,7 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
         return chroma, frame_times, hop_length, "librosa_chroma_cqt", frame_ms
 
     def filter_beats_by_strength(audio, sr_local, beats):
+        """Drop weak or too-close beats using quantile + relative envelope thresholds."""
         if len(beats) == 0:
             return beats, np.array([], dtype=np.float32), 0.0
 
@@ -649,6 +728,7 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
         return np.array(filtered, dtype=np.float32), beat_strengths, strength_threshold
 
     def analyze_and_save(audio_name, file_path, out_name, rhythm_file_path=None, is_drums_only=False):
+        """Load audio, extract features, and write a compressed .npz analysis file."""
         audio, _ = librosa.load(file_path, sr=sr, mono=True)
         rhythm_source = rhythm_file_path or file_path
         rhythm_audio, _ = librosa.load(rhythm_source, sr=sr, mono=True)
@@ -761,6 +841,7 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
             analysis_duration_sec=np.array([analysis_duration_sec], dtype=np.float32),
         )
 
+    # --- Instrumental / drum rhythm analysis ---
     emit_progress(78, "Analyzing instrumental notes/beats...")
     using_drum_stem = demucs_stems in ("both", "default")
     if using_drum_stem:
@@ -775,6 +856,7 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
 
     analyze_and_save(audio_base, melodic_path, "novocs_analysis", rhythm_file_path=novocal_path, is_drums_only=using_drum_stem)
 
+    # --- Vocal stem analysis ---
     emit_progress(87, "Analyzing vocals notes/beats...")
     vocal_path = f"{af}/vocals.mp3"
     analyze_and_save(audio_base, vocal_path, "vocs_analysis")
@@ -783,6 +865,7 @@ def notesanalysis(af, output_root: Path, sr=48000, beat_strength_quantile=0.60, 
 
 
 def main():
+    """Worker entry point: parse CLI args, run splitter + notesanalysis, return exit code."""
     if len(sys.argv) < 2:
         print("ERROR|Missing input file path", flush=True)
         return 2
@@ -796,6 +879,7 @@ def main():
 
     output_root = Path(output_root_arg) if output_root_arg else default_output_root()
     output_root.mkdir(parents=True, exist_ok=True)
+    # All relative paths in splitter() resolve against the output directory.
     os.chdir(output_root)
 
     try:
@@ -826,5 +910,6 @@ def main():
 
 
 if __name__ == "__main__":
+    # Normally launched by Sonex.py QProcess, not invoked directly by the user.
     print("You've ran a worker process! This is not meant to be run directly. If you're seeing this, something went wrong.", flush=True)
     sys.exit(main())
