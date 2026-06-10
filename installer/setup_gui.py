@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Sonex Setup Wizard — retro Windows 9x style GUI installer.
+Sonex Setup Wizard
 
 Double-click to run. Intended for Nuitka packaging (--windows-disable-console).
 
@@ -18,7 +18,7 @@ import tkinter.font as tkfont
 from pathlib import Path
 from tkinter import filedialog, messagebox
 
-# Allow running as script or frozen bundle
+
 _INSTALLER_DIR = Path(__file__).resolve().parent
 if str(_INSTALLER_DIR.parent) not in sys.path:
     sys.path.insert(0, str(_INSTALLER_DIR.parent))
@@ -31,9 +31,6 @@ from installer.core import (  # noqa: E402
     run_install,
 )
 
-# ---------------------------------------------------------------------------
-# Classic Windows 9x palette (NVIDIA-driver-wizard energy)
-# ---------------------------------------------------------------------------
 
 WIN_BG = "#C0C0C0"
 WIN_FACE = "#C0C0C0"
