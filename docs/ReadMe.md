@@ -2,7 +2,8 @@
 ![https://hackatime.hackclub.com/@levitkbr/project/Sonex](https://hackatime.hackclub.com/api/v1/badge/U0825RTJC8K/aghastmuffin/Sonex)
 
 > Dedicated to fost, the best boy. I'll always miss you bud
-![Photo of Dog]([https://github.com/aghastmuffin/taesonco-calcount/blob/master/IMG_2362%20(1).jpeg])
+> <img src="https://github.com/aghastmuffin/taesonco-calcount/blob/master/IMG_2362%20(1).jpeg" width="300" height="200" alt="photo of dog">
+
 
 # SONEX
 Sonex is currently in private beta, it is not expected to work on systems not expressly configured to use it. That being said if you want to "build" yourself a copy feel free.
