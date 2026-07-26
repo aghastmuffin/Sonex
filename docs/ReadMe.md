@@ -2,7 +2,7 @@
 ![https://hackatime.hackclub.com/@levitkbr/project/Sonex](https://hackatime.hackclub.com/api/v1/badge/U0825RTJC8K/aghastmuffin/Sonex)
 
 > Dedicated to fost, the best boy. I'll always miss you bud
-> <img src="https://github.com/aghastmuffin/taesonco-calcount/blob/master/IMG_2362%20(1).jpeg" width="300" height="200" alt="photo of dog">
+> <img src="https://github.com/aghastmuffin/taesonco-calcount/blob/master/IMG_2362%20(1).jpeg" width="300" height="400" alt="photo of dog">
 
 
 # SONEX
